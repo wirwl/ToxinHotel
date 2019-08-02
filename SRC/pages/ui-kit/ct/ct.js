@@ -1,0 +1,2 @@
+import './ct.scss';
+

@@ -1,0 +1,26 @@
+// "expanded" Menu for footer
+mixin createFooterMenu(data)
+  nav.exMenu
+    for l in data
+      ul.exMenu__list
+        li.exMenu__title #{l.title}
+        if l.items
+          for i in l.items
+            li.exMenu__item
+              a.exMenu__link(href=i.link) #{i.text}
+
+
+
+mixin createMenuItems(items)  
+  ul.menu__list
+    for mi in items
+      +createHTMLtags_li_a(mi)
+        if (mi.sm)
+          +createMenuItems(mi.sm)
+
+mixin createHTMLtags_li_a(mi)  
+  - var cs= mi.sm ? "menu__list_arrow": ""
+  li.menu__item
+    a.menu__link(class=cs href=mi.link) #{mi.text}
+    if block
+      block

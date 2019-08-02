@@ -1,0 +1,13 @@
+include ./components/plan/plan
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title Пример страницы    
+    //link(href="index.css" rel="stylesheet")
+  body
+    .wrapper            
+      +plan({title: "free", price: 1})
+      +plan({title: "personal", price: 25})
+      +plan({title: "business", price: 50, isBusiness: true})

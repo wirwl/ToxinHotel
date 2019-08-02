@@ -1,0 +1,42 @@
+.color-example {
+  display: flex;
+}
+.color-example__squareColor {
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+  margin-right: 40px;
+}
+
+.color-example__squareColor_ {
+  &DS100 {
+    background: $toxinDS100;
+  }
+  &DS75 {
+    background: $toxinDS75;
+  }
+  &DS50 {
+    background: $toxinDS50;
+  }
+  &DS25 {
+    background: $toxinDS25;
+  }
+  &DS5 {
+    background: $toxinDS5;
+  }
+  &Purple {
+    background: $toxinPurple;
+  }
+  &Green {
+    background: $toxinGreen;
+  }
+}
+
+.color-example__textDesc {    
+  vertical-align: middle;
+  color: $toxinDS100;
+  font-family: Quicksand;  
+  font-size: 19px;
+  line-height: 29px;
+  margin: 6px 0px;
+}

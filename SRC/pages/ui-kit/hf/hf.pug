@@ -1,0 +1,14 @@
+include ../../../components/header/header
+include ../../../components/button/button
+include ../../../components/footer/footer
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title Headers & Footers
+    //link(href="hf.css" rel="stylesheet")
+  body
+    +header('wrapper2btns_isAuth_false')
+    +header('wrapper2btns_isAuth_true')
+    +footer
+    +footer

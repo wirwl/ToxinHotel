@@ -1,0 +1,25 @@
+@import "vars.scss";
+
+@import "components/button/button.scss";
+@import "components/plan/plan.scss";
+
+@import "components/logo/logo.scss";
+@import "components/header/header.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.45;
+  color: #999;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

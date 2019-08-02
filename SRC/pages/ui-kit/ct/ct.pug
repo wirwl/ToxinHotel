@@ -1,0 +1,23 @@
+include ../../../components/color-example/color-example
+include ../../../components/font-example/font-example
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title Colors & Type
+    //link(href="hf.css" rel="stylesheet")
+  body
+    .color-example__wrapper
+      +color-example('color-example__squareColor_DS100','Dark Shade 100%', '#1F2041')
+      +color-example('color-example__squareColor_DS75','Dark Shade 75%', '#1F2041')
+      +color-example('color-example__squareColor_DS50','Dark Shade 50%', '#1F2041')
+      +color-example('color-example__squareColor_DS25','Dark Shade 25%', '#1F2041')
+      +color-example('color-example__squareColor_DS5','Dark Shade 5%', '#1F2041')
+      +color-example('color-example__squareColor_Purple','Purple', '#BC9CFF')
+      +color-example('color-example__squareColor_Green','Green', '#6FCF97')
+    .font-example__wrapper
+      +font-example('font-example_h1','H1','This one is the sub-section or widget title')
+      +font-example('font-example_h2','H2','Next one is the item title inside widgets')
+      +font-example('font-example_h3','H3','THIS IS A LABEL OR CTA TEXT')
+      +font-example('font-example_body','Body','This is the body text which is used for most of the design, like pararaphs, lists, etc')

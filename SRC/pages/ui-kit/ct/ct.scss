@@ -1,0 +1,23 @@
+@import "../../../vars.scss";
+@import "../../../fonts/Montserrat/fonts.css";
+@import "../../../fonts/Quicksand/fonts.css";
+@import "../../../components/color-example/color-example.scss";
+@import "../../../components/font-example/font-example.scss";
+
+
+body {
+    margin: 0px;
+    padding: 145px 150px;    
+    display: flex;
+}
+.color-example__wrapper {
+    margin-right: 422px;
+}
+.color-example:not(:last-of-type) {
+    margin-bottom: 20px;
+}
+
+.font-example:not(:last-of-type) {
+    margin-bottom: 50px;
+}
+

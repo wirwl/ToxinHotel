@@ -1,0 +1,32 @@
+include ../logo/logo
+include ../footer-menu/footer-menu
+mixin footer
+  footer.footer
+    .footerUp
+      .logoArea
+        +logo
+        p.logoArea__text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+      +createFooterMenu([
+        {title:'NAVIGATION',items:[{text:'About Us', link:'about.html'},
+                                     {text:'News', link:'news.html'},
+                                     {text:'Support', link:'support.html'},
+                                     {text:'Products', link:'products.html'}]},
+        {title:'ABOUT US',  items:[{text:'Who we are', link:'who.html'},
+                                     {text:'Our team', link:'team.html'},
+                                     {text:'Careers', link:'careers.html'},
+                                     {text:'Investors', link:'investors.html'}]},
+        {title:'SUPPORT',   items:[{text:'Documentation', link:'doc.html'},
+                                     {text:'Community', link:'com.html'},
+                                     {text:'Get In Touch', link:'git.html'}]}
+        ])
+      .subscribeArea
+        p.subscribeArea__title SUBSCRIBE TO OUR NEWSLETTER
+        p.subscribeArea__text Receive our latest news and promotions in your inbox!
+        .subscribeArea__emailWrapper
+          input.subscribeArea__email(type='email',placeholder='Your email address')
+    .footerDown
+      p.footerDown__copyright Copyright © 2018 Toxin UI Kit. All rights reserved.
+      .socialButtons
+        a.socialButtons__btnTwitter(href="#") twitter
+        a.socialButtons__btnFacebook(href="#") &#61570;
+        a.socialButtons__btnInstagram(href="#") instagram

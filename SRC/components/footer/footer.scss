@@ -1,0 +1,146 @@
+.footer {
+  background: white;
+}
+
+.logoArea {
+  width: 260px;
+  margin-right: 15px;
+  flex-shrink: 3;
+  .logo {
+    margin-bottom: 13px;
+  }
+  .logoArea__text {
+    text-align: left;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
+  }
+}
+
+.footerUp {
+  display: flex;
+  //justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+  //width: calc(1160px + 140px + 140px);
+}
+.foo_terUp > * {
+  border: 1px solid gray;
+}
+
+.footerUp > .exMenu {
+  margin-left: auto;
+}
+
+.footerUp {
+  min-height: 373px;
+  //height: 372px;
+  padding: 100px 9.722222222222222%;
+  //padding-bottom: 101px;
+}
+.footer .exMenu .exMenu__list:last-child {
+  margin-right: 15px;
+}
+.exMenu {
+  width: 600px;
+  padding-top: 4px;
+}
+.subscribeArea {
+  width: 260px;
+}
+
+
+
+.subscribeArea {
+  min-width: 140px;
+  //margin-right: 17px;
+  .subscribeArea__title {
+    padding-top: 4px;
+    margin-bottom: 18px;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .subscribeArea__text {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 23px;
+    color: rgba(31, 32, 65, 0.75);
+  }
+  .subscribeArea__email {
+    min-height: 44px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    //padding: 12px 15px 18px 15px;
+    padding-left: 15px;
+  }
+  .subscribeArea__email::placeholder {
+    color: rgba(31, 32, 65, 0.25);
+    padding: 12px 15px 18px 0px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .subscribeArea__emailWrapper {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    width: 100%;
+  }
+
+  .subscribeArea__emailWrapper:after {
+    content: "arrow_forward";
+    font-family: 'Material Icons';    
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    color: #BC9CFF;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 24px;
+    line-height: 24px;
+    position: absolute;
+    top: 0;
+    right: 0;    
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+  }
+}
+
+.footerDown {
+  display: flex;  
+  justify-content: space-between;
+  align-items: center;
+  min-height: 70px;  
+  padding: 0px 9.722222222222222%;
+  .footerDown__copyright {
+    font-size: 14px;
+    line-height: 17px;
+    color: $toxinDS75;
+    letter-spacing: -0.05px;
+  }
+}
+
+.socialButtons {
+  display: flex;
+  //justify-content: space-between;
+  > * {
+    font-family: "Awesome 5 Brands-Regular-400";
+    text-decoration: none;
+    font-size: 24px;
+    line-height: 23px;
+    //color: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    color: rgb(188,156,255);
+    width: 24px;
+    height: 24px;
+  }
+  
+  .socialButtons__btnTwitter {
+    margin-right: 24px;
+  }
+  .socialButtons__btnFacebook {
+    margin-right: 16px;
+  }
+}

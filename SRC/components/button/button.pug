@@ -1,0 +1,20 @@
+mixin btn(options)
+  -
+    var buttonClassName = "button"
+    buttonClassName += options.isBlue ? " button-blue" : ""
+  button(class = buttonClassName)= options.title || "Button"
+
+mixin btnSimple(text, isEnabled=true)      
+  -var c = isEnabled ? "" : "button_disabled"
+  button.button.btnSimple(class=c) #{text}
+
+mixin btnBordered(text, isEnabled=true)
+  -var c = isEnabled ? "" : "button_disabled"
+  button.button.button_bordered(class=c) #{text}
+
+mixin btnFilled(text, isEnabled=true)
+  -var c = isEnabled ? "" : "button_disabled"
+  button.button.button_background_colored(class=c) #{text}
+
+mixin btnArrow(text, isEnabled=true)
+  button.button.button_background_colored.button_arrow #{text}

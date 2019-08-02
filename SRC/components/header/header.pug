@@ -1,0 +1,34 @@
+include ../logo/logo
+include ../header-menu/header-menu
+include ../button/button
+
+mixin header(authClass='wrapper2btns_isAuth_false')
+  header.header(class=authClass)
+    +logo
+    +createHeaderMenu([
+        {text:"Home", link:"index.html"},
+        {text:"About Us", link:"prod.html"},
+        {text:"Services", link:"us.html", sm:[
+            {text:"Одежда",link:"od.html", sm:[
+                {text:"Обувь", link:"o.html"},
+                {text:"Куртки",link:"ku.html"},
+                {text:"Брюки",link:"br.html", sm:[
+                    {text:"Test1",link:"test.html"},
+                    {text:"Test2",link:"test2.html"},
+                    {text:"Test3",link:"test3.html"}
+                ]}
+            ]},
+            {text:"Электроника",link:"el.html", sm:[
+                {text:"Смартфоны", link:"sm.html"},
+                {text:"Планшеты", link:"sm.html"},
+            ]},
+            {text:"Прод.пит.",link:"pp.html"}
+        ]},    
+        {text:"Careers",link:"news.html"},
+        {text:"News", link:"contacts.html"},
+        {text:"Documentation", link:"doc.html"}
+    ])
+    //.wrapper2btns(class=authClass)
+    +btnBordered('LOGIN')
+    +btnFilled('REGISTER')
+    .wrapper2btn__authName Cosmin Negoita

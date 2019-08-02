@@ -1,0 +1,61 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  //border: 1px solid gray;
+  min-height: 70px;
+  //flex-basis: 100px;
+  padding: 0px 9.7222222222%;
+}
+
+.header > .menu {
+  margin-left: auto;
+}
+.header > .button:first-of-type {
+  margin-right: 20px;
+}
+
+.header .button {
+  height: 34px;
+}
+.header .button {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.menu > .menu__list > .menu__item:first-child > .menu__link {
+  color: $toxinDS75;
+  font-weight: bold;
+  //color: green;
+  //background: black;
+}
+
+.wrapper2btns {
+  display: flex;
+  //flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper2btn__authName {
+  display: none;
+  font-family: "Montserrat-Regular";
+  color: $toxinDS50;
+  border-left: 1px solid $toxinDS10;
+  height: 30px;
+  align-items: center;
+  padding-left: 30px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.wrapper2btns_isAuth_true > .wrapper2btn__authName,
+.wrapper2btns_isAuth_false > button {
+  display: flex;
+}
+
+.wrapper2btns_isAuth_true > .button,
+.wrapper2btns_isAuth_false > .wrapper2btn__authName {
+  display: none;
+}
