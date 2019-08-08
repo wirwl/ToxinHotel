@@ -13,7 +13,8 @@
     "prod:sm": "webpack --mode=production --devtool source-map",
     "le": "webpack-dev-server --open --mode=development",
     "le:hf": "webpack-dev-server --open --mode=development --display-error-details --open-page pages/ui-kit/hf/hf.html",
-    "le:ct": "webpack-dev-server --open --mode=development --display-error-details --open-page pages/ui-kit/ct/ct.html"
+    "le:ct": "webpack-dev-server --open --mode=development --display-error-details --open-page pages/ui-kit/ct/ct.html",
+    "le:fe": "webpack-dev-server --open --mode=development --display-error-details --open-page pages/ui-kit/fe/fe.html"
   },
   "author": "Dmitry Levchenko",
   "browserslist": [

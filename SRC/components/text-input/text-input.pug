@@ -1,0 +1,5 @@
+// data={caption:string, placeholder:string, type:string, classes: string}
+mixin text-input(data)
+  label(class="text-input__caption" for="input") #{data.caption}
+  input(class="text-input__input"+ (data.classes ? " "+data.classes : "") id="input" type=data.type placeholder=data.placeholder value=data.text) 
+    

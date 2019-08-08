@@ -1,0 +1,28 @@
+.text-input__caption {
+  display: block;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: $toxinDS100;
+  margin-bottom: 5px;
+}
+
+.text-input__input {
+  border: 1px solid $toxinDS25;
+  border-radius: 4px;
+  background: white;
+  padding: 13px 15px;
+  font-size: 14px;
+  //line-height: 24px;
+  width: 320px;
+  height: 44px;
+}
+
+.text-input__input::placeholder {
+  font-size: 14px;
+  line-height: 18px;
+  color: $toxinDS25;  
+}
+.text-input__input:focus, .text-input_isFocused {
+  border: 1px solid $toxinDS50;
+}

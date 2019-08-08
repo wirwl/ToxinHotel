@@ -1,1 +1,24 @@
 @import "../../../vars.scss";
+@import "../../../components/text-input/text-input.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: "montserrat-regular";
+}
+
+body {
+  margin: 0;
+  padding: 143px 0px 0px 140px;
+  min-width: 320px;
+  max-width: 1440px; 
+  display: flex;  
+}
+
+.column1__list {
+  list-style: none;
+}
+.column1__item {
+  margin-bottom: 20px;
+}

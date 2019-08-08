@@ -7,3 +7,4 @@
   type = cat-file -t
   dump = cat-file -p
   puom = push -u origin master
+  all = add .

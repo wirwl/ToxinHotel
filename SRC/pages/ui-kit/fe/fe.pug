@@ -1,6 +1,15 @@
+include ../../../components/text-input/text-input
 doctype html
 html
   head
     meta(charset="UTF-8")
     title Form Elements
   body
+    .column1
+      ul.column1__list
+        li.column1__item
+          +text-input({caption:'TEXT FIELD', placeholder:'Email', type: 'email'})
+        li.column1__item
+          +text-input({classes:'text-input_isFocused', caption:'TEXT FIELD', placeholder:'Email', type: 'email', text:'This is pretty awesome'})     
+    .column2
+    .column3

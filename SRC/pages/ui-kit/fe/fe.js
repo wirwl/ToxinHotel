@@ -1,1 +1,1 @@
-import 'fe.scss';
+import './fe.scss';
