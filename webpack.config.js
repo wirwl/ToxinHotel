@@ -116,9 +116,9 @@ module.exports = (env, argv) => {
         plugins: [
             //new StyleLintPlugin({ syntax: "scss", fix: true }),
             //new CssUrlRelativePlugin(),
-            new MiniCssExtractPlugin({ filename: 'pages/ui-kit/hf/hf.css' }),            
-            new HtmlWebpackPlugin({  filename: 'pages/ui-kit/hf/hf.html', template: 'src/pages/ui-kit/hf/hf.pug', inject: true }),
-            
+            new MiniCssExtractPlugin({ filename: 'pages/ui-kit/hf/hf.css' }),
+            new HtmlWebpackPlugin({ filename: 'pages/ui-kit/hf/hf.html', template: 'src/pages/ui-kit/hf/hf.pug', inject: true }),
+
 
         ]
     });
@@ -130,11 +130,22 @@ module.exports = (env, argv) => {
             publicPath: '../../../'
         },
         plugins: [
-            new MiniCssExtractPlugin({ filename: 'pages/ui-kit/ct/ct.css' }),            
-            new HtmlWebpackPlugin({  filename: 'pages/ui-kit/ct/ct.html', template: 'src/pages/ui-kit/ct/ct.pug', inject: true }),            
+            new MiniCssExtractPlugin({ filename: 'pages/ui-kit/ct/ct.css' }),
+            new HtmlWebpackPlugin({ filename: 'pages/ui-kit/ct/ct.html', template: 'src/pages/ui-kit/ct/ct.pug', inject: true }),
         ]
     });
-
+    var uikitfeCFG = merge(common, {
+        entry: "./SRC/pages/ui-kit/fe/fe.js",
+        output: {
+            path: path.resolve(__dirname, pathOutput),
+            filename: "pages/ui-kit/fe/fe.js",
+            publicPath: '../../../'
+        },
+        plugins: [
+            new MiniCssExtractPlugin({ filename: 'pages/ui-kit/fe/fe.css' }),
+            new HtmlWebpackPlugin({ filename: 'pages/ui-kit/fe/fe.html', template: 'src/pages/ui-kit/fe/fe.pug', inject: true }),
+        ]
+    });
     //console.log('---------------------');a
     //console.log(uikithfCFG.isOnlyDev);
     //console.log(indexCFG.isOnlyDev);
@@ -143,7 +154,7 @@ module.exports = (env, argv) => {
     //console.log("-----------------------------");
     //console.log(isDev);
     //return isDev ? cfgsForDev : cfgsForProd;
-    if (isDev) return [indexCFG, uikithfCFG, uikitctCFG];
+    if (isDev) return [indexCFG, uikithfCFG, uikitctCFG, uikitfeCFG];
     return [indexCFG];
 }
 
