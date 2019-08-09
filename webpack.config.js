@@ -8,6 +8,12 @@ const autoprefixer = require('autoprefixer');
 var merge = require('webpack-merge');
 //const CssUrlRelativePlugin = require('css-url-relative-plugin');
 
+const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
+const smp = new SpeedMeasurePlugin();
+
+// smp.wrap({ })
+// module.exports = (env, argv) => {}
+
 module.exports = (env, argv) => {
     var isDev = argv.mode === "development";
     //var isDev = "development";
@@ -70,6 +76,13 @@ module.exports = (env, argv) => {
                             cacheDirectory: true
                         }
                     }
+                },
+                {
+                    test: /\.m?js$/,
+                    //include: path.resolve(__dirname, 'src/jquery'),
+                    include: /jquery/,
+                    loader: 'file-loader',
+                    options: { ouputPath: 'jquery', name: '[folder]/[name].[ext]' }
                 },
                 {
                     test: /\.(png|jpe?g|gif|svg)$/,

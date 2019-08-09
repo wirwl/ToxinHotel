@@ -1,4 +1,5 @@
 include ../../../components/text-input/text-input
+include ../../../components/dropdown-input/dropdown-input
 doctype html
 html
   head
@@ -11,5 +12,11 @@ html
           +text-input({caption:'TEXT FIELD', placeholder:'Email', type: 'email'})
         li.column1__item
           +text-input({classes:'text-input_isFocused', caption:'TEXT FIELD', placeholder:'Email', type: 'email', text:'This is pretty awesome'})     
+        li.column1__item
+          +dropdown-input({caption:'DROPDOWN', placeholder:'Сколько гостей', type:'text'})  
     .column2
     .column3
+    script(type="text/javascript" src="jquery/jquery-3.4.1.min.js")
+    script(type="text/javascript" src="jquery/plugins/jquery.maskedinput.min.js")
+    
+    

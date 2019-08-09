@@ -1,0 +1,52 @@
+.dropdown-input__caption {
+  display: block;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: $toxinDS100;
+  margin-bottom: 5px;
+}
+
+.dropdown-input__input {
+  border: 1px solid $toxinDS25;
+  border-radius: 4px;
+  background: white;
+  padding: 13px 15px;
+  font-size: 14px;
+  //line-height: 24px;
+  width: 320px;
+  height: 44px;
+}
+
+.dropdown-input__input::placeholder {
+  font-size: 14px;
+  line-height: 18px;
+  color: $toxinDS25;  
+}
+.dropdown-input__input:focus, .text-input_isFocused {
+  border: 1px solid $toxinDS50;
+}
+
+.dropdown-input__wrapper {
+  //display: inline-block;
+  //vertical-align: top;
+  position: relative;
+  //width: 100%;
+}
+
+.dropdown-input__wrapper:after {
+  content: "keyboard_arrow_down";
+  font-family: 'Material Icons';      
+  color: $toxinDS50;    
+  font-size: 24px;
+  //line-height: 24px;
+  position: absolute;
+  top: 0;
+  right: 0;    
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;  
+}
