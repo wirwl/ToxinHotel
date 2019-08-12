@@ -1,5 +1,8 @@
 include ../../../components/text-input/text-input
 include ../../../components/dropdown-input/dropdown-input
+include ../../../components/masked-input/masked-input
+include ../../../components/dd-input/dd-input
+
 doctype html
 html
   head
@@ -14,9 +17,14 @@ html
           +text-input({classes:'text-input_isFocused', caption:'TEXT FIELD', placeholder:'Email', type: 'email', text:'This is pretty awesome'})     
         li.column1__item
           +dropdown-input({caption:'DROPDOWN', placeholder:'Сколько гостей', type:'text'})  
+        li.column1__item
+          +masked-input({caption:'MASKED TEXT FIELD', placeholder:'ДД.ММ.ГГГГ'})
+        li.column1__item.column1__wrapper-for-dd-input
+          +dd-input({caption:'DATE DROPDOWN', placeholder:'ДД.ММ.ГГГГ', value:''})
+          +dd-input({caption:'DATE DROPDOWN', placeholder:'ДД.ММ.ГГГГ', value:'19.08.2019'})
     .column2
     .column3
-    script(type="text/javascript" src="jquery/jquery-3.4.1.min.js")
-    script(type="text/javascript" src="jquery/plugins/jquery.maskedinput.min.js")
+    script(type="text/javascript" src="../../../jquery/jquery-3.4.1.min.js")
+    script(type="text/javascript" src="../../../jquery/plugins/jquery.maskedinput.min.js")
     
     

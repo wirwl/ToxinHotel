@@ -82,7 +82,18 @@ module.exports = (env, argv) => {
                     //include: path.resolve(__dirname, 'src/jquery'),
                     include: /jquery/,
                     loader: 'file-loader',
-                    options: { ouputPath: 'jquery', name: '[folder]/[name].[ext]' }
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: (url, resourcePath, context) => {
+                            const relativePath = path.relative(context+'\\SRC', resourcePath);
+                            //console.log('url: '+url);                            
+                            //console.log('resourcePath: '+resourcePath);                            
+                            //console.log('context: '+context+'\\SRC');
+                            //console.log('result: '+relativePath);
+                            //console.log('---------------');
+                            return relativePath;
+                        }
+                    }
                 },
                 {
                     test: /\.(png|jpe?g|gif|svg)$/,
