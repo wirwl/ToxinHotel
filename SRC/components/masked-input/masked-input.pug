@@ -1,4 +1,5 @@
 // data={caption:string, placeholder:string, type:string, classes: string}
 mixin masked-input(data)
+  .masked-input    
     label(class="masked-input__caption" for="input") #{data.caption}
     input(class="masked-input__input"+ (data.classes ? " "+data.classes : "") id="input" type=data.type placeholder=data.placeholder value=data.text) 

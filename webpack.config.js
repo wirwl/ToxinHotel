@@ -8,6 +8,8 @@ const autoprefixer = require('autoprefixer');
 var merge = require('webpack-merge');
 //const CssUrlRelativePlugin = require('css-url-relative-plugin');
 
+const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin')
+
 const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
 const smp = new SpeedMeasurePlugin();
 
@@ -113,11 +115,23 @@ module.exports = (env, argv) => {
             ]
         },
         plugins: [
+        /*
             new webpack.ProvidePlugin({
                 $: 'jquery',
                 jQuery: 'jquery',
                 'window.jQuery': 'jquery'
+              }) ,
+                  
+             new HtmlWebpackExternalsPlugin({ // optional plugin: inject cdn
+                externals: [
+                  {
+                      module: 'jquery',
+                      entry: 'dist/jquery.min.js',
+                      global: 'jQuery',
+                  }
+                ],
               })
+              */
         ]
     };
     //------config for index.html file(main page)------------------------------------------------------------------------    
