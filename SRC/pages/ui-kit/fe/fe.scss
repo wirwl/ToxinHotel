@@ -27,11 +27,16 @@ body {
   .masked-input__input { margin-bottom: 20px; }  
 }
 .column1__wrapper-for-dd-input {
+  margin-bottom: 41px;
   display: flex;
   .dd-input {margin-right: 20px; }
+}
+.column1__wrapper-for-fdd-input {
+  margin-bottom: 41px;
 }
 
 @import "../../../components/text-input/text-input.scss";
 @import "../../../components/dropdown-input/dropdown-input.scss";
 @import "../../../components/masked-input/masked-input.scss";
 @import "../../../components/dd-input/dd-input.scss";
+@import "../../../components/fdd-input/fdd-input.scss";

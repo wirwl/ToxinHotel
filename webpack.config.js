@@ -112,7 +112,13 @@ module.exports = (env, argv) => {
                 }
             ]
         },
-        plugins: []
+        plugins: [
+            new webpack.ProvidePlugin({
+                $: 'jquery',
+                jQuery: 'jquery',
+                'window.jQuery': 'jquery'
+              })
+        ]
     };
     //------config for index.html file(main page)------------------------------------------------------------------------    
 

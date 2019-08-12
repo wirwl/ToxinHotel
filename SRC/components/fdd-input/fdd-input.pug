@@ -1,0 +1,6 @@
+// data={caption:string, placeholder:string, type:string, classes: string, value: string}
+mixin fdd-input(data)
+  .fdd-input
+    label(class="fdd-input__caption" for="input") #{data.caption}
+    .fdd-input__wrapper
+      input(value=data.value class="fdd-input__input"+ (data.classes ? " "+data.classes : "") id="input" type=data.type placeholder=data.placeholder)

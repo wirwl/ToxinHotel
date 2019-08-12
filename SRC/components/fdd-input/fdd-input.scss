@@ -1,0 +1,52 @@
+.fdd-input__caption {
+  display: block;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: $toxinDS100;
+  margin-bottom: 5px;
+}
+
+.fdd-input__input {
+  border: 1px solid $toxinDS25;
+  border-radius: 4px;
+  background: white;
+  padding: 13px 15px;
+  font-size: 14px;
+  //line-height: 24px;
+  width: 266px;
+  height: 44px;
+}
+
+.fdd-input__input::placeholder {
+  font-size: 14px;
+  line-height: 18px;
+  color: $toxinDS25;  
+}
+.fdd-input__input:focus, .fdd-input_isFocused {
+  border: 1px solid $toxinDS50;
+}
+
+.fdd-input__wrapper {
+  display: inline-block;
+  //vertical-align: top;
+  position: relative;
+  //width: 100%;
+}
+
+.fdd-input__wrapper:after {
+  content: "keyboard_arrow_down";
+  font-family: 'Material Icons';      
+  color: $toxinDS50;    
+  font-size: 24px;
+  //line-height: 24px;
+  position: absolute;
+  top: 0;
+  right: 0;    
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;  
+}
