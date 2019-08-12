@@ -1,0 +1,7 @@
+// data={caption:string, placeholder:string, type:string, classes: string}
+mixin subscribe-input(data)
+  .subscribe-input
+    label(class="subscribe-input__caption" for="input") #{data.caption}
+    .subscribe-input__wrapper
+      input(class="subscribe-input__input"+ (data.classes ? " "+data.classes : "") id="input" type=data.type placeholder=data.placeholder value=data.text)
+
