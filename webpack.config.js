@@ -37,7 +37,8 @@ module.exports = (env, argv) => {
                     ]
                 },
                 {
-                    test: /\.(css|scss)$/,
+                    test: /\.(css|scss)$/, 
+                    exclude: /jquery/,                   
                     ///\.scss$/,
                     use: [{
                         loader: MiniCssExtractPlugin.loader,
@@ -80,7 +81,7 @@ module.exports = (env, argv) => {
                     }
                 },
                 {
-                    test: /\.m?js$/,
+                    test: /\.(css|scss|js|map)$/,                    
                     //include: path.resolve(__dirname, 'src/jquery'),
                     include: /jquery/,
                     loader: 'file-loader',

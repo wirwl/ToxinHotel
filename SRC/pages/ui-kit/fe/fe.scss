@@ -34,6 +34,9 @@ body {
 .column1__wrapper-for-fdd-input {
   margin-bottom: 41px;
 }
+.column1__wrapper-for-subscribe-input {margin-bottom: 100px;}
+
+
 
 @import "../../../components/text-input/text-input.scss";
 @import "../../../components/dropdown-input/dropdown-input.scss";
@@ -41,3 +44,4 @@ body {
 @import "../../../components/dd-input/dd-input.scss";
 @import "../../../components/fdd-input/fdd-input.scss";
 @import "../../../components/subscribe-input/subscribe-input.scss";
+@import "../../../components/comfort-input/comfort-input.scss";

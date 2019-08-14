@@ -1,0 +1,26 @@
+// data={caption:string, placeholder:string, type:string, classes: string}
+mixin comfort-input(data)
+  .iqdropdown__caption DROPDOWN
+  div(class='iqdropdown'+ (data.isExpanded ? " menu-open" : "")) 
+    p.iqdropdown-selection 
+    .iqdropdown-menu
+      .iqdropdown-menu-option(data-id='bedrooms')
+        div
+          p.iqdropdown-item СПАЛЬНИ          
+      .iqdropdown-menu-option(data-id='beds')
+        div
+          p.iqdropdown-item КРОВАТИ          
+      .iqdropdown-menu-option(data-id='bathrooms')
+        div
+          p.iqdropdown-item ВАННЫЕ КОМНАТЫ          
+
+
+
+
+
+
+//  .comfort-input
+//    label(class="comfort-input__caption" for="input") #{data.caption}
+//   .comfort-input__wrapper
+//      input(value=data.value class="comfort-input__input"+ (data.classes ? " "+data.classes : "") id="input" type=data.type placeholder=data.placeholder)
+

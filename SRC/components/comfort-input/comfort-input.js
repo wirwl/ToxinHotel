@@ -1,0 +1,3 @@
+$(document).ready(() => {
+  $('.iqdropdown').iqDropdown({  });
+});

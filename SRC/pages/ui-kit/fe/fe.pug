@@ -4,12 +4,14 @@ include ../../../components/masked-input/masked-input
 include ../../../components/dd-input/dd-input
 include ../../../components/fdd-input/fdd-input
 include ../../../components/subscribe-input/subscribe-input
+include ../../../components/comfort-input/comfort-input
 
 doctype html
 html
   head
     meta(charset="UTF-8")
     title Form Elements
+    link(href='../../../jquery/plugins/item-quantity-dropdown/item-quantity-dropdown.min.css' rel='stylesheet')
   body
     .column1
       ul.column1__list
@@ -26,11 +28,17 @@ html
           +dd-input({caption:'DATE DROPDOWN', placeholder:'ДД.ММ.ГГГГ', value:'19.08.2019'})
         li.column1__item.column1__wrapper-for-fdd-input
           +fdd-input({caption:'FILTER DATE DROPDOWN', placeholder:'', value:'19 авг - 23 авг'})
-        li.column1__item
+        li.column1__item.column1__wrapper-for-subscribe-input
           +subscribe-input({caption:'SUBSCRIPTION TEXT FIELD', placeholder:'Email', type:'email'})
+        li.column1__item
+          +comfort-input({isExpanded:false, caption:'DROPDOWN', placeholder:'', value:'2 спальни, 2 кровати...'})
+        li.column1__item
+          +comfort-input({isExpanded:true, caption:'DROPDOWN', placeholder:'', value:'2 спальни, 2 кровати...'})
+        
     .column2
     .column3
     script(type="text/javascript" src="../../../jquery/jquery-3.4.1.min.js")
     script(type="text/javascript" src="../../../jquery/plugins/jquery.maskedinput.min.js")
+    script(type='text/javascript' src='../../../jquery/plugins/item-quantity-dropdown/item-quantity-dropdown.min.js')
     
     
