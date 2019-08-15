@@ -31,11 +31,10 @@ body {
   display: flex;
   .dd-input {margin-right: 20px; }
 }
-.column1__wrapper-for-fdd-input {
-  margin-bottom: 41px;
-}
+.column1__wrapper-for-fdd-input {margin-bottom: 41px;}
 .column1__wrapper-for-subscribe-input {margin-bottom: 100px;}
-
+.column1__wrapper-for-comport-input {margin-bottom:154px;}
+.column1__wrapper-for-ecl1 {margin-bottom: 49px; }
 
 
 @import "../../../components/text-input/text-input.scss";
@@ -45,3 +44,5 @@ body {
 @import "../../../components/fdd-input/fdd-input.scss";
 @import "../../../components/subscribe-input/subscribe-input.scss";
 @import "../../../components/comfort-input/comfort-input.scss";
+@import "../../../components/expandable-checkbox-list/expandable-checkbox-list.scss";
+@import "../../../components/checkbox/checkbox.scss";

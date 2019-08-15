@@ -1,0 +1,13 @@
+include ../checkbox/checkbox
+
+mixin expandable-checkbox-list(data)
+  .ecl(class=(data.isExpand ? "ecl_show": ""))
+    .ecl__caption #{data.caption}
+    .ecl__list
+      for cb in data.checkboxes
+        +checkbox(cb)
+      
+      
+
+
+

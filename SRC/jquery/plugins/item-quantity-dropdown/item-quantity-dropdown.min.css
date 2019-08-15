@@ -115,7 +115,7 @@ b1ody {
   width: 15px;
 }
 .iqdropdown .iqdropdown-menu {
-  
+  background: #fff;
   border: 1px solid rgba(31, 32, 65, 0.5);
   cursor: default;
   display: none;

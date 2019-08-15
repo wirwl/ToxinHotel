@@ -11,6 +11,7 @@ import '../../../components/masked-input/masked-input.js'
 import '../../../components/dd-input/dd-input.js'
 import '../../../components/fdd-input/fdd-input.js'
 import '../../../components/comfort-input/comfort-input.js'
+import '../../../components/expandable-checkbox-list/expandable-checkbox-list.js'
 
 $(document).ready(() => {
   var $qs = $(document).find('.iqdropdown');

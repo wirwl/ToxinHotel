@@ -5,7 +5,8 @@ include ../../../components/dd-input/dd-input
 include ../../../components/fdd-input/fdd-input
 include ../../../components/subscribe-input/subscribe-input
 include ../../../components/comfort-input/comfort-input
-
+include ../../../components/expandable-checkbox-list/expandable-checkbox-list
+include ../../../components/checkbox/checkbox
 doctype html
 html
   head
@@ -32,9 +33,28 @@ html
           +subscribe-input({caption:'SUBSCRIPTION TEXT FIELD', placeholder:'Email', type:'email'})
         li.column1__item
           +comfort-input({isExpanded:false, caption:'DROPDOWN', placeholder:'', value:'2 спальни, 2 кровати...'})
-        li.column1__item
+        li.column1__item.column1__wrapper-for-comport-input
           +comfort-input({isExpanded:true, caption:'DROPDOWN', placeholder:'', value:'2 спальни, 2 кровати...'})
-        
+        li.column1__item.column1__wrapper-for-ecl1
+          +expandable-checkbox-list({isExpand:false, caption:'EXPANDABLE CHECKBOX LIST', checkboxes:[{text:'Завтрак'},
+                                                                                     {text:'Писменный стол', isChecked:true},
+                                                                                     {text:'Стул для кормления', isChecked:true},
+                                                                                     {text:'Кроватка', isChecked:true},
+                                                                                     {text:'Телевизор'},
+                                                                                     {text:'Шампунь'},
+                                                                                     {text:'Телевизор'},
+                                                                                     {text:'Шампунь'}
+                                                                                     ]})
+        li.column1__item                                                            
+          +expandable-checkbox-list({isExpand:true, caption:'EXPANDABLE CHECKBOX LIST', checkboxes:[{text:'Завтрак'},
+                                                                                     {text:'Писменный стол', isChecked:true},
+                                                                                     {text:'Стул для кормления', isChecked:true},
+                                                                                     {text:'Кроватка', isChecked:true},
+                                                                                     {text:'Телевизор'},
+                                                                                     {text:'Шампунь'},
+                                                                                     {text:'Телевизор'},
+                                                                                     {text:'Шампунь'}          
+                                                                                     ]})
     .column2
     .column3
     script(type="text/javascript" src="../../../jquery/jquery-3.4.1.min.js")
