@@ -1,0 +1,15 @@
+.radios-list {
+  list-style: none;    
+}
+
+.radios-list__caption {
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+.radios-list__item {
+  display: inline-block;
+}
+.radios-list__item:not(:last-child) {
+  margin-right: 10px;
+}

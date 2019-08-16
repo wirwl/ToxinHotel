@@ -17,9 +17,12 @@ body {
   max-width: 1440px; 
   display: flex;  
 }
-
-.column1__list {
+.column1 {
+  margin-right: 110px;
+}
+.column1__list, .column2__list {
   list-style: none;
+  
 }
 .column1__item {
   margin-bottom: 20px;
@@ -31,11 +34,25 @@ body {
   display: flex;
   .dd-input {margin-right: 20px; }
 }
+.column2__caption {
+  font-weight: bolder;
+}
+
+.toggle-list {
+  list-style: none;
+}
+.toggle-list__item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
 .column1__wrapper-for-fdd-input {margin-bottom: 41px;}
 .column1__wrapper-for-subscribe-input {margin-bottom: 100px;}
 .column1__wrapper-for-comport-input {margin-bottom:154px;}
 .column1__wrapper-for-ecl1 {margin-bottom: 49px; }
-
+.column2__wrapper-for-checkboxes-list {margin-bottom:40px; width: 250px; >*{margin-bottom: 5px;}}
+.column2__wrapper-for-radios-list {margin-bottom: 40px;}
+.toggle-list__item:not(:last-child) {margin-bottom: 10px;}
+.column2__wrapper-for-toggle-lists {margin-bottom: 20px;}
 
 @import "../../../components/text-input/text-input.scss";
 @import "../../../components/dropdown-input/dropdown-input.scss";
@@ -46,3 +63,7 @@ body {
 @import "../../../components/comfort-input/comfort-input.scss";
 @import "../../../components/expandable-checkbox-list/expandable-checkbox-list.scss";
 @import "../../../components/checkbox/checkbox.scss";
+@import "../../../components/comfort-status/comfort-status.scss";
+@import "../../../components/radio/radio.scss";
+@import "../../../components/checkboxes-list/checkboxes-list.scss";
+@import "../../../components/radios-list/radios-list.scss";

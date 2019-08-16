@@ -1,0 +1,5 @@
+mixin comfort-status(data)
+  .comfort-status(class=(data.isNeedLine) ? '' : 'comfort-status_hide-line')
+    img.comfort-status__image(src=data.src)
+    p.comfort-status__caption #{data.caption}
+    p.comfort-status__text #{data.text}

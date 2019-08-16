@@ -1,0 +1,8 @@
+mixin radios-list(data)    
+  ul.radios-list        
+    p.radios-list__caption #{data.caption} 
+    for rds in data.radios
+      - rds.name=data.name
+      li.radios-list__item
+        +radio(rds)
+    

@@ -1,0 +1,12 @@
+.checkboxes-list {
+list-style: none;
+}
+
+.checkboxes-list__caption {
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.checkboxes-list__item:not(:last-child) {
+  margin-bottom: 10px;
+}

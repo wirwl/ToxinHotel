@@ -1,8 +1,24 @@
 .checkbox {
-  display: block;
-  color: $toxinDS50;
+  display: flex;
+  color: $toxinDS50;  
+  line-height: 22px;  
 }
 
 .checkbox__input {
-  margin-right: 5px;
+  margin-right: 15px;  
+  
+}
+
+.checkbox__input:after {
+  display: block;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 1px solid $toxinPurple;
+  border-radius: 3px;
+  //background: white;    
+}
+
+.checkbox__input:checked {
+  background: red;
 }

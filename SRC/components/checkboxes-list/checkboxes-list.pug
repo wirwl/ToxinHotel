@@ -1,0 +1,9 @@
+mixin checkboxes-list(data)
+  ul.checkboxes-list
+    p.checkboxes-list__caption #{data.caption}
+    for cb in data.checkboxes
+      li.checkboxes-list__item
+        +checkbox(cb)  
+
+
+

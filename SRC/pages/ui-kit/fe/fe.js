@@ -1,5 +1,9 @@
 import './fe.scss';
 
+import '../../../components/comfort-status/smile.png';
+import '../../../components/comfort-status/home.png';
+
+
 import '../../../jquery/jquery-3.4.1.min.js'
 import '../../../jquery/plugins/jquery.maskedinput.min.js'
 import '../../../jquery/plugins/item-quantity-dropdown/item-quantity-dropdown.min.js'

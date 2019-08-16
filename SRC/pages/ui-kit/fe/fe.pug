@@ -7,6 +7,11 @@ include ../../../components/subscribe-input/subscribe-input
 include ../../../components/comfort-input/comfort-input
 include ../../../components/expandable-checkbox-list/expandable-checkbox-list
 include ../../../components/checkbox/checkbox
+include ../../../components/comfort-status/comfort-status
+include ../../../components/radio/radio
+include ../../../components/toggle/toggle
+include ../../../components/checkboxes-list/checkboxes-list
+include ../../../components/radios-list/radios-list
 doctype html
 html
   head
@@ -55,10 +60,29 @@ html
                                                                                      {text:'Телевизор'},
                                                                                      {text:'Шампунь'}          
                                                                                      ]})
+        li.column1__item
+          +comfort-status({src:'../../../images/home.png', caption:'Комфорт', text:'Шумопоглощающие стены'})
+          +comfort-status({src:'../../../images/smile.png', caption:'Удобство', text:'Окно в каждой из спален'})
     .column2
+      ul.column2__list
+        li.column2__item.column2__wrapper-for-checkboxes-list
+          +checkboxes-list({caption:'CHECKBOX BUTTONS', checkboxes:[{text:'Можно курить'},
+                                                                  {text:'Можно с питомцами', isChecked:true},
+                                                                  {text:'Можно пригласить гостей (до 10 человек)',isChecked:true}
+                                                                 ]})               
+        li.column2__item.column2__wrapper-for-radios-list
+          +radios-list({setSelecton:0,caption:'RADIO BUTTONS', name:'sex', radios:[{text:'Мужчина'},
+                                                                     {text:'Женщина'}
+                                                                    ]})
+        li.column2__item
+          ul.toggle-list
+            p.column2__caption.column2__wrapper-for-toggle-lists TOGGLE
+            li.toggle-list__item
+              +toggle({isChecked:true, text:'Получать спецппредложения'})
+            li.toggle-list__item
+              +toggle({isChecked:false, text:'Получать спецпредложения'})
+
     .column3
     script(type="text/javascript" src="../../../jquery/jquery-3.4.1.min.js")
     script(type="text/javascript" src="../../../jquery/plugins/jquery.maskedinput.min.js")
-    script(type='text/javascript' src='../../../jquery/plugins/item-quantity-dropdown/item-quantity-dropdown.min.js')
-    
-    
+    script(type="text/javascript" src='../../../jquery/plugins/item-quantity-dropdown/item-quantity-dropdown.min.js')
