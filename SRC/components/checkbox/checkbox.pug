@@ -1,4 +1,4 @@
 mixin checkbox(data)
-  label.checkbox
-    input(type='checkbox' checked=(data.isChecked ? "checked" : undefined)).checkbox__input 
-    |#{data.text}
+  .checkbox
+    input(type='checkbox' id=data.id checked=(data.isChecked ? 'checked': undefinded)).checkbox__input
+    label(for=data.id).checkbox__label #{data.text}

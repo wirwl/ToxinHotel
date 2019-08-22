@@ -1,0 +1,11 @@
+.rate-button {
+  display: flex;
+  //border: 1px solid black;
+  
+}
+
+.rate-button > * {
+  cursor: pointer;
+  color: $toxinPurple;
+}
+

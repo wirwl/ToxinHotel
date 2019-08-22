@@ -1,15 +1,14 @@
-.radios-list {
-  list-style: none;    
+.radios-list__list {
+  list-style: none;   
+  display: flex;
 }
 
 .radios-list__caption {
-  font-weight: bolder;
-  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 16px;
 }
 
-.radios-list__item {
-  display: inline-block;
-}
 .radios-list__item:not(:last-child) {
-  margin-right: 10px;
+  margin-right: 20px;
 }

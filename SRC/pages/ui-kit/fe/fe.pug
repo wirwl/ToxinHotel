@@ -12,6 +12,10 @@ include ../../../components/radio/radio
 include ../../../components/toggle/toggle
 include ../../../components/checkboxes-list/checkboxes-list
 include ../../../components/radios-list/radios-list
+include ../../../components/toggles-list/toggles-list
+include ../../../components/like-button/like-button
+include ../../../components/rate-button/rate-button
+
 doctype html
 html
   head
@@ -66,22 +70,33 @@ html
     .column2
       ul.column2__list
         li.column2__item.column2__wrapper-for-checkboxes-list
-          +checkboxes-list({caption:'CHECKBOX BUTTONS', checkboxes:[{text:'Можно курить'},
-                                                                  {text:'Можно с питомцами', isChecked:true},
-                                                                  {text:'Можно пригласить гостей (до 10 человек)',isChecked:true}
-                                                                 ]})               
+          +checkboxes-list({caption:'CHECKBOX BUTTONS', checkboxes:[{id:'smoke',text:'Можно курить'},
+                                                                  {id:'pet',text:'Можно с питомцами', isChecked:true},
+                                                                  {id:'guest',text:'Можно пригласить гостей (до 10 человек)',isChecked:true}
+                                                                   ]})               
         li.column2__item.column2__wrapper-for-radios-list
-          +radios-list({setSelecton:0,caption:'RADIO BUTTONS', name:'sex', radios:[{text:'Мужчина'},
-                                                                     {text:'Женщина'}
+          +radios-list({caption:'RADIO BUTTONS', name:'sex', radios:[{id:'men',text:'Мужчина', isChecked:true},
+                                                                     {id:'women',text:'Женщина'}
                                                                     ]})
+        li.column2__item.column2__wrapper-for-toggles-list 
+          +toggles-list({caption:'TOGGLE',toggles:[{isChecked:true, text:'Получать спецпредложения',id:'t_on'},
+                                                  {isChecked:false, text:'Получать спецпредложения', id:'t_off'}]})         
         li.column2__item
-          ul.toggle-list
-            p.column2__caption.column2__wrapper-for-toggle-lists TOGGLE
-            li.toggle-list__item
-              +toggle({isChecked:true, text:'Получать спецппредложения'})
-            li.toggle-list__item
-              +toggle({isChecked:false, text:'Получать спецпредложения'})
-
+          figure.likes-button-list
+            figcaption.likes-button-list__caption LIKE BUTTON
+            ul.likes-button-list__list
+              li.likes-button-list__item
+                +like-button({count: 2})
+              li.likes-button-list__item
+                +like-button({count: 12, isChecked:true})   
+        li.column2__item
+          figure.rate-buttons-list
+            figcaption.rate-buttons-list__caption RATE BUTTON
+            ul.rate-buttons-list__list
+              li.rate-buttons-list__item
+                +rate-button({count:4})
+              li.rate-buttons-list__item
+                +rate-button({count:5})
     .column3
     script(type="text/javascript" src="../../../jquery/jquery-3.4.1.min.js")
     script(type="text/javascript" src="../../../jquery/plugins/jquery.maskedinput.min.js")

@@ -1,8 +1,9 @@
 mixin radios-list(data)    
-  ul.radios-list        
-    p.radios-list__caption #{data.caption} 
-    for rds in data.radios
-      - rds.name=data.name
-      li.radios-list__item
-        +radio(rds)
-    
+  figure.radios-list  
+    figcaption.radios-list__caption #{data.caption}       
+    ul.radios-list__list       
+      for rds in data.radios
+        - rds.name=data.name
+        li.radios-list__item
+          +radio(rds)
+      

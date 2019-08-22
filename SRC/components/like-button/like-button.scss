@@ -1,0 +1,31 @@
+.like-button {
+  display: flex;
+  border: 1px solid $toxinDS25;
+  border-radius: 10px;
+  padding: 0px 5px;
+  height: 20px;
+  min-width: 40px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.like-button__heart {
+  font-size: 10px;
+  margin-right: 5px;
+}
+
+.like-button__count {
+  display: inline-block;
+  font-size: 10px;
+}
+
+.like-button * {
+  color: $toxinDS25;
+}
+
+.like-button_checked {
+  border: 1px solid $toxinPurple;
+  * {
+    color: $toxinPurple;
+  }
+}

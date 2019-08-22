@@ -1,7 +1,49 @@
-.radio {
+.radio__input
+{
+    display: none;
+}
+.radio__label 
+{
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;    
+    font-size: 14px;
+    cursor: pointer;
+    color: $toxinDS75;
+}
+.radio__input:not(:checked) + .radio__label {
+    color: $toxinDS50;
+}
+.radio__label:before 
+{
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid $toxinDS25;
+    background-color: #ffffff;
+    border-radius: 100%;
+}
+.radio__label:after 
+{
+    content: "";
+    position: absolute;
+    transition: all 0.2s ease;
+    left: 4px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 
 }
-
-.radio__input {
-  
+.radio__input:not(:checked) + .radio__label:after 
+{
+    opacity: 0;
+}
+.radio__input:checked + .radio__label:after 
+{
+    opacity: 1;
 }

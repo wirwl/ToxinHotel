@@ -1,0 +1,7 @@
+mixin rate-button(data)
+  .rate-button(data-count=data.count)
+    p.rate-button__star1.material-icons #{(data.count>0 ? 'star' : 'star_border')}
+    p.rate-button__star2.material-icons #{(data.count>1 ? 'star' : 'star_border')}
+    p.rate-button__star3.material-icons #{(data.count>2 ? 'star' : 'star_border')}
+    p.rate-button__star4.material-icons #{(data.count>3 ? 'star' : 'star_border')}
+    p.rate-button__star5.material-icons #{(data.count>4 ? 'star' : 'star_border')}

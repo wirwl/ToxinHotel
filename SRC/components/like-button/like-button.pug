@@ -1,0 +1,4 @@
+mixin like-button(data)
+  .like-button(class=(data.isChecked ? 'like-button_checked' :''))
+    p.like-button__heart.material-icons #{(data.isChecked ? 'favorite' : 'favorite_border')}
+    p.like-button__count #{data.count}

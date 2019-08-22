@@ -1,24 +1,57 @@
-.checkbox {
-  display: flex;
-  color: $toxinDS50;  
-  line-height: 22px;  
-}
-
 .checkbox__input {
-  margin-right: 15px;  
-  
+  display: none;
 }
-
 .checkbox__input:after {
-  display: block;
-  content: "";
-  width: 20px;
-  height: 20px;
-  border: 1px solid $toxinPurple;
-  border-radius: 3px;
-  //background: white;    
+ display: block;
+ width: 5px;
+ height: 5px;
+ position: absolute;
 }
 
-.checkbox__input:checked {
-  background: red;
+.checkbox__label {
+   display: inline-block;
+   position: relative;
+   padding-left: 30px;
+   line-height: 20px;
+   cursor: pointer;
+   color: $toxinDS50;
+   font-size: 14px;      
+}
+
+.checkbox__label:before {
+   box-sizing: border-box;
+   content: "";
+   position: absolute;
+   left: 0px;
+   top: 0px;
+   width: 20px;
+   height: 20px;
+   border: 1px solid $toxinPurple;
+   background-color: #fff;
+   border-radius: 4px;
+}
+
+.checkbox__label:after {
+   box-sizing: border-box;
+   content: "";
+   position: absolute;
+   transition: all 0.2s ease;
+   left: 6px;
+   top: 6px;
+   width: 9px;
+   height: 7px;
+   border-radius: 2px;
+   border-left: 3px solid #8BA4F9;
+   border-bottom: 3px solid #8BA4F9;   
+   transform: rotate(-45deg);
+}
+
+.checkbox__input:not(:checked) + .checkbox__label:after 
+{
+   opacity: 0;
+}
+
+.checkbox__input:checked + .checkbox__label:after
+{
+   opacity: 1;
 }

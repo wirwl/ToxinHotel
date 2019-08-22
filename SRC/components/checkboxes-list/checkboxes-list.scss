@@ -1,10 +1,11 @@
-.checkboxes-list {
+.checkboxes-list__list {
 list-style: none;
 }
 
 .checkboxes-list__caption {
-    font-weight: bolder;
-    margin-bottom: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 17px;
 }
 
 .checkboxes-list__item:not(:last-child) {

@@ -1,0 +1,9 @@
+mixin toggles-list(data)
+  figure.toggles-list
+    figcaption.toggles-list__caption #{data.caption}
+    ul.toggles-list__list 
+      for toggle in data.toggles
+        li.toggles-list__item
+          +toggle(toggle)
+
+
