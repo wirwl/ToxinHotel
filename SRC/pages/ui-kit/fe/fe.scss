@@ -60,10 +60,11 @@ body {
   margin-right: 10px;
 }
 
-.rate-buttons-list__caption {margin-bottom: 10px;}
+.column2__wrapper-for-likes-button-list {margin-bottom:43px;}
+.rate-buttons-list__caption {margin-bottom: 16px;font-size: 12px;font-weight:bold;}
 .rate-buttons-list__list {list-style:none;display: flex;}
 .rate-buttons-list__item:not(:last-child) {
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 @import "../../../components/text-input/text-input.scss";
