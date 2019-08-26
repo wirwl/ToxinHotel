@@ -1,11 +1,32 @@
 .rate-button {
-  display: flex;
-  //border: 1px solid black;
-  
+  display: inline-flex;  
+  flex-direction: row-reverse;
 }
 
-.rate-button > * {
+.rate-button__input {
+  display: none;
+}
+
+.rate-button > .rate-button__label {
   cursor: pointer;
   color: $toxinPurple;
 }
+
+.rate-button__label:after {
+  content: 'star_border';
+}
+
+.rate-button__input:checked ~ .rate-button__label:after {
+  content: 'star';
+}
+
+.rate-button:hover > .rate-button__label:after {
+    content:'star_border';
+}
+
+.rate-button > .rate-button__label:hover:after,
+.rate-button__label:hover ~ .rate-button__label:after {
+  content: 'star';  
+}
+
 
