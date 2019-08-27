@@ -16,6 +16,7 @@ import '../../../components/dd-input/dd-input.js'
 import '../../../components/fdd-input/fdd-input.js'
 import '../../../components/comfort-input/comfort-input.js'
 import '../../../components/expandable-checkbox-list/expandable-checkbox-list.js'
+import '../../../components/like-button/like-button.js'
 
 $(document).ready(() => {
   var $qs = $(document).find('.iqdropdown');
@@ -25,10 +26,3 @@ $(document).ready(() => {
     $b[1].click(); $b[1].click();
   })
 });
-
-
-//import $ from 'jquery';
-//global.jQuery = global.$ = $;
-//console.log('---');
-//console.log($);
-//$(".fdd-input__input").val('19 авг - 23 авг');

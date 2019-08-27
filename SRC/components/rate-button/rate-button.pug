@@ -7,6 +7,10 @@ mixin rate-button(data={id:'star', count:0})
       label(for=data.id+(total-n)).rate-button__label.material-icons     
       - n++;
 
+
+
+
+
 mixin rate-button_old2(data)
   .rate-button(data-count=data.count)    
     - var n=1;
@@ -14,7 +18,6 @@ mixin rate-button_old2(data)
       p.rate-button__star.material-icons star_border
       - n++;
     
-
 mixin rate-button_old(data)
   .rate-button(data-count=data.count)
     p.rate-button__star1.material-icons #{(data.count>0 ? 'star' : 'star_border')}

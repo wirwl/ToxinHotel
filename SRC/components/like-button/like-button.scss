@@ -1,31 +1,34 @@
-.like-button {
-  display: flex;
-  border: 1px solid $toxinDS25;
-  border-radius: 10px;
-  padding: 0px 5px;
-  height: 20px;
-  min-width: 40px;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.like-button__heart {
-  font-size: 10px;
-  margin-right: 5px;
+.like-button__input {
+  display: none;
 }
 
 .like-button__count {
-  display: inline-block;
+  font-family: "montserrat_regular";
   font-size: 10px;
-}
-
-.like-button * {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid $toxinDS25;
+  border-radius: 10px;
   color: $toxinDS25;
+  padding: 0px 5px;
+  height: 20px;
+  min-width: 40px;
+  cursor: pointer;
 }
 
-.like-button_checked {
-  border: 1px solid $toxinPurple;
-  * {
+.like-button__count:before {
+  font-family: "Material Icons";
+  content: "favorite_border";
+  margin-right: 5px;
+}
+
+.like-button__input:checked + {
+  .like-button__count {
+    border: 1px solid $toxinPurple;
     color: $toxinPurple;
+  }
+  .like-button__count:before {
+    content: "favorite";
   }
 }
