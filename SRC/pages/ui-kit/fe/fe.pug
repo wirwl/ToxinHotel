@@ -15,6 +15,7 @@ include ../../../components/radios-list/radios-list
 include ../../../components/toggles-list/toggles-list
 include ../../../components/like-button/like-button
 include ../../../components/rate-button/rate-button
+include ../../../components/guests-input/guests-input
 
 doctype html
 html
@@ -41,32 +42,41 @@ html
         li.column1__item.column1__wrapper-for-subscribe-input
           +subscribe-input({caption:'SUBSCRIPTION TEXT FIELD', placeholder:'Email', type:'email'})
         li.column1__item
-          +comfort-input({isExpanded:false, caption:'DROPDOWN', placeholder:'', value:'2 спальни, 2 кровати...'})
+          +comfort-input({isExpanded:false, caption:'DROPDOWN', placeholder:'', 
+          items:[{id:'bedrooms', name:'СПАЛЬНИ', defaultcount:2},
+                 {id:'beds', name:'КРОВАТИ', defaultcount:2},
+                 {id:'bathrooms', name:'ВАННЫЕ КОМНАТЫ'}] })
         li.column1__item.column1__wrapper-for-comport-input
-          +comfort-input({isExpanded:true, caption:'DROPDOWN', placeholder:'', value:'2 спальни, 2 кровати...'})
+          +comfort-input({isExpanded:true, caption:'DROPDOWN', placeholder:'', 
+          items:[{id:'bedrooms', name:'СПАЛЬНИ', defaultcount:2},
+                 {id:'beds', name:'КРОВАТИ', defaultcount:2},
+                 {id:'bathrooms', name:'ВАННЫЕ КОМНАТЫ'}] })
         li.column1__item.column1__wrapper-for-ecl1
-          +expandable-checkbox-list({isExpand:false, caption:'EXPANDABLE CHECKBOX LIST', checkboxes:[{text:'Завтрак'},
-                                                                                     {text:'Писменный стол', isChecked:true},
-                                                                                     {text:'Стул для кормления', isChecked:true},
-                                                                                     {text:'Кроватка', isChecked:true},
-                                                                                     {text:'Телевизор'},
-                                                                                     {text:'Шампунь'},
-                                                                                     {text:'Телевизор'},
-                                                                                     {text:'Шампунь'}
+          +expandable-checkbox-list({isExpand:false, caption:'EXPANDABLE CHECKBOX LIST', checkboxes:[{id:'bf', text:'Завтрак'},
+                                                                                     {id:'desk', text:'Письменный стол', isChecked:true},
+                                                                                     {id:'chair', text:'Стул для кормления', isChecked:true},
+                                                                                     {id:'bed', text:'Кроватка', isChecked:true},
+                                                                                     {id:'tv1', text:'Телевизор'},
+                                                                                     {id:'shampoo1', text:'Шампунь'},
+                                                                                     {id:'tv2', text:'Телевизор'},
+                                                                                     {id:'shampoo2', text:'Шампунь'}
                                                                                      ]})
-        li.column1__item                                                            
-          +expandable-checkbox-list({isExpand:true, caption:'EXPANDABLE CHECKBOX LIST', checkboxes:[{text:'Завтрак'},
-                                                                                     {text:'Писменный стол', isChecked:true},
-                                                                                     {text:'Стул для кормления', isChecked:true},
-                                                                                     {text:'Кроватка', isChecked:true},
-                                                                                     {text:'Телевизор'},
-                                                                                     {text:'Шампунь'},
-                                                                                     {text:'Телевизор'},
-                                                                                     {text:'Шампунь'}          
+        li.column1__item.column1__wrapper-for-ecl2                                                            
+          +expandable-checkbox-list({isExpand:true, caption:'EXPANDABLE CHECKBOX LIST', checkboxes:[{id:'bf2', text:'Завтрак'},
+                                                                                     {id:'desk2', text:'Письменный стол', isChecked:true},
+                                                                                     {id:'chair2', text:'Стул для кормления', isChecked:true},
+                                                                                     {id:'bed2', text:'Кроватка', isChecked:true},
+                                                                                     {id:'tv12', text:'Телевизор'},
+                                                                                     {id:'shampoo12', text:'Шампунь'},
+                                                                                     {id:'tv22', text:'Телевизор'},
+                                                                                     {id:'shampoo22', text:'Шампунь'}          
                                                                                      ]})
         li.column1__item
-          +comfort-status({src:'../../../images/home.png', caption:'Комфорт', text:'Шумопоглощающие стены'})
-          +comfort-status({src:'../../../images/smile.png', caption:'Удобство', text:'Окно в каждой из спален'})
+          ul.comfort-statuses-list
+            li.comfort-statuses-list__item
+              +comfort-status({src:'../../../images/smile.svg', caption:'Комфорт', text:'Шумопоглощающие стены'})
+            li.comfort-statuses-list__item
+              +comfort-status({src:'../../../images/home.svg', caption:'Удобство', text:'Окно в каждой из спален'})
     .column2
       ul.column2__list
         li.column2__item.column2__wrapper-for-checkboxes-list
@@ -97,6 +107,12 @@ html
                 +rate-button({count:4,id:'stars1'})
               li.rate-buttons-list__item
                 +rate-button({count:5,id:'stars2'})
+        li.column2__item
+          +guests-input({isExpanded:true, caption:'DROPDOWN', placeholder:'', 
+          items:[{id:'adults', name:'ВЗРОСЛЫЕ', defaultcount:0},
+                 {id:'childs', name:'ДЕТИ', defaultcount:0},
+                 {id:'babies', name:'МЛАДЕНЦЫ'}] })
+
     .column3
     script(type="text/javascript" src="../../../jquery/jquery-3.4.1.min.js")
     script(type="text/javascript" src="../../../jquery/plugins/jquery.maskedinput.min.js")

@@ -1,7 +1,7 @@
 import './fe.scss';
 
-import '../../../components/comfort-status/smile.png';
-import '../../../components/comfort-status/home.png';
+import '../../../components/comfort-status/smile.svg';
+import '../../../components/comfort-status/home.svg';
 
 
 import '../../../jquery/jquery-3.4.1.min.js'
@@ -17,12 +17,13 @@ import '../../../components/fdd-input/fdd-input.js'
 import '../../../components/comfort-input/comfort-input.js'
 import '../../../components/expandable-checkbox-list/expandable-checkbox-list.js'
 import '../../../components/like-button/like-button.js'
+import '../../../components/guests-input/guests-input.js'
 
 $(document).ready(() => {
-  var $qs = $(document).find('.iqdropdown');
+/*   var $qs = $(document).find('.iqdropdown');
   $qs.each(function () {
     var $b = $(this).find('button.button-increment');
     $b[0].click(); $b[0].click();
     $b[1].click(); $b[1].click();
-  })
+  }) */
 });
