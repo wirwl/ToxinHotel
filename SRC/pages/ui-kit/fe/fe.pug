@@ -99,7 +99,7 @@ html
                 +like-button({count: 2, id:'like1'})
               li.likes-button-list__item
                 +like-button({count: 12, id:'like2', isChecked:true})   
-        li.column2__item
+        li.column2__item.column2__wrapper-for-rate-buttons-list
           figure.rate-buttons-list
             figcaption.rate-buttons-list__caption RATE BUTTON
             ul.rate-buttons-list__list
@@ -107,10 +107,10 @@ html
                 +rate-button({count:4,id:'stars1'})
               li.rate-buttons-list__item
                 +rate-button({count:5,id:'stars2'})
-        li.column2__item
+        li.column2__item.column2__wrapper-for-guests-input1
           +guests-input({isExpanded:true, caption:'DROPDOWN', placeholder:'', 
-          items:[{id:'adults', name:'ВЗРОСЛЫЕ', defaultcount:0},
-                 {id:'childs', name:'ДЕТИ', defaultcount:0},
+          items:[{id:'adults', name:'ВЗРОСЛЫЕ', defaultcount:1},
+                 {id:'childs', name:'ДЕТИ'},
                  {id:'babies', name:'МЛАДЕНЦЫ'}] })
 
     .column3

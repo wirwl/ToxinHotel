@@ -2,6 +2,7 @@ $(document).ready(() => {
   
   let $iq =$('.guests-input').find('.iqdropdown');  
   $iq.iqDropdown({
+    isShowButtons:true,
     entities : {placeholder:'Сколько гостей',
                 total:{   isShow:true,                          
                           cases:[{ n: 1, text: 'гость'},

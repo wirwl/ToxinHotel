@@ -1,6 +1,7 @@
 $(document).ready(() => {
   let $iq =$('.comfort-input').find('.iqdropdown');  
   $iq.iqDropdown({
+    isShowButtons:false,
     entities : {placeholder: 'Выберите удобства',
                 total:{   isShow:false,                          
                           cases:[{ n: 1, text: 'удобство'},

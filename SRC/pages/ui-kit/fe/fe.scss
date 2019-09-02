@@ -18,7 +18,8 @@ body {
   display: flex;  
 }
 .column1 {
-  margin-right: 107px;
+  margin-right: 127px;
+  width: 320px;
 }
 .column1__list, .column2__list {
   list-style: none;
@@ -69,6 +70,12 @@ body {
 .rate-buttons-list__list {list-style:none;display: flex;}
 .rate-buttons-list__item:not(:last-child) {
   margin-right: 20px;
+}
+.column2__wrapper-for-rate-buttons-list {
+  margin-bottom: 190px;
+}
+.column2__wrapper-for-guests-input1 {
+  margin-bottom: 50px;
 }
 
 @import "../../../components/text-input/text-input.scss";

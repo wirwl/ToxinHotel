@@ -1,12 +1,10 @@
-
-
 .iqdropdown {
-  -webkit-tap-highlight-color: transparent;  
-  width: 266px;
+  -webkit-tap-highlight-color: transparent;
+  width: inherit;
 }
-.iqdropdown * {  
-  font-family: 'Montserrat-Regular';
-  -webkit-tap-highlight-color: transparent;  
+.iqdropdown * {
+  font-family: "Montserrat-Regular";
+  -webkit-tap-highlight-color: transparent;
 }
 .iqdropdown *::after,
 .iqdropdown *::before {
@@ -88,13 +86,13 @@
   position: absolute;
   top: 50%;
   left: 4px;
-  
+
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
   transition: -webkit-transform 0.25s ease-in-out;
   transition: transform 0.25s ease-in-out;
   transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
-  width: 5px;  
+  width: 5px;
 }
 
 .button-increment .icon-decrement.icon-increment::before,
@@ -115,12 +113,12 @@
   top: 42px;
   transition: all 0.2s ease-in-out;
   z-index: 99999;
-  width:inherit;
+  width: inherit;
 }
 .iqdropdown .iqdropdown-menu-option {
   align-items: center;
   display: flex;
-  height: 28px;  
+  height: 28px;
 }
 
 .iqdropdown .iqdropdown-menu-option:not(:last-child) {
@@ -131,7 +129,7 @@
   border: 0;
 }
 .iqdropdown .iqdropdown-menu-close {
-  color: #002674;  
+  color: #002674;
   font-size: 14px;
   font-weight: 600;
   height: 20px;
@@ -142,7 +140,6 @@
 }
 .iqdropdown.menu-open .iqdropdown-menu {
   display: block;
-    
 }
 @media only screen and (max-width: 640px) {
   .iqdropdown .iqdropdown-menu.mobile-top-menu {
@@ -155,7 +152,7 @@
   padding-right: 10px;
 }
 .iqdropdown-item {
-  color: #000;  
+  color: #000;
   font-size: 12px;
   font-weight: bold;
 }
@@ -171,24 +168,23 @@
   height: 30px;
   justify-content: space-between;
   width: 91px;
-  
 }
-.iqdropdown .iqdropdown-item-controls .counter {  
-  color: #4a4a4a;  
+.iqdropdown .iqdropdown-item-controls .counter {
+  color: #4a4a4a;
   font-size: 12px;
   font-weight: bold;
-  line-height: 15px;      
+  line-height: 15px;
   padding-top: 7px;
-  
+
   width: 30px;
   text-align: center;
-  }
+}
 .iqdropdown .iqdropdown-item-controls button {
   align-items: center;
   border: 1px solid #e2e2e2;
   display: flex;
   height: 30px;
-  width: 30px;  
+  width: 30px;
   transition: all 0.2s ease-in-out;
 }
 .iqdropdown .iqdropdown-item-controls button:hover {
@@ -197,21 +193,20 @@
 
 .iqdropdown .iqdropdown-item-controls .button-increment,
 .iqdropdown .iqdropdown-item-controls .button-decrement {
-  border: 1px solid rgba(31, 32, 65, 0.50);
+  border: 1px solid rgba(31, 32, 65, 0.5);
 }
 
-.iqdropdown .iqdropdown-item-controls button.button-decrement {  
+.iqdropdown .iqdropdown-item-controls button.button-decrement {
   border-radius: 100%;
 }
 
-.iqdropdown .iqdropdown-item-controls button.button-increment {  
+.iqdropdown .iqdropdown-item-controls button.button-increment {
   border-radius: 100%;
 }
-
 
 .iqdropdown {
   align-items: center;
-  border: 1px solid rgba(31, 32, 65, 0.5);  
+  border: 1px solid rgba(31, 32, 65, 0.5);
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   cursor: pointer;
@@ -219,21 +214,21 @@
   height: 44px;
   justify-content: space-between;
   padding: 0 15px;
-  position: relative;  
+  position: relative;
 }
 .iqdropdown .iqdropdown-selection {
-  color: rgba(31, 32, 65, 0.75);  
+  color: rgba(31, 32, 65, 0.75);
   font-size: 14px;
   flex: 1;
   position: relative;
   padding: 6px 0px 8px;
   padding-right: 15px;
   white-space: nowrap;
-  overflow: hidden;    
-  text-overflow: ellipsis; 
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.iqdropdown .iqdropdown-selection::after {  
-  font-family: 'Material Icons';
+.iqdropdown .iqdropdown-selection::after {
+  font-family: "Material Icons";
   font-size: 24px;
   content: "keyboard_arrow_down";
   display: inline-block;
@@ -247,6 +242,31 @@
 .iqdropdown .button-decrement.button-decrement__disable,
 .iqdropdown .button-increment.button-increment__disable {
   border: 1px solid rgba(31, 32, 65, 0.25);
+}
+
+.iqdropdown-buttons {  
+  padding-top:17px;  
+  display: flex;  
+}
+
+
+
+.iqdropdown-buttons .iqdropdown-clear {
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-size: 12px;    
+  color: rgba(31, 32, 65, 0.5);    
+}
+.iqdropdown-buttons .iqdropdown-clear.iqdropdown-clear_hide {
+  display: none;
+}
+.iqdropdown-buttons .iqdropdown-apply {
+  margin-left: auto;
+  color: #bc9cff;
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-size: 12px;    
+  letter-spacing: 0.4px;
 }
 
 /*# sourceMappingURL=item-quantity-dropdown.min.css.map*/
