@@ -109,10 +109,17 @@ html
                 +rate-button({count:5,id:'stars2'})
         li.column2__item.column2__wrapper-for-guests-input1
           +guests-input({isExpanded:true, caption:'DROPDOWN', placeholder:'', 
-          items:[{id:'adults', name:'ВЗРОСЛЫЕ', defaultcount:1},
+          items:[{id:'adults', name:'ВЗРОСЛЫЕ'},
                  {id:'childs', name:'ДЕТИ'},
                  {id:'babies', name:'МЛАДЕНЦЫ'}] })
-
+        li.column2__item.column2__wrapper-for-rich-checkboxes-list
+          +checkboxes-list({caption:'RICH CHECKBOX BUTTONS', 
+                            checkboxes:[{id:'wk',text:'Широкий коридор', desc:'Ширина коридоров в номере не менее 91 см.'},
+                                        {id:'hfi',text:'Помощник для инвалидов', desc:'На 1 этаже вас встретит специалист и проводит до номера.'}
+                                       ]})      
+        li.
+         
+        
     .column3
     script(type="text/javascript" src="../../../jquery/jquery-3.4.1.min.js")
     script(type="text/javascript" src="../../../jquery/plugins/jquery.maskedinput.min.js")
