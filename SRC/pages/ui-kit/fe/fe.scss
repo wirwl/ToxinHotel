@@ -21,6 +21,11 @@ body {
   margin-right: 127px;
   width: 320px;
 }
+.column2, .column3 {width: 320px;}
+.column1, .column2, .column3 {
+//  border: 1px dashed gray;
+}
+.column2 {margin-right: 72px;}
 .column1__list, .column2__list {
   list-style: none;
   
@@ -81,7 +86,26 @@ body {
 .column2__wrapper-for-rich-checkboxes-list {
   width: 253px;
   margin-bottom: 10px;
+  .checkboxes-list__item:nth-child(1) {
+    width: 220px;
+  }
 }
+
+.column__wrapper {
+  display: flex;
+  flex-direction: column;
+  //border: 1px dashed blue;  
+}
+
+.column23__wrapper {
+  display: flex;
+  flex-direction: row;
+  
+}
+.row1 {
+  //border: 1px dashed blue;  
+}
+
 @import "../../../components/text-input/text-input.scss";
 @import "../../../components/dropdown-input/dropdown-input.scss";
 @import "../../../components/masked-input/masked-input.scss";

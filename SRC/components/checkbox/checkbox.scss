@@ -69,3 +69,7 @@
    color: $toxinDS75;
    
 }
+
+.checkbox .checkbox__label.checkbox__label_bold + .checkbox__desc {
+   padding-top: 2px;
+}
