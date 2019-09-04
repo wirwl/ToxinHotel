@@ -16,6 +16,8 @@ include ../../../components/toggles-list/toggles-list
 include ../../../components/like-button/like-button
 include ../../../components/rate-button/rate-button
 include ../../../components/guests-input/guests-input
+include ../../../components/message-control/message-control
+
 
 doctype html
 html
@@ -118,10 +120,13 @@ html
               +checkboxes-list({caption:'RICH CHECKBOX BUTTONS', 
                                 checkboxes:[{id:'wk',text:'Широкий коридор', desc:'Ширина коридоров в номере не менее 91 см.'},
                                             {id:'hfi',text:'Помощник для инвалидов', desc:'На 1 этаже вас встретит специалист и проводит до номера.'}
-                                          ]})      
-            li.                 
+                                          ]})                                                 
         .column3 column3
-      .row1 row1
+      .row1
+        +message-control({image:{alt:'avatar', src:'../../../images/avatar.jpg'}, 
+                          like:{count: 12, id:'avatar', isChecked:true},
+                          caption:'Мурад Сарафанов', time:'5 дней назад', text:'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})
+
     script(type="text/javascript" src="../../../jquery/jquery-3.4.1.min.js")
     script(type="text/javascript" src="../../../jquery/plugins/jquery.maskedinput.min.js")
     script(type="text/javascript" src='../../../jquery/plugins/item-quantity-dropdown/item-quantity-dropdown.min.js')

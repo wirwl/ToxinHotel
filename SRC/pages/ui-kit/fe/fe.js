@@ -2,7 +2,7 @@ import './fe.scss';
 
 import '../../../components/comfort-status/smile.svg';
 import '../../../components/comfort-status/home.svg';
-
+import '../../../components/message-control/avatar.jpg';
 
 import '../../../jquery/jquery-3.4.1.min.js'
 import '../../../jquery/plugins/jquery.maskedinput.min.js'

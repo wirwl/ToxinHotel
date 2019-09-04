@@ -1,6 +1,7 @@
 .iqdropdown {
   -webkit-tap-highlight-color: transparent;
   width: inherit;
+  background: #fff;
 }
 .iqdropdown * {
   font-family: "Montserrat-Regular";
