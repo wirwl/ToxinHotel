@@ -17,7 +17,8 @@ include ../../../components/like-button/like-button
 include ../../../components/rate-button/rate-button
 include ../../../components/guests-input/guests-input
 include ../../../components/message-control/message-control
-
+include ../../../components/range-slider/range-slider
+include ../../../components/button/button
 
 doctype html
 html
@@ -121,7 +122,27 @@ html
                                 checkboxes:[{id:'wk',text:'Широкий коридор', desc:'Ширина коридоров в номере не менее 91 см.'},
                                             {id:'hfi',text:'Помощник для инвалидов', desc:'На 1 этаже вас встретит специалист и проводит до номера.'}
                                           ]})                                                 
-        .column3 column3
+        .column3
+          ul.column3__list
+            li.column3__item.column3__wrapper-for-range-slider
+              +range-slider({ctext:'range slider', min:0, max:15000, from: 4500, to:9600 })
+            li.column3__item
+              ul.buttons-list
+                p.buttons-list__caption BUTTONS
+                .buttons-list__wraper-for-2buttons
+                  li.button-list__item
+                    +btnFilled('click me')
+                  li.button-list__item
+                .buttons-list__wraper-for-2buttons
+                  li.button-list__item
+                  li.button-list__item
+                .buttons-list__wraper-for-2buttons
+                  li.button-list__item
+                  li.button-list__item
+                li.button-list__item
+            li.column3__item
+            li.column3__item
+            li.column3__item
       .row1
         +message-control({image:{alt:'avatar', src:'../../../images/avatar.jpg'}, 
                           like:{count: 12, id:'avatar', isChecked:true},

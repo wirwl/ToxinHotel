@@ -16,18 +16,16 @@ body {
   min-width: 320px;
   max-width: 1440px; 
   display: flex;  
-  background: #e5e5e5;
+  //background: #e5e5e5;
 }
 .column1 {
   margin-right: 127px;
   width: 320px;
 }
 .column2, .column3 {width: 320px;}
-.column1, .column2, .column3 {
-//  border: 1px dashed gray;
-}
+
 .column2 {margin-right: 72px;}
-.column1__list, .column2__list {
+.column1__list, .column2__list, .column3__list {
   list-style: none;
   
 }
@@ -103,9 +101,19 @@ body {
   flex-direction: row;
   
 }
+.column3__wrapper-for-range-slider {
+  width: 266px;  
+  margin-bottom: 40px;
+}
+.buttons-list__caption {
+  font-weight: bold;
+  font-size: 12px;
+}
 .row1 {
   width: 712px;
 }
+
+
 
 @import "../../../components/text-input/text-input.scss";
 @import "../../../components/dropdown-input/dropdown-input.scss";
@@ -127,3 +135,6 @@ body {
 @import "../../../components/guests-input/guests-input.scss";
 @import "../../../components/round-image/round-image.scss";
 @import "../../../components/message-control/message-control.scss";
+@import "../../../../node_modules/ion-rangeslider/css/ion.rangeSlider.css";
+@import "../../../components/range-slider/range-slider.scss";
+@import "../../../components/button/button.scss";

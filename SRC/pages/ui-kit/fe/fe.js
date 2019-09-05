@@ -10,6 +10,8 @@ import '../../../jquery/plugins/item-quantity-dropdown/item-quantity-dropdown.mi
 import '../../../jquery/plugins/item-quantity-dropdown/item-quantity-dropdown.min.css'
 import '../../../jquery/plugins/item-quantity-dropdown/item-quantity-dropdown.min.js.map'
 import '../../../jquery/plugins/item-quantity-dropdown/item-quantity-dropdown.min.css.map'
+import '../../../../node_modules/ion-rangeslider/js/ion.rangeSlider'
+
 
 import '../../../components/masked-input/masked-input.js'
 import '../../../components/dd-input/dd-input.js'
@@ -18,12 +20,9 @@ import '../../../components/comfort-input/comfort-input.js'
 import '../../../components/expandable-checkbox-list/expandable-checkbox-list.js'
 import '../../../components/like-button/like-button.js'
 import '../../../components/guests-input/guests-input.js'
+import '../../../components/range-slider/range-slider';
 
 $(document).ready(() => {
-/*   var $qs = $(document).find('.iqdropdown');
-  $qs.each(function () {
-    var $b = $(this).find('button.button-increment');
-    $b[0].click(); $b[0].click();
-    $b[1].click(); $b[1].click();
-  }) */
+  //Only for watch pixel perfect for range-slider;
+  $('.js-range-slider__values').text('5 000₽ - 10 000₽');
 });

@@ -1,0 +1,43 @@
+.range-slider {
+  font-family: montserrat;
+  font-size: 12px;
+}
+.range-slider__caption {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 19px;
+  text-transform: uppercase;
+}
+.range-slider__caption-text {
+  font-weight: bold;
+  color: $toxinDS100;
+}
+.range-slider__values {
+  color: $toxinDS50;
+}
+
+// Modify ion.rangeSlider.css
+.irs--round {  
+  height: 14px;  
+  .irs-handle {    
+    width: 16px;
+    height: 16px;
+    border: 2px solid #fff;    
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    border-radius: 50%;    
+    top: 0px;
+    box-shadow: none;
+    cursor: pointer;
+  }
+  .irs-line {
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid $toxinDS25;
+    height: 6px;
+    top: 5px;
+  }
+  .irs-bar {
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    top: 6px;
+  }
+}

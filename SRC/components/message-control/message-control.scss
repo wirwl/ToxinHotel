@@ -1,7 +1,6 @@
 .message-control {
   display: flex;
-  font-family: 'montserrat_regular';
-  
+  font-family: "montserrat_regular";
 }
 .message-control__left-column {
   //border: 1px dashed gray;
@@ -17,7 +16,7 @@
 .message-control__caption {
   padding-top: 3px;
   font-weight: bold;
-  font-size:14px;
+  font-size: 14px;
 }
 .message-control__time {
   padding-top: 6px;
@@ -27,8 +26,8 @@
 .message-control__text {
   font-size: 14px;
   line-height: 24px;
+  color: $toxinDS75;
 }
-
 .message-control__wrapper-for-round-image {
   margin-bottom: 12px;
 }
