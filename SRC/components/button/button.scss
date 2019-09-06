@@ -10,16 +10,16 @@ $myblue: #008ed6;
   color: #bc9cff;
   margin: 0px;
   padding: 10px 20px;
-  display: block;
+  //display: block;
   cursor: pointer;
-
+  text-transform: uppercase;
 }
 
 .button_bordered {    
   position: relative;
   background: transparent;
   border-radius: 22px;    
-  z-index: 1;    
+  z-index: 1;
 }
 
 .button_bordered:before, 
@@ -62,12 +62,14 @@ $myblue: #008ed6;
 
 .button_arrow {
   padding: 15px 20px;
-  width: 100%;
+  width: 100%;  
 }
 .button_arrow:after {
-  content: "arrow_forward";
-  font-family: Material Icons;
+  font-family: "Material Icons";
+  content: "arrow_forward";    
   float: right;
+  font-size: 24px;
+  text-transform: none;
 }
 //-------------------------------------------------
 .button.btnSimple.button_disabled {

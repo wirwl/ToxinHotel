@@ -105,9 +105,20 @@ body {
   width: 266px;  
   margin-bottom: 40px;
 }
+.buttons-list {
+  list-style: none;
+}
 .buttons-list__caption {
   font-weight: bold;
   font-size: 12px;
+  margin-bottom: 16px;
+}
+.buttons-list__wraper-for-2buttons {
+  display: flex;
+  margin-bottom: 30px;
+ > .buttons-list__item:first-child {
+   margin-right: 19px;
+ } 
 }
 .row1 {
   width: 712px;

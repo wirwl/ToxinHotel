@@ -130,16 +130,22 @@ html
               ul.buttons-list
                 p.buttons-list__caption BUTTONS
                 .buttons-list__wraper-for-2buttons
-                  li.button-list__item
-                    +btnFilled('click me')
-                  li.button-list__item
+                  li.buttons-list__item
+                    +button-filled({text:'click me'})
+                  li.buttons-list__item
+                    +button-filled({text:'click me', isEnabled:false})
                 .buttons-list__wraper-for-2buttons
-                  li.button-list__item
-                  li.button-list__item
+                  li.buttons-list__item
+                    +btnBordered({text:'click me'})
+                  li.buttons-list__item
+                    +btnBordered({text:'click me', isEnabled:false})
                 .buttons-list__wraper-for-2buttons
-                  li.button-list__item
-                  li.button-list__item
-                li.button-list__item
+                  li.buttons-list__item
+                    +btnSimple({text:'click me'})
+                  li.buttons-list__item
+                    +btnSimple({text:'click me', isEnabled:false})
+                li.buttons-list__item
+                    +btnArrow({text:'перейти к оплате'})
             li.column3__item
             li.column3__item
             li.column3__item

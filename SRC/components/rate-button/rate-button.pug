@@ -6,22 +6,3 @@ mixin rate-button(data={id:'star', count:0})
       input(id=data.id+(total-n) type='radio' name=data.id checked=(data.count==total-n ? 'checked' : undefined) ).rate-button__input
       label(for=data.id+(total-n)).rate-button__label.material-icons     
       - n++;
-
-
-
-
-
-mixin rate-button_old2(data)
-  .rate-button(data-count=data.count)    
-    - var n=1;
-    while n<6
-      p.rate-button__star.material-icons star_border
-      - n++;
-    
-mixin rate-button_old(data)
-  .rate-button(data-count=data.count)
-    p.rate-button__star1.material-icons #{(data.count>0 ? 'star' : 'star_border')}
-    p.rate-button__star2.material-icons #{(data.count>1 ? 'star' : 'star_border')}
-    p.rate-button__star3.material-icons #{(data.count>2 ? 'star' : 'star_border')}
-    p.rate-button__star4.material-icons #{(data.count>3 ? 'star' : 'star_border')}
-    p.rate-button__star5.material-icons #{(data.count>4 ? 'star' : 'star_border')}
