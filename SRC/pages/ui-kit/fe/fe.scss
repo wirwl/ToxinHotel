@@ -113,12 +113,19 @@ body {
   font-size: 12px;
   margin-bottom: 16px;
 }
+.buttons-list__item {
+  height: inherit;
+}
 .buttons-list__wraper-for-2buttons {
   display: flex;
   margin-bottom: 30px;
- > .buttons-list__item:first-child {
-   margin-right: 19px;
- } 
+  height: 44px;
+  > .buttons-list__item:first-child {
+    margin-right: 19px;
+  }   
+  &:nth-child(4) {
+   margin-bottom: 2px;
+  }
 }
 .row1 {
   width: 712px;

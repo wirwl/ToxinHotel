@@ -1,25 +1,25 @@
-mixin btnSimple(data)      
+mixin button-simple(data)      
   -if (data.isEnabled==undefined) 
   -  data.isEnabled=true
   -if (data.type==undefined)
   - data.type='button'  
-  button.button.btnSimple(class=((data.isEnabled) ? '': 'button_disabled') type=data.type) #{data.text}
+  button.button.button_simple(class=((data.isEnabled) ? '': 'button_disabled') type=data.type) #{data.text}
 
-mixin btnBordered(data)
+mixin button-bordered(data)
   -if (data.isEnabled==undefined) 
   -  data.isEnabled=true
   -if (data.type==undefined)
   - data.type='button'
-  button.button.button_bordered(class=((data.isEnabled) ? '': 'button_disabled') type=data.type) #{data.text}
+  button.button.button_bordered.button_dynamic-height(class=((data.isEnabled) ? '': 'button_disabled') type=data.type) #{data.text}
 
 mixin button-filled(data)
   -if (data.isEnabled==undefined) 
   -  data.isEnabled=true
   -if (data.type==undefined)
   - data.type='button'
-  button.button.button_background_colored(class=((data.isEnabled) ? '': 'button_disabled') type=data.type) #{data.text}  
+  button.button.button_background_colored.button_dynamic-height(class=((data.isEnabled) ? '': 'button_disabled') type=data.type) #{data.text}  
   
-mixin btnArrow(data)
+mixin button-arrow(data)
   button.button.button_background_colored.button_arrow #{data.text}
 
 

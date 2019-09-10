@@ -9,22 +9,22 @@ $myblue: #008ed6;
   background: none;
   color: #bc9cff;
   margin: 0px;
-  padding: 10px 20px;
+  padding: 5px 20px;
   //display: block;
   cursor: pointer;
   text-transform: uppercase;
 }
 
-.button_bordered {    
+.button_bordered {
   position: relative;
   background: transparent;
-  border-radius: 22px;    
+  border-radius: 22px;
   z-index: 1;
 }
 
-.button_bordered:before, 
+.button_bordered:before,
 .button_bordered:after {
-  content: ' ';
+  content: " ";
   position: absolute;
   border-radius: 22px;
 }
@@ -35,18 +35,18 @@ $myblue: #008ed6;
   bottom: 0;
   right: 0;
   z-index: -2;
-  background: #bc9cff;      
+  background: #bc9cff;
   background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
   //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bc9cff', endColorstr='#8ba4f9',GradientType=1 );
 }
 
 .button_bordered:after {
-  top: 2px; 
+  top: 2px;
   bottom: 2px;
   left: 2px;
   right: 2px;
   background-color: white;
-  z-index: -1;   
+  z-index: -1;
 }
 
 .button_background_colored {
@@ -55,31 +55,40 @@ $myblue: #008ed6;
   color: #ffffff;
 }
 
-
-
-
-
-
 .button_arrow {
   padding: 15px 20px;
   width: 100%;  
+  height: 44px;
+  position: relative;
 }
 .button_arrow:after {
   font-family: "Material Icons";
-  content: "arrow_forward";    
-  float: right;
+  content: "arrow_forward";
+  position: absolute;
+  right: 10px;
+  font-weight: normal;
   font-size: 24px;
   text-transform: none;
 }
 //-------------------------------------------------
-.button.btnSimple.button_disabled {
+.button_simple {
+  padding: 0px;
+}
+.button.button_simple.button_disabled {
   color: rgba(31, 32, 65, 0.5);
 }
 
 .button.button_bordered.button_disabled {
-  border: 2px solid #bc9cff7f;
+  //border: 2px solid #bc9cff7f;
 }
 
 .button.button_background_colored.button_disabled {
   background: linear-gradient(180deg, #bc9cff7f 0%, rgba(139, 164, 249, 0.5) 100%);
+}
+
+.button_dynamic-height {
+  height: inherit;
+}
+.button_dynamic-width {
+  width: inherit;
 }
