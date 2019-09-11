@@ -19,6 +19,7 @@ include ../../../components/guests-input/guests-input
 include ../../../components/message-control/message-control
 include ../../../components/range-slider/range-slider
 include ../../../components/button/button
+include ../../../components/pagination/pagination
 
 doctype html
 html
@@ -126,7 +127,7 @@ html
           ul.column3__list
             li.column3__item.column3__wrapper-for-range-slider
               +range-slider({ctext:'range slider', min:0, max:15000, from: 4500, to:9600 })
-            li.column3__item
+            li.column3__item.column3__wrapper-for-buttons-list
               ul.buttons-list
                 p.buttons-list__caption BUTTONS
                 .buttons-list__wraper-for-2buttons
@@ -146,7 +147,9 @@ html
                     +button-simple({text:'click me', isEnabled:false})
                 li.buttons-list__item
                     +button-arrow({text:'перейти к оплате'})
-            li.column3__item
+            li.column3__item.pagination__wrapper
+              p.pagination__wrapper-caption PAGINATION
+              +pagination({pages:15, page:1, showed:12, showedlastpage:6, total:100})
             li.column3__item
             li.column3__item
       .row1

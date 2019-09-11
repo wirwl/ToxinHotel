@@ -20,7 +20,8 @@ import '../../../components/comfort-input/comfort-input.js'
 import '../../../components/expandable-checkbox-list/expandable-checkbox-list.js'
 import '../../../components/like-button/like-button.js'
 import '../../../components/guests-input/guests-input.js'
-import '../../../components/range-slider/range-slider';
+import '../../../components/range-slider/range-slider.js';
+import '../../../components/pagination/pagination.js';
 
 $(document).ready(() => {
   //Only for watch pixel perfect for range-slider;

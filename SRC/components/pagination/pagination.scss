@@ -1,0 +1,53 @@
+.pagination {
+  display: inline-flex;
+  flex-direction: column;
+}
+.pagination__buttons {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.pagination__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+
+  .pagination__item {
+    color: #fff;
+    color: $toxinDS50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 12px;
+  }
+
+  .pagination__item:first-child {
+    background: $toxinGreen;
+    color: #fff;
+  }
+  .pagination__item:last-child {
+    background: $toxinGreen;
+    color: #fff;
+  }
+  .pagination__item.pagination__item_active {
+    background-color: $toxinPurple;
+    font-weight: bold;
+    color: #fff;
+  }
+  .pagination__item .pagination__link {
+    cursor: pointer;
+  }
+  .pagination__item_out-of-range .pagination__link {
+    cursor: auto;
+  }
+}
+
+.pagination__caption {
+  text-align: center;
+  color: $toxinDS75;
+  font-size: 14px;
+}

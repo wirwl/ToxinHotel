@@ -1,0 +1,7 @@
+mixin pagination(data)
+  .pagination
+    .pagination__buttons(data-pages=data.pages data-page=data.page data-showed=data.showed data-showedlastpage=data.showedlastpage data-total=data.total)  
+    p.pagination__caption 1 – 12 из 100+ вариантов аренды
+    
+  
+//+pagination({pages:15, page:1, showed:12, total:100})

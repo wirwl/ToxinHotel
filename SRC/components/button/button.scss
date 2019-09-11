@@ -78,8 +78,8 @@ $myblue: #008ed6;
   color: rgba(31, 32, 65, 0.5);
 }
 
-.button.button_bordered.button_disabled {
-  //border: 2px solid #bc9cff7f;
+.button.button_bordered.button_disabled:before {  
+  background: linear-gradient(180deg, #bc9cff7f 0%, #8ba4f97f 100%);  
 }
 
 .button.button_background_colored.button_disabled {
