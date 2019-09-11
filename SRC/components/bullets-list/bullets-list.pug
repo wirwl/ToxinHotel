@@ -1,0 +1,6 @@
+include ../bullet/bullet
+mixin bullets-list(data)
+  ul.bullets-list
+    for b in data
+      li.bullets-list__item
+        +bullet({text:b.text})

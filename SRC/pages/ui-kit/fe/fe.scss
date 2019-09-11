@@ -130,13 +130,25 @@ body {
    margin-bottom: 2px;
   }
 }
-.pagination__wrapper {}
+.pagination__wrapper {
+  margin-bottom: 235px;
+}
 .pagination__wrapper-caption {
   margin-bottom: 17px;
   font-size: 12px;
   font-weight: bold;
 }
-
+.column3__wrapper-for-guests-input2 {  
+  margin-bottom: 258px;
+}
+.column3__wrapper-for-bullet-list {
+  width: 260px;
+}
+.column3__bullet-list-caption {  
+  margin-bottom: 12px;
+  font-size: 12px;
+  font-weight: bold;
+}
 .row1 {
   width: 712px;
 }
@@ -167,3 +179,5 @@ body {
 @import "../../../components/range-slider/range-slider.scss";
 @import "../../../components/button/button.scss";
 @import "../../../components/pagination/pagination.scss";
+@import "../../../components/bullet/bullet.scss";
+@import "../../../components/bullets-list/bullets-list.scss";

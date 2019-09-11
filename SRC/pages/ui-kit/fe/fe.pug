@@ -20,6 +20,8 @@ include ../../../components/message-control/message-control
 include ../../../components/range-slider/range-slider
 include ../../../components/button/button
 include ../../../components/pagination/pagination
+include ../../../components/bullet/bullet
+include ../../../components/bullets-list/bullets-list
 
 doctype html
 html
@@ -150,8 +152,17 @@ html
             li.column3__item.pagination__wrapper
               p.pagination__wrapper-caption PAGINATION
               +pagination({pages:15, page:1, showed:12, showedlastpage:6, total:100})
-            li.column3__item
-            li.column3__item
+            li.column3__item.column3__wrapper-for-guests-input2
+              +guests-input({isExpanded:true, caption:'DROPDOWN', placeholder:'', 
+              items:[{id:'adults', name:'ВЗРОСЛЫЕ', defaultcount:2},
+                    {id:'childs', name:'ДЕТИ', defaultcount:1},
+                    {id:'babies', name:'МЛАДЕНЦЫ'}] })
+
+            li.column3__item.column3__wrapper-for-bullet-list
+              p.column3__bullet-list-caption BULLET-LIST
+              +bullets-list([{text:'Нельзя с питомцами'},
+                             {text:'Без вечеринок и мероприятий'},
+                             {text:'Время прибытия — после 13:00, а выезд до 12:00'}])
       .row1
         +message-control({image:{alt:'avatar', src:'../../../images/avatar.jpg'}, 
                           like:{count: 12, id:'avatar', isChecked:true},

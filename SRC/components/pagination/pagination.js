@@ -32,13 +32,13 @@ $(document).ready(function () {
     let pageCutHigh = page + 1;
     // Show the Previous button only if you are on a page other than the first
     if (page > 1) {
-      str += '<li class="pagination__item previous pagination__item_no"><a class="pagination__link material-icons">arrow_back</a></li>';
+      str += '<li class="pagination__item previous pagination__item_no"><a data-page="' + (page - 1) + '"class="pagination__link material-icons">arrow_back</a></li>';
     }
     // Show all the pagination elements if there are less than 6 pages total
     if (pages < 6) {
       for (let p = 1; p <= pages; p++) {
         active = page == p ? "pagination__item_active" : "pagination__item_no";
-        str += '<li class="pagination__item ' + active + '"><a class="pagination__link">' + p + '</a></li>';
+        str += '<li class="pagination__item ' + active + '"><a data-page="' + p + '"class="pagination__link">' + p + '</a></li>';
       }
     }
     // Use "..." to collapse pages outside of a certain range
@@ -46,7 +46,7 @@ $(document).ready(function () {
       // Show the very first page followed by a "..." at the beginning of the
       // pagination section (after the Previous button)
       if (page > 2) {
-        str += '<li class="pagination__item_no pagination__item"><a class="pagination__link">1</a></li>';
+        str += '<li class="pagination__item_no pagination__item"><a data-page="1" class="pagination__link">1</a></li>';
         if (page > 3) {
           str += '<li class="pagination__item pagination__item_out-of-range"><a class="pagination__link">...</a></li>';
         }
@@ -67,7 +67,7 @@ $(document).ready(function () {
           continue
         }
         active = page == p ? "pagination__item_active" : "pagination__item_no";
-        str += '<li class="pagination__item ' + active + '"><a class="pagination__link">' + p + '</a></li>';
+        str += '<li class="pagination__item ' + active + '"><a data-page="' + p + '"class="pagination__link">' + p + '</a></li>';
       }
       // Show the very last page preceded by a "..." at the end of the pagination
       // section (before the Next button)
@@ -75,12 +75,12 @@ $(document).ready(function () {
         if (page < pages - 2) {
           str += '<li class="pagination__item pagination__item_out-of-range"><a class="pagination__link">...</a></li>';
         }
-        str += '<li class="pagination__item pagination__item_no"><a class="pagination__link">' + pages + '</a></li>';
+        str += '<li class="pagination__item pagination__item_no"><a data-page="' + pages + '"class="pagination__link">' + pages + '</a></li>';
       }
     }
     // Show the Next button only if you are on a page other than the last
     if (page < pages) {
-      str += '<li class="pagination__item next pagination__item_no"><a class="pagination__link material-icons">arrow_forward</a></li>';
+      str += '<li class="pagination__item next pagination__item_no"><a data-page="' + (page + 1) + '"class="pagination__link material-icons">arrow_forward</a></li>';
       $('#next').click(function () { createPagination(pages, page + 1) })
     }
     str += '</ul>';
