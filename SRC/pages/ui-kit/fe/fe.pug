@@ -37,7 +37,11 @@ html
         li.column1__item
           +text-input({classes:'text-input_isFocused', caption:'TEXT FIELD', placeholder:'Email', type: 'email', text:'This is pretty awesome'})     
         li.column1__item
-          +dropdown-input({caption:'DROPDOWN', placeholder:'Сколько гостей', type:'text'})  
+          +guests-input({isExpanded:false, caption:'DROPDOWN', placeholder:'', 
+                        items:[{id:'adults', name:'ВЗРОСЛЫЕ'},
+                              {id:'childs', name:'ДЕТИ'},
+                              {id:'babies', name:'МЛАДЕНЦЫ'}] })
+
         li.column1__item
           +masked-input({caption:'MASKED TEXT FIELD', placeholder:'ДД.ММ.ГГГГ'})
         li.column1__item.column1__wrapper-for-dd-input
@@ -155,8 +159,8 @@ html
             li.column3__item.column3__wrapper-for-guests-input2
               +guests-input({isExpanded:true, caption:'DROPDOWN', placeholder:'', 
               items:[{id:'adults', name:'ВЗРОСЛЫЕ', defaultcount:2},
-                    {id:'childs', name:'ДЕТИ', defaultcount:1},
-                    {id:'babies', name:'МЛАДЕНЦЫ'}] })
+                     {id:'childs', name:'ДЕТИ', defaultcount:1},
+                     {id:'babies', name:'МЛАДЕНЦЫ'}] })
 
             li.column3__item.column3__wrapper-for-bullet-list
               p.column3__bullet-list-caption BULLET-LIST

@@ -18,7 +18,7 @@ mixin button-filled(data)
   -if (data.type==undefined)
   - data.type='button'
   button.button.button_background_colored.button_dynamic-height(class=((data.isEnabled) ? '': 'button_disabled') type=data.type) #{data.text}  
-  
+
 mixin button-arrow(data)
   button.button.button_background_colored.button_arrow #{data.text}
 

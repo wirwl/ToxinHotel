@@ -9,14 +9,14 @@
   padding: 0px;
   font-family: "montserrat-regular";
 }
-
+html { background: #e2e2e2;}
 body {
-  margin: 0;
-  padding: 143px 0px 0px 140px;
+  margin: 0 auto;
+  padding: 143px 0px 132px 140px;
   min-width: 320px;
   max-width: 1440px; 
   display: flex;  
-  //background: #e5e5e5;
+  background: white;
 }
 .column1 {
   margin-right: 127px;
