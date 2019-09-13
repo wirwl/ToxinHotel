@@ -3,9 +3,6 @@
   height: 20px;
 }
 
-.toggle__input {
-  display: none;
-}
 .toggle__label {
   position: relative;
   padding: 0 0 0 50px;
@@ -36,9 +33,7 @@
   border-radius: 100%;
   transition: 0.2s;
 }
-.toggle__input:checked {
-  //background: $toxinDS25;
-}
+
 .toggle__input:checked + .toggle__label:after {
   left: 24px;
 }
