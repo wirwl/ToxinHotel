@@ -6,6 +6,47 @@ $toxinDS25:  rgba(31, 32, 65, 0.25);
 $toxinDS5:  rgba(31, 32, 65, 0.05);
 $toxinPurple: #BC9CFF;
 $toxinGreen: #6FCF97;
+$toxinBlue: #8BA4F9;
+
+html { 
+  background: #e2e2e2;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;  
+}
+body { 
+  font-family: "montserrat-regular";
+  font-size: 14px;
+}
+h1, h2, h3, figcaption {
+  text-transform: uppercase;
+}
+h1, h2, h3, label, legend {
+  font-family: montserrat-regular;
+  color: $toxinDS100;  
+}
+
+h1 {
+  font-size: 24px;
+  font-family: quicksand;
+}
+
+h2 {
+  font-size: 19px;
+  font-family: quicksand;
+}
+
+h3, label, legend {
+  font-size: 12px;
+}
+
+input, textarea, select, button {
+  font: inherit;
+  outline: none;
+}
 
 //https://allyjs.io/tutorials/hiding-elements.html#how-to-hide-elements-visually
 .common_hide {
@@ -20,3 +61,4 @@ $toxinGreen: #6FCF97;
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+

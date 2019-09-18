@@ -1,7 +1,20 @@
-// data={caption:string, placeholder:string, type:string, classes: string, value: string}
-mixin dd-input(data)
+mixin dd-input(data)  
+  label.dd-input
+    if (data.caption)
+      h3.dd-input__caption #{data.caption}   
+    input(value=data.value placeholder=data.placeholder).dd-input__input
+
+
+
+mixin dd-input-old(data)
   .dd-input
     label(class="dd-input__caption" for="input") #{data.caption}
     .dd-input__wrapper
-      input(value=data.value class="dd-input__input"+ (data.classes ? " "+data.classes : "") id="input" type=data.type placeholder=data.placeholder)
+      input(value=data.value class="dd-input__input" id="input" type=data.type placeholder=data.placeholder)
+
+
+
+
+
+
 

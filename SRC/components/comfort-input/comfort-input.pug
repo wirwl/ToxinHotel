@@ -1,7 +1,7 @@
 // data={caption:string, placeholder:string, type:string, classes: string}
 mixin comfort-input(data)
   .comfort-input  
-    .comfort-input__caption #{data.caption}
+    h3.comfort-input__caption #{data.caption}
     div(class='iqdropdown'+ (data.isExpanded ? " menu-open" : "")) 
       p.iqdropdown-selection 
       .iqdropdown-menu
