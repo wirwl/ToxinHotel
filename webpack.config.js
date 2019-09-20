@@ -37,8 +37,8 @@ module.exports = (env, argv) => {
                     ]
                 },
                 {
-                    test: /\.(css|scss)$/, 
-                    exclude: /jquery/,                   
+                    test: /\.(css|scss)$/,
+                    exclude: /jquery/,
                     ///\.scss$/,
                     use: [{
                         loader: MiniCssExtractPlugin.loader,
@@ -70,7 +70,8 @@ module.exports = (env, argv) => {
                 },
                 {
                     test: /\.m?js$/,
-                    exclude: /(node_modules|bower_components)/,
+                    //exclude: /(node_modules|bower_components)/,
+                    include: /pages/,
                     use: {
                         loader: 'babel-loader',
                         options: {
@@ -80,15 +81,15 @@ module.exports = (env, argv) => {
                         }
                     }
                 },
-                {
-                    test: /\.(css|scss|js|map)$/,                    
+/*                 {
+                    test: /\.(css|scss|js|map)$/,
                     //include: path.resolve(__dirname, 'src/jquery'),
                     include: /jquery/,
                     loader: 'file-loader',
                     options: {
                         name: '[name].[ext]',
                         outputPath: (url, resourcePath, context) => {
-                            const relativePath = path.relative(context+'\\SRC', resourcePath);
+                            const relativePath = path.relative(context + '\\SRC', resourcePath);
                             //console.log('url: '+url);                            
                             //console.log('resourcePath: '+resourcePath);                            
                             //console.log('context: '+context+'\\SRC');
@@ -98,7 +99,7 @@ module.exports = (env, argv) => {
                         }
                     }
                 },
-                {
+ */                {
                     test: /\.(png|jpe?g|gif|svg)$/,
                     include: /components/,
                     loader: 'file-loader',
@@ -112,27 +113,39 @@ module.exports = (env, argv) => {
                         outputPath: 'fonts', name: '[folder]/[name].[ext]',
                         //publicPath: './'                        
                     }
-                }
-            ]
+                },
+                 /* {
+                    test: require.resolve('jquery'),
+                    use: [{
+                            loader: 'expose-loader',
+                            options: 'jQuery'
+                        },
+                        {
+                            loader: 'expose-loader',
+                            options: '$'
+                        }
+                    ]
+                } */            
+             ]//rules
         },
         plugins: [
-        /*
-            new webpack.ProvidePlugin({
+
+              new webpack.ProvidePlugin({
                 $: 'jquery',
                 jQuery: 'jquery',
                 'window.jQuery': 'jquery'
-              }) ,
-                  
-             new HtmlWebpackExternalsPlugin({ // optional plugin: inject cdn
-                externals: [
-                  {
-                      module: 'jquery',
-                      entry: 'dist/jquery.min.js',
-                      global: 'jQuery',
-                  }
-                ],
-              })
-              */
+            }),
+            /*                  
+                         new HtmlWebpackExternalsPlugin({ // optional plugin: inject cdn
+                            externals: [
+                              {
+                                  module: 'jquery',
+                                  entry: 'dist/jquery.min.js',
+                                  global: 'jQuery',
+                              }
+                            ],
+                          })
+                          */
         ]
     };
     //------config for index.html file(main page)------------------------------------------------------------------------    
