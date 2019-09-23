@@ -1,7 +1,6 @@
 .comfort-status {
   border-bottom: 1px solid $toxinDS10;
-  padding-bottom: 20px;
-  width: 280px;
+  padding-bottom: 20px;  
   display: flex;
 }
 
@@ -9,31 +8,24 @@
   border-bottom: none;
 }
 
-.comfort-status__image {
-  //float: left;
- 
+.comfort-status__desc {
+  padding-top: 3px;
+  color: $toxinDS75;
 }
 
 .comfort-status__caption {
-  font-size: 14px;
-  font-weight: bolder;
   margin-bottom: 6px;
-  //padding-top: 3px;
-  letter-spacing: 0.5px;
+  font-weight: bold;
 }
 
 .comfort-status__text {
-  font-size: 14px;
+  font-size: 14px;  
 }
 
-.comfort-status__image-wrapper {  
+.comfort-status__image-wrapper {
   width: 48px;
   height: 48px;
   display: flex;
-  justify-content: center;    
+  justify-content: center;
   margin-right: 10px;
-}
-
-.comfort-status__desc {
-  padding-top: 3px;  
 }

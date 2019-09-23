@@ -1,0 +1,14 @@
+include ../comfort-status/comfort-status
+
+mixin comfort-status-list(data)
+  ul.comfort-status-list
+    for item in data
+      li.comfort-status-list__item
+        +comfort-status(item)
+      
+
+
+    //- li.comfort-status-list__item
+    //-   +comfort-status({src:'../../../images/smile.svg', caption:'Комфорт', text:'Шумопоглощающие стены'})
+    //- li.comfort-status-list__item
+    //-   +comfort-status({src:'../../../images/home.svg', caption:'Удобство', text:'Окно в каждой из спален'})

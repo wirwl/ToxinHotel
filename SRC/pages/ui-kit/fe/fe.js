@@ -1,7 +1,7 @@
 import './fe.scss';
 
-import '../../../components/comfort-status/smile.svg';
-import '../../../components/comfort-status/home.svg';
+import '../../../components/comfort-status-list/smile.svg';
+import '../../../components/comfort-status-list/home.svg';
 import '../../../components/message-control/avatar.jpg';
 
 

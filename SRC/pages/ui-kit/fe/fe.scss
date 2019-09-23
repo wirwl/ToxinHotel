@@ -74,12 +74,9 @@ body {
 .column1__wrapper-for-ecl2 {
   margin-bottom: 41px;
 }
-.comfort-statuses-list__item:not(:last-child) {
-  margin-bottom: 20px;
-}
 
-.comfort-statuses-list {
-  list-style: none;
+.column1__wrapper-for-comfort-status-list {
+  width: 280px;
 }
 
 .column2__wrapper-for-checkboxes-list {
@@ -213,6 +210,7 @@ body {
 @import "../../../components/expandable-checkbox-list/expandable-checkbox-list.scss";
 @import "../../../components/checkbox/checkbox.scss";
 @import "../../../components/comfort-status/comfort-status.scss";
+@import "../../../components/comfort-status-list/comfort-status-list.scss";
 @import "../../../components/radio/radio.scss";
 @import "../../../components/checkboxes-list/checkboxes-list.scss";
 @import "../../../components/radios-list/radios-list.scss";
