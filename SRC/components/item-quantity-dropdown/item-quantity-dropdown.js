@@ -3,13 +3,10 @@
 
     maxItems: Infinity,
     minItems: 0,
-   // selectionText: 'item',
-   // textPlural: 'items',
     controls: {
-      position: 'right',
-      displayCls: 'iqdropdown-content',
-      controlsCls: 'iqdropdown-item-controls',
-      counterCls: 'counter',
+      displayCls: 'iqdropdown__content',
+      controlsCls: 'iqdropdown__item-controls',
+      counterCls: 'iqdropdown__counter',
     },
     items: {},
     onChange: () => { },
@@ -20,14 +17,14 @@
   $.fn.iqDropdown = function (options) {
     this.each(function () {
       const $this = $(this);
-      const $selection = $this.find('p.iqdropdown-selection').last();
-      const $menu = $this.find('div.iqdropdown-menu');
-      const $items = $menu.find('div.iqdropdown-menu-option');
-      const $clear =$this.find('.iqdropdown-clear');      
+      const $selection = $this.find('p.iqdropdown__selection').last();
+      const $menu = $this.find('div.iqdropdown__menu');
+      const $items = $menu.find('div.iqdropdown__menu-option');
+      const $clear = $this.find('.iqdropdown__clear');
       const settings = $.extend(true, {}, defaults, options);
       const itemCount = {};
       let totalItems = 0;
-      
+
       function getRightCaseForTotal(count) {
         for (let c in entities.total.cases) {
           if (count >= entities.total.cases[entities.total.cases.length - 1 - c].n)
@@ -56,34 +53,25 @@
         return false;
       }
 
-
       function updateDisplay() {
         entities = settings.entities;
         let text = '';
-
-        /*        for (let i in entities.fields) {
-                if (entities.fields[i].isNotInTotal)
-                  totalItems-=itemCount[entities.fields[i].id];
-              } 
-       */
-
         if (entities.total.isShow && totalItems > 0)
           text = totalItems + ' ' + getRightCaseForTotal(totalItems) + ', ';
-        let sumCount=0;  
+        let sumCount = 0;
         $items.each(function (index) {
-          let itemCount2 = $(this).find('.counter').text();        
-          sumCount+=itemCount2;
+          let itemCount2 = $(this).find('.iqdropdown__counter').text();
+          sumCount += itemCount2;
           let id = $(this).data('id');
           if (itemCount2 > 0 && entities.fields[index].isShow)
             text += (itemCount2 + ' ' + getRightCaseForField(id, itemCount2) + ', ');
-        })
-        //let $clear=$this.find('.iqdropdown-clear');        
-        if ($clear.length>0) {
-          if (sumCount>0) $clear.removeClass('iqdropdown-clear_hide')
-          else $clear.addClass('iqdropdown-clear_hide');
-        }   
+        })           
+        if ($clear.length > 0) {
+          if (sumCount > 0) $clear.removeClass('iqdropdown__clear_hide')
+          else $clear.addClass('iqdropdown__clear_hide');
+        }
 
-        if (sumCount == 0) $selection.text(entities.placeholder);              
+        if (sumCount == 0) $selection.text(entities.placeholder);
         else $selection.text(text.slice(0, text.lastIndexOf(', ')));
         $selection.attr('title', $selection.text());
       }
@@ -101,43 +89,35 @@
       function addControls(id, $item) {
         const $controls = $('<div />').addClass(settings.controls.controlsCls);
         const $decrementButton = $(`
-          <button class="button-decrement">
-            <i class="icon-decrement"></i>
+          <button class="iqdropdown__button-decrement">
+            <i class="iqdropdown__icon-decrement"></i>
           </button>
         `);
         const $incrementButton = $(`
-          <button class="button-increment">
-            <i class="icon-decrement icon-increment"></i>
+          <button class="iqdropdown__button-increment">
+            <i class="iqdropdown__icon-decrement iqdropdown__icon-increment"></i>
           </button>
         `);
         const $counter = $(`<span>${itemCount[id]}</span>`).addClass(settings.controls.counterCls);
 
         $item.children('div').addClass(settings.controls.displayCls);
         $controls.append($decrementButton, $counter, $incrementButton);
+        $item.append($controls);
 
-        if (settings.controls.position === 'right') {
-          $item.append($controls);
-        } else {
-          $item.prepend($controls);
-        }
-
-        $clear.click((event) => {          
-          $items.find('.counter').html('0');
-          for (let i in itemCount) itemCount[i]=0;          
-          totalItems=0;
+        $clear.click((event) => {
+          $items.find('.iqdropdown__counter').html('0');
+          for (let i in itemCount) itemCount[i] = 0;
+          totalItems = 0;
           $selection.text(entities.placeholder);
-          $clear.addClass('iqdropdown-clear_hide');
+          $clear.addClass('iqdropdown__clear_hide');
         })
 
         $decrementButton.click((event) => {
           const { items, minItems, beforeDecrement, onChange } = settings;
           const allowClick = beforeDecrement(id, itemCount);
-
-          //if (allowClick && totalItems > minItems && itemCount[id] > items[id].minCount) {
-            if (allowClick && itemCount[id] > items[id].minCount) {
-            itemCount[id] -= 1;
-            //let isNotInTotal=GetIsNotinTotalById(id);
-            //if (!isNotInTotal) 
+          
+          if (allowClick && itemCount[id] > items[id].minCount) {
+            itemCount[id] -= 1;            
             if (!getFieldById(id))
               totalItems -= 1;
             $counter.html(itemCount[id]);
@@ -146,8 +126,8 @@
           }
 
           if (itemCount[id] == items[id].minCount)
-            $item.find('.button-decrement').addClass('button-decrement__disable');
-          $item.find('.button-increment').removeClass('button-increment__disable');
+            $item.find('.iqdropdown__button-decrement').addClass('iqdropdown__button-decrement_disable');
+          $item.find('.iqdropdown__button-increment').removeClass('iqdropdown__button-increment_disable');
 
           event.preventDefault();
         });
@@ -156,8 +136,7 @@
           const { items, maxItems, beforeIncrement, onChange } = settings;
           const allowClick = beforeIncrement(id, itemCount);
 
-          //if (allowClick && totalItems < maxItems && itemCount[id] < items[id].maxCount) {
-            if (allowClick && itemCount[id] < items[id].maxCount) {
+          if (allowClick && itemCount[id] < items[id].maxCount) {
             itemCount[id] += 1;
             if (!getFieldById(id))
               totalItems += 1;
@@ -167,8 +146,8 @@
           }
 
           if (itemCount[id] == items[id].maxCount)
-            $item.find('.button-increment').addClass('button-increment__disable');
-          $item.find('.button-decrement').removeClass('button-decrement__disable');
+            $item.find('.iqdropdown__button-increment').addClass('iqdropdown__button-increment_disable');
+          $item.find('.iqdropdown__button-decrement').removeClass('iqdropdown__button-decrement_disable');
 
           event.preventDefault();
 
@@ -179,10 +158,9 @@
         return $item;
       }
 
-      $this.click((event) => {        
-        if (!$(event.target).hasClass('iqdropdown-clear'))        
-        $this.toggleClass('menu-open');
-        //event.stopImmediatePropagation();
+      $this.click((event) => {
+        if (!$(event.target).hasClass('iqdropdown__clear'))
+          $this.toggleClass('iqdropdown_show');
       });
 
       $items.each(function () {
@@ -197,12 +175,9 @@
 
         itemCount[id] = defaultCount;
 
-        //if (defaultCount>0) $(this)
-        //let $clear=$(this).parent().find('.iqdropdown-clear');
-        if ($clear.length>0) {
-          if (defaultCount>0) $clear.removeClass('iqdropdown-clear_hide');
+        if ($clear.length > 0) {
+          if (defaultCount > 0) $clear.removeClass('iqdropdown__clear_hide');
         }
-
 
         if (!getFieldById(id))
           totalItems += defaultCount;
@@ -210,14 +185,12 @@
         addControls(id, $item);
 
         if (defaultCount == minCount)
-          $item.find('.button-decrement').addClass('button-decrement__disable');
+          $item.find('.iqdropdown__button-decrement').addClass('iqdropdown__button-decrement_disable');
         if (defaultCount == maxCount)
-          $item.find('.button-increment').addClass('button-increment__disable');        
+          $item.find('.iqdropdown__button-increment').addClass('iqdropdown__button-increment_disable');
       });
-
       updateDisplay();
     });
-
     return this;
   };
 }(jQuery));

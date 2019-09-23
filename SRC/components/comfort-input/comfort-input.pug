@@ -1,21 +1,5 @@
-// data={caption:string, placeholder:string, type:string, classes: string}
+include ../item-quantity-dropdown/item-quantity-dropdown
 mixin comfort-input(data)
   .comfort-input  
     h3.comfort-input__caption #{data.caption}
-    div(class='iqdropdown'+ (data.isExpanded ? " menu-open" : "")) 
-      p.iqdropdown-selection 
-      .iqdropdown-menu
-        for item in data.items
-          .iqdropdown-menu-option(data-id=item.id data-defaultcount=item.defaultcount data-mincount=item.mincount data-maxcount=item.maxcount)
-            div
-              p.iqdropdown-item #{item.name}
-
-
-
-
-
-//  .comfort-input
-//    label(class="comfort-input__caption" for="input") #{data.caption}
-//   .comfort-input__wrapper
-//      input(value=data.value class="comfort-input__input"+ (data.classes ? " "+data.classes : "") id="input" type=data.type placeholder=data.placeholder)
-
+    +item-quantity-dropdown(data.iqdd)
