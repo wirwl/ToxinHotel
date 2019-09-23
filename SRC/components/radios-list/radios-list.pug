@@ -1,6 +1,6 @@
 mixin radios-list(data)    
-  figure.radios-list  
-    figcaption.radios-list__caption #{data.caption}       
+  .radios-list  
+    h3.radios-list__caption #{data.caption}       
     ul.radios-list__list       
       for rds in data.radios
         - rds.name=data.name

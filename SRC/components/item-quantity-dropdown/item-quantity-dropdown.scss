@@ -27,7 +27,7 @@
   height: 1px;
   position: absolute;
   top: 50%;
-  left: 4px;
+  left: 5px;
   transition: -webkit-transform 0.25s ease-in-out;
   transition: transform 0.25s ease-in-out;
   transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
@@ -50,9 +50,13 @@
   width: 5px;
 }
 
-.iqdropdown__button-increment .iqdropdown__icon-decrement.iqdropdown__icon-increment::before,
+.iqdropdown__button-increment .iqdropdown__icon-decrement.iqdropdown__icon-increment::before
+{
+  width: 8px;
+}
 .iqdropdown__button-increment .iqdropdown__icon-decrement::after {
   width: 8px;
+  left: 4px;
 }
 
 .iqdropdown .iqdropdown__menu {
@@ -62,7 +66,7 @@
   border-bottom-right-radius: 3px;
   cursor: default;
   display: none;
-  padding: 5px 7px 9px 15px;
+  padding: 7px 7px 9px 13px;
   position: absolute;
   left: -1px;
   top: 42px;
@@ -99,18 +103,15 @@
 
 .iqdropdown__content {
   flex: 1;
-  padding-right: 10px;
+  padding-right: 10px;  
 }
 .iqdropdown__item {
-  color: #000;
+  color: $toxinDS100;
   font-size: 12px;
   font-weight: bold;
+  
 }
-.iqdropdown p.iqdropdown-description {
-  color: #4a4a4a;
-  font-family: "OpenSans", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
+.iqdropdown p.iqdropdown-description {    
   margin-top: 5px;
 }
 .iqdropdown .iqdropdown__item-controls {
@@ -162,8 +163,8 @@
   cursor: pointer;
   display: flex;
   height: 44px;
-  justify-content: space-between;
-  padding: 0 15px;
+  justify-content: space-between;  
+  padding-right: 15px;
   position: relative;
 }
 .iqdropdown.iqdropdown.menu-open,
@@ -175,9 +176,8 @@
   color: rgba(31, 32, 65, 0.75);
   font-size: 14px;
   flex: 1;
-  position: relative;
-  padding: 6px 0px 8px;
-  padding-right: 15px;
+  position: relative;  
+  padding: 5px 15px 8px 12px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -200,7 +200,8 @@
 }
 
 .iqdropdown__buttons {
-  padding-top: 17px;
+  padding-top: 13px;
+  margin-bottom: 2px;
   display: flex;
 }
 
@@ -215,9 +216,7 @@
 }
 .iqdropdown__buttons .iqdropdown__apply {
   margin-left: auto;
-  color: #bc9cff;
-  font-family: "Montserrat";
+  color: #bc9cff;  
   font-weight: bold;
-  font-size: 12px;
-  letter-spacing: 0.4px;
+  font-size: 12px;  
 }

@@ -105,16 +105,16 @@ html
               +toggles-list({caption:'TOGGLE',toggles:[{isChecked:true, text:'Получать спецпредложения',id:'t_on'},
                                                       {isChecked:false, text:'Получать спецпредложения', id:'t_off'}]})         
             li.column2__item.column2__wrapper-for-likes-button-list
-              figure.likes-button-list
-                figcaption.likes-button-list__caption LIKE BUTTON
+              .likes-button-list
+                h3.likes-button-list__caption LIKE BUTTON
                 ul.likes-button-list__list
                   li.likes-button-list__item
                     +like-button({count: 2, id:'like1'})
                   li.likes-button-list__item
                     +like-button({count: 12, id:'like2', isChecked:true})   
             li.column2__item.column2__wrapper-for-rate-buttons-list
-              figure.rate-buttons-list
-                figcaption.rate-buttons-list__caption RATE BUTTON
+              .rate-buttons-list
+                h3.rate-buttons-list__caption RATE BUTTON
                 ul.rate-buttons-list__list
                   li.rate-buttons-list__item
                     +rate-button({count:4,id:'stars1'})
@@ -137,7 +137,7 @@ html
               +range-slider({ctext:'range slider', min:0, max:15000, from: 4500, to:9600 })
             li.column3__item.column3__wrapper-for-buttons-list
               ul.buttons-list
-                p.buttons-list__caption BUTTONS
+                h3.buttons-list__caption BUTTONS
                 .buttons-list__wraper-for-2buttons
                   li.buttons-list__item
                     +button-filled({text:'click me'})
@@ -156,7 +156,7 @@ html
                 li.buttons-list__item
                     +button-arrow({text:'перейти к оплате'})
             li.column3__item.pagination__wrapper
-              p.pagination__wrapper-caption PAGINATION
+              h3.pagination__wrapper-caption PAGINATION
               +pagination({pages:15, page:1, showed:12, showedlastpage:6, total:100})
             li.column3__item.column3__wrapper-for-guests-input2
               +guests-input({caption:'DROPDOWN', 

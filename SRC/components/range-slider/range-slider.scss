@@ -1,15 +1,13 @@
-.range-slider {
-  font-family: montserrat;
+.range-slider {  
   font-size: 12px;
 }
 .range-slider__caption {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 19px;
-  text-transform: uppercase;
+  margin-bottom: 19px;  
 }
 .range-slider__caption-text {
-  font-weight: bold;
+  
   color: $toxinDS100;
 }
 .range-slider__values {

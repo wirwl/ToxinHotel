@@ -9,10 +9,11 @@
    display: inline-block;
    position: relative;
    padding-left: 30px;
-   line-height: 20px;
+   line-height: 18px;
    cursor: pointer;
    color: $toxinDS50;
    font-size: 14px;      
+   height: 20px;
 }
 
 .checkbox__label:before {
@@ -22,7 +23,7 @@
    left: 0px;
    top: 0px;
    width: 20px;
-   height: 20px;
+   height: inherit;
    border: 1px solid $toxinPurple;
    background-color: #fff;
    border-radius: 4px;
@@ -54,19 +55,16 @@
 }
 
 .checkbox__desc {
-   padding-left: 30px;
-   //padding-top: 3px;
+   padding-left: 30px;   
    font-size: 12px;   
-   color: $toxinDS50;
-   letter-spacing: initial;
+   color: $toxinDS50;   
 }
 
 .checkbox__label_bold {
    font-weight: bold;
-   color: $toxinDS75;
-   
+   color: $toxinDS75;   
 }
 
 .checkbox .checkbox__label.checkbox__label_bold + .checkbox__desc {
-   padding-top: 2px;
+   padding-top: 3px;
 }

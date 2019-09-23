@@ -80,11 +80,11 @@ body {
 }
 
 .column2__wrapper-for-checkboxes-list {
-  margin-bottom: 38px;
+  margin-bottom: 42px;
   width: 240px;
 }
 .column2__wrapper-for-radios-list {
-  margin-bottom: 42px;
+  margin-bottom: 43px;
 }
 .column2__wrapper-for-toggles-list {
   margin-bottom: 45px;
@@ -97,9 +97,7 @@ body {
   list-style: none;
   display: flex;
 }
-.likes-button-list__caption {
-  font-size: 12px;
-  font-weight: bold;
+.likes-button-list__caption {  
   margin-bottom: 16px;
 }
 .likes-button-list__item:not(:last-child) {
@@ -107,12 +105,10 @@ body {
 }
 
 .column2__wrapper-for-likes-button-list {
-  margin-bottom: 43px;
+  margin-bottom: 40px;
 }
 .rate-buttons-list__caption {
-  margin-bottom: 16px;
-  font-size: 12px;
-  font-weight: bold;
+  margin-bottom: 16px;  
 }
 .rate-buttons-list__list {
   list-style: none;
@@ -122,15 +118,15 @@ body {
   margin-right: 20px;
 }
 .column2__wrapper-for-rate-buttons-list {
-  margin-bottom: 190px;
+  margin-bottom: 191px;
 }
 .column2__wrapper-for-guests-input1 {
-  margin-bottom: 256px;
+  margin-bottom: 257px;
 }
 
 .column2__wrapper-for-rich-checkboxes-list {
   width: 253px;
-  margin-bottom: 231px;
+  margin-bottom: 230px;
   .checkboxes-list__item:nth-child(1) {
     width: 220px;
   }
@@ -156,9 +152,7 @@ body {
 .buttons-list {
   list-style: none;
 }
-.buttons-list__caption {
-  font-weight: bold;
-  font-size: 12px;
+.buttons-list__caption {  
   margin-bottom: 16px;
 }
 .buttons-list__item {
@@ -180,8 +174,6 @@ body {
 }
 .pagination__wrapper-caption {
   margin-bottom: 17px;
-  font-size: 12px;
-  font-weight: bold;
 }
 .column3__wrapper-for-guests-input2 {
   margin-bottom: 258px;

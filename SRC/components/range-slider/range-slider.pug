@@ -1,6 +1,6 @@
 mixin range-slider(data)
   .range-slider
     .range-slider__caption
-      p.range-slider__caption-text #{data.ctext}
+      h3.range-slider__caption-text #{data.ctext}
       p.range-slider__values.js-range-slider__values
     input(type='text').range-slider__input.js-range-slider__input(data-min=data.min data-max=data.max data-from=data.from data-to=data.to)

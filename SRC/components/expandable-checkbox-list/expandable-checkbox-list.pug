@@ -2,7 +2,7 @@ include ../checkbox/checkbox
 
 mixin expandable-checkbox-list(data)
   .ecl(class=(data.isExpand ? "ecl_show": ""))
-    .ecl__caption #{data.caption}
+    h3.ecl__caption #{data.caption}
     ul.ecl__list
       for cb in data.checkboxes
         li.ecl__item

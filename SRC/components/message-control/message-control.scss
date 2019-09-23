@@ -1,8 +1,7 @@
 .message-control {
   display: flex;  
 }
-.message-control__left-column {
-  //border: 1px dashed gray;
+.message-control__left-column {  
   margin-right: 10px;
   display: flex;
   flex-direction: column;
@@ -28,5 +27,5 @@
   color: $toxinDS75;
 }
 .message-control__wrapper-for-round-image {
-  margin-bottom: 12px;
+  margin-bottom: 11px;
 }

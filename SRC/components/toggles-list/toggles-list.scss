@@ -1,12 +1,11 @@
+.toggles-list__caption {
+  margin-bottom: 16px;
+}
+
 .toggles-list__list {
   list-style: none;
 }
-.toggles-list__item:not(:last-child) {
-  margin-bottom: 14px;
-}
 
-.toggles-list__caption {
-  font-size: 12px;
-  font-weight: bold;
+.toggles-list__item:not(:last-child) {
   margin-bottom: 14px;
 }

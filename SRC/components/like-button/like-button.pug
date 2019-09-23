@@ -2,13 +2,3 @@ mixin like-button(data={id:'likeBtn', count:0})
   .like-button
     input(type='checkbox' id=data.id checked=(data.isChecked ? 'checked' : undefined)).like-button__input.common_hide
     label(for=data.id).like-button__count #{data.count}
-
-
-
-
-
-
-mixin like-button_old(data)
-  .like-button(class=(data.isChecked ? 'like-button_checked' :''))
-    p.like-button__heart.material-icons #{(data.isChecked ? 'favorite' : 'favorite_border')}
-    p.like-button__count #{data.count}
