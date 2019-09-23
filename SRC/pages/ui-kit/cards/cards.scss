@@ -1,0 +1,14 @@
+@import "../../../common.scss";
+
+@import "../../../fonts/Montserrat/fonts.css";
+@import "../../../fonts/MaterialIcons/material-icons.css";
+
+body {
+  margin: 0 auto;
+  padding: 143px 0px 132px 141px;
+  min-width: 320px;
+  max-width: 1440px;
+  display: flex;
+  flex-wrap: wrap;
+  background: white;
+}

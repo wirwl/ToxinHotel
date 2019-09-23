@@ -114,23 +114,23 @@ module.exports = (env, argv) => {
                         //publicPath: './'                        
                     }
                 },
-                 /* {
-                    test: require.resolve('jquery'),
-                    use: [{
-                            loader: 'expose-loader',
-                            options: 'jQuery'
-                        },
-                        {
-                            loader: 'expose-loader',
-                            options: '$'
-                        }
-                    ]
-                } */            
-             ]//rules
+                /* {
+                   test: require.resolve('jquery'),
+                   use: [{
+                           loader: 'expose-loader',
+                           options: 'jQuery'
+                       },
+                       {
+                           loader: 'expose-loader',
+                           options: '$'
+                       }
+                   ]
+               } */
+            ]//rules
         },
         plugins: [
 
-              new webpack.ProvidePlugin({
+            new webpack.ProvidePlugin({
                 $: 'jquery',
                 jQuery: 'jquery',
                 'window.jQuery': 'jquery'
@@ -204,6 +204,18 @@ module.exports = (env, argv) => {
             new HtmlWebpackPlugin({ filename: 'pages/ui-kit/fe/fe.html', template: 'src/pages/ui-kit/fe/fe.pug', inject: true }),
         ]
     });
+    var uikitcardsCFG = merge(common, {
+        entry: "./SRC/pages/ui-kit/cards/cards.js",
+        output: {
+            path: path.resolve(__dirname, pathOutput),
+            filename: "pages/ui-kit/cards/cards.js",
+            publicPath: '../../../'
+        },
+        plugins: [
+            new MiniCssExtractPlugin({ filename: 'pages/ui-kit/cards/cards.css' }),
+            new HtmlWebpackPlugin({ filename: 'pages/ui-kit/cards/cards.html', template: 'src/pages/ui-kit/cards/cards.pug', inject: true }),
+        ]
+    });
     //console.log('---------------------');a
     //console.log(uikithfCFG.isOnlyDev);
     //console.log(indexCFG.isOnlyDev);
@@ -212,7 +224,7 @@ module.exports = (env, argv) => {
     //console.log("-----------------------------");
     //console.log(isDev);
     //return isDev ? cfgsForDev : cfgsForProd;
-    if (isDev) return [indexCFG, uikithfCFG, uikitctCFG, uikitfeCFG];
+    if (isDev) return [indexCFG, uikithfCFG, uikitctCFG, uikitfeCFG, uikitcardsCFG];
     return [indexCFG];
 }
 

@@ -14,7 +14,8 @@
     "le": "webpack-dev-server --open --mode=development",
     "le:hf": "webpack-dev-server --open --mode=development --display-error-details --open-page pages/ui-kit/hf/hf.html",
     "le:ct": "webpack-dev-server --open --mode=development --display-error-details --open-page pages/ui-kit/ct/ct.html",
-    "le:fe": "webpack-dev-server --open --mode=development --display-error-details --open-page pages/ui-kit/fe/fe.html"
+    "le:fe": "webpack-dev-server --open --mode=development --display-error-details --open-page pages/ui-kit/fe/fe.html",
+    "le:ca": "webpack-dev-server --open --mode=development --display-error-details --open-page pages/ui-kit/cards/cards.html"
   },
   "author": "Dmitry Levchenko",
   "browserslist": [
