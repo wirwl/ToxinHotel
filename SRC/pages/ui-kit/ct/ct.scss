@@ -1,14 +1,20 @@
 @import "../../../common.scss";
+
 @import "../../../fonts/Montserrat/fonts.css";
 @import "../../../fonts/Quicksand/fonts.css";
+@import "../../../fonts/Open-Sans/fonts.css";
+
 @import "../../../components/color-example/color-example.scss";
 @import "../../../components/font-example/font-example.scss";
 
 
 body {
-    margin: 0px;
+    margin: 0px auto;
     padding: 145px 150px;    
     display: flex;
+    min-width: 320px;
+    max-width: 1440px;
+    background: white;
 }
 .color-example__wrapper {
     margin-right: 422px;

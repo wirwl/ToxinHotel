@@ -30,13 +30,7 @@ body {
   list-style: none;
 }
 .column1__item {
-  margin-bottom: 20px;
-  .dropdown-input__input {
-    margin-bottom: 3px;
-  }
-  .masked-input__input {
-    margin-bottom: 20px;
-  }
+  margin-bottom: 20px;  
 }
 .column1__wrapper-for-dd-inputs {
   margin-bottom: 41px;
@@ -48,6 +42,9 @@ body {
 }
 .column1__dd-inputs-item {
   width: 150px;
+}
+.column1__wrapper-for-masked-input {
+  margin-bottom: 35px;
 }
 .column1__dd-inputs-item:nth-child(1) {
   margin-right: 20px;
@@ -68,6 +65,7 @@ body {
 .column1__wrapper-for-comport-input {
   margin-bottom: 170px;
 }
+
 .column1__wrapper-for-ecl1 {
   margin-bottom: 40px;
 }
