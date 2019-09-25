@@ -1,11 +1,18 @@
 mixin text-input(data)  
+  .text-input(class=(data.isFocused ? "text-input_isFocused":""))    
+    if data.caption
+      label.text-input__caption #{data.caption}
+    input.text-input__input(type=data.type ? data.type : 'text' placeholder=data.placeholder value=data.value) 
+    
+
+
+
+
+
+
+mixin text-input-old(data)  
   label.text-input(class=(data.isFocused ? "text-input_isFocused":""))    
     if data.caption
       h3.text-input__caption #{data.caption}
-    input(class="text-input__input" type=data.type ? data.type : 'text' placeholder=data.placeholder value=data.text) 
-
-mixin text-input-old(data)  
-  .text-input(class=(!data.isFocused || "text-input_isFocused"))
-    label(class="text-input__caption" for="input") #{data.caption}
-    input(class="text-input__input" id="input" type=data.type ? data.type : 'text' placeholder=data.placeholder value=data.text) 
+    input(class="text-input__input" type=data.type ? data.type : 'text' placeholder=data.placeholder value=data.text)
     

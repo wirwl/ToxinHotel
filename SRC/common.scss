@@ -21,31 +21,47 @@ body {
   font-family: "montserrat-regular";
   font-size: 14px;
 }
-h1, h2, h3 {
+
+h1, h2, h3, label {
+  font-family: montserrat-regular;    
+  font-size: 12px;
+  font-weight: bold;
+  color: $toxinDS100;
   text-transform: uppercase;
-}
-h1, h2, h3, label, legend {
-  font-family: montserrat-regular;
-  color: $toxinDS100;  
+  
 }
 
-h1 {
+input + label {
+  font-weight: normal;
+  text-transform: none;
+}
+
+
+h1, legend {
   font-size: 24px;
-  font-family: quicksand;
+  line-height: 30px;
+  font-family: 'Quicksand';
+  font-weight: bold;
 }
 
 h2 {
   font-size: 19px;
-  font-family: quicksand;
+  font-family: 'Quicksand';
 }
 
-h3, label, legend {
-  font-size: 12px;
-}
+
 
 input, textarea, select, button {
   font: inherit;
   outline: none;
+}
+
+form {
+  background: white;
+}
+
+fieldset {
+  border: 0 none;
 }
 
 //https://allyjs.io/tutorials/hiding-elements.html#how-to-hide-elements-visually

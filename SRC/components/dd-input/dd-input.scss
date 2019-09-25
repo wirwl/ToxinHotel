@@ -1,37 +1,43 @@
-.dd-input {
-  position: relative;  
-  
-}
-
-.dd-input__caption {
+.dd-input__caption {  
+  display: inline-block;
   margin-bottom: 5px;
 }
 
 .dd-input__input {
-  font-size: 14px;
-  padding: 12px 15px;
-  width: 100%;
   border: 1px solid $toxinDS25;
   border-radius: 4px;
-  color: $toxinDS75;  
+  background: white;
+  padding: 13px 15px;
+  font-size: 14px;  
+  height: 44px;  
+  width: 100%;
 }
 
-.dd-input:after {
+.dd-input__input::placeholder {
+  font-size: 14px;
+  line-height: 18px;
+  color: $toxinDS25;
+}
+.dd-input__input:focus {
+  border: 1px solid $toxinDS50;
+}
+
+.dd-input__wrapper {  
+  position: relative;
+}
+
+.dd-input__wrapper:after {
   content: "keyboard_arrow_down";
-  font-family: 'Material Icons';      
-  color: $toxinDS50;    
-  font-size: 24px;  
+  font-family: "Material Icons";
+  color: $toxinDS50;
+  font-size: 24px;
   position: absolute;
-  top: 22px;
-  right: 0;    
+  top: 0;
+  right: 0;
   width: 44px;
   height: 44px;
   display: flex;
   justify-content: center;
   align-items: center;
-  pointer-events: none;  
-}
-
-.dd-input__input:focus {
-  border: 1px solid $toxinDS50;
+  pointer-events: none;
 }

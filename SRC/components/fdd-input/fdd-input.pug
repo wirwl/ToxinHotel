@@ -1,11 +1,13 @@
 mixin fdd-input(data)
+  .fdd-input
+    if data.caption
+      label.fdd-input__caption #{data.caption}
+    .fdd-input__wrapper
+      input.fdd-input__input(value=data.value placeholder=data.placeholder)
+
+mixin fdd-input-old(data)
   label.fdd-input
     if (data.caption)
       h3.fdd-input__caption #{data.caption}    
     input.fdd-input__input(value=data.value type=data.type placeholder=data.placeholder)
 
-mixin fdd-input-old(data)
-  .fdd-input
-    label(class="fdd-input__caption" for="input") #{data.caption}
-    .fdd-input__wrapper
-      input(value=data.value class="fdd-input__input" id="input" type=data.type placeholder=data.placeholder)

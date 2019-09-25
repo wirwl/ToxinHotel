@@ -1,4 +1,16 @@
 mixin subscribe-input(data)
+  .subscribe-input
+    if data.caption
+      label.subscribe-input__caption #{data.caption}
+    .subscribe-input__wrapper
+      input.subscribe-input__input(type='email' placeholder=data.placeholder)
+
+
+
+
+
+
+mixin subscribe-input-old(data)
   label.subscribe-input
     if (data.caption)
       h3.subscribe-input__caption #{data.caption}    
@@ -8,9 +20,4 @@ mixin subscribe-input(data)
 
 
 
-mixin subscribe-input-old(data)
-  .subscribe-input
-    label(class="subscribe-input__caption" for="input") #{data.caption}
-    .subscribe-input__wrapper
-      input(class="subscribe-input__input" id="input" type=data.type placeholder=data.placeholder value=data.text)
 

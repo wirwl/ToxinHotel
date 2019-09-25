@@ -1,0 +1,24 @@
+include ../button/button
+include ../text-input/text-input
+include ../dd-input/dd-input
+include ../guests-input/guests-input
+
+mixin room-reservation-form(data)
+  form.rr-form(method='post' action='')
+    fieldset.rr-form__wrapper-for-inputs
+      legend.rr-form__title Найдём номера под ваши пожелания
+      ul.rr-form__list(role='none')    
+        li.rr-form__item
+          fieldset.rr-form__wrapper-for-dates
+            ul.rr-form__dates-list
+              li.rr-form__dates-item
+                +dd-input({caption:'Прибытие', placeholder:'ДД.ММ.ГГГГ'})
+              li.rr-form__dates-item
+                +dd-input({caption:'Выезд', placeholder:'ДД.ММ.ГГГГ'})                  
+        li.rr-form__item
+          +guests-input({caption:'Гости', 
+                             iqdd:{isExpanded:false, placeholder:'', 
+                             items:[{id:'adults', name:'ВЗРОСЛЫЕ'},
+                                    {id:'childs', name:'ДЕТИ'},
+                                    {id:'babies', name:'МЛАДЕНЦЫ'}] }})
+    +button-arrow({text:'Подобрать номер'})

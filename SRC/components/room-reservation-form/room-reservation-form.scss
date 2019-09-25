@@ -1,0 +1,29 @@
+.rr-form {
+  width: 380px;
+  padding: 40px 30px 30px;
+}
+.rr-form__wrapper-for-inputs {
+  margin-bottom: 31px;  
+}
+.rr-form__list {
+  list-style: none;
+}
+
+.rr-form__title {
+  margin-bottom: 20px;
+}
+.rr-form__wrapper-for-dates {
+  margin-bottom: 21px;
+}
+.rr-form__dates-list {  
+  display: flex;
+  list-style: none;
+}
+
+.rr-form__dates-item {
+  width: 150px;
+}
+
+.rr-form__dates-item:not(:last-child) {
+  margin-right: 20px;
+}

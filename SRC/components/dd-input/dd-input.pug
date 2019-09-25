@@ -1,16 +1,9 @@
-mixin dd-input(data)  
-  label.dd-input
-    if (data.caption)
-      h3.dd-input__caption #{data.caption}   
-    input(value=data.value placeholder=data.placeholder).dd-input__input
-
-
-
-mixin dd-input-old(data)
+mixin dd-input(data)
   .dd-input
-    label(class="dd-input__caption" for="input") #{data.caption}
+    if data.caption
+      label.dd-input__caption(for=data.id) #{data.caption}
     .dd-input__wrapper
-      input(value=data.value class="dd-input__input" id="input" type=data.type placeholder=data.placeholder)
+      input.dd-input__input(value=data.value id=data.id type=data.type placeholder=data.placeholder)
 
 
 

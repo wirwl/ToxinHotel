@@ -2,13 +2,57 @@
 
 @import "../../../fonts/Montserrat/fonts.css";
 @import "../../../fonts/MaterialIcons/material-icons.css";
+@import "../../../fonts/Quicksand/fonts.css";
 
 body {
   margin: 0 auto;
-  padding: 143px 0px 132px 141px;
+  padding: 150px 140px 140px 140px;
   min-width: 320px;
   max-width: 1440px;
   display: flex;
   flex-wrap: wrap;
-  background: white;
+  background: #f4f4f6;
 }
+
+form {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.column1 {width: 400px;}
+.column1,
+.column2 {
+  margin-right: 40px;
+}
+.column1__list, .column2__list, .column3__list {
+  list-style: none;
+}
+@import "../../../components/text-input/text-input.scss";
+// @import "../../../components/dropdown-input/dropdown-input.scss";
+// @import "../../../components/masked-input/masked-input.scss";
+@import "../../../components/dd-input/dd-input.scss";
+// @import "../../../components/fdd-input/fdd-input.scss";
+// @import "../../../components/subscribe-input/subscribe-input.scss";
+// @import "../../../components/comfort-input/comfort-input.scss";
+// @import "../../../components/expandable-checkbox-list/expandable-checkbox-list.scss";
+// @import "../../../components/checkbox/checkbox.scss";
+// @import "../../../components/comfort-status/comfort-status.scss";
+// @import "../../../components/comfort-status-list/comfort-status-list.scss";
+// @import "../../../components/radio/radio.scss";
+// @import "../../../components/checkboxes-list/checkboxes-list.scss";
+// @import "../../../components/radios-list/radios-list.scss";
+// @import "../../../components/toggle/toggle.scss";
+// @import "../../../components/toggles-list/toggles-list.scss";
+// @import "../../../components/like-button/like-button.scss";
+// @import "../../../components/rate-button/rate-button.scss";
+@import "../../../components/guests-input/guests-input.scss";
+// @import "../../../components/round-image/round-image.scss";
+// @import "../../../components/message-control/message-control.scss";
+// @import "../../../../node_modules/ion-rangeslider/css/ion.rangeSlider.css";
+// @import "../../../components/range-slider/range-slider.scss";
+@import "../../../components/button/button.scss";
+// @import "../../../components/pagination/pagination.scss";
+// @import "../../../components/bullet/bullet.scss";
+// @import "../../../components/bullets-list/bullets-list.scss";
+@import "../../../components/item-quantity-dropdown/item-quantity-dropdown.scss";
+@import "../../../components/room-reservation-form/room-reservation-form.scss";

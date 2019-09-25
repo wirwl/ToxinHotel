@@ -158,17 +158,25 @@ body {
 .buttons-list__item {
   height: inherit;
 }
-.buttons-list__wraper-for-2buttons {
-  display: flex;
-  margin-bottom: 30px;
-  height: 44px;
-  > .buttons-list__item:first-child {
-    margin-right: 19px;
-  }
-  &:nth-child(4) {
-    margin-bottom: 2px;
-  }
+
+.two-buttons-list {
+  list-style:none;
+  display: flex;  
 }
+.buttons-list__item:not(:last-of-type) {
+  margin-bottom: 30px;
+}
+
+.two-buttons-list__item {
+  height: 44px;
+}
+.two-buttons-list3 .two-buttons-list__item {
+  height: auto;
+}
+.two-buttons-list__item:first-child {
+  margin-right: 19px;
+}
+
 .pagination__wrapper {
   margin-bottom: 235px;
 }
