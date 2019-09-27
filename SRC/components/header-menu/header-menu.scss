@@ -1,16 +1,9 @@
-
-.menu { 
-  //min-width:160px;
-  //margin-right: 30px;
-}
-
-
 .menu__list {
   list-style: none;
   background: white;
 }
 .menu__link {
-  font-family: "Montserrat-Regular";
+  font-family: "Montserrat";
   color: $toxinDS50;
   font-size: 14px;
   line-height: 17px;
@@ -35,35 +28,26 @@
 .menu__list_arrow {
   padding-right: 0px;  
 }
-.menu  .menu__list  .menu__item .menu__link:not(:last-child) {
-  
-}
 
 .menu__link + .menu__list {
   position: absolute;
   min-width: 150px;
-  display: none;
- // border: 1px solid black;
+  display: none; 
   border-radius: 3px;
   box-shadow: 0 6px 16px 0 rgba(0,0,0,.07);
   
 }
 
-.menu__link + .menu__list > .menu__item {
-  //padding-bottom: 10px;
+.menu__link + .menu__list > .menu__item {  
   padding-left: 10px;  
 }
 
 .menu__link + .menu__list .menu__list {
   position: absolute;
   top: -1px;
-  right: -150px;
-  //background: red;
+  right: -150px; 
 }
-.menu__item {
-  //border-top: 1px solid black;
-  //border-bottom: 1px solid black;
-}
+
 .menu__item:hover > .menu__list {
   display: block;
 }
@@ -78,12 +62,10 @@
 .menu__list_arrow:after {
   content: "\E313";
   width: 24px;
-  font-family: 'Material Icons';
-  //padding-left: 2px;
+  font-family: 'Material Icons';  
   text-align: center;
   vertical-align: middle;  
-  font-size: 24px;
-  //padding-right: 14px;
+  font-size: 24px;  
   line-height: 20px;
   color: rgba(31, 32, 65, 0.5);
 }

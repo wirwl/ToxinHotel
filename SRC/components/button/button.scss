@@ -2,7 +2,7 @@ $myblue: #008ed6;
 
 .button {
   border: none;
-  font-family: montserrat-regular;
+  font-family: Montserrat;
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
@@ -72,9 +72,6 @@ $myblue: #008ed6;
   text-transform: none;
 }
 //-------------------------------------------------
-.button_simple {
-  //padding: 0px;
-}
 .button.button_simple.button_disabled {
   color: rgba(31, 32, 65, 0.5);
 }

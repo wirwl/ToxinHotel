@@ -3,7 +3,7 @@ mixin button-simple(data)
   -  data.isEnabled=true
   -if (data.type==undefined)
   - data.type='button'  
-  button.button.button_simple(class=((data.isEnabled) ? '': 'button_disabled') type=data.type) #{data.text}
+  button.button.button_simple(type=(data.type ? data.type : 'button')) #{data.text}
 
 mixin button-bordered(data)
   -if (data.isEnabled==undefined) 

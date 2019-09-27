@@ -1,5 +1,5 @@
 @font-face {
-	font-family: 'Montserrat-Regular';
+	font-family: 'Montserrat';
 	src: url('Montserrat-Regular/Montserrat-Regular.eot');
 	src: local('☺'), url('Montserrat-Regular/Montserrat-Regular.woff') format('woff'), 
 									 url('Montserrat-Regular/Montserrat-Regular.ttf') format('truetype'), 
@@ -10,7 +10,7 @@
 }
 
 @font-face {
-	font-family: 'Montserrat-Regular';
+	font-family: 'Montserrat';
 	src: url('Montserrat-Bold/Montserrat-Bold.eot');
 	src: local('☺'), url('Montserrat-Bold/Montserrat-Bold.woff') format('woff'), 
 									 url('Montserrat-Bold/Montserrat-Bold.ttf') format('truetype'), 

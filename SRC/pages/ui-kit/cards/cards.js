@@ -6,7 +6,7 @@ import './cards.scss';
 
 import '../../../../node_modules/jquery/dist/jquery.js'
 import '../../../jquery/plugins/jquery.maskedinput.min.js'
-
+import '../../../../node_modules/air-datepicker/dist/js/datepicker.js'
 
 
 // import '../../../../node_modules/jquery/dist/jquery.js'
@@ -25,5 +25,11 @@ import '../../../components/item-quantity-dropdown/item-quantity-dropdown.js'
 
 
 $(document).ready(() => {
-  
+  $('.js-standalone-datepicker').datepicker({
+    todayButton: new Date(),
+    range: true,
+    prevHtml: 'arrow_back',    
+    nextHtml: 'arrow_forward',
+    navTitles: {days:'MM <i>yyyy</i>'}
+  });
 });

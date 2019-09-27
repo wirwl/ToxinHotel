@@ -3,7 +3,11 @@ mixin dd-input(data)
     if data.caption
       label.dd-input__caption(for=data.id) #{data.caption}
     .dd-input__wrapper
-      input.dd-input__input(value=data.value id=data.id type=data.type placeholder=data.placeholder)
+      input.dd-input__input.js-datapicker(value=data.value 
+                                          id=data.id type=data.type 
+                                          placeholder=data.placeholder 
+                                          data-range="true" 
+                                          data-multiple-dates-separator=" - ")
 
 
 
