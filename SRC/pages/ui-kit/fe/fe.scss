@@ -164,9 +164,11 @@ body {
 .buttons-list__item:not(:last-of-type) {
   margin-bottom: 30px;
 }
-
+.two-buttons-list__item_width99 {
+  width: 99px;
+}
 .two-buttons-list__item {
-  height: 44px;
+  height: 44px;  
 }
 .two-buttons-list3 .two-buttons-list__item {
   height: auto;

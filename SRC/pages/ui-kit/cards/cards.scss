@@ -20,7 +20,7 @@ form {
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
-.column1 {width: 400px;}
+.column1 {width: 380px;}
 .column1,
 .column2 {
   margin-right: 40px;
@@ -28,9 +28,24 @@ form {
 .column1__list, .column2__list, .column3__list {
   list-style: none;
 }
+.column1__list, .column2__list {
+  margin-right: 40px;
+}
+.column1__item, .column2__item {
+  margin-bottom: 40px;
+}
+
+
+
+
+
+
+
+
+
 @import "../../../components/text-input/text-input.scss";
 // @import "../../../components/dropdown-input/dropdown-input.scss";
-// @import "../../../components/masked-input/masked-input.scss";
+@import "../../../components/masked-input/masked-input.scss";
 @import "../../../components/dd-input/dd-input.scss";
 // @import "../../../components/fdd-input/fdd-input.scss";
 // @import "../../../components/subscribe-input/subscribe-input.scss";
@@ -39,10 +54,10 @@ form {
 // @import "../../../components/checkbox/checkbox.scss";
 // @import "../../../components/comfort-status/comfort-status.scss";
 // @import "../../../components/comfort-status-list/comfort-status-list.scss";
-// @import "../../../components/radio/radio.scss";
+//
 // @import "../../../components/checkboxes-list/checkboxes-list.scss";
-// @import "../../../components/radios-list/radios-list.scss";
-// @import "../../../components/toggle/toggle.scss";
+@import "../../../components/radios-list/radios-list.scss";
+@import "../../../components/toggle/toggle.scss";
 // @import "../../../components/toggles-list/toggles-list.scss";
 // @import "../../../components/like-button/like-button.scss";
 // @import "../../../components/rate-button/rate-button.scss";
@@ -57,3 +72,6 @@ form {
 // @import "../../../components/bullets-list/bullets-list.scss";
 @import "../../../components/item-quantity-dropdown/item-quantity-dropdown.scss";
 @import "../../../components/room-reservation-form/room-reservation-form.scss";
+@import "../../../components/sign-up-form/sign-up-form.scss";
+@import "../../../components/order-info-form/order-info-form.scss";
+@import "../../../components/sign-in-form/sign-in-form.scss";

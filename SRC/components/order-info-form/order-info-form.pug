@@ -1,0 +1,49 @@
+include ../tooltip/tooltip
+
+mixin order-info-form(data)
+  form.oi-form(method='post' action='#')
+    fieldset
+      div.oi-form__caption
+        div.oi-form__caption-left-part
+          span.oi-form__caption-n №
+          span.oi-form__caption-room-number 888
+          span.oi-form__room-type Люкс         
+        .oi-form__cost-per-day
+          span.oi-form__cost-per-day-value 9 990₽
+          span.oi-form__cost-per-day-text в сутки
+      ul.oi-form__list
+        li.oi-form__item
+          ul.oi-form__dates-list
+            li.oi-form__dates-item
+              +dd-input({caption:'Прибытие', placeholder:'ДД.ММ.ГГГГ', value: '19.08.2019'})
+            li.oi-form__dates-item
+              +dd-input({caption:'Выезд', placeholder:'ДД.ММ.ГГГГ', value: '23.08.2019'})
+        li.oi-form__item
+          +guests-input({caption:'Гости', 
+                              iqdd:{isExpanded:false, placeholder:'', 
+                              items:[{id:'adults', name:'ВЗРОСЛЫЕ', defaultcount:2},
+                                     {id:'childs', name:'ДЕТИ', defaultcount:1},
+                                     {id:'babies', name:'МЛАДЕНЦЫ'}] }})
+        li.oi-form__item
+          table.oi-form__table
+            tr.oi-form__row
+              td.oi-form__cell-text 9 990₽ х 4 суток
+              td.oi-form__cell-tooltip
+              td.oi-form__cell-value 39 960₽
+            tr.oi-form__row
+              td.oi-form__cell-text Сбор за услуги: скидка 2 179₽
+              td.oi-form__cell-tooltip
+                +tooltip({text:'Скидка 20%'})
+              td.oi-form__cell-value 0₽
+            tr.oi-form__row
+              td.oi-form__cell-text Сбор за дополнительные услуги
+              td.oi-form__cell-tooltip
+                +tooltip({text:'Виды дополнительных услуг: уборка, массаж пяток'})
+              td.oi-form__cell-value 300₽             
+      .oi-form__total
+        h2.oi-form__total-text Итого
+        .oi-form__total-line
+        h2.oi-form__total-value 38 081₽ 
+      +button-arrow({text:'Забронировать', type:'submit'})
+      
+      

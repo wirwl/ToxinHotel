@@ -1,7 +1,10 @@
 include ../../../components/room-reservation-form/room-reservation-form
+include ../../../components/sign-up-form/sign-up-form
+include ../../../components/order-info-form/order-info-form
+include ../../../components/sign-in-form/sign-in-form
 
 doctype html
-html
+html(lang="ru")
   head
     meta(charset="UTF-8")
     title Cards
@@ -10,7 +13,12 @@ html
       ul.column1__list
         li.column1__item
           +room-reservation-form
-        li.column1__item        
+        li.column1__item       
+          +sign-up-form 
     .column2
-      
+        ul.column2__list
+          li.column2__item
+            +order-info-form
+          li.column2__item
+            +sign-in-form
     .column3  

@@ -8,7 +8,6 @@ include ../../../components/comfort-input/comfort-input
 include ../../../components/expandable-checkbox-list/expandable-checkbox-list
 include ../../../components/checkbox/checkbox
 include ../../../components/comfort-status-list/comfort-status-list
-include ../../../components/radio/radio
 include ../../../components/toggle/toggle
 include ../../../components/checkboxes-list/checkboxes-list
 include ../../../components/radios-list/radios-list
@@ -34,7 +33,7 @@ html(lang="ru")
         li.column1__item
           +text-input({caption:'TEXT FIELD', placeholder:'Email'})
         li.column1__item
-          +text-input({isFocused:true, classes:'text-input_isFocused', caption:'TEXT FIELD', value:'This is pretty awesome'})     
+          +text-input({isFocused:true, caption:'TEXT FIELD', value:'This is pretty awesome'})     
         li.column1__item.column1__wrapper-for-guests-input0
           +guests-input({caption:'DROPDOWN', 
                          iqdd:{isExpanded:false, placeholder:'', 
@@ -42,7 +41,7 @@ html(lang="ru")
                                       {id:'childs', name:'ДЕТИ'},
                                       {id:'babies', name:'МЛАДЕНЦЫ'}] }})
         li.column1__item.column1__wrapper-for-masked-input
-          +masked-input({caption:'MASKED TEXT FIELD', placeholder:'ДД.ММ.ГГГГ'})
+          +masked-input({caption:'MASKED TEXT FIELD'})
         li.column1__item.column1__wrapper-for-dd-inputs
           ul.column1__dd-inputs-list
             li.column1__dd-inputs-item
@@ -140,15 +139,15 @@ html(lang="ru")
               ul.buttons-list    
                 li.buttons-list__item
                   ul.two-buttons-list
-                    li.two-buttons-list__item
+                    li.two-buttons-list__item.two-buttons-list__item_width99
                       +button-filled({text:'click me'})
-                    li.two-buttons-list__item
+                    li.two-buttons-list__item.two-buttons-list__item_width99
                       +button-filled({text:'click me', isEnabled:false})
                 li.buttons-list__item
                   ul.two-buttons-list
-                    li.two-buttons-list__item
+                    li.two-buttons-list__item.two-buttons-list__item_width99
                       +button-bordered({text:'click me'})
-                    li.two-buttons-list__item
+                    li.two-buttons-list__item.two-buttons-list__item_width99
                       +button-bordered({text:'click me', isEnabled:false})
                 li.buttons-list__item
                   ul.two-buttons-list.two-buttons-list3

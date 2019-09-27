@@ -1,0 +1,112 @@
+@import '../tooltip/tooltip.scss';
+
+.oi-form {
+  width: 380px;
+}
+.oi-form__caption {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  align-items: baseline;
+  line-height: 28px;
+}
+
+.oi-form__caption-n {
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.oi-form__caption-room-number {
+  font-family: "Open sans";
+  margin-right: 5px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.oi-form__room-type {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  color: $toxinPurple;
+}
+
+.oi-form__cost-per-day {
+  color: $toxinDS50;
+  font-weight: bold;
+}
+.oi-form__cost-per-day-value {
+  margin-right: 5px;
+}
+.oi-form__cost-per-day-text {
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.oi-form__item {
+  margin-bottom: 20px;
+}
+
+.oi-form__list {
+  margin-bottom: 30px;
+}
+
+.oi-form__list,
+.oi-form__dates-list {
+  list-style: none;
+}
+
+.oi-form__dates-list {
+  display: flex;
+}
+
+.oi-form__dates-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.oi-form__cell-tooltip {
+  display: flex;
+}
+
+.oi-form__table {
+  width: 100%;
+  font-size: 14px;
+  color: $toxinDS75;
+}
+
+.oi-form__row:nth-child(1),
+.oi-form__row:nth-child(2) {
+  .oi-form__cell-text {
+    border-bottom: 13px solid transparent;
+  }
+}
+
+.oi-form__cell-text {
+  width: 214px;
+}
+
+.oi-form__cell-value {
+  text-align: end;
+  vertical-align: top;
+}
+
+.oi-form__total {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  align-items: baseline;
+}
+
+.oi-form__total-text {
+  margin-right: 5px;
+  text-transform: none;
+}
+
+.oi-form__total-line {
+  border-bottom: 1px dotted $toxinDS25;
+  margin-right: 5px;
+  flex-grow: 1;
+}
+
+.oi-form__total-value {
+  
+}

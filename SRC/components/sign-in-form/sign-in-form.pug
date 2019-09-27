@@ -1,0 +1,14 @@
+mixin sign-in-form(data)
+  form.si-form(method='post' action='#')
+    fieldset.si-form__fieldset
+      legend.si-form__caption Войти
+      ul.si-form__list
+        li.si-form__item
+          +text-input({placeholder:'Email', type:'email'})
+        li.si-form__item
+          +text-input({placeholder:'Пароль', type:'password'})        
+      +button-arrow({text:'Войти', type:'submit'})        
+    .si-form__wrapper-for-sign-in-button
+      p.si-form__sign-in-text Нет аккаунта на Toxin?
+      .si-form_wrapper99px
+        +button-bordered({text:'Создать'})

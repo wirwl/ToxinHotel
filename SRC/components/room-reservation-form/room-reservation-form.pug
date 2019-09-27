@@ -4,10 +4,10 @@ include ../dd-input/dd-input
 include ../guests-input/guests-input
 
 mixin room-reservation-form(data)
-  form.rr-form(method='post' action='')
+  form.rr-form(method='post' action='#')
     fieldset.rr-form__wrapper-for-inputs
       legend.rr-form__title Найдём номера под ваши пожелания
-      ul.rr-form__list(role='none')    
+      ul.rr-form__list(role='none presentation')    
         li.rr-form__item
           fieldset.rr-form__wrapper-for-dates
             ul.rr-form__dates-list
@@ -21,4 +21,4 @@ mixin room-reservation-form(data)
                              items:[{id:'adults', name:'ВЗРОСЛЫЕ'},
                                     {id:'childs', name:'ДЕТИ'},
                                     {id:'babies', name:'МЛАДЕНЦЫ'}] }})
-    +button-arrow({text:'Подобрать номер'})
+    +button-arrow({text:'Подобрать номер', type: 'submit'})
