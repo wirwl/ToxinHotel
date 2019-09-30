@@ -8,5 +8,5 @@ mixin item-quantity-dropdown(data)
             p.iqdropdown__item #{item.name}
       if data.isShowButtons
         .iqdropdown__buttons
-          button.iqdropdown__clear.iqdropdown__clear_hide ОЧИСТИТЬ
-          button.iqdropdown__apply ПРИМЕНИТЬ
+          button.iqdropdown__clear.iqdropdown__clear_hide(type='button') ОЧИСТИТЬ
+          button.iqdropdown__apply(type='button') ПРИМЕНИТЬ

@@ -14,7 +14,7 @@ mixin room-reservation-form(data)
               li.rr-form__dates-item
                 +dd-input({caption:'Прибытие', placeholder:'ДД.ММ.ГГГГ',id:'rr-form__start-input'})
               li.rr-form__dates-item
-                +dd-input({caption:'Выезд', placeholder:'ДД.ММ.ГГГГ', id:'rr-form__end-input'})                  
+                +dd-input({caption:'Выезд', placeholder:'ДД.ММ.ГГГГ', id:'rr-form__end-input', hasDatepicker:false})                  
         li.rr-form__item
           +guests-input({caption:'Гости', 
                              iqdd:{isExpanded:false, placeholder:'', 

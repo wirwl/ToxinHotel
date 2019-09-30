@@ -8,7 +8,7 @@ import '../../../../node_modules/jquery/dist/jquery.js'
 import '../../../jquery/plugins/jquery.maskedinput.min.js'
 import '../../../../node_modules/air-datepicker/dist/js/datepicker.js'
 
-
+import '../../../components/datepicker/datepicker.js'
 // import '../../../../node_modules/jquery/dist/jquery.js'
 // import '../../../jquery/plugins/jquery.maskedinput.min.js'
 // import '../../../../node_modules/ion-rangeslider/js/ion.rangeSlider'
@@ -24,12 +24,3 @@ import '../../../components/guests-input/guests-input.js'
 import '../../../components/item-quantity-dropdown/item-quantity-dropdown.js'
 
 
-$(document).ready(() => {
-  $('.js-standalone-datepicker').datepicker({
-    todayButton: new Date(),
-    range: true,
-    prevHtml: 'arrow_back',    
-    nextHtml: 'arrow_forward',
-    navTitles: {days:'MM <i>yyyy</i>'}
-  });
-});

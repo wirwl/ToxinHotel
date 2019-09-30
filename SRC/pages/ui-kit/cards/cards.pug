@@ -2,6 +2,7 @@ include ../../../components/room-reservation-form/room-reservation-form
 include ../../../components/sign-up-form/sign-up-form
 include ../../../components/order-info-form/order-info-form
 include ../../../components/sign-in-form/sign-in-form
+include ../../../components/datepicker/datepicker
 
 doctype html
 html(lang="ru")
@@ -22,4 +23,4 @@ html(lang="ru")
           li.column2__item
             +sign-in-form
     .column3
-      .js-standalone-datepicker
+      +datepicker({isStandAlone:true})
