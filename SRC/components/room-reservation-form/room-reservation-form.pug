@@ -1,6 +1,6 @@
 include ../button/button
 include ../text-input/text-input
-include ../dd-input/dd-input
+include ../datepicker-input/datepicker-input
 include ../guests-input/guests-input
 
 mixin room-reservation-form(data)
@@ -10,11 +10,11 @@ mixin room-reservation-form(data)
       ul.rr-form__list(role='none presentation')    
         li.rr-form__item
           fieldset.rr-form__wrapper-for-dates
-            ul.rr-form__dates-list
+            ul.rr-form__dates-list(role='none presentation')
               li.rr-form__dates-item
-                +dd-input({caption:'Прибытие', placeholder:'ДД.ММ.ГГГГ',id:'rr-form__start-input'})
+                +datepicker-input({caption:'Прибытие', placeholder:'ДД.ММ.ГГГГ',id:'rr-form__start-input'})
               li.rr-form__dates-item
-                +dd-input({caption:'Выезд', placeholder:'ДД.ММ.ГГГГ', id:'rr-form__end-input', hasDatepicker:false})                  
+                +datepicker-input({caption:'Выезд', placeholder:'ДД.ММ.ГГГГ', id:'rr-form__end-input', hasDatepicker:false})                  
         li.rr-form__item
           +guests-input({caption:'Гости', 
                              iqdd:{isExpanded:false, placeholder:'', 

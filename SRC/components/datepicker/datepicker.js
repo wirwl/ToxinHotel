@@ -1,13 +1,13 @@
 $(document).ready(() => {
 
   let allDatepickers = $('.toxin-datepicker');
-  saDatepicker = $('.standalone-datepicker');
   htmlButtons =
-    '<span class="datepicker--button" data-action="clear">Очистить</span>' +
-    '<span class="datepicker__button-apply">Применить</span>';
+    '<div class="datepicker__buttons">' +
+    '<span class="datepicker__button-clear">Очистить</span>' +
+    '<span class="datepicker__button-apply">Применить</span>' +
+    '</div';
 
   allDatepickers.datepicker({
-    clearButton: true,
     moveToOtherMonthsOnSelect: false,
     minDate: new Date(),
     range: true,
@@ -17,29 +17,20 @@ $(document).ready(() => {
     navTitles: { days: 'MM yyyy' },
     onShow: function (datepicker, animationCompleted) {
       if (!animationCompleted) {
-        console.log('111');
-        datepicker.$datepicker.find('.datepicker--buttons').html(htmlButtons);
-        datepicker.$datepicker.find('.datepicker__button-apply').on('click',
-          function () {
-            datepicker.hide();
-          })
+        let count = datepicker.$datepicker.find('.datepicker__buttons').length;
+        if (count == 0) {
+          datepicker.$datepicker.append(htmlButtons);
+          datepicker.$datepicker.find('.datepicker__button-clear').on('click', () => datepicker.clear());
+          datepicker.$datepicker.find('.datepicker__button-apply').on('click', () => datepicker.hide());
+        }
       }
     }
   });
-  saDatepicker.each(function (index, el) {
-    console.log('pzd');
-    let datepicker = $(el).data('datepicker');
-    datepicker.$datepicker.find('.datepicker--buttons').html(htmlButtons);
-    datepicker.$datepicker.find('.datepicker__button-apply').on('click',
-      function () {
-        datepicker.hide();
-      })
+
+  allDatepickers.closest('.standalone-datepicker').each(function () {
+    let datepicker = $(this).data('datepicker');
+    datepicker.$datepicker.append(htmlButtons);
+    datepicker.$datepicker.find('.datepicker__button-clear').on('click', () => datepicker.clear());
+    datepicker.$datepicker.find('.datepicker__button-apply').on('click', () => datepicker.hide());
   })
-
-
-
-
-
-
-
 });

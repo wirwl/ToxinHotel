@@ -1,7 +1,7 @@
 include ../../../components/text-input/text-input
 include ../../../components/dropdown-input/dropdown-input
 include ../../../components/masked-input/masked-input
-include ../../../components/dd-input/dd-input
+include ../../../components/datepicker-input/datepicker-input
 include ../../../components/fdd-input/fdd-input
 include ../../../components/subscribe-input/subscribe-input
 include ../../../components/comfort-input/comfort-input
@@ -42,12 +42,12 @@ html(lang="ru")
                                       {id:'babies', name:'МЛАДЕНЦЫ'}] }})
         li.column1__item.column1__wrapper-for-masked-input
           +masked-input({caption:'MASKED TEXT FIELD'})
-        li.column1__item.column1__wrapper-for-dd-inputs
-          ul.column1__dd-inputs-list
-            li.column1__dd-inputs-item
-              +dd-input({caption:'DATE DROPDOWN', placeholder:'ДД.ММ.ГГГГ', value:''})
-            li.column1__dd-inputs-item
-              +dd-input({caption:'DATE DROPDOWN', placeholder:'ДД.ММ.ГГГГ', value:'19.08.2019'})
+        li.column1__item.column1__wrapper-for-datepicker-inputs
+          ul.column1__datepicker-inputs-list
+            li.column1__datepicker-inputs-item
+              +datepicker-input({caption:'DATE DROPDOWN', placeholder:'ДД.ММ.ГГГГ', value:''})
+            li.column1__datepicker-inputs-item
+              +datepicker-input({caption:'DATE DROPDOWN', placeholder:'ДД.ММ.ГГГГ', value:'19.08.2019'})
         li.column1__item.column1__wrapper-for-fdd-input
           +fdd-input({caption:'FILTER DATE DROPDOWN', placeholder:'', value:'19 авг - 23 авг'})
         li.column1__item.column1__wrapper-for-subscribe-input

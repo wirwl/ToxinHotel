@@ -1,9 +1,9 @@
-.dd-input__caption {  
+.datepicker-input__caption {  
   display: inline-block;
   margin-bottom: 5px;
 }
 
-.dd-input__input {
+.datepicker-input__input {
   border: 1px solid $toxinDS25;
   border-radius: 4px;
   background: white;
@@ -13,19 +13,19 @@
   width: 100%;
 }
 
-.dd-input__input::placeholder {
+.datepicker-input__input::placeholder {
   font-size: 14px;  
   color: $toxinDS75;
 }
-.dd-input__input:focus {
+.datepicker-input__input:focus {
   border: 1px solid $toxinDS50;
 }
 
-.dd-input__wrapper {  
+.datepicker-input__wrapper {  
   position: relative;
 }
 
-.dd-input__wrapper:after {
+.datepicker-input__wrapper:after {
   content: "keyboard_arrow_down";
   font-family: "Material Icons";
   color: $toxinDS50;

@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	//$(".dd-input__input").mask("99.99.9999",{placeholder:"ДД.ММ.ГГГГ"});
+	//$(".datepicker-input__input").mask("99.99.9999",{placeholder:"ДД.ММ.ГГГГ"});
 
 	$('#rr-form__start-input').datepicker({
 		onSelect: function (fd, d, picker) {
@@ -13,7 +13,7 @@ $(document).ready(function () {
 	})
 
 
-
+//$(".datepicker-input__input").mask("99.99.9999",{});
 
 	//datepicker.update('onSelect',function(fd, d, picker){console.log(fd)});
 	//let datepicker = $('#').data('datepicker');

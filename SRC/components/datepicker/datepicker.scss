@@ -188,7 +188,7 @@
   transform: translateY(-8px);
 }
 
-.datepicker--buttons {
+.datepicker__buttons {
   border-top: none;
   cursor: pointer;  
   height: auto;
@@ -198,18 +198,13 @@
   font-weight: bold;
   margin-top: 17px;  
   padding: 0px 4px;  
-}
-.datepicker--button {
-  color: $toxinDS50;
-  display: inline-block;    
-  //width: auto;
-  height: auto;
-}
-.datepicker--button:hover {
-  color: inherit;
-  background: inherit;
+  justify-content: space-between;
 }
 
+.datepicker__button-clear {  
+  display: inline-block;
+  color: $toxinDS50;
+}
 .datepicker__button-apply {  
   display: inline-block;
   color: $toxinPurple;
