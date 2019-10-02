@@ -189,8 +189,7 @@
 }
 
 .datepicker__buttons {
-  border-top: none;
-  cursor: pointer;  
+  border-top: none;  
   height: auto;
   display: flex;
   font-size: 12px;
@@ -204,8 +203,10 @@
 .datepicker__button-clear {  
   display: inline-block;
   color: $toxinDS50;
+  cursor: pointer;  
 }
 .datepicker__button-apply {  
   display: inline-block;
   color: $toxinPurple;
+  cursor: pointer;  
 }

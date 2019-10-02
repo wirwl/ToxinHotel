@@ -1,45 +1,7 @@
-@import '../tooltip/tooltip.scss';
+@import '../../components/tooltip/tooltip.scss';
 
 .oi-form {
   width: 380px;
-}
-.oi-form__caption {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 14px;
-  align-items: baseline;
-  line-height: 28px;
-}
-
-.oi-form__caption-n {
-  font-size: 14px;
-  font-weight: bold;
-  margin-right: 5px;
-}
-
-.oi-form__caption-room-number {
-  font-family: "Open sans";
-  margin-right: 5px;
-  font-size: 24px;
-  font-weight: bold;
-}
-.oi-form__room-type {
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: bold;
-  color: $toxinPurple;
-}
-
-.oi-form__cost-per-day {
-  color: $toxinDS50;
-  font-weight: bold;
-}
-.oi-form__cost-per-day-value {
-  margin-right: 5px;
-}
-.oi-form__cost-per-day-text {
-  font-weight: normal;
-  font-size: 12px;
 }
 
 .oi-form__item {
@@ -105,8 +67,4 @@
   border-bottom: 1px dotted $toxinDS25;
   margin-right: 5px;
   flex-grow: 1;
-}
-
-.oi-form__total-value {
-  
 }

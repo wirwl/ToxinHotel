@@ -1,0 +1,24 @@
+mixin image-slider(data)
+  - let l = data.images.length
+  ul.slides
+    for image, index in data.images
+      input(id='img-'+(index+1) type='radio' name='radio-btn' checked=((data.index==index+1) ? 'checked' : undefined))
+      li.slide-container
+        .slide
+          img(src=image)
+        .nav
+          label.prev(for='img-'+(index==0 ? l : index)).material-icons &lsaquo;
+          label.next(for='img-'+(index==l-1 ? 1 : index+2)).material-icons &rsaquo; 
+    li.nav-dots
+      - let i=0
+      while i<l
+        - i++
+        label(for='img-'+i class='nav-dot' id='img-dot-'+i)
+        
+
++image-slider({index:1, images:['http://farm9.staticflickr.com/8072/8346734966_f9cd7d0941_z.jpg',
+                                'http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg',
+                                'http://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg',
+                                'http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg',
+                                'http://farm9.staticflickr.com/8055/8098750623_66292a35c0_z.jpg',
+                                'http://farm9.staticflickr.com/8195/8098750703_797e102da2_z.jpg']})

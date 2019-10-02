@@ -1,0 +1,38 @@
+.room-info-caption__caption {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  align-items: baseline;
+  line-height: 28px;
+}
+
+.room-info-caption__caption-n {
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.room-info-caption__caption-room-number {
+  font-family: "Open sans";
+  margin-right: 5px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.room-info-caption__room-type {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  color: $toxinPurple;
+}
+
+.room-info-caption__cost-per-day {
+  color: $toxinDS50;
+  font-weight: bold;
+}
+.room-info-caption__cost-per-day-value {
+  margin-right: 5px;
+}
+.room-info-caption__cost-per-day-text {
+  font-weight: normal;
+  font-size: 12px;
+}

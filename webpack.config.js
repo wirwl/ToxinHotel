@@ -70,14 +70,14 @@ module.exports = (env, argv) => {
                 },
                 {
                     test: /\.m?js$/,
-                    //exclude: /(node_modules|bower_components)/,
-                    include: /pages/,
+                    exclude: /(node_modules|bower_components)/,
+                    //include: /pages/,
                     use: {
                         loader: 'babel-loader',
                         options: {
                             presets: ['@babel/preset-env'],
                             plugins: ['@babel/plugin-proposal-object-rest-spread'],
-                            cacheDirectory: true
+                            cacheDirectory: true,                           
                         }
                     }
                 },

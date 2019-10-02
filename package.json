@@ -18,6 +18,7 @@
     "le:ca": "webpack-dev-server --open --mode=development --display-error-details --open-page pages/ui-kit/cards/cards.html"
   },
   "author": "Dmitry Levchenko",
+  "repository": "github:wirwl/https://github.com/wirwl/ToxinHotel",
   "browserslist": [
     "last 2 Chrome versions",
     "last 2 ChromeAndroid versions",
@@ -63,7 +64,7 @@
     "jquery-mask-plugin": "^1.14.16",
     "mini-css-extract-plugin": "^0.8.0",
     "pug-html-loader": "^1.1.5",
-    "sass": "^1.23.0-module.beta.1",
+    "sass": "^1.23.0",
     "speed-measure-webpack-plugin": "^1.3.1"
   }
 }

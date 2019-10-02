@@ -7,7 +7,6 @@ import '../../../components/message-control/avatar.jpg';
 
 
 import '../../../../node_modules/jquery/dist/jquery.js'
-import '../../../jquery/plugins/jquery.maskedinput.min.js'
 import '../../../../node_modules/ion-rangeslider/js/ion.rangeSlider'
 import '../../../components/masked-input/masked-input.js'
 import '../../../components/datepicker-input/datepicker-input.js'
