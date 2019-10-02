@@ -19,6 +19,7 @@
   },
   "author": "Dmitry Levchenko",
   "repository": "github:wirwl/https://github.com/wirwl/ToxinHotel",
+  "license": "AGPL-3.0-only",
   "browserslist": [
     "last 2 Chrome versions",
     "last 2 ChromeAndroid versions",
