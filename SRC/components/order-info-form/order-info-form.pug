@@ -4,7 +4,8 @@ include ../room-info-caption/room-info-caption
 mixin order-info-form(data)
   form.oi-form(method='post' action='#')
     fieldset
-      +room-info-caption({number:888, isLux:true, cost:'9 990'})
+      .oi-form__wrapper-for-room-info-caption
+        +room-info-caption({number:888, isLux:true, cost:'9 990'})
       ul.oi-form__list
         li.oi-form__item
           ul.oi-form__dates-list

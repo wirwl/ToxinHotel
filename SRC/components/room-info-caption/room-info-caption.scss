@@ -1,21 +1,25 @@
 .room-info-caption__caption {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 14px;
+  justify-content: space-between;  
   align-items: baseline;
-  line-height: 28px;
+  font-size: inherit;  
+}
+
+.room-info-caption__caption-left-part {
+  font-size: inherit;
 }
 
 .room-info-caption__caption-n {
+  font-family: "Quicksand";
   font-size: 14px;
   font-weight: bold;
   margin-right: 5px;
 }
 
 .room-info-caption__caption-room-number {
-  font-family: "Open sans";
+  font-family: "Quicksand";
   margin-right: 5px;
-  font-size: 24px;
+  font-size: inherit;
   font-weight: bold;
 }
 .room-info-caption__room-type {
@@ -31,6 +35,7 @@
 }
 .room-info-caption__cost-per-day-value {
   margin-right: 5px;
+  font-size: 14px;
 }
 .room-info-caption__cost-per-day-text {
   font-weight: normal;

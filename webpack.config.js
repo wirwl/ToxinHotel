@@ -13,10 +13,18 @@ const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin')
 const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
 const smp = new SpeedMeasurePlugin();
 
-// smp.wrap({ })
-// module.exports = (env, argv) => {}
+// module.exports = smp.wrap({
+//     /* ... */
+//   });
 
-module.exports = (env, argv) => {
+const { UnusedFilesWebpackPlugin } = require('unused-files-webpack-plugin');
+var FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+
+process.noDeprecation = true;
+process.traceDeprecation = true
+
+module.exports = ((env, argv) =>  {
+    
     var isDev = argv.mode === "development";
     //var isDev = "development";
 
@@ -77,7 +85,7 @@ module.exports = (env, argv) => {
                         options: {
                             presets: ['@babel/preset-env'],
                             plugins: ['@babel/plugin-proposal-object-rest-spread'],
-                            cacheDirectory: true,                           
+                            cacheDirectory: true,
                         }
                     }
                 },
@@ -128,13 +136,14 @@ module.exports = (env, argv) => {
                } */
             ]//rules
         },
-        plugins: [
-
+        plugins: [            
+            //new UnusedFilesWebpackPlugin(),
             new webpack.ProvidePlugin({
                 $: 'jquery',
                 jQuery: 'jquery',
                 'window.jQuery': 'jquery'
             }),
+            new FriendlyErrorsWebpackPlugin()
             /*                  
                          new HtmlWebpackExternalsPlugin({ // optional plugin: inject cdn
                             externals: [
@@ -226,6 +235,6 @@ module.exports = (env, argv) => {
     //return isDev ? cfgsForDev : cfgsForProd;
     if (isDev) return [indexCFG, uikithfCFG, uikitctCFG, uikitfeCFG, uikitcardsCFG];
     return [indexCFG];
-}
+})
 
 // filename: `[name]${mode === 'production' ? '.min' : ''}.js`,

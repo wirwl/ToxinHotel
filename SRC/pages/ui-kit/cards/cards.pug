@@ -5,6 +5,8 @@ include ../../../components/sign-in-form/sign-in-form
 include ../../../components/datepicker/datepicker
 include ../../../components/button/button
 include ../../../components/room-info/room-info
+include ../../../components/image-slider/image-slider
+
 
 doctype html
 html(lang="ru")
@@ -25,4 +27,10 @@ html(lang="ru")
           li.column2__item
             +sign-in-form
     .column3
-      +datepicker({isStandAlone:true})
+      ul.column3__list
+        li.column3__item
+          +datepicker({isStandAlone:true})
+        li.column3__item.column3__wrapper-for-iamge-slider          
+          +room-info({id:'image-slider1'})
+        li.column3__item
+          

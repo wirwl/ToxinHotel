@@ -39,10 +39,17 @@ form {
   margin-bottom: 40px;
 }
 
+.column3__list {
+  list-style: none;
+}
 
+.column3__item {
+  margin-bottom: 40px;
+}
 
-
-
+.column3__wrapper-for-iamge-slider {
+  width: 270px;  
+}
 
 
 
@@ -64,7 +71,7 @@ form {
 @import "../../../components/toggle/toggle.scss";
 // @import "../../../components/toggles-list/toggles-list.scss";
 // @import "../../../components/like-button/like-button.scss";
-// @import "../../../components/rate-button/rate-button.scss";
+@import "../../../components/rate-button/rate-button.scss";
 @import "../../../components/guests-input/guests-input.scss";
 // @import "../../../components/round-image/round-image.scss";
 // @import "../../../components/message-control/message-control.scss";
@@ -80,3 +87,5 @@ form {
 @import "../../../components/order-info-form/order-info-form.scss";
 @import "../../../components/sign-in-form/sign-in-form.scss";
 @import "../../../components/room-info-caption/room-info-caption.scss";
+@import "../../../components/image-slider/image-slider.scss";
+@import "../../../components/room-info/room-info.scss";
