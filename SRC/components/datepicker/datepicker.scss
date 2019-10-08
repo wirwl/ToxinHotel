@@ -110,6 +110,7 @@
 .datepicker--cell-day.-in-range- {
   background: $toxinPurple;
   background: linear-gradient(180deg, #bc9cff7f 0%, #8ba4f97f 100%);
+  color: $toxinDS50;
 }
 .datepicker--cell-day.-selected-.-focus- {
   background: $toxinBlue;

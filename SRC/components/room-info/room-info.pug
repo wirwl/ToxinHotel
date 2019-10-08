@@ -10,9 +10,9 @@ mixin room-info(data)
                               ]})
     .room-info__data
       .room-info__wrapper-for-room-info-caption
-        +room-info-caption({number:888, isLux:true, cost:'9 990'})
+        +room-info-caption({number:data.number, isLux:data.isLux, cost:data.cost})
       .room-info__bottom
-        +rate-button({id:'room-info-star', count:5})
+        +rate-button({id:data.id, count:data.starscount, disabled: true})
         .room-info__comments
-          span.room-info__comments-count 145
+          span.room-info__comments-count #{data.commentscount}
           span.room-info__comments-text Отзывов

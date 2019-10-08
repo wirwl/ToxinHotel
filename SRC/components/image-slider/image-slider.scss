@@ -18,7 +18,7 @@
 }
 
 .slides input {
-  display: none;
+  display: none;    
 }
 
 .slide-container {
@@ -35,12 +35,12 @@
 
   transform: scale(0);
 
-  transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;  
 }
 
 .slide img {
   width: 100%;
-  height: 100%;
+  height: 100%;    
 }
 
 .nav label {
@@ -129,9 +129,24 @@ input:checked + .slide-container .nav label {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-input#img-1:checked ~ .nav-dots label#img-dot-1,
-input#img-2:checked ~ .nav-dots label#img-dot-2,
-input#img-3:checked ~ .nav-dots label#img-dot-3,
-input#img-4:checked ~ .nav-dots label#img-dot-4 {
+
+// input#image-slider1-img-1:checked ~ .nav-dots label#img-dot-1,
+// input#image-slider1-img-2:checked ~ .nav-dots label#img-dot-2,
+// input#image-slider1-img-3:checked ~ .nav-dots label#img-dot-3,
+// input#image-slider1-img-4:checked ~ .nav-dots label#img-dot-4 {
+//   background: white;
+// }
+
+// input#image-slider2-img-1:checked ~ .nav-dots label#img-dot-1,
+// input#image-slider2-img-2:checked ~ .nav-dots label#img-dot-2,
+// input#image-slider2-img-3:checked ~ .nav-dots label#img-dot-3,
+// input#image-slider2-img-4:checked ~ .nav-dots label#img-dot-4 {
+//   background: white;
+// }
+
+input:nth-of-type(1):checked ~ .nav-dots label:nth-of-type(1),
+input:nth-of-type(2):checked ~ .nav-dots label:nth-of-type(2),
+input:nth-of-type(3):checked ~ .nav-dots label:nth-of-type(3),
+input:nth-of-type(4):checked ~ .nav-dots label:nth-of-type(4) {
   background: white;
 }

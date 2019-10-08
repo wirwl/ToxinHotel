@@ -7,7 +7,9 @@ $toxinDS5:  rgba(31, 32, 65, 0.05);
 $toxinPurple: #BC9CFF;
 $toxinGreen: #6FCF97;
 $toxinBlue: #8BA4F9;
-$toxin-font-material-icon: 'Material Icons';
+$toxin-font-material-icon: "Material Icons";
+$toxin-font-montserrat: 'Montserrat';
+$toxin-font-open-sans: "Open Sans";
 
 html { 
   background: #e2e2e2;
@@ -19,12 +21,12 @@ html {
   padding: 0px;  
 }
 body { 
-  font-family: "Montserrat";
+  font-family: $toxin-font-montserrat;
   font-size: 14px;
 }
 
 h1, h2, h3, label {
-  font-family: Montserrat;    
+  font-family: $toxin-font-montserrat;
   font-size: 12px;
   font-weight: bold;
   color: $toxinDS100;
@@ -41,14 +43,14 @@ input + label {
 h1, legend {
   font-size: 24px;
   line-height: 30px;
-  font-family: "Open Sans";
+  font-family: $toxin-font-open-sans;
   font-weight: bold;
   color: $toxinDS100;
 }
 
 h2 {
   font-size: 19px;  
-  font-family: "Open Sans";
+  font-family: $toxin-font-open-sans;
 }
 
 

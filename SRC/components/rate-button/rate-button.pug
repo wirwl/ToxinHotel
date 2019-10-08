@@ -1,5 +1,5 @@
 mixin rate-button(data={id:'star', count:0})  
-  .rate-button
+  .rate-button(class=(data.disabled ? 'rate-button_disabled' : ''))
     - var n=1;
     - var total=6;
     while n<total

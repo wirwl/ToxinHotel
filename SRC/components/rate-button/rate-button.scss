@@ -24,3 +24,7 @@
 .rate-button__label:hover ~ .rate-button__label:after {
   content: 'star';  
 }
+
+.rate-button.rate-button_disabled {
+  pointer-events: none;
+}

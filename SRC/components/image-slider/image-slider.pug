@@ -1,16 +1,17 @@
 mixin image-slider(data)
   - let l = data.images.length  
+  - let id = data.id + '-img-'
   .slides
     for image, index in data.images
-      input(id='img-'+(index+1) type='radio' name='radio-btn' checked=((data.index==index+1) ? 'checked' : undefined))
+      input(id=id+(index+1) type='radio' name=data.id+'-radio-btn' checked=((data.index==index+1) ? 'checked' : undefined))
       .slide-container
         .slide
-          img(src=image).image-slider__image
+          img(src=image alt='alt-'+id+(index+1)).image-slider__image
         .nav
-          label.prev(content='keyboard_arrow_left' for='img-'+(index==0 ? l : index)).material-icons
-          label.next(content='keyboard_arrow_right' for='img-'+(index==l-1 ? 1 : index+2)).material-icons
+          label.prev(content='keyboard_arrow_left' for=id+(index==0 ? l : index)).material-icons
+          label.next(content='keyboard_arrow_right' for=id+(index==l-1 ? 1 : index+2)).material-icons
     .nav-dots
       - let i=0
       while i<l
         - i++
-        label(for='img-'+i class='nav-dot' id='img-dot-'+i)
+        label(for=id+i class='nav-dot' id='img-dot-'+i)
