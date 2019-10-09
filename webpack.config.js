@@ -23,8 +23,8 @@ var FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 process.noDeprecation = true;
 process.traceDeprecation = true
 
-module.exports = ((env, argv) =>  {
-    
+module.exports = ((env, argv) => {
+
     var isDev = argv.mode === "development";
     //var isDev = "development";
 
@@ -109,9 +109,17 @@ module.exports = ((env, argv) =>  {
                 },
  */                {
                     test: /\.(png|jpe?g|gif|svg)$/,
-                    include: /components/,
+                    include: /(components|images)/,
                     loader: 'file-loader',
-                    options: { outputPath: 'images', name: '[name].[ext]' }
+                    options: {
+                        outputPath: (url, resourcePath, context) => {
+                            const relativePath = path.relative(context + '\\SRC', resourcePath);                                      
+                            if (relativePath.substr(0, 7) === 'images\\') return relativePath;
+                            return 'images\\' + relativePath;
+
+                        },
+                        name: '[name].[ext]'
+                    }
                 },
                 {
                     test: /\.(woff(2)?|ttf|eot|svg)$/,
@@ -136,7 +144,7 @@ module.exports = ((env, argv) =>  {
                } */
             ]//rules
         },
-        plugins: [            
+        plugins: [
             //new UnusedFilesWebpackPlugin(),
             new webpack.ProvidePlugin({
                 $: 'jquery',

@@ -1,83 +1,70 @@
-.slides {
+.image-slider {
   padding: 0;
   width: 100%;
   height: 100%;
   display: block;
-
   margin: 0 auto;
   position: relative;
 }
 
-.slides * {
-  user-select: none;
-  -ms-user-select: none;
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  -webkit-touch-callout: none;
-}
-
-.slides input {
-  display: none;    
-}
-
-.slide-container {
+.image-slider__container {
   display: block;
 }
 
-.slide {
+.image-slider__slide {
   top: 0;
   opacity: 0;
   width: 100%;
   height: 100%;
   display: block;
   position: absolute;
-
   transform: scale(0);
-
-  transition: all 0.7s ease-in-out;  
+  transition: all 0.7s ease-in-out;
 }
 
-.slide img {
+.image-slider__slide .image-slider__image {
   width: 100%;
-  height: 100%;    
+  height: 100%;
 }
 
-.nav label {
-  width: 42px;
+.image-slider__nav .image-slider__label {
+  width: 15.56%;
   height: 100%;
-
   display: none;
   position: absolute;
-
   opacity: 0;
   z-index: 9;
   cursor: pointer;
-
   transition: opacity 0.2s;
-
   color: #fff;
-
-  text-align: center;
-
-  font-family: "Varela Round", sans-serif;
+  text-align: center;  
   background-color: rgba(255, 255, 255, 0.3);
   text-shadow: 0px 0px 15px rgb(119, 119, 119);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, 
+                                     rgba(0, 0, 0, 0) 99.99%,
+                                     rgba(255, 255, 255, 0) 100%);
 }
 
-.slide:hover + .nav label {
+.image-slider_show-nav-btns .image-slider__label,
+.image-slider__slide:hover + .image-slider__nav .image-slider__label {
   opacity: 0.5;
+  
 }
 
-.nav label:hover {
+.image-slider__nav .image-slider__label:hover {
   opacity: 1;
 }
 
-.nav .next {
+.image-slider__nav .image-slider__next {
   right: 0;
+  //transform: matrix(-1, 0, 0, 1, 0, 0);
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0.5) 0%, 
+                                     rgba(0, 0, 0, 0) 99.99%,
+                                     rgba(255, 255, 255, 0) 100%,
+                                     );
 }
 
-label.prev:after {
+.image-slider__prev:after {
   font-family: $toxin-font-material-icon;
   content: attr(content);
   display: flex;
@@ -85,7 +72,7 @@ label.prev:after {
   align-items: center;
   height: 100%;
 }
-label.next:after {
+.image-slider__next:after {
   font-family: $toxin-font-material-icon;
   content: attr(content);
   display: flex;
@@ -94,19 +81,17 @@ label.next:after {
   height: 100%;
 }
 
-input:checked + .slide-container .slide {
+input:checked + .image-slider__container .image-slider__slide {
   opacity: 1;
-
   transform: scale(1);
-
   transition: opacity 1s ease-in-out;
 }
 
-input:checked + .slide-container .nav label {
+input:checked + .image-slider__container .image-slider__nav .image-slider__label {
   display: block;
 }
 
-.nav-dots {
+.image-slider__nav-dots {
   bottom: 7.8%;
   right: 5.5%;
   display: block;
@@ -115,7 +100,7 @@ input:checked + .slide-container .nav label {
   font-size: 12px;
 }
 
-.nav-dots .nav-dot {
+.image-slider__nav-dots .image-slider__nav-dot {
   width: 8px;
   height: 8px;
   position: relative;
@@ -124,29 +109,13 @@ input:checked + .slide-container .nav label {
   border: 1px solid #fff;
 }
 
-.nav-dots .nav-dot:hover {
+.image-slider__nav-dots .image-slider__nav-dot:hover {
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-
-// input#image-slider1-img-1:checked ~ .nav-dots label#img-dot-1,
-// input#image-slider1-img-2:checked ~ .nav-dots label#img-dot-2,
-// input#image-slider1-img-3:checked ~ .nav-dots label#img-dot-3,
-// input#image-slider1-img-4:checked ~ .nav-dots label#img-dot-4 {
-//   background: white;
-// }
-
-// input#image-slider2-img-1:checked ~ .nav-dots label#img-dot-1,
-// input#image-slider2-img-2:checked ~ .nav-dots label#img-dot-2,
-// input#image-slider2-img-3:checked ~ .nav-dots label#img-dot-3,
-// input#image-slider2-img-4:checked ~ .nav-dots label#img-dot-4 {
-//   background: white;
-// }
-
-input:nth-of-type(1):checked ~ .nav-dots label:nth-of-type(1),
-input:nth-of-type(2):checked ~ .nav-dots label:nth-of-type(2),
-input:nth-of-type(3):checked ~ .nav-dots label:nth-of-type(3),
-input:nth-of-type(4):checked ~ .nav-dots label:nth-of-type(4) {
-  background: white;
+@for $i from 1 through 4 {
+  .image-slider input:nth-of-type(#{$i}):checked ~ .image-slider__nav-dots label:nth-of-type(#{$i}) {
+    background: #fff;
+  }
 }

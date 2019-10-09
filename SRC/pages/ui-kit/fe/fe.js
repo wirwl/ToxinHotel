@@ -2,7 +2,7 @@ import './fe.scss';
 
 import '../../../components/comfort-status-list/smile.svg';
 import '../../../components/comfort-status-list/home.svg';
-import '../../../components/message-control/avatar.jpg';
+import '../../../images/avatar.jpg';
 
 
 

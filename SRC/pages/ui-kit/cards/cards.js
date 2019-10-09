@@ -2,6 +2,9 @@
 
 import './cards.scss';
 
+import '../../../images/rooms/888/image1.png';
+import '../../../images/rooms/840/image1.png';
+
 import '../../../../node_modules/jquery/dist/jquery.js'
 import '../../../../node_modules/air-datepicker/dist/js/datepicker.js'
 import '../../../../node_modules/jquery-mask-plugin/dist/jquery.mask.js'

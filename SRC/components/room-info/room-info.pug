@@ -3,15 +3,11 @@ include ../rate-button/rate-button
 mixin room-info(data)
   .room-info
     .room-info__wrapper-for-image-slider
-      +image-slider({id:data.id, index:1, images:['http://farm9.staticflickr.com/8072/8346734966_f9cd7d0941_z.jpg',
-                              'http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg',
-                              'http://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg',
-                              'http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg',
-                              ]})
+      +image-slider({id:data.id, index:1, images:data.images, isShowNavBtns:data.isShowNavBtns})
     .room-info__data
       .room-info__wrapper-for-room-info-caption
         +room-info-caption({number:data.number, isLux:data.isLux, cost:data.cost})
-      .room-info__bottom
+      .room-info__feedback
         +rate-button({id:data.id, count:data.starscount, disabled: true})
         .room-info__comments
           span.room-info__comments-count #{data.commentscount}
