@@ -2,8 +2,8 @@ include ../logo/logo
 include ../header-menu/header-menu
 include ../button/button
 
-mixin header(authClass='wrapper2btns_isAuth_false')
-  header.header(class=authClass)
+mixin header(data)
+  header.header(class=data.isAuth && 'wrapper2btns_isAuth_true')
     +logo
     +createHeaderMenu([
         {text:"Home", link:"index.html"},
@@ -28,7 +28,9 @@ mixin header(authClass='wrapper2btns_isAuth_false')
         {text:"News", link:"contacts.html"},
         {text:"Documentation", link:"doc.html"}
     ])
-    //.wrapper2btns(class=authClass)
-    +button-bordered('LOGIN')
-    +button-filled('REGISTER')
-    .wrapper2btn__authName Cosmin Negoita
+    .wrapper2btns
+      .wrapper-for-button-login
+        +button-bordered({text:'LOGIN'})
+      .wrapper-for-button-register
+        +button-filled({text:'REGISTER'})
+      .wrapper2btn__authName Cosmin Negoita

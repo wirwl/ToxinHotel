@@ -6,7 +6,7 @@ mixin createMenuItems(items)
   ul.menu__list
     for mi in items
       +createHTMLtags_li_a(mi)
-        if (mi.sm)
+        if mi.sm
           +createMenuItems(mi.sm)
 
 mixin createHTMLtags_li_a(mi)  

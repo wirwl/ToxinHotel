@@ -1,9 +1,18 @@
+.menu {
+  margin-left: auto;
+  margin-right: 30px;
+}
 .menu__list {
   list-style: none;
   background: white;
 }
+
+.menu > .menu__list > .menu__item:first-child > .menu__link {
+  color: $toxinDS75;
+  font-weight: bold; 
+}
 .menu__link {
-  font-family: "Montserrat";
+  font-family: $toxin-font-montserrat;
   color: $toxinDS50;
   font-size: 14px;
   line-height: 17px;
@@ -18,7 +27,7 @@
 }
 
 .menu > .menu__list > .menu__item:not(:last-child) {
-  padding-right: 20px;  
+  padding-right: 19px;  
 
 }
 
