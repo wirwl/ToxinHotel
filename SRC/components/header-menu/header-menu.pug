@@ -1,5 +1,6 @@
-mixin createHeaderMenu(items)
-  nav.menu
+mixin header-menu(items)
+  nav.menu.menu__icon_responsive
+    //button.menu__icon.material-icons.common__button_reset(type='button') menu
     +createMenuItems(items)
 
 mixin createMenuItems(items)  

@@ -4,12 +4,6 @@
 @import "../../../fonts/MaterialIcons/material-icons.css";
 @import "../../../fonts/FA5_Brands-Regular-400/fonts.css";
 
-@import "../../../components/header-menu/header-menu.scss";
-@import "../../../components/button/button.scss";
-@import "../../../components/header/header.scss";
-
-@import "../../../components/footer-menu/footer-menu.scss";
-@import "../../../components/footer/footer.scss";
 
 * {
   box-sizing: border-box;
@@ -27,9 +21,8 @@ body {
 }
 
 .header {
-  background: white;    
+  background: white;
 }
-
 
 .header:nth-child(1) {
   margin-top: 150px;
@@ -40,10 +33,6 @@ body {
   margin-bottom: 40px;
 }
 
-// .menu {
-//   margin-right: 30px;    
-// }
-
 body > footer {
   margin-bottom: 40px;
 }
@@ -51,14 +40,72 @@ body > footer {
   margin-bottom: 130px;
 }
 
+@import "../../../components/header-menu/header-menu.scss";
+@import "../../../components/button/button.scss";
+@import "../../../components/header/header.scss";
+
+@import "../../../components/footer-menu/footer-menu.scss";
+@import "../../../components/footer/footer.scss";
+@import "../../../components/subscribe-input/subscribe-input.scss";
 
 
-// //--media for header-------------------------------------
-// @media screen and (max-width: 560) { 
-//   .menu__list {
-//     align-items: center;
-//     flex-direction: column;
-//   }  
-// }
+@media screen and (max-width: 1100px) {
+  .header {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
 
-//----------------------------------------------------------------
+@media screen and (max-width: 700px) {
+  .menu > .menu__list .menu__item {
+    text-align: center;
+  }
+
+  .menu > .menu__list > .menu__item:not(:last-child) {
+    padding-right: 0;
+  }
+
+  .menu__link {
+    padding-right: 0;
+  }
+
+  .header {
+    padding-left: 5px;
+    padding-right: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .header__wrapper-menu {
+    order: 10;
+    margin: auto;
+  }
+
+  .menu > .menu__list {
+    flex-direction: column;
+    //flex-basis: 100%;
+  }
+  .menu__link + .menu__list {
+    position: static;
+    box-shadow: none;
+  }
+  .menu__link + .menu__list .menu__list {
+    position: static;
+  }
+}
+
+@media screen and (max-width: 368px) {
+  .header__wrapper-auth-name {
+    padding-left: 0;
+  }
+  .header__wrapper-menu {
+    flex-basis: auto;
+  }
+  .header__wrapper-logo {
+    flex-basis: auto;
+  }
+  .header_auth-true .header__wrapper-auth-name {
+    padding-left: 10px;
+  }
+}
+

@@ -3,34 +3,14 @@ include ../header-menu/header-menu
 include ../button/button
 
 mixin header(data)
-  header.header(class=data.isAuth && 'wrapper2btns_isAuth_true')
-    +logo
-    +createHeaderMenu([
-        {text:"Home", link:"index.html"},
-        {text:"About Us", link:"prod.html"},
-        {text:"Services", link:"us.html", sm:[
-            {text:"Одежда",link:"od.html", sm:[
-                {text:"Обувь", link:"o.html"},
-                {text:"Куртки",link:"ku.html"},
-                {text:"Брюки",link:"br.html", sm:[
-                    {text:"Test1",link:"test.html"},
-                    {text:"Test2",link:"test2.html"},
-                    {text:"Test3",link:"test3.html"}
-                ]}
-            ]},
-            {text:"Электроника",link:"el.html", sm:[
-                {text:"Смартфоны", link:"sm.html"},
-                {text:"Планшеты", link:"sm.html"},
-            ]},
-            {text:"Прод.пит.",link:"pp.html"}
-        ]},    
-        {text:"Careers",link:"news.html"},
-        {text:"News", link:"contacts.html"},
-        {text:"Documentation", link:"doc.html"}
-    ])
-    .wrapper2btns
-      .wrapper-for-button-login
+  header.header(class=data.isAuth && 'header_auth-true')
+    .header__wrapper-logo
+      +logo
+    .header__wrapper-menu
+      +header-menu(data.menu)
+    .header__wrapper-auth
+      .header__wrapper-auth-login
         +button-bordered({text:'LOGIN'})
-      .wrapper-for-button-register
+      .header__wrapper-auth-register
         +button-filled({text:'REGISTER'})
-      .wrapper2btn__authName Cosmin Negoita
+      .header__wrapper-auth-name Cosmin Negoita

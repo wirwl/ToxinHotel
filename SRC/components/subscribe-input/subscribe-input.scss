@@ -23,12 +23,15 @@
   border: 1px solid $toxinDS50;
 }
 
-.subscribe-input {  
+.subscribe-input__wrapper {
   position: relative;
+}
+
+.subscribe-input {    
   width: 100%;
 }
 
-.subscribe-input:after {
+.subscribe-input__wrapper:after {
   content: "arrow_forward";
   font-family: 'Material Icons';        
   font-size: 24px;
@@ -37,7 +40,7 @@
   -webkit-text-fill-color: transparent;
   color: $toxinBlue;
   position: absolute;
-  top: 20px;
+  top: 0px;
   right: 0px;    
   width: 44px;
   height: 44px;

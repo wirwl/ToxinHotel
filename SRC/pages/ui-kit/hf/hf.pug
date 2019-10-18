@@ -8,7 +8,30 @@ html(lang="en")
     title Headers & Footers
     //link(href="hf.css" rel="stylesheet")
   body
-    +header({isAuth:false})
-    +header({isAuth:true})
+    - var menu = [
+    -    {text:"Home", link:"#"},
+    -    {text:"About Us", link:"#"},
+    -    {text:"Services", link:"#", sm:[
+    -        {text:"Одежда",link:"#", sm:[
+    -            {text:"Обувь", link:"o.html"},
+    -            {text:"Куртки",link:"ku.html"},
+    -            {text:"Брюки",link:"#", sm:[
+    -                {text:"Test1",link:"test.html"},
+    -                {text:"Test2",link:"test2.html"},
+    -                {text:"Test3",link:"test3.html"}
+    -            ]}
+    -        ]},
+    -        {text:"Электроника",link:"#", sm:[
+    -            {text:"Смартфоны", link:"sm.html"},
+    -            {text:"Планшеты", link:"sm.html"},
+    -        ]},
+    -        {text:"Прод.пит.",link:"pp.html"}
+    -    ]},    
+    -    {text:"Careers",link:"#"},
+    -    {text:"News", link:"#"},
+    -    {text:"Documentation", link:"#"}
+    - ]
+    +header({isAuth:false, menu: menu})
+    +header({isAuth:true, menu: menu})
     +footer
     +footer

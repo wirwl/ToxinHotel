@@ -1,5 +1,6 @@
 include ../logo/logo
 include ../footer-menu/footer-menu
+include ../subscribe-input/subscribe-input
 mixin footer
   footer.footer
     .footerUp
@@ -22,8 +23,7 @@ mixin footer
       .subscribeArea
         p.subscribeArea__title SUBSCRIBE TO OUR NEWSLETTER
         p.subscribeArea__text Receive our latest news and promotions in your inbox!
-        .subscribeArea__emailWrapper
-          input.subscribeArea__email(type='email',placeholder='Your email address')
+        +subscribe-input({placeholder:'Your email address'})
     .footerDown
       p.footerDown__copyright Copyright © 2018 Toxin UI Kit. All rights reserved.
       .socialButtons

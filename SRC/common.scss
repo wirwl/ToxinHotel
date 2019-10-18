@@ -7,6 +7,7 @@ $toxinDS5:  rgba(31, 32, 65, 0.05);
 $toxinPurple: #BC9CFF;
 $toxinGreen: #6FCF97;
 $toxinBlue: #8BA4F9;
+$toxin-color-gray: #e5e5e5;
 $toxin-font-material-icon: "Material Icons";
 $toxin-font-montserrat: 'Montserrat';
 $toxin-font-open-sans: "Open Sans";
@@ -83,3 +84,7 @@ fieldset {
   overflow: hidden;
 }
 
+.common__button_reset {
+  border: 0;
+  background: transparent;
+}
