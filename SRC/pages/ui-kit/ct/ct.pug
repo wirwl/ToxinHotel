@@ -1,12 +1,14 @@
 include ../../../components/color-example/color-example
 include ../../../components/font-example/font-example
+include ../../../common
 
 doctype html
 html(lang="en")
   head
     meta(charset="UTF-8")
     title Colors & Type
-    //link(href="hf.css" rel="stylesheet")
+    +favicon
+    //link(href="hf.css" rel="stylesheet")    
   body
     .color-example__wrapper
       +color-example('color-example__squareColor_DS100','Dark Shade 100%', '#1F2041')

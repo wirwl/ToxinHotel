@@ -5,8 +5,7 @@
 									 url("Quicksand-Regular/Quicksand-Regular.ttf") format("truetype"), 
 									 url("Quicksand-Regular/Quicksand-Regular.svg") format("svg");
   font-weight: normal;
-	font-style: normal;
-	color: red;
+	font-style: normal;	
 }
 
 @font-face {
@@ -16,6 +15,5 @@
 									 url("Quicksand-Bold/Quicksand-Bold.ttf") format("truetype"),
     							 url("Quicksand-Bold/Quicksand-Bold.svg") format("svg");
   font-weight: bold;
-	font-style: normal;
-	color: green;
+	font-style: normal;	
 }

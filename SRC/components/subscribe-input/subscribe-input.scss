@@ -19,6 +19,7 @@
   line-height: 18px;
   color: $toxinDS25;  
 }
+.subscribe-input__input:hover,
 .subscribe-input__input:focus, .subscribe-input_isFocused {
   border: 1px solid $toxinDS50;
 }
