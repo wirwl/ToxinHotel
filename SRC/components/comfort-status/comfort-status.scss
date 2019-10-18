@@ -22,10 +22,8 @@
   font-size: 14px;  
 }
 
-.comfort-status__image-wrapper {
-  width: 48px;
-  height: 48px;
-  display: flex;
-  justify-content: center;
+.comfort-status__icon {  
+  font-size: 48px;    
   margin-right: 10px;
+  color: $toxinPurple;
 }

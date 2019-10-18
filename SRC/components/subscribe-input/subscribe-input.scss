@@ -25,6 +25,7 @@
 
 .subscribe-input__wrapper {
   position: relative;
+  overflow:visible;
 }
 
 .subscribe-input {    
@@ -33,7 +34,8 @@
 
 .subscribe-input__wrapper:after {
   content: "arrow_forward";
-  font-family: 'Material Icons';        
+  content: '\e5c8';
+  font-family: $toxin-font-material-icon;
   font-size: 24px;
   background: linear-gradient(180deg, $toxinPurple 0%, $toxinBlue 100%);
   background-clip: text;  
@@ -47,5 +49,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  pointer-events: none;  
+  pointer-events: none;
+  font-feature-settings: 'liga';
 }

@@ -1,10 +1,6 @@
 import './fe.scss';
 
-import '../../../components/comfort-status-list/smile.svg';
-import '../../../components/comfort-status-list/home.svg';
 import '../../../images/avatar.jpg';
-
-
 
 import '../../../../node_modules/jquery/dist/jquery.js'
 import '../../../../node_modules/ion-rangeslider/js/ion.rangeSlider'

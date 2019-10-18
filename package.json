@@ -16,7 +16,10 @@
     "le:ct": "webpack-dev-server --open --mode=development --display-error-details --open-page pages/ui-kit/ct/ct.html",
     "le:fe": "webpack-dev-server --open --mode=development --display-error-details --open-page pages/ui-kit/fe/fe.html",
     "le:ca": "webpack-dev-server --open --mode=development --display-error-details --open-page pages/ui-kit/cards/cards.html",
-    "webhint": "hint http://localhost:8080/pages/ui-kit/cards/cards.html"
+    "whint:ct": "hint http://localhost:8080/pages/ui-kit/ct/ct.html",
+    "whint:fe": "hint http://localhost:8080/pages/ui-kit/fe/fe.html",    
+    "whint:ca": "hint http://localhost:8080/pages/ui-kit/cards/cards.html",
+    "whint:hf": "hint http://localhost:8080/pages/ui-kit/hf/hf.html"
   },
   "author": "Dmitry Levchenko",
   "repository": "github:wirwl/https://github.com/wirwl/ToxinHotel",
@@ -26,7 +29,7 @@
     "last 2 ChromeAndroid versions",
     "last 2 Firefox versions",
     "last 2 FirefoxAndroid versions",
-    "last 2 Opera versions"
+    "last 2 Opera versions"    
   ],
   "devDependencies": {
     "@babel/core": "^7.6.2",
