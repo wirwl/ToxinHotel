@@ -1,6 +1,5 @@
 mixin header-menu(items)
-  nav.menu.menu__icon_responsive
-    //button.menu__icon.material-icons.common__button_reset(type='button') menu
+  nav.menu.menu__icon_responsive    
     +createMenuItems(items)
 
 mixin createMenuItems(items)  
@@ -11,10 +10,10 @@ mixin createMenuItems(items)
           +createMenuItems(mi.sm)
 
 mixin createHTMLtags_li_a(mi)  
-  - var cs= mi.sm ? "menu__list_arrow": ""
+  - var cs = mi.sm ? "menu__list_arrow": ""  
+  var something = typeof mi.link != undefined ? mi.link : 'hello'
   li.menu__item
-    a.menu__link(class=cs href=mi.link) #{mi.text}
-    if block
+    a.menu__link(class=cs href=link) #{mi.text}
       block
 
 

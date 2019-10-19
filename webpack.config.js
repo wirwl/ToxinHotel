@@ -4,6 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
+const discardduplicates = require ('postcss-discard-duplicates');
 //const StyleLintPlugin = require('stylelint-webpack-plugin');
 var merge = require('webpack-merge');
 //const CssUrlRelativePlugin = require('css-url-relative-plugin');
@@ -46,34 +48,30 @@ module.exports = ((env, argv) => {
                 },
                 {
                     test: /\.(css|scss)$/,
-                    exclude: /jquery/,
-                    ///\.scss$/,
-                    use: [{
-                        loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            /* publicPath: (resourcePath, context) => {                                
-                                return path.relative(path.dirname(resourcePath), context) + '/';
-                            }, */
-                            sourceMap: true
+                    use: [
+                        {
+                            loader: MiniCssExtractPlugin.loader,
+                            options: { sourceMap: true }
                         },
-                    },
-                    {
-                        loader: "css-loader",
-                        options: { sourceMap: true }
-                    },
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            plugins: [
-                                autoprefixer()
-                            ],
-                            sourceMap: true
-                        }
-                    },
-                    {
-                        loader: "sass-loader",
-                        options: { sourceMap: true }
-                    },
+                        {
+                            loader: "css-loader",
+                            options: { sourceMap: true }
+                        },
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                                "map": true,
+                                plugins: [
+                                    autoprefixer(),
+                                    discardduplicates()
+                                ],
+                                sourceMap: true
+                            }
+                        },
+                        {
+                            loader: "sass-loader",
+                            options: { sourceMap: true, implementation: require('sass'), }
+                        },
                     ],
                 },
                 {
@@ -113,7 +111,7 @@ module.exports = ((env, argv) => {
                     loader: 'file-loader',
                     options: {
                         outputPath: (url, resourcePath, context) => {
-                            const relativePath = path.relative(context + '\\SRC', resourcePath);                                      
+                            const relativePath = path.relative(context + '\\SRC', resourcePath);
                             if (relativePath.substr(0, 7) === 'images\\') return relativePath;
                             return 'images\\' + relativePath;
 
@@ -163,6 +161,7 @@ module.exports = ((env, argv) => {
                             ],
                           })
                           */
+
         ]
     };
     //------config for index.html file(main page)------------------------------------------------------------------------    

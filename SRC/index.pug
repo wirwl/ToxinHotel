@@ -1,13 +1,19 @@
-include ./components/plan/plan
-
+include ./common
+include components/header/header
+include components/footer/footer
+include components/room-reservation-form/room-reservation-form
 doctype html
 html(lang="en")
   head
     meta(charset="UTF-8")
     title Пример страницы    
+    +favicon
     //link(href="index.css" rel="stylesheet")
-  body
-    .wrapper            
-      +plan({title: "free", price: 1})
-      +plan({title: "personal", price: 25})
-      +plan({title: "business", price: 50, isBusiness: true})
+  body    
+    div.background
+      +header({isAuth:false, menu: [{text:'О нас', link:''},{text:'Услуги', link: '#'}]})
+      //-img(src='images/backgrounds/index.jpg').background__image
+      .background__wrapper-form
+        +room-reservation-form
+      p.background__text Лучшие номера для вашей работы, отдыха и просто вдохновения
+    +footer

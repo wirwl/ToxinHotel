@@ -4,24 +4,12 @@
 @import "../../../fonts/MaterialIcons/material-icons.css";
 @import "../../../fonts/FA5_Brands-Regular-400/fonts.css";
 
-
-* {
-  box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
-  font-family: "Montserrat";
-}
-
 body {
-  margin: 0 auto;
-  padding: 0;
-  min-width: 320px;
-  max-width: 1440px;
   background: #e5e5e5;
 }
 
 .header {
-  background: white;
+  background: #fff;
 }
 
 .header:nth-child(1) {

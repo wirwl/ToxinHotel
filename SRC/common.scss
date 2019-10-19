@@ -1,38 +1,45 @@
-$toxinDS100: #1F2041;
-$toxinDS75:  rgba(31, 32, 65, 0.75);
-$toxinDS50:  rgba(31, 32, 65, 0.5);
-$toxinDS10:  rgba(31, 32, 65, 0.1);
-$toxinDS25:  rgba(31, 32, 65, 0.25);
-$toxinDS5:  rgba(31, 32, 65, 0.05);
-$toxinPurple: #BC9CFF;
-$toxinGreen: #6FCF97;
-$toxinBlue: #8BA4F9;
+$toxinDS100: #1f2041;
+$toxinDS75: rgba(31, 32, 65, 0.75);
+$toxinDS50: rgba(31, 32, 65, 0.5);
+$toxinDS10: rgba(31, 32, 65, 0.1);
+$toxinDS25: rgba(31, 32, 65, 0.25);
+$toxinDS5: rgba(31, 32, 65, 0.05);
+$toxinPurple: #bc9cff;
+$toxinGreen: #6fcf97;
+$toxinBlue: #8ba4f9;
 $toxin-color-gray: #e5e5e5;
 $toxin-font-material-icon: "Material Icons", serif;
-$toxin-font-montserrat: 'Montserrat';
+$toxin-font-montserrat: "Montserrat";
 $toxin-font-open-sans: "Open Sans";
-
-html { 
-  background: #e2e2e2;
-}
 
 * {
   box-sizing: border-box;
   margin: 0px;
-  padding: 0px;  
-}
-body { 
+  padding: 0px;
   font-family: $toxin-font-montserrat;
-  font-size: 14px;
 }
 
-h1, h2, h3, label {
+html {
+  background: #e2e2e2;
+}
+
+body {
+  font-size: 14px;
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 1440px;
+  background: #fff;
+}
+
+h1,
+h2,
+h3,
+label {
   font-family: $toxin-font-montserrat;
   font-size: 12px;
   font-weight: bold;
   color: $toxinDS100;
   text-transform: uppercase;
-  
 }
 
 input + label {
@@ -40,8 +47,8 @@ input + label {
   text-transform: none;
 }
 
-
-h1, legend {
+h1,
+legend {
   font-size: 24px;
   line-height: 30px;
   font-family: $toxin-font-open-sans;
@@ -50,13 +57,14 @@ h1, legend {
 }
 
 h2 {
-  font-size: 19px;  
+  font-size: 19px;
   font-family: $toxin-font-open-sans;
 }
 
-
-
-input, textarea, select, button {
+input,
+textarea,
+select,
+button {
   font: inherit;
   outline: none;
 }
@@ -64,6 +72,9 @@ input, textarea, select, button {
 form {
   background: white;
   padding: 40px 30px 30px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 
 fieldset {
