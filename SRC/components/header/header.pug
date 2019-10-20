@@ -10,7 +10,7 @@ mixin header(data)
       +header-menu(data.menu)
     .header__wrapper-auth
       .header__wrapper-auth-login
-        +button-bordered({text:'LOGIN'})
-      .header__wrapper-auth-register
-        +button-filled({text:'REGISTER'})
+        +button-bordered({text: data.login || 'LOGIN'})
+      //-.header__wrapper-auth-register
+      +button-filled({text: data.reg || 'REGISTER'})
       .header__wrapper-auth-name Cosmin Negoita

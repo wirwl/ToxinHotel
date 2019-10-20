@@ -5,7 +5,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
-const discardduplicates = require ('postcss-discard-duplicates');
+const discardduplicates = require('postcss-discard-duplicates');
+const flexbugsfixes = require('postcss-flexbugs-fixes');
 //const StyleLintPlugin = require('stylelint-webpack-plugin');
 var merge = require('webpack-merge');
 //const CssUrlRelativePlugin = require('css-url-relative-plugin');
@@ -55,7 +56,7 @@ module.exports = ((env, argv) => {
                         },
                         {
                             loader: "css-loader",
-                            options: { sourceMap: true }
+                            options: { sourceMap: true, url: true }
                         },
                         {
                             loader: 'postcss-loader',
@@ -63,7 +64,8 @@ module.exports = ((env, argv) => {
                                 "map": true,
                                 plugins: [
                                     autoprefixer(),
-                                    discardduplicates()
+                                    discardduplicates(),
+                                    flexbugsfixes()
                                 ],
                                 sourceMap: true
                             }
@@ -104,19 +106,25 @@ module.exports = ((env, argv) => {
                             return relativePath;
                         }
                     }
-                },
- */                {
+                },*/ 
+                {
                     test: /\.(png|jpe?g|gif|svg)$/,
-                    include: /(components|images)/,
+                    include: /(images)/,
                     loader: 'file-loader',
                     options: {
-                        outputPath: (url, resourcePath, context) => {
-                            const relativePath = path.relative(context + '\\SRC', resourcePath);
-                            if (relativePath.substr(0, 7) === 'images\\') return relativePath;
-                            return 'images\\' + relativePath;
-
-                        },
-                        name: '[name].[ext]'
+                        context: 'SRC\\images',
+                        outputPath: 'images',
+                        name: '[path][name].[ext]'
+                    }
+                },
+                {
+                    test: /\.(png|jpe?g|gif|svg)$/,
+                    include: /(components)/,
+                    loader: 'file-loader',
+                    options: {
+                        context: 'SRC',
+                        outputPath: 'images',
+                        name: '[path][name].[ext]'
                     }
                 },
                 {

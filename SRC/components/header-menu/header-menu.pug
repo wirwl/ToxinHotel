@@ -9,51 +9,9 @@ mixin createMenuItems(items)
         if mi.sm
           +createMenuItems(mi.sm)
 
-mixin createHTMLtags_li_a(mi)  
-  - var cs = mi.sm ? "menu__list_arrow": ""  
-  var something = typeof mi.link != undefined ? mi.link : 'hello'
+mixin create345HTMLtags_li_a(mi)  
+  - var cs = mi.sm ? "menu__list_arrow": ""   
+  - var something = typeof mi.link != undefined ? mi.link : '#'
   li.menu__item
-    a.menu__link(class=cs href=link) #{mi.text}
+    a.menu__link(class=cs+'asdf' href=link) #{mi.text}
       block
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-mixin createMenu4lvl(items)          
-  nav.menu
-    ul.menu__list
-      for mi1 in items          
-        +createHTMLtags_li_a(mi1)           
-          if (mi1.sm)
-            ul.menu__sub-list
-              for mi2 in mi1.sm
-                +createHTMLtags_li_a(mi2)
-                  if (mi2.sm)
-                    ul.menu__sub-list
-                      for mi3 in mi2.sm
-                        +createHTMLtags_li_a(mi3)
-                          if (mi3.sm)
-                            ul.menu__sub-list
-                              for mi4 in mi3.sm
-                                +createHTMLtags_li_a(mi4)
-
-mixin createMenu_list_sublist(items)
-  nav.menu
-    ul.menu__list
-      for mi in items
-        +createHTMLtags_li_a(mi)
-          if (mi.sm)
-            +createMenuItems(mi.sm)
-    

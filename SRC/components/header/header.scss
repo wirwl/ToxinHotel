@@ -8,6 +8,7 @@
   align-items: center;
   min-height: 70px;
   padding: 0px 9.722222%;
+  background: #fff;
 }
 
 .header__wrapper-logo {
@@ -50,23 +51,22 @@
 }
 
 .header__wrapper-auth-login {
-  width: 79px;
+  //width: 79px;
   height: 100%;
+  margin-right: 20px;
 }
 
-.header__wrapper-auth-register {
-  width: 101px;
-  height: 100%;
-}
+// .header__wrapper-auth-register {
+//   //width: 101px;
+//   height: 100%;
+// }
 
 .header_auth-true .header__wrapper-auth-login,
 .header_auth-true .header__wrapper-auth-register {
   display: none;
 }
 
-.header__wrapper-auth-login {
-  margin-right: 20px;
-}
+
 
 
 

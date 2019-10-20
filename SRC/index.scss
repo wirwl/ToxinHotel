@@ -7,13 +7,14 @@
 
 @import "components/header/header.scss";
 @import "components/footer/footer.scss";
+@import "../node_modules/air-datepicker/dist/css/datepicker.css";
 @import "components/room-reservation-form/room-reservation-form.scss";
 
 .background {
   width: 100%;
-  height: 830px;
+  height: 900px;
   position: relative;
-  background: url('images/backgrounds/index.jpg');    
+  background: url("images/backgrounds/index.jpg");    
 }
 
 .background__image {  
@@ -23,15 +24,27 @@
 
 .background__wrapper-form {
   position: absolute;
-  left: 107px;
-  top: 70px;
+  left: 139px;
+  top: 140px;
 }
 
 .background__text {
   color: $toxinDS75;
   width: 297px;  
   position: absolute;
-  right: 121px;
-  bottom: 18px;
+  right: 133px;
+  bottom: 21px;
+  line-height: 24px;
   text-align: right;
+}
+
+.menu > .menu__list > .menu__item:not(:last-child) {
+  padding-right: 20px;  
+}
+.menu__link {
+  padding-right: 0px;
+}
+
+.header__wrapper-menu {
+  margin-right: 20px;
 }

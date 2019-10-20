@@ -8,9 +8,13 @@ import '../node_modules/jquery-mask-plugin/dist/jquery.mask'
 import '../node_modules/air-datepicker/dist/js/datepicker'
 
 import './components/item-quantity-dropdown/item-quantity-dropdown'
+
+import './components/datepicker/datepicker'
 import './components/datepicker-input/datepicker-input'
 import './components/guests-input/guests-input'
+import './components/header-menu/header-menu'
 
 import './components/room-reservation-form/room-reservation-form'
 
-import './images/backgrounds/index.jpg';
+//import './images/backgrounds/index.jpg';
+

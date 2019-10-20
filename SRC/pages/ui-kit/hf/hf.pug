@@ -33,7 +33,25 @@ html(lang="en")
     -    {text:"News", link:"#"},
     -    {text:"Documentation", link:"#"}
     - ]
+    - var menufooter= [
+    -   {title:'NAVIGATION',items:[{text:'About Us', link:'about.html'},
+    -                                {text:'News', link:'news.html'},
+    -                                {text:'Support', link:'support.html'},
+    -                                {text:'Products', link:'products.html'}]},
+    -   {title:'ABOUT US',  items:[{text:'Who we are', link:'who.html'},
+    -                                {text:'Our team', link:'team.html'},
+    -                                {text:'Careers', link:'careers.html'},
+    -                                {text:'Investors', link:'investors.html'}]},
+    -   {title:'SUPPORT',   items:[{text:'Documentation', link:'doc.html'},
+    -                                {text:'Community', link:'com.html'},
+    -                                {text:'Get In Touch', link:'git.html'}]}
+    -   ]
+    - var desc='Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.'
+    - var caption='SUBSCRIBE TO OUR NEWSLETTER';
+    - var subdesc='Receive our latest news and promotions in your inbox!'
+    - var ph='Your email address'
+    - var cr='Copyright © 2018 Toxin UI Kit. All rights reserved.'
     +header({isAuth:false, menu: menu})
     +header({isAuth:true, menu: menu})
-    +footer
-    +footer
+    +footer({menu:menufooter, desc:desc, sub:{caption:caption, desc:subdesc, placeholder:ph},copyright: cr})
+    +footer({menu:menufooter, desc:desc, sub:{caption:caption, desc:subdesc, placeholder:ph},copyright: cr})
