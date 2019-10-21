@@ -37,6 +37,11 @@ module.exports = ((env, argv) => {
 
     //------------common values for all configs--------------------------------
     var common = {
+        devServer: {
+            stats: 'errors-only',
+            contentBase: '/'
+            //path.join(__dirname, 'public')
+        },
         devtool: dtValue,
         module: {
             rules: [
@@ -44,7 +49,7 @@ module.exports = ((env, argv) => {
                     test: /\.pug$/,
                     use: [
                         'html-loader?attrs=false',
-                        `pug-html-loader?pretty=${isDev}`,
+                        `pug-html-loader?pretty=${isDev},cache=false`,
                     ]
                 },
                 {
@@ -89,24 +94,24 @@ module.exports = ((env, argv) => {
                         }
                     }
                 },
-/*                 {
-                    test: /\.(css|scss|js|map)$/,
-                    //include: path.resolve(__dirname, 'src/jquery'),
-                    include: /jquery/,
-                    loader: 'file-loader',
-                    options: {
-                        name: '[name].[ext]',
-                        outputPath: (url, resourcePath, context) => {
-                            const relativePath = path.relative(context + '\\SRC', resourcePath);
-                            //console.log('url: '+url);                            
-                            //console.log('resourcePath: '+resourcePath);                            
-                            //console.log('context: '+context+'\\SRC');
-                            //console.log('result: '+relativePath);
-                            //console.log('---------------');
-                            return relativePath;
-                        }
-                    }
-                },*/ 
+                /*                 {
+                                    test: /\.(css|scss|js|map)$/,
+                                    //include: path.resolve(__dirname, 'src/jquery'),
+                                    include: /jquery/,
+                                    loader: 'file-loader',
+                                    options: {
+                                        name: '[name].[ext]',
+                                        outputPath: (url, resourcePath, context) => {
+                                            const relativePath = path.relative(context + '\\SRC', resourcePath);
+                                            //console.log('url: '+url);                            
+                                            //console.log('resourcePath: '+resourcePath);                            
+                                            //console.log('context: '+context+'\\SRC');
+                                            //console.log('result: '+relativePath);
+                                            //console.log('---------------');
+                                            return relativePath;
+                                        }
+                                    }
+                                },*/
                 {
                     test: /\.(png|jpe?g|gif|svg)$/,
                     include: /(images)/,
@@ -177,14 +182,14 @@ module.exports = ((env, argv) => {
     var indexCFG = merge(common, {
         entry: "./SRC/index.js",
         output: {
-            path: path.resolve(__dirname, pathOutput),
+            path: path.resolve(__dirname, pathOutput),            
             filename: "index.js"
         },
         plugins: [
             //new StyleLintPlugin({ syntax: "scss", fix: true }),
             new CleanWebpackPlugin(),
             new MiniCssExtractPlugin({ filename: 'index.css' }),
-            new HtmlWebpackPlugin({ filename: 'index.html', template: 'src/index.pug', inject: true }),
+            new HtmlWebpackPlugin({ base:'http://localhost:8080/', filename: 'index.html', template: 'src/index.pug', inject: true }),
         ]
     });
     //------config for ui-kit/hf/hf.html file--------------------------------------------------------------------
@@ -194,6 +199,7 @@ module.exports = ((env, argv) => {
             path: path.resolve(__dirname, pathOutput),
             filename: "pages/ui-kit/hf/hf.js",
             publicPath: '../../../'
+
         },
         plugins: [
             //new StyleLintPlugin({ syntax: "scss", fix: true }),
@@ -240,14 +246,7 @@ module.exports = ((env, argv) => {
             new HtmlWebpackPlugin({ filename: 'pages/ui-kit/cards/cards.html', template: 'src/pages/ui-kit/cards/cards.pug', inject: true }),
         ]
     });
-    //console.log('---------------------');a
-    //console.log(uikithfCFG.isOnlyDev);
-    //console.log(indexCFG.isOnlyDev);
-    //var cfgsForDev = [indexCFG, uikithfCFG];
-    //var cfgsForProd = [indexCFG,uikithfCFG];
-    //console.log("-----------------------------");
-    //console.log(isDev);
-    //return isDev ? cfgsForDev : cfgsForProd;
+
     if (isDev) return [indexCFG, uikithfCFG, uikitctCFG, uikitfeCFG, uikitcardsCFG];
     return [indexCFG];
 })

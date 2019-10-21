@@ -10,7 +10,7 @@ html(lang="en")
     +favicon
     //link(href="index.css" rel="stylesheet")
   body    
-    div.background
+    div.background      
       +header({login:'Войти', reg:'Зарегистрироваться', isAuth:false, 
                              menu: [{text:'О нас', link:'#'},
                                     {text:'Услуги', link: '#', 
@@ -19,7 +19,7 @@ html(lang="en")
                                         {text:'Пунтк22', link: '#'},
                                         {text:'Пунтк23', link: '#'},
                                       ]},
-                                    {text:'Вакансии', link: '#',isBold:true},
+                                    {text:'Вакансии', link: '#'},
                                     {text:'Новости', link: '#'},
                                     {text:'Соглашения', link: '#',
                                       sm:[
@@ -29,6 +29,7 @@ html(lang="en")
                                       ]},                                    
                                     ]})
       //-img(src='images/backgrounds/index.jpg').background__image
+      //-.background__wrapper-content
       .background__wrapper-form
         +room-reservation-form
       p.background__text Лучшие номера для вашей работы, отдыха и просто вдохновения

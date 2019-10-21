@@ -18,10 +18,10 @@
   display: flex;
 }
 
-.menu > .menu__list > .menu__item:first-child > .menu__link {
-  color: $toxinDS75;
-  font-weight: bold; 
-}
+// .menu > .menu__list > .menu__item:first-child > .menu__link {
+//   color: $toxinDS75;
+//   font-weight: bold; 
+// }
 .menu__link {
   font-family: $toxin-font-montserrat;
   color: $toxinDS50;
@@ -88,4 +88,9 @@
   font-size: 24px;  
   line-height: 20px;
   color: rgba(31, 32, 65, 0.5);
+}
+
+.menu__link_bold {
+  font-weight: bold;
+  color: $toxinDS75;
 }

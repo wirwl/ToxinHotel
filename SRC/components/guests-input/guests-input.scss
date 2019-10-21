@@ -1,10 +1,17 @@
 @import "../item-quantity-dropdown/item-quantity-dropdown.scss";
 
 .guests-input {
-  width: 320px;
+  max-width: 320px;
+  width: 100%;
 }
 
 .guests-input__caption {    
   margin-bottom: 5px;
+}
+
+.iqdropdown .iqdropdown__menu {
+  //display: block;
+  //flex-direction: column;
+  
 }
 

@@ -1,6 +1,17 @@
 .iqdropdown {
-  width: inherit;
+  align-items: center;
+  border: 1px solid $toxinDS25;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  height: 44px;
+  justify-content: space-between;  
+  padding-right: 15px;
+  position: relative;
   background: #fff;
+  width: 100%;
+  
 }
 
 .iqdropdown button {
@@ -59,20 +70,20 @@
   left: 4px;
 }
 
-.iqdropdown .iqdropdown__menu {
+.iqdropdown .iqdropdown__menu {  
   background: #fff;
-  border: 1px solid rgba(31, 32, 65, 0.5);
+  outline: 1px solid rgba(31, 32, 65, 0.5);
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   cursor: default;
   display: none;
   padding: 7px 7px 9px 13px;
   position: absolute;
-  left: -1px;
-  top: 42px;
+  left: 0px;
+  top: 43px;
   transition: all 0.2s ease-in-out;
-  z-index: 99999;
-  width: inherit;
+  z-index: 99999;  
+  width: 100%;
 }
 .iqdropdown .iqdropdown__menu-option {
   align-items: center;
@@ -155,18 +166,7 @@
   border-radius: 100%;
 }
 
-.iqdropdown {
-  align-items: center;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  cursor: pointer;
-  display: flex;
-  height: 44px;
-  justify-content: space-between;  
-  padding-right: 15px;
-  position: relative;
-}
+
 .iqdropdown.iqdropdown.menu-open,
 .iqdropdown:hover {
   border: 1px solid rgba(31, 32, 65, 0.5);

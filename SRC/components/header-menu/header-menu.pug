@@ -1,17 +1,16 @@
 mixin header-menu(items)
   nav.menu.menu__icon_responsive    
-    +createMenuItems(items)
+    +MenuItems(items)
 
-mixin createMenuItems(items)  
+mixin MenuItems(items)  
   ul.menu__list
     for mi in items
-      +createHTMLtags_li_a(mi)
+      +createHTMLtags(mi)
         if mi.sm
-          +createMenuItems(mi.sm)
+          +MenuItems(mi.sm)
 
-mixin create345HTMLtags_li_a(mi)  
-  - var cs = mi.sm ? "menu__list_arrow": ""   
-  - var something = typeof mi.link != undefined ? mi.link : '#'
+mixin createHTMLtags(mi)
+  - var cs = mi.sm ? "menu__list_arrow": ""
   li.menu__item
-    a.menu__link(class=cs+'asdf' href=link) #{mi.text}
-      block
+    a.menu__link(class=cs+(mi.isBold ? 'menu__link_bold': '') href=mi.link) #{mi.text}
+    block      

@@ -1,7 +1,7 @@
 mixin item-quantity-dropdown(data)
   div(class='iqdropdown'+ (data.isExpanded ? " iqdropdown_show" : "")) 
-    p.iqdropdown__selection 
-    .iqdropdown__menu
+    p.iqdropdown__selection     
+    .iqdropdown__menu      
       for item in data.items
         .iqdropdown__menu-option(data-id=item.id data-defaultcount=item.defaultcount data-mincount=item.mincount data-maxcount=item.maxcount)
           div
