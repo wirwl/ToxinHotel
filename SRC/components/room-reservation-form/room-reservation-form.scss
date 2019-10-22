@@ -13,9 +13,11 @@
 .rr-form__wrapper-for-inputs {  
   max-width: 320px;
   //margin-bottom: 31px;  
+  //width: 84.21052631578947%;
 }
 .rr-form__list {
   list-style: none;
+  //width: 84.21052631578947%;
 }
 
 .rr-form__title {
@@ -32,18 +34,11 @@
   
 }
 
-@media screen and (max-width: 301px) {
-  .rr-form__dates-list {  justify-content: center;}
-}
-
 .rr-form__dates-item {
-  width: 150px;
+  max-width: 150px;
+  width: 46.875%;
 }
 
 .rr-wrapper-guests-input {
   margin-bottom: 31px;
-}
-
-.rr-form__dates-item:not(:last-child) {
-  //margin-right: 20px;
 }
