@@ -10,9 +10,9 @@ mixin order-info-form(data)
         li.oi-form__item
           ul.oi-form__dates-list
             li.oi-form__dates-item
-              +datepicker-input({caption:'Прибытие', placeholder:'ДД.ММ.ГГГГ', value: '19.08.2019', id:'oi-form__start-input'})
+              +datepicker-input({caption:'Прибытие', placeholder:'ДД.ММ.ГГГГ', id:'oi-form__start-input'})
             li.oi-form__dates-item
-              +datepicker-input({caption:'Выезд', placeholder:'ДД.ММ.ГГГГ', value: '23.08.2019', id:'oi-form__end-input', hasDatepicker:false})
+              +datepicker-input({caption:'Выезд', placeholder:'ДД.ММ.ГГГГ', id:'oi-form__end-input', hasDatepicker:false})
         li.oi-form__item
           +guests-input({caption:'Гости', 
                               iqdd:{isExpanded:false, placeholder:'', 

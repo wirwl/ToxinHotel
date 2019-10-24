@@ -19,26 +19,33 @@ import '../../../components/order-info-form/order-info-form.js'
 
 $(document).ready(function () {
   //only for pixel perfect
-    let datepicker = $('.standalone-datepicker').data('datepicker');
-    datepicker.update('minDate', null);
-    var currentDate = currentDate = new Date("2019-08-08");
-    datepicker.selectDate([
-      new Date("2019-08-19"),
-      new Date("2019-08-23")
-    ]);
-    let date8 = new Date("8 Aug, 2019 00:00");
-    datepicker.date = date8;
-    datepicker.startDay = date8;
-    datepicker.update('onRenderCell', (date, cellType) => {
-      var day = date.getDate();
-      if (cellType == 'day' && date.getTime() === date8.getTime()) {
-        return {
-          html: '<div style="width:40px;height:40px;background:#6FCF97;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;">' + day + '</div>'
-        }
+  let datepicker = $('.standalone-datepicker').data('datepicker');
+  datepicker.update('minDate', null);
+  var currentDate = currentDate = new Date("2019-08-08");
+  datepicker.selectDate([
+    new Date("2019-08-19"),
+    new Date("2019-08-23")
+  ]);
+  let date8 = new Date("8 Aug, 2019 00:00");
+  datepicker.date = date8;
+  datepicker.startDay = date8;
+  datepicker.update('onRenderCell', (date, cellType) => {
+    var day = date.getDate();
+    if (cellType == 'day' && date.getTime() === date8.getTime()) {
+      return {
+        html: '<div style="width:40px;height:40px;background:#6FCF97;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;">' + day + '</div>'
       }
-    });
-  
-  $('#oi-form__start-input').val('19.08.2019');    
+    }
+  });
+
+   //$('#oi-form__start-input').val('19.08.2019');    
+   //$('#oi-form__end-input').val('23.08.2019');    
+  //console.log($('#oi-form__start-input').datepicker());
+  $('#oi-form__start-input').data('datepicker').update(
+    'selectDate', [
+    new Date("2019-08-19"),
+    new Date("2019-08-23")
+  ])
 })
 
 

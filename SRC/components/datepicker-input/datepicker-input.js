@@ -1,4 +1,3 @@
 $(document).ready(function () {			
-	$('.datepicker-input__input').mask('00.00.0000');	
-	
+	//$('.datepicker-input__input').mask('00.00.0000');		
 })
