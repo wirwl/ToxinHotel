@@ -1,5 +1,6 @@
-mixin header-menu(items)
-  nav.menu.menu__icon_responsive    
+mixin header-menu(items)  
+  nav.menu.menu__icon_expand
+    .menu__icon.material-icons menu
     +MenuItems(items)
 
 mixin MenuItems(items)  
@@ -11,6 +12,6 @@ mixin MenuItems(items)
 
 mixin createHTMLtags(mi)
   - var cs = mi.sm ? "menu__list_arrow": ""
-  li.menu__item
+  li.menu__item(class=mi.sm && 'menu__item_sub-menu')
     a.menu__link(class=cs+(mi.isBold ? 'menu__link_bold': '') href=mi.link) #{mi.text}
     block      

@@ -17,8 +17,8 @@ mixin sign-up-form(data)
           +radios-list({name:'sex', radios:[{id:'men',text:'Мужчина', isChecked:true},
                                                                             {id:'women',text:'Женщина'}
                                                                             ]})
-      ul.su-form__list
-        li.su-form__item
+      ul.su-form__list.su-form__wrapper
+        li
           +masked-input({caption:'Дата рождения'})                            
       ul.su-form__list
         li.su-form__item
@@ -31,5 +31,5 @@ mixin sign-up-form(data)
         +button-arrow({text:'Перейти к оплате', type:'submit'})        
       .su-form__wrapper-for-sign-in-button
         p.su-form__sign-in-text Уже есть аккаунт на Toxin
-        .su-form_wrapper99px
-          +button-bordered({text:'Войти'})
+        .su-form_wrapper-sign-in-button
+          +button-bordered({text:'Войти', dynamic_height:true, dynamic_width: true})

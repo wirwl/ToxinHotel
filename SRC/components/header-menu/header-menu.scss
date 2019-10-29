@@ -1,6 +1,6 @@
 .menu {
-  display: flex;  
-  
+  display: flex;
+  align-items: center;
 }
 
 .menu__88320 {
@@ -9,7 +9,7 @@
 
 .menu__icon {
   display: none;
-  cursor: pointer;  
+  cursor: pointer;
 }
 
 .menu__list {
@@ -20,73 +20,86 @@
 
 // .menu > .menu__list > .menu__item:first-child > .menu__link {
 //   color: $toxinDS75;
-//   font-weight: bold; 
+//   font-weight: bold;
 // }
 .menu__link {
   font-family: $toxin-font-montserrat;
   color: $toxinDS50;
   font-size: 14px;
   line-height: 17px;
-  text-decoration: none;
-  padding-right: 10px;
+  text-decoration: none;  
   line-height: 36px;
 }
-.menu > .menu__list {
+
+.menu__link .menu__item:not(:last-of-type) {
+  padding-right: 10px;
+}
+
+.menu__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.menu > .menu__list > .menu__item:not(:last-child) {
-  padding-right: 19px;  
+.menu__item.menu__list_arrow {
+  padding-right: 24px;
+}
+.menu > .menu__list > .menu__item.menu__item:not(:last-of-type) {
+  margin-right: 30px;
+  &.menu__item_sub-menu {
+    margin-right: 20px;
+  }
+}
 
+.menu > .menu__list > .menu__item:not(:last-child) {
+  //padding-right: 20px;
 }
 
 .menu__list:first-child > .menu__item:last-child > .menu__link {
   padding-right: 0px;
 }
 .menu__list_arrow {
-  padding-right: 0px;  
+  padding-right: 0px;
 }
 
 .menu__link + .menu__list {
   position: absolute;
   min-width: 150px;
-  display: none; 
+  display: none;
   border-radius: 3px;
-  box-shadow: 0 6px 16px 0 rgba(0,0,0,.07);
-  
+  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.07);
 }
 
-.menu__link + .menu__list > .menu__item {  
-  padding-left: 10px;  
+.menu__link + .menu__list > .menu__item {
+  padding-left: 10px;
 }
 
 .menu__link + .menu__list .menu__list {
   position: absolute;
   top: -1px;
-  right: -150px; 
+  right: -150px;
 }
 
 // .menu__item:hover > .menu__list {
 //   display: block;
 // }
 
-
-
 //.menu__link + .menu__list .menu__item
 .menu__link + .menu__list .menu__item {
   position: relative;
 }
-
+.menu__list_arrow {position: relative;}
 .menu__list_arrow:after {
   content: "\E313";
   width: 24px;
-  font-family: 'Material Icons';  
+  font-family: "Material Icons";
   text-align: center;
-  vertical-align: middle;  
-  font-size: 24px;  
+  vertical-align: middle;
+  font-size: 24px;
   line-height: 20px;
+  //position: absolute;
+  bottom: 6px;
+  right: 2px;
   color: rgba(31, 32, 65, 0.5);
 }
 
@@ -94,3 +107,4 @@
   font-weight: bold;
   color: $toxinDS75;
 }
+

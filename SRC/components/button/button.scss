@@ -9,7 +9,7 @@ $myblue: #008ed6;
   background: none;
   color: #bc9cff;
   margin: 0px;
-  padding: 0 20px;
+  padding: 10px 20px;
   cursor: pointer;
   text-transform: uppercase;
 }
@@ -84,7 +84,11 @@ $myblue: #008ed6;
 
 .button_dynamic-height {
   height: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 .button_dynamic-width {
   width: 100%;
+  padding-left: 0;
+  padding-right: 0;
 }

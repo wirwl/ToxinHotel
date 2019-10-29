@@ -51,8 +51,7 @@
   margin-right: 20px;
 }
 
-
-
+//-----------------------------------------------------------------------
 @media all and (max-width: 1100px) {
   .header {
     padding-left: 5px;
@@ -76,7 +75,7 @@
   .header {
     padding-left: 5px;
     padding-right: 5px;
-    flex-wrap: wrap;
+    //flex-wrap: wrap;
     justify-content: center;
   }
 
@@ -139,6 +138,18 @@
     text-align: center;
     position: static;
     color: #fff;
+  }
+}
+
+@media (max-width: 574px) {
+  .header__wrapper-menu {
+    order: -1;
+  }
+  .menu__icon {
+    display: block;    
+  }
+  .menu .menu__list {
+    display: none;
   }
 }
 

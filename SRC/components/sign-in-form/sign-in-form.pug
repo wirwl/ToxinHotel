@@ -10,5 +10,5 @@ mixin sign-in-form(data)
       +button-arrow({text:'Войти', type:'submit'})        
     .si-form__wrapper-for-sign-in-button
       p.si-form__sign-in-text Нет аккаунта на Toxin?
-      .si-form_wrapper99px
-        +button-bordered({text:'Создать'})
+      .si-form__wrapper-sign-up-button
+        +button-bordered({text:'Создать', dynamic_height:true})

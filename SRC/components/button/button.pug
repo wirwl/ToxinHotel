@@ -10,14 +10,24 @@ mixin button-bordered(data)
   -  data.isEnabled=true
   -if (data.type==undefined)
   - data.type='button'
-  button.button.button_bordered.button_dynamic-height.button_dynamic-width(class=((data.isEnabled) ? '': 'button_disabled') type=data.type) #{data.text}
+  button.button.button_bordered(type=data.type 
+    class=(data.dynamic_height ? 'button_dynamic-height':'') +' '+
+           (data.dynamic_width ? 'button_dynamic-width' : '')+' '+
+           (data.isEnabled ? '': 'button_disabled')) #{data.text}
+  //-
+    (data.isEnabled) ? '': 'button_disabled' + 
+    (data.dynamic_width && 'button_dynamic-width') + 
+    (true ? "button_dynamic-height":'') type=data.type) #{data.text}
 
 mixin button-filled(data)
   -if (data.isEnabled==undefined) 
   -  data.isEnabled=true
   -if (data.type==undefined)
   - data.type='button'
-  button.button.button_background_colored.button_dynamic-height.button_dynamic-width(class=((data.isEnabled) ? '': 'button_disabled') type=data.type) #{data.text}  
+  button.button.button_background_colored(type=data.type 
+    class=(data.dynamic_height ? 'button_dynamic-height':'') +' '+
+           (data.dynamic_width ? 'button_dynamic-width' : '')+' '+
+           (data.isEnabled ? '': 'button_disabled')) #{data.text}
 
 mixin button-arrow(data)
   button.button.button_background_colored.button_arrow(type=data.type ? data.type : 'button' ) #{data.text}
@@ -33,8 +43,3 @@ mixin button-arrow(data)
 
 
 
-mixin btn(options)
-  -
-    var buttonClassName = "button"
-    buttonClassName += options.isBlue ? " button-blue" : ""
-  button(class = buttonClassName)= options.title || "Button"

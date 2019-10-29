@@ -46,11 +46,13 @@ module.exports = ((env, argv) => {
         module: {
             rules: [
                 {
+                    // test: /\.pug$/,
+                    // use: [
+                    //     'html-loader?attrs=false',
+                    //     `pug-html-loader?pretty=${isDev},cache=false`,
+                    // ]
                     test: /\.pug$/,
-                    use: [
-                        'html-loader?attrs=false',
-                        `pug-html-loader?pretty=${isDev},cache=false`,
-                    ]
+                    use: ["pug-loader"]
                 },
                 {
                     test: /\.(css|scss)$/,
@@ -93,7 +95,7 @@ module.exports = ((env, argv) => {
                             cacheDirectory: true,
                         }
                     }
-                },    
+                },
                 {
                     test: /\.(png|jpe?g|gif|svg)$/,
                     include: /(images)/,
@@ -144,7 +146,7 @@ module.exports = ((env, argv) => {
                 jQuery: 'jquery',
                 'window.jQuery': 'jquery'
             }),
-            new FriendlyErrorsWebpackPlugin()
+            new FriendlyErrorsWebpackPlugin(),
             /*                  
                          new HtmlWebpackExternalsPlugin({ // optional plugin: inject cdn
                             externals: [
@@ -156,7 +158,7 @@ module.exports = ((env, argv) => {
                             ],
                           })
                           */
-
+            //new webpack.debug.ProfilingPlugin()
         ]
     };
     //------config for index.html file(main page)------------------------------------------------------------------------    
@@ -164,14 +166,14 @@ module.exports = ((env, argv) => {
     var indexCFG = merge(common, {
         entry: "./SRC/index.js",
         output: {
-            path: path.resolve(__dirname, pathOutput),            
+            path: path.resolve(__dirname, pathOutput),
             filename: "index.js"
         },
         plugins: [
             //new StyleLintPlugin({ syntax: "scss", fix: true }),
             new CleanWebpackPlugin(),
             new MiniCssExtractPlugin({ filename: 'index.css' }),
-            new HtmlWebpackPlugin({ base:'http://localhost:8080/', filename: 'index.html', template: 'src/index.pug', inject: true }),
+            new HtmlWebpackPlugin({ base: 'http://localhost:8080/', filename: 'index.html', template: 'src/index.pug', inject: true }),
         ]
     });
     //------config for ui-kit/hf/hf.html file--------------------------------------------------------------------
