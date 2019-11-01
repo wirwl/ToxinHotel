@@ -1,6 +1,10 @@
 .menu {
   display: flex;
   align-items: center;
+  position: relative;
+  padding-left: 5px;
+  height: 100%;
+  //z-index: 1;
 }
 
 .menu__88320 {
@@ -10,6 +14,8 @@
 .menu__icon {
   display: none;
   cursor: pointer;
+  //align-self: stretch;
+  // align-items: center;
 }
 
 .menu__list {
@@ -27,7 +33,7 @@
   color: $toxinDS50;
   font-size: 14px;
   line-height: 17px;
-  text-decoration: none;  
+  text-decoration: none;
   line-height: 36px;
 }
 
@@ -88,7 +94,9 @@
 .menu__link + .menu__list .menu__item {
   position: relative;
 }
-.menu__list_arrow {position: relative;}
+.menu__list_arrow {
+  position: relative;
+}
 .menu__list_arrow:after {
   content: "\E313";
   width: 24px;
@@ -108,3 +116,7 @@
   color: $toxinDS75;
 }
 
+.menu__icon.menu_show + .menu__list {    
+  transition: transform 600ms;
+  transform: translateX(0);    
+}

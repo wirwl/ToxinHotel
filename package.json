@@ -4,6 +4,7 @@
   "description": "Task №2",
   "main": "index.js",
   "scripts": {
+    "clr": "rm -r Result",
     "dev": "webpack --mode=development --display-error-details --display errors-only",
     "dev:v": "webpack --mode=development --display-error-details --display verbose",
     "dev:p": "webpack --mode=development  --display-error-details --profile",
@@ -11,7 +12,7 @@
     "dev:pp": "webpack --mode=development  --progress --profile --display errors-only",
     "prod": "webpack --mode=production --display errors-only",
     "prod:sm": "webpack --mode=production --devtool source-map",
-    "le": "webpack-dev-server --open --mode=development --display-error-details --open-page index.html",
+    "le":    "webpack-dev-server --open --mode=development --display-error-details --open-page index.html",
     "le:hf": "webpack-dev-server --open --mode=development --display-error-details --open-page pages/ui-kit/hf/hf.html",
     "le:ct": "webpack-dev-server --open --mode=development --display-error-details --open-page pages/ui-kit/ct/ct.html",
     "le:fe": "webpack-dev-server --open --mode=development --display-error-details --open-page pages/ui-kit/fe/fe.html",

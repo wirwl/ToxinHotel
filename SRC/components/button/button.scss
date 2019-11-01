@@ -13,7 +13,9 @@ $myblue: #008ed6;
   cursor: pointer;
   text-transform: uppercase;
 }
-
+.button_simple {
+  padding: 0;
+}
 .button_bordered {
   position: relative;
   background: transparent;

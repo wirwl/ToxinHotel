@@ -14,10 +14,6 @@ mixin button-bordered(data)
     class=(data.dynamic_height ? 'button_dynamic-height':'') +' '+
            (data.dynamic_width ? 'button_dynamic-width' : '')+' '+
            (data.isEnabled ? '': 'button_disabled')) #{data.text}
-  //-
-    (data.isEnabled) ? '': 'button_disabled' + 
-    (data.dynamic_width && 'button_dynamic-width') + 
-    (true ? "button_dynamic-height":'') type=data.type) #{data.text}
 
 mixin button-filled(data)
   -if (data.isEnabled==undefined) 

@@ -12,30 +12,24 @@
 }
 .header__wrapper-main {
   display: flex;
-  //justify-content: space-between;
   align-items: center;
   flex-basis: 80.55555555555556%;
 }
 .header__wrapper-logo {
   margin-right: 15px;
-  //display: none;
 }
 
 .header__wrapper-menu {
   margin-left: auto;
-  //margin-right: 30px;  
-  margin-right: 2.586206896551724%;  
-  //flex-shrink: 2;
+  margin-right: 2.586206896551724%;
+  align-self: stretch;
+  z-index: 100;
 }
 
 .header__wrapper-auth {
-  display: flex;  
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 34px;      
-  //flex-wrap: wrap;
-  //flex-basis: 17.24275862068966%;
-  //flex-shrink: 0.01;
 }
 
 .header_auth-true .header__wrapper-auth {
@@ -43,9 +37,9 @@
   flex-basis: auto;
 }
 
-.header__wrapper-auth-login { 
-  height: 100%;  
-  margin-right: 20px;    
+.header__wrapper-auth-login {
+  height: 100%;
+  margin-right: 20px;
 }
 
 .header__wrapper-auth-name {
@@ -69,27 +63,61 @@
   display: none;
 }
 
-
-
-// .header__wrapper-auth-register {
-//   width: 101px;
-//   height: 100%;
-// }
-
 .header_auth-true .header__wrapper-auth-login,
 .header_auth-true .header__wrapper-auth-register {
   display: none;
 }
 
+@media (max-width: $header-media1) {
+  .header {
+    padding: 0 5px;
+  }
+  .header .header__wrapper-logo {
+    margin-right: 5px;
+  }
+  .header .header__wrapper-menu {
+    margin-right: 5px;
+  }
+}
 
+@media (max-width: $header-media2) {
+  .header {
+    justify-content: space-between;
+    padding: 0;
+    padding-right: 5px;
+  }
+  .header__wrapper-menu {
+    order: -1;
+    margin-left: 0;
+  }
+  .menu__icon {
+    display: block;
+  }
+  .menu > .menu__list {
+    padding: 0 5px;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    position: absolute;
+    left: 0px;
+    top: 100%;
+    overflow: hidden;
+    transform: translateX(-100%);
+  }
+  .menu__icon.menu_hide + .menu__list {
+    transition: transform 400ms 0ms;
+  }
+  .menu__icon.menu_show + .menu__list .menu__list {
+    position: static;
+  }
+}
 
-
-
-// .header__wrapper-menu, .header__wrapper-auth, .header__wrapper-logo {
-//   border: 1px dotted black;
-// }
-
-
-// .header > * {
-//   outline: 1px dashed black;
-// }
+@media (max-width: $header-media3) {
+  .header__wrapper-auth-login {
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+  .header__wrapper-auth {
+    flex-direction: column;
+    margin: 5px 0;
+  }
+}

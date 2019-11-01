@@ -23,14 +23,9 @@
 }
 
 .footerUp {
-  display: flex;
-  //justify-content: space-between;
+  display: flex;  
   align-items: flex-start;
-  border-bottom: 1px solid rgba(31, 32, 65, 0.1);
-  //width: calc(1160px + 140px + 140px);
-}
-.foo_terUp > * {
-  border: 1px solid gray;
+  border-bottom: 1px solid rgba(31, 32, 65, 0.1);  
 }
 
 .footerUp > .exMenu {
@@ -39,9 +34,7 @@
 
 .footerUp {
   min-height: 373px;
-  //height: 372px;
   padding: 100px 9.722222222222222%;
-  //padding-bottom: 101px;
 }
 .footer .exMenu .exMenu__list:last-child {
   margin-right: 15px;
@@ -109,18 +102,20 @@
 }
 
 //--media for footer1---------------------------------------------
-@media screen and (max-width: 1180px) {
+@media (max-width: 1080px) {
   .footer {
     .footerUp,
     .footerDown {
-      padding-left: 2%;
-      padding-right: 2%;
+      // padding-left: 2%;
+      // padding-right: 2%;
+      padding-left: 5px;
+      padding-right: 5px;
     }
   }
 }
 //--media for footer1 and footer2
-@media screen and (max-width: 825px)  {
-  .footer {
+@media (max-width: 825px)  {
+ 
     .exMenu,
     .subscribeArea {
       display: none;
@@ -152,42 +147,16 @@
       text-align: center;      
       max-width: 560px;
     }
-  }
+  
 }
 
-@media screen and (max-width: 1920px)  {
-  .footer + .footer {
-    .exMenu,
-    .subscribeArea {
-      display: none;
-    }
-    .footerUp {
-      border: none;
-      justify-content: center;
-      padding-bottom: 25px;
-      padding-top: 100px;
-      min-height: 233px;
-    }
-    .footerDown {
-      justify-content: center;
-      padding-bottom: 110px;
-    }
-    .footerDown__copyright {
-      display: none;
-    }
-
-    .logoArea {
-      width: auto;
-      margin-right: 0px;
-    }
-    .logoArea .logo {
-      display: block;
-      margin: 0 auto 17px auto;
-    }
-    .logoArea .logoArea__text {
-      text-align: center;      
-      max-width: 560px;
-    }
+@media (max-width: 815px) {
+  .footerUp {
+    padding: 10px 5px;
+    min-height: auto;
+  }
+  .footerDown {
+    padding: 0 5px 5px;
+    min-height: auto;
   }
 }
-

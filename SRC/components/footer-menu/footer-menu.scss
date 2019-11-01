@@ -11,6 +11,7 @@
   }
   .exMenu__list:not(:last-child) {    
     width: calc(100% / 3);
+    padding-right: 5px;
   }
   .exMenu__title {
     font-weight: 900;
