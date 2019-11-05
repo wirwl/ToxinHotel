@@ -24,7 +24,7 @@ const { UnusedFilesWebpackPlugin } = require('unused-files-webpack-plugin');
 var FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 
 process.noDeprecation = true;
-process.traceDeprecation = true
+process.traceDeprecation = true;
 
 module.exports = ((env, argv) => {
 
@@ -79,7 +79,7 @@ module.exports = ((env, argv) => {
                         },
                         {
                             loader: "sass-loader",
-                            options: { sourceMap: true, implementation: require('sass'), }
+                            options: { sourceMap: true, implementation: require('sass') }
                         },
                     ],
                 },
@@ -164,7 +164,7 @@ module.exports = ((env, argv) => {
     //------config for index.html file(main page)------------------------------------------------------------------------    
 
     var indexCFG = merge(common, {
-        entry: "./SRC/index.js",
+        entry: "./SRC/pages/index.js",
         output: {
             path: path.resolve(__dirname, pathOutput),
             filename: "index.js"
@@ -173,7 +173,7 @@ module.exports = ((env, argv) => {
             //new StyleLintPlugin({ syntax: "scss", fix: true }),
             new CleanWebpackPlugin(),
             new MiniCssExtractPlugin({ filename: 'index.css' }),
-            new HtmlWebpackPlugin({ base: 'http://localhost:8080/', filename: 'index.html', template: 'src/index.pug', inject: true }),
+            new HtmlWebpackPlugin({ base: 'http://localhost:8080/', filename: 'index.html', template: 'src/pages/index.pug', inject: true }),
         ]
     });
     //------config for ui-kit/hf/hf.html file--------------------------------------------------------------------
