@@ -176,6 +176,19 @@ module.exports = ((env, argv) => {
             new HtmlWebpackPlugin({ base: 'http://localhost:8080/', filename: 'index.html', template: 'src/pages/index.pug', inject: true }),
         ]
     });
+    var searchroomCFG = merge(common, {
+        entry: "./SRC/pages/search-room/sr.js",
+        output: {
+            path: path.resolve(__dirname, pathOutput),
+            filename: "sr.js"
+        },
+        plugins: [
+            //new StyleLintPlugin({ syntax: "scss", fix: true }),
+            new CleanWebpackPlugin(),
+            new MiniCssExtractPlugin({ filename: 'sr.css' }),
+            new HtmlWebpackPlugin({ base: 'http://localhost:8080/sr.html', filename: 'sr.html', template: 'src/pages/search-room/sr.pug', inject: true }),
+        ]
+    });
     //------config for ui-kit/hf/hf.html file--------------------------------------------------------------------
     var uikithfCFG = merge(common, {
         entry: "./SRC/pages/ui-kit/hf/hf.js",
@@ -231,7 +244,7 @@ module.exports = ((env, argv) => {
         ]
     });
 
-    if (isDev) return [indexCFG, uikithfCFG, uikitctCFG, uikitfeCFG, uikitcardsCFG];
+    if (isDev) return [indexCFG, uikithfCFG, uikitctCFG, uikitfeCFG, uikitcardsCFG, searchroomCFG];
     return [indexCFG];
 })
 

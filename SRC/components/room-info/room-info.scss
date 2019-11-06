@@ -1,3 +1,7 @@
+@import "../image-slider/image-slider.scss";
+@import "../room-info-caption/room-info-caption.scss";
+@import "../rate-button/rate-button.scss";
+
 .room-info {
   border-radius: 4px;
   background: #fff;
@@ -33,3 +37,4 @@
   font-weight: bold;
   margin-right: 5px;
 }
+

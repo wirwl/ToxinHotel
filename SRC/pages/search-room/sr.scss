@@ -1,0 +1,138 @@
+@import "../../common.scss";
+
+@import "../../fonts/FA5_Brands-Regular-400/fonts.css";
+@import "../../fonts/MaterialIcons/material-icons.css";
+@import "../../fonts/Montserrat/fonts.css";
+@import "../../fonts/Open-Sans/fonts.css";
+@import "../../fonts/Quicksand/fonts.css";
+
+$header-media1: 888px;
+$header-media2: 715px;
+$header-media3: 488px;
+@import "../../components/header/header.scss";
+@import "../../components/footer/footer.scss";
+@import "../../../node_modules/air-datepicker/dist/css/datepicker.css";
+@import "../../components/datepicker-input/datepicker-input.scss";
+@import "../../components/guests-input/guests-input.scss";
+
+@import "../../../node_modules/ion-rangeslider/css/ion.rangeSlider.css";
+@import "../../components/range-slider/range-slider.scss";
+
+@import "../../components/checkbox/checkbox.scss";
+@import "../../components/checkboxes-list/checkboxes-list.scss";
+@import "../../components/comfort-input/comfort-input.scss";
+@import "../../components/expandable-checkbox-list/expandable-checkbox-list.scss";
+@import "../../components/pagination/pagination.scss";
+@import "../../components/room-info/room-info.scss";
+
+.menu > .menu__list > .menu__item.menu__item:not(:last-of-type) {
+  margin-right: 20px;
+}
+
+.header__wrapper-menu {
+  margin-right: 20px;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  background: $toxin-color-light-gray;
+  padding: 28px 15px 79px 15px;
+  min-height: 918px;
+
+}
+.main-content__wrapper {
+  display: flex;
+  justify-content: space-between;
+  //flex-basis: 80.55555555555556%;
+  //flex-wrap: wrap;
+  max-width: 1160px;
+}
+.filters {
+  margin-right: 60px;
+  min-width: 266px;
+  width: 266px;
+}
+
+.filters__item {
+  margin-bottom: 15px;
+}
+
+.rooms {
+  //flex-basis: 70%;
+  max-width: 846px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1px;
+}
+
+.rooms__title {
+  margin-bottom: 21px;
+  text-transform: none;
+  
+}
+
+.rooms__list {
+  display: flex;
+  margin-bottom: 19px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.rooms__item {
+  width: 270px;
+  margin-bottom: 18px;
+}
+
+.rooms__wrapper-pagination {
+  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.filters__wrapper-datepicker-input {
+  margin-bottom: 21px;
+}
+
+.filters__wrapper-guests-input {
+  margin-bottom: 30px;
+}
+
+.filters__wrapper-range-slider {
+  margin-bottom: 29px;
+}
+
+.filters__wrapper-range-cost {
+  margin-bottom: 33px;
+  max-width: 230px;
+}
+
+.filters__wrapper-accessibility {
+  margin-bottom: 29px;
+  max-width: 253px;  
+  .checkboxes-list__item:nth-child(1) {
+    max-width: 220px;
+  }
+}
+
+
+.filters__wrapper-comfort {
+  margin-bottom: 25px;
+}
+
+
+// Additional media queries for header-----------------------------------------
+@media (max-width: 365px) {
+  .header__wrapper-logo {
+    display: none;
+  }
+}
+// Media queries for main content-----------------------------------
+
+//Media queries for footer-------------------------------------------
+@media (max-width: 815px) {
+}
+
+.filters__wrapper-datepicker-input {
+
+}

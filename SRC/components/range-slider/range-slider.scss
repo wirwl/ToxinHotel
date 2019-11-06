@@ -14,6 +14,13 @@
   color: $toxinDS50;
 }
 
+.range-slider__desc {
+  padding-top: 9px;
+  font-size: 12px;
+  color: $toxinDS50;
+}
+
+
 // Modify ion.rangeSlider.css
 .irs--round {  
   height: 14px;  
@@ -39,3 +46,4 @@
     top: 6px;
   }
 }
+

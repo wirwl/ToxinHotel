@@ -7,8 +7,7 @@ html(lang="en")
   head
     meta(charset="UTF-8")
     title Пример страницы    
-    +favicon
-    //link(href="index.css" rel="stylesheet")
+    +favicon    
   body    
     div.background      
       +header({login:'Войти', reg:'Зарегистрироваться', isAuth:false, 
@@ -30,8 +29,6 @@ html(lang="en")
                                         {text:'Пунтк53', link: '#'},
                                       ]},                                    
                                     ]})
-      //-img(src='images/backgrounds/index.jpg').background__image
-      //-.background__wrapper-content
       .background__wrapper-form
         +room-reservation-form
       p.background__text Лучшие номера для вашей работы, отдыха и просто вдохновения

@@ -13,6 +13,7 @@
     "prod": "webpack --mode=production --display errors-only",
     "prod:sm": "webpack --mode=production --devtool source-map",
     "le":    "webpack-dev-server --open --mode=development --display-error-details --open-page index.html",
+    "le:sr":    "webpack-dev-server --open --mode=development --display-error-details --open-page sr.html",
     "le:hf": "webpack-dev-server --open --mode=development --display-error-details --open-page pages/ui-kit/hf/hf.html",
     "le:ct": "webpack-dev-server --open --mode=development --display-error-details --open-page pages/ui-kit/ct/ct.html",
     "le:fe": "webpack-dev-server --open --mode=development --display-error-details --open-page pages/ui-kit/fe/fe.html",

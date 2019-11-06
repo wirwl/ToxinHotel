@@ -4,3 +4,5 @@ mixin range-slider(data)
       h3.range-slider__caption-text #{data.ctext}
       p.range-slider__values.js-range-slider__values
     input.range-slider__input.js-range-slider__input(data-min=data.min data-max=data.max data-from=data.from data-to=data.to)
+    if data.desc
+      .range-slider__desc #{data.desc}

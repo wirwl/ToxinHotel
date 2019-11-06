@@ -1,11 +1,14 @@
 .ecl {
-  display: inline-block;  
+  //display: inline-block;  
 }
 .ecl__caption {
-  font-family: "Montserrat";
-  font-size: 12px;
-  font-weight: bold;
-  cursor: pointer;      
+  //font-family: "Montserrat";
+  //font-size: 12px;
+  //font-weight: bold;
+  cursor: pointer;    
+  position: relative;    
+  line-height: 24px;
+  //outline: 1px solid black;
 }
 .ecl__list {  
   list-style: none;
@@ -17,31 +20,29 @@
 
 .ecl_show .ecl__list  {
   display: block;      
-  padding-top: 12px;
+  padding-top: 13px;
 
 }
 
-.ecl__caption:after {
-  content: 'keyboard_arrow_down';
-  font-family: 'Material Icons';
-  font-style: normal;
+.ecl__caption:after {  
+  //outline: 1px solid red;
+  content: 'keyboard_arrow_down';  
+  width: 44px;
+  font-family: 'Material Icons';  
+  font-size: 24px;  
   font-weight: normal;
-  font-size: 24px;
-  line-height: 24px;
-  padding-left: 40px;
-  vertical-align: middle;
+  //padding-left: 40px;
+  //vertical-align: middle;
   text-transform: none;
+  //border: 1px solid black;
+  position: absolute;
+  color: $toxinDS50;
+  right: 0px;
+  text-align: center;
+  
 }
 
 .ecl_show .ecl__caption:after {    
-  content: 'keyboard_arrow_up';
-  //transform: rotate(180deg);
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 24px;
-  
-  vertical-align: middle;
+  content: 'keyboard_arrow_up';  
 }
 

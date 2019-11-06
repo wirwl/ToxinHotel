@@ -8,6 +8,7 @@ $toxinPurple: #bc9cff;
 $toxinGreen: #6fcf97;
 $toxinBlue: #8ba4f9;
 $toxin-color-gray: #e5e5e5;
+$toxin-color-light-gray: #f9f9f9;
 $toxin-font-material-icon: "Material Icons", serif;
 $toxin-font-montserrat: "Montserrat";
 $toxin-font-open-sans: "Open Sans";
@@ -98,4 +99,8 @@ fieldset {
 .common__button_reset {
   border: 0;
   background: transparent;
+}
+
+ul {
+  list-style: none;
 }

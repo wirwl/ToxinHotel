@@ -63,7 +63,7 @@ body {
   width: 267px;
 }
 .column1__wrapper-for-comport-input {
-  margin-bottom: 170px;
+  margin-bottom: 164px;
 }
 
 .column1__wrapper-for-ecl1 {
@@ -198,7 +198,10 @@ body {
   width: 712px;
 }
 
-
+.column1__item.column1__wrapper-for-ecl1,
+.column1__item.column1__wrapper-for-ecl2 {
+  width: 266px;
+}
 
 @import "../../../components/text-input/text-input.scss";
 @import "../../../components/dropdown-input/dropdown-input.scss";

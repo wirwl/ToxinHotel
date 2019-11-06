@@ -107,6 +107,11 @@ input:checked + .image-slider__container .image-slider__nav .image-slider__label
   border-radius: 100%;
   display: inline-block;
   border: 1px solid #fff;
+
+}
+
+.image-slider__nav-dots .image-slider__nav-dot:not(:last-of-type) {
+  margin-right: 3px;
 }
 
 .image-slider__nav-dots .image-slider__nav-dot:hover {
