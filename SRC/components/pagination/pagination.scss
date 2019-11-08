@@ -2,38 +2,52 @@
   display: inline-flex;
   align-items: center;
   flex-direction: column;
+  width: 100%;
 }
 .pagination__buttons {
   display: flex;
   margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .pagination__list {
+  width: 100%;
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
-
+  justify-content: space-between;
   .pagination__item {
     color: #fff;
     color: $toxinDS50;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    //width: 40px;
+    //height: 40px;
     border-radius: 50%;
     font-size: 12px;
   }
+  .pagination__item:first-child,
+  .pagination__item:last-child,
+  .pagination__item_active {
+    width: 40px;
+    height: 40px;
+  }
 
   .pagination__item:first-child {
+    //margin-right: -14px;
     background: $toxinGreen;
     color: #fff;
   }
   .pagination__item:last-child {
     background: $toxinGreen;
     color: #fff;
+    //margin-left: -17px;
   }
+
   .pagination__item.pagination__item_active {
     background-color: $toxinPurple;
     font-weight: bold;
@@ -49,5 +63,5 @@
 
 .pagination__caption {
   text-align: center;
-  color: $toxinDS75;  
+  color: $toxinDS75;
 }

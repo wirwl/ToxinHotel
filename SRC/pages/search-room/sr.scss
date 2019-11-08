@@ -85,9 +85,9 @@ $header-media3: 488px;
 }
 
 .rooms__wrapper-pagination {
-  margin: 0 auto;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;  
+  //outline: 1px dashed black;
+  min-width: 241px;  
 }
 
 .filters__wrapper-datepicker-input {
@@ -99,7 +99,7 @@ $header-media3: 488px;
 }
 
 .filters__wrapper-range-slider {
-  margin-bottom: 29px;
+  margin-bottom: 29px;  
 }
 
 .filters__wrapper-range-cost {

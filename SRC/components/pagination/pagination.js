@@ -1,7 +1,6 @@
 $(document).ready(function () {
   let pages = $('.pagination__buttons').data('pages');
-  let page = $('.pagination__buttons').data('page');
-  //document.getElementById('pagination').innerHTML = createPagination(pages, 7);
+  let page = $('.pagination__buttons').data('page');  
   $('.pagination__buttons').html(createPagination(pages, page));
 
   function AddEventListenerClick(pagination) {
