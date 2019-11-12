@@ -10,10 +10,11 @@ const flexbugsfixes = require('postcss-flexbugs-fixes');
 //const StyleLintPlugin = require('stylelint-webpack-plugin');
 var merge = require('webpack-merge');
 //const CssUrlRelativePlugin = require('css-url-relative-plugin');
-
+//var HtmlWebpackTagsPlugin = require('html-webpack-tags-plugin');
 const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin')
 
 const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
+
 const smp = new SpeedMeasurePlugin();
 
 // module.exports = smp.wrap({
@@ -29,18 +30,32 @@ process.traceDeprecation = true;
 module.exports = ((env, argv) => {
 
     var isDev = argv.mode === "development";
-    //var isDev = "development";
-
-    //var mode = argv.mode === "development" ? 'Result\/dev' : 'Result\/prod';
     var pathOutput = isDev ? 'Result/dev' : 'Result/prod';
     var dtValue = isDev ? 'source-map' : 'none';
 
+    function AddHTMLPage(data) {
+        let common_path = data.input_path.substring(data.input_path.indexOf('/') + 1);
+        data.output_path = data.output_path ? data.output_path : common_path;
+        let result = merge({}, common, {
+            entry: "./" + data.input_path + "/" + data.common_filename + ".js",
+            output: {
+                path: path.resolve(__dirname, pathOutput),
+                filename: data.output_path + '/' + data.common_filename + ".js",
+                publicPath: data.publicPath || ''
+            },
+            plugins: [
+                // new CleanWebpackPlugin(),
+                new MiniCssExtractPlugin({ filename: data.output_path + '/' + data.common_filename + '.css' }),
+                new HtmlWebpackPlugin({ filename: data.output_path + '/' + data.common_filename + '.html', template: data.input_path + '/' + data.common_filename + '.pug' }),
+            ]
+        })
+        return result;
+    }
     //------------common values for all configs--------------------------------
     var common = {
         devServer: {
             stats: 'errors-only',
-            contentBase: '/'
-            //path.join(__dirname, 'public')
+            //contentBase: '/'
         },
         devtool: dtValue,
         module: {
@@ -161,88 +176,15 @@ module.exports = ((env, argv) => {
             //new webpack.debug.ProfilingPlugin()
         ]
     };
-    //------config for index.html file(main page)------------------------------------------------------------------------    
 
-    var indexCFG = merge(common, {
-        entry: "./SRC/pages/index.js",
-        output: {
-            path: path.resolve(__dirname, pathOutput),
-            filename: "index.js"
-        },
-        plugins: [
-            //new StyleLintPlugin({ syntax: "scss", fix: true }),
-            new CleanWebpackPlugin(),
-            new MiniCssExtractPlugin({ filename: 'index.css' }),
-            new HtmlWebpackPlugin({ base: 'http://localhost:8080/', filename: 'index.html', template: 'src/pages/index.pug', inject: true }),
-        ]
-    });
-    var searchroomCFG = merge(common, {
-        entry: "./SRC/pages/search-room/sr.js",
-        output: {
-            path: path.resolve(__dirname, pathOutput),
-            filename: "sr.js"
-        },
-        plugins: [
-            //new StyleLintPlugin({ syntax: "scss", fix: true }),
-            new CleanWebpackPlugin(),
-            new MiniCssExtractPlugin({ filename: 'sr.css' }),
-            new HtmlWebpackPlugin({ base: 'http://localhost:8080/sr.html', filename: 'sr.html', template: 'src/pages/search-room/sr.pug', inject: true }),
-        ]
-    });
-    //------config for ui-kit/hf/hf.html file--------------------------------------------------------------------
-    var uikithfCFG = merge(common, {
-        entry: "./SRC/pages/ui-kit/hf/hf.js",
-        output: {
-            path: path.resolve(__dirname, pathOutput),
-            filename: "pages/ui-kit/hf/hf.js",
-            publicPath: '../../../'
+    var indexCFG = AddHTMLPage({ common_filename: 'index', input_path: 'SRC/pages/index', output_path: '.', is_clean: true });
+    var searchroomCFG = AddHTMLPage({ common_filename: 'sr', input_path: 'SRC/pages/search-room', publicPath: '/' });
+    var roomdetailsCFG = AddHTMLPage({ common_filename: 'rd', input_path: 'SRC/pages/room-details', publicPath: '/' })
 
-        },
-        plugins: [
-            //new StyleLintPlugin({ syntax: "scss", fix: true }),
-            //new CssUrlRelativePlugin(),
-            new MiniCssExtractPlugin({ filename: 'pages/ui-kit/hf/hf.css' }),
-            new HtmlWebpackPlugin({ filename: 'pages/ui-kit/hf/hf.html', template: 'src/pages/ui-kit/hf/hf.pug', inject: true }),
-
-
-        ]
-    });
-    var uikitctCFG = merge(common, {
-        entry: "./SRC/pages/ui-kit/ct/ct.js",
-        output: {
-            path: path.resolve(__dirname, pathOutput),
-            filename: "pages/ui-kit/ct/ct.js",
-            publicPath: '../../../'
-        },
-        plugins: [
-            new MiniCssExtractPlugin({ filename: 'pages/ui-kit/ct/ct.css' }),
-            new HtmlWebpackPlugin({ filename: 'pages/ui-kit/ct/ct.html', template: 'src/pages/ui-kit/ct/ct.pug', inject: true }),
-        ]
-    });
-    var uikitfeCFG = merge(common, {
-        entry: "./SRC/pages/ui-kit/fe/fe.js",
-        output: {
-            path: path.resolve(__dirname, pathOutput),
-            filename: "pages/ui-kit/fe/fe.js",
-            publicPath: '../../../'
-        },
-        plugins: [
-            new MiniCssExtractPlugin({ filename: 'pages/ui-kit/fe/fe.css' }),
-            new HtmlWebpackPlugin({ filename: 'pages/ui-kit/fe/fe.html', template: 'src/pages/ui-kit/fe/fe.pug', inject: true }),
-        ]
-    });
-    var uikitcardsCFG = merge(common, {
-        entry: "./SRC/pages/ui-kit/cards/cards.js",
-        output: {
-            path: path.resolve(__dirname, pathOutput),
-            filename: "pages/ui-kit/cards/cards.js",
-            publicPath: '../../../'
-        },
-        plugins: [
-            new MiniCssExtractPlugin({ filename: 'pages/ui-kit/cards/cards.css' }),
-            new HtmlWebpackPlugin({ filename: 'pages/ui-kit/cards/cards.html', template: 'src/pages/ui-kit/cards/cards.pug', inject: true }),
-        ]
-    });
+    var uikithfCFG = AddHTMLPage({ common_filename: 'hf', input_path: 'SRC/pages/ui-kit/hf', publicPath: '/' });
+    var uikitctCFG = AddHTMLPage({ common_filename: 'ct', input_path: 'SRC/pages/ui-kit/ct', publicPath: '/' });
+    var uikitfeCFG = AddHTMLPage({ common_filename: 'fe', input_path: 'SRC/pages/ui-kit/fe', publicPath: '/' });
+    var uikitcardsCFG = AddHTMLPage({ common_filename: 'cards', input_path: 'SRC/pages/ui-kit/cards', publicPath: '/' });
 
     if (isDev) return [indexCFG, uikithfCFG, uikitctCFG, uikitfeCFG, uikitcardsCFG, searchroomCFG];
     return [indexCFG];

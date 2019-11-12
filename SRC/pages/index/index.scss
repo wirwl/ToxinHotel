@@ -1,23 +1,23 @@
-@import "../common.scss";
+@import "../../common.scss";
 
-@import "../fonts/FA5_Brands-Regular-400/fonts.css";
-@import "../fonts/MaterialIcons/material-icons.css";
-@import "../fonts/Montserrat/fonts.css";
-@import "../fonts/Open-Sans/fonts.css";
+@import "../../fonts/FA5_Brands-Regular-400/fonts.css";
+@import "../../fonts/MaterialIcons/material-icons.css";
+@import "../../fonts/Montserrat/fonts.css";
+@import "../../fonts/Open-Sans/fonts.css";
 
 $header-media1: 888px;
 $header-media2: 715px;
 $header-media3: 488px;
-@import "../components/header/header.scss";
-@import "../components/footer/footer.scss";
-@import "../../node_modules/air-datepicker/dist/css/datepicker.css";
-@import "../components/room-reservation-form/room-reservation-form.scss";
+@import "../../components/header/header.scss";
+@import "../../components/footer/footer.scss";
+@import "../../../node_modules/air-datepicker/dist/css/datepicker.css";
+@import "../../components/room-reservation-form/room-reservation-form.scss";
 
 .background {
   width: 100%;
   min-height: 900px;
   position: relative;
-  background: url("../images/backgrounds/index.jpg");
+  background: url("../../images/backgrounds/index.jpg");
 }
 
 .background__image {
