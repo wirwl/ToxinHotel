@@ -186,7 +186,7 @@ module.exports = ((env, argv) => {
     var uikitfeCFG = AddHTMLPage({ common_filename: 'fe', input_path: 'SRC/pages/ui-kit/fe', publicPath: '/' });
     var uikitcardsCFG = AddHTMLPage({ common_filename: 'cards', input_path: 'SRC/pages/ui-kit/cards', publicPath: '/' });
 
-    if (isDev) return [indexCFG, uikithfCFG, uikitctCFG, uikitfeCFG, uikitcardsCFG, searchroomCFG];
+    if (isDev) return [indexCFG, uikithfCFG, uikitctCFG, uikitfeCFG, uikitcardsCFG, searchroomCFG, roomdetailsCFG];
     return [indexCFG];
 })
 
