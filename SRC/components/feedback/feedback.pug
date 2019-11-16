@@ -1,0 +1,13 @@
+include ../round-image/round-image
+include ../like-button/like-button
+
+mixin feedback(data)
+  .feedback
+    .feedback__left-column
+      .feedback__wrapper-for-round-image
+        +round-image(data.image)      
+      +like-button(data.like)   
+    .feedback__right-column
+      p.feedback__caption #{data.caption}
+      p.feedback__time #{data.time}
+      p.feedback__text #{data.text}

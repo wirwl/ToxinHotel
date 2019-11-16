@@ -1,31 +1,31 @@
-.message-control {
+.feedback {
   display: flex;  
 }
-.message-control__left-column {  
+.feedback__left-column {  
   margin-right: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.message-control__right-column {
+.feedback__right-column {
   display: flex;
   flex-direction: column;
 }
-.message-control__caption {
+.feedback__caption {
   padding-top: 3px;
   font-weight: bold;
   font-size: 14px;
 }
-.message-control__time {
+.feedback__time {
   padding-top: 6px;
   font-size: 14px;
   margin-bottom: 13px;
 }
-.message-control__text {
+.feedback__text {
   font-size: 14px;
   line-height: 24px;
   color: $toxinDS75;
 }
-.message-control__wrapper-for-round-image {
+.feedback__wrapper-for-round-image {
   margin-bottom: 11px;
 }

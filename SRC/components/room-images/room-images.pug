@@ -1,0 +1,28 @@
+include ../image-slider/image-slider
+mixin room-images(data)
+  .room-images
+    .room-image1
+      img.room-image1__image(src="/images/components/room-images/image1.jpg")
+    .room-images__wrapper
+      .room-image2
+        img.room-image2__image(src="/images/components/room-images/image2.jpg")
+      .room-image3
+        img.room-image3__image(src="/images/components/room-images/image3.jpg")
+    .flexslider
+      ul.slides.flexslider__list
+        li.flexslider__item
+          img.flexslider__image(src='/images/components/room-images/image1.jpg')
+        li.flexslider__item
+          img.flexslider__image(src='/images/components/room-images/image2.jpg')
+        li.flexslider__item
+          img.flexslider__image(src='/images/components/room-images/image3.jpg')
+
+      
+
+      
+      
+      
+      
+      //- +image-slider({id:"roomimages", index:1, images:["/images/components/room-images/image1.jpg",
+      //-                                                  "/images/components/room-images/image2.jpg",
+      //-                                                  "/images/components/room-images/image3.jpg"]})

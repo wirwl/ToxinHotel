@@ -1,6 +1,7 @@
 include ../../common
 include ../../components/header/header
 include ../../components/footer/footer
+include ../../components/room-images/room-images
 
 doctype html
 html(lang="en")
@@ -28,7 +29,8 @@ html(lang="en")
                                     {text:'Пунтк53', link: '#'},
                                   ]},                                    
                                 ]})     
-                                    
+    div.main-content
+      +room-images                                
     +footer({menu:[
         {title:'Навигация',items:[{text:'О нас', link:'about.html'},
                                      {text:'Новости', link:'news.html'},
