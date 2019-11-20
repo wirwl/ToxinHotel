@@ -4,6 +4,7 @@
 @import "../../fonts/MaterialIcons/material-icons.css";
 @import "../../fonts/Montserrat/fonts.css";
 @import "../../fonts/Open-Sans/fonts.css";
+@import "../../fonts/Quicksand/fonts.css";
 
 $header-media1: 888px;
 $header-media2: 715px;
@@ -12,10 +13,103 @@ $header-media3: 488px;
 @import "../../components/footer/footer.scss";
 @import "../../components/room-images/room-images.scss";
 @import "../../../node_modules/flexslider/flexslider.css";
+@import "../../components/feedback-list/feedback-list.scss";
+@import "../../components/comfort-status-list/comfort-status-list.scss";
+@import "../../components/order-info-form/order-info-form.scss";
+@import "../../components/datepicker/datepicker.scss";
+@import "../../components/bullets-list/bullets-list.scss";
+@import "../../components/donut-chart/donut-chart.scss";
+@import "../../components/legend-list/legend-list.scss";
+
+body {
+  color: $toxinDS75;
+}
 
 .main-content {
   width: 100%;
 }
+
+.room-details {
+  display: flex;  
+  justify-content: center;  
+  padding: 70px 4px;
+  padding-bottom: 61px;
+  border-bottom: 1px solid $toxinDS10;
+}
+
+.room-details__column1 {
+  max-width: 710px;
+  min-width: 311px;
+  margin-right: 70px;
+}
+
+.room-details__common-wrapper1 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.room-details__common-wrapper2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.room-details__cancellation {
+  flex-basis: 46%;
+  min-width: 182px;
+  //max-width: 341px;
+}
+
+.room-details__bullets-list {
+  flex-basis: 37%;
+  min-width: 146px;
+  //margin-right: 98px;
+  margin-right: 13.802816%;
+}
+
+.room-details__bullets-list-caption {
+  text-transform: none;
+  padding-left: 19px;
+  margin-bottom: 17px;  
+}
+
+.room-details__cancellation {
+  
+}
+
+.room-details__cancellation-caption {
+  text-transform: none;  
+  margin-bottom: 16px;
+}
+
+.room-details__cancellation-text {
+ line-height: 24px;
+}
+
+.room-details__wrapper-csl {  
+  margin-right: 107px;
+}
+
+.room-details__wrapper-csl-caption {
+  margin-bottom: 19px;
+}
+
+.room-details__wrapper-csl-caption {
+  text-transform: none;
+}
+
+.room-details__wrapper-donut-chart {
+  width: 43.7%;
+}
+
+.room-details__wrapper-fl {
+  margin-bottom: 32px;
+}
+
+
+.room-details__column2 {
+ 
+}
+
 
 // Additional media queries for header-----------------------------------------
 @media (max-width: 365px) {

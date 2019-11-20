@@ -1,0 +1,6 @@
+include ../legend/legend
+mixin legend-list(data)
+  ul.legend-list
+    for l in data
+      li.legend-list__item
+        +legend({text:l.text, color: l.color})

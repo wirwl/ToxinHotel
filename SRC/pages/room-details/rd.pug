@@ -2,6 +2,12 @@ include ../../common
 include ../../components/header/header
 include ../../components/footer/footer
 include ../../components/room-images/room-images
+include ../../components/feedback-list/feedback-list
+include ../../components/comfort-status-list/comfort-status-list
+include ../../components/order-info-form/order-info-form
+include ../../components/bullets-list/bullets-list
+include ../../components/donut-chart/donut-chart
+
 
 doctype html
 html(lang="en")
@@ -30,7 +36,38 @@ html(lang="en")
                                   ]},                                    
                                 ]})     
     div.main-content
-      +room-images                                
+      +room-images 
+      .room-details
+        .room-details__column1
+          .room-details__common-wrapper1
+            .room-details__wrapper-csl
+              h2.room-details__wrapper-csl-caption Сведения о номере
+              +comfort-status-list([{icon:'tag_faces', caption:'Комфорт', text:'Шумопоглощающие стены'},
+                                  {icon:'location_city', caption:'Удобство', text:'Окно в каждой из спален'},
+                                  {icon:'whatshot', caption:'Уют', text:'Номер оснащён камином', isHideLine:true}])
+            .room-details__wrapper-donut-chart              
+              +donut-chart
+          .room-details__wrapper-fl
+            +feedback-list({caption:'Отзывы посетителей номера', count:'2 отзыва',
+                          feedbacks:[{image:{alt:'avatar', src:'../../images/avatar.jpg'}, 
+                          like:{count: 12, id:'avatar', isChecked:true},
+                          caption:'Мурад Сарафанов', time:'5 дней назад', text:'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'},
+                          {image:{alt:'avatar2', src:'../../images/avatar2.jpg'}, 
+                          like:{count: 2, id:'avatar2'},
+                          caption:'Патрисия Стёклышкова', time:'Неделю назад', text:'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент.'}
+                          ]
+                         })
+          .room-details__common-wrapper2
+            .room-details__bullets-list
+              h2.room-details__bullets-list-caption Правила
+              +bullets-list([{text:'Нельзя с питомцами'},
+                              {text:'Без вечеринок и мероприятий'},
+                              {text:'Время прибытия — после 13:00, а выезд до 12:00'}])            
+            .room-details__cancellation
+              h2.room-details__cancellation-caption Отмена
+              p.room-details__cancellation-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+        .room-details__column2      
+          +order-info-form
     +footer({menu:[
         {title:'Навигация',items:[{text:'О нас', link:'about.html'},
                                      {text:'Новости', link:'news.html'},
