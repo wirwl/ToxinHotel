@@ -6,7 +6,7 @@ include ../button/button
 
 mixin order-info-form(data)
   form.oi-form(method='post' action='#')
-    fieldset
+    fieldset.oi-form__wrapper-main
       .oi-form__wrapper-for-room-info-caption
         +room-info-caption({number:888, isLux:true, cost:'9 990'})
       ul.oi-form__list

@@ -67,7 +67,8 @@ html(lang="en")
               h2.room-details__cancellation-caption Отмена
               p.room-details__cancellation-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
         .room-details__column2      
-          +order-info-form
+          .room-details__column2-wrapper-order-info-form
+            +order-info-form
     +footer({menu:[
         {title:'Навигация',items:[{text:'О нас', link:'about.html'},
                                      {text:'Новости', link:'news.html'},

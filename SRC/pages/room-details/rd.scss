@@ -30,16 +30,16 @@ body {
 }
 
 .room-details {
-  display: flex;  
-  justify-content: center;  
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
   padding: 70px 4px;
   padding-bottom: 61px;
   border-bottom: 1px solid $toxinDS10;
 }
 
 .room-details__column1 {
-  max-width: 710px;
-  min-width: 311px;
+  max-width: 710px;  
   margin-right: 70px;
 }
 
@@ -54,39 +54,31 @@ body {
 }
 
 .room-details__cancellation {
-  flex-basis: 46%;
-  min-width: 182px;
-  //max-width: 341px;
+  flex-basis: 46%;  
 }
 
 .room-details__bullets-list {
-  flex-basis: 37%;
-  min-width: 146px;
-  //margin-right: 98px;
+  flex-basis: 37%;  
   margin-right: 13.802816%;
 }
 
 .room-details__bullets-list-caption {
   text-transform: none;
   padding-left: 19px;
-  margin-bottom: 17px;  
-}
-
-.room-details__cancellation {
-  
+  margin-bottom: 17px;
 }
 
 .room-details__cancellation-caption {
-  text-transform: none;  
+  text-transform: none;
   margin-bottom: 16px;
 }
 
 .room-details__cancellation-text {
- line-height: 24px;
+  line-height: 24px;
 }
 
-.room-details__wrapper-csl {  
-  margin-right: 107px;
+.room-details__wrapper-csl {
+  margin-right: 15.07042253521127%;
 }
 
 .room-details__wrapper-csl-caption {
@@ -105,15 +97,72 @@ body {
   margin-bottom: 32px;
 }
 
-
-.room-details__column2 {
- 
+.room-details__column2 {  
+  flex-basis: 380px;
 }
 
+.room-details__column2-wrapper-order-info-form {
+  margin-bottom: 20px;  
+}
+
+.menu > .menu__list > .menu__item.menu__item:not(:last-of-type) {
+  margin-right: 20px;
+}
+
+.header__wrapper-menu {
+  margin-right: 20px;
+}
 
 // Additional media queries for header-----------------------------------------
 @media (max-width: 365px) {
   .header__wrapper-logo {
     display: none;
+  }
+}
+
+@media (max-width: 1185px) {
+  .room-details__wrapper-donut-chart {
+    width: auto;
+  }  
+  .room-details__column1 {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 1085px) {
+  .room-details__column1 {
+    margin-right: 0;
+  }
+  .room-details__wrapper-csl {
+    margin-right: 10px;
+  }
+  .room-details__common-wrapper1 {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 768px) {
+  .room-details {
+    flex-wrap: wrap-reverse;
+    padding: 10px 4px;
+  }
+  .room-details__common-wrapper1 {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 379px) {
+  .room-details__column2 {
+    flex-basis: 100%;
+  }
+  .room-details__common-wrapper1 {
+    justify-content: center;
+  }
+  .room-details__bullets-list {
+    min-width: 312px;
+  }
+
+  .room-details__cancellation {
+    flex-basis: auto;
   }
 }

@@ -6,8 +6,18 @@
 @import "../../components/datepicker/datepicker.scss";
 
 .oi-form {
-  width: 380px;
+  //width: 100%;
+  max-width: 380px;
+  padding: 40px 5px 30px;
+  display: flex;
+
+  justify-content: center;
 }
+
+.oi-form__wrapper-main {
+  max-width: 320px;
+}
+
 .oi-form__wrapper-for-room-info-caption {
   font-size: 24px;
   margin-bottom: 17px;

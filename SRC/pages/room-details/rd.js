@@ -19,13 +19,19 @@ import '../../components/header-menu/header-menu'
 import '../../../node_modules/flexslider/jquery.flexslider'
 import '../../components/item-quantity-dropdown/item-quantity-dropdown'
 import '../../components/guests-input/guests-input'
-import '../../components/donut-chart/donut-chart'
+import { DrawDonutChart } from '../../components/donut-chart/donut-chart'
 
 
-$(document).ready(function(){
+$(document).ready(function () {
   $('.flexslider').flexslider({
-    animation: "fade",    
+    animation: "fade",
     touch: true
   });
+
+  DrawDonutChart([{ text: "Великолепно", count: 58, color: "#FFE39C" },
+  { text: "Хорошо", count: 58, color: "#6FCF97" },
+  { text: "Удовлетворительно", count: 144, color: "#BC9CFF" },
+  { text: "Разочарован", count: 0, color: "#919191" },
+  ]);
 })
 
