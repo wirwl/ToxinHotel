@@ -1,8 +1,16 @@
+@import '../text-input/text-input.scss';
+@import '../button/button.scss';
+
 .si-form {
-  width: 380px;
+  max-width: 380px;
+  padding: 40px 5px 30px;
+  display: flex;
+  justify-content: center;  
 }
-.si-form__fieldset {
-  margin-bottom: 30px;
+
+.si-form__fieldset {  
+  max-width: 320px;
+  width: 100%;
 }
 .si-form__caption {
   margin-bottom: 20px;
@@ -12,11 +20,14 @@
   margin-bottom: 20px;
 }
 
+
 .si-form__item {
   margin-bottom: 10px;
 }
 
-
+.si-form__button-arrow {
+  margin-bottom: 30px;
+}
 
 .si-form__wrapper-for-sign-in-button {
   height: 44px;
@@ -26,9 +37,7 @@
 }
 
 .si-form__sign-in-text {
-  color:#000;
-  width: 186px;
-  margin-right: 35px;
+  color:#000;    
 }
 
 .si-form__wrapper-sign-up-button {

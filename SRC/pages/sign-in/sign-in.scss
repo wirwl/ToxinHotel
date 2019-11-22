@@ -10,16 +10,16 @@ $header-media2: 715px;
 $header-media3: 488px;
 @import "../../components/header/header.scss";
 @import "../../components/footer/footer.scss";
-@import "../../components/sign-up-form/sign-up-form.scss";
+@import "../../components/sign-in-form/sign-in-form.scss";
 
 .main-content {
   width: 100%;
-  min-height: 771px;
-  background: url("../../images/backgrounds/sign-up.jpg");
+  min-height: 754px;
+  background: url("../../images/backgrounds/sign-in.jpg") no-repeat;
 }
 
-.main-content__sign-up-form {
-  margin: 30px auto 0 auto;
+.main-content__sign-in-form {
+  margin: 162px auto 0 auto;
   max-width: 380px;
 }
 
@@ -29,4 +29,10 @@ $header-media3: 488px;
 
 .header__wrapper-menu {
   margin-right: 20px;
+}
+
+@media (max-width: 365px) {
+  .header__wrapper-logo {
+    display: none;
+  }
 }

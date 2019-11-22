@@ -1,3 +1,6 @@
+include ../text-input/text-input
+include ../button/button
+
 mixin sign-in-form(data)
   form.si-form(method='post' action='#')
     fieldset.si-form__fieldset
@@ -7,8 +10,9 @@ mixin sign-in-form(data)
           +text-input({placeholder:'Email', type:'email'})
         li.si-form__item
           +text-input({placeholder:'Пароль', type:'password'})        
-      +button-arrow({text:'Войти', type:'submit'})        
-    .si-form__wrapper-for-sign-in-button
-      p.si-form__sign-in-text Нет аккаунта на Toxin?
-      .si-form__wrapper-sign-up-button
-        +button-bordered({text:'Создать', dynamic_height:true})
+      .si-form__button-arrow          
+        +button-arrow({text:'Войти', type:'submit'})        
+      .si-form__wrapper-for-sign-in-button
+        p.si-form__sign-in-text Нет аккаунта на Toxin?
+        .si-form__wrapper-sign-up-button
+          +button-bordered({text:'Создать', dynamic_height:true})

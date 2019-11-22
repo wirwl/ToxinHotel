@@ -186,10 +186,11 @@ module.exports = ((env, argv) => {
     var searchroomCFG = AddHTMLPage({ common_filename: 'sr', input_path: 'SRC/pages/search-room', publicPath: '/' });
     var roomdetailsCFG = AddHTMLPage({ common_filename: 'rd', input_path: 'SRC/pages/room-details', publicPath: '/' })
     var signupCFG = AddHTMLPage({ common_filename: 'sign-up', input_path: 'SRC/pages/sign-up', publicPath: '/' })
-    
+    var signinCFG = AddHTMLPage({ common_filename: 'sign-in', input_path: 'SRC/pages/sign-in', publicPath: '/' })
 
-    if (isDev) return [uikithfCFG, uikitctCFG, uikitfeCFG, uikitcardsCFG, indexCFG, searchroomCFG, roomdetailsCFG, signupCFG];
-    return [indexCFG, searchroomCFG, roomdetailsCFG, signupCFG];
+
+    if (isDev) return [uikithfCFG, uikitctCFG, uikitfeCFG, uikitcardsCFG, indexCFG, searchroomCFG, roomdetailsCFG, signupCFG, signinCFG];
+    return [indexCFG, searchroomCFG, roomdetailsCFG, signupCFG,];
 })
 
 // filename: `[name]${mode === 'production' ? '.min' : ''}.js`,
