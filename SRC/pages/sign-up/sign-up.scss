@@ -1,0 +1,32 @@
+@import "../../common.scss";
+
+@import "../../fonts/FA5_Brands-Regular-400/fonts.css";
+@import "../../fonts/MaterialIcons/material-icons.css";
+@import "../../fonts/Montserrat/fonts.css";
+@import "../../fonts/Open-Sans/fonts.css";
+
+$header-media1: 888px;
+$header-media2: 715px;
+$header-media3: 488px;
+@import "../../components/header/header.scss";
+@import "../../components/footer/footer.scss";
+@import "../../components/sign-up-form/sign-up-form.scss";
+
+.main-content {
+  width: 100%;
+  min-height: 772px;
+  background: url("../../images/backgrounds/sign-up.jpg");
+}
+
+.main-content__sign-up-form {
+  margin: 30px auto 0 auto;
+  max-width: 380px;
+}
+
+.menu > .menu__list > .menu__item.menu__item:not(:last-of-type) {
+  margin-right: 20px;
+}
+
+.header__wrapper-menu {
+  margin-right: 20px;
+}

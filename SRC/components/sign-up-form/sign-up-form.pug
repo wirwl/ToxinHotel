@@ -26,7 +26,7 @@ mixin sign-up-form(data)
         li.su-form__item
           +text-input({placeholder:'Пароль', type:'password'})        
         li.su-form__item
-          +toggle({text:'Получать спецпредложения'})        
+          +toggle({text:'Получать спецпредложения', id:suf-toggle})        
       .su-form__wrapper-for-sign-up-button
         +button-arrow({text:'Перейти к оплате', type:'submit'})        
       .su-form__wrapper-for-sign-in-button
