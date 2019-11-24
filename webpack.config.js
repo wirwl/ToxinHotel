@@ -7,19 +7,12 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const discardduplicates = require('postcss-discard-duplicates');
 const flexbugsfixes = require('postcss-flexbugs-fixes');
-//const StyleLintPlugin = require('stylelint-webpack-plugin');
 var merge = require('webpack-merge');
-//const CssUrlRelativePlugin = require('css-url-relative-plugin');
-//var HtmlWebpackTagsPlugin = require('html-webpack-tags-plugin');
 const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin')
 
 const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
 
 const smp = new SpeedMeasurePlugin();
-
-// module.exports = smp.wrap({
-//     /* ... */
-//   });
 
 const { UnusedFilesWebpackPlugin } = require('unused-files-webpack-plugin');
 var FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
@@ -55,7 +48,6 @@ module.exports = ((env, argv) => {
     var common = {
         devServer: {
             stats: 'errors-only',
-            //contentBase: '/'
         },
         devtool: dtValue,
         module: {
@@ -137,43 +129,17 @@ module.exports = ((env, argv) => {
                     loader: 'file-loader',
                     options: {
                         outputPath: 'fonts', name: '[folder]/[name].[ext]',
-                        //publicPath: './'                        
                     }
                 },
-                /* {
-                   test: require.resolve('jquery'),
-                   use: [{
-                           loader: 'expose-loader',
-                           options: 'jQuery'
-                       },
-                       {
-                           loader: 'expose-loader',
-                           options: '$'
-                       }
-                   ]
-               } */
             ]//rules
         },
         plugins: [
-            //new UnusedFilesWebpackPlugin(),
             new webpack.ProvidePlugin({
                 $: 'jquery',
                 jQuery: 'jquery',
                 'window.jQuery': 'jquery'
             }),
             new FriendlyErrorsWebpackPlugin(),
-            /*                  
-                         new HtmlWebpackExternalsPlugin({ // optional plugin: inject cdn
-                            externals: [
-                              {
-                                  module: 'jquery',
-                                  entry: 'dist/jquery.min.js',
-                                  global: 'jQuery',
-                              }
-                            ],
-                          })
-                          */
-            //new webpack.debug.ProfilingPlugin()
         ]
     };
     //---UI-KIT---------------
@@ -188,9 +154,6 @@ module.exports = ((env, argv) => {
     var signupCFG = AddHTMLPage({ common_filename: 'sign-up', input_path: 'SRC/pages/sign-up', publicPath: '/' })
     var signinCFG = AddHTMLPage({ common_filename: 'sign-in', input_path: 'SRC/pages/sign-in', publicPath: '/' })
 
-
     if (isDev) return [uikithfCFG, uikitctCFG, uikitfeCFG, uikitcardsCFG, indexCFG, searchroomCFG, roomdetailsCFG, signupCFG, signinCFG];
     return [indexCFG, searchroomCFG, roomdetailsCFG, signupCFG,];
 })
-
-// filename: `[name]${mode === 'production' ? '.min' : ''}.js`,
