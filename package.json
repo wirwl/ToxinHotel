@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "clr": "rm -r Result",
-    "dev": "webpack --mode=development --display-error-details --display errors-only",
-    "dev:p": "webpack --mode=development  --display-error-details --profile",
-    "dev:pp": "webpack --mode=development  --progress --profile --display errors-only",
+    "dev": "webpack --mode=development --display-error-details --display errors-only",    
     "prod": "webpack --mode=production --display errors-only",
     "prod:sm": "webpack --mode=production --devtool source-map",
     "le:hf": "webpack-dev-server --open --mode=development --display-error-details --open-page pages/ui-kit/hf/hf.html",

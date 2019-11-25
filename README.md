@@ -36,6 +36,8 @@
      + [Sign in](https://wirwl.github.io)
 
 ## Some usefull commands
+  >**git clone https://github.com/wirwl/toxinhotel.git** - copy project
+
   >**npm install** - install all dependencies
 
   >**npm run clr** - clear output folder (remove all files and directories)
@@ -48,7 +50,8 @@
 
   >**npm-check --skip-unused** - check what packages is out of date with [npm-check](https://www.npmjs.com/package/npm-check)
 
-
+## Project demo (website pages)
+![demo.gif](demo.gif)
 
   
 
