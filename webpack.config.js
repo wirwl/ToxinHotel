@@ -105,16 +105,6 @@ module.exports = ((env, argv) => {
                 },
                 {
                     test: /\.(png|jpe?g|gif|svg)$/,
-                    include: /(images)/,
-                    loader: 'file-loader',
-                    options: {
-                        context: 'SRC\\images',
-                        outputPath: 'images',
-                        name: '[path][name].[ext]'
-                    }
-                },
-                {
-                    test: /\.(png|jpe?g|gif|svg)$/,
                     include: /(components)/,
                     loader: 'file-loader',
                     options: {
@@ -124,11 +114,34 @@ module.exports = ((env, argv) => {
                     }
                 },
                 {
-                    test: /\.(woff(2)?|ttf|eot|svg)$/,
-                    include: /fonts/,
+                    test: /\.(png|jpe?g|gif|svg)$/,
+                    include: /(images)/,
+                    exclude: /(components)/,
                     loader: 'file-loader',
                     options: {
-                        outputPath: 'fonts', name: '[folder]/[name].[ext]',
+                        context: 'SRC\\images',
+                        outputPath: 'images',
+                        name: '[path][name].[ext]'
+                    }
+                },
+                {
+                    test: /\.(woff(2)?|ttf|eot|svg)$/,
+                    include: /(node_modules)/,
+                    loader: 'file-loader',
+                    options: {
+                        outputPath: 'fonts', 
+                        name: '[path]/[name].[ext]',
+                    }
+                },
+                {
+                    test: /\.(woff(2)?|ttf|eot|svg)$/,
+                    include: /(fonts)/,   
+                    exclude: /(node_modules)/,                 
+                    loader: 'file-loader',
+                    options: {
+                        context: 'SRC\\fonts',
+                        outputPath: 'fonts', 
+                        name: '[path]/[name].[ext]',
                     }
                 },
             ]//rules

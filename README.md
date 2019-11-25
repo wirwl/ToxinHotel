@@ -36,7 +36,7 @@
      + [Sign in](https://wirwl.github.io)
 
 ## Some usefull commands
-  >**git clone https://github.com/wirwl/toxinhotel.git** - copy project
+  >**git clone https://github.com/wirwl/toxinhotel.git** - copy project from remote repository to local computer
 
   >**npm install** - install all dependencies
 
