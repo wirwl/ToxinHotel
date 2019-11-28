@@ -14,12 +14,13 @@ $header-media3: 488px;
 
 .main-content {
   width: 100%;
-  min-height: 754px;
+  min-height: 684px;
   background: url("../../images/backgrounds/sign-in.jpg") no-repeat;
+  padding-top: 162px;
 }
 
 .main-content__sign-in-form {
-  margin: 162px auto 0 auto;
+  margin: 0 auto;
   max-width: 380px;
 }
 
