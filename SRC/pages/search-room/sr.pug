@@ -35,9 +35,9 @@ html(lang="en")
                                         {text:'Пунтк53', link: '#'},
                                       ]},                                    
                                     ]})      
-    div.main-content       
+    main.main-content       
       .main-content__wrapper
-        .filters
+        section.filters
           ul.filters__list
             li.filters__item.filters__wrapper-datepicker-input
               +datepicker-input({id:'filters_di', caption:'Даты пребывания в отеле', placeholder:'Выберите дату'})
@@ -76,7 +76,7 @@ html(lang="en")
                                                                             {id:'tv2', text:'Телевизор'},
                                                                             {id:'shampoo2', text:'Шампунь'}
                                                                             ]})                                                                                     
-        .rooms
+        section.rooms
           h1.rooms__title Номера, которые мы для вас подобрали
           ul.rooms__list
             li.rooms__item
