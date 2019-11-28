@@ -8,9 +8,8 @@ html(lang="en")
     meta(charset="UTF-8")
     title Пример страницы    
     +favicon    
-  body    
-    div.background      
-      +header({login:'Войти', reg:'Зарегистрироваться', isAuth:false, 
+  body        
+    +header({login:'Войти', reg:'Зарегистрироваться', isAuth:false, 
                              menu: [{text:'О нас', link:'#'},
                                     {text:'Услуги', link: '#', 
                                       sm:[
@@ -29,9 +28,10 @@ html(lang="en")
                                         {text:'Пунтк53', link: '#'},
                                       ]},                                    
                                     ]})
-      .background__wrapper-form
+    main.main-content
+      article.main-content__form
         +room-reservation-form
-      p.background__text Лучшие номера для вашей работы, отдыха и просто вдохновения
+      p.main-content__text Лучшие номера для вашей работы, отдыха и просто вдохновения
     +footer({menu:[
         {title:'Навигация',items:[{text:'О нас', link:'about.html'},
                                      {text:'Новости', link:'news.html'},

@@ -3,15 +3,13 @@ include ../header-menu/header-menu
 include ../button/button
 
 mixin header(data)
-  header.header(class=data.isAuth && 'header_auth-true')
-    //-.header__wrapper-main
+  header.header(class=data.isAuth && 'header_auth-true')    
     .header__wrapper-logo
       +logo
     .header__wrapper-menu
       +header-menu(data.menu)
     .header__wrapper-auth
       .header__wrapper-auth-login
-        +button-bordered({text: data.login || 'LOGIN'})
-      //-.header__wrapper-auth-register
+        +button-bordered({text: data.login || 'LOGIN'})      
       +button-filled({text: data.reg || 'REGISTER'})
       .header__wrapper-auth-name Cosmin Negoita
