@@ -1,8 +1,8 @@
 include ../feedback/feedback
 
 mixin feedback-list(data)
-  .feedback-list
-    .feedback-list__caption
+  article.feedback-list
+    header.feedback-list__caption
       h2.feedback-list__text #{data.caption}
       span.feedback-list__feedback-count #{data.count}
     ul.feedback-list__list

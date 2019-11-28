@@ -35,10 +35,10 @@ html(lang="en")
                                     {text:'Пунтк53', link: '#'},
                                   ]},                                    
                                 ]})     
-    div.main-content
+    main.main-content
       +room-images 
       .room-details
-        .room-details__column1
+        section.room-details__column1
           .room-details__common-wrapper1
             .room-details__wrapper-csl
               h2.room-details__wrapper-csl-caption Сведения о номере
@@ -66,7 +66,7 @@ html(lang="en")
             .room-details__cancellation
               h2.room-details__cancellation-caption Отмена
               p.room-details__cancellation-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
-        .room-details__column2      
+        section.room-details__column2      
           .room-details__column2-wrapper-order-info-form
             +order-info-form
     +footer({menu:[
