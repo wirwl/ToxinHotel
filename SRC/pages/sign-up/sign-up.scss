@@ -14,12 +14,13 @@ $header-media3: 488px;
 
 .main-content {
   width: 100%;
-  min-height: 771px;
-  background: url("../../images/backgrounds/sign-up.jpg");
+  min-height: 701px;
+  background: url("../../images/backgrounds/sign-up.jpg") no-repeat;
+  padding-top: 30px;
 }
 
 .main-content__sign-up-form {
-  margin: 30px auto 0 auto;
+  margin: 0 auto;
   max-width: 380px;
 }
 

@@ -10,9 +10,8 @@ html(lang="en")
     meta(charset="UTF-8")
     title Пример страницы    
     +favicon    
-  body        
-    div.main-content
-      +header({login:'Войти', reg:'Зарегистрироваться', isAuth:false, 
+  body            
+    +header({login:'Войти', reg:'Зарегистрироваться', isAuth:false, 
                             menu: [{text:'О нас', link:'#'},
                                   {text:'Услуги', link: '#', 
                                     sm:[
@@ -31,7 +30,8 @@ html(lang="en")
                                       {text:'Пунтк53', link: '#'},
                                     ]},                                    
                                   ]})     
-      .main-content__sign-up-form
+    main.main-content
+      section.main-content__sign-up-form
         +sign-up-form
     +footer({menu:[
         {title:'Навигация',items:[{text:'О нас', link:'about.html'},
