@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
+var pxtorem = require('postcss-pxtorem');
 const discardduplicates = require('postcss-discard-duplicates');
 const flexbugsfixes = require('postcss-flexbugs-fixes');
 var merge = require('webpack-merge');
@@ -79,7 +80,16 @@ module.exports = ((env, argv) => {
                                 plugins: [
                                     autoprefixer(),
                                     discardduplicates(),
-                                    flexbugsfixes()
+                                    flexbugsfixes(),
+                                    pxtorem({
+                                        rootValue: 14,
+                                        unitPrecision: 6,
+                                        propList: ['font', 'font-size', 'line-height', 'letter-spacing'],
+                                        selectorBlackList: ['html'],
+                                        replace: true,
+                                        mediaQuery: true,
+                                        minPixelValue: 0
+                                    })
                                 ],
                                 sourceMap: true
                             }
@@ -92,8 +102,7 @@ module.exports = ((env, argv) => {
                 },
                 {
                     test: /\.m?js$/,
-                    exclude: /(node_modules|bower_components)/,
-                    //include: /pages/,
+                    exclude: /(node_modules)/,
                     use: {
                         loader: 'babel-loader',
                         options: {
@@ -129,18 +138,18 @@ module.exports = ((env, argv) => {
                     include: /(node_modules)/,
                     loader: 'file-loader',
                     options: {
-                        outputPath: 'fonts', 
+                        outputPath: 'fonts',
                         name: '[path]/[name].[ext]',
                     }
                 },
                 {
                     test: /\.(woff(2)?|ttf|eot|svg)$/,
-                    include: /(fonts)/,   
-                    exclude: /(node_modules)/,                 
+                    include: /(fonts)/,
+                    exclude: /(node_modules)/,
                     loader: 'file-loader',
                     options: {
                         context: 'SRC\\fonts',
-                        outputPath: 'fonts', 
+                        outputPath: 'fonts',
                         name: '[path]/[name].[ext]',
                     }
                 },

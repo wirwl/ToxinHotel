@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "clr": "rm -r Result",
-    "dev": "webpack --mode=development --display-error-details --display errors-only",    
+    "dev": "webpack --mode=development --display-error-details --display errors-only",
     "prod": "webpack --mode=production --display errors-only",
     "prod:sm": "webpack --mode=production --devtool source-map",
     "le:hf": "webpack-dev-server --open --mode=development --display-error-details --open-page pages/ui-kit/hf/hf.html",
@@ -56,6 +56,7 @@
     "postcss-discard-duplicates": "^4.0.2",
     "postcss-flexbugs-fixes": "^4.1.0",
     "postcss-loader": "^3.0.0",
+    "postcss-pxtorem": "^4.0.1",
     "pug": "^2.0.4",
     "pug-html-loader": "^1.1.5",
     "pug-lint": "^2.6.0",

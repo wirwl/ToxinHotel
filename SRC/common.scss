@@ -9,9 +9,10 @@ $toxinGreen: #6fcf97;
 $toxinBlue: #8ba4f9;
 $toxin-color-gray: #e5e5e5;
 $toxin-color-light-gray: #f9f9f9;
-$toxin-font-material-icon: "Material Icons", serif;
-$toxin-font-montserrat: "Montserrat",serif;
-$toxin-font-open-sans: "Open Sans", serif;
+$toxin-font-material-icon: "Material Icons", Arial, sans-serif;
+$toxin-font-montserrat: "Montserrat", Arial, sans-serif;
+$toxin-font-open-sans: "Open Sans", Arial, sans-serif;
+
 
 * {
   box-sizing: border-box;
@@ -22,10 +23,10 @@ $toxin-font-open-sans: "Open Sans", serif;
 
 html {
   background: #e2e2e2;
+  font-size: 14px;
 }
 
-body {
-  font-size: 14px;
+body {  
   margin: 0 auto;
   min-width: 320px;
   max-width: 1440px;
