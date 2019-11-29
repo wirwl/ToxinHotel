@@ -1,6 +1,6 @@
 .iqdropdown {
   align-items: center;
-  border: 1px solid $toxinDS25;
+  border: 1px solid $toxin-color-black-25;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   cursor: pointer;
@@ -117,7 +117,7 @@
   padding-right: 10px;  
 }
 .iqdropdown__item {
-  color: $toxinDS100;
+  color: $toxin-color-black-100;
   font-size: 12px;
   font-weight: bold;
   

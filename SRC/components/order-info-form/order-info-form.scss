@@ -50,7 +50,7 @@
 .oi-form__table {
   width: 100%;
   font-size: 14px;
-  color: $toxinDS75;
+  color: $toxin-color-black-75;
 }
 
 .oi-form__row:nth-child(1),
@@ -82,7 +82,7 @@
 }
 
 .oi-form__total-line {
-  border-bottom: 1px dotted $toxinDS25;
+  border-bottom: 1px dotted $toxin-color-black-25;
   margin-right: 5px;
   flex-grow: 1;
 }

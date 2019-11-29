@@ -4,7 +4,7 @@
 }
 
 .subscribe-input__input {
-  border: 1px solid $toxinDS25;
+  border: 1px solid $toxin-color-black-25;
   border-radius: 4px;
   background: white;
   padding: 13px 15px;
@@ -17,11 +17,11 @@
 .subscribe-input__input::placeholder {
   font-size: 14px;
   line-height: 18px;
-  color: $toxinDS25;  
+  color: $toxin-color-black-25;  
 }
 .subscribe-input__input:hover,
 .subscribe-input__input:focus, .subscribe-input_isFocused {
-  border: 1px solid $toxinDS50;
+  border: 1px solid $toxin-color-black-50;
 }
 
 .subscribe-input__wrapper {
@@ -38,10 +38,10 @@
   content: '\e5c8';
   font-family: $toxin-font-material-icon;
   font-size: 24px;
-  background: linear-gradient(180deg, $toxinPurple 0%, $toxinBlue 100%);
+  background: linear-gradient(180deg, $toxin-color-purple 0%, $toxin-color-blue 100%);
   background-clip: text;  
   -webkit-text-fill-color: transparent;
-  color: $toxinBlue;
+  color: $toxin-color-blue;
   position: absolute;
   top: 0px;
   right: 0px;    

@@ -7,18 +7,18 @@
 
 .room-info-caption__caption-left-part {
   font-size: inherit;
-  color: $toxinDS100;
+  color: $toxin-color-black-100;
 }
 
 .room-info-caption__caption-n {
-  font-family: "Quicksand";
+  font-family: $toxin-font-quicksand;
   font-size: 14px;
   font-weight: bold;
   margin-right: 5px;
 }
 
 .room-info-caption__caption-room-number {
-  font-family: "Quicksand";
+  font-family: $toxin-font-quicksand;
   margin-right: 5px;
   font-size: inherit;
   font-weight: bold;
@@ -27,11 +27,11 @@
   text-transform: uppercase;
   font-size: 12px;
   font-weight: bold;
-  color: $toxinPurple;
+  color: $toxin-color-purple;
 }
 
 .room-info-caption__cost-per-day {
-  color: $toxinDS50;
+  color: $toxin-color-black-50;
   font-weight: bold;
 }
 .room-info-caption__cost-per-day-value {

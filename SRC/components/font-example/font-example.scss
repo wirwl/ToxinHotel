@@ -4,12 +4,12 @@
 .font-example__title {
   font-family: Montserrat;
   margin-right: 30px;
-  color: $toxinDS25;
+  color: $toxin-color-black-25;
   text-align: right;
   width: 50px;
 }
 .font-example__desc {
-  color:$toxinDS100;
+  color:$toxin-color-black-100;
 }
 
 
@@ -37,6 +37,6 @@
     font-family: Montserrat;    
     font-size: 14px;
     line-height: 24px;
-    .font-example__desc {width: 301px; color: $toxinDS75;}
+    .font-example__desc {width: 301px; color: $toxin-color-black-75;}
   }
 }

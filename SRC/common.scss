@@ -1,18 +1,18 @@
-$toxinDS100: #1f2041;
-$toxinDS75: rgba(31, 32, 65, 0.75);
-$toxinDS50: rgba(31, 32, 65, 0.5);
-$toxinDS10: rgba(31, 32, 65, 0.1);
-$toxinDS25: rgba(31, 32, 65, 0.25);
-$toxinDS5: rgba(31, 32, 65, 0.05);
-$toxinPurple: #bc9cff;
-$toxinGreen: #6fcf97;
-$toxinBlue: #8ba4f9;
+$toxin-color-black-100: #1f2041;
+$toxin-color-black-75: rgba(31, 32, 65, 0.75);
+$toxin-color-black-50: rgba(31, 32, 65, 0.5);
+$toxin-color-black-10: rgba(31, 32, 65, 0.1);
+$toxin-color-black-25: rgba(31, 32, 65, 0.25);
+$toxin-color-black-5: rgba(31, 32, 65, 0.05);
+$toxin-color-purple: #bc9cff;
+$toxin-color-green: #6fcf97;
+$toxin-color-blue: #8ba4f9;
 $toxin-color-gray: #e5e5e5;
 $toxin-color-light-gray: #f9f9f9;
 $toxin-font-material-icon: "Material Icons", Arial, sans-serif;
-$toxin-font-montserrat: "Montserrat", Arial, sans-serif;
+$toxin-font-montserrat: Montserrat, Arial, sans-serif;
 $toxin-font-open-sans: "Open Sans", Arial, sans-serif;
-
+$toxin-font-quicksand: Quicksand, Arial, sans-serif;
 
 * {
   box-sizing: border-box;
@@ -40,7 +40,7 @@ label {
   font-family: $toxin-font-montserrat;
   font-size: 12px;
   font-weight: bold;
-  color: $toxinDS100;
+  color: $toxin-color-black-100;
   text-transform: uppercase;
 }
 
@@ -55,7 +55,7 @@ legend {
   line-height: 30px;
   font-family: $toxin-font-open-sans;
   font-weight: bold;
-  color: $toxinDS100;
+  color: $toxin-color-black-100;
 }
 
 h2 {

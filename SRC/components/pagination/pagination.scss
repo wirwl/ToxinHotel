@@ -21,7 +21,7 @@
   justify-content: space-between;
   .pagination__item {
     color: #fff;
-    color: $toxinDS50;
+    color: $toxin-color-black-50;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,17 +39,17 @@
 
   .pagination__item:first-child {
     //margin-right: -14px;
-    background: $toxinGreen;
+    background: $toxin-color-green;
     color: #fff;
   }
   .pagination__item:last-child {
-    background: $toxinGreen;
+    background: $toxin-color-green;
     color: #fff;
     //margin-left: -17px;
   }
 
   .pagination__item.pagination__item_active {
-    background-color: $toxinPurple;
+    background-color: $toxin-color-purple;
     font-weight: bold;
     color: #fff;
   }
@@ -63,5 +63,5 @@
 
 .pagination__caption {
   text-align: center;
-  color: $toxinDS75;
+  color: $toxin-color-black-75;
 }

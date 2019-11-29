@@ -1,6 +1,6 @@
 .bullet {  
   font-family: Montserrat;  
-  color: $toxinDS75;  
+  color: $toxin-color-black-75;  
   line-height: 24px;
   padding-left: 20px;
   position: relative;
@@ -11,7 +11,7 @@
   display: block;
   width: 10px;
   height: 10px;
-  background: $toxinDS25;
+  background: $toxin-color-black-25;
   border-radius: 50%;
   position: absolute;
   left: 0px;

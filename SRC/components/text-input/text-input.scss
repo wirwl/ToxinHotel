@@ -8,8 +8,8 @@
 }
 
 .text-input__input {
-  color: $toxinDS75;
-  border: 1px solid $toxinDS25;
+  color: $toxin-color-black-75;
+  border: 1px solid $toxin-color-black-25;
   border-radius: 4px;
   background: white;
   padding: 13px 15px;
@@ -20,10 +20,10 @@
 }
 
 .text-input__input::placeholder {
-  color: $toxinDS25;  
+  color: $toxin-color-black-25;  
 }
 .text-input__input:hover,
 .text-input__input:focus,
 .text-input_isFocused .text-input__input {
-  border: 1px solid $toxinDS50;
+  border: 1px solid $toxin-color-black-50;
 }

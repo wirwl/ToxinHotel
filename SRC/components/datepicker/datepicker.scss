@@ -11,7 +11,7 @@
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   border-radius: 4px;
   padding: 15px 15px 19px;
-  color: $toxinDS50;
+  color: $toxin-color-black-50;
 }
 
 .datepicker--nav {
@@ -23,17 +23,17 @@
   width: 24px;
   font-family: "Material Icons";
   font-size: 24px;
-  color: $toxinPurple;
+  color: $toxin-color-purple;
 }
 .datepicker--nav-title {
   font-family: "Open Sans";
   font-weight: bold;
   font-size: 19px;
-  color: $toxinDS100;
+  color: $toxin-color-black-100;
 }
 
 .datepicker--day-name {
-  color: $toxinPurple;
+  color: $toxin-color-purple;
   font-weight: bold;
   text-transform: none;
   margin-bottom: 11px;
@@ -55,7 +55,7 @@
   top: 0;
   width: 50%;
   height: 40px;
-  background: $toxinPurple;
+  background: $toxin-color-purple;
   background: linear-gradient(180deg, #bc9cff7f 0%, #8ba4f97f 100%);
 }
 .datepicker--cell-day.-range-from-.-selected-:not(.-focus-):after {
@@ -65,7 +65,7 @@
   right: 0;
   width: 100%;
   height: 100%;
-  background: $toxinPurple;
+  background: $toxin-color-purple;
   border-radius: 50%;
   color: #fff;
   display: flex;
@@ -85,7 +85,7 @@
   top: 0;
   width: 50%;
   height: 100%;
-  background: $toxinPurple;
+  background: $toxin-color-purple;
   background: linear-gradient(180deg, #bc9cff7f 0%, #8ba4f97f 100%);
 }
 .datepicker--cell-day.-range-to-.-selected-:not(.-focus-):after {
@@ -96,7 +96,7 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: $toxinPurple;
+  background: $toxin-color-purple;
   color: #fff;
   display: flex;
   align-items: center;
@@ -105,17 +105,17 @@
 
 .datepicker--cell-day.-selected- {
   border-radius: 50%;
-  background: $toxinPurple;
-  background: linear-gradient(180deg, $toxinPurple 0%, #8ba4f9 100%);
+  background: $toxin-color-purple;
+  background: linear-gradient(180deg, $toxin-color-purple 0%, #8ba4f9 100%);
 }
 
 .datepicker--cell-day.-in-range- {
-  background: $toxinPurple;
+  background: $toxin-color-purple;
   background: linear-gradient(180deg, #bc9cff7f 0%, #8ba4f97f 100%);
-  color: $toxinDS50;
+  color: $toxin-color-black-50;
 }
 .datepicker--cell-day.-selected-.-focus- {
-  background: $toxinBlue;
+  background: $toxin-color-blue;
 }
 
 .datepicker--cell-day.-other-month-.-in-range-.-focus- {
@@ -124,34 +124,34 @@
 
 .datepicker--cell-day.-other-month-.-in-range- {
   color: white;
-  background: $toxinPurple;
+  background: $toxin-color-purple;
   background: linear-gradient(180deg, #bc9cff7f 0%, #8ba4f97f 100%);
 }
 
 .datepicker--cell-day.-range-from-:not(.-selected-),
 .datepicker--cell-day.-range-from-.-focus- {
-  border: 1px solid $toxinPurple;
+  border: 1px solid $toxin-color-purple;
   background-color: rgba(139, 164, 249, 0.1);
   border-radius: 50% 0 0 50%;
 }
 
 .datepicker--cell-day.-range-to-:not(.-selected-),
 .datepicker--cell-day.-range-to-.-focus- {
-  border: 1px solid $toxinPurple;
+  border: 1px solid $toxin-color-purple;
   background-color: rgba(139, 164, 249, 0.1);
   border-radius: 0 50% 50% 0;
-  color: $toxinDS50;
+  color: $toxin-color-black-50;
 }
 
 .datepicker--cell-day.-range-from-.-selected-.-focus-,
 .datepicker--cell-day.-range-to-.-selected-.-focus- {
-  color: $toxinDS75;
+  color: $toxin-color-black-75;
 }
 
 .datepicker--cell-day.-in-range-.-current-,
 .datepicker--cell-day.-current- {
   color: white;
-  background: $toxinGreen;
+  background: $toxin-color-green;
   border-radius: 50%;
 }
 
@@ -166,13 +166,13 @@
   left: 0;
   width: 40px;
   height: 40px;
-  background: $toxinPurple;
+  background: $toxin-color-purple;
   background: linear-gradient(180deg, #bc9cff7f 0%, #8ba4f97f 100%);
 }
 
 .-selected-.datepicker--cell-day.-other-month- {
-  background: $toxinPurple;
-  background: linear-gradient(180deg, $toxinPurple 0%, #8ba4f9 100%);
+  background: $toxin-color-purple;
+  background: linear-gradient(180deg, $toxin-color-purple 0%, #8ba4f9 100%);
 }
 
 .datepicker--cell-day.-focus- {
@@ -205,11 +205,11 @@
 
 .datepicker__button-clear {  
   display: inline-block;
-  color: $toxinDS50;
+  color: $toxin-color-black-50;
   cursor: pointer;  
 }
 .datepicker__button-apply {  
   display: inline-block;
-  color: $toxinPurple;
+  color: $toxin-color-purple;
   cursor: pointer;  
 }

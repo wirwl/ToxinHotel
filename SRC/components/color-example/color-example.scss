@@ -10,32 +10,32 @@
 
 .color-example__squareColor_ {
   &DS100 {
-    background: $toxinDS100;
+    background: $toxin-color-black-100;
   }
   &DS75 {
-    background: $toxinDS75;
+    background: $toxin-color-black-75;
   }
   &DS50 {
-    background: $toxinDS50;
+    background: $toxin-color-black-50;
   }
   &DS25 {
-    background: $toxinDS25;
+    background: $toxin-color-black-25;
   }
   &DS5 {
-    background: $toxinDS5;
+    background: $toxin-color-black-5;
   }
   &Purple {
-    background: $toxinPurple;
+    background: $toxin-color-purple;
   }
   &Green {
-    background: $toxinGreen;
+    background: $toxin-color-green;
   }
 }
 
 .color-example__textDesc {    
   vertical-align: middle;
-  color: $toxinDS100;
-  font-family: Quicksand;  
+  color: $toxin-color-black-100;
+  font-family: $toxin-font-quicksand;
   font-size: 19px;
   line-height: 29px;
   margin: 6px 0px;

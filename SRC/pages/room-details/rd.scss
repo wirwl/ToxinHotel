@@ -22,7 +22,7 @@ $header-media3: 488px;
 @import "../../components/legend-list/legend-list.scss";
 
 body {
-  color: $toxinDS75;
+  color: $toxin-color-black-75;
 }
 
 .main-content {
@@ -35,7 +35,7 @@ body {
   flex-wrap: wrap-reverse;
   padding: 70px 4px;
   padding-bottom: 61px;
-  border-bottom: 1px solid $toxinDS10;
+  border-bottom: 1px solid $toxin-color-black-10;
 }
 
 .room-details__column1 {

@@ -3,9 +3,9 @@
   display: inline-flex;
   justify-content: flex-start;
   align-items: center;
-  border: 1px solid $toxinDS25;
+  border: 1px solid $toxin-color-black-25;
   border-radius: 10px;
-  color: $toxinDS25;
+  color: $toxin-color-black-25;
   padding: 0px 5px;
   height: 20px;
   min-width: 40px;
@@ -20,8 +20,8 @@
 
 .like-button__input:checked + {
   .like-button__count {
-    border: 1px solid $toxinPurple;
-    color: $toxinPurple;
+    border: 1px solid $toxin-color-purple;
+    color: $toxin-color-purple;
   }
   .like-button__count:before {
     content: "favorite";

@@ -4,7 +4,7 @@
 }
 
 .masked-input__input {
-  border: 1px solid $toxinDS25;
+  border: 1px solid $toxin-color-black-25;
   border-radius: 4px;
   background: white;
   padding: 6px 15px 8px;
@@ -15,10 +15,10 @@
 
 .masked-input__input::placeholder {
   font-size: 14px;
-  color: $toxinDS25;
+  color: $toxin-color-black-25;
 }
 
 .masked-input__input:hover,
 .masked-input__input:focus {
-  border: 1px solid $toxinDS50;
+  border: 1px solid $toxin-color-black-50;
 }

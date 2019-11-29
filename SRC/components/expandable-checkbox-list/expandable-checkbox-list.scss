@@ -1,14 +1,7 @@
-.ecl {
-  //display: inline-block;  
-}
 .ecl__caption {
-  //font-family: "Montserrat";
-  //font-size: 12px;
-  //font-weight: bold;
   cursor: pointer;    
   position: relative;    
   line-height: 24px;
-  //outline: 1px solid black;
 }
 .ecl__list {  
   list-style: none;
@@ -24,25 +17,19 @@
 
 }
 
-.ecl__caption:after {  
-  //outline: 1px solid red;
+.ecl__caption:after {    
   content: 'keyboard_arrow_down';  
   width: 44px;
   font-family: 'Material Icons';  
   font-size: 24px;  
-  font-weight: normal;
-  //padding-left: 40px;
-  //vertical-align: middle;
-  text-transform: none;
-  //border: 1px solid black;
+  font-weight: normal;  
+  text-transform: none;  
   position: absolute;
-  color: $toxinDS50;
+  color: $toxin-color-black-50;
   right: 0px;
-  text-align: center;
-  
+  text-align: center;  
 }
 
 .ecl_show .ecl__caption:after {    
   content: 'keyboard_arrow_up';  
 }
-

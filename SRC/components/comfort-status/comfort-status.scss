@@ -1,5 +1,5 @@
 .comfort-status {
-  border-bottom: 1px solid $toxinDS10;
+  border-bottom: 1px solid $toxin-color-black-10;
   padding-bottom: 20px;  
   display: flex;
 }
@@ -10,7 +10,7 @@
 
 .comfort-status__desc {
   padding-top: 3px;
-  color: $toxinDS75;
+  color: $toxin-color-black-75;
 }
 
 .comfort-status__caption {
@@ -25,5 +25,5 @@
 .comfort-status__icon {  
   font-size: 48px;    
   margin-right: 10px;
-  color: $toxinPurple;
+  color: $toxin-color-purple;
 }

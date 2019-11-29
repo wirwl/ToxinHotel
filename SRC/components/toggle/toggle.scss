@@ -8,7 +8,7 @@
   padding: 0 0 0 50px;
   cursor: pointer;
   font-size: 14px;
-  color: $toxinDS75;
+  color: $toxin-color-black-75;
 }
 .toggle__label:before {
   box-sizing: border-box;
@@ -40,9 +40,9 @@
 
 .toggle__input:not(:checked) {
   + .toggle__label:after {
-    background: $toxinDS25;
+    background: $toxin-color-black-25;
   }
   + .toggle__label::before {
-    border: 1px solid $toxinDS25;
+    border: 1px solid $toxin-color-black-25;
   }
 }
