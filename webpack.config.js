@@ -2,21 +2,12 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const autoprefixer = require('autoprefixer');
-const cssnano = require('cssnano');
-var pxtorem = require('postcss-pxtorem');
+const pxtorem = require('postcss-pxtorem');
 const discardduplicates = require('postcss-discard-duplicates');
 const flexbugsfixes = require('postcss-flexbugs-fixes');
-var merge = require('webpack-merge');
-const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin')
-
-const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
-
-const smp = new SpeedMeasurePlugin();
-
-const { UnusedFilesWebpackPlugin } = require('unused-files-webpack-plugin');
-var FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+const merge = require('webpack-merge');
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 
 process.noDeprecation = true;
 process.traceDeprecation = true;
@@ -37,8 +28,7 @@ module.exports = ((env, argv) => {
                 filename: data.output_path + '/' + data.common_filename + ".js",
                 publicPath: data.publicPath || ''
             },
-            plugins: [
-                // new CleanWebpackPlugin(),
+            plugins: [                
                 new MiniCssExtractPlugin({ filename: data.output_path + '/' + data.common_filename + '.css' }),
                 new HtmlWebpackPlugin({ filename: data.output_path + '/' + data.common_filename + '.html', template: data.input_path + '/' + data.common_filename + '.pug' }),
             ]
@@ -50,15 +40,11 @@ module.exports = ((env, argv) => {
         devServer: {
             stats: 'errors-only',
         },
+        performance: { hints: false },
         devtool: dtValue,
         module: {
             rules: [
-                {
-                    // test: /\.pug$/,
-                    // use: [
-                    //     'html-loader?attrs=false',
-                    //     `pug-html-loader?pretty=${isDev},cache=false`,
-                    // ]
+                {                    
                     test: /\.pug$/,
                     use: ["pug-loader"]
                 },
