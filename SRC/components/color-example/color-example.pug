@@ -1,8 +1,7 @@
 mixin color-example(color, desc, hex)
   .color-example
     .color-example__squareColor(class=color)
-    p.color-example__textDesc 
-      b #{desc}
-      br
-      | #{hex}
+    .color-example__textDesc 
+      p.color-example__title #{desc}      
+      p.color-example__text #{hex}
     

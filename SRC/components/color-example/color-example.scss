@@ -32,11 +32,18 @@
   }
 }
 
-.color-example__textDesc {    
+.color-example .color-example__textDesc {    
   vertical-align: middle;
   color: $toxin-color-black-100;
   font-family: $toxin-font-quicksand;
   font-size: 19px;
   line-height: 29px;
   margin: 6px 0px;
+}
+
+.color-example__title {
+  font-weight: bold;
+}
+.color-example__title, .color-example__text {
+  font-family: $toxin-font-quicksand;
 }

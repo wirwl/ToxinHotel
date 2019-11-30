@@ -2,7 +2,7 @@
   display: flex;
 }
 .font-example__title {
-  font-family: Montserrat;
+  font-family: $toxin-font-montserrat;
   margin-right: 30px;
   color: $toxin-color-black-25;
   text-align: right;
@@ -10,31 +10,32 @@
 }
 .font-example__desc {
   color:$toxin-color-black-100;
+  font-family: inherit;
 }
 
 
 
 .font-example_ {
   &h1 {    
-    font-family: "Open Sans";    
+    font-family: $toxin-font-quicksand;
     font-size: 24px;
     line-height: 30px;    
-    .font-example__desc {width: 336px;font-weight: bold;}
+    .font-example__desc {width: 351px;font-weight: bold;}
   }
   &h2 {    
-    font-family: "Open Sans";    
+    font-family: $toxin-font-quicksand;
     font-size: 19px;
     line-height: 24px;
     .font-example__desc {width: 282px;font-weight: bold;}
   }
   &h3 {    
-    font-family: Montserrat;    
+    font-family: $toxin-font-montserrat;
     font-size: 12px;
     line-height: 15px;
     .font-example__desc {width: 186px; font-weight: bold;}
   }
   &body {    
-    font-family: Montserrat;    
+    font-family: $toxin-font-montserrat;    
     font-size: 14px;
     line-height: 24px;
     .font-example__desc {width: 301px; color: $toxin-color-black-75;}

@@ -1,7 +1,0 @@
-//https://github.com/webhintio/hint/blob/master/packages/configuration-all/index.json
-{
-    "extends": [
-        "all"
-    ],
-    "language": "ru-RU"
-}

@@ -14,9 +14,6 @@ import '../../../components/room-info/room-info.js'
 import '../../../components/datepicker-input/datepicker-input.js'
 import '../../../components/order-info-form/order-info-form.js'
 
-
-//let test88320 = (a,b) => a+b;
-
 $(document).ready(function () {
   //only for pixel perfect
   let datepicker = $('.standalone-datepicker').data('datepicker');
@@ -38,14 +35,11 @@ $(document).ready(function () {
     }
   });
 
-   //$('#oi-form__start-input').val('19.08.2019');    
-   //$('#oi-form__end-input').val('23.08.2019');    
-  //console.log($('#oi-form__start-input').datepicker());
-  $('#oi-form__start-input').data('datepicker').update(
-    'selectDate', [
+  $('#oi-form__start-input').data('datepicker').update('minDate', null);
+  $('#oi-form__start-input').data('datepicker').selectDate([
     new Date("2019-08-19"),
     new Date("2019-08-23")
-  ])
+  ]);  
 })
 
 

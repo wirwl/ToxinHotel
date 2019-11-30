@@ -42,6 +42,10 @@
 
   >**npm run clr** - clear output folder (remove all files and directories)
 
+  >**npm run clr:dev** - clear output folder (remove all files and directories in dev folder)
+
+  >**npm run clr:prod** - clear output folder (remove all files and directories in prod folder)
+
   >**npm run dev** - build project with development mode
 
   >**npm run prod** - build project with production mode

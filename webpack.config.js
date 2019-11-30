@@ -8,6 +8,7 @@ const discardduplicates = require('postcss-discard-duplicates');
 const flexbugsfixes = require('postcss-flexbugs-fixes');
 const merge = require('webpack-merge');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+var createVariants = require('parallel-webpack').createVariants;
 
 process.noDeprecation = true;
 process.traceDeprecation = true;
@@ -28,7 +29,7 @@ module.exports = ((env, argv) => {
                 filename: data.output_path + '/' + data.common_filename + ".js",
                 publicPath: data.publicPath || ''
             },
-            plugins: [                
+            plugins: [
                 new MiniCssExtractPlugin({ filename: data.output_path + '/' + data.common_filename + '.css' }),
                 new HtmlWebpackPlugin({ filename: data.output_path + '/' + data.common_filename + '.html', template: data.input_path + '/' + data.common_filename + '.pug' }),
             ]
@@ -44,7 +45,7 @@ module.exports = ((env, argv) => {
         devtool: dtValue,
         module: {
             rules: [
-                {                    
+                {
                     test: /\.pug$/,
                     use: ["pug-loader"]
                 },
@@ -147,7 +148,7 @@ module.exports = ((env, argv) => {
                 jQuery: 'jquery',
                 'window.jQuery': 'jquery'
             }),
-            new FriendlyErrorsWebpackPlugin(),
+            new FriendlyErrorsWebpackPlugin()
         ]
     };
     //---UI-KIT---------------
@@ -156,12 +157,12 @@ module.exports = ((env, argv) => {
     var uikitfeCFG = AddHTMLPage({ common_filename: 'fe', input_path: 'SRC/pages/ui-kit/fe', publicPath: '/' });
     var uikitcardsCFG = AddHTMLPage({ common_filename: 'cards', input_path: 'SRC/pages/ui-kit/cards', publicPath: '/' });
     //---Site-Pages-----------
-    var indexCFG = AddHTMLPage({ common_filename: 'index', input_path: 'SRC/pages/index', output_path: '.', is_clean: true });
+    var indexCFG = AddHTMLPage({ common_filename: 'index', input_path: 'SRC/pages/index', output_path: '.' });
     var searchroomCFG = AddHTMLPage({ common_filename: 'sr', input_path: 'SRC/pages/search-room', publicPath: '/' });
     var roomdetailsCFG = AddHTMLPage({ common_filename: 'rd', input_path: 'SRC/pages/room-details', publicPath: '/' })
     var signupCFG = AddHTMLPage({ common_filename: 'sign-up', input_path: 'SRC/pages/sign-up', publicPath: '/' })
     var signinCFG = AddHTMLPage({ common_filename: 'sign-in', input_path: 'SRC/pages/sign-in', publicPath: '/' })
 
-    if (isDev) return [uikithfCFG, uikitctCFG, uikitfeCFG, uikitcardsCFG, indexCFG, searchroomCFG, roomdetailsCFG, signupCFG, signinCFG];
-    return [indexCFG, searchroomCFG, roomdetailsCFG, signupCFG,];
+     if (isDev) return [uikithfCFG, uikitctCFG, uikitfeCFG, uikitcardsCFG, indexCFG, searchroomCFG, roomdetailsCFG, signupCFG, signinCFG];
+     return [indexCFG, searchroomCFG, roomdetailsCFG, signupCFG,];
 })

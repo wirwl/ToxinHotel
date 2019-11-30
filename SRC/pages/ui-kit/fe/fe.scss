@@ -5,7 +5,7 @@
 
 body {
   margin: 0 auto;
-  padding: 143px 0px 132px 141px;
+  padding: 140px 0px 132px 140px;
   min-width: 320px;
   max-width: 1440px;
   display: flex;
@@ -19,10 +19,11 @@ body {
 .column2,
 .column3 {
   width: 320px;
+  padding-top: 3px;
 }
 
 .column2 {
-  margin-right: 72px;
+  margin-right: 72px;  
 }
 .column1__list,
 .column2__list,
@@ -33,7 +34,7 @@ body {
   margin-bottom: 20px;  
 }
 .column1__wrapper-for-datepicker-inputs {
-  margin-bottom: 41px;
+  margin-bottom: 39px;
 }
 
 .column1__datepicker-inputs-list {
@@ -44,7 +45,7 @@ body {
   width: 150px;
 }
 .column1__wrapper-for-masked-input {
-  margin-bottom: 35px;
+  margin-bottom: 38px;
 }
 .column1__datepicker-inputs-item:nth-child(1) {
   margin-right: 20px;
@@ -55,7 +56,7 @@ body {
 }
 
 .column1__wrapper-for-fdd-input {
-  margin-bottom: 41px;
+  margin-bottom: 39px;
   width: 266px;
 }
 .column1__wrapper-for-subscribe-input {
@@ -63,14 +64,14 @@ body {
   width: 267px;
 }
 .column1__wrapper-for-comport-input {
-  margin-bottom: 164px;
+  margin-bottom: 168px;
 }
 
 .column1__wrapper-for-ecl1 {
   margin-bottom: 40px;
 }
 .column1__wrapper-for-ecl2 {
-  margin-bottom: 41px;
+  margin-bottom: 40px;
 }
 
 .column1__wrapper-for-comfort-status-list {
@@ -132,8 +133,7 @@ body {
 
 .column__wrapper {
   display: flex;
-  flex-direction: column;
-  //border: 1px dashed blue;
+  flex-direction: column;  
 }
 
 .column23__wrapper {
@@ -185,7 +185,7 @@ body {
   margin-bottom: 17px;
 }
 .column3__wrapper-for-guests-input2 {
-  margin-bottom: 258px;
+  margin-bottom: 255px;
 }
 .column3__wrapper-for-bullet-list {
   width: 260px;
