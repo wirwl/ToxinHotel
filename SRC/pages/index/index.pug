@@ -7,7 +7,8 @@ html(lang="en")
   head
     meta(charset="UTF-8")
     title Бронирование номера
-    +favicon    
+    +favicon       
+    link(href="index.css" rel="stylesheet") 
   body        
     +header({login:'Войти', reg:'Зарегистрироваться', isAuth:false, 
                              menu: [{text:'О нас', link:'#'},
@@ -47,4 +48,5 @@ html(lang="en")
         ], desc:'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',
            sub:{caption:'Подписка', desc:'Получайте специальные предложения и новости сервиса', placeholder:'Email'},
            copyright: 'Copyright © 2018 Toxin отель. Все права зачищены.'
-        })
+        })    
+    script(type="text/javascript" src="index.js")

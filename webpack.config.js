@@ -8,7 +8,7 @@ const discardduplicates = require('postcss-discard-duplicates');
 const flexbugsfixes = require('postcss-flexbugs-fixes');
 const merge = require('webpack-merge');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
-
+let devServer;
 process.noDeprecation = true;
 process.traceDeprecation = true;
 
@@ -17,6 +17,22 @@ module.exports = ((env, argv) => {
     var isDev = argv.mode === "development";
     var pathOutput = isDev ? 'Result/dev' : 'Result/prod';
     var dtValue = isDev ? 'source-map' : 'none';
+
+    function reloadHtml() {
+        const cache = {}
+        const plugin = {name: 'CustomHtmlReloadPlugin'}
+        this.hooks.compilation.tap(plugin, compilation => {
+          compilation.hooks.htmlWebpackPluginAfterEmit.tap(plugin, data => {
+            const orig = cache[data.outputName]
+            const html = data.html.source()
+            // plugin seems to emit on any unrelated change?
+            if (orig && orig !== html) {
+              devServer.sockWrite(devServer.sockets, 'content-changed')
+            }
+            cache[data.outputName] = html
+          })
+        })
+      }
 
     function AddHTMLPage(data) {
         let common_path = data.input_path.substring(data.input_path.indexOf('/') + 1);
@@ -30,7 +46,8 @@ module.exports = ((env, argv) => {
             },
             plugins: [
                 new MiniCssExtractPlugin({ filename: data.output_path + '/' + data.common_filename + '.css' }),
-                new HtmlWebpackPlugin({ filename: data.output_path + '/' + data.common_filename + '.html', template: data.input_path + '/' + data.common_filename + '.pug' }),
+                new HtmlWebpackPlugin({ filename: data.output_path + '/' + data.common_filename + '.html', template: data.input_path + '/' + data.common_filename + '.pug', inject: false }),
+                reloadHtml
             ]
         })
         return result;
@@ -39,6 +56,9 @@ module.exports = ((env, argv) => {
     var common = {
         devServer: {
             stats: 'errors-only',
+            before(app, server) {
+                devServer = server;
+              }
         },
         performance: { hints: false },
         devtool: dtValue,

@@ -20,6 +20,3 @@ import '../../components/guests-input/guests-input'
 import '../../components/header-menu/header-menu'
 
 import '../../components/room-reservation-form/room-reservation-form'
-
-//import './images/backgrounds/index.jpg';
-

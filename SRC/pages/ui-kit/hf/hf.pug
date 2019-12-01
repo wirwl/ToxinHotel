@@ -8,6 +8,7 @@ html(lang="en")
     meta(charset="UTF-8")
     title Headers & Footers
     +favicon    
+    link(href="hf.css" rel="stylesheet")
   body
     - var menu = [
     -    {text:"Home", link:"#", isBold:true},
@@ -54,3 +55,4 @@ html(lang="en")
     +header({isAuth:true, menu: menu})
     +footer({menu:menufooter, desc:desc, sub:{caption:caption, desc:subdesc, placeholder:ph},copyright: cr})
     +footer({menu:menufooter, desc:desc, sub:{caption:caption, desc:subdesc, placeholder:ph},copyright: cr})
+    script(type="text/javascript" src="hf.js")

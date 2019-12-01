@@ -15,6 +15,7 @@ html(lang="en")
     meta(charset="UTF-8")
     title Поиск номеров
     +favicon    
+    link(href="sr.css" rel="stylesheet")
   body        
     +header({login:'Войти', reg:'Зарегистрироваться', isAuth:false, 
                              menu: [{text:'О нас', link:'#'},
@@ -193,3 +194,4 @@ html(lang="en")
            sub:{caption:'Подписка', desc:'Получайте специальные предложения и новости сервиса', placeholder:'Email'},
            copyright: 'Copyright © 2018 Toxin отель. Все права зачищены.'
         })
+    script(type="text/javascript" src="sr.js")
