@@ -21,7 +21,7 @@
     > **npx browserslist** - run this command  in project directory to see what browsers was selected
 
     > **npx browserslist --coverage** - check coverage for selected browsers
-
+ 9. Pages mark up is ["responsive"](http://www.liquidapsive.com), minimun width is 320 pixels, maximum width is 1440 pixels, page centered
 ## Watch result on github.io
   1. UI Kit
      + [Colors & Type](https://wirwl.github.io)

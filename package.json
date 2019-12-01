@@ -65,7 +65,6 @@
     "flexslider": "^2.7.2",
     "ion-rangeslider": "^2.3.0",
     "jquery": "^3.4.1",
-    "jquery-mask-plugin": "^1.14.16",
-    "parallel-webpack": "^2.4.0"
+    "jquery-mask-plugin": "^1.14.16"
   }
 }

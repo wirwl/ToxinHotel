@@ -8,7 +8,7 @@ const discardduplicates = require('postcss-discard-duplicates');
 const flexbugsfixes = require('postcss-flexbugs-fixes');
 const merge = require('webpack-merge');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
-var createVariants = require('parallel-webpack').createVariants;
+const cssnano = require('cssnano');
 
 process.noDeprecation = true;
 process.traceDeprecation = true;
@@ -76,7 +76,7 @@ module.exports = ((env, argv) => {
                                         replace: true,
                                         mediaQuery: true,
                                         minPixelValue: 0
-                                    })
+                                    }),
                                 ],
                                 sourceMap: true
                             }
@@ -163,6 +163,6 @@ module.exports = ((env, argv) => {
     var signupCFG = AddHTMLPage({ common_filename: 'sign-up', input_path: 'SRC/pages/sign-up', publicPath: '/' })
     var signinCFG = AddHTMLPage({ common_filename: 'sign-in', input_path: 'SRC/pages/sign-in', publicPath: '/' })
 
-     if (isDev) return [uikithfCFG, uikitctCFG, uikitfeCFG, uikitcardsCFG, indexCFG, searchroomCFG, roomdetailsCFG, signupCFG, signinCFG];
-     return [indexCFG, searchroomCFG, roomdetailsCFG, signupCFG,];
+    if (isDev) return [uikithfCFG, uikitctCFG, uikitfeCFG, uikitcardsCFG, indexCFG, searchroomCFG, roomdetailsCFG, signupCFG, signinCFG];
+    return [indexCFG, searchroomCFG, roomdetailsCFG, signupCFG,];
 })
