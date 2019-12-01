@@ -8,6 +8,7 @@
     "clr:dev": "rm -r Result\\dev",
     "clr:prod": "rm -r Result\\prod",
     "dev": "webpack --mode=development --display-error-details --display errors-only",
+    "dev:ghp": "webpack --env.is_ghp --mode=development --display-error-details --display errors-only",    
     "prod": "webpack --mode=production --display errors-only",
     "le:hf": "webpack-dev-server --open --mode=development --display-error-details --open-page pages/ui-kit/hf/hf.html",
     "le:ct": "webpack-dev-server --open --mode=development --display-error-details --open-page pages/ui-kit/ct/ct.html",

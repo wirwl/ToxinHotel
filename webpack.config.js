@@ -17,22 +17,22 @@ module.exports = ((env, argv) => {
     var isDev = argv.mode === "development";
     var pathOutput = isDev ? 'Result/dev' : 'Result/prod';
     var dtValue = isDev ? 'source-map' : 'none';
-
+    
     function reloadHtml() {
         const cache = {}
-        const plugin = {name: 'CustomHtmlReloadPlugin'}
+        const plugin = { name: 'CustomHtmlReloadPlugin' }
         this.hooks.compilation.tap(plugin, compilation => {
-          compilation.hooks.htmlWebpackPluginAfterEmit.tap(plugin, data => {
-            const orig = cache[data.outputName]
-            const html = data.html.source()
-            // plugin seems to emit on any unrelated change?
-            if (orig && orig !== html) {
-              devServer.sockWrite(devServer.sockets, 'content-changed')
-            }
-            cache[data.outputName] = html
-          })
+            compilation.hooks.htmlWebpackPluginAfterEmit.tap(plugin, data => {
+                const orig = cache[data.outputName]
+                const html = data.html.source()
+                // plugin seems to emit on any unrelated change?
+                if (orig && orig !== html) {
+                    devServer.sockWrite(devServer.sockets, 'content-changed')
+                }
+                cache[data.outputName] = html
+            })
         })
-      }
+    }
 
     function AddHTMLPage(data) {
         let common_path = data.input_path.substring(data.input_path.indexOf('/') + 1);
@@ -58,7 +58,7 @@ module.exports = ((env, argv) => {
             stats: 'errors-only',
             before(app, server) {
                 devServer = server;
-              }
+            }
         },
         performance: { hints: false },
         devtool: dtValue,
@@ -170,17 +170,20 @@ module.exports = ((env, argv) => {
             new FriendlyErrorsWebpackPlugin()
         ]
     };
+    //------------------------    
+    let server_root = '/';
+    if (false) server_root = '/PetProjects/FSD/ToxinHotel/';
     //---UI-KIT---------------
-    var uikithfCFG = AddHTMLPage({ common_filename: 'hf', input_path: 'SRC/pages/ui-kit/hf', publicPath: '/' });
-    var uikitctCFG = AddHTMLPage({ common_filename: 'ct', input_path: 'SRC/pages/ui-kit/ct', publicPath: '/' });
-    var uikitfeCFG = AddHTMLPage({ common_filename: 'fe', input_path: 'SRC/pages/ui-kit/fe', publicPath: '/' });
-    var uikitcardsCFG = AddHTMLPage({ common_filename: 'cards', input_path: 'SRC/pages/ui-kit/cards', publicPath: '/' });
+    var uikithfCFG = AddHTMLPage({ common_filename: 'hf', input_path: 'SRC/pages/ui-kit/hf', publicPath: '../../../' });
+    var uikitctCFG = AddHTMLPage({ common_filename: 'ct', input_path: 'SRC/pages/ui-kit/ct', publicPath: '../../../' });
+    var uikitfeCFG = AddHTMLPage({ common_filename: 'fe', input_path: 'SRC/pages/ui-kit/fe', publicPath: '../../../' });
+    var uikitcardsCFG = AddHTMLPage({ common_filename: 'cards', input_path: 'SRC/pages/ui-kit/cards', publicPath: '../../../' });
     //---Site-Pages-----------
     var indexCFG = AddHTMLPage({ common_filename: 'index', input_path: 'SRC/pages/index', output_path: '.' });
-    var searchroomCFG = AddHTMLPage({ common_filename: 'sr', input_path: 'SRC/pages/search-room', publicPath: '/' });
-    var roomdetailsCFG = AddHTMLPage({ common_filename: 'rd', input_path: 'SRC/pages/room-details', publicPath: '/' })
-    var signupCFG = AddHTMLPage({ common_filename: 'sign-up', input_path: 'SRC/pages/sign-up', publicPath: '/' })
-    var signinCFG = AddHTMLPage({ common_filename: 'sign-in', input_path: 'SRC/pages/sign-in', publicPath: '/' })
+    var searchroomCFG = AddHTMLPage({ common_filename: 'sr', input_path: 'SRC/pages/search-room', publicPath: '../../' });
+    var roomdetailsCFG = AddHTMLPage({ common_filename: 'rd', input_path: 'SRC/pages/room-details', publicPath: '../../' })
+    var signupCFG = AddHTMLPage({ common_filename: 'sign-up', input_path: 'SRC/pages/sign-up', publicPath: '../../' })
+    var signinCFG = AddHTMLPage({ common_filename: 'sign-in', input_path: 'SRC/pages/sign-in', publicPath: '../../' })
 
     if (isDev) return [uikithfCFG, uikitctCFG, uikitfeCFG, uikitcardsCFG, indexCFG, searchroomCFG, roomdetailsCFG, signupCFG, signinCFG];
     return [indexCFG, searchroomCFG, roomdetailsCFG, signupCFG,];
