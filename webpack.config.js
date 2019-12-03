@@ -8,8 +8,6 @@ const discardduplicates = require('postcss-discard-duplicates');
 const flexbugsfixes = require('postcss-flexbugs-fixes');
 const merge = require('webpack-merge');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
-const postcsseasyimport = require('postcss-easy-import');
-const url = require("postcss-url");
 
 let devServer;
 process.noDeprecation = true;
