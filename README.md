@@ -33,7 +33,7 @@
      + [Search room/Filter](https://wirwl.github.io/PetProjects/FSD/ToxinHotel/pages/search-room/sr.html)
      + [Room details](https://wirwl.github.io/PetProjects/FSD/ToxinHotel/pages/room-details/rd.html)
      + [Registration](https://wirwl.github.io/PetProjects/FSD/ToxinHotel/pages/sign-up/sign-up.html)
-     + [Sign in](wirwl.github.io/PetProjects/FSD/ToxinHotel/pages/sign-in/sign-in.html)
+     + [Sign in](https://wirwl.github.io/PetProjects/FSD/ToxinHotel/pages/sign-in/sign-in.html)
 
 ## Some usefull commands
   >**git clone https://github.com/wirwl/toxinhotel.git** - copy project from remote repository to local computer
