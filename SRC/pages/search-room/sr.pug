@@ -17,7 +17,7 @@ html(lang="en")
     +favicon    
     link(href="sr.css" rel="stylesheet")
   body        
-    +header({login:'Войти', reg:'Зарегистрироваться', isAuth:false, 
+    +header({logo_path:"../../components/logo/logo.svg", login:'Войти', reg:'Зарегистрироваться', isAuth:false, 
                              menu: [{text:'О нас', link:'#'},
                                     {text:'Услуги', link: '#', 
                                       sm:[
@@ -178,7 +178,7 @@ html(lang="en")
                     ]})
           .rooms__wrapper-pagination
             +pagination({pages:15, page:1, showed:12, showedlastpage:6, total:100})
-    +footer({menu:[
+    +footer({logo_path:"../../components/logo/logo.svg", menu:[
         {title:'Навигация',items:[{text:'О нас', link:'about.html'},
                                      {text:'Новости', link:'news.html'},
                                      {text:'Служба поддержки', link:'support.html'},

@@ -51,8 +51,8 @@ html(lang="en")
     - var subdesc='Receive our latest news and promotions in your inbox!'
     - var ph='Your email address'
     - var cr='Copyright © 2018 Toxin UI Kit. All rights reserved.'
-    +header({isAuth:false, menu: menu})
-    +header({isAuth:true, menu: menu})
-    +footer({menu:menufooter, desc:desc, sub:{caption:caption, desc:subdesc, placeholder:ph},copyright: cr})
-    +footer({menu:menufooter, desc:desc, sub:{caption:caption, desc:subdesc, placeholder:ph},copyright: cr})
+    +header({logo_path:"../../../components/logo/logo.svg", isAuth:false, menu: menu})
+    +header({logo_path:"../../../components/logo/logo.svg", isAuth:true, menu: menu})
+    +footer({logo_path:"../../../components/logo/logo.svg", menu:menufooter, desc:desc, sub:{caption:caption, desc:subdesc, placeholder:ph},copyright: cr})
+    +footer({logo_path:"../../../components/logo/logo.svg", menu:menufooter, desc:desc, sub:{caption:caption, desc:subdesc, placeholder:ph},copyright: cr})
     script(type="text/javascript" src="hf.js")

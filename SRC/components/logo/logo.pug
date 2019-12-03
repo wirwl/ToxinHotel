@@ -1,4 +1,6 @@
-mixin logo
-    img(src="/images/components/logo/logo.svg" alt="logo", class="logo")
+mixin logo(data)
+    img(src=data.path alt="logo", class="logo")
+    //-img(src="${require(`../../../components/logo/logo.svg`)}" alt="logo", class="logo")
+    //-<img src="${require(`./images/gallery.png`)}">
     
         

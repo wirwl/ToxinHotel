@@ -2,17 +2,18 @@ include ../image-slider/image-slider
 mixin room-images(data)
   .room-images
     .room-image1
-      img.room-image1__image(src="/images/components/room-images/image1.jpg")
+      img.room-image1__image(src=data.images[0])
     .room-images__wrapper
       .room-image2
-        img.room-image2__image(src="/images/components/room-images/image2.jpg")
+        img.room-image2__image(src=data.images[1])
       .room-image3
-        img.room-image3__image(src="/images/components/room-images/image3.jpg")
+        img.room-image3__image(src=data.images[2])
     .flexslider
       ul.slides.flexslider__list
-        li.flexslider__item
-          img.flexslider__image(src='/images/components/room-images/image1.jpg')
-        li.flexslider__item
-          img.flexslider__image(src='/images/components/room-images/image2.jpg')
-        li.flexslider__item
-          img.flexslider__image(src='/images/components/room-images/image3.jpg')
+        for image in data.images
+          li.flexslider__item
+            img.flexslider__image(src=image)
+        //- li.flexslider__item
+        //-   img.flexslider__image(src='image2.jpg')
+        //- li.flexslider__item
+        //-   img.flexslider__image(src='image3.jpg')

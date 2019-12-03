@@ -5,7 +5,7 @@ include ../button/button
 mixin header(data)
   header.header(class=data.isAuth && 'header_auth-true')    
     .header__wrapper-logo
-      +logo
+      +logo({path:data.logo_path})
     .header__wrapper-menu
       +header-menu(data.menu)
     .header__wrapper-auth

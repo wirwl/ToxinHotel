@@ -8,6 +8,9 @@ const discardduplicates = require('postcss-discard-duplicates');
 const flexbugsfixes = require('postcss-flexbugs-fixes');
 const merge = require('webpack-merge');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+const postcsseasyimport = require('postcss-easy-import');
+const url = require("postcss-url");
+
 let devServer;
 process.noDeprecation = true;
 process.traceDeprecation = true;
@@ -17,7 +20,7 @@ module.exports = ((env, argv) => {
     var isDev = argv.mode === "development";
     var pathOutput = isDev ? 'Result/dev' : 'Result/prod';
     var dtValue = isDev ? 'source-map' : 'none';
-    
+
     function reloadHtml() {
         const cache = {}
         const plugin = { name: 'CustomHtmlReloadPlugin' }
@@ -66,7 +69,15 @@ module.exports = ((env, argv) => {
             rules: [
                 {
                     test: /\.pug$/,
-                    use: ["pug-loader"]
+                    use: [
+                        {
+                            loader: 'html-loader',
+                            options: {
+                                attrs: ['img:src'],
+                            }
+                        },
+                        `pug-html-loader?pretty=${isDev}`,
+                    ]
                 },
                 {
                     test: /\.(css|scss)$/,
@@ -75,9 +86,22 @@ module.exports = ((env, argv) => {
                             loader: MiniCssExtractPlugin.loader,
                             options: { sourceMap: true }
                         },
+
                         {
                             loader: "css-loader",
-                            options: { sourceMap: true, url: true }
+                            options: {
+                                import:
+                                    (parsedImport, resourcePath) => {
+                                        if (parsedImport.url[0] == '/') {
+                                            let parsed_resoucePath = path.parse(resourcePath);
+                                            let relativePart = parsedImport.url.substring(1)
+                                            parsedImport.url = path.relative(parsed_resoucePath.dir, relativePart)
+                                        }
+                                        return true;
+                                    },
+                                sourceMap: true,
+                                url: true
+                            }
                         },
                         {
                             loader: 'postcss-loader',
@@ -85,7 +109,6 @@ module.exports = ((env, argv) => {
                                 "map": true,
                                 plugins: [
                                     autoprefixer(),
-                                    discardduplicates(),
                                     flexbugsfixes(),
                                     pxtorem({
                                         rootValue: 14,
@@ -96,6 +119,7 @@ module.exports = ((env, argv) => {
                                         mediaQuery: true,
                                         minPixelValue: 0
                                     }),
+                                    discardduplicates()
                                 ],
                                 sourceMap: true
                             }
@@ -170,9 +194,6 @@ module.exports = ((env, argv) => {
             new FriendlyErrorsWebpackPlugin()
         ]
     };
-    //------------------------    
-    let server_root = '/';
-    if (false) server_root = '/PetProjects/FSD/ToxinHotel/';
     //---UI-KIT---------------
     var uikithfCFG = AddHTMLPage({ common_filename: 'hf', input_path: 'SRC/pages/ui-kit/hf', publicPath: '../../../' });
     var uikitctCFG = AddHTMLPage({ common_filename: 'ct', input_path: 'SRC/pages/ui-kit/ct', publicPath: '../../../' });
@@ -184,7 +205,7 @@ module.exports = ((env, argv) => {
     var roomdetailsCFG = AddHTMLPage({ common_filename: 'rd', input_path: 'SRC/pages/room-details', publicPath: '../../' })
     var signupCFG = AddHTMLPage({ common_filename: 'sign-up', input_path: 'SRC/pages/sign-up', publicPath: '../../' })
     var signinCFG = AddHTMLPage({ common_filename: 'sign-in', input_path: 'SRC/pages/sign-in', publicPath: '../../' })
-
-    if (isDev) return [uikithfCFG, uikitctCFG, uikitfeCFG, uikitcardsCFG, indexCFG, searchroomCFG, roomdetailsCFG, signupCFG, signinCFG];
-    return [indexCFG, searchroomCFG, roomdetailsCFG, signupCFG,];
+    
+    if (isDev) return [indexCFG, searchroomCFG, roomdetailsCFG, signupCFG, signinCFG, uikithfCFG, uikitctCFG, uikitfeCFG, uikitcardsCFG];
+    return [indexCFG, searchroomCFG, roomdetailsCFG, signupCFG, signinCFG,];
 })

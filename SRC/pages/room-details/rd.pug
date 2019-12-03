@@ -17,7 +17,7 @@ html(lang="en")
     +favicon    
     link(href="rd.css" rel="stylesheet")
   body        
-    +header({login:'Войти', reg:'Зарегистрироваться', isAuth:false, 
+    +header({logo_path:"../../components/logo/logo.svg", logo_path:"../../components/logo/logo.svg",login:'Войти', reg:'Зарегистрироваться', isAuth:false, 
                           menu: [{text:'О нас', link:'#'},
                                 {text:'Услуги', link: '#', 
                                   sm:[
@@ -37,7 +37,7 @@ html(lang="en")
                                   ]},                                    
                                 ]})     
     main.main-content
-      +room-images 
+      +room-images({images:['../../components/room-images/image1.jpg', '../../components/room-images/image2.jpg', '../../components/room-images/image3.jpg']}) 
       .room-details
         section.room-details__column1
           .room-details__common-wrapper1
@@ -70,7 +70,7 @@ html(lang="en")
         section.room-details__column2      
           .room-details__column2-wrapper-order-info-form
             +order-info-form
-    +footer({menu:[
+    +footer({logo_path:"../../components/logo/logo.svg", menu:[
         {title:'Навигация',items:[{text:'О нас', link:'about.html'},
                                      {text:'Новости', link:'news.html'},
                                      {text:'Служба поддержки', link:'support.html'},

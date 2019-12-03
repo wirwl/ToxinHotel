@@ -11,7 +11,7 @@ html(lang="en")
     +favicon    
     link(href="sign-in.css" rel="stylesheet")
   body            
-    +header({login:'Войти', reg:'Зарегистрироваться', isAuth:false, 
+    +header({logo_path:"../../components/logo/logo.svg", login:'Войти', reg:'Зарегистрироваться', isAuth:false, 
                             menu: [{text:'О нас', link:'#'},
                                   {text:'Услуги', link: '#', 
                                     sm:[
@@ -33,7 +33,7 @@ html(lang="en")
     main.main-content  
       section.main-content__sign-in-form
         +sign-in-form
-    +footer({menu:[
+    +footer({logo_path:"../../components/logo/logo.svg", menu:[
         {title:'Навигация',items:[{text:'О нас', link:'about.html'},
                                      {text:'Новости', link:'news.html'},
                                      {text:'Служба поддержки', link:'support.html'},

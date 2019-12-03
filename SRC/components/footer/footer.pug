@@ -5,7 +5,7 @@ mixin footer(data)
   footer.footer
     .footerUp
       .logoArea
-        +logo
+        +logo({path:data.logo_path})
         p.logoArea__text #{data.desc}
       +createFooterMenu(data.menu)
       .subscribeArea

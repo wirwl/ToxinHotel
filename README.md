@@ -24,16 +24,16 @@
  9. Pages mark up is ["responsive"](http://www.liquidapsive.com), minimun width is 320 pixels, maximum width is 1440 pixels, page centered
 ## Watch result on github.io
   1. UI Kit
-     + [Colors & Type](https://wirwl.github.io)
-     + [Form Elements](https://wirwl.github.io)
-     + [Cards](https://wirwl.github.io)
-     + [Headers & Footers](https://wirwl.github.io)               
+     + [Colors & Type](https://wirwl.github.io/PetProjects/FSD/ToxinHotel/pages/ui-kit/ct/ct.html)
+     + [Form Elements](https://wirwl.github.io/PetProjects/FSD/ToxinHotel/pages/ui-kit/fe/fe.html)
+     + [Cards](https://wirwl.github.io/PetProjects/FSD/ToxinHotel/pages/ui-kit/cards/cards.html)
+     + [Headers & Footers](https://wirwl.github.io/PetProjects/FSD/ToxinHotel/pages/ui-kit/hf/hf.html)  
   2. Website pages
-     + [Landing page](https://wirwl.github.io)
-     + [Search room/Filter](https://wirwl.github.io)
-     + [Room details](https://wirwl.github.io)
-     + [Registration](https://wirwl.github.io)
-     + [Sign in](https://wirwl.github.io)
+     + [Landing page](https://wirwl.github.io/PetProjects/FSD/ToxinHotel/index.html)
+     + [Search room/Filter](https://wirwl.github.io/PetProjects/FSD/ToxinHotel/pages/search-room/sr.html)
+     + [Room details](https://wirwl.github.io/PetProjects/FSD/ToxinHotel/pages/room-details/rd.html)
+     + [Registration](https://wirwl.github.io/PetProjects/FSD/ToxinHotel/pages/sign-up/sign-up.html)
+     + [Sign in](wirwl.github.io/PetProjects/FSD/ToxinHotel/pages/sign-in/sign-in.html)
 
 ## Some usefull commands
   >**git clone https://github.com/wirwl/toxinhotel.git** - copy project from remote repository to local computer
