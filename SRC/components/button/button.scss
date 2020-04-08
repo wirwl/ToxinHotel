@@ -38,7 +38,6 @@ $myblue: #008ed6;
   z-index: -2;
   background: #bc9cff;
   background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-  //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bc9cff', endColorstr='#8ba4f9',GradientType=1 );
 }
 
 .button_bordered:after {
@@ -58,7 +57,7 @@ $myblue: #008ed6;
 
 .button_arrow {
   padding: 15px 20px;
-  width: 100%;  
+  width: 100%;
   height: 44px;
   position: relative;
 }
@@ -71,13 +70,13 @@ $myblue: #008ed6;
   font-size: 24px;
   text-transform: none;
 }
-//-------------------------------------------------
+
 .button.button_simple.button_disabled {
   color: rgba(31, 32, 65, 0.5);
 }
 
-.button.button_bordered.button_disabled:before {  
-  background: linear-gradient(180deg, #bc9cff7f 0%, #8ba4f97f 100%);  
+.button.button_bordered.button_disabled:before {
+  background: linear-gradient(180deg, #bc9cff7f 0%, #8ba4f97f 100%);
 }
 
 .button.button_background_colored.button_disabled {
@@ -91,6 +90,7 @@ $myblue: #008ed6;
 }
 .button_dynamic-width {
   width: 100%;
+  min-width: 78px;
   padding-left: 0;
   padding-right: 0;
 }
