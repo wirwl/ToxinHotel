@@ -12,7 +12,7 @@ include ../../../components/image-slider/image-slider
 doctype html
 html(lang="ru")
   head
-    meta(charset="UTF-8")
+    +meta-tags({description:'UIKit: cards', keywords:'uikit, cards'})    
     title Cards
     +favicon
     link(href="cards.css" rel="stylesheet")
@@ -24,29 +24,29 @@ html(lang="ru")
         li.column1__item       
           +sign-up-form 
     .column2
-        ul.column2__list
-          li.column2__item
-            +order-info-form
-          li.column2__item
-            +sign-in-form
+      ul.column2__list
+        li.column2__item
+          +order-info-form
+        li.column2__item
+          +sign-in-form
     .column3
       ul.column3__list
         li.column3__item
           +datepicker({isStandAlone:true})
         li.column3__item.column3__wrapper-for-image-slider          
           +room-info({id:'image-slider1', number:888, isLux:true, cost:'9 990', starscount:5, commentscount:145, isShowNavBtns:true,
-                              images:[
-                              '../../../images/rooms/888/image1.png',
-                              'https://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg',
-                              'https://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg',
-                              'https://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg',
-                              ]})
+            images:[
+            '../../../images/rooms/888/image1.png',
+            'https://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg',
+            'https://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg',
+            'https://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg',
+            ]})
         li.column3__item.column3__wrapper-for-image-slider          
           +room-info({id:'image-slider2', number: 840, isLux:false, cost:'9 990', starscount:4, commentscount:65, 
-                              images:[
-                              '../../../images/rooms/840/image1.png',
-                              'https://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg',
-                              'https://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg',
-                              'https://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg',
-                              ]})
+            images:[
+            '../../../images/rooms/840/image1.png',
+            'https://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg',
+            'https://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg',
+            'https://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg',
+            ]})
     script(type="text/javascript" src="cards.js")

@@ -12,30 +12,30 @@ include ../../components/donut-chart/donut-chart
 doctype html
 html(lang="en")
   head
-    meta(charset="UTF-8")
+    +meta-tags({description:'Information about room', keywords:'room details, feedbacks, rules, cancel'})    
     title О номере
     +favicon    
     link(href="rd.css" rel="stylesheet")
   body        
     +header({logo_path:"../../components/logo/logo.svg", logo_path:"../../components/logo/logo.svg",login:'Войти', reg:'Зарегистрироваться', isAuth:false, 
-                          menu: [{text:'О нас', link:'#'},
-                                {text:'Услуги', link: '#', 
-                                  sm:[
-                                    {text:'Пунтк21', link: '#'},
-                                    {text:'Пунтк22', link: '#'},
-                                    {text:'Пунтк23', link: '#'},
-                                    {text:'Пунтк24', link: '#'},
-                                    {text:'Пунтк25', link: '#'},
-                                  ]},
-                                {text:'Вакансии', link: '#'},
-                                {text:'Новости', link: '#'},
-                                {text:'Соглашения', link: '#',
-                                  sm:[
-                                    {text:'Пунтк51', link: '#'},
-                                    {text:'Пунтк52', link: '#'},
-                                    {text:'Пунтк53', link: '#'},
-                                  ]},                                    
-                                ]})     
+      menu: [{text:'О нас', link:'#'},
+        {text:'Услуги', link: '#', 
+          sm:[
+            {text:'Пунтк21', link: '#'},
+            {text:'Пунтк22', link: '#'},
+            {text:'Пунтк23', link: '#'},
+            {text:'Пунтк24', link: '#'},
+            {text:'Пунтк25', link: '#'},
+          ]},
+        {text:'Вакансии', link: '#'},
+        {text:'Новости', link: '#'},
+        {text:'Соглашения', link: '#',
+          sm:[
+            {text:'Пунтк51', link: '#'},
+            {text:'Пунтк52', link: '#'},
+            {text:'Пунтк53', link: '#'},
+          ]},                                    
+        ]})     
     main.main-content
       +room-images({images:['../../components/room-images/image1.jpg', '../../components/room-images/image2.jpg', '../../components/room-images/image3.jpg']}) 
       .room-details
@@ -44,26 +44,26 @@ html(lang="en")
             .room-details__wrapper-csl
               h2.room-details__wrapper-csl-caption Сведения о номере
               +comfort-status-list([{icon:'tag_faces', caption:'Комфорт', text:'Шумопоглощающие стены'},
-                                  {icon:'location_city', caption:'Удобство', text:'Окно в каждой из спален'},
-                                  {icon:'whatshot', caption:'Уют', text:'Номер оснащён камином', isHideLine:true}])
+                {icon:'location_city', caption:'Удобство', text:'Окно в каждой из спален'},
+                {icon:'whatshot', caption:'Уют', text:'Номер оснащён камином', isHideLine:true}])
             .room-details__wrapper-donut-chart              
               +donut-chart
           .room-details__wrapper-fl
             +feedback-list({caption:'Отзывы посетителей номера', count:'2 отзыва',
-                          feedbacks:[{image:{alt:'avatar', src:'../../images/avatar.jpg'}, 
-                          like:{count: 12, id:'avatar', isChecked:true},
-                          caption:'Мурад Сарафанов', time:'5 дней назад', text:'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'},
-                          {image:{alt:'avatar2', src:'../../images/avatar2.jpg'}, 
-                          like:{count: 2, id:'avatar2'},
-                          caption:'Патрисия Стёклышкова', time:'Неделю назад', text:'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент.'}
-                          ]
-                         })
+              feedbacks:[{image:{alt:'avatar', src:'../../images/avatar.jpg'}, 
+              like:{count: 12, id:'avatar', isChecked:true},
+              caption:'Мурад Сарафанов', time:'5 дней назад', text:'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'},
+              {image:{alt:'avatar2', src:'../../images/avatar2.jpg'}, 
+              like:{count: 2, id:'avatar2'},
+              caption:'Патрисия Стёклышкова', time:'Неделю назад', text:'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент.'}
+              ]
+})
           .room-details__common-wrapper2
             .room-details__bullets-list
               h2.room-details__bullets-list-caption Правила
               +bullets-list([{text:'Нельзя с питомцами'},
-                              {text:'Без вечеринок и мероприятий'},
-                              {text:'Время прибытия — после 13:00, а выезд до 12:00'}])            
+                {text:'Без вечеринок и мероприятий'},
+                {text:'Время прибытия — после 13:00, а выезд до 12:00'}])            
             .room-details__cancellation
               h2.room-details__cancellation-caption Отмена
               p.room-details__cancellation-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
@@ -71,19 +71,19 @@ html(lang="en")
           .room-details__column2-wrapper-order-info-form
             +order-info-form
     +footer({logo_path:"../../components/logo/logo.svg", menu:[
-        {title:'Навигация',items:[{text:'О нас', link:'about.html'},
-                                     {text:'Новости', link:'news.html'},
-                                     {text:'Служба поддержки', link:'support.html'},
-                                     {text:'Услуги', link:'products.html'}]},
-        {title:'О нас',  items:[{text:'О сервисе', link:'who.html'},
-                                     {text:'Наша команда', link:'team.html'},
-                                     {text:'Вакансии', link:'careers.html'},
-                                     {text:'Инвесторы', link:'investors.html'}]},
-        {title:'Служба поддержки',   items:[{text:'Соглашения', link:'doc.html'},
-                                     {text:'Сообщества', link:'com.html'},
-                                     {text:'Связь с нами', link:'git.html'}]}
-        ], desc:'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',
-           sub:{caption:'Подписка', desc:'Получайте специальные предложения и новости сервиса', placeholder:'Email'},
-           copyright: 'Copyright © 2018 Toxin отель. Все права зачищены.'
-        })
+      {title:'Навигация',items:[{text:'О нас', link:'about.html'},
+        {text:'Новости', link:'news.html'},
+        {text:'Служба поддержки', link:'support.html'},
+        {text:'Услуги', link:'products.html'}]},
+      {title:'О нас',  items:[{text:'О сервисе', link:'who.html'},
+        {text:'Наша команда', link:'team.html'},
+        {text:'Вакансии', link:'careers.html'},
+        {text:'Инвесторы', link:'investors.html'}]},
+      {title:'Служба поддержки',   items:[{text:'Соглашения', link:'doc.html'},
+        {text:'Сообщества', link:'com.html'},
+        {text:'Связь с нами', link:'git.html'}]}
+      ], desc:'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',
+        sub:{caption:'Подписка', desc:'Получайте специальные предложения и новости сервиса', placeholder:'Email'},
+        copyright: 'Copyright © 2018 Toxin отель. Все права зачищены.'
+      })
     script(type="text/javascript" src="rd.js")
