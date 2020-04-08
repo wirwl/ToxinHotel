@@ -17,25 +17,7 @@ html(lang="en")
     +favicon    
     link(href="sr.css" rel="stylesheet")
   body        
-    +header({logo_path:"../../components/logo/logo.svg", login:'Войти', reg:'Зарегистрироваться', isAuth:false, 
-      menu: [{text:'О нас', link:'#'},
-        {text:'Услуги', link: '#', 
-          sm:[
-            {text:'Пунтк21', link: '#'},
-            {text:'Пунтк22', link: '#'},
-            {text:'Пунтк23', link: '#'},
-            {text:'Пунтк24', link: '#'},
-            {text:'Пунтк25', link: '#'},
-          ]},
-        {text:'Вакансии', link: '#'},
-        {text:'Новости', link: '#'},
-        {text:'Соглашения', link: '#',
-          sm:[
-            {text:'Пунтк51', link: '#'},
-            {text:'Пунтк52', link: '#'},
-            {text:'Пунтк53', link: '#'},
-          ]},                                    
-        ]})      
+    +header(header_data)      
     main.main-content       
       .main-content__wrapper
         section.filters
@@ -58,8 +40,7 @@ html(lang="en")
             li.filters__item.filters__wrapper-accessibility
               +checkboxes-list({caption:'Доступность', 
                 checkboxes:[{id:'wk',text:'Широкий коридор', desc:'Ширина коридоров в номере не менее 91 см.'},
-                  {id:'hfi',text:'Помощник для инвалидов', desc:'На 1 этаже вас встретит специалист и проводит до номера.'}
-]})
+                  {id:'hfi',text:'Помощник для инвалидов', desc:'На 1 этаже вас встретит специалист и проводит до номера.'}]})
             li.filters__item.filters__wrapper-comfort
               +comfort-input({caption:'Удобства номера', 
                 iqdd:{isExpanded:false, placeholder:'', 
@@ -178,20 +159,5 @@ html(lang="en")
                 ]})
           .rooms__wrapper-pagination
             +pagination({pages:15, page:1, showed:12, showedlastpage:6, total:100})
-    +footer({logo_path:"../../components/logo/logo.svg", menu:[
-      {title:'Навигация',items:[{text:'О нас', link:'about.html'},
-        {text:'Новости', link:'news.html'},
-        {text:'Служба поддержки', link:'support.html'},
-        {text:'Услуги', link:'products.html'}]},
-      {title:'О нас',  items:[{text:'О сервисе', link:'who.html'},
-        {text:'Наша команда', link:'team.html'},
-        {text:'Вакансии', link:'careers.html'},
-        {text:'Инвесторы', link:'investors.html'}]},
-      {title:'Служба поддержки',   items:[{text:'Соглашения', link:'doc.html'},
-        {text:'Сообщества', link:'com.html'},
-        {text:'Связь с нами', link:'git.html'}]}
-      ], desc:'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',
-        sub:{caption:'Подписка', desc:'Получайте специальные предложения и новости сервиса', placeholder:'Email'},
-        copyright: 'Copyright © 2018 Toxin отель. Все права зачищены.'
-      })
+    +footer(footer_data)
     script(type="text/javascript" src="sr.js")

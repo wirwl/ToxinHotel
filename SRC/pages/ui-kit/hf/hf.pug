@@ -2,6 +2,7 @@ include ../../../components/header/header
 include ../../../components/button/button
 include ../../../components/footer/footer
 include ../../../common
+
 doctype html
 html(lang="en")
   head
@@ -10,49 +11,49 @@ html(lang="en")
     +favicon    
     link(href="hf.css" rel="stylesheet")
   body
-    - var menu = [
-    -    {text:"Home", link:"#", isBold:true},
-    -    {text:"About Us", link:"#"},
+    - const menuheader = [
+    -    {text:"Home", link:mock, isBold:true},
+    -    {text:"About Us", link:mock},
     -    {text:"Services", link:"#", sm:[
-    -        {text:"Одежда",link:"#", sm:[
-    -            {text:"Обувь", link:"o.html"},
-    -            {text:"Куртки",link:"ku.html"},
-    -            {text:"Брюки",link:"#", sm:[
-    -                {text:"Test1",link:"test.html"},
-    -                {text:"Test2",link:"test2.html"},
-    -                {text:"Test3",link:"test3.html"}
+    -        {text:"Одежда",link:mock, sm:[
+    -            {text:"Обувь", link:mock},
+    -            {text:"Куртки",link:mock},
+    -            {text:"Брюки",link:mock, sm:[
+    -                {text:"Test1",link:mock},
+    -                {text:"Test2",link:mock},
+    -                {text:"Test3",link:mock}
     -            ]}
     -        ]},
-    -        {text:"Электроника",link:"#", sm:[
-    -            {text:"Смартфоны", link:"sm.html"},
-    -            {text:"Планшеты", link:"sm.html"},
+    -        {text:"Электроника",link:mock, sm:[
+    -            {text:"Смартфоны", link:mock},
+    -            {text:"Планшеты", link:mock},
     -        ]},
-    -        {text:"Прод.пит.",link:"pp.html"}
+    -        {text:"Прод.пит.",link:mock}
     -    ]},    
-    -    {text:"Careers",link:"#"},
-    -    {text:"News", link:"#"},
-    -    {text:"Documentation", link:"#"}
+    -    {text:"Careers",link:mock},
+    -    {text:"News", link:mock},
+    -    {text:"Documentation", link:mock}
     - ]
     - var menufooter= [
-    -   {title:'NAVIGATION',items:[{text:'About Us', link:'about.html'},
-    -                                {text:'News', link:'news.html'},
-    -                                {text:'Support', link:'support.html'},
-    -                                {text:'Products', link:'products.html'}]},
-    -   {title:'ABOUT US',  items:[{text:'Who we are', link:'who.html'},
-    -                                {text:'Our team', link:'team.html'},
-    -                                {text:'Careers', link:'careers.html'},
-    -                                {text:'Investors', link:'investors.html'}]},
-    -   {title:'SUPPORT',   items:[{text:'Documentation', link:'doc.html'},
-    -                                {text:'Community', link:'com.html'},
-    -                                {text:'Get In Touch', link:'git.html'}]}
+    -   {title:'NAVIGATION',items:[{text:'About Us', link:mock},
+    -                                {text:'News', link:mock},
+    -                                {text:'Support', link:mock},
+    -                                {text:'Products', link:mock}]},
+    -   {title:'ABOUT US',  items:[{text:'Who we are', link:mock},
+    -                                {text:'Our team', link:mock},
+    -                                {text:'Careers', link:mock},
+    -                                {text:'Investors', link:mock}]},
+    -   {title:'SUPPORT',   items:[{text:'Documentation', link:mock},
+    -                                {text:'Community', link:mock},
+    -                                {text:'Get In Touch', link:mock}]}
     -   ]
     - var desc='Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.'
     - var caption='SUBSCRIBE TO OUR NEWSLETTER';
     - var subdesc='Receive our latest news and promotions in your inbox!'
     - var ph='Your email address'
     - var cr='Copyright © 2018 Toxin UI Kit. All rights reserved.'
-    +header({logo_path:"../../../components/logo/logo.svg", isAuth:false, menu: menu})
-    +header({logo_path:"../../../components/logo/logo.svg", isAuth:true, menu: menu})
+    +header({logo_path:"../../../components/logo/logo.svg", isAuth:false, menu: menuheader})
+    +header({logo_path:"../../../components/logo/logo.svg", isAuth:true, menu: menuheader})
     +footer({logo_path:"../../../components/logo/logo.svg", menu:menufooter, desc:desc, sub:{caption:caption, desc:subdesc, placeholder:ph},copyright: cr})
     +footer({logo_path:"../../../components/logo/logo.svg", menu:menufooter, desc:desc, sub:{caption:caption, desc:subdesc, placeholder:ph},copyright: cr})
     script(type="text/javascript" src="hf.js")
