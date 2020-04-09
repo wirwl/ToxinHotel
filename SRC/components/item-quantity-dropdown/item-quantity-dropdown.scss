@@ -6,12 +6,11 @@
   cursor: pointer;
   display: flex;
   height: 44px;
-  justify-content: space-between;  
+  justify-content: space-between;
   padding-right: 15px;
   position: relative;
   background: #fff;
   width: 100%;
-  
 }
 
 .iqdropdown button {
@@ -61,8 +60,7 @@
   width: 5px;
 }
 
-.iqdropdown__button-increment .iqdropdown__icon-decrement.iqdropdown__icon-increment::before
-{
+.iqdropdown__button-increment .iqdropdown__icon-decrement.iqdropdown__icon-increment::before {
   width: 8px;
 }
 .iqdropdown__button-increment .iqdropdown__icon-decrement::after {
@@ -70,7 +68,7 @@
   left: 4px;
 }
 
-.iqdropdown .iqdropdown__menu {  
+.iqdropdown .iqdropdown__menu {
   background: #fff;
   outline: 1px solid rgba(31, 32, 65, 0.5);
   border-bottom-left-radius: 3px;
@@ -82,7 +80,7 @@
   left: 0px;
   top: 43px;
   transition: all 0.2s ease-in-out;
-  z-index: 99999;  
+  z-index: 99999;
   width: 100%;
 }
 .iqdropdown .iqdropdown__menu-option {
@@ -114,15 +112,14 @@
 
 .iqdropdown__content {
   flex: 1;
-  padding-right: 10px;  
+  padding-right: 10px;
 }
 .iqdropdown__item {
   color: $toxin-color-black-100;
   font-size: 12px;
   font-weight: bold;
-  
 }
-.iqdropdown p.iqdropdown-description {    
+.iqdropdown p.iqdropdown-description {
   margin-top: 5px;
 }
 .iqdropdown .iqdropdown__item-controls {
@@ -166,7 +163,6 @@
   border-radius: 100%;
 }
 
-
 .iqdropdown.iqdropdown.menu-open,
 .iqdropdown:hover {
   border: 1px solid rgba(31, 32, 65, 0.5);
@@ -176,14 +172,14 @@
   color: rgba(31, 32, 65, 0.75);
   font-size: 14px;
   flex: 1;
-  position: relative;  
+  position: relative;
   padding: 5px 15px 8px 16px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .iqdropdown .iqdropdown__selection::after {
-  font-family: "Material Icons";
+  font-family: $toxin-font-material-icon;
   font-size: 24px;
   content: "keyboard_arrow_down";
   display: inline-block;
@@ -216,7 +212,7 @@
 }
 .iqdropdown__buttons .iqdropdown__apply {
   margin-left: auto;
-  color: #bc9cff;  
+  color: #bc9cff;
   font-weight: bold;
-  font-size: 12px;  
+  font-size: 12px;
 }

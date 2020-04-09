@@ -1,9 +1,9 @@
-$relative-root-path:'/';
+$relative-root-path: "/";
 
 @import "../../common.scss";
 
-@import "../../fonts/FA5_Brands-Regular-400/fonts.css";
-@import "../../fonts/MaterialIcons/material-icons.css";
+@import "../../fonts/fa5-brands-regular-400/fonts.css";
+@import "../../fonts/material-icons/material-icons.css";
 @import "../../fonts/Montserrat/fonts.css";
 @import "../../fonts/Open-Sans/fonts.css";
 @import "../../fonts/Quicksand/fonts.css";
@@ -41,7 +41,7 @@ body {
 }
 
 .room-details__column1 {
-  max-width: 710px;  
+  max-width: 710px;
   margin-right: 70px;
 }
 
@@ -56,11 +56,11 @@ body {
 }
 
 .room-details__cancellation {
-  flex-basis: 46%;  
+  flex-basis: 46%;
 }
 
 .room-details__bullets-list {
-  flex-basis: 37%;  
+  flex-basis: 37%;
   margin-right: 13.802816%;
 }
 
@@ -99,12 +99,12 @@ body {
   margin-bottom: 32px;
 }
 
-.room-details__column2 {  
+.room-details__column2 {
   flex-basis: 380px;
 }
 
 .room-details__column2-wrapper-order-info-form {
-  margin-bottom: 20px;  
+  margin-bottom: 20px;
 }
 
 .menu > .menu__list > .menu__item.menu__item:not(:last-of-type) {
@@ -125,7 +125,7 @@ body {
 @media (max-width: 1185px) {
   .room-details__wrapper-donut-chart {
     width: auto;
-  }  
+  }
   .room-details__column1 {
     margin-right: 20px;
   }

@@ -1,4 +1,4 @@
-.like-button__count {  
+.like-button__count {
   font-size: 10px;
   display: inline-flex;
   justify-content: flex-start;
@@ -13,7 +13,7 @@
 }
 
 .like-button__count:before {
-  font-family: "Material Icons";
+  font-family: $toxin-font-material-icon;
   content: "favorite_border";
   margin-right: 5px;
 }

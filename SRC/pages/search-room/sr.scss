@@ -1,7 +1,7 @@
 @import "../../common.scss";
 
-@import "../../fonts/FA5_Brands-Regular-400/fonts.css";
-@import "../../fonts/MaterialIcons/material-icons.css";
+@import "../../fonts/fa5-brands-regular-400/fonts.css";
+@import "../../fonts/material-icons/material-icons.css";
 @import "../../fonts/Montserrat/fonts.css";
 @import "../../fonts/Open-Sans/fonts.css";
 @import "../../fonts/Quicksand/fonts.css";
@@ -39,7 +39,6 @@ $header-media3: 488px;
   background: $toxin-color-light-gray;
   padding: 28px 15px 79px 15px;
   min-height: 918px;
-
 }
 .main-content__wrapper {
   display: flex;
@@ -49,13 +48,13 @@ $header-media3: 488px;
   max-width: 1160px;
 }
 .filters {
-  margin-right: 60px;  
+  margin-right: 60px;
   //margin-right: 5.39568345323741%;
   min-width: 266px;
   width: 266px;
 }
 
-.filters__item {  
+.filters__item {
   margin-bottom: 15px;
 }
 
@@ -69,7 +68,7 @@ $header-media3: 488px;
 
 .rooms__title {
   margin-bottom: 21px;
-  text-transform: none;  
+  text-transform: none;
 }
 
 .rooms__list {
@@ -80,14 +79,14 @@ $header-media3: 488px;
 }
 
 .rooms__item {
-  width: 270px;  
+  width: 270px;
   margin-bottom: 18px;
 }
 
 .rooms__wrapper-pagination {
-  margin: 0 auto;  
+  margin: 0 auto;
   //outline: 1px dashed black;
-  min-width: 241px;  
+  min-width: 241px;
 }
 
 .filters__wrapper-datepicker-input {
@@ -99,7 +98,7 @@ $header-media3: 488px;
 }
 
 .filters__wrapper-range-slider {
-  margin-bottom: 29px;  
+  margin-bottom: 29px;
 }
 
 .filters__wrapper-range-cost {
@@ -109,17 +108,15 @@ $header-media3: 488px;
 
 .filters__wrapper-accessibility {
   margin-bottom: 26px;
-  max-width: 253px;  
+  max-width: 253px;
   .checkboxes-list__item:nth-child(1) {
     max-width: 220px;
   }
 }
 
-
 .filters__wrapper-comfort {
   margin-bottom: 25px;
 }
-
 
 // Additional media queries for header-----------------------------------------
 @media (max-width: 365px) {
@@ -132,7 +129,9 @@ $header-media3: 488px;
   .rooms__list {
     //align-items: center;
     justify-content: flex-start;
-    .rooms__item { margin-right: 12px;}
+    .rooms__item {
+      margin-right: 12px;
+    }
   }
 }
 @media (max-width: 658px) {
@@ -158,4 +157,3 @@ $header-media3: 488px;
 //Media queries for footer-------------------------------------------
 @media (max-width: 815px) {
 }
-

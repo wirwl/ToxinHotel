@@ -1,8 +1,8 @@
 @import "../../../common.scss";
 
 @import "../../../fonts/Montserrat/fonts.css";
-@import "../../../fonts/MaterialIcons/material-icons.css";
-@import "../../../fonts/FA5_Brands-Regular-400/fonts.css";
+@import "../../../fonts/material-icons/material-icons.css";
+@import "../../../fonts/fa5-brands-regular-400/fonts.css";
 
 body {
   background: #e5e5e5;
@@ -42,7 +42,7 @@ $header-media3: 373px;
 @import "../../../components/footer/footer.scss";
 @import "../../../components/subscribe-input/subscribe-input.scss";
 
-@media screen and (max-width: 3840px)  {
+@media screen and (max-width: 3840px) {
   .footer + .footer {
     .exMenu,
     .subscribeArea {
@@ -72,9 +72,8 @@ $header-media3: 373px;
       margin: 0 auto 17px auto;
     }
     .logoArea .logoArea__text {
-      text-align: center;      
+      text-align: center;
       max-width: 560px;
     }
   }
 }
-

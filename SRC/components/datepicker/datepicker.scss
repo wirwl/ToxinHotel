@@ -21,12 +21,12 @@
 }
 .datepicker--nav-action {
   width: 24px;
-  font-family: "Material Icons";
+  font-family: $toxin-font-material-icon;
   font-size: 24px;
   color: $toxin-color-purple;
 }
 .datepicker--nav-title {
-  font-family: "Open Sans";
+  font-family: $toxin-font-open-sans;
   font-weight: bold;
   font-size: 19px;
   color: $toxin-color-black-100;
@@ -192,24 +192,24 @@
 }
 
 .datepicker__buttons {
-  border-top: none;  
+  border-top: none;
   height: auto;
   display: flex;
   font-size: 12px;
   text-transform: uppercase;
   font-weight: bold;
-  margin-top: 17px;  
-  padding: 0px 4px;  
+  margin-top: 17px;
+  padding: 0px 4px;
   justify-content: space-between;
 }
 
-.datepicker__button-clear {  
+.datepicker__button-clear {
   display: inline-block;
   color: $toxin-color-black-50;
-  cursor: pointer;  
+  cursor: pointer;
 }
-.datepicker__button-apply {  
+.datepicker__button-apply {
   display: inline-block;
   color: $toxin-color-purple;
-  cursor: pointer;  
+  cursor: pointer;
 }

@@ -62,7 +62,7 @@ $myblue: #008ed6;
   position: relative;
 }
 .button_arrow:after {
-  font-family: "Material Icons";
+  font-family: $toxin-font-material-icon;
   content: "arrow_forward";
   position: absolute;
   right: 10px;

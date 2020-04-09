@@ -9,9 +9,9 @@ $toxin-color-green: #6fcf97;
 $toxin-color-blue: #8ba4f9;
 $toxin-color-gray: #e5e5e5;
 $toxin-color-light-gray: #f9f9f9;
-$toxin-font-material-icon: "Material Icons", Arial, sans-serif;
+$toxin-font-material-icon: "material-icons", Arial, sans-serif;
 $toxin-font-montserrat: Montserrat, Arial, sans-serif;
-$toxin-font-open-sans: "Open Sans", Arial, sans-serif;
+$toxin-font-open-sans: "open-sans", Arial, sans-serif;
 $toxin-font-quicksand: Quicksand, Arial, sans-serif;
 
 * {
@@ -26,7 +26,7 @@ html {
   font-size: 14px;
 }
 
-body {  
+body {
   margin: 0 auto;
   min-width: 320px;
   max-width: 1440px;

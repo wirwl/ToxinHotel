@@ -2,7 +2,6 @@
 @import "../footer-menu/footer-menu.scss";
 @import "../subscribe-input/subscribe-input.scss";
 
-
 .footer {
   background: white;
 }
@@ -23,9 +22,9 @@
 }
 
 .footerUp {
-  display: flex;  
+  display: flex;
   align-items: flex-start;
-  border-bottom: 1px solid rgba(31, 32, 65, 0.1);  
+  border-bottom: 1px solid rgba(31, 32, 65, 0.1);
 }
 
 .footerUp > .exMenu {
@@ -47,10 +46,8 @@
   width: 260px;
 }
 
-
-
 .subscribeArea {
-  min-width: 140px;  
+  min-width: 140px;
   .subscribeArea__title {
     padding-top: 4px;
     margin-bottom: 18px;
@@ -68,10 +65,10 @@
 }
 
 .footerDown {
-  display: flex;  
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 70px;  
+  min-height: 70px;
   padding: 0px 9.722222222222222%;
   .footerDown__copyright {
     font-size: 14px;
@@ -82,17 +79,17 @@
 }
 
 .socialButtons {
-  display: flex;  
+  display: flex;
   > * {
-    font-family: "Awesome 5 Brands-Regular-400";
+    font-family: "awesome-5-brands-regular-400";
     text-decoration: none;
     font-size: 24px;
-    line-height: 23px;    
-    color: rgb(188,156,255);
+    line-height: 23px;
+    color: rgb(188, 156, 255);
     width: 24px;
     height: 24px;
   }
-  
+
   .socialButtons__btnTwitter {
     margin-right: 24px;
   }
@@ -114,40 +111,38 @@
   }
 }
 //--media for footer1 and footer2
-@media (max-width: 825px)  {
- 
-    .exMenu,
-    .subscribeArea {
-      display: none;
-    }
-    .footerUp {
-      border: none;
-      justify-content: center;
-      padding-bottom: 25px;
-      padding-top: 100px;
-      min-height: 233px;
-    }
-    .footerDown {
-      justify-content: center;
-      padding-bottom: 100px;
-    }
-    .footerDown__copyright {
-      display: none;
-    }
+@media (max-width: 825px) {
+  .exMenu,
+  .subscribeArea {
+    display: none;
+  }
+  .footerUp {
+    border: none;
+    justify-content: center;
+    padding-bottom: 25px;
+    padding-top: 100px;
+    min-height: 233px;
+  }
+  .footerDown {
+    justify-content: center;
+    padding-bottom: 100px;
+  }
+  .footerDown__copyright {
+    display: none;
+  }
 
-    .logoArea {
-      width: auto;
-      margin-right: 0px;
-    }
-    .logoArea .logo {
-      display: block;
-      margin: 0 auto 17px auto;
-    }
-    .logoArea .logoArea__text {
-      text-align: center;      
-      max-width: 560px;
-    }
-  
+  .logoArea {
+    width: auto;
+    margin-right: 0px;
+  }
+  .logoArea .logo {
+    display: block;
+    margin: 0 auto 17px auto;
+  }
+  .logoArea .logoArea__text {
+    text-align: center;
+    max-width: 560px;
+  }
 }
 
 @media (max-width: 815px) {

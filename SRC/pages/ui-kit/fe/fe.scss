@@ -1,7 +1,7 @@
 @import "../../../common.scss";
 
 @import "../../../fonts/Montserrat/fonts.css";
-@import "../../../fonts/MaterialIcons/material-icons.css";
+@import "../../../fonts/material-icons/material-icons.css";
 
 body {
   margin: 0 auto;
@@ -23,7 +23,7 @@ body {
 }
 
 .column2 {
-  margin-right: 72px;  
+  margin-right: 72px;
 }
 .column1__list,
 .column2__list,
@@ -31,7 +31,7 @@ body {
   list-style: none;
 }
 .column1__item {
-  margin-bottom: 20px;  
+  margin-bottom: 20px;
 }
 .column1__wrapper-for-datepicker-inputs {
   margin-bottom: 39px;
@@ -96,7 +96,7 @@ body {
   list-style: none;
   display: flex;
 }
-.likes-button-list__caption {  
+.likes-button-list__caption {
   margin-bottom: 16px;
 }
 .likes-button-list__item:not(:last-child) {
@@ -107,7 +107,7 @@ body {
   margin-bottom: 40px;
 }
 .rate-buttons-list__caption {
-  margin-bottom: 16px;  
+  margin-bottom: 16px;
 }
 .rate-buttons-list__list {
   list-style: none;
@@ -133,7 +133,7 @@ body {
 
 .column__wrapper {
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
 }
 
 .column23__wrapper {
@@ -150,7 +150,7 @@ body {
 .buttons-list {
   list-style: none;
 }
-.buttons-list__caption {  
+.buttons-list__caption {
   margin-bottom: 16px;
 }
 .buttons-list__item {
@@ -158,8 +158,8 @@ body {
 }
 
 .two-buttons-list {
-  list-style:none;
-  display: flex;  
+  list-style: none;
+  display: flex;
 }
 .buttons-list__item:not(:last-of-type) {
   margin-bottom: 30px;
@@ -168,7 +168,7 @@ body {
   width: 99px;
 }
 .two-buttons-list__item {
-  height: 44px;  
+  height: 44px;
 }
 .two-buttons-list3 .two-buttons-list__item {
   height: auto;
