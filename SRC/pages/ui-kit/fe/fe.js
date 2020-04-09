@@ -8,8 +8,6 @@ import '../../../../node_modules/jquery-mask-plugin/dist/jquery.mask.js'
 import '../../../components/masked-input/masked-input.js'
 import '../../../../node_modules/air-datepicker/dist/js/datepicker.js'
 import '../../../components/datepicker/datepicker.js'
-import '../../../components/datepicker-input/datepicker-input.js'
-import '../../../components/fdd-input/fdd-input.js'
 import '../../../components/comfort-input/comfort-input.js'
 import '../../../components/expandable-checkbox-list/expandable-checkbox-list.js'
 import '../../../components/like-button/like-button.js'
@@ -30,4 +28,13 @@ $(document).ready(() => {
   });  
   datepicker.update('minDate', null);
   datepicker.selectDate([new Date("2019-08-19")]);
+  
+  let dp = $('#fdd').data('datepicker');
+  dp.update('dateFormat', 'dd M');
+  dp.update('onSelect', function (fd, d, picker) {
+    picker.$el.val(fd.toLowerCase());
+  });
+  // Only for pixel perfect  
+  dp.update('minDate', null);  
+  dp.selectDate([new Date("2019-08-19"), new Date("2019-08-23")]);
 });

@@ -11,7 +11,6 @@ import '../../../components/guests-input/guests-input.js'
 import '../../../components/item-quantity-dropdown/item-quantity-dropdown.js'
 import '../../../components/room-reservation-form/room-reservation-form.js'
 import '../../../components/room-info/room-info.js'
-import '../../../components/datepicker-input/datepicker-input.js'
 import '../../../components/order-info-form/order-info-form.js'
 
 $(document).ready(function () {

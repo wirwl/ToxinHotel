@@ -41,16 +41,14 @@ function getRightWord(voices) {
 }
 
 export function DrawDonutChart(data) {
-  let arc_length = [[2], [2], [1, 1], [1, 0.5, 0.5], [0.5, 0.5, 0.5, 0.5]];
-  //let arc_thickness = [4, 4, 10, 0];
+  let arc_length = [[2], [2], [1, 1], [1, 0.5, 0.5], [0.5, 0.5, 0.5, 0.5]];  
   let arc_thickness = [58 / 260, 58 / 260, 144 / 260, 0];
   let start_angel = 1.5;
   let total = 0;
   let no_zero = 0;
 
   let arc_100percent = 0;
-  for (let i in data) {
-    //if (i>3) break;
+  for (let i in data) {    
     total += data[i].count;
     if (data[i].count > 0) no_zero += 1;
     if (data[i].count > arc_100percent) arc_100percent = data[i].count;
@@ -59,8 +57,7 @@ export function DrawDonutChart(data) {
     drawPieSliceEx(myCanvas, 0, 2, "#e2e2e2");
   } else {
     let index = 0;
-    for (let i in data) {
-      //if (i>3) break;
+    for (let i in data) {      
       if (data[i].count > 0) {
         drawPieSlice(
           myCanvas.getContext("2d"),
@@ -105,10 +102,10 @@ export function DrawDonutChart(data) {
   }
 
   let text = total;
-  context.font = 'bold 24px Quicksand';
+  context.font = 'bold 24px quicksand';
   if (total > 0) context.fillStyle = "#BC9CFF"; else context.fillStyle = "gray";
   context.fillText(text, myCanvas.width / 2 - context.measureText(text).width / 2, myCanvas.height / 2 - 2);
-  context.font = 'bold 12px Montserrat';
+  context.font = 'bold 12px montserrat';
   text = getRightWord(total).toUpperCase();
   context.fillText(text, myCanvas.width / 2 - context.measureText(text).width / 2, myCanvas.height / 2 + 17);
 }
