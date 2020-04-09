@@ -1,7 +1,7 @@
 import './sign-in.scss'
 
 import '../../components/logo/logo.svg'
-import '../../images/backgrounds/sign-in.jpg'
+import '../../images/backgrounds/sign.jpg'
 
 import '../../favicons/favicons'
 
