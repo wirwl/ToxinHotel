@@ -1,5 +1,5 @@
 $(document).ready(() => {
-  let $iq =$('.comfort-input').find('.iqdropdown');  
+  let $iq =$('.js-comfort-input').find('.iqdropdown');  
   $iq.iqDropdown({
     isShowButtons:false,
     entities : {placeholder: 'Выберите удобства',

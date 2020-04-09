@@ -2,4 +2,4 @@ mixin masked-input(data)
   .masked-input    
     if data.caption
       label.masked-input__caption #{data.caption}
-    input.masked-input__input(type=data.type placeholder=(data.placeholder ? data.placeholder : 'ДД.ММ.ГГГГ') value=data.value) 
+    input.masked-input__input.js-masked-input__input(type=data.type placeholder=(data.placeholder ? data.placeholder : 'ДД.ММ.ГГГГ') value=data.value) 

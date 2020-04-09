@@ -1,7 +1,8 @@
 $(document).ready(function () {
-  let pages = $('.pagination__buttons').data('pages');
-  let page = $('.pagination__buttons').data('page');  
-  $('.pagination__buttons').html(createPagination(pages, page));
+  let $paginationButtons=$('.js-pagination__buttons');
+  let pages = $paginationButtons.data('pages');
+  let page = $paginationButtons.data('page');  
+  $paginationButtons.html(createPagination(pages, page));
 
   function AddEventListenerClick(pagination) {
     let lis = pagination.find('a');
@@ -12,12 +13,12 @@ $(document).ready(function () {
     })
   }
 
-  AddEventListenerClick($('.pagination__buttons'));
+  AddEventListenerClick($paginationButtons);
 
   function createPagination(pages, page) {
-    let showed = $('.pagination__buttons').data('showed');
-    let showedLastPage = $('.pagination__buttons').data('showedlastpage');
-    let total = $('.pagination__buttons').data('total');    
+    let showed = $paginationButtons.data('showed');
+    let showedLastPage = $paginationButtons.data('showedlastpage');
+    let total = $paginationButtons.data('total');    
     let toCount=page*showed;
     if (page==pages) 
     toCount=page*showed-showed+showedLastPage;
@@ -85,8 +86,8 @@ $(document).ready(function () {
     str += '</ul>';
     // Return the pagination string to be outputted in the pug templates
     //document.getElementById('pagination').innerHTML = str;
-    $('.pagination__buttons').html(str);
-    AddEventListenerClick($('.pagination__buttons'));
+    $paginationButtons.html(str);
+    AddEventListenerClick($paginationButtons);
     return str;
   }//function createPagination(pages, page) 
 

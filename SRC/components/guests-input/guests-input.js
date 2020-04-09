@@ -1,6 +1,6 @@
 $(document).ready(() => {
   
-  let $iq =$('.guests-input').find('.iqdropdown');  
+  let $iq =$('.js-guests-input').find('.js-iqdropdown');  
   $iq.iqDropdown({
     isShowButtons:true,
     entities : {placeholder:'Сколько гостей',

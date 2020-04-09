@@ -1,6 +1,6 @@
 include ../item-quantity-dropdown/item-quantity-dropdown
 mixin guests-input(data)
-  .guests-input  
+  .guests-input.js-guests-input  
     h3.guests-input__caption #{data.caption}
     - data.iqdd.isShowButtons=true
     +item-quantity-dropdown(data.iqdd)

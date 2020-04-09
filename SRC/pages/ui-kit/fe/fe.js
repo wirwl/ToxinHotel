@@ -20,14 +20,14 @@ $(document).ready(() => {
   //Only for watch pixel perfect for range-slider;
   $('.js-range-slider__values').text('5 000₽ - 10 000₽');
   let datepicker = $('#fe-di2').data('datepicker');
+  datepicker.update('minDate', null);
+  datepicker.selectDate([new Date("2019-08-19")]);
 
   let rs = $('.js-range-slider__input').data('ionRangeSlider');  
   rs.update({
     from: 4000,
     to: 8000
   });  
-  datepicker.update('minDate', null);
-  datepicker.selectDate([new Date("2019-08-19")]);
   
   let dp = $('#fdd').data('datepicker');
   dp.update('dateFormat', 'dd M');

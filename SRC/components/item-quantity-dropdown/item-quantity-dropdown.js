@@ -17,10 +17,10 @@
   $.fn.iqDropdown = function (options) {
     this.each(function () {
       const $this = $(this);
-      const $selection = $this.find('p.iqdropdown__selection').last();
-      const $menu = $this.find('div.iqdropdown__menu');
-      const $items = $menu.find('div.iqdropdown__menu-option');
-      const $clear = $this.find('.iqdropdown__clear');
+      const $selection = $this.find('.js-iqdropdown__selection').last();
+      const $menu = $this.find('.js-iqdropdown__menu');
+      const $items = $menu.find('.js-iqdropdown__menu-option');      
+      const $clear = $this.find('.js-iqdropdown__clear');
       const settings = $.extend(true, {}, defaults, options);
       const itemCount = {};
       let totalItems = 0;
@@ -159,7 +159,7 @@
       }
 
       $this.click((event) => {
-        if (!$(event.target).hasClass('iqdropdown__clear'))
+        if (!$(event.target).hasClass('js-iqdropdown__clear'))
           $this.toggleClass('iqdropdown_show');
       });
 
