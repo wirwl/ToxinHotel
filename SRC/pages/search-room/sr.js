@@ -34,8 +34,6 @@ import '../../components/expandable-checkbox-list/expandable-checkbox-list'
 
 import '../../components/pagination/pagination'
 
-//dateFormat: 'dd.mm.yyyy',
-
 $(document).ready(function () {
 
   let dp = $('#filters_di').data('datepicker');

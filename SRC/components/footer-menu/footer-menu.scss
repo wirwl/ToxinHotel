@@ -1,15 +1,13 @@
 .exMenu {
   display: flex;
   flex-shrink: 8;
-  //flex-wrap: wrap;
-  //justify-content: space-between;
   > .exMe1nu__list {
     border: 1px solid gray;
   }
   .exMenu__list {
     list-style: none;
   }
-  .exMenu__list:not(:last-child) {    
+  .exMenu__list:not(:last-child) {
     width: calc(100% / 3);
     padding-right: 5px;
   }
@@ -20,13 +18,12 @@
     line-height: 15px;
     text-transform: uppercase;
   }
-  .exMenu__item
-  {
+  .exMenu__item {
     font-size: 14px;
     line-height: 17px;
   }
   .exMenu__item:not(:last-child) {
-    margin-bottom: 20px;        
+    margin-bottom: 20px;
   }
   .exMenu__link {
     text-decoration: none;

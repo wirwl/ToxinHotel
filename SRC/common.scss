@@ -18,12 +18,13 @@ $toxin-font-quicksand: quicksand, Arial, sans-serif;
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-  font-family: $toxin-font-montserrat;
 }
 
 html {
   background: #e2e2e2;
+  color: $toxin-color-black-100;
   font-size: 14px;
+  font-family: $toxin-font-montserrat;
 }
 
 body {

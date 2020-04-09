@@ -26,5 +26,5 @@ $(document).ready(() => {
                           cases: [{ n: 1, text: 'младенец' },
                                   { n: 2, text: 'младенца' }, 
                                   { n: 5, text: 'младенцев' }]}]
-  }})//$iq.iqDropdown({
-})//$(document).ready(() => {
+  }})
+})

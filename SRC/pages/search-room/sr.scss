@@ -43,13 +43,10 @@ $header-media3: 488px;
 .main-content__wrapper {
   display: flex;
   justify-content: space-between;
-  //flex-basis: 80.55555555555556%;
-  //flex-wrap: wrap;
   max-width: 1160px;
 }
 .filters {
   margin-right: 60px;
-  //margin-right: 5.39568345323741%;
   min-width: 266px;
   width: 266px;
 }
@@ -59,7 +56,6 @@ $header-media3: 488px;
 }
 
 .rooms {
-  //flex-basis: 70%;
   max-width: 846px;
   display: flex;
   flex-direction: column;
@@ -85,7 +81,6 @@ $header-media3: 488px;
 
 .rooms__wrapper-pagination {
   margin: 0 auto;
-  //outline: 1px dashed black;
   min-width: 241px;
 }
 
@@ -127,7 +122,6 @@ $header-media3: 488px;
 // Media queries for main content-----------------------------------
 @media (max-width: 1197px) {
   .rooms__list {
-    //align-items: center;
     justify-content: flex-start;
     .rooms__item {
       margin-right: 12px;

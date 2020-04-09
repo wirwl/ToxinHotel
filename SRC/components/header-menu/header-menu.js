@@ -32,22 +32,7 @@ $(document).ready(() => {
     else {
       $(this).removeClass('menu_hide');
       $(this).addClass('menu_show');
-    }
-    // $(this).toggleClass('menu_show');
-    // $(this).toggleClass('menu_hide');
-
-    // let ulChild = $(this).parent().find('> ul');
-    // ulChild.children().each(function () {
-    //   CloseAllOpenMenuItems($(this))
-    // })
-
-
-    //$(this).parent().find('> .menu__list').css('max-heigth','');
-
-    //$(this).parent().find('.menu_show > .menu__list').show();
-    // if ($(this).find('.menu__icon').text()==='menu') 
-    // $(this).find('.menu__icon').text('menu_open')
-    // else $(this).find('.menu__icon').text('menu')
+    }    
   })
 
   $('.menu > .menu__list').mouseleave(function () {
@@ -60,17 +45,5 @@ $(document).ready(() => {
       
     }
   })
-
-  // document.addEventListener('animationstart', function (e) {
-  //   if (e.animationName === 'fade-in') {
-  //       e.target.classList.add('did-fade-in');
-  //   }
-  // });
-
-  // document.addEventListener('animationend', function (e) {
-  //   if (e.animationName === 'fade-out') {
-  //       e.target.classList.remove('did-fade-in');
-  //    }
-  // });
-
+  
 })

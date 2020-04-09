@@ -25,5 +25,5 @@ $(document).ready(() => {
                           cases: [{ n: 1, text: 'ванная комната' },
                                   { n: 2, text: 'ванные комнаты' }, 
                                   { n: 5, text: 'ванных комнат' }]}]
-  }})//$iq.iqDropdown({
-})//$(document).ready(() => {
+  }})
+})
