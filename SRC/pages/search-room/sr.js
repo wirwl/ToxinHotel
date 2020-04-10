@@ -1,6 +1,10 @@
-import './sr.scss'
+import '../../../node_modules/jquery/dist/jquery'
+import '../../../node_modules/air-datepicker/dist/js/datepicker'
+import '../../../node_modules/ion-rangeslider/js/ion.rangeSlider'
+import '../../components/datepicker/datepicker'
+import '../../components/range-slider/range-slider'
+import '../../components/header-menu/header-menu'
 import '../../components/logo/logo.svg'
-
 import '../../images/rooms/888/image1.png'
 import '../../images/rooms/840/image1.png'
 import '../../images/rooms/980/image1.png'
@@ -13,26 +17,13 @@ import '../../images/rooms/350/image1.png'
 import '../../images/rooms/666/image1.png'
 import '../../images/rooms/444/image1.png'
 import '../../images/rooms/352/image1.png'
-
 import '../../favicons/favicons'
-
-import '../../../node_modules/jquery/dist/jquery'
-import '../../components/header-menu/header-menu'
-
 import '../../components/item-quantity-dropdown/item-quantity-dropdown'
-
-import '../../../node_modules/air-datepicker/dist/js/datepicker'
-import '../../components/datepicker/datepicker'
-
 import '../../components/guests-input/guests-input'
-
-import '../../../node_modules/ion-rangeslider/js/ion.rangeSlider'
-import '../../components/range-slider/range-slider'
-
 import '../../components/comfort-input/comfort-input'
 import '../../components/expandable-checkbox-list/expandable-checkbox-list'
-
 import '../../components/pagination/pagination'
+import './sr.scss'
 
 $(document).ready(function () {
 

@@ -14,7 +14,7 @@ import '../../../components/order-info-form/order-info-form.js'
 
 $(document).ready(function () {
   //only for pixel perfect
-  let datepicker = $('.standalone-datepicker').data('datepicker');
+  let datepicker = $('.datepicker-here').data('datepicker');
   datepicker.update('minDate', null);
   var currentDate = currentDate = new Date("2019-08-08");
   datepicker.selectDate([

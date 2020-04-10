@@ -4,7 +4,7 @@ include ../datepicker-input/datepicker-input
 include ../guests-input/guests-input
 
 mixin room-reservation-form(data)
-  form.rr-form(method='post' action='#')
+  form.rr-form(method='post' action='pages/search-room/sr.html')
     fieldset.rr-form__wrapper-for-inputs
       legend.rr-form__title Найдём номера под ваши пожелания
       ul.rr-form__list(role='none presentation')    
@@ -17,8 +17,8 @@ mixin room-reservation-form(data)
                 +datepicker-input({caption:'Выезд', placeholder:'ДД.ММ.ГГГГ', id:'rr-form__end-input', hasDatepicker:false})                  
         li.rr-form__item.rr-wrapper-guests-input
           +guests-input({caption:'Гости', 
-                             iqdd:{isExpanded:false, placeholder:'', 
-                             items:[{id:'adults', name:'ВЗРОСЛЫЕ'},
-                                    {id:'childs', name:'ДЕТИ'},
-                                    {id:'babies', name:'МЛАДЕНЦЫ'}] }})
+            iqdd:{isExpanded:false, placeholder:'', 
+            items:[{id:'adults', name:'ВЗРОСЛЫЕ'},
+              {id:'childs', name:'ДЕТИ'},
+              {id:'babies', name:'МЛАДЕНЦЫ'}] }})
       +button-arrow({text:'Подобрать номер', type: 'submit'})
