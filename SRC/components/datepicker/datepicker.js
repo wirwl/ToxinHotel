@@ -33,7 +33,7 @@ $(document).ready(() => {
 
   $clears = $('.js-datepicker__button-clear');
   $clears.each(function () {
-    $(this).on('click', (i, el) => {
+    $(this).on('click.clearButton', (i, el) => {
       let dp = FindDatepicker($ToxinDatepickers, $(this).parent().parent());
       if (dp) dp.clear();
     })
@@ -41,7 +41,7 @@ $(document).ready(() => {
 
   $apply = $('.js-datepicker__button-apply');
   $apply.each(function () {
-    $(this).on('click', (i, el) => {
+    $(this).on('click.applyButton', (i, el) => {
       let dp = FindDatepicker($ToxinDatepickers, $(this).parent().parent());
       if (dp) dp.hide();
     })

@@ -38,17 +38,16 @@
   height: 44px;
   display: flex;
   justify-content: space-between;
-  align-items: center;  
-  //outline: 1px solid black;
+  align-items: center;
 }
 
 .su-form__sign-in-text {
-  color: #000;   
+  color: #000;
 }
 
 .su-form_wrapper-sign-in-button {
   width: 99px;
-  height: 44px;  
+  height: 44px;
 }
 
 @media (max-width: 365px) {

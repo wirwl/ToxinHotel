@@ -1,10 +1,7 @@
-import './fe.scss';
-
-import '../../../images/avatar.jpg';
-
 import '../../../../node_modules/jquery/dist/jquery.js'
 import '../../../../node_modules/ion-rangeslider/js/ion.rangeSlider'
 import '../../../../node_modules/jquery-mask-plugin/dist/jquery.mask.js'
+import '../../../images/avatar.jpg';
 import '../../../components/masked-input/masked-input.js'
 import '../../../../node_modules/air-datepicker/dist/js/datepicker.js'
 import '../../../components/datepicker/datepicker.js'
@@ -15,6 +12,7 @@ import '../../../components/guests-input/guests-input.js'
 import '../../../components/range-slider/range-slider.js';
 import '../../../components/pagination/pagination.js';
 import '../../../components/item-quantity-dropdown/item-quantity-dropdown.js'
+import './fe.scss';
 
 $(document).ready(() => {
   //Only for watch pixel perfect for range-slider;
