@@ -8,7 +8,7 @@ $(document).ready(() => {
     })
   }
 
-  $('.js-menu__link').click(function (e) {
+  $('.js-menu__link').on('click.menu',function (e) {
     let li = $(this).parent();
     let ul = li.find('> ul');
     let ulParent = li.parent();
@@ -24,7 +24,7 @@ $(document).ready(() => {
     })
   });
 
-  $('.js-menu__icon').click(function (e) {
+  $('.js-menu__icon').on('click.menu', function (e) {
     if ($(this).hasClass('menu_show')) {
       $(this).removeClass('menu_show');
       $(this).addClass('menu_hide');
@@ -35,7 +35,7 @@ $(document).ready(() => {
     }    
   })
 
-  $('.js-menu > .js-menu__list').mouseleave(function () {
+  $('.js-menu > .js-menu__list').on('mouseleave.menu',function () {
     if ($(this).parent().find('.menu_show')) {
       $(this).children().each(function () {
         CloseAllOpenMenuItems($(this));

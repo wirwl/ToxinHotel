@@ -9,7 +9,7 @@ $(document).ready(function () {
     lis.each(function () {
       var datapage = $(this).data("page");
       if (datapage)
-        $(this).click(function (event) { createPagination(pages, datapage); });
+        $(this).on('click.pagination',function (event) { createPagination(pages, datapage); });
     })
   }
 
@@ -81,7 +81,7 @@ $(document).ready(function () {
     // Show the Next button only if you are on a page other than the last
     if (page < pages) {
       str += '<li class="pagination__item next pagination__item_no"><a data-page="' + (page + 1) + '"class="pagination__link material-icons">arrow_forward</a></li>';
-      $('#next').click(function () { createPagination(pages, page + 1) })
+      $('#next').on('click.nextButton', function () { createPagination(pages, page + 1) })
     }
     str += '</ul>';
     // Return the pagination string to be outputted in the pug templates

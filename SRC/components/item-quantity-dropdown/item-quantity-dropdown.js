@@ -104,7 +104,7 @@
         $controls.append($decrementButton, $counter, $incrementButton);
         $item.append($controls);
 
-        $clear.click((event) => {
+        $clear.on('click',(event) => {
           $items.find('.iqdropdown__counter').html('0');
           for (let i in itemCount) itemCount[i] = 0;
           totalItems = 0;
@@ -112,7 +112,7 @@
           $clear.addClass('iqdropdown__clear_hide');
         })
 
-        $decrementButton.click((event) => {
+        $decrementButton.on('click.decrementButton',(event) => {
           const { items, minItems, beforeDecrement, onChange } = settings;
           const allowClick = beforeDecrement(id, itemCount);
           
@@ -132,7 +132,7 @@
           event.preventDefault();
         });
 
-        $incrementButton.click((event) => {
+        $incrementButton.on('click.incrementButton',(event) => {
           const { items, maxItems, beforeIncrement, onChange } = settings;
           const allowClick = beforeIncrement(id, itemCount);
 
@@ -153,12 +153,12 @@
 
         });
 
-        $item.click(event => event.stopPropagation());
+        $item.on('click.item', event => event.stopPropagation());
 
         return $item;
       }
 
-      $this.click((event) => {
+      $this.on('click.iqdropdown',(event) => {
         if (!$(event.target).hasClass('js-iqdropdown__clear'))
           $this.toggleClass('iqdropdown_show');
       });
