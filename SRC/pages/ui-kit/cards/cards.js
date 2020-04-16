@@ -1,8 +1,8 @@
 import '../../../../node_modules/jquery/dist/jquery.js'
 import '../../../../node_modules/air-datepicker/dist/js/datepicker.js'
 import '../../../../node_modules/jquery-mask-plugin/dist/jquery.mask.js'
-import '../../../images/rooms/888/image1.png';
-import '../../../images/rooms/840/image1.png';
+import '../../../images/rooms/888/image-1.png';
+import '../../../images/rooms/840/image-1.png';
 import '../../../components/datepicker/datepicker.js'
 import '../../../components/guests-input/guests-input.js'
 import '../../../components/item-quantity-dropdown/item-quantity-dropdown.js'
