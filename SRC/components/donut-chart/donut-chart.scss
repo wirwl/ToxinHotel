@@ -1,19 +1,15 @@
-.donut-chart { 
-}
-
 .donut-chart__caption {
   margin-bottom: 20px;
   text-transform: none;
 }
 
 .donut-chart__wrapper {
-   display: flex;
-   justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
-.donut-chart__canvas {  
+.donut-chart__canvas {
   margin-right: 10px;
-  width: 120px;
   height: 120px;
 }
 

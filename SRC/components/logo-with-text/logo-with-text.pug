@@ -1,0 +1,7 @@
+include ../logo/logo
+
+mixin logo-with-text(data)
+  .logo-with-text
+    .logo-with-text__logo
+      +logo({path:data.logo_path})
+    p.logo-with-text__text #{data.desc}

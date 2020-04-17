@@ -1,0 +1,17 @@
+.subscribe-area {
+  min-width: 140px;
+  .subscribe-area__title {
+    padding-top: 4px;
+    margin-bottom: 18px;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+  }
+  .subscribe-area__text {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 23px;
+    color: rgba(31, 32, 65, 0.75);
+  }
+}

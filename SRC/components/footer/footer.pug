@@ -1,20 +1,17 @@
-include ../logo/logo
 include ../footer-menu/footer-menu
-include ../subscribe-input/subscribe-input
+include ../logo-with-text/logo-with-text
+include ../subscribe-area/subscribe-area
+include ../social-buttons/social-buttons
+
 mixin footer(data)
   footer.footer
-    .footerUp
-      .logoArea
-        +logo({path:data.logo_path})
-        p.logoArea__text #{data.desc}
-      +createFooterMenu(data.menu)
-      .subscribeArea
-        p.subscribeArea__title #{data.sub.caption}
-        p.subscribeArea__text #{data.sub.desc}
-        +subscribe-input({placeholder:data.sub.placeholder})
-    .footerDown
-      p.footerDown__copyright #{data.copyright}
-      .socialButtons
-        a.socialButtons__btnTwitter(href="#") twitter
-        a.socialButtons__btnFacebook(href="#") facebook-square
-        a.socialButtons__btnInstagram(href="#") instagram
+    .footer__footer-top
+      .footer__logo-with-text
+        +logo-with-text({logo_path:data.logo_path, desc: data.desc})      
+      .footer__footer-menu
+        +footer-menu(data.menu)
+      .footer__subscribe-area
+        +subscribe-area(data.sub)
+    .footer__footer-bottom
+      p.footer__copyright #{data.copyright}
+      +social-buttons

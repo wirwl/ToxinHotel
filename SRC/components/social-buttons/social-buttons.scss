@@ -1,0 +1,19 @@
+.socialButtons {
+  display: flex;
+  > * {
+    font-family: "awesome-5-brands-regular-400";
+    text-decoration: none;
+    font-size: 24px;
+    line-height: 23px;
+    color: rgb(188, 156, 255);
+    width: 24px;
+    height: 24px;
+  }
+
+  .socialButtons__btnTwitter {
+    margin-right: 24px;
+  }
+  .socialButtons__btnFacebook {
+    margin-right: 16px;
+  }
+}

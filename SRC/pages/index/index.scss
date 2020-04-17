@@ -28,9 +28,8 @@ $header-media3: 488px;
 
 .main-content__text {
   color: $toxin-color-black-75;
-  width: 297px;
+  max-width: 297px;
   position: absolute;
-  right: 133px;
   right: 9.236111111111111%;
   bottom: 21px;
   line-height: 24px;

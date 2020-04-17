@@ -44,36 +44,45 @@ $header-media3: 373px;
 
 @media screen and (max-width: 3840px) {
   .footer + .footer {
-    .exMenu,
-    .subscribeArea {
-      display: none;
-    }
-    .footerUp {
-      border: none;
-      justify-content: center;
-      padding-bottom: 25px;
-      padding-top: 100px;
-      min-height: 233px;
-    }
-    .footerDown {
-      justify-content: center;
-      padding-bottom: 110px;
-    }
-    .footerDown__copyright {
+    .footer__footer-menu,
+    .footer__subscribe-area,
+    .footer__copyright {
       display: none;
     }
 
-    .logoArea {
-      width: auto;
-      margin-right: 0px;
+    .footer__footer-top {
+      border: none;
+      justify-content: center;
+      padding-bottom: 5px;
+      padding-top: 100px;
+      min-height: 233px;
     }
-    .logoArea .logo {
-      display: block;
+    .footer__footer-bottom {
+      justify-content: center;
+      padding-bottom: 110px;
+    }
+
+    .footer__logo-with-text {
       margin: 0 auto 17px auto;
     }
-    .logoArea .logoArea__text {
+
+    .footer__footer-top .footer__logo-with-text {
       text-align: center;
+      width: auto;
+      margin-right: 0;
       max-width: 560px;
+      margin: 0 auto 17px auto;
+    }
+  }
+
+  @media (max-width: 815px) {
+    .footer__footer-top {
+      padding: 10px 5px;
+      min-height: auto;
+    }
+    .footer__footer-bottom {
+      padding: 0 5px 5px;
+      min-height: auto;
     }
   }
 }
