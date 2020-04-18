@@ -1,0 +1,9 @@
+.flexslider {
+  display: none;
+}
+
+@media (max-width: 918px) {
+  .flexslider {
+    display: block;
+  }
+}

@@ -1,11 +1,11 @@
 include ../checkbox/checkbox
 
 mixin expandable-checkbox-list(data)
-  .ecl(class=(data.isExpand ? "ecl_show": ""))
-    h3.ecl__caption.js-ecl__caption #{data.caption}
-    ul.ecl__list
+  .expandable-checkbox-list(class=(data.isExpand ? "expandable-checkbox-list_show": ""))
+    h3.expandable-checkbox-list__caption.js-ecl__caption #{data.caption}
+    ul.expandable-checkbox-list__list
       for cb in data.checkboxes
-        li.ecl__item
+        li.expandable-checkbox-list__item
           +checkbox(cb)
 
 

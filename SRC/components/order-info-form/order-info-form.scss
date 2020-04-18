@@ -5,7 +5,7 @@
 @import "../button/button.scss";
 @import "../../components/datepicker/datepicker.scss";
 
-.oi-form {
+.order-info-form {
   max-width: 380px;
   padding: 40px 5px 30px;
   display: flex;
@@ -13,74 +13,74 @@
   justify-content: center;
 }
 
-.oi-form__wrapper-main {
+.order-info-form__wrapper-main {
   max-width: 320px;
 }
 
-.oi-form__wrapper-for-room-info-caption {
+.order-info-form__wrapper-for-room-info-caption {
   font-size: 24px;
   margin-bottom: 17px;
 }
-.oi-form__item {
+.order-info-form__item {
   margin-bottom: 20px;
 }
 
-.oi-form__list {
+.order-info-form__list {
   margin-bottom: 30px;
 }
 
-.oi-form__list,
-.oi-form__dates-list {
+.order-info-form__list,
+.order-info-form__dates-list {
   list-style: none;
 }
 
-.oi-form__dates-list {
+.order-info-form__dates-list {
   display: flex;
 }
 
-.oi-form__dates-item:not(:last-child) {
+.order-info-form__dates-item:not(:last-child) {
   margin-right: 20px;
 }
 
-.oi-form__cell-tooltip {
+.order-info-form__cell-tooltip {
   display: flex;
 }
 
-.oi-form__table {
+.order-info-form__table {
   width: 100%;
   font-size: 14px;
   color: $toxin-color-black-75;
 }
 
-.oi-form__row:nth-child(1),
-.oi-form__row:nth-child(2) {
-  .oi-form__cell-text {
+.order-info-form__row:nth-child(1),
+.order-info-form__row:nth-child(2) {
+  .order-info-form__cell-text {
     border-bottom: 13px solid transparent;
   }
 }
 
-.oi-form__cell-text {
+.order-info-form__cell-text {
   width: 214px;
 }
 
-.oi-form__cell-value {
+.order-info-form__cell-value {
   text-align: end;
   vertical-align: top;
 }
 
-.oi-form__total {
+.order-info-form__total {
   display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
   align-items: baseline;
 }
 
-.oi-form__total-text {
+.order-info-form__total-text {
   margin-right: 5px;
   text-transform: none;
 }
 
-.oi-form__total-line {
+.order-info-form__total-line {
   border-bottom: 1px dotted $toxin-color-black-25;
   margin-right: 5px;
   flex-grow: 1;

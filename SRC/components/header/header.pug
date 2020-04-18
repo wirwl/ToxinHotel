@@ -4,12 +4,12 @@ include ../button/button
 
 mixin header(data)
   header.header(class=data.isAuth && 'header_auth-true')    
-    .header__wrapper-logo
+    .header__logo
       +logo({path:data.logo_path})
-    .header__wrapper-menu
+    .header__header-menu
       +header-menu(data.menu)
-    .header__wrapper-auth
-      .header__wrapper-auth-login
+    .header__auth-area
+      .header__button-bordered
         +button-bordered({text: data.login || 'LOGIN'})      
       +button-filled({text: data.reg || 'REGISTER'})
-      .header__wrapper-auth-name Cosmin Negoita
+      .header__auth-name Cosmin Negoita

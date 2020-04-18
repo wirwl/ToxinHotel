@@ -4,54 +4,54 @@
 @import "../toggle/toggle.scss";
 @import "../button/button.scss";
 
-.su-form {
+.sign-up-form {
   padding: 40px 5px 30px;
   max-width: 380px;
   display: flex;
   justify-content: center;
 }
-.su-form__main-content {
+.sign-up-form__main-content {
   max-width: 320px;
 }
 
-.su-form__caption {
+.sign-up-form__caption {
   margin-bottom: 20px;
 }
 
-.su-form__list {
+.sign-up-form__list {
   list-style: none;
   margin-bottom: 24px;
 }
-.su-form__wrapper {
+.sign-up-form__wrapper {
   margin-bottom: 20px;
 }
 
-.su-form__item {
+.sign-up-form__item {
   margin-bottom: 10px;
 }
 
-.su-form__wrapper-for-sign-up-button {
+.sign-up-form__wrapper-for-sign-up-button {
   margin-bottom: 30px;
 }
 
-.su-form__wrapper-for-sign-in-button {
+.sign-up-form__wrapper-for-sign-in-button {
   height: 44px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.su-form__sign-in-text {
+.sign-up-form__sign-in-text {
   color: #000;
 }
 
-.su-form_wrapper-sign-in-button {
+.sign-up-form_wrapper-sign-in-button {
   min-width: 99px;
   height: 44px;
 }
 
 @media (max-width: 365px) {
-  .header__wrapper-logo {
+  .header__logo {
     display: none;
   }
 }

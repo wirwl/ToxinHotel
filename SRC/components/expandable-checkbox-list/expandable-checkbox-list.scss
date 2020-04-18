@@ -1,22 +1,22 @@
-.ecl__caption {
+.expandable-checkbox-list__caption {
   cursor: pointer;
   position: relative;
   line-height: 24px;
 }
-.ecl__list {
+.expandable-checkbox-list__list {
   list-style: none;
   display: none;
 }
-.ecl__item:not(:last-child) {
+.expandable-checkbox-list__item:not(:last-child) {
   margin-bottom: 9px;
 }
 
-.ecl_show .ecl__list {
+.expandable-checkbox-list_show .expandable-checkbox-list__list {
   display: block;
   padding-top: 13px;
 }
 
-.ecl__caption:after {
+.expandable-checkbox-list__caption:after {
   content: "keyboard_arrow_down";
   width: 44px;
   font-family: $toxin-font-material-icon;
@@ -29,6 +29,6 @@
   text-align: center;
 }
 
-.ecl_show .ecl__caption:after {
+.expandable-checkbox-list_show .expandable-checkbox-list__caption:after {
   content: "keyboard_arrow_up";
 }

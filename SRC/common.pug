@@ -39,6 +39,19 @@
 -      copyright: 'Copyright © 2018 Toxin отель. Все права защищены.'
 -      }
 
+mixin MenuItems(items)  
+  ul.menu__list.js-menu__list
+    for mi in items
+      +createHTMLtags(mi)
+        if mi.sm
+          +MenuItems(mi.sm)
+
+mixin createHTMLtags(mi)
+  - var cs = mi.sm ? "menu__list_arrow": ""
+  li.menu__item(class=mi.sm && 'menu__item_sub-menu')
+    a.menu__link.js-menu__link(class=cs+(mi.isBold ? 'menu__link_bold': '') href=mi.link) #{mi.text}
+    block      
+
 mixin favicon(data={path:''})
   link(rel="apple-touch-icon" sizes="180x180" href=data.path+"apple-touch-icon.png")
   link(rel="icon" type="image/png" sizes="32x32" href=data.path+"favicon-32x32.png")

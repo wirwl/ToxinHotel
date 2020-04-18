@@ -5,31 +5,31 @@ include ../toggle/toggle
 include ../button/button
 
 mixin sign-up-form(data)
-  form(method='post' action='#').su-form
-    fieldset.su-form__main-content
-      legend.su-form__caption Регистрация аккаунта            
-      ul.su-form__list
-        li.su-form__item
+  form(method='post' action='#').sign-up-form
+    fieldset.sign-up-form__main-content
+      legend.sign-up-form__caption Регистрация аккаунта            
+      ul.sign-up-form__list
+        li.sign-up-form__item
           +text-input({placeholder:'Имя', isRequired:true})        
-        li.su-form__item
+        li.sign-up-form__item
           +text-input({placeholder:'Фамилия', isRequired:true})        
-        li.su-form__item
+        li.sign-up-form__item
           +radios-list({name:'sex', radios:[{id:'men',text:'Мужчина', isChecked:true},
-                                                                            {id:'women',text:'Женщина'}
-                                                                            ]})
-      ul.su-form__list.su-form__wrapper
+            {id:'women',text:'Женщина'}
+            ]})
+      ul.sign-up-form__list.sign-up-form__wrapper
         li
           +masked-input({caption:'Дата рождения'})                            
-      ul.su-form__list
-        li.su-form__item
+      ul.sign-up-form__list
+        li.sign-up-form__item
           +text-input({placeholder:'Email', type:'email', caption:'Данные для входа в сервис'})
-        li.su-form__item
+        li.sign-up-form__item
           +text-input({placeholder:'Пароль', type:'password'})        
-        li.su-form__item
+        li.sign-up-form__item
           +toggle({text:'Получать спецпредложения', id:suf-toggle})        
-      .su-form__wrapper-for-sign-up-button
+      .sign-up-form__wrapper-for-sign-up-button
         +button-arrow({text:'Перейти к оплате', type:'submit'})        
-      .su-form__wrapper-for-sign-in-button
-        p.su-form__sign-in-text Уже есть аккаунт на Toxin
-        .su-form_wrapper-sign-in-button
+      .sign-up-form__wrapper-for-sign-in-button
+        p.sign-up-form__sign-in-text Уже есть аккаунт на Toxin
+        .sign-up-form_wrapper-sign-in-button
           +button-bordered({text:'Войти', dynamic_height:true, dynamic_width: true})

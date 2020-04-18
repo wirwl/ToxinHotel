@@ -5,43 +5,42 @@ include ../guests-input/guests-input
 include ../button/button
 
 mixin order-info-form(data)
-  form.oi-form(method='post' action='#')
-    fieldset.oi-form__wrapper-main
-      .oi-form__wrapper-for-room-info-caption
+  form.order-info-form(method='post' action='#')
+    fieldset.order-info-form__wrapper-main
+      .order-info-form__wrapper-for-room-info-caption
         +room-info-caption({number:888, isLux:true, cost:'9 990'})
-      ul.oi-form__list
-        li.oi-form__item
-          ul.oi-form__dates-list
-            li.oi-form__dates-item
+      ul.order-info-form__list
+        li.order-info-form__item
+          ul.order-info-form__dates-list
+            li.order-info-form__dates-item
               +datepicker-input({caption:'Прибытие', placeholder:'ДД.ММ.ГГГГ', id:'oi-form__start-input'})
-            li.oi-form__dates-item
+            li.order-info-form__dates-item
               +datepicker-input({caption:'Выезд', placeholder:'ДД.ММ.ГГГГ', id:'oi-form__end-input', hasDatepicker:false})
-        li.oi-form__item
+        li.order-info-form__item
           +guests-input({caption:'Гости', 
-                              iqdd:{isExpanded:false, placeholder:'', 
-                              items:[{id:'adults', name:'ВЗРОСЛЫЕ', defaultcount:2},
-                                     {id:'childs', name:'ДЕТИ', defaultcount:1},
-                                     {id:'babies', name:'МЛАДЕНЦЫ'}] }})
-        li.oi-form__item
-          table.oi-form__table
-            tr.oi-form__row
-              td.oi-form__cell-text 9 990₽ х 4 суток
-              td.oi-form__cell-tooltip
-              td.oi-form__cell-value 39 960₽
-            tr.oi-form__row
-              td.oi-form__cell-text Сбор за услуги: скидка 2 179₽
-              td.oi-form__cell-tooltip
+            iqdd:{isExpanded:false, placeholder:'', 
+            items:[{id:'adults', name:'ВЗРОСЛЫЕ', defaultcount:2},
+              {id:'childs', name:'ДЕТИ', defaultcount:1},
+              {id:'babies', name:'МЛАДЕНЦЫ'}] }})
+        li.order-info-form__item
+          table.order-info-form__table
+            tr.order-info-form__row
+              td.order-info-form__cell-text 9 990₽ х 4 суток
+              td.order-info-form__cell-tooltip
+              td.order-info-form__cell-value 39 960₽
+            tr.order-info-form__row
+              td.order-info-form__cell-text Сбор за услуги: скидка 2 179₽
+              td.order-info-form__cell-tooltip
                 +tooltip({text:'Скидка 20%'})
-              td.oi-form__cell-value 0₽
-            tr.oi-form__row
-              td.oi-form__cell-text Сбор за дополнительные услуги
-              td.oi-form__cell-tooltip
+              td.order-info-form__cell-value 0₽
+            tr.order-info-form__row
+              td.order-info-form__cell-text Сбор за дополнительные услуги
+              td.order-info-form__cell-tooltip
                 +tooltip({text:'Виды дополнительных услуг: уборка, массаж пяток'})
-              td.oi-form__cell-value 300₽             
-      .oi-form__total
-        h2.oi-form__total-text Итого
-        .oi-form__total-line
-        h2.oi-form__total-value 38 081₽ 
+              td.order-info-form__cell-value 300₽             
+      .order-info-form__total
+        h2.order-info-form__total-text Итого
+        .order-info-form__total-line
+        h2.order-info-form__total-value 38 081₽ 
       +button-arrow({text:'Забронировать', type:'submit'})
-      
-      
+

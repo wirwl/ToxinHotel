@@ -29,7 +29,7 @@ $header-media3: 488px;
   margin-right: 20px;
 }
 
-.header__wrapper-menu {
+.header__header-menu {
   margin-right: 20px;
 }
 
@@ -115,7 +115,7 @@ $header-media3: 488px;
 
 // Additional media queries for header-----------------------------------------
 @media (max-width: 365px) {
-  .header__wrapper-logo {
+  .header__logo {
     display: none;
   }
 }

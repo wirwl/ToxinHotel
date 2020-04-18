@@ -1,44 +1,44 @@
 @import "../text-input/text-input.scss";
 @import "../button/button.scss";
 
-.si-form {
+.sign-in-form {
   max-width: 380px;
   padding: 40px 5px 30px;
   display: flex;
   justify-content: center;
 }
 
-.si-form__fieldset {
+.sign-in-form__fieldset {
   max-width: 320px;
   width: 100%;
 }
-.si-form__caption {
+.sign-in-form__caption {
   margin-bottom: 20px;
 }
-.si-form__list {
+.sign-in-form__list {
   list-style-type: none;
   margin-bottom: 20px;
 }
 
-.si-form__item {
+.sign-in-form__item {
   margin-bottom: 10px;
 }
 
-.si-form__button-arrow {
+.sign-in-form__button-arrow {
   margin-bottom: 30px;
 }
 
-.si-form__wrapper-for-sign-in-button {
+.sign-in-form__wrapper-for-sign-in-button {
   height: 44px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.si-form__sign-in-text {
+.sign-in-form__sign-in-text {
   color: #000;
 }
 
-.si-form__wrapper-sign-up-button {
+.sign-in-form__wrapper-sign-up-button {
   height: 44px;
 }

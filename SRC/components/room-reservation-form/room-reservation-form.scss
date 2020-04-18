@@ -3,39 +3,37 @@
 @import "../datepicker-input/datepicker-input.scss";
 @import "../guests-input/guests-input.scss";
 
-
-.rr-form {
-  max-width: 380px;  
+.room-reservation-form {
+  max-width: 380px;
   padding: 40px 5px 30px;
   display: flex;
   justify-content: center;
 }
-.rr-form__wrapper-for-inputs {  
-  max-width: 320px;  
+.room-reservation-form__wrapper-for-inputs {
+  max-width: 320px;
 }
-.rr-form__list {
-  list-style: none;  
+.room-reservation-form__list {
+  list-style: none;
 }
 
-.rr-form__title {
+.room-reservation-form__title {
   margin-bottom: 20px;
 }
-.rr-form__wrapper-for-dates {
+.room-reservation-form__wrapper-for-dates {
   margin-bottom: 21px;
 }
-.rr-form__dates-list {  
+.room-reservation-form__dates-list {
   display: flex;
   list-style: none;
   flex-wrap: wrap;
   justify-content: space-between;
-  
 }
 
-.rr-form__dates-item {
+.room-reservation-form__dates-item {
   max-width: 150px;
   width: 46.875%;
 }
 
-.rr-wrapper-guests-input {
+.room-reservation-wrapper-guests-input {
   margin-bottom: 30px;
 }

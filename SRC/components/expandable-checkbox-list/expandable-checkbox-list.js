@@ -1,5 +1,5 @@
-$(document).ready(function () {    
+$(document).ready(function () {      
   $('.js-ecl__caption').on('click.ecl',function () {    
-    $(this).parent().toggleClass('ecl_show');
+    $(this).parent().toggleClass('expandable-checkbox-list_show');
   })
 })
