@@ -1,0 +1,17 @@
+.button-simple {
+  border: none;
+  font-family: $toxin-font-montserrat;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  background: none;
+  color: #bc9cff;
+  margin: 0px;
+  padding: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &.button-simple_disabled {
+    color: rgba(31, 32, 65, 0.5);
+  }
+}

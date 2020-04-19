@@ -1,0 +1,31 @@
+.button-filled {
+  border: none;
+  font-family: $toxin-font-montserrat;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  background: none;
+  color: #bc9cff;
+  margin: 0px;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  border-radius: 22px;
+  color: #ffffff;
+
+  &_disabled {
+    background: linear-gradient(180deg, #bc9cff7f 0%, rgba(139, 164, 249, 0.5) 100%);
+  }
+
+  &_dynamic-height {
+    height: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  &_dynamic-width {
+    width: 100%;
+    min-width: 78px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
