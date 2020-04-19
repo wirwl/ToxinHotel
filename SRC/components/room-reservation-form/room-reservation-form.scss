@@ -7,32 +7,33 @@
   padding: 40px 5px 30px;
   display: flex;
   justify-content: center;
-}
-.room-reservation-form__wrapper-for-inputs {
-  max-width: 320px;
-}
-.room-reservation-form__list {
-  list-style: none;
-}
 
-.room-reservation-form__title {
-  margin-bottom: 20px;
-}
-.room-reservation-form__wrapper-for-dates {
-  margin-bottom: 21px;
-}
-.room-reservation-form__dates-list {
-  display: flex;
-  list-style: none;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
+  &__wrapper-for-inputs {
+    max-width: 320px;
+  }
+  &__list {
+    list-style: none;
+  }
 
-.room-reservation-form__dates-item {
-  max-width: 150px;
-  width: 46.875%;
-}
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__wrapper-for-dates {
+    margin-bottom: 21px;
+  }
+  &__dates-list {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
-.room-reservation-wrapper-guests-input {
-  margin-bottom: 30px;
+  &__dates-item {
+    max-width: 150px;
+    width: 46.875%;
+  }
+
+  .room-reservation-wrapper-guests-input {
+    margin-bottom: 30px;
+  }
 }

@@ -2,7 +2,8 @@
 
 .bullets-list {
   list-style: none;
-}
-.bullets-list__item {
-  margin-bottom: 10px;
+
+  &__item {
+    margin-bottom: 10px;
+  }
 }

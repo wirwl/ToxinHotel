@@ -25,23 +25,23 @@ $(document).ready(() => {
   });
 
   $('.js-menu__icon').on('click.menu', function (e) {
-    if ($(this).hasClass('menu_show')) {
-      $(this).removeClass('menu_show');
-      $(this).addClass('menu_hide');
+    if ($(this).hasClass('header-menu_show')) {
+      $(this).removeClass('header-menu_show');
+      $(this).addClass('header-menu_hide');
     }
     else {
-      $(this).removeClass('menu_hide');
-      $(this).addClass('menu_show');
+      $(this).removeClass('header-menu_hide');
+      $(this).addClass('header-menu_show');
     }    
   })
 
   $('.js-menu > .js-menu__list').on('mouseleave.menu',function () {
-    if ($(this).parent().find('.menu_show')) {
+    if ($(this).parent().find('.header-menu_show')) {
       $(this).children().each(function () {
         CloseAllOpenMenuItems($(this));
       })
-      $(this).parent().find('.menu__icon').removeClass('menu_show');
-      $(this).parent().find('.menu__icon').addClass('menu_hide');
+      $(this).parent().find('.header-menu__icon').removeClass('header-menu_show');
+      $(this).parent().find('.header-menu__icon').addClass('header-menu_hide');
       
     }
   })

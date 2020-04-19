@@ -1,48 +1,48 @@
 .toggle {
   display: flex;
   height: 20px;
-}
 
-.toggle__label {
-  position: relative;
-  padding: 0 0 0 50px;
-  cursor: pointer;
-  font-size: 14px;
-  color: $toxin-color-black-75;
-}
-.toggle__label:before {
-  box-sizing: border-box;
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 0;
-  width: 40px;
-  height: 100%;
-  border: 1px solid #bc9cff;
-  border-radius: 10px;
-  transition: 0.2s;
-}
-.toggle__label:after {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: 3px;
-  width: 12px;
-  height: 12px;
-  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-  border-radius: 100%;
-  transition: 0.2s;
-}
-
-.toggle__input:checked + .toggle__label:after {
-  left: 24px;
-}
-
-.toggle__input:not(:checked) {
-  + .toggle__label:after {
-    background: $toxin-color-black-25;
+  &__label {
+    position: relative;
+    padding: 0 0 0 50px;
+    cursor: pointer;
+    font-size: 14px;
+    color: $toxin-color-black-75;
   }
-  + .toggle__label::before {
-    border: 1px solid $toxin-color-black-25;
+  &__label:before {
+    box-sizing: border-box;
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 40px;
+    height: 100%;
+    border: 1px solid #bc9cff;
+    border-radius: 10px;
+    transition: 0.2s;
+  }
+  &__label:after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 3px;
+    width: 12px;
+    height: 12px;
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    border-radius: 100%;
+    transition: 0.2s;
+  }
+
+  &__input:checked + .toggle__label:after {
+    left: 24px;
+  }
+
+  .toggle__input:not(:checked) {
+    + .toggle__label:after {
+      background: $toxin-color-black-25;
+    }
+    + .toggle__label::before {
+      border: 1px solid $toxin-color-black-25;
+    }
   }
 }

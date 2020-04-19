@@ -199,8 +199,8 @@ module.exports = ((env, argv) => {
     var uikitcardsCFG = AddHTMLPage({ common_filename: 'cards', input_path: 'SRC/pages/ui-kit/cards', publicPath: '../../../' });
     //---Site-Pages-----------
     var indexCFG = AddHTMLPage({ common_filename: 'index', input_path: 'SRC/pages/index', output_path: '.' });
-    var searchroomCFG = AddHTMLPage({ common_filename: 'sr', input_path: 'SRC/pages/search-room', publicPath: '../../' });
-    var roomdetailsCFG = AddHTMLPage({ common_filename: 'rd', input_path: 'SRC/pages/room-details', publicPath: '../../' })
+    var searchroomCFG = AddHTMLPage({ common_filename: 'search-room', input_path: 'SRC/pages/search-room', publicPath: '../../' });
+    var roomdetailsCFG = AddHTMLPage({ common_filename: 'room-details', input_path: 'SRC/pages/room-details', publicPath: '../../' })
     var signupCFG = AddHTMLPage({ common_filename: 'sign-up', input_path: 'SRC/pages/sign-up', publicPath: '../../' })
     var signinCFG = AddHTMLPage({ common_filename: 'sign-in', input_path: 'SRC/pages/sign-in', publicPath: '../../' })
     

@@ -1,44 +1,46 @@
-.room-info-caption__caption {
-  display: flex;
-  justify-content: space-between;  
-  align-items: baseline;
-  font-size: inherit;  
-}
+.room-info-caption {
+  &__caption {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: inherit;
+  }
 
-.room-info-caption__caption-left-part {
-  font-size: inherit;
-  color: $toxin-color-black-100;
-}
+  &__caption-left-part {
+    font-size: inherit;
+    color: $toxin-color-black-100;
+  }
 
-.room-info-caption__caption-n {
-  font-family: $toxin-font-quicksand;
-  font-size: 14px;
-  font-weight: bold;
-  margin-right: 5px;
-}
+  &__caption-n {
+    font-family: $toxin-font-quicksand;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 5px;
+  }
 
-.room-info-caption__caption-room-number {
-  font-family: $toxin-font-quicksand;
-  margin-right: 5px;
-  font-size: inherit;
-  font-weight: bold;
-}
-.room-info-caption__room-type {
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: bold;
-  color: $toxin-color-purple;
-}
+  &__caption-room-number {
+    font-family: $toxin-font-quicksand;
+    margin-right: 5px;
+    font-size: inherit;
+    font-weight: bold;
+  }
+  &__room-type {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    color: $toxin-color-purple;
+  }
 
-.room-info-caption__cost-per-day {
-  color: $toxin-color-black-50;
-  font-weight: bold;
-}
-.room-info-caption__cost-per-day-value {
-  margin-right: 5px;
-  font-size: 14px;
-}
-.room-info-caption__cost-per-day-text {
-  font-weight: normal;
-  font-size: 12px;
+  &__cost-per-day {
+    color: $toxin-color-black-50;
+    font-weight: bold;
+  }
+  &__cost-per-day-value {
+    margin-right: 5px;
+    font-size: 14px;
+  }
+  &__cost-per-day-text {
+    font-weight: normal;
+    font-size: 12px;
+  }
 }

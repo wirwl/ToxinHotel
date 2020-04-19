@@ -1,35 +1,33 @@
-.range-slider {  
+.range-slider {
   font-size: 12px;
-}
-.range-slider__caption {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 19px;  
-}
-.range-slider__caption-text {
-  
-  color: $toxin-color-black-100;
-}
-.range-slider__values {
-  color: $toxin-color-black-50;
-}
 
-.range-slider__desc {
-  padding-top: 9px;
-  font-size: 12px;
-  color: $toxin-color-black-50;
+  &__caption {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 19px;
+  }
+  &__caption-text {
+    color: $toxin-color-black-100;
+  }
+  &__values {
+    color: $toxin-color-black-50;
+  }
+
+  &__desc {
+    padding-top: 9px;
+    font-size: 12px;
+    color: $toxin-color-black-50;
+  }
 }
-
-
 // Modify ion.rangeSlider.css
-.irs--round {  
-  height: 14px;  
-  .irs-handle {    
+.irs--round {
+  height: 14px;
+  .irs-handle {
     width: 16px;
     height: 16px;
-    border: 2px solid #fff;    
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-    border-radius: 50%;    
+    border: 2px solid #fff;
+    background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+    border-radius: 50%;
     top: 0px;
     box-shadow: none;
     cursor: pointer;
@@ -42,8 +40,7 @@
     top: 5px;
   }
   .irs-bar {
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
     top: 6px;
   }
 }
-

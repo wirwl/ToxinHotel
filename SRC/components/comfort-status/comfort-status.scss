@@ -1,29 +1,29 @@
 .comfort-status {
   border-bottom: 1px solid $toxin-color-black-10;
-  padding-bottom: 20px;  
+  padding-bottom: 20px;
   display: flex;
-}
 
-.comfort-status.comfort-status_hide-line {
-  border-bottom: none;
-}
+  &_hide-line {
+    border-bottom: none;
+  }
 
-.comfort-status__desc {
-  padding-top: 3px;
-  color: $toxin-color-black-75;
-}
+  &__desc {
+    padding-top: 3px;
+    color: $toxin-color-black-75;
+  }
 
-.comfort-status__caption {
-  margin-bottom: 6px;
-  font-weight: bold;
-}
+  &__caption {
+    margin-bottom: 6px;
+    font-weight: bold;
+  }
 
-.comfort-status__text {
-  font-size: 14px;  
-}
+  &__text {
+    font-size: 14px;
+  }
 
-.comfort-status__icon {  
-  font-size: 48px;    
-  margin-right: 10px;
-  color: $toxin-color-purple;
+  &__icon {
+    font-size: 48px;
+    margin-right: 10px;
+    color: $toxin-color-purple;
+  }
 }

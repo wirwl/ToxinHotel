@@ -1,5 +1,6 @@
 .socialButtons {
   display: flex;
+
   > * {
     font-family: "awesome-5-brands-regular-400";
     text-decoration: none;
@@ -10,10 +11,10 @@
     height: 24px;
   }
 
-  .socialButtons__btnTwitter {
+  &__btnTwitter {
     margin-right: 24px;
   }
-  .socialButtons__btnFacebook {
+  &__btnFacebook {
     margin-right: 16px;
   }
 }

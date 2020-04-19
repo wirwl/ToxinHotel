@@ -1,12 +1,13 @@
-.checkboxes-list__list {
-list-style: none;
-}
+.checkboxes-list {
+  &__list {
+    list-style: none;
+  }
 
-.checkboxes-list__caption {    
+  &__caption {
     margin-bottom: 16px;
-}
+  }
 
-.checkboxes-list__item:not(:last-child) {
-  margin-bottom: 10px;
+  &__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
-

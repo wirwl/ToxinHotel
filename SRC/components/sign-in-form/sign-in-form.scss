@@ -5,39 +5,39 @@
   padding: 40px 5px 30px;
   display: flex;
   justify-content: center;
-}
 
-.sign-in-form__fieldset {
-  max-width: 320px;
-  width: 100%;
-}
-.sign-in-form__caption {
-  margin-bottom: 20px;
-}
-.sign-in-form__list {
-  list-style-type: none;
-  margin-bottom: 20px;
-}
+  &__fieldset {
+    max-width: 320px;
+    width: 100%;
+  }
+  &__caption {
+    margin-bottom: 20px;
+  }
+  &__list {
+    list-style-type: none;
+    margin-bottom: 20px;
+  }
 
-.sign-in-form__item {
-  margin-bottom: 10px;
-}
+  &__item {
+    margin-bottom: 10px;
+  }
 
-.sign-in-form__button-arrow {
-  margin-bottom: 30px;
-}
+  &__button-arrow {
+    margin-bottom: 30px;
+  }
 
-.sign-in-form__wrapper-for-sign-in-button {
-  height: 44px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  &__wrapper-for-sign-in-button {
+    height: 44px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-.sign-in-form__sign-in-text {
-  color: #000;
-}
+  &__sign-in-text {
+    color: #000;
+  }
 
-.sign-in-form__wrapper-sign-up-button {
-  height: 44px;
+  &__wrapper-sign-up-button {
+    height: 44px;
+  }
 }

@@ -14,7 +14,7 @@ import '../../components/order-info-form/order-info-form.js'
 import '../../components/header-menu/header-menu'
 import '../../components/item-quantity-dropdown/item-quantity-dropdown'
 import '../../components/guests-input/guests-input'
-import './rd.scss'
+import './room-details.scss'
 
 $(document).ready(function () {
   $('.flexslider').flexslider({

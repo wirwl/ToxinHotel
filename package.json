@@ -14,8 +14,8 @@
     "le:fe": "webpack-dev-server --open --mode=development --display-error-details --open-page pages/ui-kit/form-elements/form-elements.html",
     "le:ca": "webpack-dev-server --open --mode=development --display-error-details --open-page pages/ui-kit/cards/cards.html",
     "le": "webpack-dev-server --open --mode=development --display-error-details --open-page index.html",
-    "le:sr": "webpack-dev-server --open --mode=development --display-error-details --open-page pages/search-room/sr.html",
-    "le:rd": "webpack-dev-server --open --mode=development --display-error-details --open-page pages/room-details/rd.html",
+    "le:sr": "webpack-dev-server --open --mode=development --display-error-details --open-page pages/search-room/search-room.html",
+    "le:rd": "webpack-dev-server --open --mode=development --display-error-details --open-page pages/room-details/room-details.html",
     "le:su": "webpack-dev-server --open --mode=development --display-error-details --open-page pages/sign-up/sign-up.html",
     "le:si": "webpack-dev-server --open --mode=development --display-error-details --open-page pages/sign-in/sign-in.html"
   },

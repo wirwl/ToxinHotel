@@ -3,84 +3,84 @@
 @import "../../components/datepicker-input/datepicker-input.scss";
 @import "../guests-input/guests-input.scss";
 @import "../../components/datepicker/datepicker.scss";
+@import "../../components/button-arrow/button-arrow.scss";
 
 .order-info-form {
   max-width: 380px;
   padding: 40px 5px 30px;
   display: flex;
-
   justify-content: center;
-}
 
-.order-info-form__wrapper-main {
-  max-width: 320px;
-}
-
-.order-info-form__wrapper-for-room-info-caption {
-  font-size: 24px;
-  margin-bottom: 17px;
-}
-.order-info-form__item {
-  margin-bottom: 20px;
-}
-
-.order-info-form__list {
-  margin-bottom: 30px;
-}
-
-.order-info-form__list,
-.order-info-form__dates-list {
-  list-style: none;
-}
-
-.order-info-form__dates-list {
-  display: flex;
-}
-
-.order-info-form__dates-item:not(:last-child) {
-  margin-right: 20px;
-}
-
-.order-info-form__cell-tooltip {
-  display: flex;
-}
-
-.order-info-form__table {
-  width: 100%;
-  font-size: 14px;
-  color: $toxin-color-black-75;
-}
-
-.order-info-form__row:nth-child(1),
-.order-info-form__row:nth-child(2) {
-  .order-info-form__cell-text {
-    border-bottom: 13px solid transparent;
+  &__wrapper-main {
+    max-width: 320px;
   }
-}
 
-.order-info-form__cell-text {
-  width: 214px;
-}
+  &__wrapper-for-room-info-caption {
+    font-size: 24px;
+    margin-bottom: 17px;
+  }
+  &__item {
+    margin-bottom: 20px;
+  }
 
-.order-info-form__cell-value {
-  text-align: end;
-  vertical-align: top;
-}
+  &__list {
+    margin-bottom: 30px;
+  }
 
-.order-info-form__total {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 16px;
-  align-items: baseline;
-}
+  &__list,
+  &__dates-list {
+    list-style: none;
+  }
 
-.order-info-form__total-text {
-  margin-right: 5px;
-  text-transform: none;
-}
+  &__dates-list {
+    display: flex;
+  }
 
-.order-info-form__total-line {
-  border-bottom: 1px dotted $toxin-color-black-25;
-  margin-right: 5px;
-  flex-grow: 1;
+  &__dates-item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__cell-tooltip {
+    display: flex;
+  }
+
+  &__table {
+    width: 100%;
+    font-size: 14px;
+    color: $toxin-color-black-75;
+  }
+
+  &__row:nth-child(1),
+  &__row:nth-child(2) {
+    .order-info-form__cell-text {
+      border-bottom: 13px solid transparent;
+    }
+  }
+
+  &__cell-text {
+    width: 214px;
+  }
+
+  &__cell-value {
+    text-align: end;
+    vertical-align: top;
+  }
+
+  &__total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    align-items: baseline;
+  }
+
+  &__total-text {
+    margin-right: 5px;
+    text-transform: none;
+  }
+
+  &__total-line {
+    border-bottom: 1px dotted $toxin-color-black-25;
+    margin-right: 5px;
+    flex-grow: 1;
+  }
 }

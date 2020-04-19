@@ -1,14 +1,16 @@
 @import "../radio/radio.scss";
 
-.radios-list__list {
-  list-style: none;   
-  display: flex;
-}
+.radios-list {
+  &__list {
+    list-style: none;
+    display: flex;
+  }
 
-.radios-list__caption {  
-  margin-bottom: 16px;
-}
+  &__caption {
+    margin-bottom: 16px;
+  }
 
-.radios-list__item:not(:last-child) {
-  margin-right: 20px;
+  &__item:not(:last-child) {
+    margin-right: 20px;
+  }
 }

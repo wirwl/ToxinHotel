@@ -1,29 +1,29 @@
 .text-input {
   width: 100%;
-}
 
-.text-input__caption {  
-  margin-bottom: 5px;
-  display: inline-block;
-}
+  &__caption {
+    margin-bottom: 5px;
+    display: inline-block;
+  }
 
-.text-input__input {
-  color: $toxin-color-black-75;
-  border: 1px solid $toxin-color-black-25;
-  border-radius: 4px;
-  background: white;
-  padding: 13px 15px;
-  height: 44px;
-  outline: none;
-  width: 100%;
-  font-size: 14px;
-}
+  &__input {
+    color: $toxin-color-black-75;
+    border: 1px solid $toxin-color-black-25;
+    border-radius: 4px;
+    background: white;
+    padding: 13px 15px;
+    height: 44px;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+  }
 
-.text-input__input::placeholder {
-  color: $toxin-color-black-25;  
-}
-.text-input__input:hover,
-.text-input__input:focus,
-.text-input_isFocused .text-input__input {
-  border: 1px solid $toxin-color-black-50;
+  &__input::placeholder {
+    color: $toxin-color-black-25;
+  }
+  &__input:hover,
+  &__input:focus,
+  &_isFocused .text-input__input {
+    border: 1px solid $toxin-color-black-50;
+  }
 }

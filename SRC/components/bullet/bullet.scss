@@ -4,16 +4,16 @@
   line-height: 24px;
   padding-left: 20px;
   position: relative;
-}
 
-.bullet:before {
-  content: "";
-  display: block;
-  width: 10px;
-  height: 10px;
-  background: $toxin-color-black-25;
-  border-radius: 50%;
-  position: absolute;
-  left: 0px;
-  top: 7px;
+  &:before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: $toxin-color-black-25;
+    border-radius: 50%;
+    position: absolute;
+    left: 0px;
+    top: 7px;
+  }
 }

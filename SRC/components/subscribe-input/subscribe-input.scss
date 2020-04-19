@@ -1,55 +1,58 @@
-.subscribe-input__caption {  
-  display: inline-block;
-  margin-bottom: 5px;
-}
+.subscribe-input {
+  &__caption {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
 
-.subscribe-input__input {
-  border: 1px solid $toxin-color-black-25;
-  border-radius: 4px;
-  background: white;
-  padding: 13px 15px;
-  padding: 13px 30px 13px 15px;
-  font-size: 14px;    
-  height: 44px;
-  width: 100%;
-}
+  &__input {
+    border: 1px solid $toxin-color-black-25;
+    border-radius: 4px;
+    background: white;
+    padding: 13px 15px;
+    padding: 13px 30px 13px 15px;
+    font-size: 14px;
+    height: 44px;
+    width: 100%;
+  }
 
-.subscribe-input__input::placeholder {
-  font-size: 14px;
-  line-height: 18px;
-  color: $toxin-color-black-25;  
-}
-.subscribe-input__input:hover,
-.subscribe-input__input:focus, .subscribe-input_isFocused {
-  border: 1px solid $toxin-color-black-50;
-}
+  &__input::placeholder {
+    font-size: 14px;
+    line-height: 18px;
+    color: $toxin-color-black-25;
+  }
+  &__input:hover,
+  &__input:focus,
+  &_isFocused {
+    border: 1px solid $toxin-color-black-50;
+  }
 
-.subscribe-input__wrapper {
-  position: relative;
-  overflow:visible;
-}
+  &__wrapper {
+    position: relative;
+    overflow: visible;
+  }
 
-.subscribe-input {    
-  width: 100%;
-}
+  & {
+    width: 100%;
+  }
 
-.subscribe-input__wrapper:after {
-  content: "arrow_forward";
-  content: '\e5c8';
-  font-family: $toxin-font-material-icon;
-  font-size: 24px;
-  background: linear-gradient(180deg, $toxin-color-purple 0%, $toxin-color-blue 100%);
-  background-clip: text;  
-  -webkit-text-fill-color: transparent;
-  color: $toxin-color-blue;
-  position: absolute;
-  top: 0px;
-  right: 0px;    
-  width: 44px;
-  height: 44px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  pointer-events: none;
-  font-feature-settings: 'liga';
+  &__wrapper:after {
+    content: "arrow_forward";
+    content: "\e5c8";
+    font-family: $toxin-font-material-icon;
+    font-size: 24px;
+    background: linear-gradient(180deg, $toxin-color-purple 0%, $toxin-color-blue 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: $toxin-color-blue;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    font-feature-settings: "liga";
+  }
 }

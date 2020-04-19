@@ -9,108 +9,113 @@
   min-height: 70px;
   padding: 0px 9.722222%;
   background: #fff;
-}
-.header__wrapper-main {
-  display: flex;
-  align-items: center;
-  flex-basis: 80.55555555555556%;
-}
-.header__logo {
-  margin-right: 15px;
-}
 
-.header__header-menu {
-  margin-left: auto;
-  margin-right: 2.586206896551724%;
-  align-self: stretch;
-  z-index: 100;
-}
-
-.header__auth-area {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header_auth-true .header__auth-area {
-  justify-content: flex-end;
-  flex-basis: auto;
-}
-
-.header__button-bordered {
-  height: 100%;
-  margin-right: 20px;
-}
-
-.header__auth-name {
-  display: none;
-  font-family: $toxin-font-montserrat;
-  color: $toxin-color-black-50;
-  border-left: 1px solid $toxin-color-black-10;
-  height: 30px;
-  align-items: center;
-  padding-left: 30px;
-  text-align: center;
-  font-size: 14px;
-  line-height: 17px;
-}
-
-.header_auth-true .header__auth-name {
-  display: flex;
-}
-
-.header_auth-true .button {
-  display: none;
-}
-
-.header_auth-true .header__button-bordered,
-.header_auth-true .header__wrapper-auth-register {
-  display: none;
-}
-
-@media (max-width: $header-media1) {
-  .header {
-    padding: 0 5px;
+  &__wrapper-main {
+    display: flex;
+    align-items: center;
+    flex-basis: 80.55555555555556%;
   }
-  .header .header__logo {
-    margin-right: 5px;
+  &__logo {
+    margin-right: 15px;
   }
-  .header .header__header-menu {
-    margin-right: 5px;
-  }
-}
 
-@media (max-width: $header-media2) {
-  .header {
+  &__header-menu {
+    margin-left: auto;
+    margin-right: 2.586206896551724%;
+    align-self: stretch;
+    z-index: 100;
+  }
+
+  &__auth-area {
+    display: flex;
     justify-content: space-between;
-    padding: 0;
-    padding-right: 5px;
+    align-items: center;
   }
-  .header__header-menu {
-    order: -1;
-    margin-left: 0;
+
+  &_auth-true .header__auth-area {
+    justify-content: flex-end;
+    flex-basis: auto;
   }
-  .menu__icon {
-    display: block;
+
+  &__button-bordered {
+    height: 100%;
+    margin-right: 20px;
   }
-  .menu > .menu__list {
-    padding: 0 5px;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    position: absolute;
-    left: 0px;
-    top: 100%;
-    overflow: hidden;
-    transform: translateX(-100%);
+
+  &__button-filled {
+    width: 196px;
+    height: 31px;
   }
-  .menu__icon.menu_hide + .menu__list {
-    transition: transform 400ms 0ms;
+
+  &__auth-name {
+    display: none;
+    font-family: $toxin-font-montserrat;
+    color: $toxin-color-black-50;
+    border-left: 1px solid $toxin-color-black-10;
+    height: 30px;
+    align-items: center;
+    padding-left: 30px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 17px;
   }
-  .menu__icon.menu_show + .menu__list .menu__list {
-    position: static;
+
+  &_auth-true .header__auth-name {
+    display: flex;
+  }
+
+  &_auth-true .button {
+    display: none;
+  }
+
+  &_auth-true .header__button-bordered,
+  &_auth-true .header__wrapper-auth-register {
+    display: none;
+  }
+
+  @media (max-width: $header-media1) {
+    .header {
+      padding: 0 5px;
+    }
+    .header .header__logo {
+      margin-right: 5px;
+    }
+    .header .header__header-menu {
+      margin-right: 5px;
+    }
+  }
+
+  @media (max-width: $header-media2) {
+    .header {
+      justify-content: space-between;
+      padding: 0;
+      padding-right: 5px;
+    }
+    .header__header-menu {
+      order: -1;
+      margin-left: 0;
+    }
+    .header-menu__icon {
+      display: block;
+    }
+    .header-menu > .header-menu__list {
+      padding: 0 5px;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      position: absolute;
+      left: 0px;
+      top: 100%;
+      overflow: hidden;
+      transform: translateX(-100%);
+    }
+    .header-menu__icon.header-menu_hide + .header-menu__list {
+      transition: transform 400ms 0ms;
+    }
+    .header-menu__icon.header-menu_show + .header-menu__list .header-menu__list {
+      position: static;
+    }
   }
 }
-
 @media (max-width: $header-media3) {
   .header__button-bordered {
     margin-right: 5px;

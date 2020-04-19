@@ -15,7 +15,7 @@ html(lang="en")
     +meta-tags({description:"Search room", keywords:"search, room, filter, list of rooms"})    
     title Поиск номеров
     +favicon({path:"../../"})
-    link(href="sr.css" rel="stylesheet")
+    link(href="search-room.css" rel="stylesheet")
   body        
     +header(header_data)      
     main.main-content       
@@ -160,4 +160,4 @@ html(lang="en")
           .rooms__wrapper-pagination
             +pagination({pages:15, page:1, showed:12, showedlastpage:6, total:100})
     +footer(footer_data)
-    script(type="text/javascript" src="sr.js")
+    script(type="text/javascript" src="search-room.js")

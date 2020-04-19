@@ -1,18 +1,20 @@
-.donut-chart__caption {
-  margin-bottom: 20px;
-  text-transform: none;
-}
+.donut-chart {
+  &__caption {
+    margin-bottom: 20px;
+    text-transform: none;
+  }
 
-.donut-chart__wrapper {
-  display: flex;
-  justify-content: space-between;
-}
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
 
-.donut-chart__canvas {
-  margin-right: 10px;
-  height: 120px;
-}
+  &__canvas {
+    margin-right: 10px;
+    height: 120px;
+  }
 
-.donut-chart__legend-list {
-  margin-top: 26px;
+  &__legend-list {
+    margin-top: 26px;
+  }
 }

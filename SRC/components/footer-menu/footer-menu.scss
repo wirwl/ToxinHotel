@@ -2,28 +2,28 @@
   display: flex;
   flex-shrink: 8;
   padding-top: 4px;
-  .footer-menu__list {
+  &__list {
     list-style: none;
   }
-  .footer-menu__list:not(:last-child) {
+  &__list:not(:last-child) {
     flex-basis: calc(100% / 3);
     padding-right: 5px;
   }
-  .footer-menu__title {
+  &__title {
     font-weight: 900;
     margin-bottom: 21px;
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
   }
-  .footer-menu__item {
+  &__item {
     font-size: 14px;
     line-height: 17px;
   }
-  .footer-menu__item:not(:last-child) {
+  &__item:not(:last-child) {
     margin-bottom: 20px;
   }
-  .footer-menu__link {
+  &__link {
     text-decoration: none;
     color: rgba(31, 32, 65, 0.5);
   }

@@ -23,7 +23,7 @@ import '../../components/guests-input/guests-input'
 import '../../components/comfort-input/comfort-input'
 import '../../components/expandable-checkbox-list/expandable-checkbox-list'
 import '../../components/pagination/pagination'
-import './sr.scss'
+import './search-room.scss'
 
 $(document).ready(function () {
 

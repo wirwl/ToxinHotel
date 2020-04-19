@@ -1,43 +1,54 @@
 .font-example {
   display: flex;
-}
-.font-example__title {
-  font-family: $toxin-font-montserrat;
-  margin-right: 30px;
-  color: $toxin-color-black-25;
-  text-align: right;
-  width: 50px;
-}
-.font-example__desc {
-  color:$toxin-color-black-100;
-  font-family: inherit;
-}
 
-
-
-.font-example_ {
-  &h1 {    
-    font-family: $toxin-font-quicksand;
-    font-size: 24px;
-    line-height: 30px;    
-    .font-example__desc {width: 351px;font-weight: bold;}
-  }
-  &h2 {    
-    font-family: $toxin-font-quicksand;
-    font-size: 19px;
-    line-height: 24px;
-    .font-example__desc {width: 282px;font-weight: bold;}
-  }
-  &h3 {    
+  &__title {
     font-family: $toxin-font-montserrat;
-    font-size: 12px;
-    line-height: 15px;
-    .font-example__desc {width: 186px; font-weight: bold;}
+    margin-right: 30px;
+    color: $toxin-color-black-25;
+    text-align: right;
+    width: 50px;
   }
-  &body {    
-    font-family: $toxin-font-montserrat;    
-    font-size: 14px;
-    line-height: 24px;
-    .font-example__desc {width: 301px; color: $toxin-color-black-75;}
+  &__desc {
+    color: $toxin-color-black-100;
+    font-family: inherit;
+  }
+
+  &_ {
+    &h1 {
+      font-family: $toxin-font-quicksand;
+      font-size: 24px;
+      line-height: 30px;
+      .font-example__desc {
+        width: 351px;
+        font-weight: bold;
+      }
+    }
+    &h2 {
+      font-family: $toxin-font-quicksand;
+      font-size: 19px;
+      line-height: 24px;
+      .font-example__desc {
+        width: 282px;
+        font-weight: bold;
+      }
+    }
+    &h3 {
+      font-family: $toxin-font-montserrat;
+      font-size: 12px;
+      line-height: 15px;
+      .font-example__desc {
+        width: 186px;
+        font-weight: bold;
+      }
+    }
+    &body {
+      font-family: $toxin-font-montserrat;
+      font-size: 14px;
+      line-height: 24px;
+      .font-example__desc {
+        width: 301px;
+        color: $toxin-color-black-75;
+      }
+    }
   }
 }

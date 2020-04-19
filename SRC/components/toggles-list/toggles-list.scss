@@ -1,11 +1,13 @@
-.toggles-list__caption {
-  margin-bottom: 16px;
-}
+.toggles-list {
+  &__caption {
+    margin-bottom: 16px;
+  }
 
-.toggles-list__list {
-  list-style: none;
-}
+  &__list {
+    list-style: none;
+  }
 
-.toggles-list__item:not(:last-child) {
-  margin-bottom: 14px;
+  &__item:not(:last-child) {
+    margin-bottom: 14px;
+  }
 }

@@ -1,6 +1,7 @@
 .subscribe-area {
   min-width: 140px;
-  .subscribe-area__title {
+
+  &__title {
     padding-top: 4px;
     margin-bottom: 18px;
     font-weight: 900;
@@ -8,7 +9,8 @@
     line-height: 15px;
     text-transform: uppercase;
   }
-  .subscribe-area__text {
+
+  &__text {
     font-size: 14px;
     line-height: 24px;
     margin-bottom: 23px;

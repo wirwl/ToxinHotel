@@ -40,16 +40,16 @@
 -      }
 
 mixin MenuItems(items)  
-  ul.menu__list.js-menu__list
+  ul.header-menu__list.js-menu__list
     for mi in items
       +createHTMLtags(mi)
         if mi.sm
           +MenuItems(mi.sm)
 
 mixin createHTMLtags(mi)
-  - var cs = mi.sm ? "menu__list_arrow": ""
-  li.menu__item(class=mi.sm && "menu__item_sub-menu")
-    a.menu__link.js-menu__link(class=cs+(mi.isBold ? "menu__link_bold": "") href=mi.link) #{mi.text}
+  - var cs = mi.sm ? "header-menu__list_arrow": ""
+  li.header-menu__item(class=mi.sm && "header-menu__item_sub-menu")
+    a.header-menu__link.js-menu__link(class=cs+(mi.isBold ? "header-menu__link_bold": "") href=mi.link) #{mi.text}
     block      
 
 mixin favicon(data={path:""})

@@ -1,9 +1,9 @@
 @import "../comfort-status/comfort-status.scss";
 
-.comfort-status-list__item:not(:last-child) {
-  margin-bottom: 20px;
-}
-
 .comfort-status-list {
   list-style: none;
+
+  &__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
 }

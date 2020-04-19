@@ -1,21 +1,19 @@
 @import "../../components/feedback/feedback.scss";
 
-.feedback-list__caption {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;  
-  align-items: center;
-  margin-bottom: 19px;
-}
+.feedback-list {
+  &__caption {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 19px;
+  }
 
-.feedback-list__text {
-  text-transform: none;
-  
-}
+  &__text {
+    text-transform: none;
+  }
 
-.feedback-list__feedback-count {  
-}
-
-.feedback-list__item:not(:last-child) {
-  margin-bottom: 23px;
+  &__item:not(:last-child) {
+    margin-bottom: 23px;
+  }
 }

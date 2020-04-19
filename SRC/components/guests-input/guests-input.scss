@@ -3,8 +3,8 @@
 .guests-input {
   max-width: 320px;
   width: 100%;
-}
 
-.guests-input__caption {
-  margin-bottom: 5px;
+  &__caption {
+    margin-bottom: 5px;
+  }
 }

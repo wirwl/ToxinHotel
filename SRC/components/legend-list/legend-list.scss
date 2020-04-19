@@ -2,7 +2,8 @@
 
 .legend-list {
   list-style: none;
-}
-.legend-list__item {
-  margin-bottom: 0px;
+
+  &__item {
+    margin-bottom: 0px;
+  }
 }

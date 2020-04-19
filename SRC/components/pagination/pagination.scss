@@ -3,61 +3,63 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
-}
-.pagination__buttons {
-  display: flex;
-  margin-bottom: 10px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
 
-.pagination__list {
-  width: 100%;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: space-between;
-  .pagination__item {
-    color: #fff;
-    color: $toxin-color-black-50;
+  &__buttons {
+    display: flex;
+    margin-bottom: 10px;
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    font-size: 12px;
-  }
-  .pagination__item:first-child,
-  .pagination__item:last-child,
-  .pagination__item_active {
-    width: 40px;
-    height: 40px;
   }
 
-  .pagination__item:first-child {
-    background: $toxin-color-green;
-    color: #fff;
-  }
-  .pagination__item:last-child {
-    background: $toxin-color-green;
-    color: #fff;
+  &__list {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+
+    .pagination__item {
+      color: #fff;
+      color: $toxin-color-black-50;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      font-size: 12px;
+    }
+    .pagination__item:first-child,
+    .pagination__item:last-child,
+    .pagination__item_active {
+      width: 40px;
+      height: 40px;
+    }
+
+    .pagination__item:first-child {
+      background: $toxin-color-green;
+      color: #fff;
+    }
+    .pagination__item:last-child {
+      background: $toxin-color-green;
+      color: #fff;
+    }
+
+    .pagination__item.pagination__item_active {
+      background-color: $toxin-color-purple;
+      font-weight: bold;
+      color: #fff;
+    }
+    .pagination__item .pagination__link {
+      cursor: pointer;
+    }
+    .pagination__item_out-of-range .pagination__link {
+      cursor: auto;
+    }
   }
 
-  .pagination__item.pagination__item_active {
-    background-color: $toxin-color-purple;
-    font-weight: bold;
-    color: #fff;
+  &__caption {
+    text-align: center;
+    color: $toxin-color-black-75;
   }
-  .pagination__item .pagination__link {
-    cursor: pointer;
-  }
-  .pagination__item_out-of-range .pagination__link {
-    cursor: auto;
-  }
-}
-
-.pagination__caption {
-  text-align: center;
-  color: $toxin-color-black-75;
 }

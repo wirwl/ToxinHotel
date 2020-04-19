@@ -2,33 +2,34 @@
 @import "../like-button/like-button.scss";
 
 .feedback {
-  display: flex;  
-}
-.feedback__left-column {  
-  margin-right: 10px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.feedback__right-column {
-  display: flex;
-  flex-direction: column;
-}
-.feedback__caption {
-  padding-top: 3px;
-  font-weight: bold;
-  font-size: 14px;
-}
-.feedback__time {
-  padding-top: 6px;
-  font-size: 14px;
-  margin-bottom: 13px;
-}
-.feedback__text {
-  font-size: 14px;
-  line-height: 24px;
-  color: $toxin-color-black-75;
-}
-.feedback__wrapper-for-round-image {
-  margin-bottom: 11px;
+
+  &__left-column {
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__right-column {
+    display: flex;
+    flex-direction: column;
+  }
+  &__caption {
+    padding-top: 3px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  &__time {
+    padding-top: 6px;
+    font-size: 14px;
+    margin-bottom: 13px;
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 24px;
+    color: $toxin-color-black-75;
+  }
+  &__wrapper-for-round-image {
+    margin-bottom: 11px;
+  }
 }
