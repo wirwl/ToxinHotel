@@ -1,42 +1,42 @@
-- const mock = '/mock-address/change-me'
+- const mock = "/mock-address/change-me"
 
-- const menu_in_header = [{text:'О нас', link:mock},
--  {text:'Услуги', link: '#', 
+- const menu_in_header = [{text:"О нас", link:mock},
+-  {text:"Услуги", link: "#", 
 -    sm:[
--      {text:'Пункт21', link: mock},
--      {text:'Пункт22', link: mock},
--      {text:'Пункт23', link: mock},
--      {text:'Пункт24', link: mock},
--      {text:'Пункт25', link: mock},
+-      {text:"Пункт21", link: mock},
+-      {text:"Пункт22", link: mock},
+-      {text:"Пункт23", link: mock},
+-      {text:"Пункт24", link: mock},
+-      {text:"Пункт25", link: mock},
 -    ]},
--  {text:'Вакансии', link: mock},
--  {text:'Новости', link: mock},
--  {text:'Соглашения', link: '#',
+-  {text:"Вакансии", link: mock},
+-  {text:"Новости", link: mock},
+-  {text:"Соглашения", link: "#",
 -    sm:[
--      {text:'Пункт51', link: mock},
--      {text:'Пункт52', link: mock},
--      {text:'Пункт53', link: mock},
+-      {text:"Пункт51", link: mock},
+-      {text:"Пункт52", link: mock},
+-      {text:"Пункт53", link: mock},
 -    ]},                                    
 -  ]
 
 - const menu_in_footer = [
--      {title:'Навигация',items:[{text:'О нас', link: mock},
--        {text:'Новости', link: mock},
--        {text:'Служба поддержки', link: mock},
--        {text:'Услуги', link: mock}]},
--      {title:'О нас',  items:[{text:'О сервисе', link: mock},
--        {text:'Наша команда', link: mock},
--        {text:'Вакансии', link: mock},
--        {text:'Инвесторы', link: mock}]},
--      {title:'Служба поддержки',   items:[{text:'Соглашения', link: mock},
--        {text:'Сообщества', link: mock},
--        {text:'Связь с нами', link: mock}]}
+-      {title:"Навигация",items:[{text:"О нас", link: mock},
+-        {text:"Новости", link: mock},
+-        {text:"Служба поддержки", link: mock},
+-        {text:"Услуги", link: mock}]},
+-      {title:"О нас",  items:[{text:"О сервисе", link: mock},
+-        {text:"Наша команда", link: mock},
+-        {text:"Вакансии", link: mock},
+-        {text:"Инвесторы", link: mock}]},
+-      {title:"Служба поддержки",   items:[{text:"Соглашения", link: mock},
+-        {text:"Сообщества", link: mock},
+-        {text:"Связь с нами", link: mock}]}
 -      ]
 
-- const header_data = {logo_path:"../../components/logo/logo.svg", login:'Войти', reg:'Зарегистрироваться', isAuth:false, menu: menu_in_header}
-- const footer_data = {logo_path:"../../components/logo/logo.svg", menu: menu_in_footer, desc:'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',
--      sub:{caption:'Подписка', desc:'Получайте специальные предложения и новости сервиса', placeholder:'Email'},
--      copyright: 'Copyright © 2018 Toxin отель. Все права защищены.'
+- const header_data = {logo_path:"../../components/logo/logo.svg", login:"Войти", reg:"Зарегистрироваться", isAuth:false, menu: menu_in_header}
+- const footer_data = {logo_path:"../../components/logo/logo.svg", menu: menu_in_footer, desc:"Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
+-      sub:{caption:"Подписка", desc:"Получайте специальные предложения и новости сервиса", placeholder:"Email"},
+-      copyright: "Copyright © 2018 Toxin отель. Все права защищены."
 -      }
 
 mixin MenuItems(items)  
@@ -48,11 +48,11 @@ mixin MenuItems(items)
 
 mixin createHTMLtags(mi)
   - var cs = mi.sm ? "menu__list_arrow": ""
-  li.menu__item(class=mi.sm && 'menu__item_sub-menu')
-    a.menu__link.js-menu__link(class=cs+(mi.isBold ? 'menu__link_bold': '') href=mi.link) #{mi.text}
+  li.menu__item(class=mi.sm && "menu__item_sub-menu")
+    a.menu__link.js-menu__link(class=cs+(mi.isBold ? "menu__link_bold": "") href=mi.link) #{mi.text}
     block      
 
-mixin favicon(data={path:''})
+mixin favicon(data={path:""})
   link(rel="apple-touch-icon" sizes="180x180" href=data.path+"apple-touch-icon.png")
   link(rel="icon" type="image/png" sizes="32x32" href=data.path+"favicon-32x32.png")
   link(rel="icon" type="image/png" sizes="16x16" href=data.path+"favicon-16x16.png")

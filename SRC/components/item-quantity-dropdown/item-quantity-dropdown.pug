@@ -1,5 +1,5 @@
 mixin item-quantity-dropdown(data)
-  div(class='iqdropdown js-iqdropdown'+ (data.isExpanded ? " iqdropdown_show" : "")) 
+  div(class="iqdropdown js-iqdropdown"+ (data.isExpanded ? " iqdropdown_show" : "")) 
     p.iqdropdown__selection.js-iqdropdown__selection
     .iqdropdown__menu.js-iqdropdown__menu      
       for item in data.items
@@ -8,5 +8,5 @@ mixin item-quantity-dropdown(data)
             p.iqdropdown__item #{item.name}
       if data.isShowButtons
         .iqdropdown__buttons
-          button.iqdropdown__clear.js-iqdropdown__clear.iqdropdown__clear_hide(type='button') ОЧИСТИТЬ
-          button.iqdropdown__apply.js-iqdropdown__apply(type='button') ПРИМЕНИТЬ
+          button.iqdropdown__clear.js-iqdropdown__clear.iqdropdown__clear_hide(type="button") ОЧИСТИТЬ
+          button.iqdropdown__apply.js-iqdropdown__apply(type="button") ПРИМЕНИТЬ

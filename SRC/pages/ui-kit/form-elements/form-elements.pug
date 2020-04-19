@@ -26,156 +26,156 @@ include ../../../components/datepicker-input/datepicker-input
 doctype html
 html(lang="ru")
   head
-    +meta-tags({description:'UIkit: form elements', keywords:'uikit, form elements'})    
+    +meta-tags({description:"UIkit: form elements", keywords:"uikit, form elements"})    
     title Form Elements    
-    +favicon({path:'../../../'})
-    link(href="fe.css" rel="stylesheet")
+    +favicon({path:"../../../"})
+    link(href="form-elements.css" rel="stylesheet")
   body
     .column1
       ul.column1__list
         li.column1__item
-          +text-input({caption:'TEXT FIELD', placeholder:'Email'})
+          +text-input({caption:"TEXT FIELD", placeholder:"Email"})
         li.column1__item
-          +text-input({isFocused:true, caption:'TEXT FIELD', value:'This is pretty awesome'})     
+          +text-input({isFocused:true, caption:"TEXT FIELD", value:"This is pretty awesome"})     
         li.column1__item.column1__wrapper-for-guests-input0
-          +guests-input({caption:'DROPDOWN', 
-            iqdd:{isExpanded:false, placeholder:'', 
-              items:[{id:'adults', name:'ВЗРОСЛЫЕ'},
-                {id:'childs', name:'ДЕТИ'},
-                {id:'babies', name:'МЛАДЕНЦЫ'}] }})
+          +guests-input({caption:"DROPDOWN", 
+            iqdd:{isExpanded:false, placeholder:"", 
+              items:[{id:"adults", name:"ВЗРОСЛЫЕ"},
+                {id:"childs", name:"ДЕТИ"},
+                {id:"babies", name:"МЛАДЕНЦЫ"}] }})
         li.column1__item.column1__wrapper-for-masked-input
-          +masked-input({caption:'MASKED TEXT FIELD'})
+          +masked-input({caption:"MASKED TEXT FIELD"})
         li.column1__item.column1__wrapper-for-datepicker-inputs
           ul.column1__datepicker-inputs-list
             li.column1__datepicker-inputs-item
-              +datepicker-input({caption:'DATE DROPDOWN', placeholder:'ДД.ММ.ГГГГ'})
+              +datepicker-input({caption:"DATE DROPDOWN", placeholder:"ДД.ММ.ГГГГ"})
             li.column1__datepicker-inputs-item
-              +datepicker-input({id:'fe-di2',caption:'DATE DROPDOWN', placeholder:'ДД.ММ.ГГГГ', value:'19.08.2019'})
+              +datepicker-input({id:"fe-di2",caption:"DATE DROPDOWN", placeholder:"ДД.ММ.ГГГГ", value:"19.08.2019"})
         li.column1__item.column1__wrapper-for-fdd-input          
-          +datepicker-input({id:'fdd', caption:'FILTER DATE DROPDOWN', placeholder:'Выберите дату'})
+          +datepicker-input({id:"fdd", caption:"FILTER DATE DROPDOWN", placeholder:"Выберите дату"})
         li.column1__item.column1__wrapper-for-subscribe-input
-          +subscribe-input({caption:'SUBSCRIPTION TEXT FIELD', placeholder:'Email'})
+          +subscribe-input({caption:"SUBSCRIPTION TEXT FIELD", placeholder:"Email"})
         li.column1__item
-          +comfort-input({caption:'DROPDOWN', 
-            iqdd:{isExpanded:false, placeholder:'', 
-              items:[{id:'bedrooms', name:'СПАЛЬНИ', defaultcount:2},
-                {id:'beds', name:'КРОВАТИ', defaultcount:2},
-                {id:'bathrooms', name:'ВАННЫЕ КОМНАТЫ'}] }})
+          +comfort-input({caption:"DROPDOWN", 
+            iqdd:{isExpanded:false, placeholder:"", 
+              items:[{id:"bedrooms", name:"СПАЛЬНИ", defaultcount:2},
+                {id:"beds", name:"КРОВАТИ", defaultcount:2},
+                {id:"bathrooms", name:"ВАННЫЕ КОМНАТЫ"}] }})
         li.column1__item.column1__wrapper-for-comport-input
-          +comfort-input({caption:'DROPDOWN',
-            iqdd: {isExpanded:true, placeholder:'', 
-            items:[{id:'bedrooms', name:'СПАЛЬНИ', defaultcount:2},
-              {id:'beds', name:'КРОВАТИ', defaultcount:2},
-              {id:'bathrooms', name:'ВАННЫЕ КОМНАТЫ'}] }})
+          +comfort-input({caption:"DROPDOWN",
+            iqdd: {isExpanded:true, placeholder:"", 
+            items:[{id:"bedrooms", name:"СПАЛЬНИ", defaultcount:2},
+              {id:"beds", name:"КРОВАТИ", defaultcount:2},
+              {id:"bathrooms", name:"ВАННЫЕ КОМНАТЫ"}] }})
         li.column1__item.column1__wrapper-for-ecl1
-          +expandable-checkbox-list({isExpand:false, caption:'EXPANDABLE CHECKBOX LIST', checkboxes:[{id:'bf', text:'Завтрак'},
-            {id:'desk', text:'Письменный стол', isChecked:true},
-            {id:'chair', text:'Стул для кормления', isChecked:true},
-            {id:'bed', text:'Кроватка', isChecked:true},
-            {id:'tv1', text:'Телевизор'},
-            {id:'shampoo1', text:'Шампунь'},
-            {id:'tv2', text:'Телевизор'},
-            {id:'shampoo2', text:'Шампунь'}
+          +expandable-checkbox-list({isExpand:false, caption:"EXPANDABLE CHECKBOX LIST", checkboxes:[{id:"bf", text:"Завтрак"},
+            {id:"desk", text:"Письменный стол", isChecked:true},
+            {id:"chair", text:"Стул для кормления", isChecked:true},
+            {id:"bed", text:"Кроватка", isChecked:true},
+            {id:"tv1", text:"Телевизор"},
+            {id:"shampoo1", text:"Шампунь"},
+            {id:"tv2", text:"Телевизор"},
+            {id:"shampoo2", text:"Шампунь"}
             ]})
         li.column1__item.column1__wrapper-for-ecl2                                                            
-          +expandable-checkbox-list({isExpand:true, caption:'EXPANDABLE CHECKBOX LIST', checkboxes:[{id:'bf2', text:'Завтрак'},
-            {id:'desk2', text:'Письменный стол', isChecked:true},
-            {id:'chair2', text:'Стул для кормления', isChecked:true},
-            {id:'bed2', text:'Кроватка', isChecked:true},
-            {id:'tv12', text:'Телевизор'},
-            {id:'shampoo12', text:'Шампунь'},
-            {id:'tv22', text:'Телевизор'},
-            {id:'shampoo22', text:'Шампунь'}          
+          +expandable-checkbox-list({isExpand:true, caption:"EXPANDABLE CHECKBOX LIST", checkboxes:[{id:"bf2", text:"Завтрак"},
+            {id:"desk2", text:"Письменный стол", isChecked:true},
+            {id:"chair2", text:"Стул для кормления", isChecked:true},
+            {id:"bed2", text:"Кроватка", isChecked:true},
+            {id:"tv12", text:"Телевизор"},
+            {id:"shampoo12", text:"Шампунь"},
+            {id:"tv22", text:"Телевизор"},
+            {id:"shampoo22", text:"Шампунь"}          
             ]})
         li.column1__item.column1__wrapper-for-comfort-status-list
-          +comfort-status-list([{icon:'tag_faces', caption:'Комфорт', text:'Шумопоглощающие стены'},
-            {icon:'location_city', caption:'Удобство', text:'Окно в каждой из спален'}])
+          +comfort-status-list([{icon:"tag_faces", caption:"Комфорт", text:"Шумопоглощающие стены"},
+            {icon:"location_city", caption:"Удобство", text:"Окно в каждой из спален"}])
     .column__wrapper            
       .column23__wrapper
         .column2
           ul.column2__list
             li.column2__item.column2__wrapper-for-checkboxes-list
-              +checkboxes-list({caption:'CHECKBOX BUTTONS', checkboxes:[{id:'smoke',text:'Можно курить'},
-                {id:'pet',text:'Можно с питомцами', isChecked:true},
-                {id:'guest',text:'Можно пригласить гостей (до 10 человек)',isChecked:true}
+              +checkboxes-list({caption:"CHECKBOX BUTTONS", checkboxes:[{id:"smoke",text:"Можно курить"},
+                {id:"pet",text:"Можно с питомцами", isChecked:true},
+                {id:"guest",text:"Можно пригласить гостей (до 10 человек)",isChecked:true}
                 ]})               
             li.column2__item.column2__wrapper-for-radios-list
-              +radios-list({caption:'RADIO BUTTONS', name:'sex', radios:[{id:'men',text:'Мужчина', isChecked:true},
-                {id:'women',text:'Женщина'}
+              +radios-list({caption:"RADIO BUTTONS", name:"sex", radios:[{id:"men",text:"Мужчина", isChecked:true},
+                {id:"women",text:"Женщина"}
                 ]})
             li.column2__item.column2__wrapper-for-toggles-list 
-              +toggles-list({caption:'TOGGLE',toggles:[{isChecked:true, text:'Получать спецпредложения',id:'t_on'},
-                {isChecked:false, text:'Получать спецпредложения', id:'t_off'}]})         
+              +toggles-list({caption:"TOGGLE",toggles:[{isChecked:true, text:"Получать спецпредложения",id:"t_on"},
+                {isChecked:false, text:"Получать спецпредложения", id:"t_off"}]})         
             li.column2__item.column2__wrapper-for-likes-button-list
               .likes-button-list
                 h3.likes-button-list__caption LIKE BUTTON
                 ul.likes-button-list__list
                   li.likes-button-list__item
-                    +like-button({count: 2, id:'like1'})
+                    +like-button({count: 2, id:"like1"})
                   li.likes-button-list__item
-                    +like-button({count: 12, id:'like2', isChecked:true})   
+                    +like-button({count: 12, id:"like2", isChecked:true})   
             li.column2__item.column2__wrapper-for-rate-buttons-list
               .rate-buttons-list
                 h3.rate-buttons-list__caption RATE BUTTON
                 ul.rate-buttons-list__list
                   li.rate-buttons-list__item
-                    +rate-button({count:4,id:'stars1'})
+                    +rate-button({count:4,id:"stars1"})
                   li.rate-buttons-list__item
-                    +rate-button({count:5,id:'stars2'})
+                    +rate-button({count:5,id:"stars2"})
             li.column2__item.column2__wrapper-for-guests-input1
-              +guests-input({caption:'DROPDOWN', 
-                iqdd:{isExpanded:true, placeholder:'', 
-                  items:[{id:'adults', name:'ВЗРОСЛЫЕ'},
-                    {id:'childs', name:'ДЕТИ'},
-                    {id:'babies', name:'МЛАДЕНЦЫ'}] }})
+              +guests-input({caption:"DROPDOWN", 
+                iqdd:{isExpanded:true, placeholder:"", 
+                  items:[{id:"adults", name:"ВЗРОСЛЫЕ"},
+                    {id:"childs", name:"ДЕТИ"},
+                    {id:"babies", name:"МЛАДЕНЦЫ"}] }})
             li.column2__item.column2__wrapper-for-rich-checkboxes-list
-              +checkboxes-list({caption:'RICH CHECKBOX BUTTONS', 
-                checkboxes:[{id:'wk',text:'Широкий коридор', desc:'Ширина коридоров в номере не менее 91 см.'},
-                  {id:'hfi',text:'Помощник для инвалидов', desc:'На 1 этаже вас встретит специалист и проводит до номера.'}
+              +checkboxes-list({caption:"RICH CHECKBOX BUTTONS", 
+                checkboxes:[{id:"wk",text:"Широкий коридор", desc:"Ширина коридоров в номере не менее 91 см."},
+                  {id:"hfi",text:"Помощник для инвалидов", desc:"На 1 этаже вас встретит специалист и проводит до номера."}
                     ]})                                                 
         .column3
           ul.column3__list
             li.column3__item.column3__wrapper-for-range-slider
-              +range-slider({ctext:'range slider', min:0, max:15000, from: 4500, to:9600})
+              +range-slider({ctext:"range slider", min:0, max:15000, from: 4500, to:9600})
             li.column3__item.column3__wrapper-for-buttons-list
               h3.buttons-list__caption BUTTONS
               ul.buttons-list    
                 li.buttons-list__item
                   ul.two-buttons-list
                     li.two-buttons-list__item.two-buttons-list__item_width99
-                      +button-filled({text:'click me', dynamic_height:true, dynamic_width:true})
+                      +button-filled({text:"click me", dynamic_height:true, dynamic_width:true})
                     li.two-buttons-list__item.two-buttons-list__item_width99
-                      +button-filled({text:'click me', dynamic_height:true, dynamic_width:true, isEnabled:false})
+                      +button-filled({text:"click me", dynamic_height:true, dynamic_width:true, isEnabled:false})
                 li.buttons-list__item
                   ul.two-buttons-list
                     li.two-buttons-list__item.two-buttons-list__item_width99
-                      +button-bordered({text:'click me', dynamic_height:true, dynamic_width:true})
+                      +button-bordered({text:"click me", dynamic_height:true, dynamic_width:true})
                     li.two-buttons-list__item.two-buttons-list__item_width99
-                      +button-bordered({text:'click me', dynamic_height:true, dynamic_width:true, isEnabled:false})
+                      +button-bordered({text:"click me", dynamic_height:true, dynamic_width:true, isEnabled:false})
                 li.buttons-list__item
                   ul.two-buttons-list.two-buttons-list3
                     li.two-buttons-list__item
-                      +button-simple({text:'click me'})
+                      +button-simple({text:"click me"})
                     li.two-buttons-list__item
-                      +button-simple({text:'click me', isEnabled:false})
+                      +button-simple({text:"click me", isEnabled:false})
                 li.buttons-list__item
-                  +button-arrow({text:'перейти к оплате'})
+                  +button-arrow({text:"перейти к оплате"})
             li.column3__item.pagination__wrapper
               h3.pagination__wrapper-caption PAGINATION
               +pagination({pages:15, page:1, showed:12, showedlastpage:6, total:100})
             li.column3__item.column3__wrapper-for-guests-input2
-              +guests-input({caption:'DROPDOWN', 
-                iqdd:{isExpanded:true, placeholder:'', 
-                items:[{id:'adults', name:'ВЗРОСЛЫЕ', defaultcount:2},
-                  {id:'childs', name:'ДЕТИ', defaultcount:1},
-                  {id:'babies', name:'МЛАДЕНЦЫ'}] }})
+              +guests-input({caption:"DROPDOWN", 
+                iqdd:{isExpanded:true, placeholder:"", 
+                items:[{id:"adults", name:"ВЗРОСЛЫЕ", defaultcount:2},
+                  {id:"childs", name:"ДЕТИ", defaultcount:1},
+                  {id:"babies", name:"МЛАДЕНЦЫ"}] }})
             li.column3__item.column3__wrapper-for-bullet-list
               h3.column3__bullet-list-caption BULLET-LIST
-              +bullets-list([{text:'Нельзя с питомцами'},
-                {text:'Без вечеринок и мероприятий'},
-                {text:'Время прибытия — после 13:00, а выезд до 12:00'}])
+              +bullets-list([{text:"Нельзя с питомцами"},
+                {text:"Без вечеринок и мероприятий"},
+                {text:"Время прибытия — после 13:00, а выезд до 12:00"}])
       .row1
-        +feedback({image:{alt:'avatar', src:'../../../images/avatar.jpg'}, 
-          like:{count: 12, id:'avatar', isChecked:true},
-          caption:'Мурад Сарафанов', time:'5 дней назад', text:'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})
-    script(type="text/javascript" src="fe.js")
+        +feedback({image:{alt:"avatar", src:"../../../images/avatar.jpg"}, 
+          like:{count: 12, id:"avatar", isChecked:true},
+          caption:"Мурад Сарафанов", time:"5 дней назад", text:"Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})
+    script(type="text/javascript" src="form-elements.js")

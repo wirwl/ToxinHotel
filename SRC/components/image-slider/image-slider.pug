@@ -1,15 +1,15 @@
 mixin image-slider(data)
   - let l = data.images.length  
-  - let id = data.id + '-img-'
+  - let id = data.id + "-img-"
   .image-slider
     for image, index in data.images
-      input.image-slider__input.common__input_hide(id=id+(index+1) type='radio' name=data.id+'-radio-btn' checked=((data.index==index+1) ? 'checked' : undefined))
+      input.image-slider__input.common__input_hide(id=id+(index+1) type="radio" name=data.id+"-radio-btn" checked=((data.index==index+1) ? "checked" : undefined))
       .image-slider__container
         .image-slider__slide
-          img.image-slider__image(src=image alt='alt-'+id+(index+1))
-        .image-slider__nav(class=data.isShowNavBtns && 'image-slider_show-nav-btns')
-          label.image-slider__label.image-slider__prev(content='keyboard_arrow_left' for=id+(index==0 ? l : index)).material-icons
-          label.image-slider__label.image-slider__next(content='keyboard_arrow_right' for=id+(index==l-1 ? 1 : index+2)).material-icons
+          img.image-slider__image(src=image alt="alt-"+id+(index+1))
+        .image-slider__nav(class=data.isShowNavBtns && "image-slider_show-nav-btns")
+          label.image-slider__label.image-slider__prev(content="keyboard_arrow_left" for=id+(index==0 ? l : index)).material-icons
+          label.image-slider__label.image-slider__next(content="keyboard_arrow_right" for=id+(index==l-1 ? 1 : index+2)).material-icons
     .image-slider__nav-dots
       - let i=0
       while i<l

@@ -2,17 +2,17 @@ include ../text-input/text-input
 include ../button/button
 
 mixin sign-in-form(data)
-  form.sign-in-form(method='post' action='#')
+  form.sign-in-form(method="post" action="#")
     fieldset.sign-in-form__fieldset
       legend.sign-in-form__caption Войти
       ul.sign-in-form__list
         li.sign-in-form__item
-          +text-input({placeholder:'Email', type:'email'})
+          +text-input({placeholder:"Email", type:"email"})
         li.sign-in-form__item
-          +text-input({placeholder:'Пароль', type:'password'})        
+          +text-input({placeholder:"Пароль", type:"password"})        
       .sign-in-form__button-arrow          
-        +button-arrow({text:'Войти', type:'submit'})        
+        +button-arrow({text:"Войти", type:"submit"})        
       .sign-in-form__wrapper-for-sign-in-button
         p.sign-in-form__sign-in-text Нет аккаунта на Toxin?
         .sign-in-form__wrapper-sign-up-button
-          +button-bordered({text:'Создать', dynamic_height:true})
+          +button-bordered({text:"Создать", dynamic_height:true})

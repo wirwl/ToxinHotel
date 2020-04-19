@@ -5,22 +5,22 @@ include ../../../common
 doctype html
 html(lang="en")
   head
-    +meta-tags({description:'UIKit: colors & type', keywords:'uikit, colors, type'})    
+    +meta-tags({description:"UIKit: colors & type", keywords:"uikit, colors, type"})    
     title Colors & Type
-    +favicon({path:'../../../'})
-    link(href="ct.css" rel="stylesheet")
+    +favicon({path:"../../../"})
+    link(href="colors-type.css" rel="stylesheet")
   body
     .color-example__wrapper
-      +color-example({color:'color-example__squareColor_DS100', desc:'Dark Shade 100%', hex: '#1F2041'})
-      +color-example({color:'color-example__squareColor_DS75', desc:'Dark Shade 75%', hex: '#1F2041'})
-      +color-example({color:'color-example__squareColor_DS50', desc:'Dark Shade 50%', hex: '#1F2041'})
-      +color-example({color:'color-example__squareColor_DS25', desc:'Dark Shade 25%', hex: '#1F2041'})
-      +color-example({color:'color-example__squareColor_DS5', desc:'Dark Shade 5%',  hex:'#1F2041'})
-      +color-example({color:'color-example__squareColor_Purple', desc:'Purple', hex: '#BC9CFF'})
-      +color-example({color:'color-example__squareColor_Green', desc:'Green', hex: '#6FCF97'})
+      +color-example({color:"color-example__squareColor_DS100", desc:"Dark Shade 100%", hex: "#1F2041"})
+      +color-example({color:"color-example__squareColor_DS75", desc:"Dark Shade 75%", hex: "#1F2041"})
+      +color-example({color:"color-example__squareColor_DS50", desc:"Dark Shade 50%", hex: "#1F2041"})
+      +color-example({color:"color-example__squareColor_DS25", desc:"Dark Shade 25%", hex: "#1F2041"})
+      +color-example({color:"color-example__squareColor_DS5", desc:"Dark Shade 5%",  hex:"#1F2041"})
+      +color-example({color:"color-example__squareColor_Purple", desc:"Purple", hex: "#BC9CFF"})
+      +color-example({color:"color-example__squareColor_Green", desc:"Green", hex: "#6FCF97"})
     .font-example__wrapper
-      +font-example('font-example_h1','H1','This one is the sub-section or widget title')
-      +font-example('font-example_h2','H2','Next one is the item title inside widgets')
-      +font-example('font-example_h3','H3','THIS IS A LABEL OR CTA TEXT')
-      +font-example('font-example_body','Body','This is the body text which is used for most of the design, like paragraphs, lists, etc')
-    script(type="text/javascript" src="ct.js")
+      +font-example("font-example_h1","H1","This one is the sub-section or widget title")
+      +font-example("font-example_h2","H2","Next one is the item title inside widgets")
+      +font-example("font-example_h3","H3","THIS IS A LABEL OR CTA TEXT")
+      +font-example("font-example_body","Body","This is the body text which is used for most of the design, like paragraphs, lists, etc")
+    script(type="text/javascript" src="colors-type.js")

@@ -5,23 +5,23 @@ include ../guests-input/guests-input
 include ../button/button
 
 mixin order-info-form(data)
-  form.order-info-form(method='post' action='#')
+  form.order-info-form(method="post" action="#")
     fieldset.order-info-form__wrapper-main
       .order-info-form__wrapper-for-room-info-caption
-        +room-info-caption({number:888, isLux:true, cost:'9 990'})
+        +room-info-caption({number:888, isLux:true, cost:"9 990"})
       ul.order-info-form__list
         li.order-info-form__item
           ul.order-info-form__dates-list
             li.order-info-form__dates-item
-              +datepicker-input({caption:'Прибытие', placeholder:'ДД.ММ.ГГГГ', id:'oi-form__start-input'})
+              +datepicker-input({caption:"Прибытие", placeholder:"ДД.ММ.ГГГГ", id:"oi-form__start-input"})
             li.order-info-form__dates-item
-              +datepicker-input({caption:'Выезд', placeholder:'ДД.ММ.ГГГГ', id:'oi-form__end-input', hasDatepicker:false})
+              +datepicker-input({caption:"Выезд", placeholder:"ДД.ММ.ГГГГ", id:"oi-form__end-input", hasDatepicker:false})
         li.order-info-form__item
-          +guests-input({caption:'Гости', 
-            iqdd:{isExpanded:false, placeholder:'', 
-            items:[{id:'adults', name:'ВЗРОСЛЫЕ', defaultcount:2},
-              {id:'childs', name:'ДЕТИ', defaultcount:1},
-              {id:'babies', name:'МЛАДЕНЦЫ'}] }})
+          +guests-input({caption:"Гости", 
+            iqdd:{isExpanded:false, placeholder:"", 
+            items:[{id:"adults", name:"ВЗРОСЛЫЕ", defaultcount:2},
+              {id:"childs", name:"ДЕТИ", defaultcount:1},
+              {id:"babies", name:"МЛАДЕНЦЫ"}] }})
         li.order-info-form__item
           table.order-info-form__table
             tr.order-info-form__row
@@ -31,16 +31,16 @@ mixin order-info-form(data)
             tr.order-info-form__row
               td.order-info-form__cell-text Сбор за услуги: скидка 2 179₽
               td.order-info-form__cell-tooltip
-                +tooltip({text:'Скидка 20%'})
+                +tooltip({text:"Скидка 20%"})
               td.order-info-form__cell-value 0₽
             tr.order-info-form__row
               td.order-info-form__cell-text Сбор за дополнительные услуги
               td.order-info-form__cell-tooltip
-                +tooltip({text:'Виды дополнительных услуг: уборка, массаж пяток'})
+                +tooltip({text:"Виды дополнительных услуг: уборка, массаж пяток"})
               td.order-info-form__cell-value 300₽             
       .order-info-form__total
         h2.order-info-form__total-text Итого
         .order-info-form__total-line
         h2.order-info-form__total-value 38 081₽ 
-      +button-arrow({text:'Забронировать', type:'submit'})
+      +button-arrow({text:"Забронировать", type:"submit"})
 
