@@ -12,7 +12,7 @@ import '../../../components/guests-input/guests-input.js'
 import '../../../components/range-slider/range-slider.js';
 import '../../../components/pagination/pagination.js';
 import '../../../components/item-quantity-dropdown/item-quantity-dropdown.js'
-import './fe.scss';
+import './form-elements.scss';
 
 $(document).ready(() => {
   //Only for watch pixel perfect for range-slider;
@@ -21,7 +21,7 @@ $(document).ready(() => {
   datepicker.update('minDate', null);
   datepicker.selectDate([new Date("2019-08-19")]);
 
-  let rs = $('.js-range-slider__input').data('ionRangeSlider');  
+  let rs = $('.js-range-slider__input').data('ionRangeSlider');
   rs.update({
     from: 4000,
     to: 8000

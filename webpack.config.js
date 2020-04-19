@@ -16,7 +16,7 @@ process.traceDeprecation = true;
 module.exports = ((env, argv) => {
 
     var isDev = argv.mode === "development";
-    var pathOutput = isDev ? 'Result/dev' : 'Result/prod';
+    var pathOutput = isDev ? 'Result/dev' : 'Resul4t/prod';
     var dtValue = isDev ? 'source-map' : 'none';
 
     function reloadHtml() {
@@ -193,9 +193,9 @@ module.exports = ((env, argv) => {
         ]
     };
     //---UI-KIT---------------
-    var uikithfCFG = AddHTMLPage({ common_filename: 'hf', input_path: 'SRC/pages/ui-kit/hf', publicPath: '../../../' });
-    var uikitctCFG = AddHTMLPage({ common_filename: 'ct', input_path: 'SRC/pages/ui-kit/ct', publicPath: '../../../' });
-    var uikitfeCFG = AddHTMLPage({ common_filename: 'fe', input_path: 'SRC/pages/ui-kit/fe', publicPath: '../../../' });
+    var uikithfCFG = AddHTMLPage({ common_filename: 'headers-footers', input_path: 'SRC/pages/ui-kit/headers-footers', publicPath: '../../../' });
+    var uikitctCFG = AddHTMLPage({ common_filename: 'colors-type', input_path: 'SRC/pages/ui-kit/colors-type', publicPath: '../../../' });
+    var uikitfeCFG = AddHTMLPage({ common_filename: 'form-elements', input_path: 'SRC/pages/ui-kit/form-elements', publicPath: '../../../' });
     var uikitcardsCFG = AddHTMLPage({ common_filename: 'cards', input_path: 'SRC/pages/ui-kit/cards', publicPath: '../../../' });
     //---Site-Pages-----------
     var indexCFG = AddHTMLPage({ common_filename: 'index', input_path: 'SRC/pages/index', output_path: '.' });

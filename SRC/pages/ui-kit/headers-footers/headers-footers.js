@@ -1,3 +1,3 @@
 import '../../../components/header-menu/header-menu';
-import './hf.scss'
+import './headers-footers.scss'
 
