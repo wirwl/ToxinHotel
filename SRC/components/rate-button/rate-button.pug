@@ -3,6 +3,6 @@ mixin rate-button(data={id:"star", count:0})
     - var n=1;
     - var total=6;
     while n<total
-      input(id=data.id+(total-n) type="radio" name=data.id checked=(data.count==total-n ? "checked" : undefined) ).rate-button__input.common__input_hide
+      input(id=data.id+(total-n) type="radio" name=data.id checked=(data.count==total-n ? "checked" : undefined) ).rate-button__input
       label(for=data.id+(total-n)).rate-button__label.material-icons     
       - n++;

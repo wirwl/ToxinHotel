@@ -23,7 +23,16 @@ $header-media3: 488px;
 @import "../../components/donut-chart/donut-chart.scss";
 @import "../../components/legend-list/legend-list.scss";
 
+* {
+  @include reset;
+}
+
+html {
+  @include define-html;
+}
+
 body {
+  @include define-body;
   color: $toxin-color-black-75;
 }
 
@@ -81,6 +90,13 @@ body {
 
 .room-details__wrapper-csl {
   margin-right: 15.07042253521127%;
+}
+
+.room-details__wrapper-csl-caption,
+.room-details__bullets-list-caption,
+.room-details__cancellation-caption {
+  font-size: 19px;
+  font-family: $toxin-font-open-sans;
 }
 
 .room-details__wrapper-csl-caption {

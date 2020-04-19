@@ -1,4 +1,4 @@
 mixin like-button(data={id:"likeBtn", count:0})
   .like-button
-    input(type="checkbox" id=data.id checked=(data.isChecked ? "checked" : undefined)).like-button__input.js-like-button__input.common__input_hide
+    input(type="checkbox" id=data.id checked=(data.isChecked ? "checked" : undefined)).like-button__input.js-like-button__input
     label(for=data.id).like-button__count.js-like-button__count #{data.count}

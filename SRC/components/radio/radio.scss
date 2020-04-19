@@ -7,9 +7,24 @@
         cursor: pointer;
         color: $toxin-color-black-75;
     }
+
+    &__input {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0, 0, 0, 0);
+        overflow: hidden;
+    }
+
     &__input:not(:checked) + .radio__label {
         color: $toxin-color-black-50;
     }
+
     &__label:before {
         content: "";
         position: absolute;
@@ -21,6 +36,7 @@
         background-color: #ffffff;
         border-radius: 100%;
     }
+
     &__label:after {
         content: "";
         position: absolute;
@@ -32,9 +48,11 @@
         border-radius: 100%;
         background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
     }
+
     .radio__input:not(:checked) + .radio__label:after {
         opacity: 0;
     }
+
     &__input:checked + .radio__label:after {
         opacity: 1;
     }

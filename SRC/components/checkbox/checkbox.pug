@@ -1,6 +1,6 @@
 mixin checkbox(data)
   .checkbox
-    input(type="checkbox" id=data.id checked=(data.isChecked ? "checked": undefinded)).checkbox__input.common__input_hide
+    input(type="checkbox" id=data.id checked=(data.isChecked ? "checked": undefinded)).checkbox__input
     label(for=data.id class=(data.desc ? "checkbox__label checkbox__label_bold": "checkbox__label")) #{data.text}
     if data.desc
       p.checkbox__desc #{data.desc}

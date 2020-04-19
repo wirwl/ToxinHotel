@@ -12,6 +12,18 @@ $header-media3: 488px;
 @import "../../components/footer/footer.scss";
 @import "../../components/sign-up-form/sign-up-form.scss";
 
+* {
+  @include reset;
+}
+
+html {
+  @include define-html;
+}
+
+body {
+  @include define-body;
+}
+
 .main-content {
   width: 100%;
   min-height: 701px;

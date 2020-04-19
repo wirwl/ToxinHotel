@@ -3,7 +3,7 @@ mixin image-slider(data)
   - let id = data.id + "-img-"
   .image-slider
     for image, index in data.images
-      input.image-slider__input.common__input_hide(id=id+(index+1) type="radio" name=data.id+"-radio-btn" checked=((data.index==index+1) ? "checked" : undefined))
+      input.image-slider__input(id=id+(index+1) type="radio" name=data.id+"-radio-btn" checked=((data.index==index+1) ? "checked" : undefined))
       .image-slider__container
         .image-slider__slide
           img.image-slider__image(src=image alt="alt-"+id+(index+1))

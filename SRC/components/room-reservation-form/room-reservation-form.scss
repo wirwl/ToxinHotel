@@ -1,12 +1,23 @@
 @import "../text-input/text-input.scss";
 @import "../datepicker-input/datepicker-input.scss";
 @import "../guests-input/guests-input.scss";
+@import "../button-arrow/button-arrow.scss";
 
 .room-reservation-form {
   max-width: 380px;
   padding: 40px 5px 30px;
   display: flex;
   justify-content: center;
+  background: white;
+  padding: 40px 30px 30px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  &__wrapper-for-inputs,
+  &__wrapper-for-dates {
+    border: 0 none;
+  }
 
   &__wrapper-for-inputs {
     max-width: 320px;
@@ -17,6 +28,11 @@
 
   &__title {
     margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 30px;
+    font-family: $toxin-font-open-sans;
+    font-weight: bold;
+    color: $toxin-color-black-100;
   }
   &__wrapper-for-dates {
     margin-bottom: 21px;

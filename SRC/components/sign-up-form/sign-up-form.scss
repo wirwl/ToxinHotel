@@ -9,13 +9,24 @@
   max-width: 380px;
   display: flex;
   justify-content: center;
+  background: white;
+  padding: 40px 30px 30px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 
   &__main-content {
     max-width: 320px;
+    border: 0 none;
   }
 
   &__caption {
     margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 30px;
+    font-family: $toxin-font-open-sans;
+    font-weight: bold;
+    color: $toxin-color-black-100;
   }
 
   &__list {

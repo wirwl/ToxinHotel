@@ -13,6 +13,18 @@ $header-media3: 488px;
 @import "../../../node_modules/air-datepicker/dist/css/datepicker.css";
 @import "../../components/room-reservation-form/room-reservation-form.scss";
 
+* {
+  @include reset;
+}
+
+html {
+  @include define-html;
+}
+
+body {
+  @include define-body;
+}
+
 .main-content {
   width: 100%;
   min-height: 830px;

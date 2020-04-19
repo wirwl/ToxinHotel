@@ -25,6 +25,18 @@ $header-media3: 488px;
 @import "../../components/pagination/pagination.scss";
 @import "../../components/room-info/room-info.scss";
 
+* {
+  @include reset;
+}
+
+html {
+  @include define-html;
+}
+
+body {
+  @include define-body;
+}
+
 .menu > .menu__list > .menu__item.menu__item:not(:last-of-type) {
   margin-right: 20px;
 }
@@ -51,6 +63,10 @@ $header-media3: 488px;
   width: 266px;
 }
 
+.filters__list {
+  list-style: none;
+}
+
 .filters__item {
   margin-bottom: 15px;
 }
@@ -65,6 +81,11 @@ $header-media3: 488px;
 .rooms__title {
   margin-bottom: 21px;
   text-transform: none;
+  font-size: 24px;
+  line-height: 30px;
+  font-family: $toxin-font-open-sans;
+  font-weight: bold;
+  color: $toxin-color-black-100;
 }
 
 .rooms__list {
@@ -72,6 +93,7 @@ $header-media3: 488px;
   margin-bottom: 19px;
   flex-wrap: wrap;
   justify-content: space-between;
+  list-style: none;
 }
 
 .rooms__item {

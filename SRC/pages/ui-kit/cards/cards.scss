@@ -7,11 +7,17 @@
 
 @import "../../../components/datepicker/datepicker.scss";
 
+* {
+  @include reset;
+}
+
+html {
+  @include define-html;
+}
+
 body {
-  margin: 0 auto;
+  @include define-body;
   padding-top: 150px;
-  min-width: 320px;
-  max-width: 1440px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;

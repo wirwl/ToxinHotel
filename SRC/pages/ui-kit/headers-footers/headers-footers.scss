@@ -4,7 +4,16 @@
 @import "../../../fonts/material-icons/material-icons.css";
 @import "../../../fonts/fa5-brands-regular-400/fonts.css";
 
+* {
+  @include reset;
+}
+
+html {
+  @include define-html;
+}
+
 body {
+  @include define-body;
   background: #e5e5e5;
 }
 

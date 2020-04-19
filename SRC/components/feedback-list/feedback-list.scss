@@ -11,9 +11,15 @@
 
   &__text {
     text-transform: none;
+    font-size: 19px;
+    font-family: $toxin-font-open-sans;
   }
 
   &__item:not(:last-child) {
     margin-bottom: 23px;
+  }
+
+  &__list {
+    list-style: none;
   }
 }

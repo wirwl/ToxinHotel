@@ -3,15 +3,21 @@
 @import "../../../fonts/Montserrat/fonts.css";
 @import "../../../fonts/material-icons/material-icons.css";
 
+* {
+  @include reset;
+}
+
+html {
+  @include define-html;
+}
+
 body {
-  margin: 0 auto;
+  @include define-body;
   padding: 140px 0px 132px 140px;
-  min-width: 320px;
-  max-width: 1440px;
   display: flex;
   flex-wrap: wrap;
-  background: white;
 }
+
 .column1 {
   margin-right: 127px;
   width: 320px;

@@ -7,16 +7,21 @@
 @import "../../../components/color-example/color-example.scss";
 @import "../../../components/font-example/font-example.scss";
 
+* {
+    @include reset;
+}
+
+html {
+    @include define-html;
+}
 
 body {
-    margin: 0px auto;
-    padding: 145px 150px;    
+    @include define-body;
+    padding: 145px 150px;
     display: flex;
-    min-width: 320px;
-    max-width: 1440px;
-    background: white;
 }
-.color-example__wrapper {    
+
+.color-example__wrapper {
     margin-right: 416px;
 }
 .color-example:not(:last-of-type) {
@@ -26,4 +31,3 @@ body {
 .font-example:not(:last-of-type) {
     margin-bottom: 50px;
 }
-
