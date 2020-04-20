@@ -1,10 +1,8 @@
 .room-info-caption {
-  &__caption {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    font-size: inherit;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: inherit;
 
   &__caption-left-part {
     font-size: inherit;

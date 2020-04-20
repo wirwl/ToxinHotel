@@ -1,9 +1,9 @@
 mixin room-info-caption(data)
-  div.room-info-caption__caption
-        div.room-info-caption__caption-left-part
-          span.room-info-caption__caption-n №
-          span.room-info-caption__caption-room-number #{data.number}
-          span.room-info-caption__room-type #{(data.isLux ? "Люкс" : "")}         
-        .room-info-caption__cost-per-day
-          span.room-info-caption__cost-per-day-value #{data.cost}₽
-          span.room-info-caption__cost-per-day-text в сутки
+  .room-info-caption
+    .room-info-caption__caption-left-part
+      span.room-info-caption__caption-n №
+      span.room-info-caption__caption-room-number #{data.number}
+      span.room-info-caption__room-type #{(data.isLux ? "Люкс" : "")}         
+    .room-info-caption__cost-per-day
+      span.room-info-caption__cost-per-day-value #{data.cost}₽
+      span.room-info-caption__cost-per-day-text в сутки
