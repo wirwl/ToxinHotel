@@ -1,27 +1,4 @@
-$relative-root-path: "/";
-
-@import "../../common.scss";
-
-@import "../../fonts/fa5-brands-regular-400/fonts.css";
-@import "../../fonts/material-icons/material-icons.css";
-@import "../../fonts/Montserrat/fonts.css";
-@import "../../fonts/Open-Sans/fonts.css";
-@import "../../fonts/Quicksand/fonts.css";
-
-$header-media1: 888px;
-$header-media2: 715px;
-$header-media3: 488px;
-@import "../../components/header/header.scss";
-@import "../../components/footer/footer.scss";
-@import "../../components/room-images/room-images.scss";
 @import "../../../node_modules/flexslider/flexslider.css";
-@import "../../components/feedback-list/feedback-list.scss";
-@import "../../components/comfort-status-list/comfort-status-list.scss";
-@import "../../components/order-info-form/order-info-form.scss";
-@import "../../components/datepicker/datepicker.scss";
-@import "../../components/bullets-list/bullets-list.scss";
-@import "../../components/donut-chart/donut-chart.scss";
-@import "../../components/legend-list/legend-list.scss";
 
 * {
   @include reset;

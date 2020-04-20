@@ -1,8 +1,10 @@
+import '../../../node_modules/air-datepicker/dist/js/datepicker'
+
 $(document).ready(() => {
 
   let $ToxinDatepickers = $('.js-toxin-datepicker');
 
-  htmlButtons =
+  let htmlButtons =
     '<div class="datepicker__buttons">' +
     '<span class="datepicker__button-clear js-datepicker__button-clear">Очистить</span>' +
     '<span class="datepicker__button-apply js-datepicker__button-apply">Применить</span>' +
@@ -21,7 +23,7 @@ $(document).ready(() => {
   function FindDatepicker(tds, d) {
     let result = null;
     tds.each(function () {
-      $td = $(this);
+      const $td = $(this);
       if ($td.data('datepicker').$datepicker.is(d))
         result = $td.data('datepicker');
     })
@@ -31,7 +33,7 @@ $(document).ready(() => {
   let DatePickers = $('.datepicker');
   DatePickers.append(htmlButtons);
 
-  $clears = $('.js-datepicker__button-clear');
+  const $clears = $('.js-datepicker__button-clear');
   $clears.each(function () {
     $(this).on('click.clearButton', (i, el) => {
       let dp = FindDatepicker($ToxinDatepickers, $(this).parent().parent());
@@ -39,7 +41,7 @@ $(document).ready(() => {
     })
   })
 
-  $apply = $('.js-datepicker__button-apply');
+  const $apply = $('.js-datepicker__button-apply');
   $apply.each(function () {
     $(this).on('click.applyButton', (i, el) => {
       let dp = FindDatepicker($ToxinDatepickers, $(this).parent().parent());

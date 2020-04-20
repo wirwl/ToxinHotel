@@ -73,7 +73,7 @@
     display: none;
   }
 
-  @media (max-width: $header-media1) {
+  @media (max-width: 888px) {
     .header {
       padding: 0 5px;
     }
@@ -85,7 +85,7 @@
     }
   }
 
-  @media (max-width: $header-media2) {
+  @media (max-width: 715px) {
     .header {
       justify-content: space-between;
       padding: 0;
@@ -116,7 +116,7 @@
     }
   }
 }
-@media (max-width: $header-media3) {
+@media (max-width: 488px) {
   .header__button-bordered {
     margin-right: 5px;
     margin-bottom: 5px;

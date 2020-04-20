@@ -1,10 +1,11 @@
-import '../../../node_modules/jquery/dist/jquery'
-import '../../../node_modules/jquery-mask-plugin/dist/jquery.mask'
-import '../../../node_modules/air-datepicker/dist/js/datepicker'
-import '../../components/datepicker/datepicker'
-import '../../components/item-quantity-dropdown/item-quantity-dropdown'
-import '../../components/guests-input/guests-input'
-import '../../components/header-menu/header-menu'
-import '../../components/room-reservation-form/room-reservation-form'
-import '../../favicons/favicons'
 import './index.scss'
+
+import '../../favicons/favicons'
+
+const fonts = require.context('../../fonts', true, /\.css$/ );
+fonts.keys().forEach(fonts);
+
+const imports = require.context('../../components/', true, /\.(scss|js)$/)
+imports.keys().forEach(imports);
+
+

@@ -1,14 +1,12 @@
-import '../../../../node_modules/jquery/dist/jquery.js'
-import '../../../../node_modules/air-datepicker/dist/js/datepicker.js'
-import '../../../../node_modules/jquery-mask-plugin/dist/jquery.mask.js'
-import '../../../images/rooms/888/image-1.png';
-import '../../../images/rooms/840/image-1.png';
-import '../../../components/datepicker/datepicker.js'
-import '../../../components/guests-input/guests-input.js'
-import '../../../components/item-quantity-dropdown/item-quantity-dropdown.js'
-import '../../../components/room-reservation-form/room-reservation-form.js'
-import '../../../components/order-info-form/order-info-form.js'
 import './cards.scss';
+
+import '../../../favicons/favicons'
+
+const fonts = require.context('../../../fonts', true, /\.css$/);
+fonts.keys().forEach(fonts);
+
+const imports = require.context('../../../components/', true, /\.(scss|js)$/)
+imports.keys().forEach(imports);
 
 $(document).ready(function () {
   //only for pixel perfect

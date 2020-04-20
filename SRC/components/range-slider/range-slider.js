@@ -1,5 +1,7 @@
+import '../../../node_modules/ion-rangeslider/js/ion.rangeSlider'
+
 $(document).ready(function() {
-  let $values=$('.js-range-slider__values');
+  let $values=$('.js-range-slider__values');  
   $('.js-range-slider__input').ionRangeSlider({
     skin: "round",
     type: "double",

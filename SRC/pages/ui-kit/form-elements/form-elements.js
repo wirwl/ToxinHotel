@@ -1,18 +1,12 @@
-import '../../../../node_modules/jquery/dist/jquery.js'
-import '../../../../node_modules/ion-rangeslider/js/ion.rangeSlider'
-import '../../../../node_modules/jquery-mask-plugin/dist/jquery.mask.js'
-import '../../../images/avatar.jpg';
-import '../../../components/masked-input/masked-input.js'
-import '../../../../node_modules/air-datepicker/dist/js/datepicker.js'
-import '../../../components/datepicker/datepicker.js'
-import '../../../components/comfort-input/comfort-input.js'
-import '../../../components/expandable-checkbox-list/expandable-checkbox-list.js'
-import '../../../components/like-button/like-button.js'
-import '../../../components/guests-input/guests-input.js'
-import '../../../components/range-slider/range-slider.js';
-import '../../../components/pagination/pagination.js';
-import '../../../components/item-quantity-dropdown/item-quantity-dropdown.js'
 import './form-elements.scss';
+
+import '../../../favicons/favicons'
+
+const fonts = require.context('../../../fonts', true, /\.css$/);
+fonts.keys().forEach(fonts);
+
+const imports = require.context('../../../components/', true, /\.(scss|js)$/)
+imports.keys().forEach(imports);
 
 $(document).ready(() => {
   //Only for watch pixel perfect for range-slider;

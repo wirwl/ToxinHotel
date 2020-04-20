@@ -1,29 +1,4 @@
-@import "../../common.scss";
-
-@import "../../fonts/fa5-brands-regular-400/fonts.css";
-@import "../../fonts/material-icons/material-icons.css";
-@import "../../fonts/Montserrat/fonts.css";
-@import "../../fonts/Open-Sans/fonts.css";
-@import "../../fonts/Quicksand/fonts.css";
-
-$header-media1: 888px;
-$header-media2: 715px;
-$header-media3: 488px;
-@import "../../components/header/header.scss";
-@import "../../components/footer/footer.scss";
-@import "../../../node_modules/air-datepicker/dist/css/datepicker.css";
-@import "../../components/datepicker-input/datepicker-input.scss";
-@import "../../components/guests-input/guests-input.scss";
-
 @import "../../../node_modules/ion-rangeslider/css/ion.rangeSlider.css";
-@import "../../components/range-slider/range-slider.scss";
-
-@import "../../components/checkbox/checkbox.scss";
-@import "../../components/checkboxes-list/checkboxes-list.scss";
-@import "../../components/comfort-input/comfort-input.scss";
-@import "../../components/expandable-checkbox-list/expandable-checkbox-list.scss";
-@import "../../components/pagination/pagination.scss";
-@import "../../components/room-info/room-info.scss";
 
 * {
   @include reset;

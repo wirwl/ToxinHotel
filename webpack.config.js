@@ -16,7 +16,7 @@ process.traceDeprecation = true;
 module.exports = ((env, argv) => {
 
     var isDev = argv.mode === "development";
-    var pathOutput = isDev ? 'Result/dev' : 'Resul4t/prod';
+    var pathOutput = isDev ? 'Result/dev' : 'Result/prod';
     var dtValue = isDev ? 'source-map' : 'none';
 
     function reloadHtml() {
@@ -126,6 +126,12 @@ module.exports = ((env, argv) => {
                             loader: "sass-loader",
                             options: { sourceMap: true, implementation: require('sass') }
                         },
+                        {
+                            loader: 'sass-resources-loader',
+                            options: {
+                                resources: [path.resolve(__dirname, `SRC/common.scss`)],
+                            }
+                        },
                     ],
                 },
                 {
@@ -205,5 +211,5 @@ module.exports = ((env, argv) => {
     var signinCFG = AddHTMLPage({ common_filename: 'sign-in', input_path: 'SRC/pages/sign-in', publicPath: '../../' })
     
     if (isDev) return [indexCFG, searchroomCFG, roomdetailsCFG, signupCFG, signinCFG, uikithfCFG, uikitctCFG, uikitfeCFG, uikitcardsCFG];
-    return [indexCFG, searchroomCFG, roomdetailsCFG, signupCFG, signinCFG,];
+    return [indexCFG, searchroomCFG, roomdetailsCFG, signupCFG, signinCFG];
 })
