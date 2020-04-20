@@ -10,8 +10,7 @@ const imports = require.context('../../../components/', true, /\.(scss|js)$/)
 imports.keys().forEach(imports);
 
 $(document).ready(function () {
-  //only for pixel perfect
-  console.log($('.standalone-datepicker'));
+  //only for pixel perfect  
   const datepicker = $('.standalone-datepicker').data('datepicker');
   datepicker.update('minDate', null);
   var currentDate = currentDate = new Date("2019-08-08");

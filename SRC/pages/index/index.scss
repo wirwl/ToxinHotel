@@ -33,11 +33,11 @@ body {
   text-align: right;
 }
 
-.menu > .menu__list > .menu__item.menu__item:not(:last-of-type) {
+.header .header-menu > .header-menu__list > .header-menu__item.header-menu__item:not(:last-of-type) {
   margin-right: 20px;
 }
 
-.header__header-menu {
+.header .header__header-menu {
   margin-right: 20px;
 }
 
