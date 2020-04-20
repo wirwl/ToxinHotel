@@ -1,6 +1,6 @@
-@import "../radio/radio.scss";
-
 .radios-list {
+  font-family: $toxin-font-montserrat;
+
   &__list {
     list-style: none;
     display: flex;
@@ -8,6 +8,10 @@
 
   &__caption {
     margin-bottom: 16px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: inherit;
   }
 
   &__item:not(:last-child) {

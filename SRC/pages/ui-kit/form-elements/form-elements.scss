@@ -1,3 +1,5 @@
+@import "../../../../node_modules/ion-rangeslider/css/ion.rangeSlider.css";
+
 * {
   @include reset;
 }
@@ -11,6 +13,13 @@ body {
   padding: 140px 0px 132px 140px;
   display: flex;
   flex-wrap: wrap;
+}
+
+@mixin caption {
+  font-size: 12px;
+  font-family: $toxin-font-montserrat;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .column1 {
@@ -33,7 +42,6 @@ body {
 }
 .column1__item {
   margin-bottom: 20px;
-  max-width: 266px;
 }
 .column1__wrapper-for-datepicker-inputs {
   margin-bottom: 39px;
@@ -65,6 +73,11 @@ body {
   margin-bottom: 100px;
   width: 267px;
 }
+
+.column1__comfort-input {
+  max-width: 266px;
+}
+
 .column1__wrapper-for-comport-input {
   margin-bottom: 168px;
 }
@@ -100,6 +113,7 @@ body {
 }
 .likes-button-list__caption {
   margin-bottom: 16px;
+  @include caption;
 }
 .likes-button-list__item:not(:last-child) {
   margin-right: 10px;
@@ -110,6 +124,7 @@ body {
 }
 .rate-buttons-list__caption {
   margin-bottom: 16px;
+  @include caption;
 }
 .rate-buttons-list__list {
   list-style: none;
@@ -154,6 +169,7 @@ body {
 }
 .buttons-list__caption {
   margin-bottom: 16px;
+  @include caption;
 }
 .buttons-list__item {
   height: inherit;
@@ -185,6 +201,7 @@ body {
 }
 .pagination__wrapper-caption {
   margin-bottom: 17px;
+  @include caption;
 }
 .column3__wrapper-for-guests-input2 {
   margin-bottom: 255px;
@@ -194,8 +211,7 @@ body {
 }
 .column3__bullet-list-caption {
   margin-bottom: 12px;
-  font-size: 12px;
-  font-weight: bold;
+  @include caption;
 }
 .row1 {
   width: 712px;
@@ -205,33 +221,3 @@ body {
 .column1__item.column1__wrapper-for-ecl2 {
   width: 266px;
 }
-
-@import "../../../components/text-input/text-input.scss";
-@import "../../../components/masked-input/masked-input.scss";
-@import "../../../components/datepicker-input/datepicker-input.scss";
-@import "../../../components/subscribe-input/subscribe-input.scss";
-@import "../../../components/comfort-input/comfort-input.scss";
-@import "../../../components/expandable-checkbox-list/expandable-checkbox-list.scss";
-@import "../../../components/checkbox/checkbox.scss";
-@import "../../../components/comfort-status/comfort-status.scss";
-@import "../../../components/comfort-status-list/comfort-status-list.scss";
-@import "../../../components/radio/radio.scss";
-@import "../../../components/checkboxes-list/checkboxes-list.scss";
-@import "../../../components/radios-list/radios-list.scss";
-@import "../../../components/toggle/toggle.scss";
-@import "../../../components/toggles-list/toggles-list.scss";
-@import "../../../components/like-button/like-button.scss";
-@import "../../../components/rate-button/rate-button.scss";
-@import "../../../components/guests-input/guests-input.scss";
-@import "../../../components/round-image/round-image.scss";
-@import "../../../components/feedback/feedback.scss";
-@import "../../../../node_modules/ion-rangeslider/css/ion.rangeSlider.css";
-@import "../../../components/range-slider/range-slider.scss";
-@import "../../../components/button-simple/button-simple.scss";
-@import "../../../components/button-arrow/button-arrow.scss";
-@import "../../../components/button-filled//button-filled.scss";
-@import "../../../components/button-bordered/button-bordered.scss";
-@import "../../../components/pagination/pagination.scss";
-@import "../../../components/bullet/bullet.scss";
-@import "../../../components/bullets-list/bullets-list.scss";
-@import "../../../components/item-quantity-dropdown/item-quantity-dropdown.scss";

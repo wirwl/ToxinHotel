@@ -1,10 +1,16 @@
 .checkboxes-list {
+  font-family: $toxin-font-montserrat;
+
   &__list {
     list-style: none;
   }
 
   &__caption {
     margin-bottom: 16px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: inherit;
   }
 
   &__item:not(:last-child) {

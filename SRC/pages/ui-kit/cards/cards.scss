@@ -55,24 +55,6 @@ body {
   margin-bottom: 37px;
 }
 
-@import "../../../components/text-input/text-input.scss";
-@import "../../../components/masked-input/masked-input.scss";
-@import "../../../components/datepicker-input/datepicker-input.scss";
-@import "../../../components/radios-list/radios-list.scss";
-@import "../../../components/toggle/toggle.scss";
-@import "../../../components/rate-button/rate-button.scss";
-@import "../../../components/button-arrow/button-arrow.scss";
-@import "../../../components/button-bordered/button-bordered.scss";
-@import "../../../components/guests-input/guests-input.scss";
-@import "../../../components/item-quantity-dropdown/item-quantity-dropdown.scss";
-@import "../../../components/room-reservation-form/room-reservation-form.scss";
-@import "../../../components/sign-up-form/sign-up-form.scss";
-@import "../../../components/order-info-form/order-info-form.scss";
-@import "../../../components/sign-in-form/sign-in-form.scss";
-@import "../../../components/room-info-caption/room-info-caption.scss";
-@import "../../../components/image-slider/image-slider.scss";
-@import "../../../components/room-info/room-info.scss";
-
 @media (max-width: 480px) {
   .column1,
   .column2 {

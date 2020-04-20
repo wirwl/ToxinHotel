@@ -1,8 +1,14 @@
 .expandable-checkbox-list {
+  font-family: $toxin-font-montserrat;
+
   &__caption {
     cursor: pointer;
     position: relative;
     line-height: 24px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: inherit;
   }
   &__list {
     list-style: none;

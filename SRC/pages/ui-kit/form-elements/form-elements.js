@@ -17,8 +17,8 @@ $(document).ready(() => {
 
   let rs = $('.js-range-slider__input').data('ionRangeSlider');
   rs.update({
-    from: 4000,
-    to: 8000
+    from: 4300,
+    to: 9500
   });  
   
   let dp = $('#fdd').data('datepicker');

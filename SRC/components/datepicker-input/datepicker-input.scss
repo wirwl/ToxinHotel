@@ -1,9 +1,11 @@
-@import "../datepicker/datepicker.scss";
-
 .datepicker-input {
+  font-family: $toxin-font-montserrat;
   &__caption {
     display: inline-block;
     margin-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
   }
 
   &__input {
@@ -14,6 +16,7 @@
     font-size: 14px;
     height: 44px;
     width: 100%;
+    font-family: inherit;
   }
 
   &__input::placeholder {

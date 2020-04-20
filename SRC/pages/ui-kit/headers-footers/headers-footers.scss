@@ -33,17 +33,6 @@ body > footer {
   margin-bottom: 130px;
 }
 
-@import "../../../components/header-menu/header-menu.scss";
-
-$header-media1: 760px;
-$header-media2: 625px;
-$header-media3: 373px;
-@import "../../../components/header/header.scss";
-
-@import "../../../components/footer-menu/footer-menu.scss";
-@import "../../../components/footer/footer.scss";
-@import "../../../components/subscribe-input/subscribe-input.scss";
-
 @media screen and (max-width: 3840px) {
   .footer + .footer {
     .footer__footer-menu,

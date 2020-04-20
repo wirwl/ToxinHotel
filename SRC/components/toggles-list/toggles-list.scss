@@ -1,6 +1,12 @@
 .toggles-list {
+  font-family: $toxin-font-montserrat;
+
   &__caption {
     margin-bottom: 16px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: inherit;
   }
 
   &__list {

@@ -1,7 +1,12 @@
 .subscribe-input {
+  font-family: $toxin-font-montserrat;
+
   &__caption {
     display: inline-block;
     margin-bottom: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
   }
 
   &__input {
@@ -13,6 +18,7 @@
     font-size: 14px;
     height: 44px;
     width: 100%;
+    font-family: inherit;
   }
 
   &__input::placeholder {

@@ -25,7 +25,6 @@ include ../../../components/bullet/bullet
 include ../../../components/bullets-list/bullets-list
 include ../../../components/datepicker-input/datepicker-input
 
-
 doctype html
 html(lang="ru")
   head
@@ -59,13 +58,15 @@ html(lang="ru")
         li.column1__item.column1__wrapper-for-subscribe-input
           +subscribe-input({caption:"SUBSCRIPTION TEXT FIELD", placeholder:"Email"})
         li.column1__item
-          +comfort-input({caption:"DROPDOWN", 
+          .column1__comfort-input
+            +comfort-input({caption:"DROPDOWN", 
             iqdd:{isExpanded:false, placeholder:"", 
               items:[{id:"bedrooms", name:"СПАЛЬНИ", defaultcount:2},
                 {id:"beds", name:"КРОВАТИ", defaultcount:2},
                 {id:"bathrooms", name:"ВАННЫЕ КОМНАТЫ"}] }})
         li.column1__item.column1__wrapper-for-comport-input
-          +comfort-input({caption:"DROPDOWN",
+          .column1__comfort-input
+            +comfort-input({caption:"DROPDOWN",
             iqdd: {isExpanded:true, placeholder:"", 
             items:[{id:"bedrooms", name:"СПАЛЬНИ", defaultcount:2},
               {id:"beds", name:"КРОВАТИ", defaultcount:2},

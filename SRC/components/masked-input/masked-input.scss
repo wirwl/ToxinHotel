@@ -1,7 +1,11 @@
 .masked-input {
+  font-family: $toxin-font-montserrat;
   &__caption {
     display: block;
     margin-bottom: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
   }
 
   &__input {
@@ -12,6 +16,7 @@
     width: 100%;
     height: 44px;
     outline: none;
+    font-family: inherit;
   }
 
   &__input::placeholder {

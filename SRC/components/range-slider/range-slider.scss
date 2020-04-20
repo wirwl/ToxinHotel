@@ -1,4 +1,5 @@
 .range-slider {
+  font-family: $toxin-font-montserrat;
   font-size: 12px;
 
   &__caption {
@@ -8,6 +9,10 @@
   }
   &__caption-text {
     color: $toxin-color-black-100;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: inherit;
   }
   &__values {
     color: $toxin-color-black-50;

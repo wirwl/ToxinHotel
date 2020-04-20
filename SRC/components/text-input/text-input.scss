@@ -1,9 +1,14 @@
 .text-input {
   width: 100%;
+  font-family: $toxin-font-montserrat;
 
   &__caption {
     margin-bottom: 5px;
     display: inline-block;
+    font-family: inherit;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
   }
 
   &__input {
@@ -16,6 +21,7 @@
     outline: none;
     width: 100%;
     font-size: 14px;
+    font-family: inherit;
   }
 
   &__input::placeholder {

@@ -1,7 +1,12 @@
-.compfort-input {
+.comfort-input {
+  font-family: $toxin-font-montserrat;
+
   &__caption {
     font-size: 12px;
     line-height: 15px;
     margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: inherit;
   }
 }
