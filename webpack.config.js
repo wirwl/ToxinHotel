@@ -211,5 +211,5 @@ module.exports = ((env, argv) => {
     var signinCFG = AddHTMLPage({ common_filename: 'sign-in', input_path: 'SRC/pages/sign-in', publicPath: '../../' })
     
     if (isDev) return [indexCFG, searchroomCFG, roomdetailsCFG, signupCFG, signinCFG, uikithfCFG, uikitctCFG, uikitfeCFG, uikitcardsCFG];
-    return [indexCFG, searchroomCFG, roomdetailsCFG, signupCFG, signinCFG, uikithfCFG, uikitctCFG, uikitfeCFG, uikitcardsCFG];
+    return [indexCFG, searchroomCFG, roomdetailsCFG, signupCFG, signinCFG];
 })

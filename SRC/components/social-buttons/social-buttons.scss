@@ -1,4 +1,4 @@
-.socialButtons {
+.social-buttons {
   display: flex;
 
   > * {
@@ -11,10 +11,10 @@
     height: 24px;
   }
 
-  &__btnTwitter {
+  &__twitter {
     margin-right: 24px;
   }
-  &__btnFacebook {
+  &__facebook {
     margin-right: 16px;
   }
 }
