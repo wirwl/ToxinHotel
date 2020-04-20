@@ -3,7 +3,7 @@ include ../../../components/room-reservation-form/room-reservation-form
 include ../../../components/sign-up-form/sign-up-form
 include ../../../components/order-info-form/order-info-form
 include ../../../components/sign-in-form/sign-in-form
-include ../../../components/datepicker/datepicker
+include ../../../components/toxin-datepicker/toxin-datepicker
 include ../../../components/room-info/room-info
 include ../../../components/image-slider/image-slider
 
@@ -31,7 +31,7 @@ html(lang="ru")
     .column3
       ul.column3__list
         li.column3__item
-          +datepicker({isStandAlone:true})
+          +toxin-datepicker({isStandAlone:true})
         li.column3__item.column3__wrapper-for-image-slider          
           +room-info({id:"image-slider1", number:888, isLux:true, cost:"9 990", starscount:5, commentscount:145, isShowNavBtns:true,
             images:[
