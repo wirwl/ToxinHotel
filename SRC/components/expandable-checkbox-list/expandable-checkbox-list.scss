@@ -15,24 +15,23 @@
     display: none;
   }
   &__item:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 12px;
   }
 
   &_show .expandable-checkbox-list__list {
     display: block;
-    padding-top: 13px;
+    padding-top: 12px;
   }
 
   &__caption:after {
     content: "keyboard_arrow_down";
-    width: 44px;
     font-family: $toxin-font-material-icon;
     font-size: 24px;
     font-weight: normal;
     text-transform: none;
     position: absolute;
     color: $toxin-color-black-50;
-    right: 0px;
+    right: 11px;
     text-align: center;
   }
 

@@ -14,8 +14,6 @@
 
    &__input:after {
       display: block;
-      width: 5px;
-      height: 5px;
       position: absolute;
    }
 
@@ -27,7 +25,6 @@
       cursor: pointer;
       color: $toxin-color-black-50;
       font-size: 14px;
-      height: 20px;
    }
 
    &__label:before {
@@ -37,7 +34,7 @@
       left: 0px;
       top: 0px;
       width: 20px;
-      height: inherit;
+      height: 20px;
       border: 1px solid $toxin-color-purple;
       background-color: #fff;
       border-radius: 4px;

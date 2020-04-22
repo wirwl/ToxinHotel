@@ -1,5 +1,6 @@
 .datepicker-input {
   font-family: $toxin-font-montserrat;
+
   &__caption {
     display: inline-block;
     margin-bottom: 5px;
@@ -12,9 +13,9 @@
     border: 1px solid $toxin-color-black-25;
     border-radius: 4px;
     background: white;
-    padding: 13px 15px;
+    padding: 12px 15px;
     font-size: 14px;
-    height: 44px;
+
     width: 100%;
     font-family: inherit;
   }
@@ -38,10 +39,9 @@
     color: $toxin-color-black-50;
     font-size: 24px;
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 44px;
-    height: 44px;
+    top: 12px;
+    right: 9px;
+
     display: flex;
     justify-content: center;
     align-items: center;

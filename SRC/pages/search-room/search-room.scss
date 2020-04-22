@@ -34,12 +34,11 @@ body {
 }
 .filters {
   margin-right: 60px;
-  min-width: 266px;
-  width: 266px;
 }
 
 .filters__list {
   list-style: none;
+  min-width: 266px;
 }
 
 .filters__item {
@@ -99,7 +98,7 @@ body {
 }
 
 .filters__wrapper-accessibility {
-  margin-bottom: 26px;
+  margin-bottom: 30px;
   max-width: 253px;
   .checkboxes-list__item:nth-child(1) {
     max-width: 220px;
