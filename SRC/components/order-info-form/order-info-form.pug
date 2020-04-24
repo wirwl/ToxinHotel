@@ -17,11 +17,7 @@ mixin order-info-form(data)
             li.order-info-form__dates-item
               +datepicker-input({caption:"Выезд", placeholder:"ДД.ММ.ГГГГ", id:"oi-form__end-input", hasDatepicker:false})
         li.order-info-form__item
-          +guests-input({caption:"Гости", 
-            iqdd:{isExpanded:false, placeholder:"", 
-            items:[{id:"adults", name:"ВЗРОСЛЫЕ", defaultcount:2},
-              {id:"childs", name:"ДЕТИ", defaultcount:1},
-              {id:"babies", name:"МЛАДЕНЦЫ"}] }})
+          +guests-input({caption:"Гости", items: [{id:'adults', text: 'Взрослые'}, {id:'children', text:'Дети'}, {id:'babies', text:'Младенцы'}] })
         li.order-info-form__item
           table.order-info-form__table
             tr.order-info-form__row

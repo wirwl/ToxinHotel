@@ -11,7 +11,8 @@
   cursor: pointer;
   text-transform: uppercase;
 
-  &.button-simple_disabled {
-    color: rgba(31, 32, 65, 0.5);
+  &.button-simple_disabled,
+  &.button-simple_gray-text {
+    color: $toxin-color-black-50;
   }
 }

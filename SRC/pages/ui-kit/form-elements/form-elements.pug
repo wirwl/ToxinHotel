@@ -40,11 +40,7 @@ html(lang="ru")
         li.column1__item
           +text-input({isFocused:true, caption:"TEXT FIELD", value:"This is pretty awesome"})     
         li.column1__item.column1__wrapper-for-guests-input0
-          +guests-input({caption:"DROPDOWN", 
-            iqdd:{isExpanded:false, placeholder:"", 
-              items:[{id:"adults", name:"ВЗРОСЛЫЕ"},
-                {id:"childs", name:"ДЕТИ"},
-                {id:"babies", name:"МЛАДЕНЦЫ"}] }})
+          +guests-input({caption:"DROPDOWN", items: [{id:'adults', text: 'Взрослые'}, {id:'children', text:'Дети'}, {id:'babies', text:'Младенцы'}]})
         li.column1__item.column1__wrapper-for-masked-input
           +masked-input({caption:"MASKED TEXT FIELD"})
         li.column1__item.column1__wrapper-for-datepicker-inputs
@@ -66,7 +62,7 @@ html(lang="ru")
                 {id:"bathrooms", name:"ВАННЫЕ КОМНАТЫ"}] }})
         li.column1__item.column1__wrapper-for-comport-input
           .column1__comfort-input
-            +comfort-input({caption:"DROPDOWN",
+            +comfort-input({isOpen:true, caption:"DROPDOWN",
             iqdd: {isExpanded:true, placeholder:"", 
             items:[{id:"bedrooms", name:"СПАЛЬНИ", defaultcount:2},
               {id:"beds", name:"КРОВАТИ", defaultcount:2},
@@ -127,11 +123,7 @@ html(lang="ru")
                   li.rate-buttons-list__item
                     +rate-button({count:5,id:"stars2"})
             li.column2__item.column2__wrapper-for-guests-input1
-              +guests-input({caption:"DROPDOWN", 
-                iqdd:{isExpanded:true, placeholder:"", 
-                  items:[{id:"adults", name:"ВЗРОСЛЫЕ"},
-                    {id:"childs", name:"ДЕТИ"},
-                    {id:"babies", name:"МЛАДЕНЦЫ"}] }})
+              +guests-input({caption:"DROPDOWN", isOpen:true, items: [{id:'adults', text: 'Взрослые'}, {id:'children', text:'Дети'}, {id:'babies', text:'Младенцы'}] })
             li.column2__item.column2__wrapper-for-rich-checkboxes-list
               +checkboxes-list({caption:"RICH CHECKBOX BUTTONS", 
                 checkboxes:[{id:"wk",text:"Широкий коридор", desc:"Ширина коридоров в номере не менее 91 см."},
@@ -168,11 +160,7 @@ html(lang="ru")
               h3.pagination__wrapper-caption PAGINATION
               +pagination({pages:15, page:1, showed:12, showedlastpage:6, total:100})
             li.column3__item.column3__wrapper-for-guests-input2
-              +guests-input({caption:"DROPDOWN", 
-                iqdd:{isExpanded:true, placeholder:"", 
-                items:[{id:"adults", name:"ВЗРОСЛЫЕ", defaultcount:2},
-                  {id:"childs", name:"ДЕТИ", defaultcount:1},
-                  {id:"babies", name:"МЛАДЕНЦЫ"}] }})
+              +guests-input({caption:"DROPDOWN", isOpen:true, items: [{id:'adults', text: 'Взрослые', count:2}, {id:'children', text:'Дети', count:1}, {id:'babies', text:'Младенцы'}] })
             li.column3__item.column3__wrapper-for-bullet-list
               h3.column3__bullet-list-caption BULLET-LIST
               +bullets-list([{text:"Нельзя с питомцами"},

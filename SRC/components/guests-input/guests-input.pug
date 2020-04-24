@@ -1,7 +1,16 @@
-include ../item-quantity-dropdown/item-quantity-dropdown
+include ../button-simple/button-simple
 
 mixin guests-input(data)
   .guests-input.js-guests-input  
     h3.guests-input__caption #{data.caption}
-    - data.iqdd.isShowButtons=true
-    +item-quantity-dropdown(data.iqdd)
+    .iqdropdown(class = data.isOpen ? 'menu-open' : '')
+      p.iqdropdown-selection
+      .iqdropdown-menu
+        for item in data.items
+          .iqdropdown-menu-option(data-id=item.id data-defaultcount=item.count)
+            div: p.iqdropdown-item #{item.text}
+        .guests-input__buttons
+          .guests-input__button-simple-clear
+            +button-simple({text:'Очистить', isGrayText:true})
+          .guests-input__button-simple-apply
+            +button-simple({text:'Применить'})    

@@ -10,3 +10,110 @@
     font-family: inherit;
   }
 }
+
+.iqdropdown {
+  border: 1px solid $toxin-color-black-25;
+  display: flex;
+  font-family: $toxin-font-montserrat;
+  padding: 12px 44px 12px 15px;
+  height: auto;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+
+  &::after {
+    position: absolute;
+    font-family: $toxin-font-material-icon;
+    font-size: 24px;
+    content: "keyboard_arrow_down";
+    display: inline-block;
+    right: 9px;
+    bottom: 8px;
+    color: $toxin-color-black-75;
+  }
+
+  .iqdropdown-menu {
+    outline: 1px solid rgba(31, 32, 65, 0.5);
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    padding: 6px 7px 8px 15px;
+    position: absolute;
+    left: 1px;
+    top: 43px;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .iqdropdown-selection {
+    font-size: 14px;
+    color: $toxin-color-black-75;
+    font-family: inherit;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 45px;
+  }
+  .iqdropdown-selection::after {
+    background-image: none;
+  }
+  &.menu-open .iqdropdown-selection::after {
+    background-image: none;
+  }
+
+  .iqdropdown-item {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: inherit;
+  }
+
+  .iqdropdown-item-controls {
+    height: auto;
+  }
+
+  .iqdropdown-menu-option {
+    height: auto;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .iqdropdown-menu-option:not(:last-child) {
+    margin-bottom: 7px;
+  }
+
+  .iqdropdown-item-controls button.button-decrement,
+  .iqdropdown-item-controls button.button-increment {
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    padding: 0px;
+  }
+
+  .iqdropdown-item-controls .counter {
+    border: none;
+    padding: 7px 12px;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: inherit;
+  }
+
+  .icon-decrement {
+    display: flex;
+    justify-content: center;
+  }
+
+  .icon-decrement::after {
+    background: $toxin-color-black-50;
+    height: 1px;
+    width: 8px;
+  }
+
+  .icon-decrement.icon-increment::before {
+    height: 1px;
+    width: 8px;
+  }
+}

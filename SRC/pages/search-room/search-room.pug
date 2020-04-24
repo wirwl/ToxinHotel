@@ -25,11 +25,7 @@ html(lang="en")
             li.filters__item.filters__wrapper-datepicker-input
               +datepicker-input({id:"filters_di", caption:"Даты пребывания в отеле", placeholder:"Выберите дату"})
             li.filters__item.filters__wrapper-guests-input
-              +guests-input({caption:"Гости", 
-                iqdd:{isExpanded:false, placeholder:"", 
-                  items:[{id:"adults", name:"ВЗРОСЛЫЕ", defaultcount:2},
-                    {id:"childs", name:"ДЕТИ", defaultcount:1},
-                    {id:"babies", name:"МЛАДЕНЦЫ", defaultcount:1}] }})
+              +guests-input({caption:"Гости", items: [{id:'adults', text: 'Взрослые', count: 2}, {id:'children', text:'Дети', count: 1}, {id:'babies', text:'Младенцы', count: 1}] })
             li.filters__item.filters__wrapper-range-slider
               +range-slider({ctext:"Диапазон цены", min:0, max:15000, from: 4500, to:9600, desc:"Стоимость за сутки пребывания в номере" })
             li.filters__item.filters__wrapper-range-cost

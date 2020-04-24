@@ -16,9 +16,5 @@ mixin room-reservation-form(data)
               li.room-reservation-form__dates-item
                 +datepicker-input({caption:"Выезд", placeholder:"ДД.ММ.ГГГГ", id:"rr-form__end-input", hasDatepicker:false})                  
         li.room-reservation-form__item.room-reservation-wrapper-guests-input
-          +guests-input({caption:"Гости", 
-            iqdd:{isExpanded:false, placeholder:"", 
-            items:[{id:"adults", name:"ВЗРОСЛЫЕ"},
-              {id:"childs", name:"ДЕТИ"},
-              {id:"babies", name:"МЛАДЕНЦЫ"}] }})
+          +guests-input({caption:"Гости", items: [{id:'adults', text: 'Взрослые', count: 2}, {id:'children', text:'Дети', count: 1}, {id:'babies', text:'Младенцы'}] })
       +button-arrow({text:"Подобрать номер", type: "submit"})

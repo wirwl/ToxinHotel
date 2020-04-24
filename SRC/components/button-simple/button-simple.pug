@@ -3,11 +3,4 @@ mixin button-simple(data)
   -  data.isEnabled=true
   -if (data.type==undefined)
   - data.type="button"  
-  button.button-simple(type=(data.type ? data.type : "button") class=(data.isEnabled ? "": "button-simple_disabled")) #{data.text}
-
-
-
-
-
-
-
+  button.button-simple(type=(data.type ? data.type : "button") class=((data.isEnabled ? "": "button-simple_disabled") + (data.isGrayText ?  "button-simple_gray-text":""))) #{data.text}
