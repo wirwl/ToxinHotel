@@ -1,0 +1,68 @@
+* {
+  @include reset;
+}
+
+html {
+  @include define-html;
+}
+
+body {
+  @include define-body;
+}
+
+.main-content {
+  width: 100%;
+  min-height: 830px;
+  position: relative;
+  padding-top: 70px;
+  background: url("../../images/backgrounds/index.jpg") no-repeat;
+}
+
+.main-content__form {
+  margin-left: 9.375%;
+  padding: 0 5px;
+}
+
+.main-content__text {
+  color: $toxin-color-black-75;
+  max-width: 297px;
+  position: absolute;
+  right: 9.236111111111111%;
+  bottom: 21px;
+  line-height: 24px;
+  text-align: right;
+}
+
+.header .header-menu > .header-menu__list > .header-menu__item.header-menu__item:not(:last-of-type) {
+  margin-right: 20px;
+}
+
+.header .header__header-menu {
+  margin-right: 20px;
+}
+
+// Additional media queries for header-----------------------------------------
+@media (max-width: 365px) {
+  .header__logo {
+    display: none;
+  }
+}
+// Media queries for main content-----------------------------------
+@media (max-width: 815px) {
+  .main-content {
+    min-height: 740px;
+  }
+  .main-content__form {
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+  }
+
+  .main-content__text {
+    margin: 10px auto;
+    text-align: center;
+    position: static;
+    color: #fff;
+  }
+}

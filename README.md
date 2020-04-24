@@ -23,34 +23,18 @@
     > **npx browserslist --coverage** - check coverage for selected browsers
  9. Pages mark up is ["responsive"](http://www.liquidapsive.com), minimun width is 320 pixels, maximum width is 1440 pixels, page centered
 ## Watch result on github.io
-  1. UI Kit
-     + [Colors & Type](https://wirwl.github.io/PetProjects/FSD/ToxinHotel/pages/ui-kit/colors-type/colors-type.html)
-     + [Form Elements](https://wirwl.github.io/PetProjects/FSD/ToxinHotel/pages/ui-kit/form-elements/form-elements.html)
-     + [Cards](https://wirwl.github.io/PetProjects/FSD/ToxinHotel/pages/ui-kit/cards/cards.html)
-     + [Headers & Footers](https://wirwl.github.io/PetProjects/FSD/ToxinHotel/pages/ui-kit/headers-footers/headers-footers.html)  
-  2. Website pages
-     + [Landing page](https://wirwl.github.io/PetProjects/FSD/ToxinHotel/index.html)
-     + [Search room/Filter](https://wirwl.github.io/PetProjects/FSD/ToxinHotel/pages/search-room/search-room.html)
-     + [Room details](https://wirwl.github.io/PetProjects/FSD/ToxinHotel/pages/room-details/room-details.html)
-     + [Registration](https://wirwl.github.io/PetProjects/FSD/ToxinHotel/pages/sign-up/sign-up.html)
-     + [Sign in](https://wirwl.github.io/PetProjects/FSD/ToxinHotel/pages/sign-in/sign-in.html)
+   > Follow this link: https://wirwl.github.io/PetProjects/FSD/ToxinHotel
 
 ## Some usefull commands
   >**git clone https://github.com/wirwl/toxinhotel.git** - copy project from remote repository to local computer
 
   >**npm install** - install all dependencies
 
-  >**npm run clr** - clear output folder (remove all files and directories)
+  >**npm run dev** - execute project with webpack-dev-server for development with live reloading
 
-  >**npm run clr:dev** - clear output folder (remove all files and directories in dev folder)
+  >**npm run build** - build project with production mode
 
-  >**npm run clr:prod** - clear output folder (remove all files and directories in prod folder)
-
-  >**npm run dev** - build project with development mode
-
-  >**npm run prod** - build project with production mode
-
-  >**npm run le** - run index.html with [webpack-dev-server](https://www.npmjs.com/package/webpack-dev-server) for editing with live reloading, commands for another pages, see [package.json](package.json) (section "scripts")
+  >**npm run deploy** - deploy project on github.io
 
   >**npm-check --skip-unused** - check what packages is out of date with [npm-check](https://www.npmjs.com/package/npm-check)
 

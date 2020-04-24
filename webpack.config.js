@@ -8,6 +8,7 @@ const discardduplicates = require('postcss-discard-duplicates');
 const flexbugsfixes = require('postcss-flexbugs-fixes');
 const merge = require('webpack-merge');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 let devServer;
 process.noDeprecation = true;
@@ -16,7 +17,6 @@ process.traceDeprecation = true;
 module.exports = ((env, argv) => {
 
     var isDev = argv.mode === "development";
-    var pathOutput = isDev ? 'Result/dev' : 'Result/prod';
     var dtValue = isDev ? 'source-map' : 'none';
 
     function reloadHtml() {
@@ -38,10 +38,15 @@ module.exports = ((env, argv) => {
     function AddHTMLPage(data) {
         let common_path = data.input_path.substring(data.input_path.indexOf('/') + 1);
         data.output_path = data.output_path ? data.output_path : common_path;
+
+        if (data.isNeedClean) {            
+            common = merge(common, { plugins: [new CleanWebpackPlugin()] });
+        }
+
         let result = merge({}, common, {
             entry: "./" + data.input_path + "/" + data.common_filename + ".js",
             output: {
-                path: path.resolve(__dirname, pathOutput),
+                path: path.resolve(__dirname, "Result"),
                 filename: data.output_path + '/' + data.common_filename + ".js",
                 publicPath: data.publicPath || ''
             },
@@ -51,6 +56,8 @@ module.exports = ((env, argv) => {
                 reloadHtml
             ]
         })
+
+
         return result;
     }
     //------------common values for all configs--------------------------------
@@ -199,17 +206,17 @@ module.exports = ((env, argv) => {
         ]
     };
     //---UI-KIT---------------
-    var uikithfCFG = AddHTMLPage({ common_filename: 'headers-footers', input_path: 'SRC/pages/ui-kit/headers-footers', publicPath: '../../../' });
-    var uikitctCFG = AddHTMLPage({ common_filename: 'colors-type', input_path: 'SRC/pages/ui-kit/colors-type', publicPath: '../../../' });
-    var uikitfeCFG = AddHTMLPage({ common_filename: 'form-elements', input_path: 'SRC/pages/ui-kit/form-elements', publicPath: '../../../' });
-    var uikitcardsCFG = AddHTMLPage({ common_filename: 'cards', input_path: 'SRC/pages/ui-kit/cards', publicPath: '../../../' });
+    const uikithfCFG = AddHTMLPage({ common_filename: 'headers-footers', input_path: 'SRC/pages/ui-kit/headers-footers', publicPath: '../../../' });
+    const uikitctCFG = AddHTMLPage({ common_filename: 'colors-type', input_path: 'SRC/pages/ui-kit/colors-type', publicPath: '../../../' });
+    const uikitfeCFG = AddHTMLPage({ common_filename: 'form-elements', input_path: 'SRC/pages/ui-kit/form-elements', publicPath: '../../../' });
+    const uikitcardsCFG = AddHTMLPage({ common_filename: 'cards', input_path: 'SRC/pages/ui-kit/cards', publicPath: '../../../' });
     //---Site-Pages-----------
-    var indexCFG = AddHTMLPage({ common_filename: 'index', input_path: 'SRC/pages/index', output_path: '.' });
-    var searchroomCFG = AddHTMLPage({ common_filename: 'search-room', input_path: 'SRC/pages/search-room', publicPath: '../../' });
-    var roomdetailsCFG = AddHTMLPage({ common_filename: 'room-details', input_path: 'SRC/pages/room-details', publicPath: '../../' })
-    var signupCFG = AddHTMLPage({ common_filename: 'sign-up', input_path: 'SRC/pages/sign-up', publicPath: '../../' })
-    var signinCFG = AddHTMLPage({ common_filename: 'sign-in', input_path: 'SRC/pages/sign-in', publicPath: '../../' })
-    
-    if (isDev) return [indexCFG, searchroomCFG, roomdetailsCFG, signupCFG, signinCFG, uikithfCFG, uikitctCFG, uikitfeCFG, uikitcardsCFG];
-    return [indexCFG, searchroomCFG, roomdetailsCFG, signupCFG, signinCFG];
+    const landingpageCFG = AddHTMLPage({ common_filename: 'landing-page', input_path: 'SRC/pages/landing-page', publicPath: '../../' });
+    const searchroomCFG = AddHTMLPage({ common_filename: 'search-room', input_path: 'SRC/pages/search-room', publicPath: '../../' });
+    const roomdetailsCFG = AddHTMLPage({ common_filename: 'room-details', input_path: 'SRC/pages/room-details', publicPath: '../../' })
+    const signupCFG = AddHTMLPage({ common_filename: 'sign-up', input_path: 'SRC/pages/sign-up', publicPath: '../../' })
+    const signinCFG = AddHTMLPage({ common_filename: 'sign-in', input_path: 'SRC/pages/sign-in', publicPath: '../../' })
+    const indexCFG = AddHTMLPage({ common_filename: 'index', input_path: 'SRC/pages/index', output_path: '.', isNeedClean: true });
+
+    return [indexCFG, landingpageCFG, searchroomCFG, roomdetailsCFG, signupCFG, signinCFG, uikithfCFG, uikitctCFG, uikitfeCFG, uikitcardsCFG];
 })

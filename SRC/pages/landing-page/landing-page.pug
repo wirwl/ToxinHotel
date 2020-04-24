@@ -1,0 +1,19 @@
+include ../../common
+include ../../components/header/header
+include ../../components/footer/footer
+include ../../components/room-reservation-form/room-reservation-form
+doctype html
+html(lang="en")
+  head    
+    +meta-tags({description:"Hotel with finding and reservation rooms", keywords:"main page, hotel, rooms, booking"})    
+    title Бронирование номера
+    +favicon       
+    link(href="landing-page.css" rel="stylesheet")
+  body
+    +header(header_data)
+    main.main-content
+      section.main-content__form
+        +room-reservation-form
+      p.main-content__text Лучшие номера для вашей работы, отдыха и просто вдохновения
+    +footer(footer_data)    
+    script(type="text/javascript" src="landing-page.js")
