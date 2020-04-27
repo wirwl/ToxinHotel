@@ -1,8 +1,8 @@
-mixin rate-button(data={id:"star", count:0})  
-  .rate-button(class=(data.disabled ? "rate-button_disabled" : ""))
+mixin rate-button({disabled, id, count} = data)  
+  .rate-button(class=(disabled ? "rate-button_disabled" : ""))
     - var n=1;
     - var total=6;
     while n<total
-      input(id=data.id+(total-n) type="radio" name=data.id checked=(data.count==total-n ? "checked" : undefined) ).rate-button__input
-      label(for=data.id+(total-n)).rate-button__label.material-icons     
+      input(id=id+(total-n) type="radio" name=id checked=(count==total-n ? "checked" : undefined) ).rate-button__input
+      label(for=id+(total-n)).rate-button__label.material-icons     
       - n++;

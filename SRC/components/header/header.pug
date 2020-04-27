@@ -3,15 +3,15 @@ include ../header-menu/header-menu
 include ../button-filled/button-filled
 include ../button-bordered/button-bordered
 
-mixin header(data)
-  header.header(class=data.isAuth && "header_auth-true")    
+mixin header({isAuth, logo_path, menu, login, reg} = data)
+  header.header(class=isAuth && "header_auth-true")    
     .header__logo
-      +logo({path:data.logo_path})
+      +logo({path:logo_path})
     .header__header-menu
-      +header-menu(data.menu)
+      +header-menu(menu)
     .header__auth-area
       .header__button-bordered
-        +button-bordered({text: data.login || "LOGIN"})      
+        +button-bordered({text: login || "LOGIN"})      
       .header__button-filled
-        +button-filled({text: data.reg || "REGISTER", dynamic_height:true})
+        +button-filled({text: reg || "REGISTER", dynamic_height:true})
       .header__auth-name Cosmin Negoita

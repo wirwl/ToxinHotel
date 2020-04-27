@@ -1,13 +1,13 @@
 include ../round-image/round-image
 include ../like-button/like-button
 
-mixin feedback(data)
+mixin feedback({image, like, caption, time, text} = data)
   .feedback
     .feedback__left-column
       .feedback__wrapper-for-round-image
-        +round-image(data.image)      
-      +like-button(data.like)   
+        +round-image(image)      
+      +like-button(like)   
     .feedback__right-column
-      p.feedback__caption #{data.caption}
-      time.feedback__time #{data.time}
-      p.feedback__text #{data.text}
+      p.feedback__caption #{caption}
+      time.feedback__time #{time}
+      p.feedback__text #{text}

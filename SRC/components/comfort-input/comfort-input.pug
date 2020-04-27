@@ -1,12 +1,11 @@
-include ../items-pad/items-pad
 include ../button-simple/button-simple
 
-mixin comfort-input(data)
+mixin comfort-input({caption, isOpen} = data)
   .comfort-input.js-comfort-input  
-    h3.comfort-input__caption #{data.caption}
-    .iqdropdown(class = data.isOpen ? 'menu-open' : '')
+    h3.comfort-input__caption #{caption}
+    .iqdropdown(class = isOpen ? 'menu-open' : '')
       p.iqdropdown-selection
       .iqdropdown-menu
-        for val in [{id:'bedrooms', text: 'Спальни', count:2}, {id:'beds', text:'Кровати', count:2}, {id:'bathrooms', text:'Ванные комнаты'}]
-          .iqdropdown-menu-option(data-id=val.id data-defaultcount=val.count)
-            div: p.iqdropdown-item #{val.text}
+        for item in [{id:'bedrooms', text: 'Спальни', count:2}, {id:'beds', text:'Кровати', count:2}, {id:'bathrooms', text:'Ванные комнаты'}]
+          .iqdropdown-menu-option(data-id=item.id data-defaultcount=item.count)
+            div: p.iqdropdown-item #{item.text}

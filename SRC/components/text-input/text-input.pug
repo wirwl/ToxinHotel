@@ -1,5 +1,5 @@
-mixin text-input(data)  
-  .text-input(class=(data.isFocused ? "text-input_isFocused":""))    
-    if data.caption
-      label.text-input__caption #{data.caption}
-    input.text-input__input(type=data.type ? data.type : "text" placeholder=data.placeholder value=data.value)
+mixin text-input({isFocused, caption, type, placeholder, value} = data)  
+  .text-input(class=(isFocused ? "text-input_isFocused":""))    
+    if caption
+      label.text-input__caption #{caption}
+    input.text-input__input(type=type ? type : "text" placeholder=placeholder value=value)

@@ -1,9 +1,5 @@
-mixin button-filled(data)
-  -if (data.isEnabled==undefined) 
-  -  data.isEnabled=true
-  -if (data.type==undefined)
-  - data.type="button"
-  button.button-filled(type=data.type 
-    class=(data.dynamic_height ? "button-filled_dynamic-height":"") +" "+
-      (data.dynamic_width ? "button-filled_dynamic-width" : "")+" "+
-      (data.isEnabled ? "": "button-filled_disabled")) #{data.text}
+mixin button-filled({isEnabled=true, dynamic_height, dynamic_width, type="button", text} = data)
+  button.button-filled(type=type 
+    class=(dynamic_height ? "button-filled_dynamic-height":"") +" "+
+      (dynamic_width ? "button-filled_dynamic-width" : "")+" "+
+      (isEnabled ? "": "button-filled_disabled")) #{text}

@@ -1,6 +1,6 @@
-mixin subscribe-input(data)
+mixin subscribe-input({caption, placeholder} = data)
   .subscribe-input
-    if data.caption
-      label.subscribe-input__caption #{data.caption}
+    if caption
+      label.subscribe-input__caption #{caption}
     .subscribe-input__wrapper 
-      input.subscribe-input__input(type="email" placeholder=data.placeholder)
+      input.subscribe-input__input(type="email" placeholder=placeholder)

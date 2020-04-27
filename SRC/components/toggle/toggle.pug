@@ -1,4 +1,4 @@
-mixin toggle(data)
+mixin toggle({id, isChecked, text} = data)
   .toggle
-    input(type="checkbox" id=data.id checked=(data.isChecked ? "checked": undefined)).toggle__input
-    label(for=data.id).toggle__label #{data.text}
+    input(type="checkbox" id=id checked=(isChecked ? "checked": undefined)).toggle__input
+    label(for=id).toggle__label #{text}

@@ -1,10 +1,10 @@
 include ../toggle/toggle
 
-mixin toggles-list(data)
+mixin toggles-list({caption, toggles} = data)
   .toggles-list
-    h3.toggles-list__caption #{data.caption}
+    h3.toggles-list__caption #{caption}
     ul.toggles-list__list 
-      for toggle in data.toggles
+      for toggle in toggles
         li.toggles-list__item
           +toggle(toggle)
 

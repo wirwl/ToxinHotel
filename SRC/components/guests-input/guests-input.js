@@ -25,17 +25,19 @@ const options =
   }
 }
 
-$iqdropdown.iqDropdown(options);
+if ($iqdropdown.length) {
+  $iqdropdown.iqDropdown(options);
 
-const $buttonClear = $guestsInputs.find('.guests-input__button-simple-clear').find('.button-simple');
-$buttonClear.on('click.buttonClear', function () {
-  $button = $(this);
-  const $iqdropdown = $button.closest('.iqdropdown');
-  $iqdropdown.find('.iqdropdown-content').removeClass('iqdropdown-content');
-  $iqdropdown.find('.iqdropdown-item-controls').remove();
-  $iqdropdown.off();
-  $iqdropdown.find('.iqdropdown-menu-option').removeData("defaultcount");
-  $iqdropdown.find('.iqdropdown-menu-option').removeAttr("data-defaultcount");
-  $iqdropdown.iqDropdown(options);  
-  $iqdropdown.toggleClass('menu-open');
-});
+  const $buttonClear = $guestsInputs.find('.guests-input__button-simple-clear').find('.button-simple');
+  $buttonClear.on('click.buttonClear', function () {
+    $button = $(this);
+    const $iqdropdown = $button.closest('.iqdropdown');
+    $iqdropdown.find('.iqdropdown-content').removeClass('iqdropdown-content');
+    $iqdropdown.find('.iqdropdown-item-controls').remove();
+    $iqdropdown.off();
+    $iqdropdown.find('.iqdropdown-menu-option').removeData("defaultcount");
+    $iqdropdown.find('.iqdropdown-menu-option').removeAttr("data-defaultcount");
+    $iqdropdown.iqDropdown(options);
+    $iqdropdown.toggleClass('menu-open');
+  });
+}

@@ -1,9 +1,5 @@
-mixin button-bordered(data)
-  -if (data.isEnabled==undefined) 
-  -  data.isEnabled=true
-  -if (data.type==undefined)
-  - data.type="button"
-  button.button-bordered(type=data.type 
-    class=(data.dynamic_height ? "button-bordered_dynamic-height":"") +" "+
-      (data.dynamic_width ? "button-bordered_dynamic-width" : "")+" "+
-      (data.isEnabled ? "": "button-bordered_disabled")) #{data.text}
+mixin button-bordered({isEnabled=true, type="button", dynamic_height, dynamic_width, text}=data)  
+  button.button-bordered(type=type 
+    class=(dynamic_height ? "button-bordered_dynamic-height":"") +" "+
+      (dynamic_width ? "button-bordered_dynamic-width" : "")+" "+
+      (isEnabled ? "": "button-bordered_disabled")) #{text}

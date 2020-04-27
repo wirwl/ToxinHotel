@@ -1,6 +1,6 @@
-mixin comfort-status(data)
-  figure.comfort-status(class=(data.isHideLine) ? "comfort-status_hide-line" : "")    
-    .comfort-status__icon.material-icons #{data.icon}
+mixin comfort-status({isHideLine, icon, caption, text} = data)
+  figure.comfort-status(class=(isHideLine) ? "comfort-status_hide-line" : "")    
+    .comfort-status__icon.material-icons #{icon}
     figcaption.comfort-status__desc
-      .comfort-status__caption #{data.caption}
-      p.comfort-status__text #{data.text}
+      .comfort-status__caption #{caption}
+      p.comfort-status__text #{text}

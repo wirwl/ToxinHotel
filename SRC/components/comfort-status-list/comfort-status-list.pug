@@ -1,10 +1,10 @@
 include ../comfort-status/comfort-status
 
-mixin comfort-status-list(data)
+mixin comfort-status-list(items)
   ul.comfort-status-list
-    for item in data
+    for item in items
       li.comfort-status-list__item
         +comfort-status(item)
-      
+
 
 

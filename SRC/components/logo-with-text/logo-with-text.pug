@@ -1,7 +1,7 @@
 include ../logo/logo
 
-mixin logo-with-text(data)
+mixin logo-with-text({logo_path, desc} = data)
   .logo-with-text
     .logo-with-text__logo
-      +logo({path:data.logo_path})
-    p.logo-with-text__text #{data.desc}
+      +logo({path:logo_path})
+    p.logo-with-text__text #{desc}

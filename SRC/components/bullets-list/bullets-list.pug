@@ -1,7 +1,7 @@
 include ../bullet/bullet
 
-mixin bullets-list(data)
+mixin bullets-list(items)
   ul.bullets-list
-    for b in data
+    for item in items
       li.bullets-list__item
-        +bullet({text:b.text})
+        +bullet({text:item.text})

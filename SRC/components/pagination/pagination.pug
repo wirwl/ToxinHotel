@@ -1,4 +1,4 @@
-mixin pagination(data)
+mixin pagination({pages, page, showed, showedlastpage, total} = data)
   .pagination
-    .pagination__buttons.js-pagination__buttons(data-pages=data.pages data-page=data.page data-showed=data.showed data-showedlastpage=data.showedlastpage data-total=data.total)  
+    .pagination__buttons.js-pagination__buttons(data-pages=pages data-page=page data-showed=showed data-showedlastpage=showedlastpage data-total=total)  
     p.pagination__caption 1 – 12 из 100+ вариантов аренды

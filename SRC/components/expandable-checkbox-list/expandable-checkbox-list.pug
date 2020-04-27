@@ -1,9 +1,9 @@
 include ../checkbox/checkbox
 
-mixin expandable-checkbox-list(data)
-  .expandable-checkbox-list(class=(data.isExpand ? "expandable-checkbox-list_show": ""))
-    h3.expandable-checkbox-list__caption.js-ecl__caption #{data.caption}
+mixin expandable-checkbox-list({isExpand, caption, checkboxes} = data)
+  .expandable-checkbox-list(class=(isExpand ? "expandable-checkbox-list_show": ""))
+    h3.expandable-checkbox-list__caption.js-ecl__caption #{caption}
     ul.expandable-checkbox-list__list
-      for cb in data.checkboxes
+      for checkbox in checkboxes
         li.expandable-checkbox-list__item
-          +checkbox(cb)
+          +checkbox(checkbox)

@@ -1,6 +1,6 @@
-mixin color-example(data)
+mixin color-example({color, desc, hex} = data)
   .color-example
-    .color-example__squareColor(class=data.color)
+    .color-example__squareColor(class=color)
     .color-example__textDesc 
-      p.color-example__title #{data.desc}      
-      p.color-example__text #{data.hex}
+      p.color-example__title #{desc}      
+      p.color-example__text #{hex}

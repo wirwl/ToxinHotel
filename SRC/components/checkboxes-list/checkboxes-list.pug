@@ -1,9 +1,9 @@
 include ../checkbox/checkbox
 
-mixin checkboxes-list(data)
+mixin checkboxes-list({caption, checkboxes} = data)
   .checkboxes-list
-    h3.checkboxes-list__caption #{data.caption}
+    h3.checkboxes-list__caption #{caption}
     ul.checkboxes-list__list    
-      for cb in data.checkboxes
+      for checkbox in checkboxes
         li.checkboxes-list__item
-          +checkbox(cb)
+          +checkbox(checkbox)

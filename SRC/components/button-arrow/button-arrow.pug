@@ -1,2 +1,2 @@
-mixin button-arrow(data)
-  button.button-arrow(type=data.type ? data.type : "button" ) #{data.text}
+mixin button-arrow({type="button", text} = data)
+  button.button-arrow(type=type) #{text}

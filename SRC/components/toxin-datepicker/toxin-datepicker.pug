@@ -1,4 +1,4 @@
-mixin toxin-datepicker(data)
-  .toxin-datepicker.js-toxin-datepicker(class=(data.isStandAlone ? "standalone-datepicker" : ""))
+mixin toxin-datepicker({isStandAlone} = data)
+  .toxin-datepicker.js-toxin-datepicker(class=(isStandAlone ? "standalone-datepicker" : ""))
     if block
       block

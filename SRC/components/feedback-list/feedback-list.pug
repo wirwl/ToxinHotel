@@ -1,11 +1,11 @@
 include ../feedback/feedback
 
-mixin feedback-list(data)
+mixin feedback-list({caption, count, feedbacks} = data)
   article.feedback-list
     header.feedback-list__caption
-      h2.feedback-list__text #{data.caption}
-      span.feedback-list__feedback-count #{data.count}
+      h2.feedback-list__text #{caption}
+      span.feedback-list__feedback-count #{count}
     ul.feedback-list__list
-      for feedback in data.feedbacks
+      for feedback in feedbacks
         li.feedback-list__item
           +feedback(feedback)

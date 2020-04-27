@@ -1,12 +1,11 @@
 include ../radio/radio
 
-mixin radios-list(data)    
+mixin radios-list({caption, radios, name} = data)
   .radios-list  
-    if data.caption
-      h3.radios-list__caption #{data.caption}       
+    if caption
+      h3.radios-list__caption #{caption}       
     ul.radios-list__list       
-      for rds in data.radios
-        - rds.name=data.name
+      for radio in radios
+        - radio.name=name
         li.radios-list__item
-          +radio(rds)
-      
+          +radio(radio)

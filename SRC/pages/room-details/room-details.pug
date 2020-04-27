@@ -19,7 +19,7 @@ html(lang="en")
   body        
     +header(header_data)     
     main.main-content
-      +room-images({images:["../../components/room-images/image-1.jpg", "../../components/room-images/image-2.jpg", "../../components/room-images/image-3.jpg"]}) 
+      +room-images(["../../components/room-images/image-1.jpg", "../../components/room-images/image-2.jpg", "../../components/room-images/image-3.jpg"]) 
       .room-details
         section.room-details__column1
           .room-details__common-wrapper1
@@ -28,7 +28,7 @@ html(lang="en")
               +comfort-status-list([{icon:"tag_faces", caption:"Комфорт", text:"Шумопоглощающие стены"},
                 {icon:"location_city", caption:"Удобство", text:"Окно в каждой из спален"},
                 {icon:"whatshot", caption:"Уют", text:"Номер оснащён камином", isHideLine:true}])
-            .room-details__wrapper-donut-chart              
+            .room-details__wrapper-donut-chart
               +donut-chart
           .room-details__wrapper-fl
             +feedback-list({caption:"Отзывы посетителей номера", count:"2 отзыва",

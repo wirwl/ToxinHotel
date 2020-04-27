@@ -1,9 +1,10 @@
-mixin footer-menu(data)
+mixin footer-menu(items)
   nav.footer-menu
-    for l in data
+    for item in items
       ul.footer-menu__list
-        li.footer-menu__title #{l.title}
-        if l.items
-          for i in l.items
+        li.footer-menu__title #{item.title}
+        if item.items
+          for sub_item in item.items
+            - const {link, text} = sub_item
             li.footer-menu__item
-              a.footer-menu__link(href=i.link) #{i.text}
+              a.footer-menu__link(href=link) #{text}

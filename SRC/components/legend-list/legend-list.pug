@@ -1,7 +1,8 @@
 include ../legend/legend
 
-mixin legend-list(data)
+mixin legend-list(items)
   ul.legend-list
-    for l in data
+    for item in items
       li.legend-list__item
-        +legend({text:l.text, color: l.color})
+        - const {text, color} = item
+        +legend({text: text, color: color})

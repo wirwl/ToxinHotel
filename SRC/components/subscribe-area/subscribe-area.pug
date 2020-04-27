@@ -1,7 +1,7 @@
 include ../subscribe-input/subscribe-input
 
-mixin subscribe-area(data)
+mixin subscribe-area({caption, desc, placeholder} = data)
   .subscribe-area
-    p.subscribe-area__title #{data.caption}
-    p.subscribe-area__text #{data.desc}
-    +subscribe-input({placeholder:data.placeholder})
+    p.subscribe-area__title #{caption}
+    p.subscribe-area__text #{desc}
+    +subscribe-input({placeholder:placeholder})

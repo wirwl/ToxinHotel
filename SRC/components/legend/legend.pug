@@ -1,2 +1,2 @@
-mixin legend(data)
-  p.legend(class=data.color) #{data.text}
+mixin legend({color, text} = data)
+  p.legend(class=color) #{text}
