@@ -121,10 +121,8 @@
 
 }(jQuery));
 
-$(document).ready(function () {
-  $('#donut-chart').drawDonutChart([{ text: "Великолепно", count: 58, color: "#FFE39C" },
-  { text: "Хорошо", count: 58, color: "#6FCF97" },
-  { text: "Удовлетворительно", count: 144, color: "#BC9CFF" },
-  { text: "Разочарован", count: 0, color: "#919191" },
-  ]);
-})
+$('#donut-chart').drawDonutChart([{ text: "Великолепно", count: 58, color: "#FFE39C" },
+{ text: "Хорошо", count: 58, color: "#6FCF97" },
+{ text: "Удовлетворительно", count: 144, color: "#BC9CFF" },
+{ text: "Разочарован", count: 0, color: "#919191" },
+]);
