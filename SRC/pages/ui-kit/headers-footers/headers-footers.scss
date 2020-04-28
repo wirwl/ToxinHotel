@@ -54,16 +54,13 @@ body > footer {
       padding-bottom: 110px;
     }
 
-    .footer__logo-with-text {
-      margin: 0 auto 17px auto;
-    }
-
     .footer__footer-top .footer__logo-with-text {
       text-align: center;
       width: auto;
       margin-right: 0;
       max-width: 560px;
-      margin: 0 auto 17px auto;
+      display: flex;
+      justify-content: center;
     }
   }
 

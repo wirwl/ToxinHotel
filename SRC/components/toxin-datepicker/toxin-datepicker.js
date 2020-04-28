@@ -5,16 +5,17 @@ let htmlButtons =
   '<span class="datepicker__button-clear js-datepicker__button-clear">Очистить</span>' +
   '<span class="datepicker__button-apply js-datepicker__button-apply">Применить</span>' +
   '</div';
-
-$ToxinDatepickers.datepicker({
-  moveToOtherMonthsOnSelect: false,
-  minDate: new Date(),
-  range: true,
-  multipleDatesSeparator: ' - ',
-  prevHtml: 'arrow_back',
-  nextHtml: 'arrow_forward',
-  navTitles: { days: 'MM yyyy' },
-});
+  
+if ($ToxinDatepickers.length)
+  $ToxinDatepickers.datepicker({
+    moveToOtherMonthsOnSelect: false,
+    minDate: new Date(),
+    range: true,
+    multipleDatesSeparator: ' - ',
+    prevHtml: 'arrow_back',
+    nextHtml: 'arrow_forward',
+    navTitles: { days: 'MM yyyy' },
+  });
 
 function FindDatepicker(tds, d) {
   let result = null;
