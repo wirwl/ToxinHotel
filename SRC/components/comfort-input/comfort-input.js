@@ -1,31 +1,53 @@
-const iqdropdown = $('.js-comfort-input').find('.iqdropdown');
+class ComfortInput {
+  constructor(data) {
+    const { rootElementClass, items, placeholder } = data;
 
-if (iqdropdown.length)
-  iqdropdown.iqDropdown({
-    setSelectionText: (itemCount, totalItems) => {
-      let { bedrooms, beds, bathrooms } = itemCount;
-      let result = 'Выберите удобства'
+    this.placeholder = placeholder;
+    this.$rootElement = $(rootElementClass);
+    this.$iqdropdown = this.$rootElement.find('.iqdropdown');
+    this.items = items;
+    if (this.$iqdropdown.length)
+      this.init_Plugin_ItemQuantityDropdown();
+  }
 
-      if (totalItems > 0) {
-        result = '';
+  init_Plugin_ItemQuantityDropdown() {
+    this.$iqdropdown.iqDropdown({
+      setSelectionText: (itemCount, totalItems) => {
+        let result = this.placeholder;
+        if (totalItems > 0) {
 
-        let bedroomsWord = 'спальня';
-        if (bedrooms > 4) bedroomsWord = 'спален'
-        else if (bedrooms > 1) bedroomsWord = 'спальни';
-        if (bedrooms > 0) result += bedrooms + ' ' + bedroomsWord + ', ';
+          result = '';
+          this.items.forEach(function (value, index, items) {
+            const { id, singular, plurals } = value;
+            const [number2, number5] = plurals;
 
-        let bedsWord = 'кровать';
-        if (beds > 4) bedsWord = 'кроватей'
-        else if (beds > 1) bedsWord = 'кровати';
-        if (beds > 0) result += beds + ' ' + bedsWord + ', ';
+            for (const prop in itemCount) {
+              if (id == prop) {
+                let word = singular;
+                const n = itemCount[prop];
 
-        let bathroomsWord = 'ванная комната';
-        if (bathrooms > 4) bathroomsWord = 'ванных комнат'
-        else if (bathrooms > 1) bathroomsWord = 'ванных комнаты';
-        if (bathrooms > 0) result += bathrooms + ' ' + bathroomsWord;
-        else result = result.slice(0, -2);
-      }
+                if (n > 0) {
+                  if (n > 4) word = number5;
+                  else if (n > 1) word = number2;
+                  result += itemCount[prop] + ' ' + word + ', ';
+                }
+              }
+            }
+          })
+          result = result.slice(0, -2);
+        }
+        return result;
+      },
+    })
+  }
+}
 
-      return result;
-    },
-  });
+new ComfortInput({
+  placeholder: 'Выберите удобства',
+  rootElementClass: '.js-comfort-input',
+  items: [
+    { id: 'bedrooms', singular: 'спальня', plurals: ['спальни', 'спален'] },
+    { id: 'beds', singular: 'кровать', plurals: ['кровати', 'кроватей'] },
+    { id: 'bathrooms', singular: 'ванная комната', plurals: ['ванных комнаты', 'ванных комнат'] }
+  ]
+})

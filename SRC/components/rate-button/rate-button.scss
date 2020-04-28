@@ -13,7 +13,7 @@
     overflow: hidden;
   }
 
-  & > .rate-button__label {
+  &__label {
     cursor: pointer;
     color: $toxin-color-purple;
   }
@@ -26,11 +26,11 @@
     content: "star";
   }
 
-  &:hover > .rate-button__label:after {
+  &:hover .rate-button__label:after {
     content: "star_border";
   }
 
-  > .rate-button__label:hover:after,
+  .rate-button__label:hover:after,
   &__label:hover ~ .rate-button__label:after {
     content: "star";
   }
