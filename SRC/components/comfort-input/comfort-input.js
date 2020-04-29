@@ -24,11 +24,11 @@ class ComfortInput {
             for (const prop in itemCount) {
               if (id == prop) {
                 let word = singular;
-                const n = itemCount[prop];
+                const count = itemCount[prop];
 
-                if (n > 0) {
-                  if (n > 4) word = number5;
-                  else if (n > 1) word = number2;
+                if (count > 0) {
+                  if (count > 4) word = number5;
+                  else if (count > 1) word = number2;
                   result += itemCount[prop] + ' ' + word + ', ';
                 }
               }

@@ -1,43 +1,49 @@
-const $guestsInputs = $('.js-guests-input');
-const $iqdropdown = $guestsInputs.find('.iqdropdown');
-const options =
-{
-  setSelectionText: (itemCount, totalItems) => {
-    let { babies } = itemCount;
+class GuestsInput {
+  constructor(data) {
+    const { rootElementClass, guests, babies, placeholder } = data;
 
-    const guests = totalItems - babies;
-    let result = 'Сколько гостей'
+    this.$rootElement = $(rootElementClass);
+    this.guests = guests;
+    this.babies = babies;
+    this.placeholder = placeholder;
 
-    if (guests > 0) {
-      let guestsWord = 'гость';
-      if (guests > 4) guestsWord = 'гостей'
-      else if (guests > 1) guestsWord = 'гостя';
+    this.$iqdropdown = this.$rootElement.find('.iqdropdown');
+    if (this.$iqdropdown.length)
+      this.init_Plugin_ItemQuantityDropdown();
+  }
 
-      result = guests + ' ' + guestsWord;
+  init_Plugin_ItemQuantityDropdown() {
+    this.$iqdropdown.iqDropdown({
+      setSelectionText: (itemCount, totalItems) => {
+        let result = this.placeholder;
+        let babiesCount = itemCount[this.babies.id];
+        let guestsCount = totalItems - babiesCount;
 
-      let babiesWord = 'младенец';
-      if (babies > 4) babiesWord = 'младенцев'
-      else if (babies > 1) babiesWord = 'младенца';
-      if (guests > 0 && babies > 0) result += ', ' + babies + ' ' + babiesWord;
-    }
-
-    return result;
+        if (totalItems > 0) {          
+          let wordGuests = this.guests.singular;
+          if (guestsCount > 0) {
+            const [number2, number5] = this.guests.plurals;
+            if (guestsCount > 4) wordGuests = number5;
+            else if (guestsCount > 1) wordGuests = number2;
+          }
+          let wordBabies = this.babies.singular;
+          if (babiesCount > 0) {
+            const [number2, number5] = this.babies.plurals;
+            if (babiesCount > 4) wordBabies = number5;
+            else if (babiesCount > 1) wordBabies = number2;
+          }
+          if (guestsCount > 0)
+            result = guestsCount + ' ' + wordGuests + (babiesCount > 0 ? ', ' + babiesCount + ' ' + wordBabies : '');
+        }
+        return result;
+      },
+    })
   }
 }
 
-if ($iqdropdown.length) {
-  $iqdropdown.iqDropdown(options);
-
-  const $buttonClear = $guestsInputs.find('.guests-input__button-simple-clear').find('.button-simple');
-  $buttonClear.on('click.buttonClear', function () {
-    $button = $(this);
-    const $iqdropdown = $button.closest('.iqdropdown');
-    $iqdropdown.find('.iqdropdown-content').removeClass('iqdropdown-content');
-    $iqdropdown.find('.iqdropdown-item-controls').remove();
-    $iqdropdown.off();
-    $iqdropdown.find('.iqdropdown-menu-option').removeData("defaultcount");
-    $iqdropdown.find('.iqdropdown-menu-option').removeAttr("data-defaultcount");
-    $iqdropdown.iqDropdown(options);
-    $iqdropdown.toggleClass('menu-open');
-  });
-}
+new GuestsInput({
+  placeholder: 'Выберите удобства',
+  rootElementClass: '.js-guests-input',
+  guests: { id: ['adults', 'children'], singular: 'гость', plurals: ['гостя', 'гостей'] },
+  babies: { id: 'babies', singular: 'младенец', plurals: ['младенца', 'младенев'] }
+})
