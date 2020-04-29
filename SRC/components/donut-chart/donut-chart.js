@@ -3,7 +3,7 @@
   $.fn.drawDonutChart = function (options) {
 
     return this.each(function () {
-      var myCanvas = this;
+      let myCanvas = this;
       let context = myCanvas.getContext("2d");
       myCanvas.width = 120;
       myCanvas.height = 120;
