@@ -1,15 +1,27 @@
-const $oiStart = $('#oi-form__start-input');
-if ($oiStart.length)
-	$oiStart.datepicker({
-		onSelect: function (fd, d, picker) {
-			$("#oi-form__start-input").val(fd.split("-")[0]);
-			$("#oi-form__end-input").val(fd.split("-")[1]);
-		}
+class OrderInfoForm {
+	constructor(arrivalClass, checkoutClass) {
+		this.$arrival = $(arrivalClass);
+		this.$checkout = $(checkoutClass);
 
-	});
+		this.initPlugin_datepicker();
 
-const $oiEnd = $('#oi-form__end-input');
-if ($oiEnd.length)
-	$('#oi-form__end-input').on('click', function () {
-		$('#oi-form__start-input').data('datepicker').show();
-	})
+		if (this.$checkout.length)
+			this.$checkout.on('click', () => {
+				this.$arrival.data('datepicker').show();
+			})
+	}
+
+	initPlugin_datepicker() {
+		if (this.$arrival.length)
+			this.$arrival.datepicker({
+				onSelect: (fd) => {
+					this.$arrival.val(fd.split("-")[0]);
+					this.$checkout.val(fd.split("-")[1]);
+				}
+			});
+
+	}
+}
+
+new OrderInfoForm('#oi-form__start-input', '#oi-form__end-input')
+
