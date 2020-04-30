@@ -11,9 +11,10 @@ class Pagination {
   addEventListenerClick(pagination) {
     let lis = pagination.find('a');
     lis.each((index, element) => {
-      let datapage = $(element).data("page");
+      const $element = $(element);
+      let datapage = $element.data("page");
       if (datapage)
-        $(element).on('click.pagination', () => { this.createPagination(this.pages, datapage); });
+        $element.on('click.pagination', () => { this.createPagination(this.pages, datapage); });
     })
   }
 
