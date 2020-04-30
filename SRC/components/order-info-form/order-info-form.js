@@ -23,5 +23,5 @@ class OrderInfoForm {
 	}
 }
 
-new OrderInfoForm('#oi-form__start-input', '#oi-form__end-input')
+new OrderInfoForm('#oi-form__start-input', '#oi-form__end-input');
 

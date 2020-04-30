@@ -1,18 +1,26 @@
-const $rrStart = $('#rr-form__start-input');
+class RoomReservationForm {
+	constructor(arrivalClass, checkoutClass) {
+		this.$arrival = $(arrivalClass);
+		this.$checkout = $(checkoutClass);
 
-if ($rrStart.length)
-	$rrStart.datepicker({
-		onShow: function (datepicker, animationCompleted) {
-		},
-		onSelect: function (fd, d, picker) {
-			$("#rr-form__start-input").val(fd.split(" - ")[0]);
-			$("#rr-form__end-input").val(fd.split(" - ")[1]);
-		}
-	});
+		this.initPlugin_datepicker();
 
-const $rrEnd = $('#rr-form__end-input');
+		if (this.$checkout.length)
+			this.$checkout.on('click', () => {
+				this.$arrival.data('datepicker').show();
+			})
+	}
 
-if ($rrEnd.length)
-	$rrEnd.on('click', function () {
-		$rrStart.data('datepicker').show();
-	})
+	initPlugin_datepicker() {
+		if (this.$arrival.length)
+			this.$arrival.datepicker({
+				onSelect: (fd) => {
+					this.$arrival.val(fd.split("-")[0]);
+					this.$checkout.val(fd.split("-")[1]);
+				}
+			});
+
+	}
+}
+
+new RoomReservationForm('#rr-form__start-input', '#rr-form__end-input');
