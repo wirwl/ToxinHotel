@@ -1,6 +1,6 @@
 include ../button-simple/button-simple
 
-mixin guests-input({isOpen, caption, items} = data)
+mixin guests-input({isOpen, caption, items})
   .guests-input.js-guests-input  
     h3.guests-input__caption #{caption}
     .iqdropdown(class = isOpen ? 'menu-open' : '')

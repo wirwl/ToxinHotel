@@ -1,4 +1,4 @@
-mixin checkbox({id, isChecked, desc, text} = data)
+mixin checkbox({id, isChecked, desc, text})
   .checkbox
     input(type="checkbox" id=id checked=(isChecked ? "checked": undefinded)).checkbox__input
     label(for=id class=(desc ? "checkbox__label checkbox__label_bold": "checkbox__label")) #{text}

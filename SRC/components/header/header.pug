@@ -3,7 +3,7 @@ include ../header-menu/header-menu
 include ../button-filled/button-filled
 include ../button-bordered/button-bordered
 
-mixin header({isAuth, logo_path, menu, login, reg} = data)
+mixin header({isAuth, logo_path, menu, login, reg})
   header.header(class=isAuth && "header_auth-true")    
     .header__logo
       +logo({path:logo_path})

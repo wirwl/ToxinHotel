@@ -1,4 +1,4 @@
-mixin text-input({isFocused, caption, type, placeholder, value} = data)  
+mixin text-input({isFocused, caption, type, placeholder, value})  
   .text-input(class=(isFocused ? "text-input_isFocused":""))    
     if caption
       label.text-input__caption #{caption}

@@ -1,6 +1,6 @@
 include ../button-simple/button-simple
 
-mixin comfort-input({caption, isOpen} = data)
+mixin comfort-input({caption, isOpen})
   .comfort-input.js-comfort-input  
     h3.comfort-input__caption #{caption}
     .iqdropdown(class = isOpen ? 'menu-open' : '')
