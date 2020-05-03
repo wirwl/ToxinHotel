@@ -1,11 +1,10 @@
 include ../button-simple/button-simple
+include ../iqdropdown/iqdropdown
 
 mixin comfort-input({caption, isOpen})
   .comfort-input.js-comfort-input  
     h3.comfort-input__caption #{caption}
-    .iqdropdown(class = isOpen ? 'menu-open' : '')
-      p.iqdropdown-selection
-      .iqdropdown-menu
-        for item in [{id:'bedrooms', text: 'Спальни', count:2}, {id:'beds', text:'Кровати', count:2}, {id:'bathrooms', text:'Ванные комнаты'}]
-          .iqdropdown-menu-option(data-id=item.id data-defaultcount=item.count)
-            div: p.iqdropdown-item #{item.text}
+      +iqdropdown({isOpen:isOpen, 
+        items: [{id:'bedrooms', text: 'Спальни', count:2}, 
+          {id:'beds', text:'Кровати', count:2}, 
+          {id:'bathrooms', text:'Ванные комнаты'}]})

@@ -1,11 +1,13 @@
 class DonutChart {
   constructor(data) {
-    const {id, items} = data;
+    const { id, items } = data;
     this.canvas = document.getElementById(id);
-    this.context = this.canvas.getContext("2d");
-    this.canvas.width = 120;
-    this.canvas.height = 120;
-    this.drawDonutChart(items);
+    if (this.canvas) {
+      this.context = this.canvas.getContext("2d");
+      this.canvas.width = 120;
+      this.canvas.height = 120;
+      this.drawDonutChart(items);
+    }
   }
 
   drawLine(ctx, startX, startY, endX, endY, color) {
@@ -114,8 +116,10 @@ class DonutChart {
   }
 }
 
-new DonutChart({id:'donut-chart', items: [{ text: "Великолепно", count: 58, color: "#FFE39C" },
-{ text: "Хорошо", count: 58, color: "#6FCF97" },
-{ text: "Удовлетворительно", count: 144, color: "#BC9CFF" },
-{ text: "Разочарован", count: 0, color: "#919191" },
-]});
+new DonutChart({
+  id: 'donut-chart', items: [{ text: "Великолепно", count: 58, color: "#FFE39C" },
+  { text: "Хорошо", count: 58, color: "#6FCF97" },
+  { text: "Удовлетворительно", count: 144, color: "#BC9CFF" },
+  { text: "Разочарован", count: 0, color: "#919191" },
+  ]
+});

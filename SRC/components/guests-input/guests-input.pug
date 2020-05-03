@@ -1,17 +1,12 @@
 include ../button-simple/button-simple
+include ../iqdropdown/iqdropdown
 
 mixin guests-input({isOpen, caption, items})
   .guests-input.js-guests-input  
     h3.guests-input__caption #{caption}
-    .iqdropdown(class = isOpen ? 'menu-open' : '')
-      p.iqdropdown-selection
-      .iqdropdown-menu
-        for item in items
-          - const {id, count, text} = item
-          .iqdropdown-menu-option(data-id=id data-defaultcount=count)
-            div: p.iqdropdown-item #{text}
+      +iqdropdown({isOpen:isOpen, items: items}) 
         .guests-input__buttons
           .guests-input__button-simple-clear
             +button-simple({text:'Очистить', isGrayText:true})
           .guests-input__button-simple-apply
-            +button-simple({text:'Применить'})
+            +button-simple({text:'Применить'})    

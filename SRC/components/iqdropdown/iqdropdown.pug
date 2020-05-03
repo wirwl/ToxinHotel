@@ -1,0 +1,9 @@
+mixin iqdropdown({isOpen, items})
+  .iqdropdown(class = isOpen ? 'menu-open' : '')
+    p.iqdropdown-selection
+    .iqdropdown-menu
+      for item in items
+        .iqdropdown-menu-option(data-id=item.id data-defaultcount=item.count)
+          div: p.iqdropdown-item #{item.text}  
+      if block
+        block
