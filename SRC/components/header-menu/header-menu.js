@@ -1,7 +1,7 @@
 class HeaderMenu {
   constructor() {
     $('.js-menu__link').on('click.menu', this.onClick_link.bind(this));
-    $('.js-menu__icon').on('click.menu', this.onClick_icon);
+    $('.js-header-menu__icon').on('click.menu', this.onClick_icon);
     $('.js-menu .js-menu__list').on('mouseleave.menu', this.onMouseleave_list.bind(this));
   }
 
@@ -26,24 +26,25 @@ class HeaderMenu {
 
   onClick_icon(e) {
     const $icon = $(e.currentTarget);
-    if ($icon.hasClass('header-menu_show')) {
-      $icon.removeClass('header-menu_show');
-      $icon.addClass('header-menu_hide');
+    const $list = $icon.parent().find('.header-menu__list');
+    if ($list.hasClass('header-menu__list_show')) {
+      $list.removeClass('header-menu__list_show');
+      $list.addClass('header-menu__list_hide');
     }
     else {
-      $icon.removeClass('header-menu_hide');
-      $icon.addClass('header-menu_show');
+      $list.removeClass('header-menu__list_hide');
+      $list.addClass('header-menu__list_show');
     }
   }
 
   onMouseleave_list(e) {
     const $list = $(e.currentTarget);
-    if ($list.parent().find('.header-menu_show')) {
+    if ($list.parent().find('.header-menu__list_show')) {
       $list.children().each((index, element) => {
         this.CloseAllOpenMenuItems($(element));
       })
-      $list.parent().find('.header-menu__icon').removeClass('header-menu_show');
-      $list.parent().find('.header-menu__icon').addClass('header-menu_hide');
+      $list.parent().find('.header-menu__list').removeClass('header-menu__list_show');
+      $list.parent().find('.header-menu__list').addClass('header-menu__list_hide');
 
     }
   }
