@@ -33,12 +33,12 @@
     justify-content: space-between;
     align-items: center;
     padding: 22px 9.722222222222222%;
-    .footer__copyright {
-      font-size: 14px;
-      line-height: 17px;
-      color: $toxin-color-black-75;
-      letter-spacing: -0.05px;
-    }
+  }
+  &__copyright {
+    font-size: 14px;
+    line-height: 17px;
+    color: $toxin-color-black-75;
+    letter-spacing: -0.05px;
   }
 }
 

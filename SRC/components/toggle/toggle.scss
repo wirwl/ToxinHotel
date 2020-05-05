@@ -47,7 +47,7 @@
     left: 24px;
   }
 
-  .toggle__input:not(:checked) {
+  &__input:not(:checked) {
     + .toggle__label:after {
       background: $toxin-color-black-25;
     }

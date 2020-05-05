@@ -46,7 +46,7 @@ class Pagination {
       if (page > 2) {
         str += '<li class="pagination__item_no pagination__item"><a data-page="1" class="pagination__link">1</a></li>';
         if (page > 3) {
-          str += '<li class="pagination__item pagination__item_out-of-range"><a class="pagination__link">...</a></li>';
+          str += '<li class="pagination__item pagination__item"><a class="pagination__link_out-of-range">...</a></li>';
         }
       }
       if (page === 1) { pageCutHigh += 1; }
@@ -65,7 +65,7 @@ class Pagination {
 
       if (page < pages - 1) {
         if (page < pages - 2) {
-          str += '<li class="pagination__item pagination__item_out-of-range"><a class="pagination__link">...</a></li>';
+          str += '<li class="pagination__item pagination__item"><a class="pagination__link_out-of-range">...</a></li>';
         }
         str += '<li class="pagination__item pagination__item_no"><a data-page="' + pages + '"class="pagination__link">' + pages + '</a></li>';
       }

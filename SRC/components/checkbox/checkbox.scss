@@ -67,12 +67,12 @@
       color: $toxin-color-black-50;
    }
 
-   &__label_bold {
+   &__label_is-reach-checkbox {
       font-weight: bold;
       color: $toxin-color-black-75;
    }
 
-   &__label.checkbox__label_bold + .checkbox__desc {
-      padding-top: 3px;
+   &__desc_is-reach-checkbox {
+      padding-top: 4px;
    }
 }

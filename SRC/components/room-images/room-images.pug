@@ -3,11 +3,11 @@ include ../flexslider/flexslider
 
 mixin room-images(images)
   .room-images
-    .rooms-images__left-wrapper
-      img.room-image-left__image(src=images[0] alt="left-image")
+    .room-images__left-wrapper
+      img.room-mages__left-image(src=images[0] alt="left-image")
     .room-images__right-wrapper
       .room-images__rigth-top-wrapper
-        img.room-images-right-top__image(src=images[1] alt="right-top-image")
+        img.room-images__right-top-image(src=images[1] alt="right-top-image")
       .room-images__rigth-bottom-wrapper
         img.room-images__right-bottom-image(src=images[2] alt="right-bottom-image")
     +flexslider(images)

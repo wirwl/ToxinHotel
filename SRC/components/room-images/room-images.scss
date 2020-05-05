@@ -11,36 +11,30 @@
     flex-basis: 459px;
   }
 
-  .rooms-images__left-wrapper {
+  &__left-wrapper {
     flex-basis: 68.125%;
     height: 100%;
     overflow: hidden;
   }
 
-  .room-image-left__image {
+  &__left-image {
     min-width: 100%;
     height: 100%;
   }
 
-  .room-image-rigth-top-wrapper__image,
-  .room-images__rigth-bottom-wrapper {
-    width: 100%;
-    height: 100%;
-  }
-
-  .room-images__rigth-top-wrapper,
-  .room-images__rigth-bottom-wrapper {
+  &__rigth-top-wrapper,
+  &__rigth-bottom-wrapper {
     height: 50%;
   }
 
   @media (max-width: 918px) {
-    .rooms-images__left-wrapper,
-    .room-images__right-wrapper {
-      display: none;
-    }
     .room-images {
       display: block;
       height: auto;
+    }
+    .room-images__left-wrapper,
+    .room-images__right-wrapper {
+      display: none;
     }
   }
 }

@@ -9,8 +9,8 @@
   cursor: pointer;
   text-transform: uppercase;
 
-  &.button-simple_disabled,
-  &.button-simple_gray-text {
+  &_disabled,
+  &_gray-text {
     color: $toxin-color-black-50;
   }
 }

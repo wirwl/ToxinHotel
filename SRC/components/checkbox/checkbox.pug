@@ -1,6 +1,6 @@
 mixin checkbox({id, isChecked, desc, text})
   .checkbox
     input(type="checkbox" id=id checked=(isChecked && "checked")).checkbox__input
-    label(for=id class=desc && "checkbox__label_bold").checkbox__label #{text}
+    label(for=id class=desc && "checkbox__label_is-reach-checkbox").checkbox__label #{text}
     if desc
-      p.checkbox__desc #{desc}
+      p.checkbox__desc(class=desc && "checkbox__desc_is-reach-checkbox") #{desc}
