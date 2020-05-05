@@ -14,7 +14,7 @@
   }
 
   &_ {
-    &h1 {
+    &header_one {
       font-family: $toxin-font-quicksand;
       font-size: 24px;
       line-height: 30px;
@@ -23,7 +23,7 @@
         font-weight: bold;
       }
     }
-    &h2 {
+    &header_two {
       font-family: $toxin-font-quicksand;
       font-size: 19px;
       line-height: 24px;
@@ -32,7 +32,7 @@
         font-weight: bold;
       }
     }
-    &h3 {
+    &header_three {
       font-family: $toxin-font-montserrat;
       font-size: 12px;
       line-height: 15px;
