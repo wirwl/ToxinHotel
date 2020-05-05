@@ -36,7 +36,7 @@
     height: 100%;
   }
 
-  &__nav .image-slider__label {
+  &__label {
     width: 15.56%;
     height: 100%;
     display: none;
@@ -52,7 +52,7 @@
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
   }
 
-  &_show-nav-btns .image-slider__label,
+  &__label_show,
   &__slide:hover + .image-slider__nav .image-slider__label {
     opacity: 0.5;
   }
