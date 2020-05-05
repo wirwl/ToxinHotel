@@ -18,7 +18,7 @@
     margin-bottom: 12px;
   }
 
-  .expandable-checkbox-list__list_show {
+  &__list_show {
     display: block;
     padding-top: 12px;
   }
@@ -35,7 +35,7 @@
     text-align: center;
   }
 
-  .expandable-checkbox-list__caption_show:after {
+  &__caption_show:after {
     content: "keyboard_arrow_up";
   }
 }

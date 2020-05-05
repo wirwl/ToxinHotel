@@ -54,17 +54,15 @@
     line-height: 17px;
   }
 
-  &_auth-true .header__auth-name {
+  &__auth-name_show {
     display: flex;
   }
 
-  &_auth-true .header__button-bordered,
-  &_auth-true .header__button-filled {
+  &__button-filled_hide {
     display: none;
   }
 
-  &_auth-true .header__button-bordered,
-  &_auth-true .header__wrapper-auth-register {
+  &__button-bordered_hide {
     display: none;
   }
 }
