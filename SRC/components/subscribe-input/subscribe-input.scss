@@ -25,8 +25,7 @@
     color: $toxin-color-black-25;
   }
   &__input:hover,
-  &__input:focus,
-  &_isFocused {
+  &__input:focus {
     border: 1px solid $toxin-color-black-50;
   }
 

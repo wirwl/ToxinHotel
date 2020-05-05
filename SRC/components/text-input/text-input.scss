@@ -28,7 +28,7 @@
   }
   &__input:hover,
   &__input:focus,
-  &_isFocused .text-input__input {
+  &_isFocused {
     border: 1px solid $toxin-color-black-50;
   }
 }
