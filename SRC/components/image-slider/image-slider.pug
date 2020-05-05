@@ -3,7 +3,7 @@ mixin image-slider({images, id, image_index, isShowNavBtns})
   - let id_img = id + "-img-"
   .image-slider
     for image, index in images
-      input.image-slider__input(id=id_img+(index+1) type="radio" name=id+"-radio-btn" checked=((image_index==index+1) ? "checked" : undefined))
+      input.image-slider__input(id=id_img+(index+1) type="radio" name=id+"-radio-btn" checked=((image_index==index+1) && "checked"))
       .image-slider__container
         .image-slider__slide
           img.image-slider__image(src=image alt="alt-"+id_img+(index+1))
