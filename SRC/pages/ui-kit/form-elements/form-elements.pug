@@ -69,23 +69,23 @@ html(lang="ru")
               {id:"bathrooms", name:"ВАННЫЕ КОМНАТЫ"}] }})
         li.column1__item.column1__wrapper-for-ecl1
           +expandable-checkbox-list({isExpand:false, caption:"EXPANDABLE CHECKBOX LIST", checkboxes:[{id:"bf", text:"Завтрак"},
-            {id:"desk", text:"Письменный стол", isChecked:true},
-            {id:"chair", text:"Стул для кормления", isChecked:true},
-            {id:"bed", text:"Кроватка", isChecked:true},
-            {id:"tv1", text:"Телевизор"},
-            {id:"shampoo1", text:"Шампунь"},
-            {id:"tv2", text:"Телевизор"},
-            {id:"shampoo2", text:"Шампунь"}
+            {text:"Письменный стол", isChecked:true},
+            {text:"Стул для кормления", isChecked:true},
+            {text:"Кроватка", isChecked:true},
+            {text:"Телевизор"},
+            {text:"Шампунь"},
+            {text:"Телевизор"},
+            {text:"Шампунь"}
             ]})
         li.column1__item.column1__wrapper-for-ecl2                                                            
           +expandable-checkbox-list({isExpand:true, caption:"EXPANDABLE CHECKBOX LIST", checkboxes:[{id:"bf2", text:"Завтрак"},
-            {id:"desk2", text:"Письменный стол", isChecked:true},
-            {id:"chair2", text:"Стул для кормления", isChecked:true},
-            {id:"bed2", text:"Кроватка", isChecked:true},
-            {id:"tv12", text:"Телевизор"},
-            {id:"shampoo12", text:"Шампунь"},
-            {id:"tv22", text:"Телевизор"},
-            {id:"shampoo22", text:"Шампунь"}          
+            {text:"Письменный стол", isChecked:true},
+            {text:"Стул для кормления", isChecked:true},
+            {text:"Кроватка", isChecked:true},
+            {text:"Телевизор"},
+            {text:"Шампунь"},
+            {text:"Телевизор"},
+            {text:"Шампунь"}          
             ]})
         li.column1__item.column1__wrapper-for-comfort-status-list
           +comfort-status-list([{icon:"tag_faces", caption:"Комфорт", text:"Шумопоглощающие стены"},
@@ -100,8 +100,8 @@ html(lang="ru")
                 {text:"Можно пригласить гостей (до 10 человек)",isChecked:true}
                 ]})               
             li.column2__item.column2__wrapper-for-radios-list
-              +radios-list({caption:"RADIO BUTTONS", name:"sex", radios:[{id:"men",text:"Мужчина", isChecked:true},
-                {id:"women",text:"Женщина"}
+              +radios-list({caption:"RADIO BUTTONS", name:"sex", radios:[{text:"Мужчина", isChecked:true},
+                {text:"Женщина"}
                 ]})
             li.column2__item.column2__wrapper-for-toggles-list 
               +toggles-list({caption:"TOGGLE",toggles:[{isChecked:true, text:"Получать спецпредложения",id:"t_on"},

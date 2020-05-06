@@ -15,8 +15,8 @@ mixin sign-up-form
         li.sign-up-form__item
           +text-input({placeholder:"Фамилия", isRequired:true})        
         li.sign-up-form__item
-          +radios-list({name:"sex", radios:[{id:"men",text:"Мужчина", isChecked:true},
-            {id:"women",text:"Женщина"}
+          +radios-list({name:"sex", radios:[{text:"Мужчина", isChecked:true},
+            {text:"Женщина"}
             ]})
       ul.sign-up-form__list.sign-up-form__wrapper
         li

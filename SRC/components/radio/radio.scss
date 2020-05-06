@@ -1,13 +1,4 @@
 .radio {
-    &__label {
-        display: inline-block;
-        position: relative;
-        padding-left: 30px;
-        font-size: 14px;
-        cursor: pointer;
-        color: $toxin-color-black-75;
-    }
-
     &__input {
         position: absolute;
         width: 1px;
@@ -19,11 +10,16 @@
         overflow: hidden;
     }
 
-    &__input:not(:checked) + .radio__label {
-        color: $toxin-color-black-50;
+    &__text {
+        display: inline-block;
+        position: relative;
+        padding-left: 30px;
+        font-size: 14px;
+        cursor: pointer;
+        color: $toxin-color-black-75;
     }
 
-    &__label:before {
+    &__text:before {
         content: "";
         position: absolute;
         left: 0px;
@@ -35,7 +31,7 @@
         border-radius: 100%;
     }
 
-    &__label:after {
+    &__text:after {
         content: "";
         position: absolute;
         transition: all 0.2s ease;
@@ -47,11 +43,15 @@
         background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
     }
 
-    .radio__input:not(:checked) + .radio__label:after {
+    &__input:not(:checked) + .radio__text {
+        color: $toxin-color-black-50;
+    }
+
+    &__input:not(:checked) + .radio__text:after {
         opacity: 0;
     }
 
-    &__input:checked + .radio__label:after {
+    &__input:checked + .radio__text:after {
         opacity: 1;
     }
 }
