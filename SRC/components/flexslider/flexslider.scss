@@ -1,9 +1,7 @@
 .flexslider {
   display: none;
-}
 
-@media (max-width: 918px) {
-  .flexslider {
+  @media (max-width: 918px) {
     display: block;
   }
 }

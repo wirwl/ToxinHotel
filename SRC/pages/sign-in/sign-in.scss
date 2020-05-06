@@ -15,11 +15,11 @@ body {
   min-height: 684px;
   background: url("../../images/backgrounds/sign.jpg") no-repeat;
   padding-top: 162px;
-}
 
-.main-content__sign-in-form {
-  margin: 0 auto;
-  max-width: 380px;
+  &__sign-in-form {
+    margin: 0 auto;
+    max-width: 380px;
+  }
 }
 
 .header .header-menu > .header-menu__list > .header-menu__item.header-menu__item:not(:last-of-type) {
@@ -28,10 +28,4 @@ body {
 
 .header .header__header-menu {
   margin-right: 20px;
-}
-
-@media (max-width: 365px) {
-  .header__logo {
-    display: none;
-  }
 }

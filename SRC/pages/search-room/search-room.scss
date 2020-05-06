@@ -28,124 +28,66 @@ body {
   background: $toxin-color-light-gray;
   padding: 28px 15px 79px 15px;
   min-height: 918px;
-}
-.main-content__wrapper {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1160px;
-}
-.filters {
-  margin-right: 60px;
-}
 
-.filters__list {
-  list-style: none;
-  min-width: 266px;
-}
-
-.filters__item {
-  margin-bottom: 15px;
-}
-
-.rooms {
-  max-width: 846px;
-  display: flex;
-  flex-direction: column;
-  padding-top: 1px;
-}
-
-.rooms__title {
-  margin-bottom: 21px;
-  text-transform: none;
-  font-size: 24px;
-  line-height: 30px;
-  font-family: $toxin-font-open-sans;
-  font-weight: bold;
-  color: $toxin-color-black-100;
-}
-
-.rooms__list {
-  display: flex;
-  margin-bottom: 19px;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  list-style: none;
-}
-
-.rooms__item {
-  width: 270px;
-  margin-bottom: 18px;
-}
-
-.rooms__wrapper-pagination {
-  margin: 0 auto;
-  min-width: 241px;
-}
-
-.filters__wrapper-datepicker-input {
-  margin-bottom: 21px;
-}
-
-.filters__wrapper-guests-input {
-  margin-bottom: 30px;
-}
-
-.filters__wrapper-range-slider {
-  margin-bottom: 29px;
-}
-
-.filters__wrapper-range-cost {
-  margin-bottom: 33px;
-  max-width: 230px;
-}
-
-.filters__wrapper-accessibility {
-  margin-bottom: 30px;
-  max-width: 253px;
-  .checkboxes-list__item:nth-child(1) {
-    max-width: 220px;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1160px;
   }
-}
 
-.filters__wrapper-comfort {
-  margin-bottom: 25px;
-}
-
-// Additional media queries for header-----------------------------------------
-@media (max-width: 365px) {
-  .header__logo {
-    display: none;
+  @media (max-width: 658px) {
+    &__wrapper {
+      justify-content: space-between;
+    }
   }
-}
-// Media queries for main content-----------------------------------
-@media (max-width: 1197px) {
-  .rooms__list {
-    justify-content: flex-start;
-    .rooms__item {
-      margin-right: 12px;
+
+  @media (max-width: 600px) {
+    &__wrapper {
+      flex-wrap: wrap;
+      justify-content: center;
     }
   }
 }
-@media (max-width: 658px) {
-  .main-content__wrapper {
-    justify-content: space-between;
+
+.filters {
+  margin-right: 60px;
+
+  &__list {
+    list-style: none;
+    min-width: 266px;
   }
-  .filters {
+
+  &__item {
+    margin-bottom: 15px;
+  }
+
+  &__wrapper-datepicker-input {
+    margin-bottom: 21px;
+  }
+
+  &__wrapper-guests-input {
+    margin-bottom: 30px;
+  }
+
+  &__wrapper-range-slider {
+    margin-bottom: 29px;
+  }
+
+  &__wrapper-range-cost {
+    margin-bottom: 33px;
+    max-width: 230px;
+  }
+
+  &__wrapper-accessibility {
+    margin-bottom: 30px;
+    max-width: 253px;
+  }
+
+  &__wrapper-comfort {
+    margin-bottom: 25px;
+  }
+
+  @media (max-width: 658px) {
     margin-right: 10px;
   }
-}
-@media (max-width: 600px) {
-  .main-content__wrapper {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .rooms__list {
-    justify-content: center;
-  }
-  .rooms__title {
-    text-align: center;
-  }
-}
-//Media queries for footer-------------------------------------------
-@media (max-width: 815px) {
 }

@@ -1,6 +1,3 @@
-@import "../image-slider/image-slider.scss";
-@import "../flexslider/flexslider.scss";
-
 .room-images {
   width: 100%;
   display: flex;
@@ -28,12 +25,10 @@
   }
 
   @media (max-width: 918px) {
-    .room-images {
-      display: block;
-      height: auto;
-    }
-    .room-images__left-wrapper,
-    .room-images__right-wrapper {
+    display: block;
+    height: auto;
+    &__left-wrapper,
+    &__right-wrapper {
       display: none;
     }
   }

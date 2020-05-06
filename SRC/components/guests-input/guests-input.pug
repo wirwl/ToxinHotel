@@ -4,9 +4,9 @@ include ../iqdropdown/iqdropdown
 mixin guests-input({isOpen, caption, items})
   .guests-input.js-guests-input  
     h3.guests-input__caption #{caption}
-      +iqdropdown({isOpen:isOpen, items: items}) 
-        .guests-input__buttons
-          .guests-input__button-simple-clear
-            +button-simple({text:'Очистить', isGrayText:true})
-          .guests-input__button-simple-apply
-            +button-simple({text:'Применить'})    
+    +iqdropdown({isOpen:isOpen, items: items}) 
+      .guests-input__buttons
+        .guests-input__button-simple-clear
+          +button-simple({text:'Очистить', isGrayText:true})
+        .guests-input__button-simple-apply
+          +button-simple({text:'Применить'})    

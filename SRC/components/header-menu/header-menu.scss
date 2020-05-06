@@ -107,53 +107,30 @@
     font-weight: bold;
     color: $toxin-color-black-75;
   }
-}
 
-@media (max-width: 888px) {
-  .header {
-    padding: 0 5px;
-  }
-  .header .header__logo {
-    margin-right: 5px;
-  }
-  .header .header__header-menu {
-    margin-right: 5px;
-  }
-}
-
-@media (max-width: 715px) {
-  .header-menu__icon {
-    display: block;
-  }
-  .header-menu__list {
-    padding: 0 5px;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    position: absolute;
-    left: 0px;
-    top: 100%;
-    overflow: hidden;
-    transform: translateX(-100%);
-  }
-  .header-menu__list_show {
-    transition: transform 600ms;
-    transform: translateX(0);
-  }
-  .header-menu__list_hide {
-    transition: transform 400ms 0ms;
-  }
-  .header-menu__list_show .header-menu__list {
-    position: static;
-  }
-}
-
-@media (max-width: 488px) {
-  .header__button-bordered {
-    margin-right: 5px;
-    margin-bottom: 5px;
-  }
-  .header__auth-area {
-    flex-direction: column;
-    margin: 5px 0;
+  @media (max-width: 715px) {
+    &__icon {
+      display: block;
+    }
+    &__list {
+      padding: 0 5px;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      position: absolute;
+      left: 0px;
+      top: 100%;
+      overflow: hidden;
+      transform: translateX(-100%);
+    }
+    &__list_show {
+      transition: transform 600ms;
+      transform: translateX(0);
+    }
+    &__list_hide {
+      transition: transform 400ms 0ms;
+    }
+    &__list_show .header-menu__list {
+      position: static;
+    }
   }
 }

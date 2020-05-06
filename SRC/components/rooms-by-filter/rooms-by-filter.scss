@@ -1,0 +1,54 @@
+.rooms {
+  max-width: 846px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1px;
+
+  &__title {
+    margin-bottom: 21px;
+    text-transform: none;
+    font-size: 24px;
+    line-height: 30px;
+    font-family: $toxin-font-open-sans;
+    font-weight: bold;
+    color: $toxin-color-black-100;
+  }
+
+  &__list {
+    display: flex;
+    margin-bottom: 19px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+  }
+
+  &__item {
+    width: 270px;
+    margin-bottom: 18px;
+  }
+
+  &__wrapper-pagination {
+    margin: 0 auto;
+    min-width: 241px;
+  }
+
+  @media (max-width: 1197px) {
+    &__list {
+      justify-content: flex-start;
+    }
+
+    &__item {
+      margin-right: 12px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    &__list {
+      justify-content: center;
+    }
+
+    &__title {
+      text-align: center;
+    }
+  }
+}

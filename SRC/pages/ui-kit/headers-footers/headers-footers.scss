@@ -61,17 +61,7 @@ body footer {
       max-width: 560px;
       display: flex;
       justify-content: center;
-    }
-  }
-
-  @media (max-width: 815px) {
-    .footer__footer-top {
-      padding: 10px 5px;
-      min-height: auto;
-    }
-    .footer__footer-bottom {
-      padding: 0 5px 5px;
-      min-height: auto;
+      margin: 0 auto 17px auto;
     }
   }
 }

@@ -65,16 +65,32 @@
   &__button-bordered_hide {
     display: none;
   }
-}
 
-@media (max-width: 715px) {
-  .header {
+  @media (max-width: 715px) {
     justify-content: space-between;
     padding: 0;
     padding-right: 5px;
+
+    &__header-menu {
+      order: -1;
+      margin-left: 0;
+    }
   }
-  .header__header-menu {
-    order: -1;
-    margin-left: 0;
+
+  @media (max-width: 488px) {
+    &__button-bordered {
+      margin-right: 5px;
+      margin-bottom: 5px;
+    }
+    &__auth-area {
+      flex-direction: column;
+      margin: 5px 0;
+    }
+  }
+
+  @media (max-width: 365px) {
+    &__logo {
+      display: none;
+    }
   }
 }

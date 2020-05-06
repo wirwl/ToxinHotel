@@ -1,0 +1,105 @@
+include ../pagination/pagination
+include ../room-info/room-info
+
+mixin rooms-by-filter({title})
+  section.rooms
+    h1.rooms__title #{title}
+    ul.rooms__list
+      li.rooms__item
+        +room-info({id:"image-slider1", number:888, isLux:true, cost:"9 990", starscount:5, commentscount:145, isShowNavBtns:true,
+          images:[
+          "../../images/rooms/888/image-1.png",
+          "http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg",
+          "http://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg",
+          "http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg",
+          ]})
+      li.rooms__item
+        +room-info({id:"image-slider2", number:840, cost:"9 990", starscount:4, commentscount:65,
+          images:[
+          "../../images/rooms/840/image-1.png",
+          "http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg",
+          "http://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg",
+          "http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg",
+          ]})
+      li.rooms__item
+        +room-info({id:"image-slider3", number:980, isLux:true, cost:"8 500", starscount:3, commentscount:35,
+          images:[
+          "../../images/rooms/980/image-1.png",
+          "http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg",
+          "http://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg",
+          "http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg",
+          ]})
+      li.rooms__item
+        +room-info({id:"image-slider4", number:856, cost:"7 300", starscount:5, commentscount:19,
+          images:[
+          "../../images/rooms/856/image-1.png",
+          "http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg",
+          "http://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg",
+          "http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg",
+          ]})
+      li.rooms__item
+        +room-info({id:"image-slider5", number:740, cost:"6 000", starscount:4, commentscount:44,
+          images:[
+          "../../images/rooms/740/image-1.png",
+          "http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg",
+          "http://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg",
+          "http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg",
+          ]})
+      li.rooms__item
+        +room-info({id:"image-slider6", number:982, cost:"5 800", starscount:3, commentscount:56,
+          images:[
+          "../../images/rooms/982/image-1.png",
+          "http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg",
+          "http://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg",
+          "http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg",
+          ]})
+      li.rooms__item
+        +room-info({id:"image-slider7", number:678, cost:"5 500", starscount:5, commentscount:45,
+          images:[
+          "../../images/rooms/678/image-1.png",
+          "http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg",
+          "http://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg",
+          "http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg",
+          ]})
+      li.rooms__item
+        +room-info({id:"image-slider8", number:450, cost:"5 300", starscount:4, commentscount:39,
+          images:[
+          "../../images/rooms/450/image-1.png",
+          "http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg",
+          "http://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg",
+          "http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg",
+          ]})
+      li.rooms__item
+        +room-info({id:"image-slider9", number:350, isLux:true, cost:"5 000", starscount:3, commentscount:77,
+          images:[
+          "../../images/rooms/350/image-1.png",
+          "http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg",
+          "http://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg",
+          "http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg",
+          ]})
+      li.rooms__item
+        +room-info({id:"image-slider10", number:666, isLux:true, cost:"5 000", starscount:5, commentscount:25,
+          images:[
+          "../../images/rooms/666/image-1.png",
+          "http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg",
+          "http://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg",
+          "http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg",
+          ]})
+      li.rooms__item
+        +room-info({id:"image-slider11", number:444, isLux:true, cost:"5 000", starscount:3, commentscount:15,
+          images:[
+          "../../images/rooms/444/image-1.png",
+          "http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg",
+          "http://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg",
+          "http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg",
+          ]})
+      li.rooms__item
+        +room-info({id:"image-slider12", number:352, isLux:true, cost:"5 000", starscount:3, commentscount:55,
+          images:[
+          "../../images/rooms/352/image-1.png",
+          "http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg",
+          "http://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg",
+          "http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg",
+          ]})
+    .rooms__wrapper-pagination
+      +pagination({pages:15, page:1, showed:12, showedlastpage:6, total:100})
