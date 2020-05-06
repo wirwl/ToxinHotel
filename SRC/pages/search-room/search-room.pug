@@ -31,13 +31,13 @@ html(lang="en")
             li.filters__item.filters__wrapper-range-slider
               +range-slider({ctext:"Диапазон цены", min:0, max:15000, from: 4500, to:9600, desc:"Стоимость за сутки пребывания в номере" })
             li.filters__item.filters__wrapper-range-cost
-              +checkboxes-list({caption:"checkbox buttons", checkboxes:[{id:"smoke",text:"Можно курить"},
-                {id:"pet",text:"Можно с питомцами", isChecked:true},
-                {id:"guest",text:"Можно пригласить гостей (до 10 человек)",isChecked:true}
+              +checkboxes-list({caption:"checkbox buttons", checkboxes:[{text:"Можно курить"},
+                {text:"Можно с питомцами", isChecked:true},
+                {text:"Можно пригласить гостей (до 10 человек)",isChecked:true}
                 ]})               
             li.filters__item.filters__wrapper-accessibility
               +checkboxes-list({caption:"Доступность", 
-                checkboxes:[{id:"wk",text:"Широкий коридор", desc:"Ширина коридоров в номере не менее 91 см."},
+                checkboxes:[{text:"Широкий коридор", desc:"Ширина коридоров в номере не менее 91 см."},
                   {id:"hfi",text:"Помощник для инвалидов", desc:"На 1 этаже вас встретит специалист и проводит до номера."}]})
             li.filters__item.filters__wrapper-comfort
               +comfort-input({caption:"Удобства номера", 

@@ -95,9 +95,9 @@ html(lang="ru")
         .column2
           ul.column2__list
             li.column2__item.column2__wrapper-for-checkboxes-list
-              +checkboxes-list({caption:"CHECKBOX BUTTONS", checkboxes:[{id:"smoke",text:"Можно курить"},
-                {id:"pet",text:"Можно с питомцами", isChecked:true},
-                {id:"guest",text:"Можно пригласить гостей (до 10 человек)",isChecked:true}
+              +checkboxes-list({caption:"CHECKBOX BUTTONS", checkboxes:[{text:"Можно курить"},
+                {text:"Можно с питомцами", isChecked:true},
+                {text:"Можно пригласить гостей (до 10 человек)",isChecked:true}
                 ]})               
             li.column2__item.column2__wrapper-for-radios-list
               +radios-list({caption:"RADIO BUTTONS", name:"sex", radios:[{id:"men",text:"Мужчина", isChecked:true},
@@ -126,8 +126,8 @@ html(lang="ru")
               +guests-input({caption:"DROPDOWN", isOpen:true, items: [{id:'adults', text: 'Взрослые'}, {id:'children', text:'Дети'}, {id:'babies', text:'Младенцы'}] })
             li.column2__item.column2__wrapper-for-rich-checkboxes-list
               +checkboxes-list({caption:"RICH CHECKBOX BUTTONS", 
-                checkboxes:[{id:"wk",text:"Широкий коридор", desc:"Ширина коридоров в номере не менее 91 см."},
-                  {id:"hfi",text:"Помощник для инвалидов", desc:"На 1 этаже вас встретит специалист и проводит до номера."}
+                checkboxes:[{text:"Широкий коридор", desc:"Ширина коридоров в номере не менее 91 см."},
+                  {text:"Помощник для инвалидов", desc:"На 1 этаже вас встретит специалист и проводит до номера."}
                     ]})                                                 
         .column3
           ul.column3__list

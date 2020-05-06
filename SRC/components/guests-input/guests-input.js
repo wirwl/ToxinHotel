@@ -59,7 +59,7 @@ class GuestsInput {
 }
 
 new GuestsInput({
-  placeholder: 'Выберите удобства',
+  placeholder: 'Сколько гостей',
   rootElementClass: '.js-guests-input',
   guests: { id: ['adults', 'children'], singular: 'гость', plurals: ['гостя', 'гостей'] },
   babies: { id: 'babies', singular: 'младенец', plurals: ['младенца', 'младенев'] }
