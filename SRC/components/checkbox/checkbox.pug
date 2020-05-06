@@ -1,4 +1,4 @@
-mixin checkbox({id, isChecked, desc, text})
+mixin checkbox({isChecked, desc, text})
   label.checkbox
     input(type="checkbox" checked=(isChecked && "checked")).checkbox__input    
     .checkbox__text(class=desc && "checkbox__text_is-reach-checkbox") #{text}

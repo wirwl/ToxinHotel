@@ -48,13 +48,13 @@ html(lang="en")
 
             li.filters__item   
               +expandable-checkbox-list({isExpand:false, caption:"Дополнительные удобства", checkboxes:[{id:"bf", text:"Завтрак"},
-                {id:"desk", text:"Письменный стол", isChecked:true},
-                {id:"chair", text:"Стул для кормления", isChecked:true},
-                {id:"bed", text:"Кроватка", isChecked:true},
-                {id:"tv1", text:"Телевизор"},
-                {id:"shampoo1", text:"Шампунь"},
-                {id:"tv2", text:"Телевизор"},
-                {id:"shampoo2", text:"Шампунь"}
+                {text:"Письменный стол", isChecked:true},
+                {text:"Стул для кормления", isChecked:true},
+                {text:"Кроватка", isChecked:true},
+                {text:"Телевизор"},
+                {text:"Шампунь"},
+                {text:"Телевизор"},
+                {text:"Шампунь"}
                 ]})                                                                                     
         +rooms-by-filter({title: 'Номера, которые мы для вас подобрали'})
     +footer(footer_data)
