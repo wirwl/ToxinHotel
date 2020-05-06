@@ -12,14 +12,14 @@
     clip: rect(0, 0, 0, 0);
     overflow: hidden;
   }
-  &__label {
+  &__text {
     position: relative;
     padding: 0 0 0 50px;
     cursor: pointer;
     font-size: 14px;
     color: $toxin-color-black-75;
   }
-  &__label:before {
+  &__text:before {
     box-sizing: border-box;
     content: "";
     position: absolute;
@@ -31,7 +31,7 @@
     border-radius: 10px;
     transition: 0.2s;
   }
-  &__label:after {
+  &__text:after {
     content: "";
     position: absolute;
     top: 4px;
@@ -43,15 +43,15 @@
     transition: 0.2s;
   }
 
-  &__input:checked + .toggle__label:after {
+  &__input:checked + .toggle__text:after {
     left: 24px;
   }
 
   &__input:not(:checked) {
-    + .toggle__label:after {
+    + .toggle__text:after {
       background: $toxin-color-black-25;
     }
-    + .toggle__label::before {
+    + .toggle__text::before {
       border: 1px solid $toxin-color-black-25;
     }
   }
