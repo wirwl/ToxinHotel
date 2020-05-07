@@ -2,7 +2,10 @@ import '../../../node_modules/flexslider/jquery.flexslider'
 
 class Flexslider {
   constructor(data) {
-    const { rootElementClass, options } = data;
+    this._init(data);
+  }
+
+  _init({ rootElementClass, options }) {
     $(rootElementClass).flexslider(options);
   }
 }

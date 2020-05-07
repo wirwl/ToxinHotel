@@ -1,6 +1,8 @@
 .rate-button {
   display: inline-flex;
   flex-direction: row-reverse;
+  font-family: $toxin-font-material-icon;
+  font-size: 24px;
 
   &__input {
     position: absolute;

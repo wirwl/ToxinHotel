@@ -1,50 +1,47 @@
 class GuestsInput {
   constructor(data) {
-    const { rootElementClass, guests, babies, placeholder } = data;
+    this._init(data);
+  }
 
-    this.data = data;
-    this.$rootElement = $(rootElementClass);
-    this.guests = guests;
-    this.babies = babies;
-    this.placeholder = placeholder;
+  _init({ rootElementClass, guests, babies, placeholder }) {    
+    this._$rootElement = $(rootElementClass);
+    this._guests = guests;
+    this._babies = babies;
+    this._placeholder = placeholder;
 
-    this.$iqdropdown = this.$rootElement.find('.iqdropdown');
+    this.$iqdropdown = this._$rootElement.find('.iqdropdown');
     if (this.$iqdropdown.length)
-      this.init_Plugin_ItemQuantityDropdown(this.$iqdropdown);
+      this.$iqdropdown.iqDropdown({
+        setSelectionText: (itemCount, totalItems) => {
+          let result = this._placeholder;
+          let babiesCount = itemCount[this._babies.id];
+          let guestsCount = totalItems - babiesCount;
 
-    this.$buttonClear = this.$rootElement.find('.guests-input__button-simple-clear').find('.button-simple');
-    this.$buttonClear.on('click.buttonClear', this.onButtonClick.bind(this));
+          if (totalItems > 0) {
+            let wordGuests = this._guests.singular;
+            if (guestsCount > 0) {
+              const [number2, number5] = this._guests.plurals;
+              if (guestsCount > 4) wordGuests = number5;
+              else if (guestsCount > 1) wordGuests = number2;
+            }
+            let wordBabies = this._babies.singular;
+            if (babiesCount > 0) {
+              const [number2, number5] = this._babies.plurals;
+              if (babiesCount > 4) wordBabies = number5;
+              else if (babiesCount > 1) wordBabies = number2;
+            }
+            if (guestsCount > 0)
+              result = guestsCount + ' ' + wordGuests + (babiesCount > 0 ? ', ' + babiesCount + ' ' + wordBabies : '');
+          }
+          return result;
+        },
+      })
+
+    this.$buttonClear = this._$rootElement.find('.guests-input__button-simple-clear').find('.button-simple');
+    this.$buttonClear.on('click.buttonClear', this._onButtonClick.bind(this));
   }
 
-  init_Plugin_ItemQuantityDropdown($iqdropdown) {
-    $iqdropdown.iqDropdown({
-      setSelectionText: (itemCount, totalItems) => {
-        let result = this.placeholder;
-        let babiesCount = itemCount[this.babies.id];
-        let guestsCount = totalItems - babiesCount;
-
-        if (totalItems > 0) {
-          let wordGuests = this.guests.singular;
-          if (guestsCount > 0) {
-            const [number2, number5] = this.guests.plurals;
-            if (guestsCount > 4) wordGuests = number5;
-            else if (guestsCount > 1) wordGuests = number2;
-          }
-          let wordBabies = this.babies.singular;
-          if (babiesCount > 0) {
-            const [number2, number5] = this.babies.plurals;
-            if (babiesCount > 4) wordBabies = number5;
-            else if (babiesCount > 1) wordBabies = number2;
-          }
-          if (guestsCount > 0)
-            result = guestsCount + ' ' + wordGuests + (babiesCount > 0 ? ', ' + babiesCount + ' ' + wordBabies : '');
-        }
-        return result;
-      },
-    })
-  }
-
-  onButtonClick(e) {
+  _onButtonClick(e) {
     console.log(e.currentTarget);
     const $button = $(e.currentTarget);
     const $iqdropdown = $button.closest('.iqdropdown');
@@ -52,7 +49,7 @@ class GuestsInput {
     $iqdropdown.find('.iqdropdown-item-controls').remove();
     $iqdropdown.off();
     $iqdropdown.find('.iqdropdown-menu-option').removeData("defaultcount");
-    $iqdropdown.find('.iqdropdown-menu-option').removeAttr("data-defaultcount");    
+    $iqdropdown.find('.iqdropdown-menu-option').removeAttr("data-defaultcount");
     this.init_Plugin_ItemQuantityDropdown($iqdropdown);
     $iqdropdown.toggleClass('menu-open');
   }

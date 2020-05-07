@@ -1,44 +1,43 @@
 class ComfortInput {
   constructor(data) {
-    const { rootElementClass, items, placeholder } = data;
-
-    this.placeholder = placeholder;
-    this.$rootElement = $(rootElementClass);
-    this.$iqdropdown = this.$rootElement.find('.iqdropdown');
-    this.items = items;
-    if (this.$iqdropdown.length)
-      this.init_Plugin_ItemQuantityDropdown();
+    this._init(data);
   }
 
-  init_Plugin_ItemQuantityDropdown() {
-    this.$iqdropdown.iqDropdown({
-      setSelectionText: (itemCount, totalItems) => {
-        let result = this.placeholder;
-        if (totalItems > 0) {
+  _init({ rootElementClass, items, placeholder }) {    
+    this._placeholder = placeholder;
+    this._$rootElement = $(rootElementClass);
+    this._$iqdropdown = this._$rootElement.find('.iqdropdown');
+    this._items = items;
 
-          result = '';
-          this.items.forEach(function (value, index, items) {
-            const { id, singular, plurals } = value;
-            const [number2, number5] = plurals;
+    if (this._$iqdropdown.length)
+      this._$iqdropdown.iqDropdown({
+        setSelectionText: (itemCount, totalItems) => {
+          let result = this._placeholder;
+          if (totalItems > 0) {
 
-            for (const prop in itemCount) {
-              if (id == prop) {
-                let word = singular;
-                const count = itemCount[prop];
+            result = '';
+            this._items.forEach(function (value, index, items) {
+              const { id, singular, plurals } = value;
+              const [number2, number5] = plurals;
 
-                if (count > 0) {
-                  if (count > 4) word = number5;
-                  else if (count > 1) word = number2;
-                  result += itemCount[prop] + ' ' + word + ', ';
+              for (const prop in itemCount) {
+                if (id == prop) {
+                  let word = singular;
+                  const count = itemCount[prop];
+
+                  if (count > 0) {
+                    if (count > 4) word = number5;
+                    else if (count > 1) word = number2;
+                    result += itemCount[prop] + ' ' + word + ', ';
+                  }
                 }
               }
-            }
-          })
-          result = result.slice(0, -2);
-        }
-        return result;
-      },
-    })
+            })
+            result = result.slice(0, -2);
+          }
+          return result;
+        },
+      })
   }
 }
 

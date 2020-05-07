@@ -1,17 +1,21 @@
 class ToxinDatepicker {
   constructor(data) {
-    const { rootElementClass, htmlButtonsTemplate } = data;
-
-    this.$rootElementClass = $(rootElementClass);
-    this.htmlButtonsTemplate = htmlButtonsTemplate;
-
-    this.initPlugin_datepicker();
-    this.addButtons();
+    this._init(data);
   }
 
-  initPlugin_datepicker() {
-    if (this.$rootElementClass.length)
-      this.$rootElementClass.datepicker({
+  _init({ rootElementClass, htmlButtonsTemplate }) {    
+
+    this._$rootElementClass = $(rootElementClass);
+    this._htmlButtonsTemplate = htmlButtonsTemplate;
+
+    this._initPluginDatepicker();
+    this._addButtons();
+
+  }
+
+  _initPluginDatepicker() {
+    if (this._$rootElementClass.length)
+      this._$rootElementClass.datepicker({
         moveToOtherMonthsOnSelect: false,
         minDate: new Date(),
         range: true,
@@ -22,20 +26,20 @@ class ToxinDatepicker {
       });
   }
 
-  addButtons() {
+  _addButtons() {
     let DatePickers = $('.datepicker');
     DatePickers.append(htmlButtons);
     const $clears = $('.js-datepicker__button-clear');
     $clears.each((index, element) => {
       $(element).on('click.clearButton', (i, el) => {
-        let dp = this.findDatepicker(this.$rootElementClass, $(element).parent().parent());
+        let dp = this.findDatepicker(this._$rootElementClass, $(element).parent().parent());
         if (dp) dp.clear();
       })
     })
     const $apply = $('.js-datepicker__button-apply');
     $apply.each((index, element) => {
       $(element).on('click.applyButton', () => {
-        let dp = this.findDatepicker(this.$rootElementClass, $(element).parent().parent());
+        let dp = this.findDatepicker(this._$rootElementClass, $(element).parent().parent());
         if (dp) dp.hide();
       })
     })

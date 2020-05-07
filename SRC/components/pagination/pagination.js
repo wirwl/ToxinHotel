@@ -1,27 +1,31 @@
 class Pagination {
   constructor(rootClassName) {
-    this.$paginationButtons = $(rootClassName);
-    this.pages = this.$paginationButtons.data('pages');
-    this.page = this.$paginationButtons.data('page');
-
-    this.$paginationButtons.html(this.createPagination(this.pages, this.page));
-    this.addEventListenerClick.bind(this)(this.$paginationButtons);
+    this._init(rootClassName);
   }
 
-  addEventListenerClick(pagination) {
+  _init(rootClassName) {
+    this._$paginationButtons = $(rootClassName);
+    this._pages = this._$paginationButtons.data('pages');
+    this._page = this._$paginationButtons.data('page');
+
+    this._$paginationButtons.html(this.createPagination(this._pages, this._page));
+    this._addEventListenerClick.bind(this)(this._$paginationButtons);
+  }
+
+  _addEventListenerClick(pagination) {
     let lis = pagination.find('a');
     lis.each((index, element) => {
       const $element = $(element);
       let datapage = $element.data("page");
       if (datapage)
-        $element.on('click.pagination', () => { this.createPagination(this.pages, datapage); });
+        $element.on('click.pagination', () => { this.createPagination(this._pages, datapage); });
     })
   }
 
   createPagination(pages, page) {
-    let showed = this.$paginationButtons.data('showed');
-    let showedLastPage = this.$paginationButtons.data('showedlastpage');
-    let total = this.$paginationButtons.data('total');
+    let showed = this._$paginationButtons.data('showed');
+    let showedLastPage = this._$paginationButtons.data('showedlastpage');
+    let total = this._$paginationButtons.data('total');
     let toCount = page * showed;
     if (page == pages)
       toCount = page * showed - showed + showedLastPage;
@@ -77,8 +81,8 @@ class Pagination {
     }
     str += '</ul>';
 
-    this.$paginationButtons.html(str);
-    this.addEventListenerClick(this.$paginationButtons);
+    this._$paginationButtons.html(str);
+    this._addEventListenerClick(this._$paginationButtons);
     return str;
   }
 }

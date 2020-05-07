@@ -1,17 +1,21 @@
 class HeaderMenu {
   constructor() {
-    $('.js-menu__link').on('click.menu', this.onClick_link.bind(this));
-    $('.js-header-menu__icon').on('click.menu', this.onClick_icon);
-    $('.js-menu .js-menu__list').on('mouseleave.menu', this.onMouseleave_list.bind(this));
+    this._addEventListeners();
   }
 
-  CloseAllOpenMenuItems($li) {
+  _addEventListeners() {
+    $('.js-menu__link').on('click.menu', this._onClickLink.bind(this));
+    $('.js-header-menu__icon').on('click.menu', this._onClickIcon);
+    $('.js-menu .js-menu__list').on('mouseleave.menu', this._onMouseLeaveList.bind(this));
+  }
+
+  _closeAllOpenMenuItems($li) {
     let ulChild = $li.find('> ul');
     ulChild.css('display', 'none');
-    ulChild.children().each((index, element) => { this.CloseAllOpenMenuItems($(element)) })
+    ulChild.children().each((index, element) => { this._closeAllOpenMenuItems($(element)) })
   }
 
-  onClick_link(e) {
+  _onClickLink(e) {
     let li = $(e.currentTarget).parent();
     let ul = li.find('> ul');
     let ulParent = li.parent();
@@ -20,11 +24,11 @@ class HeaderMenu {
       if (item.is(li)) {
         if (ul.css('display') === 'none') ul.css('display', 'block'); else ul.css('display', 'none');
       } else
-        this.CloseAllOpenMenuItems(item);
+        this._closeAllOpenMenuItems(item);
     })
   }
 
-  onClick_icon(e) {
+  _onClickIcon(e) {
     const $icon = $(e.currentTarget);
     const $list = $icon.parent().find('.header-menu__list');
     if ($list.hasClass('header-menu__list_show')) {
@@ -37,11 +41,11 @@ class HeaderMenu {
     }
   }
 
-  onMouseleave_list(e) {
+  _onMouseLeaveList(e) {
     const $list = $(e.currentTarget);
     if ($list.parent().find('.header-menu__list_show')) {
       $list.children().each((index, element) => {
-        this.CloseAllOpenMenuItems($(element));
+        this._closeAllOpenMenuItems($(element));
       })
       $list.parent().find('.header-menu__list').removeClass('header-menu__list_show');
       $list.parent().find('.header-menu__list').addClass('header-menu__list_hide');
@@ -49,4 +53,5 @@ class HeaderMenu {
     }
   }
 }
+
 new HeaderMenu();
