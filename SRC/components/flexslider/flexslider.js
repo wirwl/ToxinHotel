@@ -1,4 +1,4 @@
-import '../../../node_modules/flexslider/jquery.flexslider'
+import '../../../node_modules/flexslider/jquery.flexslider';
 
 class Flexslider {
   constructor(data) {
@@ -10,4 +10,4 @@ class Flexslider {
   }
 }
 
-new Flexslider({ rootElementClass: '.flexslider', options: { animation: "fade", touch: true } });
+new Flexslider({ rootElementClass: '.flexslider', options: { animation: 'fade', touch: true } });

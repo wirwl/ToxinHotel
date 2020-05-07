@@ -10,22 +10,21 @@ class HeaderMenu {
   }
 
   _closeAllOpenMenuItems($li) {
-    let ulChild = $li.find('> ul');
+    const ulChild = $li.find('> ul');
     ulChild.css('display', 'none');
-    ulChild.children().each((index, element) => { this._closeAllOpenMenuItems($(element)) })
+    ulChild.children().each((index, element) => { this._closeAllOpenMenuItems($(element)); });
   }
 
   _onClickLink(e) {
-    let li = $(e.currentTarget).parent();
-    let ul = li.find('> ul');
-    let ulParent = li.parent();
+    const li = $(e.currentTarget).parent();
+    const ul = li.find('> ul');
+    const ulParent = li.parent();
     ulParent.children().each((index, element) => {
-      let item = $(element);
+      const item = $(element);
       if (item.is(li)) {
         if (ul.css('display') === 'none') ul.css('display', 'block'); else ul.css('display', 'none');
-      } else
-        this._closeAllOpenMenuItems(item);
-    })
+      } else { this._closeAllOpenMenuItems(item); }
+    });
   }
 
   _onClickIcon(e) {
@@ -34,8 +33,7 @@ class HeaderMenu {
     if ($list.hasClass('header-menu__list_show')) {
       $list.removeClass('header-menu__list_show');
       $list.addClass('header-menu__list_hide');
-    }
-    else {
+    } else {
       $list.removeClass('header-menu__list_hide');
       $list.addClass('header-menu__list_show');
     }
@@ -46,10 +44,9 @@ class HeaderMenu {
     if ($list.parent().find('.header-menu__list_show')) {
       $list.children().each((index, element) => {
         this._closeAllOpenMenuItems($(element));
-      })
+      });
       $list.parent().find('.header-menu__list').removeClass('header-menu__list_show');
       $list.parent().find('.header-menu__list').addClass('header-menu__list_hide');
-
     }
   }
 }

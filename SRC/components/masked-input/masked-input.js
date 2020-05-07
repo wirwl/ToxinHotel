@@ -1,4 +1,4 @@
-import '../../../node_modules/jquery-mask-plugin/dist/jquery.mask'
+import '../../../node_modules/jquery-mask-plugin/dist/jquery.mask';
 
 class MaskedInput {
   constructor(rootElementClass) {
@@ -12,5 +12,3 @@ class MaskedInput {
 }
 
 new MaskedInput('.js-masked-input__input');
-
-

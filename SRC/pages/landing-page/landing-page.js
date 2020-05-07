@@ -1,14 +1,12 @@
-import './landing-page.scss'
+import './landing-page.scss';
 
-import '../../favicons/favicons'
+import '../../favicons/favicons';
 
-import '../../../node_modules/item-quantity-dropdown/lib/item-quantity-dropdown.min'
-import '../../../node_modules/air-datepicker/dist/js/datepicker'
+import '../../../node_modules/item-quantity-dropdown/lib/item-quantity-dropdown.min';
+import '../../../node_modules/air-datepicker/dist/js/datepicker';
 
-const fonts = require.context('../../fonts', true, /\.css$/ );
+const fonts = require.context('../../fonts', true, /\.css$/);
 fonts.keys().forEach(fonts);
 
-const imports = require.context('../../components/', true, /\.(scss|js)$/)
+const imports = require.context('../../components/', true, /\.(scss|js)$/);
 imports.keys().forEach(imports);
-
-

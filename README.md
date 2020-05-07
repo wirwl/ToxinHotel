@@ -36,6 +36,8 @@
 
   >**npm run deploy** - deploy project on github.io
 
+  >**npm run eslint** - check all files in project with [eslint](https://github.com/eslint/eslint)
+
   >**npm-check --skip-unused** - check what packages is out of date with [npm-check](https://www.npmjs.com/package/npm-check)
 
 ## Project demo (website pages)

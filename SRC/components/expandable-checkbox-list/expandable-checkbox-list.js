@@ -1,16 +1,16 @@
 class ExpandableCheckboxList {
-  constructor(element) {    
+  constructor(element) {
     this._addEventListeners(element);
   }
 
   _addEventListeners(element) {
-    $(element).on('click.ecl', this._onClickEvent)
+    $(element).on('click.ecl', this._onClickEvent);
   }
 
-  _onClickEvent() {    
+  _onClickEvent() {
     const $list = $(this).parent().find('.expandable-checkbox-list__list');
     $list.toggleClass('expandable-checkbox-list__list_show');
-    const $caption =$(this).parent().find('.expandable-checkbox-list__caption');
+    const $caption = $(this).parent().find('.expandable-checkbox-list__caption');
     $caption.toggleClass('expandable-checkbox-list__caption_show');
   }
 }
