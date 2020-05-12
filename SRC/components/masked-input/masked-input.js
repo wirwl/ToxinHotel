@@ -1,4 +1,5 @@
-import '../../../node_modules/jquery-mask-plugin/dist/jquery.mask';
+// eslint-disable-next-line no-unused-vars
+import mask from 'jquery-mask-plugin';
 
 class MaskedInput {
   constructor(rootElementClass) {

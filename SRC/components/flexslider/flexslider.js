@@ -1,4 +1,5 @@
-import '../../../node_modules/flexslider/jquery.flexslider';
+/* eslint-disable-next-line no-unused-vars */
+import flexslider from 'flexslider';
 
 class Flexslider {
   constructor(data) {

@@ -1,3 +1,6 @@
+// eslint-disable-next-line no-unused-vars
+import iqDropdown from 'item-quantity-dropdown/lib/item-quantity-dropdown.min';
+
 class GuestsInput {
   constructor(data) {
     this._init(data);
