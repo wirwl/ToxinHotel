@@ -43,10 +43,10 @@ class GuestsInput {
     }
 
     this.$buttonClear = this._$rootElement.find('.guests-input__button-simple-clear').find('.button-simple');
-    this.$buttonClear.on('click.buttonClear', this._onButtonClick.bind(this));
+    this.$buttonClear.on('click.buttonClear', this._handleButtonClearClick.bind(this));
   }
 
-  _onButtonClick(e) {
+  _handleButtonClearClick(e) {
     const $button = $(e.currentTarget);
     const $iqdropdown = $button.closest('.iqdropdown');
     $iqdropdown.find('.iqdropdown-content').removeClass('iqdropdown-content');

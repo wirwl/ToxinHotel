@@ -5,10 +5,10 @@ class LikeButton {
 
   _init(rootElementClass) {
     this._$rootElementClass = $(rootElementClass);
-    this._$rootElementClass.on('click.like-button', this._onClickButton);
+    this._$rootElementClass.on('click.like-button', this._handleRootElementClassClick);
   }
 
-  _onClickButton(e) {
+  _handleRootElementClassClick(e) {
     const $button = $(e.currentTarget);
     const $count = $button.parent().find('.js-like-button__count');
     const currentValue = +$count.text();

@@ -4,9 +4,9 @@ class HeaderMenu {
   }
 
   _addEventListeners() {
-    $('.js-menu__link').on('click.menu', this._onClickLink.bind(this));
-    $('.js-header-menu__icon').on('click.menu', this._onClickIcon);
-    $('.js-menu .js-menu__list').on('mouseleave.menu', this._onMouseLeaveList.bind(this));
+    $('.js-menu__link').on('click.menu', this._handleMenuLinkClick.bind(this));
+    $('.js-header-menu__icon').on('click.menu', this._handleHeaderMenuIconClick);
+    $('.js-menu__list').on('mouseleave.menu', this._handleMenuListMouseLeave.bind(this));
   }
 
   _closeAllOpenMenuItems($li) {
@@ -15,7 +15,7 @@ class HeaderMenu {
     ulChild.children().each((index, element) => { this._closeAllOpenMenuItems($(element)); });
   }
 
-  _onClickLink(e) {
+  _handleMenuLinkClick(e) {
     const li = $(e.currentTarget).parent();
     const ul = li.find('> ul');
     const ulParent = li.parent();
@@ -27,7 +27,7 @@ class HeaderMenu {
     });
   }
 
-  _onClickIcon(e) {
+  _handleHeaderMenuIconClick(e) {
     const $icon = $(e.currentTarget);
     const $list = $icon.parent().find('.header-menu__list');
     if ($list.hasClass('header-menu__list_show')) {
@@ -39,7 +39,7 @@ class HeaderMenu {
     }
   }
 
-  _onMouseLeaveList(e) {
+  _handleMenuListMouseLeave(e) {
     const $list = $(e.currentTarget);
     if ($list.parent().find('.header-menu__list_show')) {
       $list.children().each((index, element) => {

@@ -4,10 +4,10 @@ class ExpandableCheckboxList {
   }
 
   _addEventListeners(element) {
-    $(element).on('click.ecl', this._onClickEvent);
+    $(element).on('click.ecl', this._handleElementClick);
   }
 
-  _onClickEvent() {
+  _handleElementClick() {
     const $list = $(this).parent().find('.expandable-checkbox-list__list');
     $list.toggleClass('expandable-checkbox-list__list_show');
     const $caption = $(this).parent().find('.expandable-checkbox-list__caption');
