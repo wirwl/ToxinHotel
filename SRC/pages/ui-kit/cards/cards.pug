@@ -19,15 +19,19 @@ html(lang="ru")
     .column1
       ul.column1__list
         li.column1__item
-          +room-reservation-form
+          +room-reservation-form({title:"Найдём номера под ваши пожелания"})
         li.column1__item       
-          +sign-up-form 
+          +sign-up-form({caption:"Регистрация аккаунта", isThereAccount: "Уже есть аккаунт на Toxin"}) 
     .column2
       ul.column2__list
         li.column2__item
-          +order-info-form
+          +order-info-form({items:[{text:"9 990₽ х 4 суток", cost:"39 960₽"},
+                                   {text:"Сбор за услуги: скидка 2 179₽", tooltip: "Скидка 20%", cost:"0₽" },
+                                   {text:"Сбор за дополнительные услуги", tooltip: "Виды дополнительных услуг: уборка, массаж пяток", cost:"300₽"}
+          ], summaryText: "Итого", summaryValue:"38 081₽"
+          })
         li.column2__item
-          +sign-in-form
+          +sign-in-form({caption:"Войти", textThereIsNotAccount: "Нет аккаунта на Toxin?"})
     .column3
       ul.column3__list
         li.column3__item

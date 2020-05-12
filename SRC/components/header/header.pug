@@ -3,7 +3,7 @@ include ../header-menu/header-menu
 include ../button-filled/button-filled
 include ../button-bordered/button-bordered
 
-mixin header({isAuth, logo_path, login="Login", menu, reg="Register"})
+mixin header({isAuth, logo_path, login="Login", menu, reg="Register", name="Cosmin Negoita"})
   header.header(class=isAuth && "header_auth-true")    
     .header__logo
       +logo({path:logo_path})
@@ -14,4 +14,4 @@ mixin header({isAuth, logo_path, login="Login", menu, reg="Register"})
         +button-bordered({text: login})      
       .header__button-filled(class=isAuth && "header__button-filled_hide")
         +button-filled({text: reg, dynamic_height:true})
-      .header__auth-name(class=isAuth && "header__auth-name_show") Cosmin Negoita
+      .header__auth-name(class=isAuth && "header__auth-name_show") #{name}

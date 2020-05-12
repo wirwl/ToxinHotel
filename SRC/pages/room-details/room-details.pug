@@ -29,7 +29,7 @@ html(lang="en")
                 {icon:"location_city", caption:"Удобство", text:"Окно в каждой из спален"},
                 {icon:"whatshot", caption:"Уют", text:"Номер оснащён камином", isHideLine:true}])
             .room-details__wrapper-donut-chart
-              +donut-chart
+              +donut-chart({caption: "Впечатления от номера", id:"donut-chart", voices:"260"})
           .room-details__wrapper-fl
             +feedback-list({caption:"Отзывы посетителей номера", count:"2 отзыва",
               feedbacks:[{image:{alt:"avatar", src:"../../images/avatar.jpg"}, 
@@ -50,6 +50,10 @@ html(lang="en")
               p.room-details__cancellation-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
         section.room-details__column2      
           .room-details__column2-wrapper-order-info-form
-            +order-info-form
+            +order-info-form({items:[{text:"9 990₽ х 4 суток", cost:"39 960₽"},
+                                   {text:"Сбор за услуги: скидка 2 179₽", tooltip: "Скидка 20%", cost:"0₽" },
+                                   {text:"Сбор за дополнительные услуги", tooltip: "Виды дополнительных услуг: уборка, массаж пяток", cost:"300₽"}
+          ], summaryText: "Итого", summaryValue:"38 081₽"
+          })
     +footer(footer_data)
     script(type="text/javascript" src="room-details.js")

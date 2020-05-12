@@ -1,5 +1,5 @@
-mixin social-buttons
+mixin social-buttons({iconTwitter, iconFacebook, iconInstagram})
   .social-buttons
-    a.social-buttons__button.social-buttons__twitter(href="#") twitter
-    a.social-buttons__button.social-buttons__facebook(href="#") facebook-square
-    a.social-buttons__button.social-buttons__instagram(href="#") instagram
+    a.social-buttons__button.social-buttons__twitter(href="#") #{iconTwitter}
+    a.social-buttons__button.social-buttons__facebook(href="#") #{iconFacebook}
+    a.social-buttons__button.social-buttons__instagram(href="#") #{iconInstagram}

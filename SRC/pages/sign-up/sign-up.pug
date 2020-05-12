@@ -15,6 +15,6 @@ html(lang="en")
     +header(header_data)     
     main.main-content
       section.main-content__sign-up-form
-        +sign-up-form
+        +sign-up-form({caption:"Регистрация аккаунта", isThereAccount:"Уже есть аккаунт на Toxin"})
     +footer(footer_data)
     script(type="text/javascript" src="sign-up.js")

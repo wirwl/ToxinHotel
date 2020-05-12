@@ -5,10 +5,10 @@ include ../toggle/toggle
 include ../button-arrow/button-arrow
 include ../button-bordered/button-bordered
 
-mixin sign-up-form
+mixin sign-up-form({caption, isThereAccount})
   form(method="post" action="#").sign-up-form
     fieldset.sign-up-form__main-content
-      legend.sign-up-form__caption Регистрация аккаунта            
+      legend.sign-up-form__caption #{caption}
       ul.sign-up-form__list
         li.sign-up-form__item
           +text-input({placeholder:"Имя", isRequired:true})        
@@ -31,6 +31,6 @@ mixin sign-up-form
       .sign-up-form__wrapper-for-sign-up-button
         +button-arrow({text:"Перейти к оплате", type:"submit"})        
       .sign-up-form__wrapper-for-sign-in-button
-        p.sign-up-form__sign-in-text Уже есть аккаунт на Toxin
+        p.sign-up-form__sign-in-text #{isThereAccount}
         .sign-up-form_wrapper-sign-in-button
           +button-bordered({text:"Войти", dynamic_height:true, dynamic_width: true})

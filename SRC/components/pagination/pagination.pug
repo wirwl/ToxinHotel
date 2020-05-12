@@ -1,4 +1,4 @@
-mixin pagination({pages, page, showed, showedlastpage, total})
+mixin pagination({pages, page, showed, showedlastpage, total, caption})
   .pagination
     .pagination__buttons.js-pagination__buttons(data-pages=pages data-page=page data-showed=showed data-showedlastpage=showedlastpage data-total=total)  
-    p.pagination__caption 1 – 12 из 100+ вариантов аренды
+    p.pagination__caption #{caption}

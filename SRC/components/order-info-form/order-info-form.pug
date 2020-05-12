@@ -4,7 +4,7 @@ include ../datepicker-input/datepicker-input
 include ../guests-input/guests-input
 include ../button-arrow/button-arrow
 
-mixin order-info-form
+mixin order-info-form({items, summaryText, summaryValue})
   form.order-info-form(method="post" action="#")
     fieldset.order-info-form__wrapper-main
       .order-info-form__wrapper-for-room-info-caption
@@ -20,23 +20,17 @@ mixin order-info-form
           +guests-input({caption:"Гости", items: [{id:'adults', text: 'Взрослые'}, {id:'children', text:'Дети'}, {id:'babies', text:'Младенцы'}] })
         li.order-info-form__item
           table.order-info-form__table
-            tr.order-info-form__row
-              td.order-info-form__cell-text 9 990₽ х 4 суток
-              td.order-info-form__cell-tooltip
-              td.order-info-form__cell-value 39 960₽
-            tr.order-info-form__row
-              td.order-info-form__cell-text Сбор за услуги: скидка 2 179₽
-              td.order-info-form__cell-tooltip
-                +tooltip({text:"Скидка 20%"})
-              td.order-info-form__cell-value 0₽
-            tr.order-info-form__row
-              td.order-info-form__cell-text Сбор за дополнительные услуги
-              td.order-info-form__cell-tooltip
-                +tooltip({text:"Виды дополнительных услуг: уборка, массаж пяток"})
-              td.order-info-form__cell-value 300₽             
+            for item in items
+              - const {text, tooltip, cost} = item
+                tr.order-info-form__row
+                  td.order-info-form__cell-text #{text}
+                  td.order-info-form__cell-tooltip
+                    if (tooltip) 
+                      +tooltip({text: tooltip})
+                  td.order-info-form__cell-value #{cost}     
       .order-info-form__total
-        h2.order-info-form__total-text Итого
+        h2.order-info-form__total-text #{summaryText}
         .order-info-form__total-line
-        h2.order-info-form__total-value 38 081₽ 
+        h2.order-info-form__total-value #{summaryValue}
       +button-arrow({text:"Забронировать", type:"submit"})
 

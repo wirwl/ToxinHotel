@@ -3,10 +3,10 @@ include ../text-input/text-input
 include ../datepicker-input/datepicker-input
 include ../guests-input/guests-input
 
-mixin room-reservation-form
+mixin room-reservation-form({title})
   form.room-reservation-form(method="post" action="pages/search-room/sr.html")
     fieldset.room-reservation-form__wrapper-for-inputs
-      legend.room-reservation-form__title Найдём номера под ваши пожелания
+      legend.room-reservation-form__title #{title}
       ul.room-reservation-form__list(role="none presentation")    
         li.room-reservation-form__item
           fieldset.room-reservation-form__wrapper-for-dates
