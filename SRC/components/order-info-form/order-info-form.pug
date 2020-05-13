@@ -12,10 +12,10 @@ mixin order-info-form({items, summaryText, summaryValue})
       ul.order-info-form__list
         li.order-info-form__item
           ul.order-info-form__dates-list
-            li.order-info-form__dates-item
-              +datepicker-input({caption:"Прибытие", placeholder:"ДД.ММ.ГГГГ", id:"oi-form__start-input"})
-            li.order-info-form__dates-item
-              +datepicker-input({caption:"Выезд", placeholder:"ДД.ММ.ГГГГ", id:"oi-form__end-input", hasDatepicker:false})
+            li.order-info-form__dates-item.order-info-form__arrival
+              +datepicker-input({caption:"Прибытие", placeholder:"ДД.ММ.ГГГГ"})
+            li.order-info-form__dates-item.order-info-form__checkout
+              +datepicker-input({caption:"Выезд", placeholder:"ДД.ММ.ГГГГ", hasDatepicker:false})
         li.order-info-form__item
           +guests-input({caption:"Гости", items: [{id:'adults', text: 'Взрослые'}, {id:'children', text:'Дети'}, {id:'babies', text:'Младенцы'}] })
         li.order-info-form__item

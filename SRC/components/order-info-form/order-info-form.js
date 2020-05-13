@@ -4,8 +4,8 @@ class OrderInfoForm {
   }
 
   _init(arrivalClass, checkoutClass) {
-    this._$arrival = $(arrivalClass);
-    this._$checkout = $(checkoutClass);
+    this._$arrival = $(arrivalClass).find('.datepicker-input__input');
+    this._$checkout = $(checkoutClass).find('.datepicker-input__input');
 
     if (this._$arrival.length) {
       this._$arrival.datepicker({
@@ -24,4 +24,4 @@ class OrderInfoForm {
   }
 }
 
-new OrderInfoForm('#oi-form__start-input', '#oi-form__end-input');
+new OrderInfoForm('.order-info-form__arrival', '.order-info-form__checkout');

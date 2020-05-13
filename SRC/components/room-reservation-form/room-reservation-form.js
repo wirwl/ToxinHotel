@@ -4,8 +4,8 @@ class RoomReservationForm {
   }
 
   _init(arrivalClass, checkoutClass) {
-    this._$arrival = $(arrivalClass);
-    this._$checkout = $(checkoutClass);
+    this._$arrival = $(arrivalClass).find('.datepicker-input__input');
+    this._$checkout = $(checkoutClass).find('.datepicker-input__input');
 
     if (this._$arrival.length) {
       this._$arrival.datepicker({
@@ -24,4 +24,4 @@ class RoomReservationForm {
   }
 }
 
-new RoomReservationForm('#rr-form__start-input', '#rr-form__end-input');
+new RoomReservationForm('.room-reservation-form__arrival', '.room-reservation-form__checkout');

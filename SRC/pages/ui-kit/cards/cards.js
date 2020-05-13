@@ -28,8 +28,8 @@ datepicker.update('onRenderCell', (date, cellType) => {
   return '';
 });
 
-$('#oi-form__start-input').data('datepicker').update('minDate', null);
-$('#oi-form__start-input').data('datepicker').selectDate([
+$('.order-info-form__arrival').find('.datepicker-input__input').data('datepicker').update('minDate', null);
+$('.order-info-form__arrival').find('.datepicker-input__input').data('datepicker').selectDate([
   new Date('2019-08-19'),
   new Date('2019-08-23'),
 ]);
