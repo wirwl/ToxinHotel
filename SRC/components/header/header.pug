@@ -4,12 +4,12 @@ include ../button-filled/button-filled
 include ../button-bordered/button-bordered
 
 mixin header({isAuth, logo_path, login="Login", menu, reg="Register", name="Cosmin Negoita"})
-  header.header(class=isAuth && "header_auth-true")    
+  header.header
     .header__logo
       +logo({path:logo_path})
     .header__header-menu
       +header-menu(menu)
-    .header__auth-area
+    .header__auth-area(class=isAuth && "header__auth-area_is-auth")
       .header__button-bordered(class=isAuth && "header__button-bordered_hide")
         +button-bordered({text: login})      
       .header__button-filled(class=isAuth && "header__button-filled_hide")

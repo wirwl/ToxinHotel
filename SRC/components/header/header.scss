@@ -28,7 +28,7 @@
     align-items: center;
   }
 
-  &_auth-true .header__auth-area {
+  &__auth-area_is-auth {
     justify-content: flex-end;
     flex-basis: auto;
   }
