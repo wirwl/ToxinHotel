@@ -47,10 +47,10 @@ mixin MenuItems(items)
           +MenuItems(mi.sm)
 
 mixin createHTMLtags({sm, isBold, link, text})
-  - var cs = sm && "header-menu__list_arrow"
+  - var cs = sm ? "header-menu__list_arrow": ""
   li.header-menu__item(class=sm && "header-menu__item_sub-menu")
-    a.header-menu__link.js-menu__link(class=cs+(isBold && "header-menu__link_bold") href=link) #{text}
-    block      
+    a.header-menu__link.js-menu__link(class=cs+(isBold ? "header-menu__link_bold": "") href=link) #{text}
+    block     
 
 mixin favicon({path=""} = {}, publicPath)
   link(rel="apple-touch-icon" sizes="180x180" href=path+"apple-touch-icon.png")
