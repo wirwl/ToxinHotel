@@ -19,7 +19,7 @@ html(lang="en")
   body        
     +header(header_data)     
     main.main-content
-      +room-images(["../../components/room-images/left-image.jpg", "../../components/room-images/right-top-image.jpg", "../../components/room-images/right-bottom-image.jpg"]) 
+      +room-images(["../../components/room-images/images/left-image.jpg", "../../components/room-images/images/right-top-image.jpg", "../../components/room-images/images/right-bottom-image.jpg"]) 
       .room-details
         section.room-details__column1
           .room-details__common-wrapper1
@@ -32,10 +32,10 @@ html(lang="en")
               +donut-chart({caption: "Впечатления от номера", id:"donut-chart", voices:"260"})
           .room-details__wrapper-fl
             +feedback-list({caption:"Отзывы посетителей номера", count:"2 отзыва",
-              feedbacks:[{image:{alt:"avatar", src:"../../images/avatar.jpg"}, 
+              feedbacks:[{image:{alt:"avatar", src:"../../components/feedback-list/images/avatar.jpg"}, 
               like:{count: 12, isChecked:true},
               caption:"Мурад Сарафанов", time:"5 дней назад", text:"Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."},
-              {image:{alt:"avatar2", src:"../../images/avatar-2.jpg"}, 
+              {image:{alt:"avatar2", src:"../../components/feedback-list/images/avatar-2.jpg"}, 
               like:{count: 2},
               caption:"Патрисия Стёклышкова", time:"Неделю назад", text:"Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент."}
               ]})

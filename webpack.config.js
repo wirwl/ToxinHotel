@@ -121,7 +121,7 @@ module.exports = ((env, argv) => {
         },
         {
           test: /\.(png|jpe?g|gif|svg)$/,
-          include: /(components)/,
+          include: /(components|pages)/,
           loader: 'file-loader',
           options: {
             context: 'SRC',
