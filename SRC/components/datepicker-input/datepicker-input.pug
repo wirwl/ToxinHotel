@@ -1,6 +1,6 @@
-mixin datepicker-input({hasDatepicker=true, id, caption, type, placeholder})  
+mixin datepicker-input({hasDatepicker=true, caption, type, placeholder})  
   .datepicker-input
     if caption
-      label.datepicker-input__caption(for=id) #{caption}
+      label.datepicker-input__caption #{caption}
     .datepicker-input__wrapper
-      input.datepicker-input__input(readonly id=id type=type placeholder=placeholder class=(hasDatepicker && "toxin-datepicker js-toxin-datepicker"))
+      input.datepicker-input__input(readonly type=type placeholder=placeholder class=(hasDatepicker && "toxin-datepicker js-toxin-datepicker"))
