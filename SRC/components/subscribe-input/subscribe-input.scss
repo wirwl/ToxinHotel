@@ -1,5 +1,6 @@
 .subscribe-input {
   font-family: $toxin-font-montserrat;
+  width: 100%;
 
   &__caption {
     display: inline-block;
@@ -32,10 +33,6 @@
   &__wrapper {
     position: relative;
     overflow: visible;
-  }
-
-  & {
-    width: 100%;
   }
 
   &__wrapper:after {

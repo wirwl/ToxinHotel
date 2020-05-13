@@ -2,8 +2,7 @@ include ../radio/radio
 
 mixin radios-list({caption, radios, name})
   .radios-list  
-    if caption
-      h3.radios-list__caption #{caption}       
+    h3.radios-list__caption #{caption}       
     ul.radios-list__list       
       for radio in radios
         - radio.name=name

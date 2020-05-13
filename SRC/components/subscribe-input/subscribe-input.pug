@@ -1,6 +1,5 @@
 mixin subscribe-input({caption, placeholder})
   .subscribe-input
-    if caption
-      label.subscribe-input__caption #{caption}
+    label.subscribe-input__caption #{caption}
     .subscribe-input__wrapper 
       input.subscribe-input__input(type="email" placeholder=placeholder)
