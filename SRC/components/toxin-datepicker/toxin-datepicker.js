@@ -30,25 +30,32 @@ class ToxinDatepicker {
     DatePickers.append(this._htmlButtonsTemplate);
     const $clears = $('.js-datepicker__button-clear');
     $clears.each((index, element) => {
-      $(element).on('click.clearButton', () => {
-        const dp = this.findDatepicker(this._$rootElementClass, $(element).parent().parent());
-        if (dp) dp.clear();
-      });
+      $(element).on('click.clearButton', this._handleDatepickerButtonClearClick.bind(this));
     });
     const $apply = $('.js-datepicker__button-apply');
     $apply.each((index, element) => {
-      $(element).on('click.applyButton', () => {
-        const dp = this.findDatepicker(this._$rootElementClass, $(element).parent().parent());
-        if (dp) dp.hide();
-      });
+      $(element).on('click.applyButton', this._handleDatepickerButtonApplyClick.bind(this));
     });
   }
 
-  findDatepicker(tds, d) {
+  _handleDatepickerButtonClearClick(event) {
+    console.log(this._$rootElementClass);
+    const dp = this._findDatepicker(this._$rootElementClass,
+      $(event.currentTarget).parent().parent());
+    if (dp) dp.clear();
+  }
+
+  _handleDatepickerButtonApplyClick(event) {
+    const dp = this._findDatepicker(this._$rootElementClass,
+      $(event.currentTarget).parent().parent());
+    if (dp) dp.hide();
+  }
+
+  _findDatepicker(tds, d) {
     let result = null;
     tds.each((index, element) => {
       const $td = $(element);
-      if ($td.data('datepicker').$datepicker.is(d)) { result = $td.data('datepicker'); }
+      if ($td.data('datepicker').$datepicker.is(d)) result = $td.data('datepicker');
     });
     return result;
   }

@@ -9,7 +9,7 @@ class Pagination {
     this._page = this._$paginationButtons.data('page');
 
     this._$paginationButtons.html(this.createPagination(this._pages, this._page));
-    this._addEventListenerClick.bind(this)(this._$paginationButtons);
+    this._addEventListenerClick(this._$paginationButtons);
   }
 
   _addEventListenerClick(pagination) {
@@ -17,7 +17,9 @@ class Pagination {
     lis.each((index, element) => {
       const $element = $(element);
       const datapage = $element.data('page');
-      if (datapage) { $element.on('click.pagination', () => { this.createPagination(this._pages, datapage); }); }
+      if (datapage) {
+        $element.on('click.pagination', this.createPagination.bind(this, this._pages, datapage));
+      }
     });
   }
 
@@ -73,7 +75,7 @@ class Pagination {
 
     if (page < pages) {
       str += `<li class="pagination__item next pagination__item_no"><a data-page="${page + 1}"class="pagination__link material-icons">arrow_forward</a></li>`;
-      $('#next').on('click.nextButton', () => { this.createPagination(pages, page + 1); });
+      $('#next').on('click.nextButton', this.createPagination.bind(this, pages, page + 1));
     }
     str += '</ul>';
 

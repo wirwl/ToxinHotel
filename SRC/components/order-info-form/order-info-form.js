@@ -17,11 +17,14 @@ class OrderInfoForm {
     }
 
     if (this._$checkout.length) {
-      this._$checkout.on('click', () => {
-        this._$arrival.data('datepicker').show();
-      });
+      this._$checkout.on('click', this._handleDatepickerInputInputClick.bind(this));
     }
   }
+
+  _handleDatepickerInputInputClick() {
+    this._$arrival.data('datepicker').show();
+  }
 }
+
 
 new OrderInfoForm('.order-info-form__arrival', '.order-info-form__checkout');

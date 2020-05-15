@@ -17,10 +17,12 @@ class RoomReservationForm {
     }
 
     if (this._$checkout.length) {
-      this._$checkout.on('click', () => {
-        this._$arrival.data('datepicker').show();
-      });
+      this._$checkout.on('click', this._handleDatePickerInputInputClick.bind(this));
     }
+  }
+
+  _handleDatePickerInputInputClick() {
+    this._$arrival.data('datepicker').show();
   }
 }
 

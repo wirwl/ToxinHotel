@@ -42,11 +42,3 @@
 
 ## Project demo (website pages)
 ![demo.gif](demo.gif)
-
-  
-
-
-
-
-
-
