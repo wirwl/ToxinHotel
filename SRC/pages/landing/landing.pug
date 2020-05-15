@@ -1,0 +1,22 @@
+extends ../../template
+
+include ../../components/pages/landing/landing
+
+block variables
+  - let lang = "en"
+  - let title = "Бронирование номера"
+  - let description = "Hotel with finding and reservation rooms"
+  - let keywords = "main page, hotel, rooms, booking"
+  - let path = "../../"
+  - let css = "landing.css"
+
+block content
+  +landing({
+    headerData: header_data,
+    roomReservationForm: {title:"Найдём номера под ваши пожелания"},
+    advertisingText: "Лучшие номера для вашей работы, отдыха и просто вдохновения",
+    footerData: footer_data
+  })
+
+block script
+  script(type="text/javascript" src="landing.js")

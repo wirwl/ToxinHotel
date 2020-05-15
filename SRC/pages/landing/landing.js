@@ -1,4 +1,4 @@
-import './landing-page.scss';
+import './landing.scss';
 
 import '../../favicons/favicons';
 

@@ -1,24 +1,11 @@
-@import "../../../node_modules/item-quantity-dropdown/lib/item-quantity-dropdown.min.css";
-@import "../../../node_modules/air-datepicker/dist/css/datepicker.css";
-
-* {
-  @include reset;
-}
-
-html {
-  @include define-html;
-}
-
-body {
-  @include define-body;
-}
-
-.main-content {
-  width: 100%;
-  min-height: 830px;
-  position: relative;
-  padding-top: 70px;
-  background: url("index.jpg") no-repeat;
+.landing {
+  &__main-content {
+    width: 100%;
+    min-height: 830px;
+    position: relative;
+    padding-top: 70px;
+    background: url("index.jpg") no-repeat;
+  }
 
   &__form {
     margin-left: 9.375%;

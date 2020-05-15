@@ -52,7 +52,7 @@ mixin createHTMLtags({sm, isBold, link, text})
     a.header-menu__link.js-menu__link(class=cs+(isBold ? "header-menu__link_bold": "") href=link) #{text}
     block     
 
-mixin favicon({path=""} = {}, publicPath)
+mixin favicon({path=""} = {})
   link(rel="apple-touch-icon" sizes="180x180" href=path+"apple-touch-icon.png")
   link(rel="icon" type="image/png" sizes="32x32" href=path+"favicon-32x32.png")
   link(rel="icon" type="image/png" sizes="16x16" href=path+"favicon-16x16.png")

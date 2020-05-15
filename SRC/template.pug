@@ -1,0 +1,14 @@
+include common
+
+block variables
+
+doctype html
+html(lang=lang)
+  head    
+    title #{title}
+    +meta-tags({description: description, keywords: keywords})      
+    +favicon({path: path})
+    link(href=css rel="stylesheet")
+  body      
+    block content    
+    block script

@@ -203,7 +203,7 @@ module.exports = ((env, argv) => {
   const uikitfeCFG = AddHTMLPage({ common_filename: 'form-elements', input_path: 'SRC/pages/ui-kit/form-elements', publicPath: '../../../' });
   const uikitcardsCFG = AddHTMLPage({ common_filename: 'cards', input_path: 'SRC/pages/ui-kit/cards', publicPath: '../../../' });
   // ---Site-Pages-----------
-  const landingpageCFG = AddHTMLPage({ common_filename: 'landing-page', input_path: 'SRC/pages/landing-page', publicPath: '../../' });
+  const landingpageCFG = AddHTMLPage({ common_filename: 'landing', input_path: 'SRC/pages/landing', publicPath: '../../' });
   const searchroomCFG = AddHTMLPage({ common_filename: 'search-room', input_path: 'SRC/pages/search-room', publicPath: '../../' });
   const roomdetailsCFG = AddHTMLPage({ common_filename: 'room-details', input_path: 'SRC/pages/room-details', publicPath: '../../' });
   const signupCFG = AddHTMLPage({ common_filename: 'sign-up', input_path: 'SRC/pages/sign-up', publicPath: '../../' });

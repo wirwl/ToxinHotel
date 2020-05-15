@@ -1,25 +1,38 @@
-include ../../common
+extends ../../template
 
-doctype html
-html(lang="en")
-  head    
-    +meta-tags({description:"Index page", keywords:"hotel, booking"})    
-    title Index page
-    +favicon       
-    link(href="index.css" rel="stylesheet")
-  body
-    .pages
-      h1.pages__title Watch result on github.io
-      h3.pages__uikit UI Kit
-      ul.pages__list
-        li.pages__list-item: a(href="pages/ui-kit/colors-type/colors-type.html") Colors & Type
-        li.pages__list-item: a(href="pages/ui-kit/form-elements/form-elements.html") Form Elements
-        li.pages__list-item: a(href="pages/ui-kit/cards/cards.html") Cards
-        li.pages__list-item: a(href="pages/ui-kit/headers-footers/headers-footers.html") Headers & Footers
-      h2.pages__website-pages Website pages
-      ul.pages__list
-        li.pages__list-item: a(href="pages/landing-page/landing-page.html") Landing page
-        li.pages__list-item: a(href="pages/search-room/search-room.html") Search room/Filter
-        li.pages__list-item: a(href="pages/room-details/room-details.html") Room details
-        li.pages__list-item: a(href="pages/sign-up/sign-up.html") Registration
-        li.pages__list-item: a(href="pages/sign-in/sign-in.html") Sign in
+include ../../components/pages/index/index
+
+block variables
+  - let lang = "en"
+  - let title = "Все страницы проекта"
+  - let description = "Index page"
+  - let keywords = "hotel, booking"
+  - let css = "index.css"
+
+block content
+  +index({                        
+      mainTitle:"Watch result on github.io",
+      items:[
+        {
+          title: "UI Kit",
+          path: "pages/ui-kit/",
+          hyperlinks: [
+            {link:"colors-type/colors-type", text:"Colors & Type"},
+            {link:"form-elements/form-elements", text:"Form Elements"},
+            {link:"cards/cards", text:"Cards"},
+            {link:"headers-footers/headers-footers", text:"Headers & Footers"}
+            ]
+        },
+        {
+          title: "Website pages",
+          path: "pages/",
+          hyperlinks: [
+            {link:"landing/landing", text:"Landing page"},
+            {link:"search-room/search-room", text:"Search room/Filter"},
+            {link:"room-details/room-details", text:"Room details"},
+            {link:"sign-up/sign-up", text:"Registration"},
+            {link:"sign-in/sign-in", text:"Sign in"}
+          ]
+        }
+      ]
+    })

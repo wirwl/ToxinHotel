@@ -1,0 +1,10 @@
+mixin index({mainTitle, items})
+  .index
+    h1.index__title #{mainTitle}
+    for item in items
+      - const {title, path, hyperlinks} = item
+      h3.index__uikit #{title}
+      ul.index__list
+        for hyperlink in hyperlinks
+          - const {link, text} = hyperlink
+          li.index__list-item: a(href=path + link + ".html") #{text}
