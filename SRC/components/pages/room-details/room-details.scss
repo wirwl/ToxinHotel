@@ -1,0 +1,147 @@
+.room-details {
+  &__main-content {
+    width: 100%;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    padding: 70px 4px;
+    padding-bottom: 61px;
+    border-bottom: 1px solid $toxin-color-black-10;
+  }
+  
+  &__column1 {
+    max-width: 710px;
+    margin-right: 70px;
+  }
+
+  &__common-wrapper1 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+  &__common-wrapper2 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__cancellation {
+    flex-basis: 46%;
+  }
+
+  &__bullets-list {
+    flex-basis: 37%;
+    margin-right: 13.802816%;
+  }
+
+  &__bullets-list-caption {
+    text-transform: none;
+    padding-left: 19px;
+    margin-bottom: 17px;
+  }
+
+  &__cancellation-caption {
+    text-transform: none;
+    margin-bottom: 16px;
+  }
+
+  &__cancellation-text {
+    line-height: 24px;
+  }
+
+  &__wrapper-csl {
+    margin-right: 15.07042253521127%;
+  }
+
+  &__wrapper-csl-caption,
+  &__bullets-list-caption,
+  &__cancellation-caption {
+    font-size: 19px;
+    font-family: $toxin-font-open-sans;
+  }
+
+  &__wrapper-csl-caption {
+    margin-bottom: 19px;
+  }
+
+  &__wrapper-csl-caption {
+    text-transform: none;
+  }
+
+  &__wrapper-donut-chart {
+    width: 43.7%;
+  }
+
+  &__wrapper-fl {
+    margin-bottom: 32px;
+  }
+
+  &__column2 {
+    flex-basis: 380px;
+  }
+
+  &__column2-wrapper-order-info-form {
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 1185px) {
+    &__wrapper-donut-chart {
+      width: auto;
+    }
+
+    &__column1 {
+      margin-right: 20px;
+    }
+  }
+
+  @media (max-width: 1085px) {
+    &__column1 {
+      margin-right: 0;
+    }
+
+    &__wrapper-csl {
+      margin-right: 10px;
+    }
+
+    &__common-wrapper1 {
+      justify-content: space-between;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap-reverse;
+    padding: 10px 4px;
+
+    &__common-wrapper1 {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 379px) {
+    &__column2 {
+      flex-basis: 100%;
+    }
+
+    &__common-wrapper1 {
+      justify-content: center;
+    }
+
+    &__bullets-list {
+      min-width: 312px;
+    }
+
+    &__cancellation {
+      flex-basis: auto;
+    }
+  }
+}
+
+.header .header-menu > .header-menu__list > .header-menu__item.header-menu__item:not(:last-of-type) {
+  margin-right: 20px;
+}
+
+.header .header__header-menu {
+  margin-right: 20px;
+}
