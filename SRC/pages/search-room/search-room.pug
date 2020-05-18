@@ -1,53 +1,34 @@
-include ../../common
-include ../../components/header/header
-include ../../components/footer/footer
-include ../../components/datepicker-input/datepicker-input
-include ../../components/guests-input/guests-input
-include ../../components/range-slider/range-slider
-include ../../components/checkboxes-list/checkboxes-list
-include ../../components/comfort-input/comfort-input
-include ../../components/expandable-checkbox-list/expandable-checkbox-list
-include ../../components/pagination/pagination
-include ../../components/room-info/room-info
-include ../../components/rooms-by-filter/rooms-by-filter
+extends ../../template
 
-doctype html
-html(lang="en")
-  head
-    +meta-tags({description:"Search room", keywords:"search, room, filter, list of rooms"})    
-    title Поиск номеров
-    +favicon({path:"../../"})
-    link(href="search-room.css" rel="stylesheet")
-  body        
-    +header(header_data)      
-    main.main-content       
-      .main-content__wrapper
-        section.filters
-          ul.filters__list
-            li.filters__item.filters__wrapper-datepicker-input
-              +datepicker-input({id:"filters_di", caption:"Даты пребывания в отеле", placeholder:"Выберите дату"})
-            li.filters__item.filters__wrapper-guests-input
-              +guests-input({caption:"Гости", items: [{id:'adults', text: 'Взрослые', count: 2}, {id:'children', text:'Дети', count: 1}, {id:'babies', text:'Младенцы', count: 1}] })
-            li.filters__item.filters__wrapper-range-slider
-              +range-slider({ctext:"Диапазон цены", min:0, max:15000, from: 4500, to:9600, desc:"Стоимость за сутки пребывания в номере" })
-            li.filters__item.filters__wrapper-range-cost
-              +checkboxes-list({caption:"checkbox buttons", checkboxes:[{text:"Можно курить"},
+include ../../components/pages/search-room/search-room
+
+block variables
+  - let lang = "en"
+  - let title = "Поиск номеров"
+  - let description = "Search room"
+  - let keywords = "search, room, filter, list of rooms"
+  - let path = "../../"
+  - let css = "search-room.css"
+
+block content
+  +search-room({
+    headerData: header_data,
+    datepickerInput: {id:"filters_di", caption:"Даты пребывания в отеле", placeholder:"Выберите дату"},
+    guestsInput: {caption:"Гости", items: [{id:'adults', text: 'Взрослые', count: 2}, {id:'children', text:'Дети', count: 1}, {id:'babies', text:'Младенцы', count: 1}] },
+    rangeSlider: {ctext:"Диапазон цены", min:0, max:15000, from: 4500, to:9600, desc:"Стоимость за сутки пребывания в номере" },
+    checkboxesListMisc: {caption:"checkbox buttons", checkboxes:[{text:"Можно курить"},
                 {text:"Можно с питомцами", isChecked:true},
                 {text:"Можно пригласить гостей (до 10 человек)",isChecked:true}
-                ]})               
-            li.filters__item.filters__wrapper-accessibility
-              +checkboxes-list({caption:"Доступность", 
+                ]},
+    checkboxesListAccessibility: {caption:"Доступность", 
                 checkboxes:[{text:"Широкий коридор", desc:"Ширина коридоров в номере не менее 91 см."},
-                  {text:"Помощник для инвалидов", desc:"На 1 этаже вас встретит специалист и проводит до номера."}]})
-            li.filters__item.filters__wrapper-comfort
-              +comfort-input({caption:"Удобства номера", 
+                  {text:"Помощник для инвалидов", desc:"На 1 этаже вас встретит специалист и проводит до номера."}]},
+    comfortInput: {caption:"Удобства номера", 
                 iqdd:{isExpanded:false, placeholder:"", 
                   items:[{id:"bedrooms", name:"СПАЛЬНИ", defaultcount:2},
                     {id:"beds", name:"КРОВАТИ", defaultcount:2},
-                    {id:"bathrooms", name:"ВАННЫЕ КОМНАТЫ"}] }})
-
-            li.filters__item   
-              +expandable-checkbox-list({isExpand:false, caption:"Дополнительные удобства", checkboxes:[{id:"bf", text:"Завтрак"},
+                    {id:"bathrooms", name:"ВАННЫЕ КОМНАТЫ"}] }},              
+    expandableCheckboxList: {isExpand:false, caption:"Дополнительные удобства", checkboxes:[{id:"bf", text:"Завтрак"},
                 {text:"Письменный стол", isChecked:true},
                 {text:"Стул для кормления", isChecked:true},
                 {text:"Кроватка", isChecked:true},
@@ -55,7 +36,10 @@ html(lang="en")
                 {text:"Шампунь"},
                 {text:"Телевизор"},
                 {text:"Шампунь"}
-                ]})                                                                                     
-        +rooms-by-filter({title: 'Номера, которые мы для вас подобрали'})
-    +footer(footer_data)
-    script(type="text/javascript" src="search-room.js")
+                ]},
+    roomsByFilter: {title: 'Номера, которые мы для вас подобрали'},
+    footerData: footer_data
+  })
+
+block script
+  script(type="text/javascript" src="search-room.js")

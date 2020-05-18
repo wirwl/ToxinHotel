@@ -1,0 +1,35 @@
+include ../../header/header
+include ../../footer/footer
+include ../../datepicker-input/datepicker-input
+include ../../guests-input/guests-input
+include ../../range-slider/range-slider
+include ../../checkboxes-list/checkboxes-list
+include ../../comfort-input/comfort-input
+include ../../expandable-checkbox-list/expandable-checkbox-list
+include ../../pagination/pagination
+include ../../room-info/room-info
+include ../../rooms-by-filter/rooms-by-filter
+
+mixin search-room({headerData, datepickerInput, guestsInput, rangeSlider, checkboxesListMisc, checkboxesListAccessibility, comfortInput, expandableCheckboxList, roomsByFilter, footerData })
+  .search-room
+    +header(headerData)      
+    main.search-room__main-content       
+      .search-room__wrapper
+        section.search-room__filters
+          ul.search-room__filters-list
+            li.search-room__filters-item.search-room__datepicker-input
+              +datepicker-input(datepickerInput)
+            li.search-room__filters-item.search-room__guests-input
+              +guests-input(guestsInput)
+            li.search-room__filters-item.search-room__range-slider
+              +range-slider(rangeSlider)
+            li.search-room__filters-item.search-room__checkboxes-list-misc
+              +checkboxes-list(checkboxesListMisc)
+            li.search-room__filters-item.search-room__checkboxes-list-acc
+              +checkboxes-list(checkboxesListAccessibility)
+            li.search-room__filters-item.search-room__comfort-input
+              +comfort-input(comfortInput)
+            li.search-room__filters-item
+              +expandable-checkbox-list(expandableCheckboxList)
+        +rooms-by-filter(roomsByFilter)
+    +footer(footerData)
