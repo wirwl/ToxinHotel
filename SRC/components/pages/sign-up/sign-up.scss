@@ -1,0 +1,21 @@
+.sign-up {
+  &__main-content {
+    width: 100%;
+    min-height: 701px;
+    background: url("../sign-in/sign.jpg") no-repeat;
+    padding-top: 20px;
+  }
+
+  &__main-content-sign-up-form {
+    margin: 0 auto;
+    max-width: 380px;
+  }
+}
+
+.header .header-menu > .header-menu__list > .header-menu__item.header-menu__item:not(:last-of-type) {
+  margin-right: 20px;
+}
+
+.header .header__header-menu {
+  margin-right: 20px;
+}

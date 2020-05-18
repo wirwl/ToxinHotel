@@ -1,20 +1,22 @@
 
-include ../../common
-include ../../components/header/header
-include ../../components/footer/footer
-include ../../components/sign-up-form/sign-up-form
+extends ../../template
 
-doctype html
-html(lang="en")
-  head
-    +meta-tags({description:"Sign-up page", keywords:"sign-up, login, password"})    
-    title Регистрация аккаунта
-    +favicon({path:"../../"})    
-    link(href="sign-up.css" rel="stylesheet")
-  body            
-    +header(header_data)     
-    main.main-content
-      section.main-content__sign-up-form
-        +sign-up-form({caption:"Регистрация аккаунта", isThereAccount:"Уже есть аккаунт на Toxin"})
-    +footer(footer_data)
-    script(type="text/javascript" src="sign-up.js")
+include ../../components/pages/sign-up/sign-up
+
+block variables
+  - let lang = "en"
+  - let title = "Регистрация аккаунта"
+  - let description = "Sign-up page"
+  - let keywords = "sign-up, login, password"
+  - let path = "../../"
+  - let css = "sign-up.css"
+
+block content
+  +sign-up({
+    headerData: header_data,
+    signupForm: {caption:"Регистрация аккаунта", isThereAccount:"Уже есть аккаунт на Toxin"},
+    footerData: footer_data
+  })
+
+block script
+  script(type="text/javascript" src="sign-up.js")
