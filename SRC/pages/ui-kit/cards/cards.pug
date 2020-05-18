@@ -1,55 +1,41 @@
-include ../../../common
-include ../../../components/room-reservation-form/room-reservation-form
-include ../../../components/sign-up-form/sign-up-form
-include ../../../components/order-info-form/order-info-form
-include ../../../components/sign-in-form/sign-in-form
-include ../../../components/toxin-datepicker/toxin-datepicker
-include ../../../components/room-info/room-info
-include ../../../components/image-slider/image-slider
+extends ../../../template
 
+include ../../../components/pages/ui-kit/cards/cards
 
-doctype html
-html(lang="ru")
-  head
-    +meta-tags({description:"UIKit: cards", keywords:"uikit, cards"})    
-    title Cards
-    +favicon({path:"../../../"})
-    link(href="cards.css" rel="stylesheet")
-  body
-    .column1
-      ul.column1__list
-        li.column1__item
-          +room-reservation-form({title:"Найдём номера под ваши пожелания"})
-        li.column1__item       
-          +sign-up-form({caption:"Регистрация аккаунта", isThereAccount: "Уже есть аккаунт на Toxin"}) 
-    .column2
-      ul.column2__list
-        li.column2__item
-          +order-info-form({items:[{text:"9 990₽ х 4 суток", cost:"39 960₽"},
+block variables
+  - let lang = "en"
+  - let title = "Cards"
+  - let description = "UIKit: cards"
+  - let keywords = "uikit, cards"
+  - let path = "../../../"
+  - let css = "cards.css"
+
+block content
+  +cards({
+    roomReservationForm: {title:"Найдём номера под ваши пожелания"},
+    signupForm: {caption:"Регистрация аккаунта", isThereAccount: "Уже есть аккаунт на Toxin"},
+    orderInfoForm: {items:[{text:"9 990₽ х 4 суток", cost:"39 960₽"},
                                    {text:"Сбор за услуги: скидка 2 179₽", tooltip: "Скидка 20%", cost:"0₽" },
                                    {text:"Сбор за дополнительные услуги", tooltip: "Виды дополнительных услуг: уборка, массаж пяток", cost:"300₽"}
           ], summaryText: "Итого", summaryValue:"38 081₽"
-          })
-        li.column2__item
-          +sign-in-form({caption:"Войти", textThereIsNotAccount: "Нет аккаунта на Toxin?"})
-    .column3
-      ul.column3__list
-        li.column3__item
-          +toxin-datepicker({isStandAlone:true})
-        li.column3__item.column3__wrapper-for-image-slider          
-          +room-info({id:"image-slider1", number:888, isLux:true, cost:"9 990", starscount:5, commentscount:145, isShowNavBtns:true,
+          },
+    signinForm: {caption:"Войти", textThereIsNotAccount: "Нет аккаунта на Toxin?"},
+    toxinDatepicker: {isStandAlone:true},
+    roomInfoFocused: {id:"image-slider1", number:888, isLux:true, cost:"9 990", starscount:5, commentscount:145, isShowNavBtns:true,
             images:[
             "../../../components/rooms-by-filter/images/rooms/888/image-1.png",
             "https://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg",
             "https://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg",
             "https://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg",
-            ]})
-        li.column3__item.column3__wrapper-for-image-slider          
-          +room-info({id:"image-slider2", number: 840, isLux:false, cost:"9 990", starscount:4, commentscount:65, 
+            ]},
+      roomInfo: {id:"image-slider2", number: 840, isLux:false, cost:"9 990", starscount:4, commentscount:65, 
             images:[
             "../../../components/rooms-by-filter/images/rooms/840/image-1.png",
             "https://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg",
             "https://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg",
             "https://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg",
-            ]})
-    script(type="text/javascript" src="cards.js")
+            ]}
+  })
+
+block script
+  script(type="text/javascript" src="cards.js")

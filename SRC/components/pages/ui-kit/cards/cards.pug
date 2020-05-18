@@ -1,0 +1,30 @@
+include ../../../room-reservation-form/room-reservation-form
+include ../../../sign-up-form/sign-up-form
+include ../../../order-info-form/order-info-form
+include ../../../sign-in-form/sign-in-form
+include ../../../toxin-datepicker/toxin-datepicker
+include ../../../room-info/room-info
+include ../../../image-slider/image-slider
+
+mixin cards({roomReservationForm, signupForm, orderInfoForm, signinForm, toxinDatepicker, roomInfoFocused, roomInfo})
+  .cards
+    .cards__column1
+      ul.cards__column1-list
+        li.cards__column1-item
+          +room-reservation-form(roomReservationForm)
+        li.cards__column1-item       
+          +sign-up-form(signupForm) 
+    .cards__column2
+      ul.cards__column2-list
+        li.cards__column2-item
+          +order-info-form(orderInfoForm)
+        li.cards__column2-item
+          +sign-in-form(signinForm)
+    .cards__column3
+      ul.cards__column3-list
+        li.cards__column3-item
+          +toxin-datepicker(toxinDatepicker)
+        li.cards__column3__item.cards__column3-wrapper-for-image-slider          
+          +room-info(roomInfoFocused)
+        li.cards__column3-item.cards__column3-wrapper-for-image-slider          
+          +room-info(roomInfo)

@@ -12,55 +12,5 @@ html {
 body {
   @include define-body;
   padding-top: 150px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
   background: #f4f4f6;
-}
-
-.column1,
-.column2 {
-  width: 380px;
-}
-
-.column3 {
-  width: 320px;
-}
-.column1,
-.column2 {
-  margin-right: 40px;
-}
-.column1__list,
-.column2__list,
-.column3__list {
-  list-style: none;
-}
-.column1__list,
-.column2__list {
-  width: 100%;
-}
-.column1__item,
-.column2__item {
-  margin-bottom: 40px;
-  width: 100%;
-}
-
-.column3__list {
-  list-style: none;
-}
-
-.column3__item {
-  margin-bottom: 40px;
-}
-
-.column3__wrapper-for-image-slider {
-  width: 270px;
-  margin-bottom: 37px;
-}
-
-@media (max-width: 480px) {
-  .column1,
-  .column2 {
-    margin-right: 0px;
-  }
 }
