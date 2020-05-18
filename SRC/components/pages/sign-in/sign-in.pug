@@ -1,0 +1,11 @@
+include ../../header/header
+include ../../footer/footer
+include ../../sign-in-form/sign-in-form
+
+mixin sign-in({headerData, signinForm, footerData})
+  .sign-in
+    +header(headerData)     
+    main.sign-in__main-content  
+      section.sign-in__sign-in-form
+        +sign-in-form(signinForm)
+    +footer(footerData)

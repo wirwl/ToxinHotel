@@ -1,19 +1,34 @@
-include ../../common
-include ../../components/header/header
-include ../../components/footer/footer
-include ../../components/sign-in-form/sign-in-form
+extends ../../template
 
-doctype html
-html(lang="en")
-  head
-    +meta-tags({description:"Sign-in page", keywords:"sign-in, login, password"})    
-    title Войти
-    +favicon({path:"../../"})    
-    link(href="sign-in.css" rel="stylesheet")
-  body            
-    +header(header_data)     
-    main.main-content  
-      section.main-content__sign-in-form
-        +sign-in-form({caption:"Войти", textThereIsNotAccount: 'Нет аккаунта на Toxin?'})
-    +footer(footer_data)
-    script(type="text/javascript" src="sign-in.js")
+include ../../components/pages/sign-in/sign-in
+
+block variables
+  - let lang = "en"
+  - let title = "Войти"
+  - let description = "Sign-in page"
+  - let keywords = "sign-in, login, password"
+  - let path = "../../"
+  - let css = "sign-in.css"
+
+block content
+  +sign-in({
+    headerData: header_data,
+    signinForm: {caption:"Войти", textThereIsNotAccount: 'Нет аккаунта на Toxin?'},
+    footerData: footer_data
+  })
+
+block script
+  script(type="text/javascript" src="sign-in.js")
+
+
+
+
+//- doctype html
+//- html(lang="en")
+//-   head
+//-     +meta-tags({description:"Sign-in page", keywords:"sign-in, login, password"})    
+//-     title Войти
+//-     +favicon({path:"../../"})    
+//-     link(href="sign-in.css" rel="stylesheet")
+//-   body            
+//-     +sign-in()
