@@ -1,0 +1,15 @@
+.colors-type {
+  display: flex;
+
+  &__color-examples {
+    margin-right: 416px;
+  }
+
+  &__color-example:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+
+  &__font-example:not(:last-of-type) {
+    margin-bottom: 50px;
+  }
+}

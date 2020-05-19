@@ -1,0 +1,13 @@
+include ../../../color-example/color-example
+include ../../../font-example/font-example
+
+mixin colors-type({colorExampleItems, fontExampleItems})
+  .colors-type
+    .colors-type__color-examples
+      for colorExampleItem in colorExampleItems
+        .colors-type__color-example
+          +color-example(colorExampleItem)      
+    .colors-type__font-examples
+      for fontExampleItem in fontExampleItems
+        .colors-type__font-example
+          +font-example(fontExampleItem)
