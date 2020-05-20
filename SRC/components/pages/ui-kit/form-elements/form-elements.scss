@@ -1,0 +1,246 @@
+.form-elements {
+  display: flex;
+  flex-wrap: wrap;
+
+  @mixin caption {
+    font-size: 12px;
+    font-family: $toxin-font-montserrat;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &__column1 {
+    margin-right: 127px;
+    width: 320px;
+  }
+
+  &__column2,
+  &__column3 {
+    width: 320px;
+    padding-top: 3px;
+  }
+
+  &__column2 {
+    margin-right: 72px;
+  }
+
+  &__column1-list,
+  &__column2-list,
+  &__column3-list {
+    list-style: none;
+  }
+
+  &__column1-item {
+    margin-bottom: 20px;
+  }
+
+  &__column1-wrapper-for-datepicker-inputs {
+    margin-bottom: 39px;
+  }
+
+  &__column1-datepicker-inputs-list {
+    list-style: none;
+    display: flex;
+  }
+
+  &__column1-datepicker-inputs-item {
+    width: 150px;
+  }
+
+  &__column1-wrapper-for-masked-input {
+    margin-bottom: 38px;
+  }
+
+  &__column1-datepicker-inputs-item:nth-child(1) {
+    margin-right: 20px;
+  }
+
+  &__column1-wrapper-for-guests-input0 {
+    margin-bottom: 22px;
+  }
+
+  &__column1-wrapper-for-fdd-input {
+    margin-bottom: 39px;
+    width: 266px;
+  }
+
+  &__column1-wrapper-for-subscribe-input {
+    margin-bottom: 100px;
+    width: 267px;
+  }
+
+  &__column1-comfort-input {
+    max-width: 266px;
+  }
+
+  &__column1-wrapper-for-comfort-input {
+    margin-bottom: 168px;
+  }
+
+  &__column1-wrapper-for-ecl1 {
+    margin-bottom: 40px;
+  }
+
+  &__column1-wrapper-for-ecl2 {
+    margin-bottom: 40px;
+  }
+
+  &__column1-wrapper-for-comfort-status-list {
+    width: 280px;
+  }
+
+  &__column2-wrapper-for-checkboxes-list {
+    margin-bottom: 42px;
+    width: 240px;
+  }
+
+  &__column2-wrapper-for-radios-list {
+    margin-bottom: 43px;
+  }
+
+  &__column2-wrapper-for-toggles-list {
+    margin-bottom: 45px;
+  }
+
+  &__likes-buttons {
+    margin-bottom: 20px;
+  }
+
+  &__likes-button-list {
+    list-style: none;
+    display: flex;
+  }
+
+  &__likes-button-list-caption {
+    margin-bottom: 16px;
+    @include caption;
+  }
+
+  &__likes-button-list-item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__column2-wrapper-for-likes-button-list {
+    margin-bottom: 40px;
+  }
+
+  &__rate-buttons-list-caption {
+    margin-bottom: 16px;
+    @include caption;
+  }
+
+  &__rate-buttons-list {
+    list-style: none;
+    display: flex;
+  }
+
+  &__rate-buttons-list-item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__column2-wrapper-for-rate-buttons-list {
+    margin-bottom: 191px;
+  }
+
+  &__column2-wrapper-for-guests-input1 {
+    margin-bottom: 257px;
+  }
+
+  &__column2-wrapper-for-rich-checkboxes-list {
+    width: 253px;
+    margin-bottom: 230px;
+
+    .checkboxes-list__item:nth-child(1) {
+      width: 220px;
+    }
+  }
+
+  &__column-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__column23-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__column3-wrapper-for-range-slider {
+    width: 266px;
+    margin-bottom: 40px;
+  }
+
+  &__column3-wrapper-for-buttons-list {
+    margin-bottom: 40px;
+  }
+
+  &__buttons-list {
+    list-style: none;
+  }
+
+  &__buttons-list-caption {
+    margin-bottom: 16px;
+    @include caption;
+  }
+
+  &__buttons-list-item {
+    height: inherit;
+  }
+
+  &__two-buttons-list {
+    list-style: none;
+    display: flex;
+  }
+
+  &__buttons-list-item:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+
+  &__two-buttons-list-item_width {
+    width: 99px;
+  }
+
+  &__two-buttons-list-item {
+    height: 44px;
+  }
+
+  &__two-buttons-list3 .form-elements__two-buttons-list-item {
+    height: auto;
+  }
+
+  &__two-buttons-list-item:first-child {
+    margin-right: 19px;
+  }
+
+  &__pagination-wrapper {
+    margin-bottom: 232px;
+    max-width: 241px;
+  }
+
+  &__pagination-wrapper-caption {
+    margin-bottom: 17px;
+    @include caption;
+  }
+
+  &__column3-wrapper-for-guests-input2 {
+    margin-bottom: 255px;
+  }
+
+  &__column3-wrapper-for-bullet-list {
+    width: 260px;
+  }
+
+  &__column3-bullet-list-caption {
+    margin-bottom: 12px;
+    @include caption;
+  }
+
+  &__row1 {
+    width: 712px;
+  }
+
+  &__column1-wrapper-for-ecl1,
+  &__column1-wrapper-for-ecl2 {
+    width: 266px;
+  }
+}

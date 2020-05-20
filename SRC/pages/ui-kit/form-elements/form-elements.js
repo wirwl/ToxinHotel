@@ -10,7 +10,7 @@ imports.keys().forEach(imports);
 
 // Only for watch pixel perfect for range-slider;
 $('.js-range-slider__values').text('5 000₽ - 10 000₽');
-const datepicker = $('.column1__datepicker-input-checkout').find('.datepicker-input__input').data('datepicker');
+const datepicker = $('.form-elements__column1-datepicker-input-checkout').find('.datepicker-input__input').data('datepicker');
 datepicker.update('minDate', null);
 datepicker.selectDate([new Date('2019-08-19')]);
 
@@ -20,7 +20,7 @@ rs.update({
   to: 9500,
 });
 
-const dp = $('.column1__wrapper-for-fdd-input').find('.datepicker-input__input').data('datepicker');
+const dp = $('.form-elements__column1-wrapper-for-fdd-input').find('.datepicker-input__input').data('datepicker');
 dp.update('dateFormat', 'dd M');
 dp.update('onSelect', (fd, d, picker) => {
   picker.$el.val(fd.toLowerCase());

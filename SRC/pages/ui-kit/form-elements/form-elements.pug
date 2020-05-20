@@ -1,74 +1,36 @@
-include ../../../common
-include ../../../components/text-input/text-input
-include ../../../components/masked-input/masked-input
-include ../../../components/datepicker-input/datepicker-input
-include ../../../components/subscribe-input/subscribe-input
-include ../../../components/comfort-input/comfort-input
-include ../../../components/expandable-checkbox-list/expandable-checkbox-list
-include ../../../components/checkbox/checkbox
-include ../../../components/comfort-status-list/comfort-status-list
-include ../../../components/toggle/toggle
-include ../../../components/checkboxes-list/checkboxes-list
-include ../../../components/radios-list/radios-list
-include ../../../components/toggles-list/toggles-list
-include ../../../components/like-button/like-button
-include ../../../components/rate-button/rate-button
-include ../../../components/guests-input/guests-input
-include ../../../components/feedback/feedback
-include ../../../components/range-slider/range-slider
-include ../../../components/button-simple/button-simple
-include ../../../components/button-arrow/button-arrow
-include ../../../components/button-filled/button-filled
-include ../../../components/button-bordered/button-bordered
-include ../../../components/pagination/pagination
-include ../../../components/bullet/bullet
-include ../../../components/bullets-list/bullets-list
-include ../../../components/datepicker-input/datepicker-input
+extends ../../../template
 
-doctype html
-html(lang="ru")
-  head
-    +meta-tags({description:"UIkit: form elements", keywords:"uikit, form elements"})    
-    title Form Elements    
-    +favicon({path:"../../../"})
-    link(href="form-elements.css" rel="stylesheet")
-  body
-    .column1
-      ul.column1__list
-        li.column1__item
-          +text-input({caption:"TEXT FIELD", placeholder:"Email"})
-        li.column1__item
-          +text-input({isFocused:true, caption:"TEXT FIELD", value:"This is pretty awesome"})     
-        li.column1__item.column1__wrapper-for-guests-input0
-          +guests-input({caption:"DROPDOWN", items: [{id:'adults', text: 'Взрослые'}, {id:'children', text:'Дети'}, {id:'babies', text:'Младенцы'}]})
-        li.column1__item.column1__wrapper-for-masked-input
-          +masked-input({caption:"MASKED TEXT FIELD"})
-        li.column1__item.column1__wrapper-for-datepicker-inputs
-          ul.column1__datepicker-inputs-list
-            li.column1__datepicker-inputs-item
-              +datepicker-input({caption:"DATE DROPDOWN", placeholder:"ДД.ММ.ГГГГ"})
-            li.column1__datepicker-inputs-item.column1__datepicker-input-checkout
-              +datepicker-input({caption:"DATE DROPDOWN", placeholder:"ДД.ММ.ГГГГ"})
-        li.column1__item.column1__wrapper-for-fdd-input          
-          +datepicker-input({caption:"FILTER DATE DROPDOWN", placeholder:"Выберите дату"})
-        li.column1__item.column1__wrapper-for-subscribe-input
-          +subscribe-input({caption:"SUBSCRIPTION TEXT FIELD", placeholder:"Email"})
-        li.column1__item
-          .column1__comfort-input
-            +comfort-input({caption:"DROPDOWN", 
+include ../../../components/pages/ui-kit/form-elements/form-elements
+
+block variables
+  - let lang = "en"
+  - let title = "Form Elements"
+  - let description = "UIkit: form elements"
+  - let keywords = "uikit, form elements"
+  - let path = "../../../"
+  - let css = "form-elements.css"
+
+block content
+  +form-elements({
+    textInput: {caption:"TEXT FIELD", placeholder:"Email"},
+    textInputFocused: {isFocused:true, caption:"TEXT FIELD", value:"This is pretty awesome"},
+    guestsInputDropdown: {caption:"DROPDOWN", items: [{id:'adults', text: 'Взрослые'}, {id:'children', text:'Дети'}, {id:'babies', text:'Младенцы'}]},
+    maskedInput: {caption:"MASKED TEXT FIELD"},
+    datepickerInputArrival: {caption:"DATE DROPDOWN", placeholder:"ДД.ММ.ГГГГ"},
+    datepickerInputCheckout: {caption:"DATE DROPDOWN", placeholder:"ДД.ММ.ГГГГ"},
+    datepickerInputArrivalAndCheckout: {caption:"FILTER DATE DROPDOWN", placeholder:"Выберите дату"},
+    subscribeInput: {caption:"SUBSCRIPTION TEXT FIELD", placeholder:"Email"},
+    comfortInput: {caption:"DROPDOWN", 
             iqdd:{isExpanded:false, placeholder:"", 
               items:[{id:"bedrooms", name:"СПАЛЬНИ", defaultcount:2},
                 {id:"beds", name:"КРОВАТИ", defaultcount:2},
-                {id:"bathrooms", name:"ВАННЫЕ КОМНАТЫ"}] }})
-        li.column1__item.column1__wrapper-for-comport-input
-          .column1__comfort-input
-            +comfort-input({isOpen:true, caption:"DROPDOWN",
+                {id:"bathrooms", name:"ВАННЫЕ КОМНАТЫ"}] }},
+    comfortInputExpanded: {isOpen:true, caption:"DROPDOWN",
             iqdd: {isExpanded:true, placeholder:"", 
             items:[{id:"bedrooms", name:"СПАЛЬНИ", defaultcount:2},
               {id:"beds", name:"КРОВАТИ", defaultcount:2},
-              {id:"bathrooms", name:"ВАННЫЕ КОМНАТЫ"}] }})
-        li.column1__item.column1__wrapper-for-ecl1
-          +expandable-checkbox-list({isExpand:false, caption:"EXPANDABLE CHECKBOX LIST", checkboxes:[{id:"bf", text:"Завтрак"},
+              {id:"bathrooms", name:"ВАННЫЕ КОМНАТЫ"}] }},
+    expandableCheckboxList: {isExpand:false, caption:"EXPANDABLE CHECKBOX LIST", checkboxes:[{id:"bf", text:"Завтрак"},
             {text:"Письменный стол", isChecked:true},
             {text:"Стул для кормления", isChecked:true},
             {text:"Кроватка", isChecked:true},
@@ -76,9 +38,8 @@ html(lang="ru")
             {text:"Шампунь"},
             {text:"Телевизор"},
             {text:"Шампунь"}
-            ]})
-        li.column1__item.column1__wrapper-for-ecl2                                                            
-          +expandable-checkbox-list({isExpand:true, caption:"EXPANDABLE CHECKBOX LIST", checkboxes:[{id:"bf2", text:"Завтрак"},
+            ]},
+    expandableCheckboxListExpanded: {isExpand:true, caption:"EXPANDABLE CHECKBOX LIST", checkboxes:[{id:"bf2", text:"Завтрак"},
             {text:"Письменный стол", isChecked:true},
             {text:"Стул для кормления", isChecked:true},
             {text:"Кроватка", isChecked:true},
@@ -86,88 +47,49 @@ html(lang="ru")
             {text:"Шампунь"},
             {text:"Телевизор"},
             {text:"Шампунь"}          
-            ]})
-        li.column1__item.column1__wrapper-for-comfort-status-list
-          +comfort-status-list([{icon:"tag_faces", caption:"Комфорт", text:"Шумопоглощающие стены"},
-            {icon:"location_city", caption:"Удобство", text:"Окно в каждой из спален"}])
-    .column__wrapper            
-      .column23__wrapper
-        .column2
-          ul.column2__list
-            li.column2__item.column2__wrapper-for-checkboxes-list
-              +checkboxes-list({caption:"CHECKBOX BUTTONS", checkboxes:[{text:"Можно курить"},
+            ]},
+    comfortStatusList: [{icon:"tag_faces", caption:"Комфорт", text:"Шумопоглощающие стены"},
+            {icon:"location_city", caption:"Удобство", text:"Окно в каждой из спален"}],
+    checkboxesList: {caption:"CHECKBOX BUTTONS", checkboxes:[{text:"Можно курить"},
                 {text:"Можно с питомцами", isChecked:true},
                 {text:"Можно пригласить гостей (до 10 человек)",isChecked:true}
-                ]})               
-            li.column2__item.column2__wrapper-for-radios-list
-              +radios-list({caption:"RADIO BUTTONS", name:"sex", radios:[{text:"Мужчина", isChecked:true},
+                ]},
+    radiosList: {caption:"RADIO BUTTONS", name:"sex", radios:[{text:"Мужчина", isChecked:true},
                 {text:"Женщина"}
-                ]})
-            li.column2__item.column2__wrapper-for-toggles-list 
-              +toggles-list({caption:"TOGGLE",toggles:[{isChecked:true, text:"Получать спецпредложения"},
-                {isChecked:false, text:"Получать спецпредложения", id:"t_off"}]})         
-            li.column2__item.column2__wrapper-for-likes-button-list
-              .likes-button-list
-                h3.likes-button-list__caption LIKE BUTTON
-                ul.likes-button-list__list
-                  li.likes-button-list__item
-                    +like-button({count: 2})
-                  li.likes-button-list__item
-                    +like-button({count: 12, isChecked:true})   
-            li.column2__item.column2__wrapper-for-rate-buttons-list
-              .rate-buttons-list
-                h3.rate-buttons-list__caption RATE BUTTON
-                ul.rate-buttons-list__list
-                  li.rate-buttons-list__item
-                    +rate-button({count:4,id:"stars1"})
-                  li.rate-buttons-list__item
-                    +rate-button({count:5,id:"stars2"})
-            li.column2__item.column2__wrapper-for-guests-input1
-              +guests-input({caption:"DROPDOWN", isOpen:true, items: [{id:'adults', text: 'Взрослые'}, {id:'children', text:'Дети'}, {id:'babies', text:'Младенцы'}] })
-            li.column2__item.column2__wrapper-for-rich-checkboxes-list
-              +checkboxes-list({caption:"RICH CHECKBOX BUTTONS", 
+                ]},
+    togglesList: {caption:"TOGGLE",toggles:[{isChecked:true, text:"Получать спецпредложения"},
+                {isChecked:false, text:"Получать спецпредложения", id:"t_off"}]},
+    likeButtonCaption: "LIKE BUTTON",
+    likeButton: {count: 2},
+    likeButtonChecked: {count: 12, isChecked:true},
+    rateButtonCaption: "RATE BUTTON",
+    rateButton4: {count:4,id:"stars1"},
+    rateButton5: {count:5,id:"stars2"},
+    guestsInput: {caption:"DROPDOWN", isOpen:true, items: [{id:'adults', text: 'Взрослые'}, {id:'children', text:'Дети'}, {id:'babies', text:'Младенцы'}] },
+    checkboxesListRich: {caption:"RICH CHECKBOX BUTTONS", 
                 checkboxes:[{text:"Широкий коридор", desc:"Ширина коридоров в номере не менее 91 см."},
                   {text:"Помощник для инвалидов", desc:"На 1 этаже вас встретит специалист и проводит до номера."}
-                    ]})                                                 
-        .column3
-          ul.column3__list
-            li.column3__item.column3__wrapper-for-range-slider
-              +range-slider({ctext:"range slider", min:0, max:15000, from: 4500, to:9600})
-            li.column3__item.column3__wrapper-for-buttons-list
-              h3.buttons-list__caption BUTTONS
-              ul.buttons-list    
-                li.buttons-list__item
-                  ul.two-buttons-list
-                    li.two-buttons-list__item.two-buttons-list__item_width
-                      +button-filled({text:"click me", dynamic_height:true, dynamic_width:true})
-                    li.two-buttons-list__item.two-buttons-list__item_width
-                      +button-filled({text:"click me", dynamic_height:true, dynamic_width:true, isEnabled:false})
-                li.buttons-list__item
-                  ul.two-buttons-list
-                    li.two-buttons-list__item.two-buttons-list__item_width
-                      +button-bordered({text:"click me", dynamic_height:true, dynamic_width:true})
-                    li.two-buttons-list__item.two-buttons-list__item_width
-                      +button-bordered({text:"click me", dynamic_height:true, dynamic_width:true, isEnabled:false})
-                li.buttons-list__item
-                  ul.two-buttons-list.two-buttons-list3
-                    li.two-buttons-list__item
-                      +button-simple({text:"click me"})
-                    li.two-buttons-list__item
-                      +button-simple({text:"click me", isGrayText:true})
-                li.buttons-list__item
-                  +button-arrow({text:"перейти к оплате"})
-            li.column3__item.pagination__wrapper
-              h3.pagination__wrapper-caption PAGINATION
-              +pagination({pages:15, page:1, showed:12, showedlastpage:6, total:100, caption:"1 – 12 из 100+ вариантов аренды"})
-            li.column3__item.column3__wrapper-for-guests-input2
-              +guests-input({caption:"DROPDOWN", isOpen:true, items: [{id:'adults', text: 'Взрослые', count:2}, {id:'children', text:'Дети', count:1}, {id:'babies', text:'Младенцы'}] })
-            li.column3__item.column3__wrapper-for-bullet-list
-              h3.column3__bullet-list-caption BULLET-LIST
-              +bullets-list([{text:"Нельзя с питомцами"},
+                    ]},
+    rangeSlider: {ctext:"range slider", min:0, max:15000, from: 4500, to:9600},
+    buttonsCaption: "BUTTONS",
+    buttonFilled: {text:"click me", dynamic_height:true, dynamic_width:true},
+    buttonFilledDisabled: {text:"click me", dynamic_height:true, dynamic_width:true, isEnabled:false},
+    buttonBordered: {text:"click me", dynamic_height:true, dynamic_width:true},
+    buttonBorderedDisabled: {text:"click me", dynamic_height:true, dynamic_width:true, isEnabled:false},
+    buttonSimple: {text:"click me"},
+    buttonSimpleGray: {text:"click me", isGrayText:true},
+    buttonArrow: {text:"перейти к оплате"},
+    paginationCaption: "PAGINATION",
+    pagination: {pages:15, page:1, showed:12, showedlastpage:6, total:100, caption:"1 – 12 из 100+ вариантов аренды"},
+    guestsInputOpen: {caption:"DROPDOWN", isOpen:true, items: [{id:'adults', text: 'Взрослые', count:2}, {id:'children', text:'Дети', count:1}, {id:'babies', text:'Младенцы'}] },
+    bulletsListCaption: "BULLET-LIST",
+    bulletsList: [{text:"Нельзя с питомцами"},
                 {text:"Без вечеринок и мероприятий"},
-                {text:"Время прибытия — после 13:00, а выезд до 12:00"}])
-      .row1
-        +feedback({image:{alt:"avatar", src:"../../../components/feedback-list/images/avatar.jpg"}, 
+                {text:"Время прибытия — после 13:00, а выезд до 12:00"}],
+    feedback: {image:{alt:"avatar", src:"../../../components/feedback-list/images/avatar.jpg"}, 
           like:{count: 12, id:"avatar", isChecked:true},
-          caption:"Мурад Сарафанов", time:"5 дней назад", text:"Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})
-    script(type="text/javascript" src="form-elements.js")
+          caption:"Мурад Сарафанов", time:"5 дней назад", text:"Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."}
+  })
+
+block script
+  script(type="text/javascript" src="form-elements.js")
