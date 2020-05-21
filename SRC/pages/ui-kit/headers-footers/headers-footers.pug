@@ -1,58 +1,65 @@
-include ../../../components/header/header
-include ../../../components/footer/footer
-include ../../../common
+extends ../../../template
 
-doctype html
-html(lang="en")
-  head
-    +meta-tags({description:"UIkit: headers & footers", keywords:"uikit, headers, footers"})    
-    title Headers & Footers
-    +favicon({path:"../../../"})
-    link(href="headers-footers.css" rel="stylesheet")
-  body
-    - const menuheader = [
-    -    {text:"Home", link:mock, isBold:true},
-    -    {text:"About Us", link:mock},
-    -    {text:"Services", link:"#", sm:[
-    -        {text:"Одежда",link:"#", sm:[
-    -            {text:"Обувь", link:mock},
-    -            {text:"Куртки",link:mock},
-    -            {text:"Брюки",link:"#", sm:[
-    -                {text:"Test1",link:mock},
-    -                {text:"Test2",link:mock},
-    -                {text:"Test3",link:mock}
-    -            ]}
-    -        ]},
-    -        {text:"Электроника",link:"#", sm:[
-    -            {text:"Смартфоны", link:mock},
-    -            {text:"Планшеты", link:mock},
-    -        ]},
-    -        {text:"Прод.пит.",link:mock}
-    -    ]},    
-    -    {text:"Careers",link:mock},
-    -    {text:"News", link:mock},
-    -    {text:"Documentation", link:mock}
-    - ]
-    - var menufooter= [
-    -   {title:"NAVIGATION",items:[{text:"About Us", link:mock},
-    -                                {text:"News", link:mock},
-    -                                {text:"Support", link:mock},
-    -                                {text:"Products", link:mock}]},
-    -   {title:"ABOUT US",  items:[{text:"Who we are", link:mock},
-    -                                {text:"Our team", link:mock},
-    -                                {text:"Careers", link:mock},
-    -                                {text:"Investors", link:mock}]},
-    -   {title:"SUPPORT",   items:[{text:"Documentation", link:mock},
-    -                                {text:"Community", link:mock},
-    -                                {text:"Get In Touch", link:mock}]}
-    -   ]
-    - var desc="Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."
-    - var caption="SUBSCRIBE TO OUR NEWSLETTER";
-    - var subdesc="Receive our latest news and promotions in your inbox!"
-    - var ph="Your email address"
-    - var cr="Copyright © 2018 Toxin UI Kit. All rights reserved."
-    +header({logo_path:"../../../components/logo/logo.svg", isAuth:false, menu: menuheader})
-    +header({logo_path:"../../../components/logo/logo.svg", isAuth:true, menu: menuheader})
-    +footer({logo_path:"../../../components/logo/logo.svg", menu:menufooter, desc:desc, sub:{caption:caption, desc:subdesc, placeholder:ph},copyright: cr})
-    +footer({logo_path:"../../../components/logo/logo.svg", menu:menufooter, desc:desc, sub:{caption:caption, desc:subdesc, placeholder:ph},copyright: cr})
-    script(type="text/javascript" src="headers-footers.js")
+include ../../../components/pages/ui-kit/headers-footers/headers-footers
+
+block variables
+  - let lang = "en"
+  - let title = "Headers & Footers"
+  - let description = "UIkit: headers & footers"
+  - let keywords = "uikit, headers, footers"
+  - let path = "../../../"
+  - let css = "headers-footers.css"
+
+block content
+  - const menuheader = [
+  -    {text:"Home", link:mock, isBold:true},
+  -    {text:"About Us", link:mock},
+  -    {text:"Services", link:"#", sm:[
+  -        {text:"Одежда",link:"#", sm:[
+  -            {text:"Обувь", link:mock},
+  -            {text:"Куртки",link:mock},
+  -            {text:"Брюки",link:"#", sm:[
+  -                {text:"Test1",link:mock},
+  -                {text:"Test2",link:mock},
+  -                {text:"Test3",link:mock}
+  -            ]}
+  -        ]},
+  -        {text:"Электроника",link:"#", sm:[
+  -            {text:"Смартфоны", link:mock},
+  -            {text:"Планшеты", link:mock},
+  -        ]},
+  -        {text:"Прод.пит.",link:mock}
+  -    ]},    
+  -    {text:"Careers",link:mock},
+  -    {text:"News", link:mock},
+  -    {text:"Documentation", link:mock}
+  - ]
+  - let menufooter= [
+  -   {title:"NAVIGATION",items:[{text:"About Us", link:mock},
+  -                                {text:"News", link:mock},
+  -                                {text:"Support", link:mock},
+  -                                {text:"Products", link:mock}]},
+  -   {title:"ABOUT US",  items:[{text:"Who we are", link:mock},
+  -                                {text:"Our team", link:mock},
+  -                                {text:"Careers", link:mock},
+  -                                {text:"Investors", link:mock}]},
+  -   {title:"SUPPORT",   items:[{text:"Documentation", link:mock},
+  -                                {text:"Community", link:mock},
+  -                                {text:"Get In Touch", link:mock}]}
+  -   ]
+  - let desc = "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."
+  - let caption = "SUBSCRIBE TO OUR NEWSLETTER";
+  - let subdesc = "Receive our latest news and promotions in your inbox!"
+  - let ph = "Your email address"
+  - let cr = "Copyright © 2018 Toxin UI Kit. All rights reserved."
+  - let logoPath = "../../../components/logo/logo.svg"
+
+  +headers-footers({
+    headerAuthFalse: {logo_path: logoPath, isAuth:false, menu: menuheader},
+    headerAuthTrue: {logo_path:logoPath, isAuth:true, menu: menuheader},
+    footerNormal: {logo_path:logoPath, menu:menufooter, desc:desc, sub:{caption:caption, desc:subdesc, placeholder:ph},copyright: cr},
+    footerResponsive: {logo_path:logoPath, menu:menufooter, desc:desc, sub:{caption:caption, desc:subdesc, placeholder:ph},copyright: cr}
+  })
+
+block script
+  script(type="text/javascript" src="headers-footers.js")

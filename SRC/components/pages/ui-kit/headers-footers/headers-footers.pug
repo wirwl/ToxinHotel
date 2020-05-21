@@ -1,0 +1,13 @@
+include ../../../header/header
+include ../../../footer/footer
+
+mixin headers-footers({headerAuthFalse, headerAuthTrue, footerNormal, footerResponsive})  
+  .headers-footers
+    .headers-footers__header-auth-false
+      +header(headerAuthFalse)
+    .headers-footers__header-auth-true
+      +header(headerAuthTrue)
+    .headers-footers__footer-normal
+      +footer(footerNormal)
+    .headers-footers__footer-responsive
+      +footer(footerResponsive)
