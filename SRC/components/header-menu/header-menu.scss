@@ -28,6 +28,8 @@
     list-style: none;
     background: white;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   &__link {
@@ -38,34 +40,8 @@
     line-height: 36px;
   }
 
-  &__link .header-menu__item:not(:last-of-type) {
-    padding-right: 10px;
-  }
-
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  &__item.header-menu__list_arrow {
-    padding-right: 24px;
-  }
-  & > .header-menu__list > .header-menu__item.header-menu__item:not(:last-of-type) {
-    margin-right: 30px;
-    &.header-menu__item_sub-menu {
-      margin-right: 20px;
-    }
-  }
-
-  &__list:first-child > .header-menu__item:last-child > .header-menu__link {
-    padding-right: 0px;
-  }
-  &__list_arrow {
-    padding-right: 0px;
-  }
-
-  &__link + .header-menu__list {
+  &__list_sub-list,
+  &__list_sub-sub-list {
     position: absolute;
     min-width: 150px;
     display: none;
@@ -73,22 +49,16 @@
     box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.07);
   }
 
-  &__link + .header-menu__list > .header-menu__item {
-    padding: 0 10px;
-  }
-
-  &__link + .header-menu__list .header-menu__list {
+  &__list_sub-sub-list {
     position: absolute;
-    top: -1px;
-    right: -150px;
+    top: 0px;
+    left: 150px;
   }
 
-  &__link + .header-menu__list .header-menu__item {
+  &__item_sub-item,
+  &__item_sub-sub-item {
     position: relative;
-  }
-
-  &__list_arrow {
-    position: relative;
+    padding: 0 10px;
   }
 
   &__list_arrow:after {
@@ -131,6 +101,7 @@
     }
     &__list_show .header-menu__list {
       position: static;
+      background-color: green;
     }
   }
 }

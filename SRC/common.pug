@@ -39,17 +39,18 @@
 -      copyright: "Copyright © 2018 Toxin отель. Все права защищены."
 -      }
 
-mixin MenuItems(items)  
-  ul.header-menu__list.js-menu__list
+mixin MenuItems(items, calls=1)  
+  - let typeOfList = (calls>2) ? "header-menu__list_sub-sub-list" : "header-menu__list_sub-list"
+  ul.header-menu__list.js-menu__list(class= (calls==1) ? "" : typeOfList)
     for mi in items
-      +createHTMLtags(mi)
+      +createHTMLtags(mi, calls)
         if mi.sm
-          +MenuItems(mi.sm)
+          +MenuItems(mi.sm, calls+1)
 
-mixin createHTMLtags({sm, isBold, link, text})
-  - var cs = sm ? "header-menu__list_arrow": ""
-  li.header-menu__item(class=sm && "header-menu__item_sub-menu")
-    a.header-menu__link.js-menu__link(class=cs+(isBold ? "header-menu__link_bold": "") href=link) #{text}
+mixin createHTMLtags({sm, isBold, link, text}, calls)
+  - let typeOfList = (calls>2) ? "header-menu__item_sub-sub-item" : "header-menu__item_sub-item"    
+  li.header-menu__item(class=((calls==1) ? "" : typeOfList) + (sm && " header-menu__list_arrow" || ""))
+    a.header-menu__link.js-menu__link(class=(isBold && "header-menu__link_bold") href=link) #{text}
     block     
 
 mixin favicon({path=""} = {})
