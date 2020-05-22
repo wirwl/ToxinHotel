@@ -4,7 +4,7 @@ class ExpandableCheckboxList {
   }
 
   _addEventListeners(element) {
-    $(element).on('click.ecl', this._handleElementClick);
+    $(element).on('click.expandableCheckboxList', this._handleElementClick);
   }
 
   _handleElementClick() {
