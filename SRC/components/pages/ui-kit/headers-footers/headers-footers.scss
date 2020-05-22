@@ -18,6 +18,15 @@
     margin-bottom: 130px;
   }
 
+  .header__header-menu,
+  .header-menu__item:not(:last-of-type) {
+    margin-right: 30px;
+  }
+
+  .header-menu__item:not(:last-of-type).header-menu__list_arrow {
+    margin-right: 20px;
+  }
+
   @media screen and (max-width: 3840px) {
     &__footer-responsive {
       .footer__footer-menu,

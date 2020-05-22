@@ -11,7 +11,7 @@
     padding-bottom: 61px;
     border-bottom: 1px solid $toxin-color-black-10;
   }
-  
+
   &__column1 {
     max-width: 710px;
     margin-right: 70px;
@@ -136,12 +136,4 @@
       flex-basis: auto;
     }
   }
-}
-
-.header .header-menu > .header-menu__list > .header-menu__item.header-menu__item:not(:last-of-type) {
-  margin-right: 20px;
-}
-
-.header .header__header-menu {
-  margin-right: 20px;
 }
