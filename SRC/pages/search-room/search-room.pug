@@ -13,30 +13,67 @@ block variables
 block content
   +search-room({
     headerData: header_data,
-    datepickerInput: {id:"filters_di", caption:"Даты пребывания в отеле", placeholder:"Выберите дату"},
-    guestsInput: {caption:"Гости", items: [{id:'adults', text: 'Взрослые', count: 2}, {id:'children', text:'Дети', count: 1}, {id:'babies', text:'Младенцы', count: 1}] },
-    rangeSlider: {ctext:"Диапазон цены", min:0, max:15000, from: 4500, to:9600, desc:"Стоимость за сутки пребывания в номере" },
-    checkboxesListMisc: {caption:"checkbox buttons", checkboxes:[{text:"Можно курить"},
-                {text:"Можно с питомцами", isChecked:true},
-                {text:"Можно пригласить гостей (до 10 человек)",isChecked:true}
-                ]},
-    checkboxesListAccessibility: {caption:"Доступность", 
-                checkboxes:[{text:"Широкий коридор", desc:"Ширина коридоров в номере не менее 91 см."},
-                  {text:"Помощник для инвалидов", desc:"На 1 этаже вас встретит специалист и проводит до номера."}]},
-    comfortInput: {caption:"Удобства номера", 
-                iqdd:{isExpanded:false, placeholder:"", 
-                  items:[{id:"bedrooms", name:"СПАЛЬНИ", defaultcount:2},
-                    {id:"beds", name:"КРОВАТИ", defaultcount:2},
-                    {id:"bathrooms", name:"ВАННЫЕ КОМНАТЫ"}] }},              
-    expandableCheckboxList: {isExpand:false, caption:"Дополнительные удобства", checkboxes:[{id:"bf", text:"Завтрак"},
-                {text:"Письменный стол", isChecked:true},
-                {text:"Стул для кормления", isChecked:true},
-                {text:"Кроватка", isChecked:true},
-                {text:"Телевизор"},
-                {text:"Шампунь"},
-                {text:"Телевизор"},
-                {text:"Шампунь"}
-                ]},
+    datepickerInput: {
+      id: "filters_di", 
+      caption: "Даты пребывания в отеле", 
+      placeholder: "Выберите дату"
+    },
+    guestsInput: {
+      caption: "Гости", 
+      items: [
+        {id: 'adults', text: 'Взрослые', count: 2}, 
+        {id: 'children', text: 'Дети', count: 1}, 
+        {id: 'babies', text: 'Младенцы', count: 1}
+      ] 
+    },
+    rangeSlider: {
+      ctext: "Диапазон цены", 
+      min: 0, 
+      max: 15000, 
+      from: 4500, 
+      to: 9600, 
+      desc: "Стоимость за сутки пребывания в номере" 
+    },
+    checkboxesListMisc: {
+      caption: "checkbox buttons",
+      checkboxes: [
+        {text: "Можно курить"},
+        {text: "Можно с питомцами", isChecked: true},
+        {text: "Можно пригласить гостей (до 10 человек)",isChecked: true}
+      ]
+    },
+    checkboxesListAccessibility: {
+      caption: "Доступность",
+      checkboxes: [
+        {text: "Широкий коридор", desc: "Ширина коридоров в номере не менее 91 см."},
+        {text: "Помощник для инвалидов", desc: "На 1 этаже вас встретит специалист и проводит до номера."}
+      ]
+    },
+    comfortInput: {
+      caption: "Удобства номера", 
+      iqdd: {
+        isExpanded: false, placeholder: "", 
+        items: [
+          {id: "bedrooms", name: "СПАЛЬНИ", defaultcount: 2},
+          {id: "beds", name: "КРОВАТИ", defaultcount: 2},
+          {id: "bathrooms", name: "ВАННЫЕ КОМНАТЫ"}
+        ] 
+      }
+    },              
+    expandableCheckboxList: {
+      isExpand: false, 
+      caption: "Дополнительные удобства", 
+      checkboxes: [
+        {id: "bf", text: "Завтрак"},
+        {text: "Письменный стол", isChecked: true},
+        {text: "Стул для кормления", isChecked: true},
+        {text: "Кроватка", isChecked: true},
+        {text: "Телевизор"},
+        {text: "Шампунь"},
+        {text: "Телевизор"},
+        {text: "Шампунь"}
+      ]
+    },
     roomsByFilter: {title: 'Номера, которые мы для вас подобрали'},
     footerData: footer_data
   })

@@ -13,96 +13,72 @@ block variables
 block content
   +room-details({
     headerData: header_data,
-    roomImages: ["../../components/room-images/images/left-image.jpg", 
-                    "../../components/room-images/images/right-top-image.jpg",
-                    "../../components/room-images/images/right-bottom-image.jpg"],
+    roomImages: [
+      "../../components/room-images/images/left-image.jpg", 
+      "../../components/room-images/images/right-top-image.jpg",
+      "../../components/room-images/images/right-bottom-image.jpg"
+    ],
     comfortStatusCaption: "Сведения о номере",
-    comfortStatusList: [{icon:"tag_faces", caption:"Комфорт", text:"Шумопоглощающие стены"},
-                {icon:"location_city", caption:"Удобство", text:"Окно в каждой из спален"},
-                {icon:"whatshot", caption:"Уют", text:"Номер оснащён камином", isHideLine:true}],
-    donutChart: {caption: "Впечатления от номера", id:"donut-chart", voices:"260"},
-    feedbackList: {caption:"Отзывы посетителей номера", count:"2 отзыва",
-              feedbacks:[{image:{alt:"avatar", src:"../../components/feedback-list/images/avatar.jpg"}, 
-              like:{count: 12, isChecked:true},
-              caption:"Мурад Сарафанов", time:"5 дней назад", text:"Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."},
-              {image:{alt:"avatar2", src:"../../components/feedback-list/images/avatar-2.jpg"}, 
-              like:{count: 2},
-              caption:"Патрисия Стёклышкова", time:"Неделю назад", text:"Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент."}
-              ]},
+    comfortStatusList: [
+      {
+        icon: "tag_faces", 
+        caption: "Комфорт", 
+        text: "Шумопоглощающие стены"
+      },
+      {
+        icon: "location_city", 
+        caption: "Удобство", 
+        text: "Окно в каждой из спален"
+      },
+      {
+        icon: "whatshot", 
+        caption: "Уют", 
+        text: "Номер оснащён камином", 
+        isHideLine: true
+      }
+    ],
+    donutChart: {
+      caption: "Впечатления от номера", 
+      id: "donut-chart", 
+      voices: "260"
+    },
+    feedbackList: {
+      caption: "Отзывы посетителей номера", 
+      count: "2 отзыва",
+      feedbacks: [
+        {
+          image: {alt: "avatar", src: "../../components/feedback-list/images/avatar.jpg"}, 
+          like: {count: 12, isChecked: true},
+          caption: "Мурад Сарафанов", 
+          time: "5 дней назад", 
+          text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
+        },
+        {
+          image: {alt: "avatar2", src: "../../components/feedback-list/images/avatar-2.jpg"}, 
+          like: {count: 2},
+          caption: "Патрисия Стёклышкова", time: "Неделю назад", text: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент."
+        }
+      ]
+    },
     bulletListCaption: "Правила",
-    bulletList: [{text:"Нельзя с питомцами"},
-                {text:"Без вечеринок и мероприятий"},
-                {text:"Время прибытия — после 13:00, а выезд до 12:00"}],
+    bulletList: [
+      {text: "Нельзя с питомцами"},
+      {text: "Без вечеринок и мероприятий"},
+      {text: "Время прибытия — после 13: 00, а выезд до 12: 00"}
+    ],
     cancellationCaption: "Отмена",
     cancellationText: "Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.",
-    orderInfoForm : {items:[{text:"9 990₽ х 4 суток", cost:"39 960₽"},
-                            {text:"Сбор за услуги: скидка 2 179₽", tooltip: "Скидка 20%", cost:"0₽" },
-                            {text:"Сбор за дополнительные услуги", tooltip: "Виды дополнительных услуг: уборка, массаж пяток", cost:"300₽"}], summaryText: "Итого", summaryValue:"38 081₽"},
+    orderInfoForm : {
+      items: [
+        {text: "9 990₽ х 4 суток", cost: "39 960₽"},
+        {text: "Сбор за услуги: скидка 2 179₽", tooltip: "Скидка 20%", cost: "0₽" },
+        {text: "Сбор за дополнительные услуги", tooltip: "Виды дополнительных услуг: уборка, массаж пяток", cost: "300₽"}
+        ], 
+      summaryText: "Итого", 
+      summaryValue: "38 081₽"
+    },
     footerData: footer_data
   })
 
 block script
   script(type="text/javascript" src="room-details.js")
-
-
-
-
-//- include ../../common
-//- include ../../components/header/header
-//- include ../../components/footer/footer
-//- include ../../components/room-images/room-images
-//- include ../../components/feedback-list/feedback-list
-//- include ../../components/comfort-status-list/comfort-status-list
-//- include ../../components/order-info-form/order-info-form
-//- include ../../components/bullets-list/bullets-list
-//- include ../../components/donut-chart/donut-chart
-
-
-//- doctype html
-//- html(lang="en")
-//-   head
-//-     +meta-tags({description:"Information about room", keywords:"room details, feedbacks, rules, cancel"})    
-//-     title О номере
-//-     +favicon({path:"../../"})    
-//-     link(href="room-details.css" rel="stylesheet")
-//-   body        
-//-     +header(header_data)     
-//-     main.main-content
-//-       +room-images(["../../components/room-images/images/left-image.jpg", "../../components/room-images/images/right-top-image.jpg", "../../components/room-images/images/right-bottom-image.jpg"]) 
-//-       .room-details
-//-         section.room-details__column1
-//-           .room-details__common-wrapper1
-//-             .room-details__wrapper-csl
-//-               h2.room-details__wrapper-csl-caption Сведения о номере
-//-               +comfort-status-list([{icon:"tag_faces", caption:"Комфорт", text:"Шумопоглощающие стены"},
-//-                 {icon:"location_city", caption:"Удобство", text:"Окно в каждой из спален"},
-//-                 {icon:"whatshot", caption:"Уют", text:"Номер оснащён камином", isHideLine:true}])
-//-             .room-details__wrapper-donut-chart
-//-               +donut-chart({caption: "Впечатления от номера", id:"donut-chart", voices:"260"})
-//-           .room-details__wrapper-fl
-//-             +feedback-list({caption:"Отзывы посетителей номера", count:"2 отзыва",
-//-               feedbacks:[{image:{alt:"avatar", src:"../../components/feedback-list/images/avatar.jpg"}, 
-//-               like:{count: 12, isChecked:true},
-//-               caption:"Мурад Сарафанов", time:"5 дней назад", text:"Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."},
-//-               {image:{alt:"avatar2", src:"../../components/feedback-list/images/avatar-2.jpg"}, 
-//-               like:{count: 2},
-//-               caption:"Патрисия Стёклышкова", time:"Неделю назад", text:"Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент."}
-//-               ]})
-//-           .room-details__common-wrapper2
-//-             .room-details__bullets-list
-//-               h2.room-details__bullets-list-caption Правила
-//-               +bullets-list([{text:"Нельзя с питомцами"},
-//-                 {text:"Без вечеринок и мероприятий"},
-//-                 {text:"Время прибытия — после 13:00, а выезд до 12:00"}])            
-//-             .room-details__cancellation
-//-               h2.room-details__cancellation-caption Отмена
-//-               p.room-details__cancellation-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
-//-         section.room-details__column2      
-//-           .room-details__column2-wrapper-order-info-form
-//-             +order-info-form({items:[{text:"9 990₽ х 4 суток", cost:"39 960₽"},
-//-                                    {text:"Сбор за услуги: скидка 2 179₽", tooltip: "Скидка 20%", cost:"0₽" },
-//-                                    {text:"Сбор за дополнительные услуги", tooltip: "Виды дополнительных услуг: уборка, массаж пяток", cost:"300₽"}
-//-           ], summaryText: "Итого", summaryValue:"38 081₽"
-//-           })
-//-     +footer(footer_data)
-//-     script(type="text/javascript" src="room-details.js")

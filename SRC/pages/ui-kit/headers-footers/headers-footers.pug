@@ -11,54 +11,102 @@ block variables
   - let css = "headers-footers.css"
 
 block content
-  - const menuheader = [
-  -    {text:"Home", link:mock, isBold:true},
-  -    {text:"About Us", link:mock},
-  -    {text:"Services", link:"#", sm:[
-  -        {text:"Одежда",link:"#", sm:[
-  -            {text:"Обувь", link:mock},
-  -            {text:"Куртки",link:mock},
-  -            {text:"Брюки",link:"#", sm:[
-  -                {text:"Test1",link:mock},
-  -                {text:"Test2",link:mock},
-  -                {text:"Test3",link:mock}
-  -            ]}
-  -        ]},
-  -        {text:"Девайсы",link:"#", sm:[
-  -            {text:"Смартфоны", link:mock},
-  -            {text:"Планшеты", link:mock},
-  -        ]},
-  -        {text:"Прод.пит.",link:mock}
-  -    ]},    
-  -    {text:"Careers",link:mock},
-  -    {text:"News", link:mock},
-  -    {text:"Documentation", link:mock}
-  - ]
-  - let menufooter= [
-  -   {title:"NAVIGATION",items:[{text:"About Us", link:mock},
-  -                                {text:"News", link:mock},
-  -                                {text:"Support", link:mock},
-  -                                {text:"Products", link:mock}]},
-  -   {title:"ABOUT US",  items:[{text:"Who we are", link:mock},
-  -                                {text:"Our team", link:mock},
-  -                                {text:"Careers", link:mock},
-  -                                {text:"Investors", link:mock}]},
-  -   {title:"SUPPORT",   items:[{text:"Documentation", link:mock},
-  -                                {text:"Community", link:mock},
-  -                                {text:"Get In Touch", link:mock}]}
-  -   ]
-  - let desc = "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."
-  - let caption = "SUBSCRIBE TO OUR NEWSLETTER";
-  - let subdesc = "Receive our latest news and promotions in your inbox!"
-  - let ph = "Your email address"
-  - let cr = "Copyright © 2018 Toxin UI Kit. All rights reserved."
-  - let logoPath = "../../../components/logo/logo.svg"
+  - 
+    const menuheader = [
+      {text: "Home", link: mock, isBold: true},
+      {text: "About Us", link: mock},
+      {
+        text: "Services", link: "#", 
+        sm: [
+          {
+            text: "Одежда",link: "#", 
+            sm: [
+              {text: "Обувь", link: mock},
+              {text: "Куртки",link: mock},
+              {
+                text: "Брюки",link: "#", 
+                sm: [
+                  {text: "Test1",link: mock},
+                  {text: "Test2",link: mock},
+                  {text: "Test3",link: mock}
+                ]
+              }
+            ]
+          },
+          {
+            text: "Девайсы",link: "#", 
+            sm: [
+              {text: "Смартфоны", link: mock},
+              {text: "Планшеты", link: mock},
+            ]
+          },
+          {text: "Прод.пит.",link: mock}
+        ]
+      },    
+      {text: "Careers",link: mock},
+      {text: "News", link: mock},
+      {text: "Documentation", link: mock}
+    ]   
+    let menufooter= [
+      {
+        title: "NAVIGATION",
+        items: [
+          {text: "About Us", link: mock},
+          {text: "News", link: mock},
+          {text: "Support", link: mock},
+          {text: "Products", link: mock}
+        ]
+      },
+      {
+        title: "ABOUT US",  
+        items: [
+          {text: "Who we are", link: mock},
+          {text: "Our team", link: mock},
+          {text: "Careers", link: mock},
+          {text: "Investors", link: mock}
+        ]
+      },
+      {
+        title: "SUPPORT",   
+        items: [
+          {text: "Documentation", link: mock},
+          {text: "Community", link: mock},
+          {text: "Get In Touch", link: mock}
+        ]
+      }
+    ]
+    let desc = "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."
+    let caption = "SUBSCRIBE TO OUR NEWSLETTER";
+    let subdesc = "Receive our latest news and promotions in your inbox!"
+    let ph = "Your email address"
+    let cr = "Copyright © 2018 Toxin UI Kit. All rights reserved."
+    let logoPath = "../../../components/logo/logo.svg"
 
   +headers-footers({
-    headerAuthFalse: {logo_path: logoPath, isAuth:false, menu: menuheader},
-    headerAuthTrue: {logo_path:logoPath, isAuth:true, menu: menuheader},
-    footerNormal: {logo_path:logoPath, menu:menufooter, desc:desc, sub:{caption:caption, desc:subdesc, placeholder:ph},copyright: cr},
-    footerResponsive: {logo_path:logoPath, menu:menufooter, desc:desc, sub:{caption:caption, desc:subdesc, placeholder:ph},copyright: cr}
+    headerAuthFalse: {logo_path: logoPath, isAuth: false, menu: menuheader},
+    headerAuthTrue: {logo_path: logoPath, isAuth: true, menu: menuheader},
+    footerNormal: {
+      logo_path: logoPath, 
+      menu: menufooter, 
+      desc: desc, 
+      sub: {
+        caption: caption, 
+        desc: subdesc, 
+        placeholder: ph
+      },
+      copyright: cr
+    },
+    footerResponsive: {
+      logo_path: logoPath, 
+      menu: menufooter, 
+      desc: desc, 
+      sub: {
+        caption: caption, 
+        desc: subdesc, 
+        placeholder: ph
+      },
+      copyright: cr
+    }
   })
 
 block script

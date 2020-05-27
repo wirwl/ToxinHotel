@@ -12,29 +12,53 @@ block variables
 
 block content
   +cards({
-    roomReservationForm: {title:"Найдём номера под ваши пожелания"},
-    signupForm: {caption:"Регистрация аккаунта", isThereAccount: "Уже есть аккаунт на Toxin"},
-    orderInfoForm: {items:[{text:"9 990₽ х 4 суток", cost:"39 960₽"},
-                                   {text:"Сбор за услуги: скидка 2 179₽", tooltip: "Скидка 20%", cost:"0₽" },
-                                   {text:"Сбор за дополнительные услуги", tooltip: "Виды дополнительных услуг: уборка, массаж пяток", cost:"300₽"}
-          ], summaryText: "Итого", summaryValue:"38 081₽"
-          },
-    signinForm: {caption:"Войти", textThereIsNotAccount: "Нет аккаунта на Toxin?"},
-    toxinDatepicker: {isStandAlone:true},
-    roomInfoFocused: {id:"image-slider1", number:888, isLux:true, cost:"9 990", starscount:5, commentscount:145, isShowNavBtns:true,
-            images:[
-            "../../../components/rooms-by-filter/images/rooms/888/image-1.png",
-            "https://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg",
-            "https://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg",
-            "https://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg",
-            ]},
-      roomInfo: {id:"image-slider2", number: 840, isLux:false, cost:"9 990", starscount:4, commentscount:65, 
-            images:[
-            "../../../components/rooms-by-filter/images/rooms/840/image-1.png",
-            "https://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg",
-            "https://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg",
-            "https://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg",
-            ]}
+    roomReservationForm: {title: "Найдём номера под ваши пожелания"},
+    signupForm: {
+      caption: "Регистрация аккаунта", 
+      isThereAccount: "Уже есть аккаунт на Toxin"
+    },
+    orderInfoForm: {
+      items: [
+        {text: "9 990₽ х 4 суток", cost: "39 960₽"},
+        {text: "Сбор за услуги: скидка 2 179₽", tooltip: "Скидка 20%", cost: "0₽" },
+        {text: "Сбор за дополнительные услуги", tooltip: "Виды дополнительных услуг: уборка, массаж пяток", cost: "300₽"}
+      ], 
+      summaryText: "Итого", summaryValue: "38 081₽"
+    },
+    signinForm: {
+      caption: "Войти", 
+      textThereIsNotAccount: "Нет аккаунта на Toxin?"
+    },
+    toxinDatepicker: {isStandAlone: true},
+    roomInfoFocused: {
+      id: "image-slider1", 
+      number: 888, 
+      isLux: true, 
+      cost: "9 990", 
+      starscount: 5, 
+      commentscount: 145, 
+      isShowNavBtns: true,
+      images: [
+        "../../../components/rooms-by-filter/images/rooms/888/image-1.png",
+        "https: //farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg",
+        "https: //farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg",
+        "https: //farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg",
+      ]
+    },
+    roomInfo: {
+      id: "image-slider2", 
+      number: 840, 
+      isLux: false, 
+      cost: "9 990", 
+      starscount: 4, 
+      commentscount: 65, 
+        images: [
+          "../../../components/rooms-by-filter/images/rooms/840/image-1.png",
+          "https: //farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg",
+          "https: //farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg",
+          "https: //farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg",
+        ]
+    }
   })
 
 block script
