@@ -1,41 +1,12 @@
 .rate-button {
   display: inline-flex;
-  flex-direction: row-reverse;
   font-family: $toxin-font-material-icon;
-  font-size: 24px;
+  font-size: 24px;  
 
-  &__input {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    border: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0, 0, 0, 0);
-    overflow: hidden;
-  }
-
-  &__label {
+  &__star {
     cursor: pointer;
     color: $toxin-color-purple;
-  }
-
-  &__label:after {
-    content: "star_border";
-  }
-
-  &__input:checked ~ .rate-button__label:after {
-    content: "star";
-  }
-
-  &:hover .rate-button__label:after {
-    content: "star_border";
-  }
-
-  .rate-button__label:hover:after,
-  &__label:hover ~ .rate-button__label:after {
-    content: "star";
-  }
+  }  
 
   &_disabled {
     pointer-events: none;

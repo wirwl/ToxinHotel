@@ -1,8 +1,7 @@
 mixin rate-button({disabled, id, count})  
-  .rate-button(class=(disabled && "rate-button_disabled"))
-    - let n=1;
-    - const total=6;
-    while n<total
-      input(id=id+(total-n) type="radio" name=id checked=(count==total-n && "checked") ).rate-button__input
-      label(for=id+(total-n)).rate-button__label
-      - n++;
+  .rate-button.js-rate-button(class = (disabled && "rate-button_disabled") data-count = count)
+    - let index = 0;
+    - const total = 5;
+    while index < total      
+      .rate-button__star #{index > count-1 ? 'star_border' : 'star'}
+      - index++;
