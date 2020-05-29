@@ -1,12 +1,12 @@
 include ../button-simple/button-simple
 include ../iqdropdown/iqdropdown
 
-mixin guests-input({isOpen, caption, items})
+mixin guests-input({isOpen, caption, items, buttonClear, buttonApply})
   .guests-input.js-guests-input
     h3.guests-input__caption #{caption}
     +iqdropdown({isOpen:isOpen, items: items})
       .guests-input__buttons
         .guests-input__button-simple-clear
-          +button-simple({text:'Очистить', isGrayText:true})
+          +button-simple(buttonClear)
         .guests-input__button-simple-apply
-          +button-simple({text:'Применить'})
+          +button-simple(buttonApply)

@@ -24,7 +24,9 @@ block content
         {id: 'adults', text: 'Взрослые', count: 2}, 
         {id: 'children', text: 'Дети', count: 1}, 
         {id: 'babies', text: 'Младенцы', count: 1}
-      ] 
+      ],
+      buttonClear: {text: 'Очистить', isGrayText: true}, 
+      buttonApply: {text: 'Применить'} 
     },
     rangeSlider: {
       ctext: "Диапазон цены", 
@@ -50,15 +52,12 @@ block content
       ]
     },
     comfortInput: {
-      caption: "Удобства номера", 
-      iqdd: {
-        isExpanded: false, placeholder: "", 
-        items: [
-          {id: "bedrooms", name: "СПАЛЬНИ", defaultcount: 2},
-          {id: "beds", name: "КРОВАТИ", defaultcount: 2},
-          {id: "bathrooms", name: "ВАННЫЕ КОМНАТЫ"}
-        ] 
-      }
+      caption: "Удобства номера",             
+      items: [
+        {id: "bedrooms", text: "СПАЛЬНИ", count: 2},
+        {id: "beds", text: "КРОВАТИ", count: 2},
+        {id: "bathrooms", text: "ВАННЫЕ КОМНАТЫ"}
+      ]       
     },              
     expandableCheckboxList: {
       isExpand: false, 
@@ -74,7 +73,120 @@ block content
         {text: "Шампунь"}
       ]
     },
-    roomsByFilter: {title: 'Номера, которые мы для вас подобрали'},
+    roomsByFilter: {
+      title: 'Номера, которые мы для вас подобрали',
+      roomInfos: [
+        {
+          id: "image-slider1", number: 888, isLux: true, luxText: "Люкс", cost: "9 990", costText: "в сутки", starsCount: 5, commentsCount: 145, commentsText: "Отзывов", isShowNavBtns: true,
+          images: [
+          "../../components/rooms-by-filter/images/rooms/888/image-1.png",
+          "http: //farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg",
+          "http: //farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg",
+          "http: //farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg",
+          ]
+        },
+        {
+          id: "image-slider2", number: 840, cost: "9 990", costText: "в сутки", starsCount: 4, commentsCount: 65, commentsText: "Отзывов",
+          images: [
+          "../../components/rooms-by-filter/images/rooms/840/image-1.png",
+          "http: //farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg",
+          "http: //farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg",
+          "http: //farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg",
+          ]
+        },
+        {
+          id: "image-slider3", number: 980, isLux: true, luxText: "Люкс", cost: "8 500", costText: "в сутки", starsCount: 3, commentsCount: 35, commentsText: "Отзывов",
+          images: [
+          "../../components/rooms-by-filter/images/rooms/980/image-1.png",
+          "http: //farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg",
+          "http: //farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg",
+          "http: //farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg",
+          ]
+        },  
+        {
+          id: "image-slider4", number: 856, cost: "7 300", costText: "в сутки", starsCount: 5, commentsCount: 19, commentsText: "Отзывов",
+          images: [
+          "../../components/rooms-by-filter/images/rooms/856/image-1.png",
+          "http: //farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg",
+          "http: //farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg",
+          "http: //farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg",
+          ]
+        },
+        {
+          id: "image-slider5", number: 740, cost: "6 000", costText: "в сутки", starsCount: 4, commentsCount: 44, commentsText: "Отзывов",
+          images: [
+          "../../components/rooms-by-filter/images/rooms/740/image-1.png",
+          "http: //farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg",
+          "http: //farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg",
+          "http: //farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg",
+          ]
+        },
+        {
+          id: "image-slider6", number: 982, cost: "5 800", costText: "в сутки", starsCount: 3, commentsCount: 56, commentsText: "Отзывов",
+          images: [
+          "../../components/rooms-by-filter/images/rooms/982/image-1.png",
+          "http: //farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg",
+          "http: //farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg",
+          "http: //farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg",
+          ]
+        },
+        {
+          id: "image-slider7", number: 678, cost: "5 500", costText: "в сутки", starsCount: 5, commentsCount: 45, commentsText: "Отзывов",
+          images: [
+          "../../components/rooms-by-filter/images/rooms/678/image-1.png",
+          "http: //farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg",
+          "http: //farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg",
+          "http: //farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg",
+          ]
+        },
+        {
+          id: "image-slider8", number: 450, cost: "5 300", costText: "в сутки", starsCount: 4, commentsCount: 39, commentsText: "Отзывов",
+          images: [
+          "../../components/rooms-by-filter/images/rooms/450/image-1.png",
+          "http: //farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg",
+          "http: //farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg",
+          "http: //farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg",
+          ]
+        },
+        {
+          id: "image-slider9", number: 350, isLux: true, luxText: "Люкс", cost: "5 000", costText: "в сутки", starsCount: 3, commentsCount: 77, commentsText: "Отзывов",
+          images: [
+          "../../components/rooms-by-filter/images/rooms/350/image-1.png",
+          "http: //farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg",
+          "http: //farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg",
+          "http: //farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg",
+          ]
+        },
+        {
+          id: "image-slider10", number: 666, isLux: true, luxText: "Люкс", cost: "5 000", costText: "в сутки", starsCount: 5, commentsCount: 25, commentsText: "Отзывов",
+          images: [
+          "../../components/rooms-by-filter/images/rooms/666/image-1.png",
+          "http: //farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg",
+          "http: //farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg",
+          "http: //farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg",
+          ]
+        },
+        {
+          id: "image-slider11", number: 444, isLux: true, luxText: "Люкс", cost: "5 000", costText: "в сутки", starsCount: 3, commentsCount: 15, commentsText: "Отзывов",
+          images: [
+          "../../components/rooms-by-filter/images/rooms/444/image-1.png",
+          "http: //farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg",
+          "http: //farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg",
+          "http: //farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg",
+          ]
+        },
+        {
+          id: "image-slider12", number: 352, isLux: true, luxText: "Люкс", cost: "5 000", costText: "в сутки", starsCount: 3, commentsCount: 55, commentsText: "Отзывов",
+          images: [
+          "../../components/rooms-by-filter/images/rooms/352/image-1.png",
+          "http: //farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg",
+          "http: //farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg",
+          "http: //farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg",
+          ]
+        }
+      ],
+      pagination: {pages: 15, page: 1, showed: 12, showedlastpage: 6, total: 100, caption: "1 – 12 из 100+ вариантов аренды"}
+    },
     footerData: footer_data
   })
 

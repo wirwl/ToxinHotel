@@ -1,18 +1,18 @@
 include ../text-input/text-input
 include ../button-arrow/button-arrow
 
-mixin sign-in-form({caption, textThereIsNotAccount})
+mixin sign-in-form({caption, textThereIsNotAccount, textInputEmail, textInputPassword, buttonSignIn, buttonSignUp})
   form.sign-in-form(method="post" action="#")
     fieldset.sign-in-form__fieldset
       legend.sign-in-form__caption #{caption}
       ul.sign-in-form__list
         li.sign-in-form__item
-          +text-input({placeholder:"Email", type:"email"})
+          +text-input(textInputEmail)
         li.sign-in-form__item
-          +text-input({placeholder:"Пароль", type:"password"})        
+          +text-input(textInputPassword)        
       .sign-in-form__button-arrow          
-        +button-arrow({text:"Войти", type:"submit"})        
+        +button-arrow(buttonSignIn)        
       .sign-in-form__wrapper-for-sign-in-button
         p.sign-in-form__sign-in-text #{textThereIsNotAccount}
         .sign-in-form__wrapper-sign-up-button
-          +button-bordered({text:"Создать", dynamic_height:true})
+          +button-bordered(buttonSignUp)

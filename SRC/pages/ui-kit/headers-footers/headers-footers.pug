@@ -74,38 +74,42 @@ block content
           {text: "Get In Touch", link: mock}
         ]
       }
-    ]
-    let desc = "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."
+    ];
+    const logoPath = "../../../components/logo/logo.svg";
+    const logoWithText = {
+      logo_path: logoPath,
+      desc: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."      
+    };
     let caption = "SUBSCRIBE TO OUR NEWSLETTER";
     let subdesc = "Receive our latest news and promotions in your inbox!"
-    let ph = "Your email address"
-    let cr = "Copyright © 2018 Toxin UI Kit. All rights reserved."
-    let logoPath = "../../../components/logo/logo.svg"
+    let subscribeInput = {placeholder: "Your email address"}
+    let cr = "Copyright © 2018 Toxin UI Kit. All rights reserved."    
+    let socialButtons = {iconTwitter: "twitter", iconFacebook: "facebook-square", iconInstagram: "instagram"}
 
   +headers-footers({
     headerAuthFalse: {logo_path: logoPath, isAuth: false, menu: menuheader},
     headerAuthTrue: {logo_path: logoPath, isAuth: true, menu: menuheader},
     footerNormal: {
-      logo_path: logoPath, 
-      menu: menufooter, 
-      desc: desc, 
+      logoWithText: logoWithText,
+      menu: menufooter,       
       sub: {
         caption: caption, 
         desc: subdesc, 
-        placeholder: ph
+        subscribeInput: subscribeInput
       },
-      copyright: cr
+      copyright: cr,
+      socialButtons: socialButtons
     },
     footerResponsive: {
-      logo_path: logoPath, 
-      menu: menufooter, 
-      desc: desc, 
+      logoWithText: logoWithText,
+      menu: menufooter,       
       sub: {
         caption: caption, 
         desc: subdesc, 
-        placeholder: ph
+        subscribeInput: subscribeInput
       },
-      copyright: cr
+      copyright: cr,
+      socialButtons: socialButtons
     }
   })
 

@@ -1,13 +1,9 @@
 include ../legend-list/legend-list
 
-mixin donut-chart({caption, id, voices})
+mixin donut-chart({caption, id, voices, legendList})
   figure.donut-chart
     h2.donut-chart__caption #{caption}
     .donut-chart__wrapper
       canvas(id=id data-voices=voices).donut-chart__canvas
       .donut-chart__legend-list
-        +legend-list([{text:"Великолепно", color:"legend_orange-color"},
-          {text:"Хорошо", color:"legend_green-color"},
-          {text:"Удовлетворительно", color:"legend_purple-color"},
-          {text:"Разочарован", color:"legend_black-color"}
-])
+        +legend-list(legendList)

@@ -27,7 +27,9 @@ block content
         {id: 'adults', text: 'Взрослые'}, 
         {id: 'children', text: 'Дети'}, 
         {id: 'babies', text: 'Младенцы'}
-      ]
+      ],
+      buttonClear: {text:'Очистить', isGrayText:true}, 
+      buttonApply: {text:'Применить'}
     },
     maskedInput: {caption: "MASKED TEXT FIELD"},
     datepickerInputArrival: {
@@ -47,28 +49,20 @@ block content
       placeholder: "Email"
     },
     comfortInput: {
-      caption: "DROPDOWN", 
-      iqdd: {
-        isExpanded: false, 
-        placeholder: "", 
-        items: [
-          {id: "bedrooms", name: "СПАЛЬНИ", defaultcount: 2},
-          {id: "beds", name: "КРОВАТИ", defaultcount: 2},
-          {id: "bathrooms", name: "ВАННЫЕ КОМНАТЫ"}
-        ] 
-      }
+      caption: "DROPDOWN",               
+      items: [
+        {id: "bedrooms", text: "СПАЛЬНИ", count: 2},
+        {id: "beds", text: "КРОВАТИ", count: 2},
+        {id: "bathrooms", text: "ВАННЫЕ КОМНАТЫ"}
+      ]       
     },
     comfortInputExpanded: {
-      isOpen: true, caption: "DROPDOWN",
-      iqdd: {
-        isExpanded: true, 
-        placeholder: "", 
-        items: [
-          {id: "bedrooms", name: "СПАЛЬНИ", defaultcount: 2},
-          {id: "beds", name: "КРОВАТИ", defaultcount: 2},
-          {id: "bathrooms", name: "ВАННЫЕ КОМНАТЫ"}
-        ] 
-      }
+      isOpen: true, caption: "DROPDOWN",                      
+      items: [
+        {id: "bedrooms", text: "СПАЛЬНИ", count: 2},
+        {id: "beds", text: "КРОВАТИ", count: 2},
+        {id: "bathrooms", text: "ВАННЫЕ КОМНАТЫ"}
+      ]       
     },
     expandableCheckboxList: {
       isExpand: false, 
@@ -138,7 +132,9 @@ block content
         {id: 'adults', text: 'Взрослые'}, 
         {id: 'children', text: 'Дети'}, 
         {id: 'babies', text: 'Младенцы'}
-      ] 
+      ],
+      buttonClear: {text:'Очистить', isGrayText:true}, 
+      buttonApply: {text:'Применить'} 
     },
     checkboxesListRich: {
       caption: "RICH CHECKBOX BUTTONS", 
@@ -165,7 +161,9 @@ block content
         {id: 'adults', text: 'Взрослые', count: 2}, 
         {id: 'children', text: 'Дети', count: 1}, 
         {id: 'babies', text: 'Младенцы'}
-      ] 
+      ],
+      buttonClear: {text:'Очистить', isGrayText:true}, 
+      buttonApply: {text:'Применить'} 
     },
     bulletsListCaption: "BULLET-LIST",
     bulletsList: [

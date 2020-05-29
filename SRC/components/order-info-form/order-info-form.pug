@@ -4,20 +4,20 @@ include ../datepicker-input/datepicker-input
 include ../guests-input/guests-input
 include ../button-arrow/button-arrow
 
-mixin order-info-form({items, summaryText, summaryValue})
+mixin order-info-form({items, summaryText, summaryValue, roomInfoCaption, datepickerInputArrival, datepickerInputCheckout, guestsInput, buttonSubmit})
   form.order-info-form(method="post" action="#")
     fieldset.order-info-form__wrapper-main
       .order-info-form__wrapper-for-room-info-caption
-        +room-info-caption({number:888, isLux:true, cost:"9 990"})
+        +room-info-caption(roomInfoCaption)
       ul.order-info-form__list
         li.order-info-form__item
           ul.order-info-form__dates-list
             li.order-info-form__dates-item.order-info-form__arrival
-              +datepicker-input({caption:"Прибытие", placeholder:"ДД.ММ.ГГГГ"})
+              +datepicker-input(datepickerInputArrival)
             li.order-info-form__dates-item.order-info-form__checkout
-              +datepicker-input({caption:"Выезд", placeholder:"ДД.ММ.ГГГГ", hasDatepicker:false})
+              +datepicker-input(datepickerInputCheckout)
         li.order-info-form__item
-          +guests-input({caption:"Гости", items: [{id:'adults', text: 'Взрослые'}, {id:'children', text:'Дети'}, {id:'babies', text:'Младенцы'}] })
+          +guests-input(guestsInput)
         li.order-info-form__item
           table.order-info-form__table
             for item in items
@@ -32,5 +32,5 @@ mixin order-info-form({items, summaryText, summaryValue})
         h2.order-info-form__total-text #{summaryText}
         .order-info-form__total-line
         h2.order-info-form__total-value #{summaryValue}
-      +button-arrow({text:"Забронировать", type:"submit"})
+      +button-arrow(buttonSubmit)
 

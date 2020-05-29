@@ -5,32 +5,30 @@ include ../toggle/toggle
 include ../button-arrow/button-arrow
 include ../button-bordered/button-bordered
 
-mixin sign-up-form({caption, isThereAccount})
+mixin sign-up-form({caption, isThereAccount, textInputName, textInputSurname, radiosListSex, maskedInputBirthday, textInputEmail, textInputPassword, toggleSpecialOffer, buttonSubmit, buttonSignin})
   form(method="post" action="#").sign-up-form
     fieldset.sign-up-form__main-content
       legend.sign-up-form__caption #{caption}
       ul.sign-up-form__list
         li.sign-up-form__item
-          +text-input({placeholder:"Имя", isRequired:true})        
+          +text-input(textInputName)        
         li.sign-up-form__item
-          +text-input({placeholder:"Фамилия", isRequired:true})        
+          +text-input(textInputSurname)        
         li.sign-up-form__item
-          +radios-list({name:"sex", radios:[{text:"Мужчина", isChecked:true},
-            {text:"Женщина"}
-            ]})
+          +radios-list(radiosListSex)
       ul.sign-up-form__list.sign-up-form__wrapper
         li
-          +masked-input({caption:"Дата рождения"})                            
+          +masked-input(maskedInputBirthday)                            
       ul.sign-up-form__list
         li.sign-up-form__item
-          +text-input({placeholder:"Email", type:"email", caption:"Данные для входа в сервис"})
+          +text-input(textInputEmail)
         li.sign-up-form__item
-          +text-input({placeholder:"Пароль", type:"password"})        
+          +text-input(textInputPassword)        
         li.sign-up-form__item
-          +toggle({text:"Получать спецпредложения"})        
+          +toggle(toggleSpecialOffer)        
       .sign-up-form__wrapper-for-sign-up-button
-        +button-arrow({text:"Перейти к оплате", type:"submit"})        
+        +button-arrow(buttonSubmit)        
       .sign-up-form__wrapper-for-sign-in-button
         p.sign-up-form__sign-in-text #{isThereAccount}
         .sign-up-form_wrapper-sign-in-button
-          +button-bordered({text:"Войти", dynamic_height:true, dynamic_width: true})
+          +button-bordered(buttonSignin)

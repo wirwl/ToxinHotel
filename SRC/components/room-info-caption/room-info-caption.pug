@@ -1,9 +1,9 @@
-mixin room-info-caption({caption="№", number, isLux, costValue, costText="в сутки"})
+mixin room-info-caption({caption="№", number, isLux, luxText, costValue, costText})
   .room-info-caption
     .room-info-caption__caption-left-part
       span.room-info-caption__caption-n #{caption}
       span.room-info-caption__caption-room-number #{number}
-      span.room-info-caption__room-type #{(isLux ? "Люкс" : "")}         
+      span.room-info-caption__room-type #{(isLux ? luxText : "")}         
     .room-info-caption__cost-per-day
       span.room-info-caption__cost-per-day-value #{costValue}₽
       span.room-info-caption__cost-per-day-text #{costText}

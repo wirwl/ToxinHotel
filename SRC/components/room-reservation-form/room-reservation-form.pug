@@ -3,7 +3,7 @@ include ../text-input/text-input
 include ../datepicker-input/datepicker-input
 include ../guests-input/guests-input
 
-mixin room-reservation-form({title})
+mixin room-reservation-form({title, datepickerInputArrival, datepickerInputCheckout, guestsInput, buttonFindRoom})
   form.room-reservation-form(method="post" action="pages/search-room/sr.html")
     fieldset.room-reservation-form__wrapper-for-inputs
       legend.room-reservation-form__title #{title}
@@ -12,9 +12,9 @@ mixin room-reservation-form({title})
           fieldset.room-reservation-form__wrapper-for-dates
             ul.room-reservation-form__dates-list(role="none presentation")
               li.room-reservation-form__dates-item.room-reservation-form__arrival
-                +datepicker-input({caption:"Прибытие", placeholder:"ДД.ММ.ГГГГ"})
+                +datepicker-input(datepickerInputArrival)
               li.room-reservation-form__dates-item.room-reservation-form__checkout
-                +datepicker-input({caption:"Выезд", placeholder:"ДД.ММ.ГГГГ", hasDatepicker:false})                  
+                +datepicker-input(datepickerInputCheckout)                  
         li.room-reservation-form__item.room-reservation-form__guests-input
-          +guests-input({caption:"Гости", items: [{id:'adults', text: 'Взрослые', count: 2}, {id:'children', text:'Дети', count: 1}, {id:'babies', text:'Младенцы'}] })
-      +button-arrow({text:"Подобрать номер", type: "submit"})
+          +guests-input(guestsInput)
+      +button-arrow(buttonFindRoom)

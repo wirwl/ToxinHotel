@@ -1,10 +1,7 @@
 include ../button-simple/button-simple
 include ../iqdropdown/iqdropdown
 
-mixin comfort-input({caption, isOpen})
+mixin comfort-input({caption, isOpen, items})
   .comfort-input.js-comfort-input  
     h3.comfort-input__caption #{caption}
-    +iqdropdown({isOpen:isOpen, 
-      items: [{id:'bedrooms', text: 'Спальни', count:2}, 
-        {id:'beds', text:'Кровати', count:2}, 
-        {id:'bathrooms', text:'Ванные комнаты'}]})
+    +iqdropdown({isOpen: isOpen, items: items})

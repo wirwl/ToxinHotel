@@ -3,15 +3,15 @@ include ../logo-with-text/logo-with-text
 include ../subscribe-area/subscribe-area
 include ../social-buttons/social-buttons
 
-mixin footer({logo_path, desc, menu, sub, copyright})
+mixin footer({logoWithText, menu, sub, copyright, socialButtons})
   footer.footer
     .footer__footer-top
       .footer__logo-with-text
-        +logo-with-text({logo_path:logo_path, desc: desc})      
+        +logo-with-text(logoWithText)      
       .footer__footer-menu
         +footer-menu(menu)
       .footer__subscribe-area
         +subscribe-area(sub)
     .footer__footer-bottom
       p.footer__copyright #{copyright}
-      +social-buttons({iconTwitter:"twitter", iconFacebook:"facebook-square", iconInstagram:"instagram"})
+      +social-buttons(socialButtons)

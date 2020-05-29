@@ -16,7 +16,22 @@ block content
     headerData: header_data,
     signupForm: {
       caption: "Регистрация аккаунта", 
-      isThereAccount: "Уже есть аккаунт на Toxin"
+      isThereAccount: "Уже есть аккаунт на Toxin",
+      textInputName: {placeholder: "Имя", isRequired: true},
+      textInputSurname: {placeholder: "Фамилия", isRequired: true},
+      radiosListSex: {
+        name: "sex", 
+        radios: [
+          {text: "Мужчина", isChecked:true},
+          {text: "Женщина"}
+        ]
+      },
+      maskedInputBirthday: {caption: "Дата рождения"},                
+      textInputEmail: {placeholder: "Email", type: "email", caption: "Данные для входа в сервис"},
+      textInputPassword: {placeholder: "Пароль", type: "password"},
+      toggleSpecialOffer: {text: "Получать спецпредложения"},
+      buttonSubmit: {text: "Перейти к оплате", type: "submit"},
+      buttonSignin: {text: "Войти", dynamic_height: true, dynamic_width: true}
     },
     footerData: footer_data
   })

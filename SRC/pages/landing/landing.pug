@@ -13,7 +13,22 @@ block variables
 block content
   +landing({
     headerData: header_data,
-    roomReservationForm: {title:"Найдём номера под ваши пожелания"},
+    roomReservationForm: {
+      title:"Найдём номера под ваши пожелания",
+      datepickerInputArrival: {caption: "Прибытие", placeholder: "ДД.ММ.ГГГГ"},
+      datepickerInputCheckout: {caption: "Выезд", placeholder: "ДД.ММ.ГГГГ", hasDatepicker: false},
+      guestsInput: {
+        caption: "Гости", 
+        items: [
+          {id: 'adults', text: 'Взрослые', count: 2}, 
+          {id: 'children', text: 'Дети', count: 1}, 
+          {id: 'babies', text: 'Младенцы'}
+        ], 
+        buttonClear: {text: 'Очистить', isGrayText: true}, 
+        buttonApply: {text: 'Применить'} 
+      },
+      buttonFindRoom: {text: "Подобрать номер", type: "submit"}
+    },
     advertisingText: "Лучшие номера для вашей работы, отдыха и просто вдохновения",
     footerData: footer_data
   })
