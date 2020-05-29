@@ -14,15 +14,27 @@ class GuestsInput {
     this._babies = babies;
     this._placeholder = placeholder;
 
-    this.$iqdropdown = this._$rootElement.find('.iqdropdown');
-    if (this.$iqdropdown.length) {
-      this.$iqdropdown.iqDropdown({
+    this._$iqdropdown = this._$rootElement.find('.iqdropdown');
+    this._initItemQuantityDropdown(this._$iqdropdown);
+
+    this._$buttonClear = this._$rootElement.find('.guests-input__button-simple-clear').find('.button-simple');
+    this._$buttonClear.on('click.buttonClear', this._handleButtonClearClick.bind(this));
+
+    this._$buttonApply = this._$rootElement.find('.guests-input__button-simple-apply').find('.button-simple');
+    this._$buttonApply.on('click.buttonApply', this._handleButtonApplyClick.bind(this));
+  }
+
+  _initItemQuantityDropdown($iqdropdown) {
+    if ($iqdropdown.length) {
+      $iqdropdown.iqDropdown({
         setSelectionText: (itemCount, totalItems) => {
           let result = this._placeholder;
           const babiesCount = itemCount[this._babies.id];
           const guestsCount = totalItems - babiesCount;
+          const $buttonClear = $iqdropdown.find('.guests-input__button-simple-clear').find('.button-simple');
 
           if (totalItems > 0) {
+            $buttonClear.removeClass('button-simple_hide');
             let wordGuests = this._guests.singular;
             if (guestsCount > 0) {
               const [number2, number5] = this._guests.plurals;
@@ -36,26 +48,36 @@ class GuestsInput {
               else if (babiesCount > 1) wordBabies = number2;
             }
             if (guestsCount > 0) result = `${guestsCount} ${wordGuests}${babiesCount > 0 ? `, ${babiesCount} ${wordBabies}` : ''}`;
+          } else {
+            $buttonClear.addClass('button-simple_hide');
           }
+
           return result;
         },
       });
+      $iqdropdown.find('.iqdropdown-menu').on('click', this._handleIqdropdownMenuClick);
     }
-
-    this.$buttonClear = this._$rootElement.find('.guests-input__button-simple-clear').find('.button-simple');
-    this.$buttonClear.on('click.buttonClear', this._handleButtonClearClick.bind(this));
   }
 
-  _handleButtonClearClick(e) {
-    const $button = $(e.currentTarget);
+  _handleIqdropdownMenuClick(event) {
+    event.stopPropagation();
+  }
+
+  _handleButtonClearClick(event) {
+    const $button = $(event.currentTarget);
     const $iqdropdown = $button.closest('.iqdropdown');
     $iqdropdown.find('.iqdropdown-content').removeClass('iqdropdown-content');
     $iqdropdown.find('.iqdropdown-item-controls').remove();
     $iqdropdown.off();
     $iqdropdown.find('.iqdropdown-menu-option').removeData('defaultcount');
     $iqdropdown.find('.iqdropdown-menu-option').removeAttr('data-defaultcount');
-    this.init_Plugin_ItemQuantityDropdown($iqdropdown);
-    $iqdropdown.toggleClass('menu-open');
+    this._initItemQuantityDropdown($iqdropdown);
+  }
+
+  _handleButtonApplyClick(event) {
+    const $button = $(event.currentTarget);
+    const $iqdropdown = $button.closest('.iqdropdown');
+    $iqdropdown.removeClass('menu-open');
   }
 }
 
