@@ -6,9 +6,5 @@
   &__star {
     cursor: pointer;
     color: $toxin-color-purple;
-  }  
-
-  &_disabled {
-    pointer-events: none;
-  }
+  }    
 }

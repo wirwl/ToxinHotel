@@ -10,7 +10,7 @@ mixin room-info({id, images, isShowNavBtns, number, isLux, luxText, cost, costTe
       .room-info__wrapper-for-room-info-caption
         +room-info-caption({number:number, isLux:isLux, luxText, costValue:cost, costText: costText})
       .room-info__feedback
-        +rate-button({id:id, count:starsCount, disabled: true})
+        +rate-button({id: id, count: starsCount})
         .room-info__comments
           span.room-info__comments-count #{commentsCount}
           span.room-info__comments-text #{commentsText}
