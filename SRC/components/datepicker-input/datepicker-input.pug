@@ -1,5 +1,6 @@
 mixin datepicker-input({hasDatepicker=true, caption, type, placeholder})  
   .datepicker-input
-    label.datepicker-input__caption #{caption}
+    if caption
+      h3.datepicker-input__caption #{caption}
     .datepicker-input__wrapper
       input.datepicker-input__input(readonly type=type placeholder=placeholder class=(hasDatepicker && "toxin-datepicker js-toxin-datepicker"))
