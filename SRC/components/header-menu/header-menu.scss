@@ -40,6 +40,11 @@
     line-height: 36px;
   }
 
+  &__link:hover,
+  &__link:focus {
+    color: $toxin-color-black-75;
+  }
+
   &__list_sub-list,
   &__list_sub-sub-list {
     position: absolute;
