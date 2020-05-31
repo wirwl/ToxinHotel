@@ -10,9 +10,25 @@ imports.keys().forEach(imports);
 
 // Only for watch pixel perfect for range-slider;
 $('.js-range-slider__values').text('5 000₽ - 10 000₽');
-const datepicker = $('.form-elements__column1-datepicker-input-checkout').find('.datepicker-input__input').data('datepicker');
-datepicker.update('minDate', null);
-datepicker.selectDate([new Date('2019-08-19')]);
+
+
+const datepickerInputArrival = $('.form-elements__column1-datepicker-input-arrival').find('.datepicker-input__input');
+const datepickerArrival = $('.form-elements__column1-datepicker-input-arrival').find('.datepicker-input__input').data('datepicker');
+
+const datepickerInputCheckout = $('.form-elements__column1-datepicker-input-checkout').find('.datepicker-input__input');
+const datepickerCheckout = $('.form-elements__column1-datepicker-input-checkout').find('.datepicker-input__input').data('datepicker');
+
+
+datepickerArrival.update('minDate', null);
+
+datepickerArrival.update('onSelect', ((fd) => {
+  datepickerInputArrival.val(fd.split('-')[0]);
+  datepickerInputCheckout.val(fd.split('-')[1]);
+}));
+
+if (datepickerInputCheckout.length) {
+  datepickerInputCheckout.on('click', () => { datepickerArrival.show()});
+}
 
 const rs = $('.js-range-slider__input').data('ionRangeSlider');
 rs.update({
