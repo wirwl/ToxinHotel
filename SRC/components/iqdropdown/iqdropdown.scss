@@ -4,9 +4,12 @@
   font-family: $toxin-font-montserrat;
   padding: 12px 44px 12px 15px;
   height: auto;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
   background: #fff;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $toxin-color-black-50;
+  }
 
   &::after {
     position: absolute;
@@ -22,15 +25,14 @@
   }
 
   .iqdropdown-menu {
-    outline: 1px solid rgba(31, 32, 65, 0.5);
+    border: 1px solid rgba(31, 32, 65, 0.5);
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
-    padding: 6px 7px 8px 15px;
+    padding: 6px 8px 8px 15px;
     position: absolute;
-    left: 1px;
+    left: 0px;
     top: 43px;
     transition: all 0.2s ease-in-out;
-    width: 100%;
     box-shadow: none;
   }
 
@@ -47,6 +49,13 @@
   .iqdropdown-selection::after {
     background-image: none;
   }
+
+  &.menu-open {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-color: $toxin-color-black-50;
+  }
+
   &.menu-open .iqdropdown-selection::after {
     background-image: none;
   }

@@ -9,11 +9,11 @@ class ComfortInput {
   _init({ rootElementClass, items, placeholder }) {
     this._placeholder = placeholder;
     this._$rootElement = $(rootElementClass);
-    this._$iqdropdown = this._$rootElement.find('.iqdropdown');
+    this._$iqdropdowns = this._$rootElement.find('.iqdropdown');
     this._items = items;
 
-    if (this._$iqdropdown.length) {
-      this._$iqdropdown.iqDropdown({
+    if (this._$iqdropdowns.length) {
+      this._$iqdropdowns.iqDropdown({
         setSelectionText: (itemCount, totalItems) => {
           let result = this._placeholder;
           if (totalItems > 0) {
@@ -40,7 +40,19 @@ class ComfortInput {
           return result;
         },
       });
+      this._$iqdropdowns.find('.iqdropdown-menu').on('click.iqdropdown', this._handleIqdropdownMenuClick);
+      $(document).on('mouseup.iqdropdown', this._handleDocumentMouseUp.bind(this));
     }
+  }
+
+  _handleDocumentMouseUp(event) {    
+    if (!this._$iqdropdowns.is(event.target) && this._$iqdropdowns.has(event.target).length === 0) {
+      this._$iqdropdowns.removeClass('menu-open');
+    }
+  }
+
+  _handleIqdropdownMenuClick(event) {
+    event.stopPropagation();
   }
 }
 
