@@ -29,29 +29,29 @@
     font-size: 12px;
     padding: 8px 0px;
   }
+
   &__item:first-child,
   &__item:last-child,
   &__item_active {
     width: 40px;
   }
 
-  &__item:first-child {
-    background: $toxin-color-green;
-    color: #fff;
-  }
+  &__item:first-child,
   &__item:last-child {
-    background: $toxin-color-green;
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     color: #fff;
   }
-
-  &__item_active {
-    background-color: $toxin-color-purple;
+  
+  & .pagination__item_active {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     font-weight: bold;
     color: #fff;
   }
+  
   &__link {
     cursor: pointer;
   }
+
   &__link_out-of-range {
     cursor: auto;
   }
