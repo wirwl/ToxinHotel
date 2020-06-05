@@ -6,10 +6,12 @@
   &__list {
     list-style: none;
   }
+
   &__list:not(:last-child) {
     flex-basis: calc(100% / 3);
     padding-right: 5px;
   }
+
   &__title {
     font-weight: 900;
     margin-bottom: 21px;
@@ -17,15 +19,24 @@
     line-height: 15px;
     text-transform: uppercase;
   }
+
   &__item {
     font-size: 14px;
     line-height: 17px;
   }
+
   &__item:not(:last-child) {
     margin-bottom: 20px;
   }
+
   &__link {
     text-decoration: none;
-    color: rgba(31, 32, 65, 0.5);
+    color: $toxin-color-black-50;
+
+    &:hover {
+      color: $toxin-color-black-75;
+    }
   }
+
+
 }

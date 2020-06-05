@@ -6,6 +6,15 @@
   }
 
   &__list-item {
-    line-height: 30px;
+    line-height: 30px;    
   }
+
+  &__list-item-link {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      color: black;
+    }
+  }  
 }

@@ -14,4 +14,4 @@ mixin header({isAuth, logo_path, login="Login", menu, reg="Register", name="Cosm
         +button-bordered({text: login})      
       .header__button-filled(class=isAuth && "header__button-filled_hide")
         +button-filled({text: reg, dynamic_height:true})
-      .header__auth-name(class=isAuth && "header__auth-name_show") #{name}
+      a(href="/mock-address/change-me").header__auth-name(class=isAuth && "header__auth-name_show") #{name}

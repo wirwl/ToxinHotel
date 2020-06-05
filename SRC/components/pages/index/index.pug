@@ -7,4 +7,4 @@ mixin index({mainTitle, items})
       ul.index__list
         for hyperlink in hyperlinks
           - const {link, text} = hyperlink
-          li.index__list-item: a(href=path + link + ".html") #{text}
+          li.index__list-item: a.index__list-item-link(href=path + link + ".html") #{text}

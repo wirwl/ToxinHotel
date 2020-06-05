@@ -52,6 +52,11 @@
     text-align: center;
     font-size: 14px;
     line-height: 17px;
+    text-decoration: none;
+
+    &:hover {
+      color: $toxin-color-black-75;
+    }
   }
 
   &__auth-name_show {

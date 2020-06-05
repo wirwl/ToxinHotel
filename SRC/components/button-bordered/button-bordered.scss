@@ -39,7 +39,9 @@
     z-index: -1;
   }
 
-  &_disabled:before {
+  &_disabled:before,
+  &:hover:before,
+  &:focus:before {
     background: linear-gradient(180deg, #bc9cff7f 0%, #8ba4f97f 100%);
   }
 
