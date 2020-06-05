@@ -70,9 +70,6 @@
 
   .iqdropdown-item-controls {
     height: auto;
-    min-width: 92px;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
   }
 
@@ -103,7 +100,9 @@
     padding: 0 5px;
     font-size: 12px;
     font-weight: bold;
-    font-family: inherit;
+    font-family: inherit;    
+    text-align: center;
+    min-width: 30px;
   }
 
   .icon-decrement {
