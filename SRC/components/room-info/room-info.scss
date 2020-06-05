@@ -26,8 +26,13 @@
 
   &__comments {
     color: $toxin-color-black-50;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
   }
-
+  
   &__comments-count {
     font-weight: bold;
     margin-right: 5px;

@@ -1,14 +1,15 @@
 .rate-button {
   display: inline-flex;
   font-family: $toxin-font-material-icon;
-  font-size: 24px;  
+  font-size: 24px;
 
   &__star {
     cursor: pointer;
-    color: $toxin-color-purple;
-  }  
-
-  &_disabled {
-    pointer-events: none;
+    color: #bc9cff;
+    background-color: #bc9cff;
+    background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);    
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }

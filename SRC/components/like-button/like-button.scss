@@ -21,21 +21,53 @@
     padding: 2px 5px 3px;
     min-width: 40px;
     cursor: pointer;
-  }
 
-  &__count:before {
-    font-family: $toxin-font-material-icon;
-    content: "favorite_border";
-    margin-right: 5px;
-  }
-
-  &__input:checked + {
-    .like-button__count {
-      border: 1px solid $toxin-color-purple;
-      color: $toxin-color-purple;
+    &:before {
+      font-family: $toxin-font-material-icon;
+      content: "favorite_border";
+      margin-right: 5px;
     }
-    .like-button__count:before {
-      content: "favorite";
+  }
+
+  &__input:checked + .like-button__border {
+    border: none;
+    position: relative;
+    background: transparent;
+    z-index: 1;
+
+    &:before,
+    &:after {
+      font-family: $toxin-font-material-icon;
+      content: " ";
+      position: absolute;
+      border-radius: 10px;
+    }
+
+    &:before {
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: -2;
+      background: #bc9cff;
+      background: linear-gradient(180deg, #bc9cff7f 0%, #8ba4f97f 100%);
+    }
+
+    &:after {
+      top: 1px;
+      bottom: 1px;
+      left: 1px;
+      right: 1px;
+      background-color: white;
+      z-index: -1;
+    }
+
+    .like-button__count {
+      color: $toxin-color-purple;
+
+      &:before {
+        content: "favorite";
+      }
     }
   }
 }

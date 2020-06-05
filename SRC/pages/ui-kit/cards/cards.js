@@ -22,7 +22,7 @@ datepicker.update('onRenderCell', (date, cellType) => {
   const day = date.getDate();
   if (cellType === 'day' && date.getTime() === date8.getTime()) {
     return {
-      html: `<div style="width:40px;height:40px;background:#6FCF97;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;">${day}</div>`,
+      html: `<div style="width:40px;height:40px;background:linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;">${day}</div>`,
     };
   }
   return '';

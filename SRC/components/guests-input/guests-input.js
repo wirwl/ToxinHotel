@@ -14,8 +14,8 @@ class GuestsInput {
     this._babies = babies;
     this._placeholder = placeholder;
 
-    this._$iqdropdown = this._$rootElement.find('.iqdropdown');
-    this._initItemQuantityDropdown(this._$iqdropdown);
+    this._$iqdropdowns = this._$rootElement.find('.iqdropdown');
+    this._initItemQuantityDropdown(this._$iqdropdowns);
 
     this._$buttonClear = this._$rootElement.find('.guests-input__button-simple-clear').find('.button-simple');
     this._$buttonClear.on('click.buttonClear', this._handleButtonClearClick.bind(this));
@@ -24,14 +24,14 @@ class GuestsInput {
     this._$buttonApply.on('click.buttonApply', this._handleButtonApplyClick.bind(this));
   }
 
-  _initItemQuantityDropdown($iqdropdown) {
-    if ($iqdropdown.length) {
-      $iqdropdown.iqDropdown({
+  _initItemQuantityDropdown($iqdropdowns) {
+    $iqdropdowns.each((index, $iqdropdown) => {
+      $($iqdropdown).iqDropdown({
         setSelectionText: (itemCount, totalItems) => {
           let result = this._placeholder;
           const babiesCount = itemCount[this._babies.id];
           const guestsCount = totalItems - babiesCount;
-          const $buttonClear = $iqdropdown.find('.guests-input__button-simple-clear').find('.button-simple');
+          const $buttonClear = $($iqdropdown).find('.guests-input__button-simple-clear').find('.button-simple');
 
           if (totalItems > 0) {
             $buttonClear.removeClass('button-simple_hide');
@@ -55,7 +55,15 @@ class GuestsInput {
           return result;
         },
       });
-      $iqdropdown.find('.iqdropdown-menu').on('click', this._handleIqdropdownMenuClick);
+      $iqdropdowns.find('.iqdropdown-menu').on('click.iqdropdown', this._handleIqdropdownMenuClick);
+      $(document).on('mouseup.iqdropdown', this._handleDocumentMouseUp.bind(this));
+    })
+
+  }
+
+  _handleDocumentMouseUp(event) {
+    if (!this._$iqdropdowns.is(event.target) && this._$iqdropdowns.has(event.target).length === 0) {
+      this._$iqdropdowns.removeClass('menu-open');
     }
   }
 
