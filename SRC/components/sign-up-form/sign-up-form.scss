@@ -39,8 +39,7 @@
     margin-bottom: 30px;
   }
 
-  &__wrapper-for-sign-in-button {
-    height: 44px;
+  &__wrapper-for-sign-in-button {    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,6 +51,5 @@
 
   &_wrapper-sign-in-button {
     min-width: 99px;
-    height: 44px;
   }
 }

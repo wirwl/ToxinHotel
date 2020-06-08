@@ -5,7 +5,7 @@
   font-size: 12px;
   line-height: 15px;
   color: #bc9cff;
-  padding: 10px 20px;
+  padding: 15px 20px;
   cursor: pointer;
   text-transform: uppercase;
   position: relative;
@@ -45,16 +45,14 @@
     background: linear-gradient(180deg, #bc9cff7f 0%, #8ba4f97f 100%);
   }
 
-  &_dynamic-height {
-    height: 100%;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
   &_dynamic-width {
     width: 100%;
     min-width: 78px;
     padding-left: 0;
     padding-right: 0;
+  }
+
+  &_header {
+    padding: 10px 20px;
   }
 }

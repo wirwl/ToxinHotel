@@ -35,8 +35,7 @@
     margin-bottom: 30px;
   }
 
-  &__wrapper-for-sign-in-button {
-    height: 44px;
+  &__wrapper-for-sign-in-button {    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -44,9 +43,5 @@
 
   &__sign-in-text {
     color: #000;
-  }
-
-  &__wrapper-sign-up-button {
-    height: 44px;
-  }
+  }  
 }
