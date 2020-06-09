@@ -7,7 +7,13 @@ include ../../order-info-form/order-info-form
 include ../../bullets-list/bullets-list
 include ../../donut-chart/donut-chart
 
-mixin room-details({headerData, roomImages, comfortStatusCaption, comfortStatusList, donutChart, feedbackList, bulletListCaption, bulletList, cancellationCaption, cancellationText, orderInfoForm, footerData})
+mixin room-details(data)
+  -
+    const {
+            headerData, roomImages, comfortStatusCaption, comfortStatusList, donutChart, 
+            feedbackList, bulletListCaption, bulletList, cancellationCaption, cancellationText, 
+            orderInfoForm, footerData
+          } = data
   .room-details
     +header(headerData)
     main.room-details__main-content

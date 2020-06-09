@@ -6,7 +6,12 @@ include ../../../toxin-datepicker/toxin-datepicker
 include ../../../room-info/room-info
 include ../../../image-slider/image-slider
 
-mixin cards({roomReservationForm, signupForm, orderInfoForm, signinForm, toxinDatepicker, roomInfoFocused, roomInfo})
+mixin cards(data)
+  -
+    const {
+            roomReservationForm, signupForm, orderInfoForm, signinForm, toxinDatepicker, 
+            roomInfoFocused, roomInfo
+          } = data
   .cards
     .cards__column1
       ul.cards__column1-list

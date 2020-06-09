@@ -10,7 +10,12 @@ include ../../pagination/pagination
 include ../../room-info/room-info
 include ../../rooms-by-filter/rooms-by-filter
 
-mixin search-room({headerData, datepickerInput, guestsInput, rangeSlider, checkboxesListMisc, checkboxesListAccessibility, comfortInput, expandableCheckboxList, roomsByFilter, footerData })
+mixin search-room(data)
+  - 
+    const {
+            headerData, datepickerInput, guestsInput, rangeSlider, checkboxesListMisc, 
+            checkboxesListAccessibility, comfortInput, expandableCheckboxList, roomsByFilter, footerData 
+          } = data
   .search-room
     +header(headerData)      
     main.search-room__main-content       

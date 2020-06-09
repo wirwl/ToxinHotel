@@ -24,7 +24,18 @@ include ../../../bullet/bullet
 include ../../../bullets-list/bullets-list
 include ../../../datepicker-input/datepicker-input
     
-mixin form-elements({textInput, textInputFocused, guestsInputDropdown, maskedInput, datepickerInputArrival, datepickerInputCheckout, datepickerInputArrivalAndCheckout, subscribeInput, comfortInput, comfortInputExpanded, expandableCheckboxList, expandableCheckboxListExpanded, comfortStatusList, checkboxesList, radiosList, togglesList, likeButtonCaption, likeButton, likeButtonChecked, rateButtonCaption, rateButton4, rateButton5, guestsInput, checkboxesListRich, rangeSlider, buttonsCaption, buttonFilled, buttonFilledDisabled, buttonBordered, buttonBorderedDisabled, buttonSimple, buttonSimpleGray, buttonArrow, paginationCaption, pagination, guestsInputOpen, bulletsListCaption, bulletsList, feedback })
+mixin form-elements(data)
+  -
+    const {
+            textInput, textInputFocused, guestsInputDropdown, maskedInput, datepickerInputArrival, 
+            datepickerInputCheckout, datepickerInputArrivalAndCheckout, subscribeInput, comfortInput, comfortInputExpanded, 
+            expandableCheckboxList, expandableCheckboxListExpanded, comfortStatusList, checkboxesList, radiosList, 
+            togglesList, likeButtonCaption, likeButton, likeButtonChecked, rateButtonCaption, 
+            rateButton4, rateButton5, guestsInput, checkboxesListRich, rangeSlider, 
+            buttonsCaption, buttonFilled, buttonFilledDisabled, buttonBordered, buttonBorderedDisabled, 
+            buttonSimple, buttonSimpleGray, buttonArrow, paginationCaption, pagination, 
+            guestsInputOpen, bulletsListCaption, bulletsList, feedback 
+          } = data
   .form-elements
     .form-elements__column1
       ul.form-elements__column1-list
