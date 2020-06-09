@@ -13,23 +13,23 @@ mixin cards(data)
             roomInfoFocused, roomInfo
           } = data
   .cards
-    .cards__column1
-      ul.cards__column1-list
-        li.cards__column1-item
+    .cards__column-left
+      ul.cards__column-left-list
+        li.cards__column-left-item
           +room-reservation-form(roomReservationForm)
-        li.cards__column1-item       
+        li.cards__column-left-item       
           +sign-up-form(signupForm) 
-    .cards__column2
-      ul.cards__column2-list
-        li.cards__column2-item
+    .cards__column-middle
+      ul.cards__column-middle-list
+        li.cards__column-middle-item
           +order-info-form(orderInfoForm)
-        li.cards__column2-item
+        li.cards__column-middle-item
           +sign-in-form(signinForm)
-    .cards__column3
-      ul.cards__column3-list
-        li.cards__column3-item
+    .cards__column-right
+      ul.cards__column-right-list
+        li.cards__column-right-item
           +toxin-datepicker(toxinDatepicker)
-        li.cards__column3__item.cards__column3-wrapper-for-image-slider          
+        li.cards__column-right__item.cards__image-slider
           +room-info(roomInfoFocused)
-        li.cards__column3-item.cards__column3-wrapper-for-image-slider          
+        li.cards__column-right-item.cards__image-slider          
           +room-info(roomInfo)

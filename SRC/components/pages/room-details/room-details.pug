@@ -19,23 +19,23 @@ mixin room-details(data)
     main.room-details__main-content
       +room-images(roomImages) 
       .room-details__info
-        section.room-details__column1
-          .room-details__common-wrapper1
-            .room-details__wrapper-csl
-              h2.room-details__wrapper-csl-caption #{comfortStatusCaption}
+        section.room-details__column-left
+          .room-details__comfort-status-list-and-donut-chart
+            .room-details__wrapper-comfort-status-list
+              h2.room-details__wrapper-comfort-status-list-caption #{comfortStatusCaption}
               +comfort-status-list(comfortStatusList)
-            .room-details__wrapper-donut-chart
+            .room-details__donut-chart
               +donut-chart(donutChart)
-          .room-details__wrapper-fl
+          .room-details__feedback-list
             +feedback-list(feedbackList)
-          .room-details__common-wrapper2
+          .room-details__bullets-list-and-cancellation
             .room-details__bullets-list
               h2.room-details__bullets-list-caption #{bulletListCaption}
               +bullets-list(bulletList)            
             .room-details__cancellation
               h2.room-details__cancellation-caption #{cancellationCaption}
               p.room-details__cancellation-text #{cancellationText}
-        section.room-details__column2
-          .room-details__column2-wrapper-order-info-form
+        section.room-details__column-right
+          .room-details__order-info-form
             +order-info-form(orderInfoForm)
     +footer(footerData)  

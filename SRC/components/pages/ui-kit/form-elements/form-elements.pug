@@ -37,49 +37,49 @@ mixin form-elements(data)
             guestsInputOpen, bulletsListCaption, bulletsList, feedback 
           } = data
   .form-elements
-    .form-elements__column1
-      ul.form-elements__column1-list
-        li.form-elements__column1-item
+    .form-elements__column-left
+      ul.form-elements__column-left-list
+        li.form-elements__column-left-item
           +text-input(textInput)
-        li.form-elements__column1-item
+        li.form-elements__column-left-item
           +text-input(textInputFocused)
-        li.form-elements__column1-item.form-elements__column1-wrapper-for-guests-input0
+        li.form-elements__column-left-item.form-elements__column-left-wrapper-for-guests-input0
           +guests-input(guestsInputDropdown)
-        li.form-elements__column1-item.form-elements__column1-wrapper-for-masked-input
+        li.form-elements__column-left-item.form-elements__column-left-wrapper-for-masked-input
           +masked-input(maskedInput)
-        li.form-elements__column1-item.form-elements__column1-wrapper-for-datepicker-inputs
-          ul.form-elements__column1-datepicker-inputs-list
-            li.form-elements__column1-datepicker-inputs-item.form-elements__column1-datepicker-input-arrival
+        li.form-elements__column-left-item.form-elements__column-left-wrapper-for-datepicker-inputs
+          ul.form-elements__column-left-datepicker-inputs-list
+            li.form-elements__column-left-datepicker-inputs-item.form-elements__column-left-datepicker-input-arrival
               +datepicker-input(datepickerInputArrival)
-            li.form-elements__column1-datepicker-inputs-item.form-elements__column1-datepicker-input-checkout
+            li.form-elements__column-left-datepicker-inputs-item.form-elements__column-left-datepicker-input-checkout
               +datepicker-input(datepickerInputCheckout)
-        li.form-elements__column1-item.form-elements__column1-wrapper-for-fdd-input          
+        li.form-elements__column-left-item.form-elements__column-left-wrapper-for-fdd-input          
           +datepicker-input(datepickerInputArrivalAndCheckout)
-        li.form-elements__column1-item.form-elements__column1-wrapper-for-subscribe-input
+        li.form-elements__column-left-item.form-elements__column-left-wrapper-for-subscribe-input
           +subscribe-input(subscribeInput)
-        li.form-elements__column1-item
-          .form-elements__column1-comfort-input
+        li.form-elements__column-left-item
+          .form-elements__column-left-comfort-input
             +comfort-input(comfortInput)
-        li.form-elements__column1-item.form-elements__column1-wrapper-for-comfort-input
-          .form-elements__column1-comfort-input
+        li.form-elements__column-left-item.form-elements__column-left-wrapper-for-comfort-input
+          .form-elements__column-left-comfort-input
             +comfort-input(comfortInputExpanded)
-        li.form-elements__column1-item.form-elements__column1-wrapper-for-ecl1
+        li.form-elements__column-left-item.form-elements__expandable-checkbox-list-hide
           +expandable-checkbox-list(expandableCheckboxList)
-        li.form-elements__column1-item.form-elements__column1-wrapper-for-ecl2                                                            
+        li.form-elements__column-left-item.form-elements__expandable-checkbox-list-show                                                            
           +expandable-checkbox-list(expandableCheckboxListExpanded)
-        li.form-elements__column1-item.form-elements__column1-wrapper-for-comfort-status-list
+        li.form-elements__column-left-item.form-elements__column-left-wrapper-for-comfort-status-list
           +comfort-status-list(comfortStatusList)
     .form-elements__column-wrapper            
-      .form-elements__column23-wrapper
-        .form-elements__column2
-          ul.form-elements__column2-list
-            li.form-elements__column2-item.form-elements__column2-wrapper-for-checkboxes-list
+      .form-elements__columns-middle-right
+        .form-elements__column-middle
+          ul.form-elements__column-middle-list
+            li.form-elements__column-middle-item.form-elements__column-middle-wrapper-for-checkboxes-list
               +checkboxes-list(checkboxesList)               
-            li.form-elements__column2-item.form-elements__column2-wrapper-for-radios-list
+            li.form-elements__column-middle-item.form-elements__column-middle-wrapper-for-radios-list
               +radios-list(radiosList)
-            li.form-elements__column2-item.form-elements__column2-wrapper-for-toggles-list 
+            li.form-elements__column-middle-item.form-elements__column-middle-wrapper-for-toggles-list 
               +toggles-list(togglesList)         
-            li.form-elements__column2-item.form-elements__column2-wrapper-for-likes-button-list
+            li.form-elements__column-middle-item.form-elements__column-middle-wrapper-for-likes-button-list
               .form-elements__likes-buttons
                 h3.form-elements__likes-button-list-caption #{likeButtonCaption}
                 ul.form-elements__likes-button-list
@@ -87,7 +87,7 @@ mixin form-elements(data)
                     +like-button(likeButton)
                   li.form-elements__likes-button-list-item
                     +like-button(likeButtonChecked)
-            li.form-elements__column2-item.form-elements__column2-wrapper-for-rate-buttons-list
+            li.form-elements__column-middle-item.form-elements__column-middle-wrapper-for-rate-buttons-list
               .form-elements__rate-buttons
                 h3.form-elements__rate-buttons-list-caption #{rateButtonCaption}
                 ul.form-elements__rate-buttons-list
@@ -95,15 +95,15 @@ mixin form-elements(data)
                     +rate-button(rateButton4)
                   li.form-elements__rate-buttons-list-item
                     +rate-button(rateButton5)
-            li.form-elements__column2-item.form-elements__column2-wrapper-for-guests-input1
+            li.form-elements__column-middle-item.form-elements__column-middle-wrapper-for-guests-input1
               +guests-input(guestsInput)
-            li.form-elements__column2-item.form-elements__column2-wrapper-for-rich-checkboxes-list
+            li.form-elements__column-middle-item.form-elements__column-middle-wrapper-for-rich-checkboxes-list
               +checkboxes-list(checkboxesListRich)                                                 
-        .form-elements__column3
-          ul.form-elements__column3-list
-            li.form-elements__column3-item.form-elements__column3-wrapper-for-range-slider
+        .form-elements__column-right
+          ul.form-elements__column-right-list
+            li.form-elements__column-right-item.form-elements__column-right-wrapper-for-range-slider
               +range-slider(rangeSlider)
-            li.form-elements__column3-item.form-elements__column3-wrapper-for-buttons-list
+            li.form-elements__column-right-item.form-elements__column-right-wrapper-for-buttons-list
               h3.form-elements__buttons-list-caption #{buttonsCaption}
               ul.form-elements__buttons-list    
                 li.form-elements__buttons-list-item
@@ -126,13 +126,13 @@ mixin form-elements(data)
                       +button-simple(buttonSimpleGray)
                 li.form-elements__buttons-list-item
                   +button-arrow(buttonArrow)
-            li.form-elements__column3-item.form-elements__pagination-wrapper
+            li.form-elements__column-right-item.form-elements__pagination-wrapper
               h3.form-elements__pagination-wrapper-caption #{paginationCaption}
               +pagination(pagination)
-            li.form-elements__column3-item.form-elements__column3-wrapper-for-guests-input2
+            li.form-elements__column-right-item.form-elements__column-right-wrapper-for-guests-input2
               +guests-input(guestsInputOpen)
-            li.form-elements__column3-item.form-elements__column3-wrapper-for-bullet-list
-              h3.form-elements__column3-bullet-list-caption #{bulletsListCaption}
+            li.form-elements__column-right-item.form-elements__column-right-wrapper-for-bullet-list
+              h3.form-elements__column-right-bullet-list-caption #{bulletsListCaption}
               +bullets-list(bulletsList)
-      .form-elements__row1
+      .form-elements__row
         +feedback(feedback)

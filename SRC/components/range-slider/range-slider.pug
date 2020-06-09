@@ -1,8 +1,8 @@
-mixin range-slider({ctext, min, max, from, to, desc})
+mixin range-slider({caption, min, max, from, to, description})
   .range-slider
     .range-slider__caption
-      h3.range-slider__caption-text #{ctext}
+      h3.range-slider__caption-text #{caption}
       p.range-slider__values.js-range-slider__values
     input.range-slider__input.js-range-slider__input(data-min=min data-max=max data-from=from data-to=to)
-    if desc
-      .range-slider__desc #{desc}
+    if description
+      .range-slide__description #{description}

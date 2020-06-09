@@ -8,7 +8,7 @@
     text-align: right;
     width: 50px;
   }
-  &__desc {
+  &__description {
     color: $toxin-color-black-100;
     font-family: inherit;
   }
@@ -18,7 +18,7 @@
       font-family: $toxin-font-quicksand;
       font-size: 24px;
       line-height: 30px;
-      .font-example__desc {
+      .font-example__description {
         width: 351px;
         font-weight: bold;
       }
@@ -27,7 +27,7 @@
       font-family: $toxin-font-quicksand;
       font-size: 19px;
       line-height: 24px;
-      .font-example__desc {
+      .font-example__description {
         width: 282px;
         font-weight: bold;
       }
@@ -36,7 +36,7 @@
       font-family: $toxin-font-montserrat;
       font-size: 12px;
       line-height: 15px;
-      .font-example__desc {
+      .font-example__description {
         width: 186px;
         font-weight: bold;
       }
@@ -45,7 +45,7 @@
       font-family: $toxin-font-montserrat;
       font-size: 14px;
       line-height: 24px;
-      .font-example__desc {
+      .font-example__description {
         width: 301px;
         color: $toxin-color-black-75;
       }

@@ -12,12 +12,10 @@ imports.keys().forEach(imports);
 $('.js-range-slider__values').text('5 000₽ - 10 000₽');
 
 
-const datepickerInputArrival = $('.form-elements__column1-datepicker-input-arrival').find('.datepicker-input__input');
-const datepickerArrival = $('.form-elements__column1-datepicker-input-arrival').find('.datepicker-input__input').data('datepicker');
+const datepickerInputArrival = $('.form-elements__column-left-datepicker-input-arrival').find('.datepicker-input__input');
+const datepickerArrival = $('.form-elements__column-left-datepicker-input-arrival').find('.datepicker-input__input').data('datepicker');
 
-const datepickerInputCheckout = $('.form-elements__column1-datepicker-input-checkout').find('.datepicker-input__input');
-const datepickerCheckout = $('.form-elements__column1-datepicker-input-checkout').find('.datepicker-input__input').data('datepicker');
-
+const datepickerInputCheckout = $('.form-elements__column-left-datepicker-input-checkout').find('.datepicker-input__input');
 
 datepickerArrival.update('minDate', null);
 
@@ -27,7 +25,7 @@ datepickerArrival.update('onSelect', ((fd) => {
 }));
 
 if (datepickerInputCheckout.length) {
-  datepickerInputCheckout.on('click', () => { datepickerArrival.show()});
+  datepickerInputCheckout.on('click', () => { datepickerArrival.show(); });
 }
 
 const rs = $('.js-range-slider__input').data('ionRangeSlider');
@@ -36,7 +34,7 @@ rs.update({
   to: 9500,
 });
 
-const dp = $('.form-elements__column1-wrapper-for-fdd-input').find('.datepicker-input__input').data('datepicker');
+const dp = $('.form-elements__column-left-wrapper-for-fdd-input').find('.datepicker-input__input').data('datepicker');
 dp.update('dateFormat', 'dd M');
 dp.update('onSelect', (fd, d, picker) => {
   picker.$el.val(fd.toLowerCase());

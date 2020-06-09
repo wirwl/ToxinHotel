@@ -1,6 +1,6 @@
-mixin checkbox({isChecked, desc, text})
+mixin checkbox({isChecked, description, text})
   label.checkbox
     input(type="checkbox" checked=(isChecked && "checked")).checkbox__input    
-    .checkbox__text(class=desc && "checkbox__text_is-reach-checkbox") #{text}
-    if desc
-      p.checkbox__desc(class=desc && "checkbox__desc_is-reach-checkbox") #{desc}
+    .checkbox__text(class=description && "checkbox__text_is-reach-checkbox") #{text}
+    if description
+      p.checkbox__description(class=description && "checkbox__description_is-reach-checkbox") #{description}
