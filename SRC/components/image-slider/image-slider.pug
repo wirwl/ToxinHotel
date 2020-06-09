@@ -13,5 +13,5 @@ mixin image-slider({images, id, image_index, isShowNavBtns})
     .image-slider__nav-dots
       - let i=0
       while i<length
-        - i++
+        - i+=1
         label.image-slider__nav-dot(for = id_img+i)
