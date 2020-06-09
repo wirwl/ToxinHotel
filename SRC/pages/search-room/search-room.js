@@ -8,7 +8,7 @@ fonts.keys().forEach(fonts);
 const imports = require.context('../../components/', true, /\.(scss|js)$/);
 imports.keys().forEach(imports);
 
-const dp = $('#filters_di').data('datepicker');
+const dp = $('.datepicker-input__input').data('datepicker');
 dp.update('dateFormat', 'dd M');
 dp.update('onSelect', (fd, d, picker) => {
   picker.$el.val(fd.toLowerCase());
