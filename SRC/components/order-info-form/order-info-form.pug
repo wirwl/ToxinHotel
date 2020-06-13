@@ -5,7 +5,7 @@ include ../guests-input/guests-input
 include ../button-arrow/button-arrow
 
 mixin order-info-form({items, summaryText, summaryValue, roomInfoCaption, datepickerInputArrival, datepickerInputCheckout, guestsInput, buttonSubmit})
-  form.order-info-form(method="post" action="#")
+  form.order-info-form(method = "post" action = "#")
     fieldset.order-info-form__wrapper-main
       .order-info-form__wrapper-for-room-info-caption
         +room-info-caption(roomInfoCaption)

@@ -3,15 +3,15 @@ include ../header-menu/header-menu
 include ../button-filled/button-filled
 include ../button-bordered/button-bordered
 
-mixin header({isAuth, logo_path, login="Login", menu, reg="Register", name="Cosmin Negoita", isHeader})
+mixin header({isAuth, logo_path, login = "Login", menu, reg = "Register", name = "Cosmin Negoita", isHeader})
   header.header
     .header__logo
-      +logo({path:logo_path})
+      +logo({path: logo_path})
     .header__header-menu
       +header-menu(menu)
-    .header__auth-area(class=isAuth && "header__auth-area_is-auth")
-      .header__button-bordered(class=isAuth && "header__button-bordered_hide")
+    .header__auth-area(class = isAuth && "header__auth-area_is-auth")
+      .header__button-bordered(class = isAuth && "header__button-bordered_hide")
         +button-bordered({text: login, isHeader: isHeader})      
-      .header__button-filled(class=isAuth && "header__button-filled_hide")
+      .header__button-filled(class = isAuth && "header__button-filled_hide")
         +button-filled({text: reg, isHeader: isHeader})
-      a.header__auth-name(href="/mock-address/change-me" class=isAuth && "header__auth-name_show") #{name}
+      a.header__auth-name(href = "/mock-address/change-me" class = isAuth && "header__auth-name_show") #{name}

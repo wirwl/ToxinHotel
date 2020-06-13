@@ -1,5 +1,5 @@
-mixin button-bordered({isEnabled=true, type="button", isHeader, dynamic_width, text})  
-  button.button-bordered(type=type 
-    class=(isHeader && "button-bordered_header") +" "+
-      (dynamic_width && "button-bordered_dynamic-width")+" "+
-      (isEnabled || "button-bordered_disabled")) #{text}
+mixin button-bordered({isDisabled, type="button", isHeader, dynamic_width, text})  
+  button.button-bordered(type = type 
+    class = (isHeader ? "button-bordered_header" : "") +" "+
+      (dynamic_width ? "button-bordered_dynamic-width" : "")+" "+
+      (isDisabled ? "button-bordered_disabled" : "")) #{text}

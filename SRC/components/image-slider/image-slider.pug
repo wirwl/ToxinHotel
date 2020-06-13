@@ -3,15 +3,15 @@ mixin image-slider({images, id, image_index, isShowNavBtns})
   - let id_img = id + "-img-"
   .image-slider
     for image, index in images
-      input.image-slider__input(id=id_img+(index+1) type="radio" name=id+"-radio-btn" checked=((image_index==index+1) && "checked"))
+      input.image-slider__input(id = id_img + (index + 1) type = "radio" name = id + "-radio-btn" checked = ((image_index == index+1) && "checked"))
       .image-slider__container
         .image-slider__slide
-          img.image-slider__image(src=image alt="alt-"+id_img+(index+1))
+          img.image-slider__image(src = image alt = "alt-" + id_img + (index + 1))
         .image-slider__nav
-          label.image-slider__label.image-slider__prev(class=isShowNavBtns && "image-slider__label_show" content="keyboard_arrow_left" for=id_img+(index==0 ? length : index)).material-icons
-          label.image-slider__label.image-slider__next(class=isShowNavBtns && "image-slider__label_show" content="keyboard_arrow_right" for=id_img+(index==length-1 ? 1 : index+2)).material-icons
+          label.image-slider__label.image-slider__prev(class = isShowNavBtns && "image-slider__label_show" content = "keyboard_arrow_left" for = id_img + (index == 0 ? length : index)).material-icons
+          label.image-slider__label.image-slider__next(class = isShowNavBtns && "image-slider__label_show" content = "keyboard_arrow_right" for = id_img + (index == length-1 ? 1 : index + 2)).material-icons
     .image-slider__nav-dots
-      - let i=0
-      while i<length
+      - let i = 0
+      while i < length
         - i+=1
-        label.image-slider__nav-dot(for = id_img+i)
+        label.image-slider__nav-dot(for = id_img + i)

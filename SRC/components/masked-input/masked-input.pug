@@ -1,5 +1,5 @@
-mixin masked-input({caption, type, placeholder="ДД.ММ.ГГГГ", value})
+mixin masked-input({caption, type, placeholder = "ДД.ММ.ГГГГ", value})
   label.masked-input    
     if caption
       h3.masked-input__caption #{caption}
-    input.masked-input__input.js-masked-input__input(type=type placeholder=placeholder value=value)
+    input.masked-input__input.js-masked-input__input(type = type placeholder = placeholder value = value)

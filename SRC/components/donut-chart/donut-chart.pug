@@ -4,6 +4,6 @@ mixin donut-chart({caption, id, voices, legendList})
   figure.donut-chart
     h2.donut-chart__caption #{caption}
     .donut-chart__wrapper
-      canvas(id=id data-voices=voices).donut-chart__canvas
+      canvas(id = id data-voices = voices).donut-chart__canvas
       .donut-chart__legend-list
         +legend-list(legendList)

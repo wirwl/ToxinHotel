@@ -1,5 +1,5 @@
-mixin button-filled({isEnabled=true, isHeader, dynamic_width, type="button", text})
-  button.button-filled(type=type 
-    class=(isHeader && "button-filled_header") +" "+
-      (dynamic_width && "button-filled_dynamic-width")+" "+
-      (isEnabled || "button-filled_disabled")) #{text}
+mixin button-filled({isDisabled, isHeader, dynamic_width, type = "button", text})
+  button.button-filled(type = type 
+    class = (isHeader ? "button-filled_header" : "") +" "+
+      (dynamic_width ? "button-filled_dynamic-width" : "")+" "+
+      (isDisabled ? "button-filled_disabled" : "")) #{text}
