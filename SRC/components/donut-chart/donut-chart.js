@@ -85,7 +85,7 @@ class DonutChart {
             this._canvas.getContext('2d'),
             this._canvas.width / 2,
             this._canvas.height / 2,
-            size - 10 * (data[key].count / arc100percent),
+            size - 10 * 0.4,
             startAngel * Math.PI, (startAngel - arcLength[noZero][index]) * Math.PI,
             '#fff',
           );

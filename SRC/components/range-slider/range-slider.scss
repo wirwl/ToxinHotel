@@ -7,6 +7,7 @@
     justify-content: space-between;
     margin-bottom: 19px;
   }
+  
   &__caption-text {
     color: $toxin-color-black-100;
     text-transform: uppercase;
@@ -14,6 +15,7 @@
     font-weight: bold;
     font-style: inherit;
   }
+
   &__values {
     color: $toxin-color-black-50;
   }

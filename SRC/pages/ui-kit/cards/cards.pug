@@ -19,8 +19,8 @@ block content
       guestsInput: {
         caption: "Гости", 
         items: [
-          {id: "adults", text: "Взрослые", count: 2}, 
-          {id: "children", text: "Дети", count: 1}, 
+          {id: "adults", text: "Взрослые"}, 
+          {id: "children", text: "Дети"}, 
           {id: "babies", text: "Младенцы"}
         ], 
         buttonClear: {text: "Очистить", isGrayText: true}, 
@@ -45,7 +45,7 @@ block content
       textInputPassword: {placeholder: "Пароль", type: "password"},
       toggleSpecialOffer: {text: "Получать спецпредложения"},
       buttonSubmit: {text: "Перейти к оплате", type: "submit"},
-      buttonSignin: {text: "Войти"}
+      buttonSignin: {text: "Войти", dynamic_width: true}
     },
     orderInfoForm: {
       items: [
@@ -55,14 +55,14 @@ block content
       ], 
       summaryText: "Итого", 
       summaryValue: "38 081₽",
-      roomInfoCaption: {number: 888, isLux: true, costValue: "9 990", costText: "в сутки"},
+      roomInfoCaption: {number: 888, isLux: true, luxText: "люкс", costValue: "9 990", costText: "в сутки"},
       datepickerInputArrival: {caption: "Прибытие", placeholder: "ДД.ММ.ГГГГ"},
       datepickerInputCheckout: {caption: "Выезд", placeholder: "ДД.ММ.ГГГГ", hasDatepicker: false},
       guestsInput: {
         caption: "Гости", 
         items: [
-          {id: "adults", text: "Взрослые"}, 
-          {id: "children", text: "Дети"}, 
+          {id: "adults", text: "Взрослые", count: 2}, 
+          {id: "children", text: "Дети", count: 1}, 
           {id: "babies", text: "Младенцы"}
         ], 
         buttonClear: {text: "Очистить", isGrayText: true}, 

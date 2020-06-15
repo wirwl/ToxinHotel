@@ -54,6 +54,7 @@ module.exports = ((env, argv) => {
               loader: 'html-loader',
               options: {
                 attrs: ['img:src'],
+                cache: true,
               },
             },
             `pug-html-loader?pretty=${isDev}`,

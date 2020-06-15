@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   background: white;
-  padding: 40px 30px 30px;
+  padding: 38px 30px 30px;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -31,13 +31,17 @@
   }
 
   &__button-arrow {
-    margin-bottom: 30px;
+    margin-bottom: 29px;
   }
 
   &__wrapper-for-sign-in-button {    
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;    
+  }
+
+  &__wrapper-sign-up-button {
+    min-width: 99px;
   }
 
   &__sign-in-text {
