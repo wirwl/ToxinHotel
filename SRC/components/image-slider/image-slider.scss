@@ -96,10 +96,12 @@
   &__nav-dots {
     bottom: 7.8%;
     right: 5.5%;
-    display: block;
+    display: flex;
     position: absolute;
     z-index: 20;
     font-size: 12px;
+    justify-content: space-between;
+    width: 49.47px;
   }
 
   &__nav-dots .image-slider__nav-dot {
