@@ -29,6 +29,12 @@
     color: $toxin-color-black-100;
   }
 
+  &--days-names {
+    margin-top: 9px;
+    padding-right: 4px;
+    margin-bottom: 4px;
+  }
+
   &--day-name {
     color: $toxin-color-purple;
     font-weight: bold;
@@ -37,7 +43,12 @@
   }
 
   &--cell-day {
+    width: 39.88px;
     height: 40px;
+  }
+
+  &--content {
+    padding: 3px 0px 3px 6px;
   }
 
   &--cell-day.-range-from-.-selected-:not(.-focus-) {

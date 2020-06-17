@@ -8,6 +8,7 @@
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
+    letter-spacing: -0.3px;
   }
 
   &__text {
@@ -15,5 +16,6 @@
     line-height: 24px;
     margin-bottom: 23px;
     color: rgba(31, 32, 65, 0.75);
+    letter-spacing: -0.2px;
   }
 }

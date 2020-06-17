@@ -15,12 +15,14 @@
     color: $toxin-color-black-75;
     border: 1px solid $toxin-color-black-25;
     border-radius: 4px;
-    background: white;
+    background: white;    
     padding: 12px 15px;
+    letter-spacing: -0.15px;
     outline: none;
     width: 100%;
     font-size: 14px;
     font-family: inherit;
+      
   }
 
   &__input::placeholder {

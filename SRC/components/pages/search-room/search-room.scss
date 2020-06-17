@@ -52,17 +52,21 @@
   }
 
   &__checkboxes-list-miscellaneous {
-    margin-bottom: 33px;
+    margin-bottom: 31px;
     max-width: 230px;
   }
 
   &__checkboxes-list-accessibility {
-    margin-bottom: 28px;
+    margin-bottom: 33px;
     max-width: 253px;
+
+    .checkboxes-list__item:nth-child(1) {
+      width: 220px;
+    }
   }
 
   &__comfort-input {
-    margin-bottom: 25px;
+    margin-bottom: 27px;
   }
 
   @media (max-width: 658px) {

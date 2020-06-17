@@ -18,6 +18,7 @@
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
+    letter-spacing: -0.2px;
   }
 
   &__item {
@@ -26,7 +27,7 @@
   }
 
   &__item:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 21px;
   }
 
   &__link {

@@ -13,6 +13,7 @@
   }
   &__logo {
     margin-right: 15px;
+    padding-top: 3px;
   }
 
   &__header-menu {
@@ -35,6 +36,7 @@
 
   &__button-bordered {    
     margin-right: 20px;
+    //min-width: 87px;
   }
 
   &__auth-name {
@@ -43,7 +45,7 @@
     color: $toxin-color-black-50;
     border-left: 1px solid $toxin-color-black-10;
     align-items: center;
-    padding-left: 30px;
+    padding-left: 33px;
     text-align: center;
     font-size: 14px;
     line-height: 17px;

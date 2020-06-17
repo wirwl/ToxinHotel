@@ -35,7 +35,7 @@
   }
 
   &__column-left-wrapper-for-datepicker-inputs {
-    margin-bottom: 39px;
+    margin-bottom: 38px;
   }
 
   &__column-left-datepicker-inputs-list {
@@ -48,7 +48,7 @@
   }
 
   &__column-left-wrapper-for-masked-input {
-    margin-bottom: 38px;
+    margin-bottom: 39px;
   }
 
   &__column-left-datepicker-inputs-item:nth-child(1) {
@@ -77,9 +77,11 @@
     margin-bottom: 168px;
   }
 
-  &__expandable-checkbox-list-hide,
+  &__expandable-checkbox-list-hide {
+    margin-bottom: 40px;
+  }
   &__expandable-checkbox-list-show {
-    margin-bottom: 42px;
+    margin-bottom: 43px;
   }
 
   &__column-left-wrapper-for-comfort-status-list {
@@ -87,7 +89,7 @@
   }
 
   &__column-middle-wrapper-for-checkboxes-list {
-    margin-bottom: 42px;
+    margin-bottom: 41px;
     width: 240px;
   }
 
@@ -145,7 +147,7 @@
 
   &__column-middle-wrapper-for-rich-checkboxes-list {
     width: 253px;
-    margin-bottom: 230px;
+    margin-bottom: 236px;
 
     .checkboxes-list__item:nth-child(1) {
       width: 220px;
@@ -206,7 +208,7 @@
   }
 
   &__pagination-wrapper {
-    margin-bottom: 232px;
+    margin-bottom: 234px;
     max-width: 241px;
   }
 
@@ -216,7 +218,7 @@
   }
 
   &__column-right-wrapper-for-guests-input2 {
-    margin-bottom: 259px;
+    margin-bottom: 257px;
   }
 
   &__column-right-wrapper-for-bullet-list {
