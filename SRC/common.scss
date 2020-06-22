@@ -21,8 +21,7 @@ $toxin-font-awesome: awesome-5-brands-regular-400, Arial, sans-serif;
   padding: 0px;
 }
 
-@mixin define-html {
-  background: #e2e2e2;
+@mixin define-html {  
   color: $toxin-color-black-100;
   font-size: 14px;
   font-family: $toxin-font-montserrat;
@@ -30,7 +29,6 @@ $toxin-font-awesome: awesome-5-brands-regular-400, Arial, sans-serif;
 
 @mixin define-body {
   margin: 0 auto;
-  min-width: 320px;
-  max-width: 1440px;
+  min-width: 320px;  
   background: #fff;
 }
