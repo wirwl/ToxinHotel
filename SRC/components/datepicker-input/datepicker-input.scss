@@ -17,12 +17,14 @@
     font-size: 14px;    
     width: 100%;
     font-family: inherit;
+    color: $toxin-color-black-75;
   }
 
   &__input::placeholder {
     font-size: 14px;
     color: $toxin-color-black-75;
   }
+  
   &__input:hover,
   &__input:focus {
     border: 1px solid $toxin-color-black-50;
@@ -40,7 +42,6 @@
     position: absolute;
     top: 12px;
     right: 9px;
-
     display: flex;
     justify-content: center;
     align-items: center;
