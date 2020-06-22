@@ -16,7 +16,7 @@
 
   &__list {
     display: flex;
-    margin-bottom: 19px;
+    margin-bottom: 20px;
     flex-wrap: wrap;
     justify-content: space-between;
     list-style: none;
@@ -29,7 +29,8 @@
 
   &__wrapper-pagination {
     margin: 0 auto;
-    min-width: 241px;
+    min-width: 240px;
+    padding-right: 15px;
   }
 
   @media (max-width: 1197px) {

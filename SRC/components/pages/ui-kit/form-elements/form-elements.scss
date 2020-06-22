@@ -107,7 +107,7 @@
 
   &__likes-button-list {
     list-style: none;
-    display: flex;
+    display: flex;    
   }
 
   &__likes-button-list-caption {
@@ -174,7 +174,7 @@
   }
 
   &__buttons-list {
-    list-style: none;
+    list-style: none;    
   }
 
   &__buttons-list-caption {
@@ -199,6 +199,10 @@
     width: 99px;
   }
 
+  &__buttons-list-item.form-elements__simple-buttons {
+    margin-bottom: 27px;
+  }
+  
   &__two-buttons-list3 .form-elements__two-buttons-list-item {
     height: auto;
   }
@@ -208,12 +212,12 @@
   }
 
   &__pagination-wrapper {
-    margin-bottom: 234px;
+    margin-bottom: 236px;
     max-width: 241px;
   }
 
   &__pagination-wrapper-caption {
-    margin-bottom: 17px;
+    margin-bottom: 16px;
     @include caption;
   }
 

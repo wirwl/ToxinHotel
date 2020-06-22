@@ -16,7 +16,7 @@
     width: 100%;
     list-style: none;
     display: flex;
-    justify-content: space-between;
+    //justify-content: space-between;
   }
 
   &__item {
@@ -28,12 +28,8 @@
     border-radius: 50%;
     font-size: 12px;
     padding: 8px 0px;
-  }
-
-  &__item:first-child,
-  &__item:last-child,
-  &__item_active {
-    width: 40px;
+    min-width: 40px;
+    min-height: 40px;    
   }
 
   &__item:first-child,
