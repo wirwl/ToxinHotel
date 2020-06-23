@@ -85,7 +85,7 @@ mixin MenuItems(items, calls=1)
 mixin createHTMLtags({sm, isBold, link, text}, calls)
   - let typeOfList = (calls>2) ? "header-menu__item_sub-sub-item" : "header-menu__item_sub-item"    
   li.header-menu__item(class=((calls==1) ? "" : typeOfList) + (sm && " header-menu__list_arrow" || ""))
-    a.header-menu__link.js-menu__link(class=(isBold && "header-menu__link_bold") href=link) #{text}
+    a.header-menu__link.js-menu__link(class=(isBold ? "header-menu__link_bold" : "" + (sm && " header-menu__link_arrow" || "")) href=link) #{text}
     block     
 
 mixin favicon({path=""} = {})

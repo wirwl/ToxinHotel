@@ -17,13 +17,15 @@
     margin-bottom: 130px;
   }
 
-  .header__header-menu,
-  .header-menu__item:not(:last-of-type) {
+  .header__header-menu {
     margin-right: 28px;
+  }
+  .header-menu__item:not(:last-of-type) {
+    margin-right: 30px;
   }
 
   .header-menu__item:not(:last-of-type).header-menu__list_arrow {
-    margin-right: 20px;
+    margin-right: 17px;
   }
 
   .button-bordered_header {

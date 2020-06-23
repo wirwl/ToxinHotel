@@ -3,16 +3,24 @@ include ../header-menu/header-menu
 include ../button-filled/button-filled
 include ../button-bordered/button-bordered
 
-mixin header({isAuth, logo_path, login = "Login", menu, reg = "Register", name = "Cosmin Negoita", isHeader, buttonLogin})
+mixin header(data)
+  -
+    const {
+      isAuth, logo_path, login = "Login", menu, 
+      reg = "Register", name = "Cosmin Negoita", isHeader, buttonLogin
+    } = data
   header.header
-    .header__logo
-      +logo({path: logo_path})
-    .header__header-menu
-      +header-menu(menu)    
-    .header__auth-area(class = isAuth && "header__auth-area_is-auth")
-      if !isAuth
-        .header__button-bordered(class = isAuth && "header__button-bordered_hide")
-          +button-bordered(buttonLogin)      
-        .header__button-filled(class = isAuth && "header__button-filled_hide")
-          +button-filled({text: reg, isHeader: isHeader})
-      a.header__auth-name(href = "/mock-address/change-me" class = isAuth && "header__auth-name_show") #{name}
+    .header__wrapper
+      .header__logo
+        +logo({path: logo_path})
+      .header__menu-and-auth-area
+        .header__header-menu
+          +header-menu(menu)    
+        .header__auth-area(class = isAuth && "header__auth-area_is-auth")
+          if !isAuth
+            .header__button-bordered(class = isAuth && "header__button-bordered_hide")
+              +button-bordered(buttonLogin)      
+            .header__button-filled(class = isAuth && "header__button-filled_hide")
+              +button-filled({text: reg, isHeader: isHeader})
+        a.header__auth-name(href = "/mock-address/change-me" class = isAuth && "header__auth-name_show") #{name}
+    .header__icon.js-header__icon menu

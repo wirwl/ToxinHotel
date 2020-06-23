@@ -5,7 +5,7 @@ class HeaderMenu {
 
   _addEventListeners() {
     $('.js-menu__link').on('click.menu', this._handleMenuLinkClick.bind(this));
-    $('.js-header-menu__icon').on('click.menu', this._handleHeaderMenuIconClick);
+    $('.js-header__icon').on('click.menu', this._handleHeaderMenuIconClick);
     $('.js-menu__list').on('mouseleave.menu', this._handleMenuListMouseLeave.bind(this));
   }
 
@@ -29,14 +29,8 @@ class HeaderMenu {
 
   _handleHeaderMenuIconClick(e) {
     const $icon = $(e.currentTarget);
-    const $list = $icon.parent().find('.header-menu__list');
-    if ($list.hasClass('header-menu__list_show')) {
-      $list.removeClass('header-menu__list_show');
-      $list.addClass('header-menu__list_hide');
-    } else {
-      $list.removeClass('header-menu__list_hide');
-      $list.addClass('header-menu__list_show');
-    }
+    const $list = $icon.parent().find('.header__menu-and-auth-area');
+    $list.toggleClass('header__menu-and-auth-area_show');
   }
 
   _handleMenuListMouseLeave(e) {
