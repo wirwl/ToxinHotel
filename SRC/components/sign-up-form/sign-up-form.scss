@@ -56,4 +56,8 @@
   &_wrapper-sign-in-button {
     min-width: 99px;
   }
+
+  @media (max-width: 360px) {
+    padding: 39px 10px 29px; 
+  }
 }
