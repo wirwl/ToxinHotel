@@ -1,14 +1,9 @@
-// html {
-//   overflow-y: hidden;
-// }
-
 .header {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 70px;
-  //padding: 0px 5px;
-  //9.722222%;
+  padding: 0px 5px;  
   background: #fff;
   
 
@@ -147,35 +142,7 @@
     }
 
     &__menu-and-auth-area_show {
-      display: flex;  
+      display: flex;
     }
-
   }
-  // @media (max-width: 715px) {
-  //   justify-content: space-between;
-  //   padding: 0;
-  //   padding-right: 5px;
-
-  //   &__header-menu {
-  //     order: -1;
-  //     margin-left: 0;
-  //   }
-  // }
-
-  // @media (max-width: 488px) {
-  //   &__button-bordered {
-  //     margin-right: 5px;
-  //     margin-bottom: 5px;
-  //   }
-  //   &__auth-area {
-  //     flex-direction: column;
-  //     margin: 5px 0;
-  //   }
-  // }
-
-  // @media (max-width: 365px) {
-  //   &__logo {
-  //     display: none;
-  //   }
-  // }
 }

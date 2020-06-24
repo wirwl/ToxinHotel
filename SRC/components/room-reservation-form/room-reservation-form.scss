@@ -49,4 +49,8 @@
   &__guests-input {
     margin-bottom: 30px;
   }
+
+  @media (max-width: 360px) {
+    padding: 40px 10px 29px;
+  }
 }

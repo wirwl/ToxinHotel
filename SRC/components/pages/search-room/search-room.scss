@@ -27,7 +27,13 @@
   }
 
   &__filters {
-    margin-right: 60px;
+    margin-right: 4.16666667vw;
+  }
+
+  @media (max-width: 1200px) {
+    &__filters {
+      margin-right: 12px;
+    }
   }
 
   &__filters-list {
@@ -70,6 +76,11 @@
   }
 
   @media (max-width: 658px) {
+    &__main-content {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
     &__filters {
       margin-right: 10px;
     }
