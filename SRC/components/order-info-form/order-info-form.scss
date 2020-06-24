@@ -81,6 +81,7 @@
   &__cell-value {
     text-align: end;
     vertical-align: top;
+    min-width: 60px;
   }
 
   &__total {
@@ -109,5 +110,9 @@
     border-bottom: 1px dotted $toxin-color-black-25;
     margin-right: 5px;
     flex-grow: 1;
-  }  
+  }
+
+  @media (max-width: 360px) {
+    padding: 40px 10px 29px;
+  }
 }

@@ -94,15 +94,20 @@
     &__column-left {
       margin-right: 20px;
     }
-  }
 
-  @media (max-width: 1085px) {
-    &__column-left {
-      margin-right: 0;
+    &__comfort-status-list-and-donut-chart {
+      justify-content: center;
     }
 
     &__wrapper-comfort-status-list {
-      margin-right: 10px;
+      //margin-right: 0px;
+    }
+
+  }
+
+  @media (max-width: 1085px) {
+    &__wrapper-comfort-status-list {
+      margin-right: 30px;
     }
 
     &__common-wrapper1 {
@@ -113,6 +118,10 @@
   @media (max-width: 768px) {
     flex-wrap: wrap-reverse;
     padding: 10px 4px;
+
+    &__column-left {
+      margin-right: 0px;
+    }
 
     &__common-wrapper1 {
       justify-content: center;

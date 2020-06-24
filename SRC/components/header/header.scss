@@ -17,6 +17,7 @@
 
   &__menu-and-auth-area {
     display: flex;
+    z-index: 10;
   }
 
   &__wrapper-main {
@@ -50,8 +51,7 @@
   }
 
   &__button-bordered {
-    margin-right: 20px;
-    //min-width: 87px;
+    margin-right: 20px;    
   }
 
   &__auth-name {
