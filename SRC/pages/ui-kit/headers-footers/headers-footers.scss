@@ -3,10 +3,10 @@
 }
 
 html {
-  @include define-html;
+  @include define-html-uikit;
 }
 
 body {
-  @include define-body;
+  @include define-body-uikit;
   background: #e5e5e5;
 }
