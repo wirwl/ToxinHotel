@@ -6,12 +6,13 @@ include ../social-buttons/social-buttons
 mixin footer({logoWithText, menu, sub, copyright, socialButtons})
   footer.footer
     .footer__footer-top
-      .footer__logo-with-text
-        +logo-with-text(logoWithText)      
-      .footer__footer-menu
-        +footer-menu(menu)
-      .footer__subscribe-area
-        +subscribe-area(sub)
+      .footer__wrapper-top
+        .footer__logo-with-text
+          +logo-with-text(logoWithText)      
+        .footer__footer-menu
+          +footer-menu(menu)
+        .footer__subscribe-area
+          +subscribe-area(sub)
     .footer__footer-bottom
       p.footer__copyright #{copyright}
       +social-buttons(socialButtons)

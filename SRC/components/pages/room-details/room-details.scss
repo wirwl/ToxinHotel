@@ -7,9 +7,8 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap-reverse;
-    padding: 70px 4px;
-    padding-bottom: 61px;
-    border-bottom: 1px solid $toxin-color-black-10;
+    padding: 69px 4px;
+    padding-bottom: 61px;    
   }
 
   &__column-left {
@@ -98,11 +97,6 @@
     &__comfort-status-list-and-donut-chart {
       justify-content: center;
     }
-
-    &__wrapper-comfort-status-list {
-      //margin-right: 0px;
-    }
-
   }
 
   @media (max-width: 1085px) {
