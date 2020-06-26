@@ -1,6 +1,6 @@
 mixin flexslider(images)
   .flexslider
     ul.slides.flexslider__list
-      for image in images
+      for image,index in images
         li.flexslider__item
-          img.flexslider__image(src = image)
+          img.flexslider__image(src = image alt = "image"+(index+1))
