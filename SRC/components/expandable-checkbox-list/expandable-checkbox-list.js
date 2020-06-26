@@ -1,10 +1,28 @@
 class ExpandableCheckboxList {
   constructor(element) {
+    this._$expandableCheckboxList = $(element).parent().find('.expandable-checkbox-list__list');
     this._addEventListeners(element);
   }
 
   _addEventListeners(element) {
     $(element).on('click.expandableCheckboxList', this._handleElementClick);
+
+    $(element).find('.expandable-checkbox-list__list').on('click.expandable-checkbox-list', this._handleIqdropdownMenuClick);
+    $(document).on('mouseup.expandable-checkbox-list', this._handleDocumentMouseUp.bind(this));
+  }
+
+  _handleDocumentMouseUp(event) {
+    if (!this._$expandableCheckboxList.is(event.target)
+     && this._$expandableCheckboxList.has(event.target).length === 0
+    ) {
+      this._$expandableCheckboxList.removeClass('expandable-checkbox-list__list_show');
+      const $caption = this._$expandableCheckboxList.parent().find('.expandable-checkbox-list__caption');
+      $caption.removeClass('expandable-checkbox-list__caption_show');
+    }
+  }
+
+  _handleIqdropdownMenuClick(event) {
+    event.stopPropagation();
   }
 
   _handleElementClick() {
