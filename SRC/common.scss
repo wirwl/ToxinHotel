@@ -25,6 +25,7 @@ $toxin-font-awesome: awesome-5-brands-regular-400, Arial, sans-serif;
   color: $toxin-color-black-100;
   font-size: 14px;
   font-family: $toxin-font-montserrat;
+  overflow: overlay;
 }
 
 @mixin define-html-uikit {
