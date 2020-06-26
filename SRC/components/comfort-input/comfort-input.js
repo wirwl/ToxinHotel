@@ -45,7 +45,7 @@ class ComfortInput {
     }
   }
 
-  _handleDocumentMouseUp(event) {    
+  _handleDocumentMouseUp(event) {
     if (!this._$iqdropdowns.is(event.target) && this._$iqdropdowns.has(event.target).length === 0) {
       this._$iqdropdowns.removeClass('menu-open');
     }
