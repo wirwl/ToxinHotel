@@ -4,15 +4,14 @@
   align-items: center;
   min-height: 70px;
   padding: 0px 5px;  
-  background: #fff;
-  
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
     width: 100%;
     max-width: 1160px;
-    background: #fff;
+    background: #fff;    
   }
 
   &__menu-and-auth-area {

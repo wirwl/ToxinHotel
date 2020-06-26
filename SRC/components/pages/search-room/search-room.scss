@@ -2,9 +2,10 @@
   &__main-content {
     display: flex;
     justify-content: center;
-    background: $toxin-color-light-gray;
-    padding: 28px 15px 76px 15px;
+    background: #fff;
+    padding: 0px 15px 76px 15px;
     min-height: 918px;
+    margin-top: 28px;
   }
 
   &__wrapper {
