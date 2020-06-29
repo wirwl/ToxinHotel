@@ -19,6 +19,17 @@ class OrderInfoForm {
     if (this._$checkout.length) {
       this._$checkout.on('click', this._handleDatepickerInputInputClick.bind(this));
     }
+    const datepicker = this._$arrival.data('datepicker');
+    if (datepicker) {
+      datepicker.update('onShow', this._setMaxWidth);
+    }
+  }
+
+  _setMaxWidth(inst, animationCompleted) {
+    if (!animationCompleted) {
+      const newMaxWidth = $('.order-info-form__dates-list').width();
+      inst.$datepicker.css('max-width', newMaxWidth);
+    }
   }
 
   _handleDatepickerInputInputClick() {

@@ -19,6 +19,18 @@ class RoomReservationForm {
     if (this._$checkout.length) {
       this._$checkout.on('click', this._handleDatePickerInputInputClick.bind(this));
     }
+
+    const datepicker = this._$arrival.data('datepicker');
+    if (datepicker) {
+      datepicker.update('onShow', this._setMaxWidth);
+    }
+  }
+
+  _setMaxWidth(inst, animationCompleted) {
+    if (!animationCompleted) {
+      const newMaxWidth = $('.room-reservation-form__dates-list').width();
+      inst.$datepicker.css('width', newMaxWidth);
+    }
   }
 
   _handleDatePickerInputInputClick() {
