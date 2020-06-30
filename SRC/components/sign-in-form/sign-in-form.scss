@@ -49,6 +49,10 @@
   }  
 
   @media (max-width: 360px) {
-    padding: 38px 10px 31px;
+    padding: 18px 10px 11px;
+
+    &__button-arrow {
+      margin-bottom: 19px;
+    }
   }
 }

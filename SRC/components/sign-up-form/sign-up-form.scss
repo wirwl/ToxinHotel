@@ -58,6 +58,10 @@
   }
 
   @media (max-width: 360px) {
-    padding: 39px 10px 29px; 
+    padding: 20px 10px 15px; 
+
+    &__wrapper-for-sign-up-button {
+      margin-bottom: 19px;
+    }
   }
 }
