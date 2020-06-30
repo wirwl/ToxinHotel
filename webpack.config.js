@@ -88,7 +88,7 @@ module.exports = ((env, argv) => {
                     propList: ['font', 'font-size', 'line-height', 'letter-spacing'],
                     selectorBlackList: ['html'],
                     replace: true,
-                    mediaQuery: true,
+                    mediaQuery: false,
                     minPixelValue: 0,
                   }),
                   discardduplicates(),
