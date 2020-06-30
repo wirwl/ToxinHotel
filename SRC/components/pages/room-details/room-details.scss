@@ -71,6 +71,7 @@
 
   &__donut-chart {
     width: 43.7%;
+    margin-bottom: 20px;
   }
 
   &__feedback-list {
@@ -96,6 +97,18 @@
 
     &__comfort-status-list-and-donut-chart {
       justify-content: center;
+    }
+
+    &__info {
+      padding-bottom: 0px;
+    }
+
+    .room-details__bullets-list-caption {
+      padding-left: 0px;
+    }
+
+    .room-details__bullets-list {
+      margin-bottom: 20px;
     }
   }
 
