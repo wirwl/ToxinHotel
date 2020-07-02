@@ -7,8 +7,8 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap-reverse;
-    padding: 69px 4px;
-    padding-bottom: 60px;    
+    padding: 69px 5px;
+    padding-bottom: 61px;    
   }
 
   &__column-left {
@@ -100,7 +100,7 @@
     }
 
     &__info {
-      padding-bottom: 0px;
+      padding: 25px 5px 30px;
     }
 
     .room-details__bullets-list-caption {
@@ -132,6 +132,10 @@
 
     &__common-wrapper1 {
       justify-content: center;
+    }
+
+    &__info {
+      padding: 0px 5px 25px;
     }
   }
 

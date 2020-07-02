@@ -10,8 +10,7 @@
     justify-content: center;
     border-bottom: 1px solid $toxin-color-black-10;
     border-top: 1px solid $toxin-color-black-25;
-    
-    padding: 100px 0px;    
+    padding: 100px 0px;
     width: 100%;
   }
 
@@ -22,7 +21,7 @@
   }
 
   &__logo-with-text {
-    margin-right: 15px;
+    margin-right: 25px;
     max-width: 260px;
   }
 
@@ -32,9 +31,6 @@
 
   &__footer-menu {
     margin-left: auto;
-  }
-
-  &__footer-menu {
     flex-basis: 600px;
   }
 
@@ -43,9 +39,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 22px 0px;
-    max-width: 1160px;
+    max-width: 1170px;
     width: 100%;
-    
   }
   &__copyright {
     font-size: 14px;
@@ -54,15 +49,19 @@
     letter-spacing: -0.1px;
   }
 
-  @media (max-width: 1100px) {
-    &__footer-top,
-    &__footer-bottom {
-      padding-left: 15px;
-      padding-right: 15px;
+  &__footer-top,
+  &__footer-bottom {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  @media (max-width: 1200px) {
+    &__footer-menu {
+      margin-right: 15px;
     }
   }
 
-  @media (max-width: 825px) {
+  @media (max-width: 925px) {
     &__footer-menu,
     &__subscribe-area,
     &__copyright {

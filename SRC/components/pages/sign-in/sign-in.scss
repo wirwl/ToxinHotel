@@ -12,4 +12,11 @@
     max-width: 390px;
     padding: 0 5px;
   }
+
+  @media (max-width: 515px) {
+    &__main-content {
+      padding-top: 30px;
+      min-height: 421px;
+    }
+  }
 }

@@ -9,7 +9,7 @@
 
   &__list:not(:last-child) {
     flex-basis: calc(100% / 3);
-    padding-right: 5px;
+    padding-right: 20px;
   }
 
   &__title {
@@ -18,7 +18,7 @@
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
-    letter-spacing: -0.2px;
+    letter-spacing: -0.2px;    
   }
 
   &__item {
