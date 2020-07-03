@@ -41,5 +41,10 @@
       position: static;
       color: #fff;
     }
+
+    &__main-content {
+      min-height: 495px;
+      padding-top: 30px;
+    }
   }
 }
