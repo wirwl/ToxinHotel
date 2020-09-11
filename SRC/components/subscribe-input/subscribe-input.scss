@@ -1,6 +1,6 @@
 .subscribe-input {
   font-family: $toxin-font-montserrat;
-  width: 100%;
+  width: 100%;  
 
   &__caption {
     display: inline-block;
@@ -17,7 +17,7 @@
     padding: 12px 30px 12px 15px;
     font-size: 14px;
     width: 100%;
-    font-family: inherit;
+    font-family: inherit;    
   }
 
   &__input::placeholder {
@@ -51,6 +51,16 @@
     justify-content: center;
     align-items: center;
     pointer-events: none;
-    font-feature-settings: "liga";
+    font-feature-settings: "liga";    
+  }
+
+  &__submit {
+    height: 100%;
+    width: 15%;
+    position: absolute;
+    right: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
   }
 }

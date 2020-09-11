@@ -2,5 +2,6 @@ mixin subscribe-input({caption, placeholder})
   label.subscribe-input
     if caption
       h3.subscribe-input__caption #{caption}
-    .subscribe-input__wrapper 
+    form.subscribe-input__wrapper(method = "post" action = "#")
       input.subscribe-input__input(type = "email" placeholder = placeholder)
+      button.subscribe-input__submit
