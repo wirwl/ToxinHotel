@@ -72,21 +72,7 @@
     sub: {caption: "Подписка", desc: "Получайте специальные предложения и новости сервиса", subscribeInput: {placeholder: "Email"}},
     copyright: "Copyright © 2018 Toxin отель. Все права защищены.",
     socialButtons: {iconTwitter: "twitter", iconFacebook: "facebook-square", iconInstagram: "instagram"}
-  }
-
-mixin MenuItems(items, calls=1)  
-  - let typeOfList = (calls>2) ? "header-menu__list_sub-sub-list" : "header-menu__list_sub-list"
-  ul.header-menu__list.js-menu__list(class= (calls==1) ? "" : typeOfList)
-    for mi in items
-      +createHTMLtags(mi, calls)
-        if mi.sm
-          +MenuItems(mi.sm, calls+1)
-
-mixin createHTMLtags({sm, isBold, link, text}, calls)
-  - let typeOfList = (calls>2) ? "header-menu__item_sub-sub-item" : "header-menu__item_sub-item"    
-  li.header-menu__item(class=((calls==1) ? "" : typeOfList) + (sm && " header-menu__list_arrow" || ""))
-    a.header-menu__link.js-menu__link(class=(isBold ? "header-menu__link_bold" : "" + (sm && " header-menu__link_arrow" || "")) href=link) #{text}
-    block     
+  }  
 
 mixin favicon({path=""} = {})
   link(rel="apple-touch-icon" sizes="180x180" href=path+"apple-touch-icon.png")
