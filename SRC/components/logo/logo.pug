@@ -1,4 +1,3 @@
-mixin logo({path})
-    img(src = path alt = "logo" class = "logo")    
-
-
+mixin logo({pathImg, pathUrl})  
+  a(href = pathUrl)
+    img(src = pathImg alt = "logo" class = "logo")

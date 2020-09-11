@@ -12,7 +12,7 @@ mixin header(data)
   header.header
     .header__wrapper
       .header__logo
-        +logo({path: logo_path})
+        +logo({pathImg: logo_path, pathUrl: "/pages/landing/landing.html"})
       .header__menu-and-auth-area
         .header__header-menu
           +header-menu(menu)    
