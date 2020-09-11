@@ -7,7 +7,8 @@ mixin header(data)
   -
     const {
       isAuth, logo_path, login = "Login", menu, 
-      reg = "Register", name = "Cosmin Negoita", isHeader, buttonLogin
+      reg = "Register", name = "Cosmin Negoita", 
+      isHeader, buttonSignIn, buttonSignUp
     } = data
   header.header
     .header__wrapper
@@ -19,8 +20,9 @@ mixin header(data)
         .header__auth-area(class = isAuth && "header__auth-area_is-auth")
           if !isAuth
             .header__button-bordered(class = isAuth && "header__button-bordered_hide")
-              +button-bordered(buttonLogin)      
+              +button-bordered(buttonSignIn)      
             .header__button-filled(class = isAuth && "header__button-filled_hide")
-              +button-filled({text: reg, isHeader: isHeader})
+              //- +button-filled({text: reg, isHeader: isHeader})
+              +button-filled(buttonSignUp)
         a.header__auth-name(href = "/mock-address/change-me" class = isAuth && "header__auth-name_show") #{name}
     .header__icon.js-header__icon menu

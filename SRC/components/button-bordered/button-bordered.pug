@@ -1,7 +1,8 @@
-mixin button-bordered({isDisabled, type="button", isHeader, text, dynamicWidth})  
-  button.button-bordered(
+mixin button-bordered({isDisabled, type="button", isHeader, text, dynamicWidth, href})      
+  button.button-bordered.js-button-bordered(
+    onclick = href ? `window.location.href='${href}'` : undefined
     type = type 
     class = (isHeader ? "button-bordered_header" : "") + " " + 
-            (dynamicWidth ? "button-bordered_dynamic-width" : "") + " " + 
-            (isDisabled ? "button-bordered_disabled" : "")
+            (dynamicWidth ? "button-bordered_dynamic-width" : "") + 
+            (isDisabled ? " button-bordered_disabled" : "")    
   ) #{text}
