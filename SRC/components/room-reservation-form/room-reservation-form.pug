@@ -4,7 +4,7 @@ include ../datepicker-input/datepicker-input
 include ../guests-input/guests-input
 
 mixin room-reservation-form({title, datepickerInputArrival, datepickerInputCheckout, guestsInput, buttonFindRoom})
-  form.room-reservation-form(method = "post" action = "pages/search-room/sr.html")
+  form.room-reservation-form(method = "get" action = "/pages/search-room/search-room.html")
     fieldset.room-reservation-form__wrapper-for-inputs
       legend.room-reservation-form__title #{title}
       ul.room-reservation-form__list(role = "none presentation")    
