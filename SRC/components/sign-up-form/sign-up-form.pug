@@ -8,7 +8,7 @@ include ../button-bordered/button-bordered
 mixin sign-up-form({caption, isThereAccount, textInputName, textInputSurname, radiosListSex, maskedInputBirthday, textInputEmail, textInputPassword, toggleSpecialOffer, buttonSubmit, buttonSignin})
   form(method = "post" action = "#").sign-up-form
     fieldset.sign-up-form__main-content
-      legend.sign-up-form__caption #{caption}
+      h1.sign-up-form__caption #{caption}
       ul.sign-up-form__list
         li.sign-up-form__item
           +text-input(textInputName)        

@@ -10,7 +10,7 @@ mixin sign-in-form(data)
           } = data
   form.sign-in-form(method = "post" action = "#")
     fieldset.sign-in-form__fieldset
-      legend.sign-in-form__caption #{caption}
+      h1.sign-in-form__caption #{caption}
       ul.sign-in-form__list
         li.sign-in-form__item
           +text-input(textInputEmail)
