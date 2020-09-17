@@ -1,3 +1,15 @@
+* {
+  @include reset;
+}
+
+html {
+  @include define-html;
+}
+
+body {
+  @include define-body;
+}
+
 .search-room {
   &__main-content {
     display: flex;

@@ -13,7 +13,7 @@ mixin header(data)
   header.header
     .header__wrapper
       .header__logo
-        +logo({pathImg: logo_path, pathUrl: "/pages/landing/landing.html"})
+        +logo({pathImg: logo_path, pathUrl: "landing.html"})
       .header__menu-and-auth-area
         .header__header-menu
           +header-menu(menu)    
@@ -21,8 +21,7 @@ mixin header(data)
           if !isAuth
             .header__button-bordered(class = isAuth && "header__button-bordered_hide")
               +button-bordered(buttonSignIn)      
-            .header__button-filled(class = isAuth && "header__button-filled_hide")
-              //- +button-filled({text: reg, isHeader: isHeader})
+            .header__button-filled(class = isAuth && "header__button-filled_hide")              
               +button-filled(buttonSignUp)
         a.header__auth-name(href = "/mock-address/change-me" class = isAuth && "header__auth-name_show") #{name}
     .header__icon.js-header__icon menu

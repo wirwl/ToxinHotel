@@ -1,16 +1,13 @@
-import './form-elements.scss';
-
-import '../../../favicons/favicons';
+import '../../../components/pages/ui-kit/form-elements/form-elements';
 
 const fonts = require.context('../../../fonts', true, /\.css$/);
 fonts.keys().forEach(fonts);
 
-const imports = require.context('../../../components/', true, /\.(scss|js)$/);
+const imports = require.context('../../../components/', true, /^(?!..pages).*(scss|js)$/);
 imports.keys().forEach(imports);
 
 // Only for watch pixel perfect for range-slider;
 $('.js-range-slider__values').text('5 000₽ - 10 000₽');
-
 
 const datepickerInputArrival = $('.form-elements__column-left-datepicker-input-arrival').find('.datepicker-input__input');
 const datepickerArrival = $('.form-elements__column-left-datepicker-input-arrival').find('.datepicker-input__input').data('datepicker');

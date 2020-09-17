@@ -1,3 +1,16 @@
+* {
+  @include reset;
+}
+
+html {
+  @include define-html-uikit;
+}
+
+body {
+  @include define-body-uikit;
+  padding: 145px 150px;
+}
+
 .colors-type {
   display: flex;
 

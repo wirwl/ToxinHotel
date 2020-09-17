@@ -1,3 +1,15 @@
+* {
+  @include reset;
+}
+
+html {
+  @include define-html;
+}
+
+body {
+  @include define-body;
+}
+
 .sign-in {
   &__main-content {
     width: 100%;

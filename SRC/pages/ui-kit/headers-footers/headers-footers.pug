@@ -8,7 +8,6 @@ block variables
   - let description = "UIkit: headers & footers"
   - let keywords = "uikit, headers, footers"
   - let path = "../../../"
-  - let css = "headers-footers.css"
 
 block content
   - 
@@ -75,7 +74,7 @@ block content
         ]
       }
     ];
-    const logoPath = "../../../components/logo/logo.svg";
+    const logoPath = "../../images/components/logo/logo.svg";
     const logoWithText = {
       logo_path: logoPath,
       desc: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."      
@@ -92,8 +91,8 @@ block content
       isAuth: false, 
       menu: menuheader, 
       isHeader: true, 
-      buttonSignIn: {text: "Login", isHeader: true, dynamicWidth: true},
-      buttonSignUp: {text: "Register", isHeader: true, href: "/pages/sign-up/sign-up.html"}
+      buttonSignIn: {text: "Login", isHeader: true, dynamicWidth: true, href: "../sign-in.html"},
+      buttonSignUp: {text: "Register", isHeader: true, href: "../sign-up.html"}
     },
     headerAuthTrue: {
       logo_path: logoPath, 
@@ -124,6 +123,3 @@ block content
       socialButtons: socialButtons
     }
   })
-
-block script
-  script(type="text/javascript" src="headers-footers.js")

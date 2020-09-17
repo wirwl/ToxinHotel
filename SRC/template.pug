@@ -7,8 +7,6 @@ html(lang=lang)
   head    
     title #{title}
     +meta-tags({description: description, keywords: keywords})      
-    +favicon({path: path})
-    link(href=css rel="stylesheet")
+    +favicon({path: path})    
   body      
     block content    
-    block script

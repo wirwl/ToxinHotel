@@ -9,7 +9,6 @@ block variables
   - let description = "Sign-up page"
   - let keywords = "sign-up, login, password"
   - let path = "../../"
-  - let css = "sign-up.css"
 
 block content
   +sign-up({
@@ -31,10 +30,7 @@ block content
       textInputPassword: {placeholder: "Пароль", type: "password"},
       toggleSpecialOffer: {text: "Получать спецпредложения"},
       buttonSubmit: {text: "Перейти к оплате", type: "submit"},
-      buttonSignin: {text: "Войти", dynamicWidth: true, href: "/pages/sign-in/sign-in.html"}
+      buttonSignin: {text: "Войти", dynamicWidth: true, href: "sign-in.html"}
     },
     footerData: footer_data
   })
-
-block script
-  script(type="text/javascript" src="sign-up.js")

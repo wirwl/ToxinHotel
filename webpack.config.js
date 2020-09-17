@@ -19,24 +19,8 @@ module.exports = ((env, argv) => {
   const isDev = argv.mode === 'development';
   const dtValue = isDev ? 'source-map' : 'none';
 
-  function reloadHtml() {
-    const cache = {};
-    const plugin = { name: 'CustomHtmlReloadPlugin' };
-    this.hooks.compilation.tap(plugin, (compilation) => {
-      compilation.hooks.htmlWebpackPluginAfterEmit.tap(plugin, (data) => {
-        const orig = cache[data.outputName];
-        const html = data.html.source();
-        // plugin seems to emit on any unrelated change?
-        if (orig && orig !== html) {
-          devServer.sockWrite(devServer.sockets, 'content-changed');
-        }
-        cache[data.outputName] = html;
-      });
-    });
-  }
-
   // ------------common values for all configs--------------------------------
-  let common = {
+  const common = {
     devServer: {
       stats: 'errors-only',
       before(app, server) {
@@ -53,7 +37,8 @@ module.exports = ((env, argv) => {
             {
               loader: 'html-loader',
               options: {
-                attrs: ['img:src'],
+                // attrs: ['img:src'],
+                attrs: false,
                 cache: true,
               },
             },
@@ -65,7 +50,7 @@ module.exports = ((env, argv) => {
           use: [
             {
               loader: MiniCssExtractPlugin.loader,
-              options: { sourceMap: true },
+              options: { sourceMap: true, publicPath: '../', ignoreOrder: true },
             },
 
             {
@@ -163,7 +148,20 @@ module.exports = ((env, argv) => {
         },
       ], // rules
     },
+    optimization: {
+      splitChunks: {
+        cacheGroups: {
+          commons: {
+            name: 'commons',
+            chunks: 'initial',
+            minChunks: 2,
+            minSize: 0,
+          },
+        },
+      },
+    },
     plugins: [
+      new CleanWebpackPlugin(),
       new webpack.ProvidePlugin({
         $: 'jquery',
         jQuery: 'jquery',
@@ -173,46 +171,57 @@ module.exports = ((env, argv) => {
     ],
   };
 
-  function AddHTMLPage(data) {
-    const commonPath = data.input_path.substring(data.input_path.indexOf('/') + 1);
-    const newOutputPath = data.output_path ? data.output_path : commonPath;
+  return merge({}, common, {
+    entry: {
+      index: './SRC/pages/index/index.js',
+      landing: './SRC/pages/landing/landing.js',
+      'room-details': './SRC/pages/room-details/room-details.js',
+      'search-room': './SRC/pages/search-room/search-room.js',
+      'sign-in': './SRC/pages/sign-in/sign-in.js',
+      'sign-up': './SRC/pages/sign-up/sign-up.js',
+      cards: './SRC/pages/ui-kit/cards/cards.js',
+      'colors-type': './SRC/pages/ui-kit/colors-type/colors-type.js',
+      'form-elements': './SRC/pages/ui-kit/form-elements/form-elements.js',
+      'headers-footers': './SRC/pages/ui-kit/headers-footers/headers-footers.js',
+    },
+    output: {
+      path: path.resolve(__dirname, 'Result'),
+      filename: 'js/[name].js',
+    },
+    plugins: [
 
-    if (data.isNeedClean) {
-      common = merge(common, { plugins: [new CleanWebpackPlugin()] });
-    }
+      new MiniCssExtractPlugin({ filename: 'css/[name].css' }),
 
-    const result = merge({}, common, {
-      entry: `./${data.input_path}/${data.common_filename}.js`,
-      output: {
-        path: path.resolve(__dirname, 'Result'),
-        filename: `${newOutputPath}/${data.common_filename}.js`,
-        publicPath: data.publicPath || '',
-      },
-      plugins: [
-        new MiniCssExtractPlugin({ filename: `${newOutputPath}/${data.common_filename}.css` }),
-        new HtmlWebpackPlugin({ filename: `${newOutputPath}/${data.common_filename}.html`, template: `${data.input_path}/${data.common_filename}.pug`, inject: false }),
-        reloadHtml,
-      ],
-    });
-
-
-    return result;
-  }
-  // --UI - KIT---------------
-  const uikithfCFG = AddHTMLPage({ common_filename: 'headers-footers', input_path: 'SRC/pages/ui-kit/headers-footers', publicPath: '../../../' });
-  const uikitctCFG = AddHTMLPage({ common_filename: 'colors-type', input_path: 'SRC/pages/ui-kit/colors-type', publicPath: '../../../' });
-  const uikitfeCFG = AddHTMLPage({ common_filename: 'form-elements', input_path: 'SRC/pages/ui-kit/form-elements', publicPath: '../../../' });
-  const uikitcardsCFG = AddHTMLPage({ common_filename: 'cards', input_path: 'SRC/pages/ui-kit/cards', publicPath: '../../../' });
-  // ---Site-Pages-----------
-  const landingpageCFG = AddHTMLPage({ common_filename: 'landing', input_path: 'SRC/pages/landing', publicPath: '../../' });
-  const searchroomCFG = AddHTMLPage({ common_filename: 'search-room', input_path: 'SRC/pages/search-room', publicPath: '../../' });
-  const roomdetailsCFG = AddHTMLPage({ common_filename: 'room-details', input_path: 'SRC/pages/room-details', publicPath: '../../' });
-  const signupCFG = AddHTMLPage({ common_filename: 'sign-up', input_path: 'SRC/pages/sign-up', publicPath: '../../' });
-  const signinCFG = AddHTMLPage({ common_filename: 'sign-in', input_path: 'SRC/pages/sign-in', publicPath: '../../' });
-  const indexCFG = AddHTMLPage({
-    common_filename: 'index', input_path: 'SRC/pages/index', output_path: '.', isNeedClean: true,
+      new HtmlWebpackPlugin({
+        template: './SRC/pages/index/index.pug', filename: 'index.html', chunks: ['index'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './SRC/pages/landing/landing.pug', filename: 'pages/landing.html', chunks: ['landing'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './SRC/pages/room-details/room-details.pug', filename: 'pages/room-details.html', chunks: ['room-details'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './SRC/pages/search-room/search-room.pug', filename: 'pages/search-room.html', chunks: ['search-room'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './SRC/pages/sign-in/sign-in.pug', filename: 'pages/sign-in.html', chunks: ['sign-in'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './SRC/pages/sign-up/sign-up.pug', filename: 'pages/sign-up.html', chunks: ['sign-up'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './SRC/pages/ui-kit/cards/cards.pug', filename: 'pages/ui-kit/cards.html', chunks: ['cards'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './SRC/pages/ui-kit/colors-type/colors-type.pug', filename: 'pages/ui-kit/colors-type.html', chunks: ['colors-type'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './SRC/pages/ui-kit/form-elements/form-elements.pug', filename: 'pages/ui-kit/form-elements.html', chunks: ['form-elements'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './SRC/pages/ui-kit/headers-footers/headers-footers.pug', filename: 'pages/ui-kit/headers-footers.html', chunks: ['headers-footers'],
+      }),
+    ],
   });
-
-  return [indexCFG, landingpageCFG, searchroomCFG, roomdetailsCFG,
-    signupCFG, signinCFG, uikithfCFG, uikitctCFG, uikitfeCFG, uikitcardsCFG];
 });

@@ -8,7 +8,6 @@ block variables
   - let description = "Sign-in page"
   - let keywords = "sign-in, login, password"
   - let path = "../../"
-  - let css = "sign-in.css"
 
 block content
   +sign-in({
@@ -19,10 +18,7 @@ block content
       textInputEmail: {placeholder: "Email", type: "email"},
       textInputPassword: {placeholder: "Пароль", type: "password"},
       buttonSignIn: {text: "Войти", type: "submit"},
-      buttonSignUp: {text: "Создать", dynamicWidth: true, href: "/pages/sign-up/sign-up.html"}
+      buttonSignUp: {text: "Создать", dynamicWidth: true, href: "sign-up.html"}
     },
     footerData: footer_data
   })
-
-block script
-  script(type="text/javascript" src="sign-in.js")
