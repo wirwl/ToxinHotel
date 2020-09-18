@@ -3,7 +3,7 @@ include ../feedback/feedback
 mixin feedback-list({caption, count, feedbacks})
   article.feedback-list
     header.feedback-list__caption
-      h1.feedback-list__text #{caption}
+      h2.feedback-list__text #{caption}
       span.feedback-list__feedback-count #{count}
     ul.feedback-list__list
       for feedback in feedbacks

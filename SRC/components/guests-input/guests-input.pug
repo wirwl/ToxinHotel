@@ -3,7 +3,8 @@ include ../iqdropdown/iqdropdown
 
 mixin guests-input({isOpen, caption, items, buttonClear, buttonApply})
   .guests-input.js-guests-input
-    h2.guests-input__caption #{caption}
+    if caption
+      label.guests-input__caption #{caption}
     +iqdropdown({isOpen: isOpen, items: items})
       .guests-input__buttons
         .guests-input__button-simple-clear

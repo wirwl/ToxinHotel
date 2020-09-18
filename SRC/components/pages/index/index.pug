@@ -3,7 +3,7 @@ mixin index({mainTitle, items})
     h1.index__title #{mainTitle}
     for item in items
       - const {title, path, hyperlinks} = item
-      h3.index__uikit #{title}
+      h2.index__uikit #{title}
       ul.index__list
         for hyperlink in hyperlinks
           - const {link, text} = hyperlink

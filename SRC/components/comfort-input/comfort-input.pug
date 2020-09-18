@@ -3,5 +3,5 @@ include ../iqdropdown/iqdropdown
 
 mixin comfort-input({caption, isOpen, items})
   .comfort-input.js-comfort-input  
-    h2.comfort-input__caption #{caption}
+    .comfort-input__caption #{caption}
     +iqdropdown({isOpen: isOpen, items: items})

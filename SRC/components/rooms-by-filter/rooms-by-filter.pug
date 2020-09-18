@@ -3,7 +3,7 @@ include ../room-info/room-info
 
 mixin rooms-by-filter({title, roomInfos, pagination})
   section.rooms
-    h1.rooms__title #{title}
+    h2.rooms__title #{title}
     ul.rooms__list
       for roomInfo in roomInfos
         li.rooms__item
