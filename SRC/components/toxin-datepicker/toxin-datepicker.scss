@@ -57,7 +57,7 @@
     color: transparent;
   }
   &--cell-day.-range-from-.-selected-:not(.-focus-):before {
-    content: "";
+    content: '';
     position: absolute;
     left: 50%;
     top: 0;
@@ -87,7 +87,7 @@
     color: transparent;
   }
   &--cell-day.-range-to-.-selected-:not(.-focus-):before {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     top: 0;
@@ -168,7 +168,7 @@
   }
 
   &--cell-day.-in-range-.-current-:after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;

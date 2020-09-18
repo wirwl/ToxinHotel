@@ -30,7 +30,7 @@
 
   &__text:before {
     box-sizing: border-box;
-    content: "";
+    content: '';
     position: absolute;
     left: 0px;
     top: 0px;
@@ -43,7 +43,7 @@
 
   &__text:after {
     box-sizing: border-box;
-    content: "";
+    content: '';
     position: absolute;
     transition: all 0.2s ease;
     left: 6px;
