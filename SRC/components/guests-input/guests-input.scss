@@ -4,6 +4,7 @@
   font-family: $toxin-font-montserrat;
 
   &__caption {
+    display: inline-block;
     margin-bottom: 5px;
     font-size: 12px;
     font-weight: bold;

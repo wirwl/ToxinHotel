@@ -1,5 +1,5 @@
 import './form-elements.scss';
 
-import '../../../../../node_modules/ion-rangeslider/css/ion.rangeSlider.css';
-import '../../../../../node_modules/item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
-import '../../../../../node_modules/air-datepicker/dist/css/datepicker.css';
+import 'ion-rangeslider/css/ion.rangeSlider.css';
+import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
+import 'air-datepicker/dist/css/datepicker.css';

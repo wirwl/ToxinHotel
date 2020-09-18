@@ -1,1 +1,1 @@
-import '../../../node_modules/air-datepicker/dist/js/datepicker';
+import 'air-datepicker/dist/js/datepicker';
