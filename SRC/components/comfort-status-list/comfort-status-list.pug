@@ -1,6 +1,6 @@
 include ../comfort-status/comfort-status
 
-mixin comfort-status-list(items)
+mixin comfort-status-list(items=[{text: 'Error: items is not defined'}])
   ul.comfort-status-list
     for item in items
       li.comfort-status-list__item

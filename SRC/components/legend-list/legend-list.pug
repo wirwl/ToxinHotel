@@ -1,6 +1,6 @@
 include ../legend/legend
 
-mixin legend-list(items)
+mixin legend-list(items=[{text: 'Error: items is not defined'}])
   ul.legend-list
     for item in items
       li.legend-list__item

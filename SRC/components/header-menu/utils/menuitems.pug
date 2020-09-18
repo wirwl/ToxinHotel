@@ -1,6 +1,6 @@
 include ./createhtmltags
 
-mixin menuItems(items, calls=1)  
+mixin menuItems(items=[{text: "Error: items is not defined"}], calls=1)  
   - let typeOfList = (calls>2) ? "header-menu__list_sub-sub-list" : "header-menu__list_sub-list"
   ul.header-menu__list.js-menu__list(class= (calls==1) ? "" : typeOfList)
     for mi in items
