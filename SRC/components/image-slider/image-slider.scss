@@ -66,7 +66,7 @@
     background: linear-gradient(270deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
   }
 
-  &__prev:after {
+  &__prev::after {
     font-family: $toxin-font-material-icon;
     content: attr(content);
     display: flex;
@@ -74,7 +74,7 @@
     align-items: center;
     height: 100%;
   }
-  &__next:after {
+  &__next::after {
     font-family: $toxin-font-material-icon;
     content: attr(content);
     display: flex;

@@ -34,7 +34,7 @@
     position: relative;
   }
 
-  &__wrapper:after {
+  &__wrapper::after {
     content: 'keyboard_arrow_down';
     font-family: $toxin-font-material-icon;
     color: $toxin-color-black-50;

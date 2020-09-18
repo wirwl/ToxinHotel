@@ -10,11 +10,11 @@
     overflow: hidden;
   }
 
-  &__input:not(:checked) + .checkbox__text:after {
+  &__input:not(:checked) + .checkbox__text::after {
     opacity: 0;
   }
 
-  &__input:checked + .checkbox__text:after {
+  &__input:checked + .checkbox__text::after {
     opacity: 1;
   }
 
@@ -28,7 +28,7 @@
     font-size: 14px;
   }
 
-  &__text:before {
+  &__text::before {
     box-sizing: border-box;
     content: '';
     position: absolute;
@@ -41,7 +41,7 @@
     border-radius: 4px;
   }
 
-  &__text:after {
+  &__text::after {
     box-sizing: border-box;
     content: '';
     position: absolute;

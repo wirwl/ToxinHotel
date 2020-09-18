@@ -23,7 +23,7 @@
     padding-top: 12px;
   }
 
-  &__caption:after {
+  &__caption::after {
     content: 'keyboard_arrow_down';
     font-family: $toxin-font-material-icon;
     font-size: 24px;
@@ -35,7 +35,7 @@
     text-align: center;
   }
 
-  &__caption_show:after {
+  &__caption_show::after {
     content: 'keyboard_arrow_up';
   }
 }

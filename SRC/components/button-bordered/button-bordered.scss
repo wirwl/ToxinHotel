@@ -13,14 +13,14 @@
   border-radius: 22px;
   z-index: 1;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     content: ' ';
     position: absolute;
     border-radius: 22px;
   }
 
-  &:before {
+  &::before {
     top: 0;
     left: 0;
     bottom: 0;
@@ -30,7 +30,7 @@
     background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
   }
 
-  &:after {
+  &::after {
     top: 2px;
     bottom: 2px;
     left: 2px;
@@ -39,9 +39,9 @@
     z-index: -1;
   }
 
-  &_disabled:before,
-  &:hover:before,
-  &:focus:before {
+  &_disabled::before,
+  &:hover::before,
+  &:focus::before {
     background: linear-gradient(180deg, #bc9cff7f 0%, #8ba4f97f 100%);
   }
 

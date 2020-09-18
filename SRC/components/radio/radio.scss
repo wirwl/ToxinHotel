@@ -19,7 +19,7 @@
     color: $toxin-color-black-75;
   }
 
-  &__text:before {
+  &__text::before {
     content: '';
     position: absolute;
     left: 0px;
@@ -31,7 +31,7 @@
     border-radius: 100%;
   }
 
-  &__text:after {
+  &__text::after {
     content: '';
     position: absolute;
     transition: all 0.2s ease;
@@ -47,11 +47,11 @@
     color: $toxin-color-black-50;
   }
 
-  &__input:not(:checked) + .radio__text:after {
+  &__input:not(:checked) + .radio__text::after {
     opacity: 0;
   }
 
-  &__input:checked + .radio__text:after {
+  &__input:checked + .radio__text::after {
     opacity: 1;
   }
 }

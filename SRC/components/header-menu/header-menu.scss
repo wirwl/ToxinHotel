@@ -53,7 +53,7 @@
     position: relative;
   }
 
-  &__link_arrow:after {
+  &__link_arrow::after {
     content: '\E313';
     font-family: $toxin-font-material-icon;
     text-align: center;

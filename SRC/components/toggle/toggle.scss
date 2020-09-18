@@ -19,7 +19,7 @@
     font-size: 14px;
     color: $toxin-color-black-75;
   }
-  &__text:before {
+  &__text::before {
     box-sizing: border-box;
     content: '';
     position: absolute;
@@ -31,7 +31,7 @@
     border-radius: 10px;
     transition: 0.2s;
   }
-  &__text:after {
+  &__text::after {
     content: '';
     position: absolute;
     top: 4px;
@@ -43,12 +43,12 @@
     transition: 0.2s;
   }
 
-  &__input:checked + .toggle__text:after {
+  &__input:checked + .toggle__text::after {
     left: 24px;
   }
 
   &__input:not(:checked) {
-    + .toggle__text:after {
+    + .toggle__text::after {
       background: $toxin-color-black-25;
     }
     + .toggle__text::before {

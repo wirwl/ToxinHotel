@@ -6,7 +6,7 @@
   padding-left: 15px;
   position: relative;
 
-  &:before {
+  &::before {
     content: '';
     display: block;
     width: 10px;
@@ -18,19 +18,19 @@
     top: 7px;
   }
 
-  &_orange-color:before {
+  &_orange-color::before {
     background: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
   }
 
-  &_green-color:before {
+  &_green-color::before {
     background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
   }
 
-  &_purple-color:before {
+  &_purple-color::before {
     background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
   }
 
-  &_black-color:before {
+  &_black-color::before {
     background: linear-gradient(180deg, #919191 0%, #3d4975 100%);
   }
 }

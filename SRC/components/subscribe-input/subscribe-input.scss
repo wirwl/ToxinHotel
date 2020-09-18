@@ -35,7 +35,7 @@
     overflow: visible;
   }
 
-  &__wrapper:after {
+  &__wrapper::after {
     content: 'arrow_forward';
     content: '\e5c8';
     font-family: $toxin-font-material-icon;

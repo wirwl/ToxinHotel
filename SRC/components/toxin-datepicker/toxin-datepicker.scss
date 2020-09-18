@@ -56,7 +56,7 @@
     z-index: auto;
     color: transparent;
   }
-  &--cell-day.-range-from-.-selected-:not(.-focus-):before {
+  &--cell-day.-range-from-.-selected-:not(.-focus-)::before {
     content: '';
     position: absolute;
     left: 50%;
@@ -66,7 +66,7 @@
     background: $toxin-color-purple;
     background: linear-gradient(180deg, #bc9cff7f 0%, #8ba4f97f 100%);
   }
-  &--cell-day.-range-from-.-selected-:not(.-focus-):after {
+  &--cell-day.-range-from-.-selected-:not(.-focus-)::after {
     content: attr(data-date);
     position: absolute;
     left: 0;
@@ -86,7 +86,7 @@
     z-index: auto;
     color: transparent;
   }
-  &--cell-day.-range-to-.-selected-:not(.-focus-):before {
+  &--cell-day.-range-to-.-selected-:not(.-focus-)::before {
     content: '';
     position: absolute;
     left: 0;
@@ -96,7 +96,7 @@
     background: $toxin-color-purple;
     background: linear-gradient(180deg, #bc9cff7f 0%, #8ba4f97f 100%);
   }
-  &--cell-day.-range-to-.-selected-:not(.-focus-):after {
+  &--cell-day.-range-to-.-selected-:not(.-focus-)::after {
     content: attr(data-date);
     position: absolute;
     left: 0;
@@ -167,7 +167,7 @@
     position: relative;
   }
 
-  &--cell-day.-in-range-.-current-:after {
+  &--cell-day.-in-range-.-current-::after {
     content: '';
     position: absolute;
     top: 0;
