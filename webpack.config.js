@@ -33,8 +33,8 @@ module.exports = (_, argv) => {
       path: path.resolve(__dirname, 'Result'),
       filename: 'js/[name].js',
     },
-    plugins: [      
-      ((isDev) ? ()=>{return null} : (new CleanWebpackPlugin())),
+    plugins: [
+      ((isDev) ? () => null : (new CleanWebpackPlugin())),
       new webpack.ProvidePlugin({
         $: 'jquery',
         jQuery: 'jquery',
@@ -188,7 +188,7 @@ module.exports = (_, argv) => {
             name: '[path]/[name].[ext]',
           },
         },
-      ]
-    }
-  }
+      ],
+    },
+  };
 };
