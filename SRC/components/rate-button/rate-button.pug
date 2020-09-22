@@ -1,5 +1,5 @@
-mixin rate-button({disabled, id, count}={})  
-  .rate-button.js-rate-button(data-count = count)
+mixin rate-button({isDisabled=false, id, count=1}={})  
+  .rate-button.js-rate-button(class = (isDisabled && "rate-button_disabled") data-count = count)
     - let index = 0;
     - const total = 5;
     while index < total      
