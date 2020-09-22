@@ -1,4 +1,4 @@
-mixin comfort-status({isHideLine, icon, caption, text})
+mixin comfort-status({isHideLine, icon, caption="Caption", text="Text"}={})
   figure.comfort-status(class = isHideLine ? "comfort-status_hide-line" : "")    
     .comfort-status__icon.material-icons #{icon}
     figcaption.comfort-status__description

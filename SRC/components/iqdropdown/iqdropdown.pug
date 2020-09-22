@@ -1,4 +1,4 @@
-mixin iqdropdown({isOpen, items})
+mixin iqdropdown({isOpen, items=[{text: "Error: items is not defined"}]}={})
   .iqdropdown(class = isOpen && "menu-open")
     p.iqdropdown-selection
     .iqdropdown-menu

@@ -1,6 +1,6 @@
 include ../checkbox/checkbox
 
-mixin checkboxes-list({caption, checkboxes})
+mixin checkboxes-list({caption, checkboxes=[{text:"Error: items is not defined"}]}={})
   .checkboxes-list
     .checkboxes-list__caption #{caption}
     ul.checkboxes-list__list    

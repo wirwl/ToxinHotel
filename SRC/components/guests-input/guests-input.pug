@@ -1,7 +1,7 @@
 include ../button-simple/button-simple
 include ../iqdropdown/iqdropdown
 
-mixin guests-input({isOpen, caption, items, buttonClear, buttonApply})
+mixin guests-input({isOpen, caption, items, buttonClear, buttonApply}={})
   .guests-input.js-guests-input
     if caption
       label.guests-input__caption #{caption}

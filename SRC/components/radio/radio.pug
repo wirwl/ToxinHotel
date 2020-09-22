@@ -1,4 +1,4 @@
-mixin radio({name, isChecked, text})
+mixin radio({name="name", isChecked, text="text"}={})
   label.radio
     input(type = "radio" name = name checked = (isChecked && "checked")).radio__input
     .radio__text #{text}

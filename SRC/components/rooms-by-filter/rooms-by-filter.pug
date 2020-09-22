@@ -1,7 +1,7 @@
 include ../pagination/pagination
 include ../room-info/room-info
 
-mixin rooms-by-filter({title, roomInfos, pagination})
+mixin rooms-by-filter({title="Title", roomInfos=[], pagination}={})
   section.rooms
     h2.rooms__title #{title}
     ul.rooms__list

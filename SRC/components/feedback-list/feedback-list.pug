@@ -1,6 +1,6 @@
 include ../feedback/feedback
 
-mixin feedback-list({caption, count, feedbacks})
+mixin feedback-list({caption="Caption", count, feedbacks=[{caption: "Caption", text: "Error: items is not defined"}]}={})
   article.feedback-list
     header.feedback-list__caption
       h2.feedback-list__text #{caption}

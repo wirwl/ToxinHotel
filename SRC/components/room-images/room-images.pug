@@ -1,7 +1,7 @@
 include ../image-slider/image-slider
 include ../flexslider/flexslider
 
-mixin room-images(images)
+mixin room-images(images=["","",""])
   .room-images
     .room-images__left-wrapper
       img.room-images__left-image(src = images[0] alt = "left-image")

@@ -5,7 +5,7 @@ include ../toggle/toggle
 include ../button-arrow/button-arrow
 include ../button-bordered/button-bordered
 
-mixin sign-up-form({caption, isThereAccount, textInputName, textInputSurname, radiosListSex, maskedInputBirthday, textInputEmail, textInputPassword, toggleSpecialOffer, buttonSubmit, buttonSignin})
+mixin sign-up-form({caption="Caption", isThereAccount, textInputName, textInputSurname, radiosListSex, maskedInputBirthday, textInputEmail, textInputPassword, toggleSpecialOffer, buttonSubmit, buttonSignin}={})
   form(method = "post" action = "#").sign-up-form
     fieldset.sign-up-form__main-content
       h2.sign-up-form__caption #{caption}

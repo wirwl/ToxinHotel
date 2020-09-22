@@ -1,4 +1,4 @@
-mixin image-slider({images, id, image_index, isShowNavBtns})
+mixin image-slider({images=[], id, image_index, isShowNavBtns}={})
   - let length = images.length  
   - let id_img = id + "-img-"
   .image-slider

@@ -2,7 +2,7 @@ include ../../header/header
 include ../../footer/footer
 include ../../sign-up-form/sign-up-form
 
-mixin sign-up({headerData, signupForm, footerData})
+mixin sign-up({headerData, signupForm, footerData}={})
   .sign-up
     +header(headerData)
     main.sign-up__main-content

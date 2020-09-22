@@ -2,10 +2,10 @@ include ../text-input/text-input
 include ../button-arrow/button-arrow
 include ../button-bordered/button-bordered
 
-mixin sign-in-form(data)
+mixin sign-in-form(data={})
   -
     const {
-            caption, textThereIsNotAccount, textInputEmail, 
+            caption="Caption", textThereIsNotAccount, textInputEmail, 
             textInputPassword, buttonSignIn, buttonSignUp
           } = data
   form.sign-in-form(method = "post" action = "#")

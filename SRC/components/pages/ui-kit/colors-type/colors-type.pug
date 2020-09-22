@@ -1,7 +1,7 @@
 include ../../../color-example/color-example
 include ../../../font-example/font-example
 
-mixin colors-type({colorExampleItems, fontExampleItems})
+mixin colors-type({colorExampleItems=[{description: "Error: colors is not defined"}], fontExampleItems=[{description: "Error: fonts is not defined"}]}={})
   .colors-type
     .colors-type__color-examples
       for colorExampleItem in colorExampleItems

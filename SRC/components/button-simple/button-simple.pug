@@ -1,2 +1,2 @@
-mixin button-simple({isGrayText, type = "button", text})          
+mixin button-simple({isGrayText, type = "button", text="text"}={})          
   button.button-simple(type = type class = isGrayText ? "button-simple_gray-text" : "") #{text}

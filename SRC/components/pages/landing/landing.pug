@@ -2,7 +2,7 @@ include ../../header/header
 include ../../room-reservation-form/room-reservation-form
 include ../../footer/footer
 
-mixin landing({headerData, roomReservationForm, advertisingText, footerData})
+mixin landing({headerData, roomReservationForm, advertisingText, footerData}={})
   .landing
     +header(headerData)
     main.landing__main-content

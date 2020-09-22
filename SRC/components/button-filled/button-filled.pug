@@ -1,4 +1,4 @@
-mixin button-filled({isDisabled, isHeader, dynamic_width, type = "button", text, href})
+mixin button-filled({isDisabled, isHeader, dynamic_width, type = "button", text="text", href}={})
   button.button-filled.js-button-filled(
     onclick = href ? `window.location.href='${href}'` : undefined
     type = type 

@@ -1,7 +1,7 @@
 include ../button-simple/button-simple
 include ../iqdropdown/iqdropdown
 
-mixin comfort-input({caption, isOpen, items})
+mixin comfort-input({caption="Caption", isOpen, items}={})
   .comfort-input.js-comfort-input  
     .comfort-input__caption #{caption}
     +iqdropdown({isOpen: isOpen, items: items})

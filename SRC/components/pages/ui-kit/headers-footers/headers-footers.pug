@@ -1,7 +1,7 @@
 include ../../../header/header
 include ../../../footer/footer
 
-mixin headers-footers({headerAuthFalse, headerAuthTrue, footerNormal, footerResponsive})  
+mixin headers-footers({headerAuthFalse, headerAuthTrue, footerNormal, footerResponsive}={})  
   .headers-footers
     .headers-footers__header-auth-false
       +header(headerAuthFalse)

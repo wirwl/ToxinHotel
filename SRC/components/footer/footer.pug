@@ -3,12 +3,12 @@ include ../logo-with-text/logo-with-text
 include ../subscribe-area/subscribe-area
 include ../social-buttons/social-buttons
 
-mixin footer({logoWithText, menu, sub, copyright, socialButtons})
+mixin footer({logoWithText, menu, sub, copyright, socialButtons}={})
   footer.footer
     .footer__footer-top
       .footer__wrapper-top
         .footer__logo-with-text
-          +logo-with-text(logoWithText)      
+          +logo-with-text(logoWithText)
         .footer__footer-menu
           +footer-menu(menu)
         .footer__subscribe-area

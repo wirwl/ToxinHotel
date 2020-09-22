@@ -2,7 +2,7 @@ include ../rate-button/rate-button
 include ../image-slider/image-slider
 include ../room-info-caption/room-info-caption
 
-mixin room-info({id, images, isShowNavBtns, number, isLux, luxText, cost, costText, starsCount, commentsLink, commentsCount, commentsText})
+mixin room-info({id, images, isShowNavBtns, number, isLux, luxText, cost, costText, starsCount, commentsLink, commentsCount, commentsText}={})
   .room-info
     .room-info__wrapper-for-image-slider
       +image-slider({id: id, image_index: 1, images: images, isShowNavBtns: isShowNavBtns})

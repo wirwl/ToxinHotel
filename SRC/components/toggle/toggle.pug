@@ -1,4 +1,4 @@
-mixin toggle({isChecked, text})
+mixin toggle({isChecked, text="text"}={})
   label.toggle
     input(type = "checkbox" checked = isChecked && "checked").toggle__input
     .toggle__text #{text}

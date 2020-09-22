@@ -1,6 +1,6 @@
 include ../radio/radio
 
-mixin radios-list({caption, radios, name})
+mixin radios-list({caption, radios=[{text: "Error: items is not defined"}], name}={})
   .radios-list  
     if caption
       h3.radios-list__caption #{caption}       
