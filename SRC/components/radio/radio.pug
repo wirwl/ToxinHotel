@@ -1,4 +1,5 @@
 mixin radio({name="name", isChecked, text="text"}={})
-  label.radio
+  label.radio 
     input(type = "radio" name = name checked = (isChecked && "checked")).radio__input
+    .radio__button
     .radio__text #{text}

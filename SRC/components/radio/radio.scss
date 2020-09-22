@@ -1,4 +1,9 @@
 .radio {
+  position: relative;
+  padding-left: 30px;
+  display: flex;
+  width: 120px;
+
   &__input {
     position: absolute;
     width: 1px;
@@ -10,20 +15,14 @@
     overflow: hidden;
   }
 
-  &__text {
+  &__button {
     display: inline-block;
-    position: relative;
-    padding-left: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
     font-size: 14px;
     cursor: pointer;
-    color: $toxin-color-black-75;
-  }
-
-  &__text::before {
-    content: "";
-    position: absolute;
-    left: 0px;
-    top: 0px;
+    color: $toxin-color-black-75;            
     width: 20px;
     height: 20px;
     border: 1px solid $toxin-color-black-25;
@@ -31,27 +30,28 @@
     border-radius: 100%;
   }
 
-  &__text::after {
+  &__button::after {
     content: "";
     position: absolute;
     transition: all 0.2s ease;
-    left: 4px;
-    top: 4px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 12px;
     height: 12px;
     border-radius: 100%;
     background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
   }
 
-  &__input:not(:checked) + .radio__text {
+  &__input:not(:checked) + .radio__button + .radio__text {
     color: $toxin-color-black-50;
   }
 
-  &__input:not(:checked) + .radio__text::after {
+  &__input:not(:checked) + .radio__button::after {
     opacity: 0;
   }
 
-  &__input:checked + .radio__text::after {
+  &__input:checked + .radio__button::after {
     opacity: 1;
   }
 }
