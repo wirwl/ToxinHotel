@@ -39,7 +39,6 @@ class ToxinDatepicker {
   }
 
   _handleDatepickerButtonClearClick(event) {
-    console.log(this._$rootElementClass);
     const dp = this._findDatepicker(this._$rootElementClass,
       $(event.currentTarget).parent().parent());
     if (dp) dp.clear();
