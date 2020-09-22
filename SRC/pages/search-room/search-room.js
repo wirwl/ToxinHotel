@@ -11,6 +11,7 @@ dp.update('dateFormat', 'dd M');
 dp.update('onSelect', (fd, d, picker) => {
   picker.$el.val(fd.toLowerCase());
 });
+
 dp.update('onShow', (inst, animationCompleted) => {
   if (!animationCompleted) {
     const newMaxWidth = inst.$el.parent().width();

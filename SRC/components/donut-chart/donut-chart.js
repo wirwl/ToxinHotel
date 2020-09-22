@@ -64,7 +64,6 @@ class DonutChart {
       if (data[key].count > arc100percent) arc100percent = data[key].count;
     });
 
-
     if (noZero === 0) {
       this._drawPieSliceEx(this._canvas, 0, 2, '#e2e2e2');
     } else {

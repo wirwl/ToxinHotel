@@ -37,5 +37,4 @@ class OrderInfoForm {
   }
 }
 
-
 new OrderInfoForm('.order-info-form__arrival', '.order-info-form__checkout');
