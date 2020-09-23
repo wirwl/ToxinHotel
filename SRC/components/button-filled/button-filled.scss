@@ -5,12 +5,12 @@
   font-size: 12px;
   line-height: 15px;
   background: none;
-  color: #bc9cff;
+  color: $toxin-color-purple;
   cursor: pointer;
   text-transform: uppercase;
   background: $toxin-gradient-purple-blue;
   border-radius: 22px;
-  color: #ffffff;
+  color: #fff;
   padding: 15px 20px;
 
   &_disabled,
@@ -19,7 +19,7 @@
     background: $toxin-gradient-purple-blue-half-opacity;
   }
 
-  &_dynamic-width {
+  &_width_dynamic {
     width: 100%;
     min-width: 78px;
     padding-left: 0;
