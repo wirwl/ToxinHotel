@@ -33,7 +33,7 @@
     width: 16px;
     height: 16px;
     border: 2px solid #fff;
-    background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+    background: $toxin-gradient-green-turquoise-blue;
     border-radius: 50%;
     top: 0px;
     box-shadow: none;
@@ -47,7 +47,7 @@
     top: 5px;
   }
   .irs-bar {
-    background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+    background: $toxin-gradient-green-turquoise-blue;
     top: 6px;
   }
 }

@@ -8,7 +8,7 @@
   color: #bc9cff;
   cursor: pointer;
   text-transform: uppercase;
-  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  background: $toxin-gradient-purple-blue;
   border-radius: 22px;
   color: #ffffff;
   padding: 15px 20px;
@@ -16,7 +16,7 @@
   &_disabled,
   &:hover,
   &:focus {
-    background: linear-gradient(180deg, #bc9cff7f 0%, rgba(139, 164, 249, 0.5) 100%);
+    background: $toxin-gradient-purple-blue-half-opacity;
   }
 
   &_dynamic-width {

@@ -50,7 +50,7 @@
     content: '\e5c8';
     font-family: $toxin-font-material-icon;
     font-size: 24px;
-    background: linear-gradient(180deg, $toxin-color-purple 0%, $toxin-color-blue 100%);
+    background: $toxin-gradient-purple-blue;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: $toxin-color-blue;

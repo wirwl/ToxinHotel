@@ -50,7 +50,7 @@
       right: 0;
       z-index: -2;
       background: #bc9cff;
-      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);                  
+      background: $toxin-gradient-purple-blue;                  
     }
 
     &::after {

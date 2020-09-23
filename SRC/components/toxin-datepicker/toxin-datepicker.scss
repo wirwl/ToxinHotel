@@ -64,7 +64,7 @@
     width: 50%;
     height: 40px;
     background: $toxin-color-purple;
-    background: linear-gradient(180deg, #bc9cff7f 0%, #8ba4f97f 100%);
+    background: $toxin-gradient-purple-blue-half-opacity;
   }
   &--cell-day.-range-from-.-selected-:not(.-focus-)::after {
     content: attr(data-date);
@@ -94,7 +94,7 @@
     width: 50%;
     height: 100%;
     background: $toxin-color-purple;
-    background: linear-gradient(180deg, #bc9cff7f 0%, #8ba4f97f 100%);
+    background: $toxin-gradient-purple-blue-half-opacity;
   }
   &--cell-day.-range-to-.-selected-:not(.-focus-)::after {
     content: attr(data-date);
@@ -114,12 +114,12 @@
   &--cell-day.-selected- {
     border-radius: 50%;
     background: $toxin-color-purple;
-    background: linear-gradient(180deg, $toxin-color-purple 0%, #8ba4f9 100%);
+    background: $toxin-gradient-purple-blue;
   }
 
   &--cell-day.-in-range- {
     background: $toxin-color-purple;
-    background: linear-gradient(180deg, #bc9cff7f 0%, #8ba4f97f 100%);
+    background: $toxin-gradient-purple-blue-half-opacity;
     color: $toxin-color-black-50;
   }
   &--cell-day.-selected-.-focus- {
@@ -133,7 +133,7 @@
   &--cell-day.-other-month-.-in-range- {
     color: white;
     background: $toxin-color-purple;
-    background: linear-gradient(180deg, #bc9cff7f 0%, #8ba4f97f 100%);
+    background: $toxin-gradient-purple-blue-half-opacity;
   }
 
   &--cell-day.-range-from-:not(.-selected-),
@@ -159,7 +159,7 @@
   &--cell-day.-in-range-.-current-,
   &--cell-day.-current- {
     color: white;
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    background: $toxin-gradient-green-turquoise-blue;
     border-radius: 50%;
   }
 
@@ -175,12 +175,12 @@
     width: 40px;
     height: 40px;
     background: $toxin-color-purple;
-    background: linear-gradient(180deg, #bc9cff7f 0%, #8ba4f97f 100%);
+    background: $toxin-gradient-purple-blue-half-opacity;
   }
 
   .-selected-.datepicker--cell-day.-other-month- {
     background: $toxin-color-purple;
-    background: linear-gradient(180deg, $toxin-color-purple 0%, #8ba4f9 100%);
+    background: $toxin-gradient-purple-blue;
   }
 
   &--cell-day.-focus- {

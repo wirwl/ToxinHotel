@@ -9,6 +9,13 @@ $toxin-color-green: #6fcf97;
 $toxin-color-blue: #8ba4f9;
 $toxin-color-gray: #e5e5e5;
 $toxin-color-light-gray: #f9f9f9;
+$toxin-gradient-purple-blue: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+$toxin-gradient-purple-blue-half-opacity: linear-gradient(180deg, #bc9cff7f 0%, #8ba4f97f 100%);
+$toxin-gradient-green-turquoise-blue: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+$toxin-gradient-black-prev: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+$toxin-gradient-black-next: linear-gradient(270deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+$toxin-gradient-cream-brulee-wax-flower: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
+$toxin-gradient-gray-east-bay: linear-gradient(180deg, #919191 0%, #3d4975 100%);
 $toxin-font-material-icon: material-icons, Arial, sans-serif;
 $toxin-font-montserrat: montserrat, Arial, sans-serif;
 $toxin-font-open-sans: open-sans, Arial, sans-serif;
@@ -18,7 +25,7 @@ $toxin-font-awesome: awesome-5-brands-regular-400, Arial, sans-serif;
 @mixin reset {
   box-sizing: border-box;
   margin: 0px;
-  padding: 0px;
+  padding: 0;
 }
 
 @mixin define-html {  

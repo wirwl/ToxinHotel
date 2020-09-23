@@ -8,12 +8,18 @@ const discardduplicates = require('postcss-discard-duplicates');
 const flexbugsfixes = require('postcss-flexbugs-fixes');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const sass = require('sass');
+const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
 
-module.exports = (_, argv) => {
+const smp = new SpeedMeasurePlugin();
+
+module.exports = smp.wrap((_, argv) => {
   const isDev = argv.mode === 'development';
   const dtValue = isDev ? 'source-map' : 'none';
 
   return {
+    devServer: {
+      clientLogLevel: 'silent',
+    },
     performance: { hints: false },
     devtool: dtValue,
     entry: {
@@ -91,6 +97,7 @@ module.exports = (_, argv) => {
           test: /\.pug$/,
           include: /pages/,
           use: [
+            'cache-loader',
             'html-loader?attrs=false',
             `pug-html-loader?pretty=${isDev}`,
           ],
@@ -102,7 +109,7 @@ module.exports = (_, argv) => {
               loader: MiniCssExtractPlugin.loader,
               options: { sourceMap: true, publicPath: '../', ignoreOrder: true },
             },
-
+            'cache-loader',
             {
               loader: 'css-loader',
               options: {
@@ -147,46 +154,60 @@ module.exports = (_, argv) => {
           test: /\.m?js$/,
           include: /(components|pages)/,
           exclude: /(node_modules)/,
-          use: {
-            loader: 'babel-loader',
-            options: {
-              presets: ['@babel/preset-env'],
-              plugins: ['@babel/plugin-proposal-object-rest-spread'],
-              cacheDirectory: true,
-            },
-          },
+          use: [
+            'cache-loader',
+            {
+              loader: 'babel-loader',
+              options: {
+                presets: ['@babel/preset-env'],
+                plugins: ['@babel/plugin-proposal-object-rest-spread'],
+                cacheDirectory: true,
+              },
+            }],
         },
         {
           test: /\.(png|jpe?g|gif|svg)$/,
           include: /components/,
-          loader: 'file-loader',
-          options: {
-            context: 'SRC',
-            outputPath: 'images',
-            name: '[path][name].[ext]',
-          },
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                context: 'SRC',
+                outputPath: 'images',
+                name: '[path][name].[ext]',
+              },
+            },
+          ],
         },
         {
           test: /\.(woff(2)?|ttf|eot|svg)$/,
           include: /(node_modules)/,
-          loader: 'file-loader',
-          options: {
-            outputPath: 'fonts',
-            name: '[path]/[name].[ext]',
-          },
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                outputPath: 'fonts',
+                name: '[path]/[name].[ext]',
+              },
+            },
+          ],
         },
         {
           test: /\.(woff(2)?|ttf|eot|svg)$/,
           include: /(fonts)/,
           exclude: /(node_modules)/,
-          loader: 'file-loader',
-          options: {
-            context: 'SRC\\fonts',
-            outputPath: 'fonts',
-            name: '[path]/[name].[ext]',
-          },
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                context: 'SRC\\fonts',
+                outputPath: 'fonts',
+                name: '[path]/[name].[ext]',
+              },
+            },
+          ],
         },
       ],
     },
   };
-};
+});

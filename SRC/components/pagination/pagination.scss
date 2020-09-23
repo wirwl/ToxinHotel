@@ -33,12 +33,12 @@
 
   &__item:first-child,
   &__item:last-child {
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    background: $toxin-gradient-green-turquoise-blue;
     color: #fff;
   }
   
   & .pagination__item_active {
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background: $toxin-gradient-purple-blue;
     font-weight: bold;
     color: #fff;
   }
