@@ -6,7 +6,6 @@ const autoprefixer = require('autoprefixer');
 const pxtorem = require('postcss-pxtorem');
 const discardduplicates = require('postcss-discard-duplicates');
 const flexbugsfixes = require('postcss-flexbugs-fixes');
-const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const sass = require('sass');
 
@@ -40,7 +39,6 @@ module.exports = (_, argv) => {
         jQuery: 'jquery',
         'window.jQuery': 'jquery',
       }),
-      new FriendlyErrorsWebpackPlugin(),
 
       new MiniCssExtractPlugin({ filename: 'css/[name].css' }),
 
