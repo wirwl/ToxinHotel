@@ -6,7 +6,6 @@ class ExpandableCheckboxList {
 
   _addEventListeners(element) {
     $(element).on('click.expandableCheckboxList', this._handleElementClick);
-
     $(element).find('.expandable-checkbox-list__list').on('click.expandable-checkbox-list', this._handleIqdropdownMenuClick);
     $(document).on('mouseup.expandable-checkbox-list', this._handleDocumentMouseUp.bind(this));
   }
@@ -15,9 +14,9 @@ class ExpandableCheckboxList {
     if (!this._$expandableCheckboxList.is(event.target)
      && this._$expandableCheckboxList.has(event.target).length === 0
     ) {
-      this._$expandableCheckboxList.removeClass('expandable-checkbox-list__list_show');
+      this._$expandableCheckboxList.removeClass('expandable-checkbox-list__list_shown');
       const $caption = this._$expandableCheckboxList.parent().find('.expandable-checkbox-list__caption');
-      $caption.removeClass('expandable-checkbox-list__caption_show');
+      $caption.removeClass('expandable-checkbox-list__caption_shown');
     }
   }
 
@@ -27,9 +26,9 @@ class ExpandableCheckboxList {
 
   _handleElementClick() {
     const $list = $(this).parent().find('.expandable-checkbox-list__list');
-    $list.toggleClass('expandable-checkbox-list__list_show');
+    $list.toggleClass('expandable-checkbox-list__list_shown');
     const $caption = $(this).parent().find('.expandable-checkbox-list__caption');
-    $caption.toggleClass('expandable-checkbox-list__caption_show');
+    $caption.toggleClass('expandable-checkbox-list__caption_shown');
   }
 }
 

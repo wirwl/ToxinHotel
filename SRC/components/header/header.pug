@@ -20,9 +20,9 @@ mixin header(data={})
           +header-menu(menu)    
         .header__auth-area(class = isAuth && "header__auth-area_is-auth")
           if !isAuth
-            .header__button-bordered(class = isAuth && "header__button-bordered_hide")
+            .header__button-bordered(class = isAuth && "header__button-bordered_hidden")
               +button-bordered(buttonSignIn)      
-            .header__button-filled(class = isAuth && "header__button-filled_hide")              
+            .header__button-filled(class = isAuth && "header__button-filled_hidden")              
               +button-filled(buttonSignUp)
-        a.header__auth-name(href = "/mock-address/change-me" class = isAuth && "header__auth-name_show") #{name}
+        a.header__auth-name(href = "/mock-address/change-me" class = isAuth && "header__auth-name_shown") #{name}
     .header__icon.js-header__icon menu

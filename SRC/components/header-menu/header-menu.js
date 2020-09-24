@@ -30,17 +30,17 @@ class HeaderMenu {
   _handleHeaderMenuIconClick(e) {
     const $icon = $(e.currentTarget);
     const $list = $icon.parent().find('.header__menu-and-auth-area');
-    $list.toggleClass('header__menu-and-auth-area_show');
+    $list.toggleClass('header__menu-and-auth-area_shown');
   }
 
   _handleMenuListMouseLeave(e) {
     const $list = $(e.currentTarget);
-    if ($list.parent().find('.header-menu__list_show')) {
+    if ($list.parent().find('.header-menu__list_shown')) {
       $list.children().each((index, element) => {
         this._closeAllOpenMenuItems($(element));
       });
-      $list.parent().find('.header-menu__list').removeClass('header-menu__list_show');
-      $list.parent().find('.header-menu__list').addClass('header-menu__list_hide');
+      $list.parent().find('.header-menu__list').removeClass('header-menu__list_shown');
+      $list.parent().find('.header-menu__list').addClass('header-menu__list_hidden');
     }
   }
 }

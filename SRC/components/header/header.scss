@@ -82,15 +82,15 @@
     }
   }
 
-  &__auth-name_show {
+  &__auth-name_shown {
     display: flex;
   }
 
-  &__button-filled_hide {
+  &__button-filled_hidden {
     display: none;
   }
 
-  &__button-bordered_hide {
+  &__button-bordered_hidden {
     display: none;
   }
 
@@ -152,7 +152,7 @@
       width: 100%;      
     }
 
-    &__menu-and-auth-area_show {
+    &__menu-and-auth-area_shown {
       display: flex;
     }
   }

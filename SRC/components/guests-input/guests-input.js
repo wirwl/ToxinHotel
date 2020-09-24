@@ -34,7 +34,7 @@ class GuestsInput {
           const $buttonClear = $($iqdropdown).find('.guests-input__button-simple-clear').find('.button-simple');
 
           if (totalItems > 0) {
-            $buttonClear.removeClass('button-simple_hide');
+            $buttonClear.removeClass('button-simple_hidden');
             let wordGuests = this._guests.singular;
             if (guestsCount > 0) {
               const [number2, number5] = this._guests.plurals;
@@ -49,7 +49,7 @@ class GuestsInput {
             }
             if (guestsCount > 0) result = `${guestsCount} ${wordGuests}${babiesCount > 0 ? `, ${babiesCount} ${wordBabies}` : ''}`;
           } else {
-            $buttonClear.addClass('button-simple_hide');
+            $buttonClear.addClass('button-simple_hidden');
           }
 
           return result;
@@ -57,8 +57,7 @@ class GuestsInput {
       });
       $iqdropdowns.find('.iqdropdown-menu').on('click.iqdropdown', this._handleIqdropdownMenuClick);
       $(document).on('mouseup.iqdropdown', this._handleDocumentMouseUp.bind(this));
-    })
-
+    });
   }
 
   _handleDocumentMouseUp(event) {

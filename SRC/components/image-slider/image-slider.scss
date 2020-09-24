@@ -52,7 +52,7 @@
     background: $toxin-gradient-black-prev;
   }
 
-  &__label_show,
+  &__label_shown,
   &__slide:hover + .image-slider__nav .image-slider__label {
     opacity: 0.5;
   }

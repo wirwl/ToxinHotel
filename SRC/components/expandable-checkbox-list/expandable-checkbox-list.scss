@@ -18,7 +18,7 @@
     margin-bottom: 12px;
   }
 
-  &__list_show {
+  &__list_shown {
     display: block;
     padding-top: 12px;
   }
@@ -35,7 +35,7 @@
     text-align: center;
   }
 
-  &__caption_show::after {
+  &__caption_shown::after {
     content: 'keyboard_arrow_up';
   }
 }
