@@ -54,7 +54,9 @@ class ToxinDatepicker {
     let result = null;
     tds.each((index, element) => {
       const $td = $(element);
-      if ($td.data('datepicker').$datepicker.is(d)) result = $td.data('datepicker');
+      if ($td.data('datepicker').$datepicker.is(d)) {
+        result = $td.data('datepicker');
+      }
     });
     return result;
   }

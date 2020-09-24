@@ -22,7 +22,8 @@ class HeaderMenu {
     ulParent.children().each((index, element) => {
       const item = $(element);
       if (item.is(li)) {
-        if (ul.css('display') === 'none') ul.css('display', 'block'); else ul.css('display', 'none');
+        if (ul.css('display') === 'none') ul.css('display', 'block');
+        else ul.css('display', 'none');
       } else { this._closeAllOpenMenuItems(item); }
     });
   }

@@ -28,7 +28,9 @@ class Pagination {
     const showedLastPage = this._$paginationButtons.data('showedlastpage');
     const total = this._$paginationButtons.data('total');
     let toCount = page * showed;
-    if (page === pages) { toCount = page * showed - showed + showedLastPage; }
+    if (page === pages) {
+      toCount = page * showed - showed + showedLastPage;
+    }
     $('.pagination__caption').text(`${(page - 1) * showed + 1} – ${toCount} из ${total}+ вариантов аренды`);
 
     let str = '<ul class="pagination__list">';

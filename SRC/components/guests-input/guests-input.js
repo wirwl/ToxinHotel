@@ -47,7 +47,9 @@ class GuestsInput {
               if (babiesCount > 4) wordBabies = number5;
               else if (babiesCount > 1) wordBabies = number2;
             }
-            if (guestsCount > 0) result = `${guestsCount} ${wordGuests}${babiesCount > 0 ? `, ${babiesCount} ${wordBabies}` : ''}`;
+            if (guestsCount > 0) {
+              result = `${guestsCount} ${wordGuests}${babiesCount > 0 ? `, ${babiesCount} ${wordBabies}` : ''}`;
+            }
           } else {
             $buttonClear.addClass('button-simple_hidden');
           }
@@ -61,7 +63,8 @@ class GuestsInput {
   }
 
   _handleDocumentMouseUp(event) {
-    if (!this._$iqdropdowns.is(event.target) && this._$iqdropdowns.has(event.target).length === 0) {
+    if (!this._$iqdropdowns.is(event.target)
+        && this._$iqdropdowns.has(event.target).length === 0) {
       this._$iqdropdowns.removeClass('menu-open');
     }
   }

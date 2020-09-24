@@ -116,7 +116,8 @@ class DonutChart {
 
     let text = total;
     this._context.font = 'bold 24px quicksand';
-    if (total > 0) this._context.fillStyle = '#BC9CFF'; else this._context.fillStyle = 'gray';
+    if (total > 0) this._context.fillStyle = '#BC9CFF';
+    else this._context.fillStyle = 'gray';
     let x = this._canvas.width / 2 - this._context.measureText(text).width / 2;
     let y = this._canvas.height / 2 - 2;
     this._context.fillText(text, x, y);
