@@ -37,18 +37,22 @@ class Pagination {
     let active;
     let pageCutLow = page - 1;
     let pageCutHigh = page + 1;
+    const maxPagesCountWithoutDots = 5;
+    const maxCurrentPageeWithRightDots = 3;
+    const minCurrentPageWithLeftDots = 4;
+
     if (page > 1) {
       str += `<li class="pagination__item previous pagination__item_no"><a data-page="${page - 1}"class="pagination__link material-icons">arrow_back</a></li>`;
     }
-    if (pages < 6) {
+    if (pages <= maxPagesCountWithoutDots) {
       for (let p = 1; p <= pages; p += 1) {
         active = page === p ? 'pagination__item_active' : 'pagination__item_no';
         str += `<li class="pagination__item ${active}"><a data-page="${p}"class="pagination__link">${p}</a></li>`;
       }
     } else {
-      if (page > 2) {
+      if (page >= maxCurrentPageeWithRightDots) {
         str += '<li class="pagination__item_no pagination__item"><a data-page="1" class="pagination__link">1</a></li>';
-        if (page > 3) {
+        if (page >= minCurrentPageWithLeftDots) {
           str += '<li class="pagination__item pagination__item"><a class="pagination__link_out-of-range">...</a></li>';
         }
       }
