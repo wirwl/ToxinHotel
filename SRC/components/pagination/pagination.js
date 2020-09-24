@@ -1,29 +1,15 @@
 class Pagination {
   constructor(rootClassName) {
-    this._init(rootClassName);
+    this._$paginationButtons = $(rootClassName);
+    if (this._$paginationButtons) this._init(rootClassName);
   }
 
-  _init(rootClassName) {
-    this._$paginationButtons = $(rootClassName);
+  _getDataAttributesValue() {
     this._pages = this._$paginationButtons.data('pages');
     this._page = this._$paginationButtons.data('page');
-
-    this._$paginationButtons.html(this.createPagination(this._pages, this._page));
-    this._addEventListenerClick(this._$paginationButtons);
   }
 
-  _addEventListenerClick(pagination) {
-    const lis = pagination.find('a');
-    lis.each((index, element) => {
-      const $element = $(element);
-      const datapage = $element.data('page');
-      if (datapage) {
-        $element.on('click.pagination', this.createPagination.bind(this, this._pages, datapage));
-      }
-    });
-  }
-
-  createPagination(pages, page) {
+  _createPagination(pages, page) {
     const showed = this._$paginationButtons.data('showed');
     const showedLastPage = this._$paginationButtons.data('showedlastpage');
     const total = this._$paginationButtons.data('total');
@@ -81,13 +67,33 @@ class Pagination {
 
     if (page < pages) {
       str += `<li class="pagination__item next pagination__item_no"><a data-page="${page + 1}"class="pagination__link material-icons">arrow_forward</a></li>`;
-      $('#next').on('click.nextButton', this.createPagination.bind(this, pages, page + 1));
     }
     str += '</ul>';
 
     this._$paginationButtons.html(str);
-    this._addEventListenerClick(this._$paginationButtons);
+    this._addEventListenerClickForButtons();
     return str;
+  }
+
+  _addEventListenerClickForButtons() {
+    const lis = this._$paginationButtons.find('a');
+    lis.each((_, element) => {
+      const $element = $(element);
+      const datapage = $element.data('page');
+      if (datapage) {
+        $element.on('click.pagination', this._createPagination.bind(this, this._pages, datapage));
+      }
+    });
+  }
+
+  _firstDrawPagination() {
+    this._$paginationButtons.html(this._createPagination(this._pages, this._page));
+    this._addEventListenerClickForButtons();
+  }
+
+  _init() {
+    this._getDataAttributesValue();
+    this._firstDrawPagination();
   }
 }
 
