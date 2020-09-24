@@ -1,7 +1,7 @@
 .bullets-list {
   list-style: none;
 
-  &__item {
+  &__item:not(:last-child) {
     margin-bottom: 10px;
   }
 }

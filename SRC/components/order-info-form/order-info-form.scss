@@ -1,5 +1,5 @@
 .order-info-form {
-  max-width: 380px;    
+  max-width: 380px;
   background: white;
   padding: 40px 29px 29px;
   border: 1px solid rgba(0, 0, 0, 0.12);
@@ -18,7 +18,7 @@
     font-size: 24px;
     margin-bottom: 17px;
   }
-  &__item {
+  &__item:not(:last-child) {
     margin-bottom: 19px;
   }
 
@@ -48,7 +48,7 @@
   }
 
   &__arrival {
-    .datepicker-input__input {      
+    .datepicker-input__input {
       padding-left: 14px;
       padding-top: 11px;
     }
