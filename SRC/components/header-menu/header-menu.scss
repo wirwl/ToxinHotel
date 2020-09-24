@@ -35,7 +35,7 @@
 
   &__list_sub-sub-list {
     position: absolute;
-    top: 0px;
+    top: 0;
     left: 150px;
   }
 
@@ -71,15 +71,15 @@
   }
 
   @media (max-width: 830px) {
-    padding: 0px;
+    padding: 0;
 
     &__list {
       flex-direction: column;
-      padding: 0px 15px;
+      padding: 0 15px;
     }
 
     &__item:not(:last-of-type) {
-      margin-right: 0px;
+      margin-right: 0;
     }
 
     &__link {

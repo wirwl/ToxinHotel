@@ -30,7 +30,7 @@
     border-bottom-right-radius: 3px;
     padding: 6px 8px 8px 15px;
     position: absolute;
-    left: 0px;
+    left: 0;
     top: 43px;
     transition: all 0.2s ease-in-out;
     box-shadow: none;
@@ -52,8 +52,8 @@
   }
 
   &.menu-open {
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     border-color: $toxin-color-black-50;
   }
 
@@ -75,7 +75,7 @@
 
   .iqdropdown-menu-option {
     height: auto;
-    padding: 0px;
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,12 +87,12 @@
 
   .iqdropdown-item-controls button.button-decrement,
   .iqdropdown-item-controls button.button-increment {
-    border-bottom-left-radius: 0px;
-    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
     border-radius: 50%;
     height: 30px;
     width: 30px;
-    padding: 0px;
+    padding: 0;
   }
 
   .iqdropdown-item-controls .counter {
