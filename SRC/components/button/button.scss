@@ -1,0 +1,131 @@
+.button {
+  display: block;
+  text-align: center;
+  border: none;
+  font-family: $toxin-font-montserrat;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  background: none;
+  color: #bc9cff;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;  
+
+  &_type_filled {
+    color: $toxin-color-purple;
+    background: $toxin-gradient-purple-blue;
+    border-radius: 22px;
+    color: #fff;
+    padding: 15px 20px;
+
+    &.button_header {
+      padding: 10px 20px;
+      width: 100%;
+    }
+  }
+
+  &_type_unfilled {
+    padding: 15px 20px;
+    position: relative;
+    background: transparent;
+    border-radius: 22px;
+    z-index: 1;
+
+    &.button::before,
+    &.button::after {
+      content: " ";
+      position: absolute;
+      border-radius: 22px;
+    }
+
+    &.button::before {
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: -2;
+      background: #bc9cff;
+      background: $toxin-gradient-purple-blue;
+    }
+
+    &.button::after {
+      top: 2px;
+      bottom: 2px;
+      left: 2px;
+      right: 2px;
+      background-color: white;
+      z-index: -1;
+    }
+
+    &.button_disabled::before,
+    &.button:hover::before,
+    &.button:focus::before {
+      background: $toxin-gradient-purple-blue-half-opacity;
+    }
+
+    &.button_header {
+      padding: 10px 20px;
+    }
+  }
+
+  &_type_simple {
+    &.button_grayed-text {
+      color: $toxin-color-black-50;
+
+      &.button_disabled,
+      &.button:hover,
+      &.button:focus {
+        color: $toxin-color-black-25;
+      }
+
+      &.button_hidden {
+        display: none;
+      }
+    }
+
+    &.button_disabled,
+    &.button:hover,
+    &.button:focus {
+      color: $toxin-color-purple-half-opacity;
+    }    
+  }
+
+  &_type_arrowed {
+    position: relative;
+    padding: 15px 20px;
+    width: 100%;
+    background: $toxin-gradient-purple-blue;
+    border-radius: 22px;
+    color: #ffffff;
+
+    &::after {
+      font-family: $toxin-font-material-icon;
+      content: "arrow_forward";
+      position: absolute;
+      right: 10px;
+      font-weight: normal;
+      font-size: 24px;
+      text-transform: none;
+    }
+  }
+
+  &_type_filled,
+  &_type_unfilled {
+    &.button_width_dynamic {
+      width: 100%;
+      min-width: 78px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &_type_filled,
+  &_type_arrowed {
+    &.button_disabled,
+    &.button:hover,
+    &.button:focus {
+      background: $toxin-gradient-purple-blue-half-opacity;
+    }
+  }
+}

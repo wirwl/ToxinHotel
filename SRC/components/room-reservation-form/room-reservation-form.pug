@@ -1,4 +1,4 @@
-include ../button-arrow/button-arrow
+include ../button/button
 include ../text-input/text-input
 include ../datepicker-input/datepicker-input
 include ../guests-input/guests-input
@@ -17,4 +17,4 @@ mixin room-reservation-form({title="Title", datepickerInputArrival, datepickerIn
                 +datepicker-input(datepickerInputCheckout)                  
         li.room-reservation-form__item.room-reservation-form__guests-input
           +guests-input(guestsInput)
-      +button-arrow(buttonFindRoom)
+      +button({styleType:"arrowed", type: "submit", text: buttonFindRoom.text})

@@ -27,7 +27,7 @@ block content
         {id: "children", text: "Дети"}, 
         {id: "babies", text: "Младенцы"}
       ],
-      buttonClear: {text:"Очистить", isGrayText:true}, 
+      buttonClear: {text:"Очистить", isGrayed:true}, 
       buttonApply: {text:"Применить"}
     },
     maskedInput: {caption: "MASKED TEXT FIELD"},
@@ -68,7 +68,7 @@ block content
       isExpand: false, 
       caption: "EXPANDABLE CHECKBOX LIST", 
       checkboxes: [
-        {id: "bf", text: "Завтрак"},
+        {text: "Завтрак"},
         {text: "Письменный стол", isChecked: true},
         {text: "Стул для кормления", isChecked: true},
         {text: "Кроватка", isChecked: true},
@@ -133,7 +133,7 @@ block content
         {id: "children", text: "Дети"}, 
         {id: "babies", text: "Младенцы"}
       ],
-      buttonClear: {text:"Очистить", isGrayText:true}, 
+      buttonClear: {text:"Очистить", isGrayed:true}, 
       buttonApply: {text:"Применить"} 
     },
     checkboxesListRich: {
@@ -151,13 +151,13 @@ block content
       to: 9600
       },
     buttonsCaption: "BUTTONS",
-    buttonFilled: {text: "click me", dynamic_width: true},
-    buttonFilledDisabled: {text: "click me", dynamic_width: true, isDisabled: true},
-    buttonBordered: {text: "click me", dynamicWidth: true},
-    buttonBorderedDisabled: {text: "click me", dynamicWidth: true, isDisabled: true},
+    buttonFilled: {styleType: 'filled', text: "click me", isDynamicWidth: true},    
+    buttonFilledDisabled: {styleType: 'filled', text: "click me", isDynamicWidth: true, isDisabled: true},
+    buttonBordered: {styleType: 'unfilled', text: "click me", isDynamicWidth: true},    
+    buttonBorderedDisabled: {styleType: 'unfilled', text: "click me", isDynamicWidth: true, isDisabled: true},    
     buttonSimple: {text: "click me"},
-    buttonSimpleGray: {text: "click me", isGrayText: true},
-    buttonArrow: {text: "перейти к оплате"},
+    buttonSimpleGray: {text: "click me", isGrayed: true},
+    buttonArrow: {styleType: "arrowed", text: "перейти к оплате"},
     paginationCaption: "PAGINATION",
     pagination: {pages: 15, page: 1, showed: 12, showedlastpage: 6, total: 100, caption: "1 – 12 из 100+ вариантов аренды"},
     guestsInputOpen: {
@@ -168,7 +168,7 @@ block content
         {id: "children", text: "Дети", count: 1}, 
         {id: "babies", text: "Младенцы"}
       ],
-      buttonClear: {text:"Очистить", isGrayText:true}, 
+      buttonClear: {text:"Очистить", isGrayed:true}, 
       buttonApply: {text:"Применить"} 
     },
     bulletsListCaption: "BULLET-LIST",

@@ -1,0 +1,32 @@
+mixin button(data={})
+  -
+    const {
+      type="button", 
+      text="text", 
+      link, 
+      styleType="simple", 
+      isGrayed=false, 
+      isDynamicWidth=false, 
+      isDisabled=false, 
+      isInHeader=false 
+    } = data
+    const isGrayedMod = isGrayed ? " button_grayed-text" : ""
+    const isDynamicWidthMod = isDynamicWidth ? " button_width_dynamic" : ""
+    const isDiabledMod = isDisabled ? " button_disabled" : ""
+    const isInHeaderMod = isInHeader ? " button_header" : ""
+    const modifiers = `${isGrayedMod}${isDynamicWidthMod}${isDiabledMod}${isInHeaderMod}`
+  case styleType
+    when "filled"
+      - var buttonClass = "button_type_filled"
+    when "unfilled"
+      - var buttonClass = "button_type_unfilled"
+    when "simple"
+      - var buttonClass = "button_type_simple"
+    when "arrowed"
+      - var buttonClass = "button_type_arrowed"
+    default
+      - var buttonClass = "button_type_simple"
+  if link
+    a(class=`button ${buttonClass}${modifiers}` href=link) #{text}
+  else
+    button(class=`button ${buttonClass}${modifiers}` type=type) #{text}

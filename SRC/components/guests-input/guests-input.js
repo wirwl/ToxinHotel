@@ -17,10 +17,10 @@ class GuestsInput {
     this._$iqdropdowns = this._$rootElement.find('.iqdropdown');
     this._initItemQuantityDropdown(this._$iqdropdowns);
 
-    this._$buttonClear = this._$rootElement.find('.guests-input__button-simple-clear').find('.button-simple');
+    this._$buttonClear = this._$rootElement.find('.guests-input__button-simple-clear').find('.button');
     this._$buttonClear.on('click.buttonClear', this._handleButtonClearClick.bind(this));
 
-    this._$buttonApply = this._$rootElement.find('.guests-input__button-simple-apply').find('.button-simple');
+    this._$buttonApply = this._$rootElement.find('.guests-input__button-simple-apply').find('.button');
     this._$buttonApply.on('click.buttonApply', this._handleButtonApplyClick.bind(this));
   }
 
@@ -31,10 +31,10 @@ class GuestsInput {
           let result = this._placeholder;
           const babiesCount = itemCount[this._babies.id];
           const guestsCount = totalItems - babiesCount;
-          const $buttonClear = $($iqdropdown).find('.guests-input__button-simple-clear').find('.button-simple');
+          const $buttonClear = $($iqdropdown).find('.guests-input__button-simple-clear').find('.button');
 
           if (totalItems > 0) {
-            $buttonClear.removeClass('button-simple_hidden');
+            $buttonClear.removeClass('button_hidden');
             let wordGuests = this._guests.singular;
             if (guestsCount > 0) {
               const [number2, number5] = this._guests.plurals;
@@ -51,7 +51,7 @@ class GuestsInput {
               result = `${guestsCount} ${wordGuests}${babiesCount > 0 ? `, ${babiesCount} ${wordBabies}` : ''}`;
             }
           } else {
-            $buttonClear.addClass('button-simple_hidden');
+            $buttonClear.addClass('button_hidden');
           }
 
           return result;

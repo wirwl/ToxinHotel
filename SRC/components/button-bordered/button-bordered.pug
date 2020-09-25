@@ -1,8 +1,0 @@
-mixin button-bordered({isDisabled, type="button", isHeader, text="text", dynamicWidth, href="mock"}={})      
-  button.button-bordered.js-button-bordered(
-    onclick = href ? `window.location.href='${href}'` : undefined
-    type = type 
-    class = (isHeader ? "button-bordered_header" : "") + " " + 
-            (dynamicWidth ? "button-bordered_width_dynamic" : "") + 
-            (isDisabled ? " button-bordered_disabled" : "")    
-  ) #{text}

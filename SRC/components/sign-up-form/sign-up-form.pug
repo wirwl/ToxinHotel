@@ -2,8 +2,7 @@ include ../text-input/text-input
 include ../masked-input/masked-input
 include ../radios-list/radios-list
 include ../toggle/toggle
-include ../button-arrow/button-arrow
-include ../button-bordered/button-bordered
+include ../button/button
 
 mixin sign-up-form({caption="Caption", isThereAccount, textInputName, textInputSurname, radiosListSex, maskedInputBirthday, textInputEmail, textInputPassword, toggleSpecialOffer, buttonSubmit, buttonSignin}={})
   form(method = "post" action = "#").sign-up-form
@@ -27,8 +26,8 @@ mixin sign-up-form({caption="Caption", isThereAccount, textInputName, textInputS
         li.sign-up-form__item
           +toggle(toggleSpecialOffer)        
       .sign-up-form__wrapper-for-sign-up-button
-        +button-arrow(buttonSubmit)        
+        +button({styleType:"arrowed", type: "submit", text: buttonSubmit.text})        
       .sign-up-form__wrapper-for-sign-in-button
         p.sign-up-form__sign-in-text #{isThereAccount}
         .sign-up-form_wrapper-sign-in-button
-          +button-bordered(buttonSignin)
+          +button({styleType: "unfilled", dynamicWidth: true, text: buttonSignin.text, link: buttonSignin.link})

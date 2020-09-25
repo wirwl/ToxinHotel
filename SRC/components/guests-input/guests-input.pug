@@ -1,4 +1,4 @@
-include ../button-simple/button-simple
+include ../button/button
 include ../iqdropdown/iqdropdown
 
 mixin guests-input({isOpen, caption, items, buttonClear, buttonApply}={})
@@ -8,6 +8,6 @@ mixin guests-input({isOpen, caption, items, buttonClear, buttonApply}={})
     +iqdropdown({isOpen: isOpen, items: items})
       .guests-input__buttons
         .guests-input__button-simple-clear
-          +button-simple(buttonClear)
+          +button({text: buttonClear.text, isGrayed: true})
         .guests-input__button-simple-apply
-          +button-simple(buttonApply)
+          +button({text: buttonApply.text})

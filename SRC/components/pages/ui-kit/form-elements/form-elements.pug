@@ -15,14 +15,11 @@ include ../../../rate-button/rate-button
 include ../../../guests-input/guests-input
 include ../../../feedback/feedback
 include ../../../range-slider/range-slider
-include ../../../button-simple/button-simple
-include ../../../button-arrow/button-arrow
-include ../../../button-filled/button-filled
-include ../../../button-bordered/button-bordered
 include ../../../pagination/pagination
 include ../../../bullet/bullet
 include ../../../bullets-list/bullets-list
 include ../../../datepicker-input/datepicker-input
+include ../../../button/button
     
 mixin form-elements(data={})
   -
@@ -107,25 +104,29 @@ mixin form-elements(data={})
               h3.form-elements__buttons-list-caption #{buttonsCaption}
               ul.form-elements__buttons-list    
                 li.form-elements__buttons-list-item
+                  //- +button({text: "Click me", styleType:"filled", link: "cards.html"})
+                  //- +button({text: "Click me", styleType:"unfilled", link: "cards.html"})
+                  //- +button({text: "Click me", styleType:"simple", link: "cards.html"})
+                  //- +button({text: "Перейти к оплате", styleType:"arrowed", link: "cards.html"})
                   ul.form-elements__two-buttons-list
                     li.form-elements__two-buttons-list-item.form-elements__two-buttons-list-item_width
-                      +button-filled(buttonFilled)
+                      +button(buttonFilled)
                     li.form-elements__two-buttons-list-item.form-elements__two-buttons-list-item_width
-                      +button-filled(buttonFilledDisabled)
+                      +button(buttonFilledDisabled)
                 li.form-elements__buttons-list-item
                   ul.form-elements__two-buttons-list
                     li.form-elements__two-buttons-list-item.form-elements__two-buttons-list-item_width
-                      +button-bordered(buttonBordered)
+                      +button(buttonBordered)
                     li.form-elements__two-buttons-list-item.form-elements__two-buttons-list-item_width
-                      +button-bordered(buttonBorderedDisabled)
+                      +button(buttonBorderedDisabled)
                 li.form-elements__buttons-list-item.form-elements__simple-buttons
                   ul.form-elements__two-buttons-list.form-elements__two-buttons-list3
                     li.form-elements__two-buttons-list-item
-                      +button-simple(buttonSimple)
+                      +button(buttonSimple)
                     li.form-elements__two-buttons-list-item
-                      +button-simple(buttonSimpleGray)
+                      +button(buttonSimpleGray)
                 li.form-elements__buttons-list-item
-                  +button-arrow(buttonArrow)
+                  +button(buttonArrow)
             li.form-elements__column-right-item.form-elements__pagination-wrapper
               h3.form-elements__pagination-wrapper-caption #{paginationCaption}
               +pagination(pagination)
