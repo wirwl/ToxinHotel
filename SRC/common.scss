@@ -49,3 +49,14 @@ $toxin-font-awesome: awesome-5-brands-regular-400, Arial, sans-serif;
   @include define-body;
   max-width: 1440px;
 }
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}

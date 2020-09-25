@@ -3,14 +3,7 @@
   height: 20px;
 
   &__input {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    border: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0, 0, 0, 0);
-    overflow: hidden;
+    @include visually-hidden;
   }
   &__text {
     position: relative;
