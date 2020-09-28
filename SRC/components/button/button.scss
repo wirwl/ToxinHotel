@@ -19,7 +19,7 @@
     color: #fff;
     padding: 15px 20px;
 
-    &.button_header {
+    &.button_size_smaller {
       padding: 10px 20px;
       width: 100%;
     }
@@ -64,7 +64,7 @@
       background: $toxin-gradient-purple-blue-half-opacity;
     }
 
-    &.button_header {
+    &.button_size_smaller {
       padding: 10px 20px;
     }
   }
@@ -101,7 +101,7 @@
 
     &::after {
       font-family: $toxin-font-material-icon;
-      content: "arrow_forward";
+      content: 'arrow_forward';
       position: absolute;
       right: 10px;
       font-weight: normal;

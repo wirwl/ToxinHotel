@@ -8,13 +8,13 @@ mixin button(data={})
       isGrayed=false, 
       isDynamicWidth=false, 
       isDisabled=false, 
-      isInHeader=false 
+      isSmallSize=false 
     } = data
     const isGrayedMod = isGrayed ? " button_grayed-text" : ""
     const isDynamicWidthMod = isDynamicWidth ? " button_width_dynamic" : ""
     const isDiabledMod = isDisabled ? " button_disabled" : ""
-    const isInHeaderMod = isInHeader ? " button_header" : ""
-    const modifiers = `${isGrayedMod}${isDynamicWidthMod}${isDiabledMod}${isInHeaderMod}`
+    const isSmallSizeMod = isSmallSize ? " button_size_smaller" : ""
+    const modifiers = `${isGrayedMod}${isDynamicWidthMod}${isDiabledMod}${isSmallSizeMod}`
   case styleType
     when "filled"
       - var buttonClass = "button_type_filled"

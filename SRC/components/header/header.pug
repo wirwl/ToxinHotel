@@ -20,8 +20,8 @@ mixin header(data={})
         .header__auth-area(class = isAuth && "header__auth-area_is-auth")
           if !isAuth
             .header__button-bordered(class = isAuth && "header__button-bordered_hidden")
-              +button({styleType: "unfilled", isInHeader: true, isDynamicWidth: true, text: buttonSignIn.text, link: buttonSignIn.link})      
+              +button({styleType: "unfilled", isSmallSize: true, isDynamicWidth: true, text: buttonSignIn.text, link: buttonSignIn.link})      
             .header__button-filled(class = isAuth && "header__button-filled_hidden")
-              +button({styleType: "filled", isInHeader: true, text: buttonSignUp.text, link: buttonSignUp.link})
+              +button({styleType: "filled", isSmallSize: true, text: buttonSignUp.text, link: buttonSignUp.link})
         a.header__auth-name(href = "/mock-address/change-me" class = isAuth && "header__auth-name_shown") #{name}
     .header__icon.js-header__icon menu
