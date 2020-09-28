@@ -16,6 +16,8 @@ new Flexslider({ rootElementClass: '.flexslider', options: { animation: 'fade', 
 
 new DonutChart({
   id: 'donut-chart',
+  width: 120,
+  height: 120,
   items: [{ text: 'Великолепно', count: 58, color: '#FFE39C' },
     { text: 'Хорошо', count: 58, color: '#6FCF97' },
     { text: 'Удовлетворительно', count: 144, color: '#BC9CFF' },

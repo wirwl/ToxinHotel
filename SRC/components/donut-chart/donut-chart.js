@@ -3,12 +3,14 @@ export default class DonutChart {
     this._init(data);
   }
 
-  _init({ id, items }) {
+  _init({
+    id, items, width, height,
+  }) {
     this._canvas = document.getElementById(id);
     if (this._canvas) {
       this._context = this._canvas.getContext('2d');
-      this._canvas.width = 120;
-      this._canvas.height = 120;
+      this._canvas.width = width;
+      this._canvas.height = height;
       this._drawDonutChart(items);
     }
   }
