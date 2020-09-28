@@ -1,4 +1,4 @@
-class OrderInfoForm {
+export default class OrderInfoForm {
   constructor(arrivalClass, checkoutClass) {
     this._init(arrivalClass, checkoutClass);
   }
@@ -36,5 +36,3 @@ class OrderInfoForm {
     this._$arrival.data('datepicker').show();
   }
 }
-
-new OrderInfoForm('.order-info-form__arrival', '.order-info-form__checkout');

@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import ionRangeSlider from 'ion-rangeslider';
 
-class RangeSlider {
+export default class RangeSlider {
   constructor(rootElementClass, valuesClass) {
     this._init(rootElementClass, valuesClass);
   }
@@ -27,5 +27,3 @@ class RangeSlider {
     }
   }
 }
-
-new RangeSlider('.js-range-slider__input', '.js-range-slider__values');

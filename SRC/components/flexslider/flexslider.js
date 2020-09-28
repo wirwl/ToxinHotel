@@ -1,7 +1,7 @@
 /* eslint-disable-next-line no-unused-vars */
 import flexslider from 'flexslider';
 
-class Flexslider {
+export default class Flexslider {
   constructor(data) {
     this._init(data);
   }
@@ -10,5 +10,3 @@ class Flexslider {
     $(rootElementClass).flexslider(options);
   }
 }
-
-new Flexslider({ rootElementClass: '.flexslider', options: { animation: 'fade', touch: true } });

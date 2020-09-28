@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import iqDropdown from 'item-quantity-dropdown/lib/item-quantity-dropdown.min';
 
-class ComfortInput {
+export default class ComfortInput {
   constructor(data) {
     this._init(data);
   }
@@ -56,13 +56,3 @@ class ComfortInput {
     event.stopPropagation();
   }
 }
-
-new ComfortInput({
-  placeholder: 'Выберите удобства',
-  rootElementClass: '.js-comfort-input',
-  items: [
-    { id: 'bedrooms', singular: 'спальня', plurals: ['спальни', 'спален'] },
-    { id: 'beds', singular: 'кровать', plurals: ['кровати', 'кроватей'] },
-    { id: 'bathrooms', singular: 'ванная комната', plurals: ['ванных комнаты', 'ванных комнат'] },
-  ],
-});

@@ -1,4 +1,4 @@
-class RateButton {
+export default class RateButton {
   constructor(rateButton) {
     this._$rateButton = $(rateButton);
     this._init();
@@ -39,6 +39,3 @@ class RateButton {
     );
   }
 }
-
-const $rateButtons = $('.js-rate-button');
-$rateButtons.each((index, rateButton) => new RateButton(rateButton));

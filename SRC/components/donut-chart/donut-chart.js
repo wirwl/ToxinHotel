@@ -1,4 +1,4 @@
-class DonutChart {
+export default class DonutChart {
   constructor(data) {
     this._init(data);
   }
@@ -128,12 +128,3 @@ class DonutChart {
     this._context.fillText(text, x, y);
   }
 }
-
-new DonutChart({
-  id: 'donut-chart',
-  items: [{ text: 'Великолепно', count: 58, color: '#FFE39C' },
-    { text: 'Хорошо', count: 58, color: '#6FCF97' },
-    { text: 'Удовлетворительно', count: 144, color: '#BC9CFF' },
-    { text: 'Разочарован', count: 0, color: '#919191' },
-  ],
-});

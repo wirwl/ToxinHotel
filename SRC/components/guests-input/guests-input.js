@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import iqDropdown from 'item-quantity-dropdown/lib/item-quantity-dropdown.min';
 
-class GuestsInput {
+export default class GuestsInput {
   constructor(data) {
     this._init(data);
   }
@@ -90,10 +90,3 @@ class GuestsInput {
     $iqdropdown.removeClass('menu-open');
   }
 }
-
-new GuestsInput({
-  placeholder: 'Сколько гостей',
-  rootElementClass: '.js-guests-input',
-  guests: { id: ['adults', 'children'], singular: 'гость', plurals: ['гостя', 'гостей'] },
-  babies: { id: 'babies', singular: 'младенец', plurals: ['младенца', 'младенев'] },
-});

@@ -1,4 +1,4 @@
-class Pagination {
+export default class Pagination {
   constructor(rootClassName) {
     this._$paginationButtons = $(rootClassName);
     if (this._$paginationButtons) this._init(rootClassName);
@@ -96,5 +96,3 @@ class Pagination {
     this._firstDrawPagination();
   }
 }
-
-new Pagination('.js-pagination__buttons');

@@ -1,4 +1,4 @@
-class ExpandableCheckboxList {
+export default class ExpandableCheckboxList {
   constructor(element) {
     this._$expandableCheckboxList = $(element).parent().find('.expandable-checkbox-list__list');
     this._addEventListeners(element);
@@ -31,5 +31,3 @@ class ExpandableCheckboxList {
     $caption.toggleClass('expandable-checkbox-list__caption_shown');
   }
 }
-
-new ExpandableCheckboxList('.js-expandable-checkbox-list__caption');

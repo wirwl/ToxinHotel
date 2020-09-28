@@ -1,4 +1,6 @@
-class ToxinDatepicker {
+import 'air-datepicker/dist/js/datepicker';
+
+export default class ToxinDatepicker {
   constructor(data) {
     this._init(data);
   }
@@ -61,10 +63,3 @@ class ToxinDatepicker {
     return result;
   }
 }
-
-const htmlButtons = '<div class="datepicker__buttons">'
-  + '<span class="datepicker__button-clear js-datepicker__button-clear">Очистить</span>'
-  + '<span class="datepicker__button-apply js-datepicker__button-apply">Применить</span>'
-  + '</div';
-
-new ToxinDatepicker({ rootElementClass: '.js-toxin-datepicker', htmlButtonsTemplate: htmlButtons });

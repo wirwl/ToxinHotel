@@ -1,4 +1,4 @@
-class LikeButton {
+export default class LikeButton {
   constructor(rootElementClass) {
     this._init(rootElementClass);
   }
@@ -15,5 +15,3 @@ class LikeButton {
     $count.text($button.is(':checked') ? currentValue + 1 : currentValue - 1);
   }
 }
-
-new LikeButton('.js-like-button__input');

@@ -1,4 +1,4 @@
-class HeaderMenu {
+export default class HeaderMenu {
   constructor() {
     this._addEventListeners();
   }
@@ -45,5 +45,3 @@ class HeaderMenu {
     }
   }
 }
-
-new HeaderMenu();

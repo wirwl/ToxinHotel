@@ -1,4 +1,4 @@
-class RoomReservationForm {
+export default class RoomReservationForm {
   constructor(arrivalClass, checkoutClass) {
     this._init(arrivalClass, checkoutClass);
   }
@@ -37,5 +37,3 @@ class RoomReservationForm {
     this._$arrival.data('datepicker').show();
   }
 }
-
-new RoomReservationForm('.room-reservation-form__arrival', '.room-reservation-form__checkout');
