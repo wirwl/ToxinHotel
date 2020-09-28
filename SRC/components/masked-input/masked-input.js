@@ -1,5 +1,4 @@
-// eslint-disable-next-line no-unused-vars
-import mask from 'jquery-mask-plugin';
+import 'inputmask/dist/jquery.inputmask';
 
 export default class MaskedInput {
   constructor(rootElementClass) {
@@ -8,6 +7,6 @@ export default class MaskedInput {
 
   _init(rootElementClass) {
     this._$rootElementClass = $(rootElementClass);
-    this._$rootElementClass.mask('00.00.0000');
+    this._$rootElementClass.inputmask();
   }
 }

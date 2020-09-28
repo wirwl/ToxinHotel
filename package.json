@@ -65,9 +65,9 @@
   "dependencies": {
     "air-datepicker": "^2.2.3",
     "flexslider": "^2.7.2",
+    "inputmask": "^5.0.5",
     "ion-rangeslider": "^2.3.1",
     "item-quantity-dropdown": "^2.1.0",
-    "jquery": "^3.5.1",
-    "jquery-mask-plugin": "^1.14.16"
+    "jquery": "^3.5.1"
   }
 }

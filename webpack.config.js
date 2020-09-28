@@ -18,7 +18,7 @@ module.exports = smp.wrap((_, argv) => {
 
   return {
     devServer: {
-      clientLogLevel: 'silent',
+      stats: 'errors-warnings',
     },
     performance: { hints: false },
     devtool: dtValue,

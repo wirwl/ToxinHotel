@@ -16,7 +16,7 @@
     + [air-datepicker](https://www.npmjs.com/package/air-datepicker)
     + [flexslider](https://www.npmjs.com/package/flexslider)
     + [ion-rangeslider](https://www.npmjs.com/package/ion-rangeslider)        
-    + [jquery-mask-plugin](https://www.npmjs.com/package/jquery-mask-plugin)
+    + [inputmask](https://www.npmjs.com/package/inputmask)
     + [item-quantity-dropdown](https://www.npmjs.com/package/item-quantity-dropdown)    
  8. Browser support: Chrome and Firefox - two last version (specified in package.json)
     > **npx browserslist** - run this command  in project directory to see what browsers was selected
