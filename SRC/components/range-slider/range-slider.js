@@ -1,5 +1,4 @@
-// eslint-disable-next-line no-unused-vars
-import ionRangeSlider from 'ion-rangeslider';
+import 'ion-rangeslider';
 
 export default class RangeSlider {
   constructor(rootElementClass, valuesClass) {

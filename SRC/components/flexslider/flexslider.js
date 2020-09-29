@@ -1,5 +1,4 @@
-/* eslint-disable-next-line no-unused-vars */
-import flexslider from 'flexslider';
+import 'flexslider';
 
 export default class Flexslider {
   constructor(data) {
