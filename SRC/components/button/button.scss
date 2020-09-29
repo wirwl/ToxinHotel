@@ -12,8 +12,7 @@
   text-transform: uppercase;
   text-decoration: none;  
 
-  &_type_filled {
-    color: $toxin-color-purple;
+  &_type_filled {    
     background: $toxin-gradient-purple-blue;
     border-radius: 22px;
     color: #fff;
