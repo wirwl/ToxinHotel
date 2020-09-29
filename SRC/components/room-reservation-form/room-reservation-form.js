@@ -1,12 +1,16 @@
 export default class RoomReservationForm {
   constructor(arrivalClass, checkoutClass) {
-    this._init(arrivalClass, checkoutClass);
+    this._initMembers(arrivalClass, checkoutClass);
+    this._initPluginDatePicker();
+    this._addEventListeners();
   }
 
-  _init(arrivalClass, checkoutClass) {
+  _initMembers(arrivalClass, checkoutClass) {
     this._$arrival = $(arrivalClass).find('.datepicker-input__input');
     this._$checkout = $(checkoutClass).find('.datepicker-input__input');
+  }
 
+  _initPluginDatePicker() {
     if (this._$arrival.length) {
       this._$arrival.datepicker({
         onSelect: (fd) => {
@@ -15,14 +19,15 @@ export default class RoomReservationForm {
         },
       });
     }
-
-    if (this._$checkout.length) {
-      this._$checkout.on('click', this._handleDatePickerInputInputClick.bind(this));
-    }
-
     const datepicker = this._$arrival.data('datepicker');
     if (datepicker) {
       datepicker.update('onShow', this._setMaxWidth);
+    }
+  }
+
+  _addEventListeners() {
+    if (this._$checkout.length) {
+      this._$checkout.on('click', this._handleDatePickerInputInputClick.bind(this));
     }
   }
 

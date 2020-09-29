@@ -3,15 +3,19 @@ import iqDropdown from 'item-quantity-dropdown/lib/item-quantity-dropdown.min';
 
 export default class ComfortInput {
   constructor(data) {
-    this._init(data);
+    this._initMembers(data);
+    this._initPluginIqDropdown();
+    this._addEventListeners();
   }
 
-  _init({ rootElementClass, items, placeholder }) {
+  _initMembers({ rootElementClass, items, placeholder }) {
     this._placeholder = placeholder;
     this._$rootElement = $(rootElementClass);
     this._$iqdropdowns = this._$rootElement.find('.iqdropdown');
     this._items = items;
+  }
 
+  _initPluginIqDropdown() {
     if (this._$iqdropdowns.length) {
       this._$iqdropdowns.iqDropdown({
         setSelectionText: (itemCount, totalItems) => {
@@ -40,9 +44,12 @@ export default class ComfortInput {
           return result;
         },
       });
-      this._$iqdropdowns.find('.iqdropdown-menu').on('click.iqdropdown', this._handleIqdropdownMenuClick);
-      $(document).on('mouseup.iqdropdown', this._handleDocumentMouseUp.bind(this));
     }
+  }
+
+  _addEventListeners() {
+    this._$iqdropdowns.find('.iqdropdown-menu').on('click.iqdropdown', this._handleIqdropdownMenuClick);
+    $(document).on('mouseup.iqdropdown', this._handleDocumentMouseUp.bind(this));
   }
 
   _handleDocumentMouseUp(event) {

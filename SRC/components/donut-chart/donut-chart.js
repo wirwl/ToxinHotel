@@ -1,17 +1,15 @@
 export default class DonutChart {
   constructor(data) {
-    this._init(data);
+    this._initMembers(data);
+    this._drawDonutChart(data.items);
   }
 
-  _init({
-    id, items, width, height,
-  }) {
+  _initMembers({ id, width, height }) {
     this._canvas = document.getElementById(id);
     if (this._canvas) {
       this._context = this._canvas.getContext('2d');
       this._canvas.width = width;
       this._canvas.height = height;
-      this._drawDonutChart(items);
     }
   }
 

@@ -11,6 +11,7 @@ import ComfortInput from '../../../comfort-input/comfort-input';
 import RangeSlider from '../../../range-slider/range-slider';
 import ExpandableCheckboxList from '../../../expandable-checkbox-list/expandable-checkbox-list';
 import Pagination from '../../../pagination/pagination';
+import RateButton from '../../../rate-button/rate-button';
 
 new GuestsInput({
   placeholder: 'Сколько гостей',
@@ -42,3 +43,6 @@ new ExpandableCheckboxList('.js-expandable-checkbox-list__caption');
 new RangeSlider('.js-range-slider__input', '.js-range-slider__values');
 
 new Pagination('.js-pagination__buttons');
+
+const $rateButtons = $('.js-rate-button');
+$rateButtons.each((index, rateButton) => new RateButton(rateButton));

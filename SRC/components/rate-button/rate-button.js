@@ -1,21 +1,21 @@
 export default class RateButton {
   constructor(rateButton) {
+    this._initMembers(rateButton);
+    this._addEventListeners();
+  }
+
+  _initMembers(rateButton) {
     this._$rateButton = $(rateButton);
-    this._init();
-  }
-
-  _init() {
-    const $starsFromRateButtons = this._$rateButton.find('.rate-button__star');
+    this.$stars = this._$rateButton.find('.rate-button__star');
     this._starsCount = this._$rateButton.data('count');
-    this._addEventListeners($starsFromRateButtons);
   }
 
-  _addEventListeners($stars) {
-    $stars.each((index, star) => {
-      $(star).on('click.star', this._handleStarClick.bind(this, index, $stars));
+  _addEventListeners() {
+    this.$stars.each((index, star) => {
+      $(star).on('click.star', this._handleStarClick.bind(this, index, this.$stars));
       $(star).hover(
-        this._handleStarMouseEnter.bind(this, index, $stars),
-        this._handleStarMouseLeave.bind(this, $stars),
+        this._handleStarMouseEnter.bind(this, index, this.$stars),
+        this._handleStarMouseLeave.bind(this, this.$stars),
       );
     });
   }

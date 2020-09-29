@@ -3,24 +3,25 @@ import iqDropdown from 'item-quantity-dropdown/lib/item-quantity-dropdown.min';
 
 export default class GuestsInput {
   constructor(data) {
-    this._init(data);
+    this._initMembers(data);
+    this._initItemQuantityDropdown(this._$iqdropdowns);
+    this._addEventListeners();
   }
 
-  _init({
+  _initMembers({
     rootElementClass, guests, babies, placeholder,
   }) {
     this._$rootElement = $(rootElementClass);
     this._guests = guests;
     this._babies = babies;
     this._placeholder = placeholder;
-
     this._$iqdropdowns = this._$rootElement.find('.iqdropdown');
-    this._initItemQuantityDropdown(this._$iqdropdowns);
-
     this._$buttonClear = this._$rootElement.find('.guests-input__button-simple-clear').find('.button');
-    this._$buttonClear.on('click.buttonClear', this._handleButtonClearClick.bind(this));
-
     this._$buttonApply = this._$rootElement.find('.guests-input__button-simple-apply').find('.button');
+  }
+
+  _addEventListeners() {
+    this._$buttonClear.on('click.buttonClear', this._handleButtonClearClick.bind(this));
     this._$buttonApply.on('click.buttonApply', this._handleButtonApplyClick.bind(this));
   }
 
@@ -64,7 +65,7 @@ export default class GuestsInput {
 
   _handleDocumentMouseUp(event) {
     if (!this._$iqdropdowns.is(event.target)
-        && this._$iqdropdowns.has(event.target).length === 0) {
+      && this._$iqdropdowns.has(event.target).length === 0) {
       this._$iqdropdowns.removeClass('menu-open');
     }
   }

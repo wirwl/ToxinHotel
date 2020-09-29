@@ -1,10 +1,10 @@
 export default class LikeButton {
   constructor(rootElementClass) {
-    this._init(rootElementClass);
+    this._$rootElementClass = $(rootElementClass);
+    this._addEventListeners();
   }
 
-  _init(rootElementClass) {
-    this._$rootElementClass = $(rootElementClass);
+  _addEventListeners() {
     this._$rootElementClass.on('click.like-button', this._handleRootElementClassClick);
   }
 

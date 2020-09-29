@@ -1,7 +1,14 @@
 export default class Pagination {
   constructor(rootClassName) {
+    this._initMembers(rootClassName);
+    this._firstDrawPagination();
+    this._addEventListener();
+  }
+
+  _initMembers(rootClassName) {
     this._$paginationButtons = $(rootClassName);
-    if (this._$paginationButtons) this._init(rootClassName);
+    this._pages = this._$paginationButtons.data('pages');
+    this._page = this._$paginationButtons.data('page');
   }
 
   _getDataAttributesValue() {
@@ -71,11 +78,11 @@ export default class Pagination {
     str += '</ul>';
 
     this._$paginationButtons.html(str);
-    this._addEventListenerClickForButtons();
+    this._addEventListener();
     return str;
   }
 
-  _addEventListenerClickForButtons() {
+  _addEventListener() {
     const lis = this._$paginationButtons.find('a');
     lis.each((_, element) => {
       const $element = $(element);
@@ -88,11 +95,5 @@ export default class Pagination {
 
   _firstDrawPagination() {
     this._$paginationButtons.html(this._createPagination(this._pages, this._page));
-    this._addEventListenerClickForButtons();
-  }
-
-  _init() {
-    this._getDataAttributesValue();
-    this._firstDrawPagination();
   }
 }

@@ -1,12 +1,16 @@
 export default class OrderInfoForm {
   constructor(arrivalClass, checkoutClass) {
-    this._init(arrivalClass, checkoutClass);
+    this._initMembers(arrivalClass, checkoutClass);
+    this._initPluginDatepicker();
+    this._addEventListeners();
   }
 
-  _init(arrivalClass, checkoutClass) {
+  _initMembers(arrivalClass, checkoutClass) {
     this._$arrival = $(arrivalClass).find('.datepicker-input__input');
     this._$checkout = $(checkoutClass).find('.datepicker-input__input');
+  }
 
+  _initPluginDatepicker() {
     if (this._$arrival.length) {
       this._$arrival.datepicker({
         onSelect: (fd) => {
@@ -15,13 +19,15 @@ export default class OrderInfoForm {
         },
       });
     }
-
-    if (this._$checkout.length) {
-      this._$checkout.on('click', this._handleDatepickerInputInputClick.bind(this));
-    }
     const datepicker = this._$arrival.data('datepicker');
     if (datepicker) {
       datepicker.update('onShow', this._setMaxWidth);
+    }
+  }
+
+  _addEventListeners() {
+    if (this._$checkout.length) {
+      this._$checkout.on('click', this._handleDatepickerInputInputClick.bind(this));
     }
   }
 

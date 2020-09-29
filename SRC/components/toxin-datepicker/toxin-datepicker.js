@@ -2,15 +2,15 @@ import 'air-datepicker/dist/js/datepicker';
 
 export default class ToxinDatepicker {
   constructor(data) {
-    this._init(data);
-  }
-
-  _init({ rootElementClass, htmlButtonsTemplate }) {
-    this._$rootElementClass = $(rootElementClass);
-    this._htmlButtonsTemplate = htmlButtonsTemplate;
-
+    this._initMembers(data);
     this._initPluginDatepicker();
     this._addButtons();
+    this._addEventListeners();
+  }
+
+  _initMembers({ rootElementClass, htmlButtonsTemplate }) {
+    this._$rootElementClass = $(rootElementClass);
+    this._htmlButtonsTemplate = htmlButtonsTemplate;
   }
 
   _initPluginDatepicker() {
@@ -30,12 +30,15 @@ export default class ToxinDatepicker {
   _addButtons() {
     const DatePickers = $('.datepicker');
     DatePickers.append(this._htmlButtonsTemplate);
-    const $clears = $('.js-datepicker__button-clear');
-    $clears.each((index, element) => {
+    this.$clears = $('.js-datepicker__button-clear');
+    this.$apply = $('.js-datepicker__button-apply');
+  }
+
+  _addEventListeners() {
+    this.$clears.each((index, element) => {
       $(element).on('click.clearButton', this._handleDatepickerButtonClearClick.bind(this));
     });
-    const $apply = $('.js-datepicker__button-apply');
-    $apply.each((index, element) => {
+    this.$apply.each((index, element) => {
       $(element).on('click.applyButton', this._handleDatepickerButtonApplyClick.bind(this));
     });
   }

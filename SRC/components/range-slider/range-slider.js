@@ -3,12 +3,11 @@ import ionRangeSlider from 'ion-rangeslider';
 
 export default class RangeSlider {
   constructor(rootElementClass, valuesClass) {
-    this._init(rootElementClass, valuesClass);
+    this._initMembers(rootElementClass, valuesClass);
+    this._initPluginIonRangeSlider();
   }
 
-  _init(rootElementClass, valuesClass) {
-    this._$rootElementClass = $(rootElementClass);
-    this._$values = $(valuesClass);
+  _initPluginIonRangeSlider() {
     if (this._$rootElementClass.length) {
       this._$rootElementClass.ionRangeSlider({
         skin: 'round',
@@ -25,5 +24,10 @@ export default class RangeSlider {
         },
       });
     }
+  }
+
+  _initMembers(rootElementClass, valuesClass) {
+    this._$rootElementClass = $(rootElementClass);
+    this._$values = $(valuesClass);
   }
 }
