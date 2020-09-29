@@ -67,6 +67,7 @@
     align-items: center;
     height: 100%;
   }
+  
   &__next::after {
     font-family: $toxin-font-material-icon;
     content: attr(content);
@@ -76,13 +77,13 @@
     height: 100%;
   }
 
-  input:checked + .image-slider__container .image-slider__slide {
+  &__input:checked + .image-slider__container .image-slider__slide {
     opacity: 1;
     transform: scale(1);
     transition: opacity 1s ease-in-out;
   }
 
-  input:checked + .image-slider__container .image-slider__nav .image-slider__label {
+  &__input:checked + .image-slider__container  .image-slider__label {
     display: block;
   }
 
