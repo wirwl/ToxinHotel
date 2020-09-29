@@ -8,65 +8,63 @@
     text-align: right;
     width: 50px;
   }
-  
+
   &__description {
     color: $toxin-color-black-100;
-    font-family: inherit;    
+    font-family: inherit;
   }
 
-  &_ {
-    &header_one {
-      font-family: $toxin-font-quicksand;
-      font-size: 24px;
-      line-height: 30px;
-      .font-example__description {
-        width: 351px;
-        font-weight: bold;
-        line-height: 31px;
-      }
+  &_header_one {
+    font-family: $toxin-font-quicksand;
+    font-size: 24px;
+    line-height: 30px;
+    .font-example__description {
+      width: 351px;
+      font-weight: bold;
+      line-height: 31px;
     }
+  }
 
-    &header_two {
-      font-family: $toxin-font-quicksand;
-      font-size: 19px;
+  &_header_two {
+    font-family: $toxin-font-quicksand;
+    font-size: 19px;
+    line-height: 24px;
+
+    .font-example__description {
+      width: 282px;
+      font-weight: bold;
       line-height: 24px;
+    }
+  }
 
-      .font-example__description {
-        width: 282px;
-        font-weight: bold;
-        line-height: 24px;
-      }
+  &_header_three {
+    font-family: $toxin-font-montserrat;
+    font-size: 12px;
+    line-height: 15px;
+
+    .font-example__description {
+      width: 186px;
+      font-weight: bold;
+      line-height: 21px;
     }
 
-    &header_three {
-      font-family: $toxin-font-montserrat;
-      font-size: 12px;
-      line-height: 15px;
+    .font-example__title {
+      line-height: 21px;
+    }
+  }
 
-      .font-example__description {
-        width: 186px;
-        font-weight: bold;
-        line-height: 21px;
-      }
+  &_body {
+    font-family: $toxin-font-montserrat;
+    font-size: 14px;
 
-      .font-example__title {
-        line-height: 21px;
-      }
+    .font-example__description {
+      width: 301px;
+      color: $toxin-color-black-75;
+      line-height: 23px;
     }
 
-    &body {
-      font-family: $toxin-font-montserrat;
-      font-size: 14px;      
-
-      .font-example__description {
-        width: 301px;
-        color: $toxin-color-black-75;
-        line-height: 23px;
-      }
-
-      .font-example__title {
-        line-height: 21px;
-      }
+    .font-example__title {
+      line-height: 21px;
     }
   }
 }
