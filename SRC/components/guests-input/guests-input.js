@@ -3,8 +3,15 @@ import 'item-quantity-dropdown/lib/item-quantity-dropdown.min';
 export default class GuestsInput {
   constructor(data) {
     this._initMembers(data);
-    this._initItemQuantityDropdown(this._$iqdropdowns);
+    this._initPluginItemQuantityDropdown(this._$iqdropdowns);
+    this._bindThis();
     this._addEventListeners();
+  }
+
+  _bindThis() {
+    this._handleButtonClearClick = this._handleButtonClearClick.bind(this);
+    this._handleButtonApplyClick = this._handleButtonApplyClick.bind(this);
+    this._handleDocumentMouseUp = this._handleDocumentMouseUp.bind(this);
   }
 
   _initMembers({
@@ -20,11 +27,13 @@ export default class GuestsInput {
   }
 
   _addEventListeners() {
-    this._$buttonClear.on('click.buttonClear', this._handleButtonClearClick.bind(this));
-    this._$buttonApply.on('click.buttonApply', this._handleButtonApplyClick.bind(this));
+    this._$buttonClear.on('click.buttonClear', this._handleButtonClearClick);
+    this._$buttonApply.on('click.buttonApply', this._handleButtonApplyClick);
+    this._$iqdropdowns.find('.iqdropdown-menu').on('click.iqdropdown', this._handleIqdropdownMenuClick);
+    $(document).on('mouseup.iqdropdown', this._handleDocumentMouseUp);
   }
 
-  _initItemQuantityDropdown($iqdropdowns) {
+  _initPluginItemQuantityDropdown($iqdropdowns) {
     $iqdropdowns.each((index, $iqdropdown) => {
       $($iqdropdown).iqDropdown({
         setSelectionText: (itemCount, totalItems) => {
@@ -57,8 +66,6 @@ export default class GuestsInput {
           return result;
         },
       });
-      $iqdropdowns.find('.iqdropdown-menu').on('click.iqdropdown', this._handleIqdropdownMenuClick);
-      $(document).on('mouseup.iqdropdown', this._handleDocumentMouseUp.bind(this));
     });
   }
 
@@ -81,7 +88,7 @@ export default class GuestsInput {
     $iqdropdown.off();
     $iqdropdown.find('.iqdropdown-menu-option').removeData('defaultcount');
     $iqdropdown.find('.iqdropdown-menu-option').removeAttr('data-defaultcount');
-    this._initItemQuantityDropdown($iqdropdown);
+    this._initPluginItemQuantityDropdown($iqdropdown);
   }
 
   _handleButtonApplyClick(event) {

@@ -4,7 +4,12 @@ export default class ComfortInput {
   constructor(data) {
     this._initMembers(data);
     this._initPluginIqDropdown();
+    this._bindThis();
     this._addEventListeners();
+  }
+
+  _bindThis() {
+    this._handleDocumentMouseUp = this._handleDocumentMouseUp.bind(this);
   }
 
   _initMembers({ rootElementClass, items, placeholder }) {
@@ -48,7 +53,7 @@ export default class ComfortInput {
 
   _addEventListeners() {
     this._$iqdropdowns.find('.iqdropdown-menu').on('click.iqdropdown', this._handleIqdropdownMenuClick);
-    $(document).on('mouseup.iqdropdown', this._handleDocumentMouseUp.bind(this));
+    $(document).on('mouseup.iqdropdown', this._handleDocumentMouseUp);
   }
 
   _handleDocumentMouseUp(event) {

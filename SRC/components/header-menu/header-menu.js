@@ -1,12 +1,18 @@
 export default class HeaderMenu {
   constructor() {
+    this._bindThis();
     this._addEventListeners();
   }
 
+  _bindThis() {
+    this._handleMenuLinkClick = this._handleMenuLinkClick.bind(this);
+    this._handleMenuListMouseLeave = this._handleMenuListMouseLeave.bind(this);
+  }
+
   _addEventListeners() {
-    $('.js-menu__link').on('click.menu', this._handleMenuLinkClick.bind(this));
+    $('.js-menu__link').on('click.menu', this._handleMenuLinkClick);
     $('.js-header__icon').on('click.menu', this._handleHeaderMenuIconClick);
-    $('.js-menu__list').on('mouseleave.menu', this._handleMenuListMouseLeave.bind(this));
+    $('.js-menu__list').on('mouseleave.menu', this._handleMenuListMouseLeave);
   }
 
   _closeAllOpenMenuItems($li) {

@@ -2,7 +2,12 @@ export default class OrderInfoForm {
   constructor(arrivalClass, checkoutClass) {
     this._initMembers(arrivalClass, checkoutClass);
     this._initPluginDatepicker();
+    this._bindThis();
     this._addEventListeners();
+  }
+
+  _bindThis() {
+    this._handleDatepickerInputInputClick = this._handleDatepickerInputInputClick.bind(this);
   }
 
   _initMembers(arrivalClass, checkoutClass) {
@@ -27,7 +32,7 @@ export default class OrderInfoForm {
 
   _addEventListeners() {
     if (this._$checkout.length) {
-      this._$checkout.on('click', this._handleDatepickerInputInputClick.bind(this));
+      this._$checkout.on('click', this._handleDatepickerInputInputClick);
     }
   }
 

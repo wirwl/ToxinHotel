@@ -1,13 +1,18 @@
 export default class ExpandableCheckboxList {
   constructor(element) {
     this._$expandableCheckboxList = $(element).parent().find('.expandable-checkbox-list__list');
+    this._bindThis();
     this._addEventListeners(element);
+  }
+
+  _bindThis() {
+    this._handleDocumentMouseUp = this._handleDocumentMouseUp.bind(this);
   }
 
   _addEventListeners(element) {
     $(element).on('click.expandableCheckboxList', this._handleElementClick);
     $(element).find('.expandable-checkbox-list__list').on('click.expandable-checkbox-list', this._handleIqdropdownMenuClick);
-    $(document).on('mouseup.expandable-checkbox-list', this._handleDocumentMouseUp.bind(this));
+    $(document).on('mouseup.expandable-checkbox-list', this._handleDocumentMouseUp);
   }
 
   _handleDocumentMouseUp(event) {

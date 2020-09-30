@@ -5,6 +5,7 @@ export default class ToxinDatepicker {
     this._initMembers(data);
     this._initPluginDatepicker();
     this._addButtons();
+    this._bindThis();
     this._addEventListeners();
   }
 
@@ -38,12 +39,17 @@ export default class ToxinDatepicker {
     this.$apply = $('.js-datepicker__button-apply');
   }
 
+  _bindThis() {
+    this._handleDatepickerButtonClearClick = this._handleDatepickerButtonClearClick.bind(this);
+    this._handleDatepickerButtonApplyClick = this._handleDatepickerButtonApplyClick.bind(this);
+  }
+
   _addEventListeners() {
     this.$clears.each((index, element) => {
-      $(element).on('click.clearButton', this._handleDatepickerButtonClearClick.bind(this));
+      $(element).on('click.clearButton', this._handleDatepickerButtonClearClick);
     });
     this.$apply.each((index, element) => {
-      $(element).on('click.applyButton', this._handleDatepickerButtonApplyClick.bind(this));
+      $(element).on('click.applyButton', this._handleDatepickerButtonApplyClick);
     });
   }
 

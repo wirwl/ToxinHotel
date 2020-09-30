@@ -2,6 +2,7 @@ export default class RoomReservationForm {
   constructor(arrivalClass, checkoutClass) {
     this._initMembers(arrivalClass, checkoutClass);
     this._initPluginDatePicker();
+    this._bindThis();
     this._addEventListeners();
   }
 
@@ -25,9 +26,13 @@ export default class RoomReservationForm {
     }
   }
 
+  _bindThis() {
+    this._handleDatePickerInputInputClick = this._handleDatePickerInputInputClick.bind(this);
+  }
+
   _addEventListeners() {
     if (this._$checkout.length) {
-      this._$checkout.on('click', this._handleDatePickerInputInputClick.bind(this));
+      this._$checkout.on('click', this._handleDatePickerInputInputClick);
     }
   }
 
