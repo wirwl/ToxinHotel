@@ -32,10 +32,6 @@ new GuestsInput({
   babies: { id: 'babies', singular: 'младенец', plurals: ['младенца', 'младенев'] },
 });
 
-const htmlButtons = '<div class="datepicker__buttons">'
-  + '<span class="datepicker__button-clear js-datepicker__button-clear">Очистить</span>'
-  + '<span class="datepicker__button-apply js-datepicker__button-apply">Применить</span>'
-  + '</div';
-new ToxinDatepicker({ rootElementClass: '.js-toxin-datepicker', htmlButtonsTemplate: htmlButtons });
+new ToxinDatepicker({ rootElementClass: '.js-toxin-datepicker', buttonClearText: 'Очистить', buttonApplyText: 'Применить' });
 
 new OrderInfoForm('.order-info-form__arrival', '.order-info-form__checkout');

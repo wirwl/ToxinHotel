@@ -8,9 +8,13 @@ export default class ToxinDatepicker {
     this._addEventListeners();
   }
 
-  _initMembers({ rootElementClass, htmlButtonsTemplate }) {
+  _initMembers({ rootElementClass, buttonClearText = 'Clear', buttonApplyText = 'Apply' }) {
     this._$rootElementClass = $(rootElementClass);
-    this._htmlButtonsTemplate = htmlButtonsTemplate;
+
+    this._htmlButtonsTemplate = `<div class="datepicker__buttons">
+      <span class="datepicker__button-clear js-datepicker__button-clear">${buttonClearText}</span>
+      <span class="datepicker__button-apply js-datepicker__button-apply">${buttonApplyText}</span>
+     </div`;
   }
 
   _initPluginDatepicker() {
