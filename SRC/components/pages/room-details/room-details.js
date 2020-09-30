@@ -9,6 +9,7 @@ import DonutChart from '../../donut-chart/donut-chart';
 import GuestsInput from '../../guests-input/guests-input';
 import ToxinDatepicker from '../../toxin-datepicker/toxin-datepicker';
 import OrderInfoForm from '../../order-info-form/order-info-form';
+import LikeButton from '../../like-button/like-button';
 
 new HeaderMenu();
 
@@ -24,6 +25,8 @@ new DonutChart({
     { text: 'Разочарован', count: 0, color: '#919191' },
   ],
 });
+
+new LikeButton('.js-like-button__input');
 
 new GuestsInput({
   placeholder: 'Сколько гостей',

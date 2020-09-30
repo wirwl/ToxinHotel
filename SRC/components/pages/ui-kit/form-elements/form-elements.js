@@ -12,6 +12,7 @@ import RangeSlider from '../../../range-slider/range-slider';
 import ExpandableCheckboxList from '../../../expandable-checkbox-list/expandable-checkbox-list';
 import Pagination from '../../../pagination/pagination';
 import RateButton from '../../../rate-button/rate-button';
+import LikeButton from '../../../like-button/like-button';
 
 new GuestsInput({
   placeholder: 'Сколько гостей',
@@ -33,6 +34,8 @@ new ComfortInput({
     { id: 'bathrooms', singular: 'ванная комната', plurals: ['ванных комнаты', 'ванных комнат'] },
   ],
 });
+
+new LikeButton('.js-like-button__input');
 
 new ExpandableCheckboxList('.js-expandable-checkbox-list__caption');
 
