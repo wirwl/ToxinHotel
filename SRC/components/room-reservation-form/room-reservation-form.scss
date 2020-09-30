@@ -1,5 +1,5 @@
 .room-reservation-form {
-  max-width: 380px;  
+  max-width: 380px;
   display: flex;
   justify-content: center;
   background: white;
@@ -37,12 +37,16 @@
   &__dates-list {
     display: flex;
     list-style: none;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
   }
 
   &__dates-item {
-    max-width: 150px;    
+    max-width: 150px;
+  }
+
+  &__dates-item:not(:last-child) {
+    margin-right: 10px;
   }
 
   &__guests-input {
@@ -52,6 +56,10 @@
   @media (max-width: 360px) {
     padding: 20px 10px 12px;
 
+    &__dates-item {
+      width: 48%;
+    }
+    
     &__guests-input {
       margin-bottom: 15px;
     }
