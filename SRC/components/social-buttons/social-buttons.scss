@@ -1,11 +1,11 @@
 .social-buttons {
   display: flex;
-  font-family: 'awesome-5-brands-regular-400';
+  font-family: "awesome-5-brands-regular-400";
   font-size: 24px;
 
   &__item {
     list-style: none;
-  }  
+  }
 
   &__item:not(:last-child) {
     margin-right: 23px;
@@ -13,6 +13,9 @@
 
   &__button {
     text-decoration: none;
-    color: rgb(188, 156, 255);
+    background: $toxin-gradient-purple-blue;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
