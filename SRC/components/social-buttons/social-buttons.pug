@@ -1,5 +1,5 @@
-mixin social-buttons({iconTwitter, iconFacebook, iconInstagram}={})
-  .social-buttons
-    a.social-buttons__button.social-buttons__twitter(href = mock target = "_blank" rel="noopener noreferrer") #{iconTwitter}
-    a.social-buttons__button.social-buttons__facebook(href = mock target = "_blank" rel="noopener noreferrer") #{iconFacebook}
-    a.social-buttons__button.social-buttons__instagram(href = mock target = "_blank" rel="noopener noreferrer") #{iconInstagram}
+mixin social-buttons(items=["Error: items is not defined"])
+  ul.social-buttons
+    for item in items
+      li.social-buttons__item
+        a.social-buttons__button(href = mock target = "_blank" rel="noopener noreferrer") #{item}

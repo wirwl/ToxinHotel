@@ -3,13 +3,16 @@
   font-family: 'awesome-5-brands-regular-400';
   font-size: 24px;
 
+  &__item {
+    list-style: none;
+  }  
+
+  &__item:not(:last-child) {
+    margin-right: 23px;
+  }
+
   &__button {
     text-decoration: none;
     color: rgb(188, 156, 255);
-  }
-
-  &__twitter,
-  &__facebook {
-    margin-right: 23px;
   }
 }
