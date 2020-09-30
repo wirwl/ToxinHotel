@@ -7,6 +7,9 @@ export default class MaskedInput {
 
   _init(rootElementClass) {
     this._$rootElementClass = $(rootElementClass);
-    this._$rootElementClass.inputmask();
+    this._$rootElementClass.inputmask({
+      showMaskOnHover: false,
+      showMaskOnFocus: false,
+    });
   }
 }

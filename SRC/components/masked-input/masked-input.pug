@@ -2,4 +2,4 @@ mixin masked-input({caption, type, placeholder = "ДД.ММ.ГГГГ", value}={}
   label.masked-input    
     if caption
       .masked-input__caption #{caption}
-    input.masked-input__input.js-masked-input__input(type = type data-inputmask-alias="datetime" data-inputmask-inputformat="dd.mm.yyyy" inputmode="numeric" placeholder = placeholder value = value )
+    input.masked-input__input.js-masked-input__input(type = type data-inputmask-alias="datetime" data-inputmask-placeholder = "_" data-inputmask-inputformat="dd.mm.yyyy" inputmode="numeric" placeholder = placeholder value = value )
