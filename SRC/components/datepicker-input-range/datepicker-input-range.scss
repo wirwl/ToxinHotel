@@ -1,0 +1,18 @@
+.datepicker-input-range {
+  width: 100%;
+
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  &__item {
+    width: 150px;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}

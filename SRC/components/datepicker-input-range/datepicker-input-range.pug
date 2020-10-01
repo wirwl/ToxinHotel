@@ -1,0 +1,14 @@
+include ../datepicker-input/datepicker-input
+
+mixin datepicker-input-range(items=[])
+  .datepicker-input-range.js-datepicker-input-range
+    - const isTwoInputs = items.length > 1    
+    if isTwoInputs      
+      ul.datepicker-input-range__list(role = "none presentation")                
+        li.datepicker-input-range__item
+          +datepicker-input({caption: items[0].caption, placeholder: items[0].placeholder})
+        li.datepicker-input-range__item
+          +datepicker-input({hasDatepicker: false, caption: items[1].caption, placeholder: items[1].placeholder})
+    else
+      - const {caption="Caption", placeholder="placeholder"} = items[0]
+      +datepicker-input({caption: caption, placeholder: placeholder})

@@ -4,7 +4,7 @@ import './landing.scss';
 
 import HeaderMenu from '../../header-menu/header-menu';
 import GuestsInput from '../../guests-input/guests-input';
-import ToxinDatepicker from '../../toxin-datepicker/toxin-datepicker';
+import DatepickerInputRange from '../../datepicker-input-range/datepicker-input-range';
 import RoomReservationForm from '../../room-reservation-form/room-reservation-form';
 
 new HeaderMenu();
@@ -16,6 +16,9 @@ new GuestsInput({
   babies: { id: 'babies', singular: 'младенец', plurals: ['младенца', 'младенев'] },
 });
 
-new ToxinDatepicker({ rootElementClass: '.js-toxin-datepicker', buttonClearText: 'Очистить', buttonApplyText: 'Применить' });
+const $datepickerInputRanges = $('.js-datepicker-input-range');
+$datepickerInputRanges.each(
+  (_, datepickerInputRange) => new DatepickerInputRange(datepickerInputRange),
+);
 
 new RoomReservationForm('.room-reservation-form__arrival', '.room-reservation-form__checkout');

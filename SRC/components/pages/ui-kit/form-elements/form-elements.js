@@ -6,13 +6,13 @@ import 'air-datepicker/dist/css/datepicker.css';
 
 import GuestsInput from '../../../guests-input/guests-input';
 import MaskedInput from '../../../masked-input/masked-input';
-import ToxinDatepicker from '../../../toxin-datepicker/toxin-datepicker';
 import ComfortInput from '../../../comfort-input/comfort-input';
 import RangeSlider from '../../../range-slider/range-slider';
 import ExpandableCheckboxList from '../../../expandable-checkbox-list/expandable-checkbox-list';
 import Pagination from '../../../pagination/pagination';
 import RateButton from '../../../rate-button/rate-button';
 import LikeButton from '../../../like-button/like-button';
+import DatepickerInputRange from '../../../datepicker-input-range/datepicker-input-range';
 
 new GuestsInput({
   placeholder: 'Сколько гостей',
@@ -23,7 +23,10 @@ new GuestsInput({
 
 new MaskedInput('.js-masked-input__input');
 
-new ToxinDatepicker({ rootElementClass: '.js-toxin-datepicker', buttonClearText: 'Очистить', buttonApplyText: 'Применить' });
+const $datepickerInputRanges = $('.js-datepicker-input-range');
+$datepickerInputRanges.each(
+  (_, datepickerInputRange) => new DatepickerInputRange(datepickerInputRange),
+);
 
 new ComfortInput({
   placeholder: 'Выберите удобства',
@@ -44,4 +47,4 @@ new RangeSlider('.js-range-slider__input', '.js-range-slider__values');
 new Pagination('.js-pagination__buttons');
 
 const $rateButtons = $('.js-rate-button');
-$rateButtons.each((index, rateButton) => new RateButton(rateButton));
+$rateButtons.each((_, rateButton) => new RateButton(rateButton));

@@ -23,24 +23,9 @@
     margin-bottom: 27px;
   }
 
-  &__list,
-  &__dates-list {
+  &__list {
     list-style: none;
-  }
-
-  &__dates-list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-  }
-
-  &__dates-item {
-    max-width: 150px;    
-  }
-
-  &__dates-item:not(:last-child) {
-    margin-right: 10px;
-  }
+  }  
 
   &__cell-tooltip {
     display: flex;

@@ -7,7 +7,7 @@ import HeaderMenu from '../../header-menu/header-menu';
 import Flexslider from '../../flexslider/flexslider';
 import DonutChart from '../../donut-chart/donut-chart';
 import GuestsInput from '../../guests-input/guests-input';
-import ToxinDatepicker from '../../toxin-datepicker/toxin-datepicker';
+import DatepickerInputRange from '../../datepicker-input-range/datepicker-input-range';
 import OrderInfoForm from '../../order-info-form/order-info-form';
 import LikeButton from '../../like-button/like-button';
 
@@ -35,6 +35,9 @@ new GuestsInput({
   babies: { id: 'babies', singular: 'младенец', plurals: ['младенца', 'младенев'] },
 });
 
-new ToxinDatepicker({ rootElementClass: '.js-toxin-datepicker', buttonClearText: 'Очистить', buttonApplyText: 'Применить' });
+const $datepickerInputRanges = $('.js-datepicker-input-range');
+$datepickerInputRanges.each(
+  (_, datepickerInputRange) => new DatepickerInputRange(datepickerInputRange),
+);
 
 new OrderInfoForm('.order-info-form__arrival', '.order-info-form__checkout');

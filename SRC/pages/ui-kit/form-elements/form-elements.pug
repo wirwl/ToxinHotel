@@ -31,19 +31,20 @@ block content
       buttonApply: {text:"Применить"}
     },
     maskedInput: {caption: "MASKED TEXT FIELD"},
-    datepickerInputArrival: {
-      caption: "DATE DROPDOWN", 
-      placeholder: "ДД.ММ.ГГГГ"
-    },
-    datepickerInputCheckout: {
-      caption: "DATE DROPDOWN", 
-      placeholder: "ДД.ММ.ГГГГ",
-      hasDatepicker: false
-    },
-    datepickerInputArrivalAndCheckout: {
+    dirTwoInputs: [
+      {
+        caption: "DATE DROPDOWN", 
+        placeholder: "ДД.ММ.ГГГГ"
+      },
+      { 
+        caption: "DATE DROPDOWN", 
+        placeholder: "ДД.ММ.ГГГГ",        
+      },
+    ],
+    dirOneInputs: [{
       caption: "FILTER DATE DROPDOWN", 
       placeholder: "Выберите дату",      
-    },
+    }],
     subscribeInput: {
       caption: "SUBSCRIPTION TEXT FIELD", 
       placeholder: "Email"

@@ -12,9 +12,17 @@ block variables
 block content
   +cards({
     roomReservationForm: {
-      title: "Найдём номера под ваши пожелания",
-      datepickerInputArrival: {caption: "Прибытие", placeholder: "ДД.ММ.ГГГГ"},
-      datepickerInputCheckout: {caption: "Выезд", placeholder: "ДД.ММ.ГГГГ", hasDatepicker: false},
+      title: "Найдём номера под ваши пожелания",      
+      datepickers: [
+      {
+        caption: "Прибытие", 
+        placeholder: "ДД.ММ.ГГГГ"
+      },
+      { 
+        caption: "Выезд", 
+        placeholder: "ДД.ММ.ГГГГ",        
+      },
+      ],    
       guestsInput: {
         caption: "Гости", 
         items: [
@@ -55,8 +63,16 @@ block content
       summaryText: "Итого", 
       summaryValue: "38 081₽",
       roomInfoCaption: {number: 888, isLux: true, luxText: "люкс", costValue: "9 990", costText: "в сутки"},
-      datepickerInputArrival: {caption: "Прибытие", placeholder: "ДД.ММ.ГГГГ"},
-      datepickerInputCheckout: {caption: "Выезд", placeholder: "ДД.ММ.ГГГГ", hasDatepicker: false},
+      datepickers: [
+      {
+        caption: "Прибытие", 
+        placeholder: "ДД.ММ.ГГГГ"
+      },
+      { 
+        caption: "Выезд", 
+        placeholder: "ДД.ММ.ГГГГ",        
+      },
+      ],  
       guestsInput: {
         caption: "Гости", 
         items: [

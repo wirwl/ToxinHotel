@@ -14,8 +14,10 @@ block content
     headerData: header_data,
     roomReservationForm: {
       title:"Найдём номера под ваши пожелания",
-      datepickerInputArrival: {caption: "Прибытие", placeholder: "ДД.ММ.ГГГГ"},
-      datepickerInputCheckout: {caption: "Выезд", placeholder: "ДД.ММ.ГГГГ", hasDatepicker: false},
+      datepickers: [
+        {caption: "Прибытие", placeholder: "ДД.ММ.ГГГГ"},
+        {caption: "Выезд", placeholder: "ДД.ММ.ГГГГ", hasDatepicker: false},
+      ],
       guestsInput: {
         caption: "Гости", 
         items: [

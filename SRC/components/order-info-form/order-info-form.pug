@@ -1,6 +1,7 @@
 include ../tooltip/tooltip
 include ../room-info-caption/room-info-caption
 include ../datepicker-input/datepicker-input
+include ../datepicker-input-range/datepicker-input-range
 include ../guests-input/guests-input
 include ../button/button
 
@@ -9,8 +10,8 @@ mixin order-info-form(data={})
     const {
       items = [{text: "Error: items is not defined"}], 
       summaryText, summaryValue, 
-      roomInfoCaption, 
-      datepickerInputArrival, datepickerInputCheckout, 
+      roomInfoCaption,       
+      datepickers,
       guestsInput, 
       buttonSubmit
     } = data
@@ -20,11 +21,7 @@ mixin order-info-form(data={})
         +room-info-caption(roomInfoCaption)
       ul.order-info-form__list
         li.order-info-form__item
-          ul.order-info-form__dates-list
-            li.order-info-form__dates-item.order-info-form__arrival
-              +datepicker-input(datepickerInputArrival)
-            li.order-info-form__dates-item.order-info-form__checkout
-              +datepicker-input(datepickerInputCheckout)
+          +datepicker-input-range(datepickers)
         li.order-info-form__item
           +guests-input(guestsInput)
         li.order-info-form__item.order-info-form__item-table

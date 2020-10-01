@@ -19,13 +19,14 @@ include ../../../pagination/pagination
 include ../../../bullet/bullet
 include ../../../bullets-list/bullets-list
 include ../../../datepicker-input/datepicker-input
+include ../../../datepicker-input-range/datepicker-input-range
 include ../../../button/button
     
 mixin form-elements(data={})
   -
     const {
-            textInput, textInputFocused, guestsInputDropdown, maskedInput, datepickerInputArrival, 
-            datepickerInputCheckout, datepickerInputArrivalAndCheckout, subscribeInput, comfortInput, comfortInputExpanded, 
+            textInput, textInputFocused, guestsInputDropdown, maskedInput, 
+            dirTwoInputs, dirOneInputs, subscribeInput, comfortInput, comfortInputExpanded, 
             expandableCheckboxList, expandableCheckboxListExpanded, comfortStatusList, checkboxesList, radiosList, 
             togglesList, likeButtonCaption, likeButton, likeButtonChecked, rateButtonCaption, 
             rateButton4, rateButton5, guestsInput, checkboxesListRich, rangeSlider, 
@@ -45,13 +46,9 @@ mixin form-elements(data={})
         li.form-elements__column-left-item.form-elements__column-left-wrapper-for-masked-input
           +masked-input(maskedInput)
         li.form-elements__column-left-item.form-elements__column-left-wrapper-for-datepicker-inputs
-          ul.form-elements__column-left-datepicker-inputs-list
-            li.form-elements__column-left-datepicker-inputs-item.form-elements__column-left-datepicker-input-arrival
-              +datepicker-input(datepickerInputArrival)
-            li.form-elements__column-left-datepicker-inputs-item.form-elements__column-left-datepicker-input-checkout
-              +datepicker-input(datepickerInputCheckout)
-        li.form-elements__column-left-item.form-elements__column-left-wrapper-for-fdd-input          
-          +datepicker-input(datepickerInputArrivalAndCheckout)
+          +datepicker-input-range(dirTwoInputs)
+        li.form-elements__column-left-item.form-elements__column-left-wrapper-for-fdd-input                    
+          +datepicker-input-range(dirOneInputs)
         li.form-elements__column-left-item.form-elements__column-left-wrapper-for-subscribe-input
           +subscribe-input(subscribeInput)
         li.form-elements__column-left-item
@@ -104,10 +101,6 @@ mixin form-elements(data={})
               h3.form-elements__buttons-list-caption #{buttonsCaption}
               ul.form-elements__buttons-list    
                 li.form-elements__buttons-list-item
-                  //- +button({text: "Click me", styleType:"filled", link: "cards.html"})
-                  //- +button({text: "Click me", styleType:"unfilled", link: "cards.html"})
-                  //- +button({text: "Click me", styleType:"simple", link: "cards.html"})
-                  //- +button({text: "Перейти к оплате", styleType:"arrowed", link: "cards.html"})
                   ul.form-elements__two-buttons-list
                     li.form-elements__two-buttons-list-item.form-elements__two-buttons-list-item_width
                       +button(buttonFilled)

@@ -5,7 +5,7 @@ import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
 import 'air-datepicker/dist/css/datepicker.css';
 
 import HeaderMenu from '../../header-menu/header-menu';
-import ToxinDatepicker from '../../toxin-datepicker/toxin-datepicker';
+import DatepickerInputRange from '../../datepicker-input-range/datepicker-input-range';
 import GuestsInput from '../../guests-input/guests-input';
 import RangeSlider from '../../range-slider/range-slider';
 import ComfortInput from '../../comfort-input/comfort-input';
@@ -13,8 +13,6 @@ import ExpandableCheckboxList from '../../expandable-checkbox-list/expandable-ch
 import Pagination from '../../pagination/pagination';
 
 new HeaderMenu();
-
-new ToxinDatepicker({ rootElementClass: '.js-toxin-datepicker', buttonClearText: 'Очистить', buttonApplyText: 'Применить' });
 
 new GuestsInput({
   placeholder: 'Сколько гостей',
@@ -38,3 +36,8 @@ new ComfortInput({
 new ExpandableCheckboxList('.js-expandable-checkbox-list__caption');
 
 new Pagination('.js-pagination__buttons');
+
+const $datepickerInputRanges = $('.js-datepicker-input-range');
+$datepickerInputRanges.each(
+  (_, datepickerInputRange) => new DatepickerInputRange(datepickerInputRange),
+);
