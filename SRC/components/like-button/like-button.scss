@@ -17,7 +17,7 @@
 
     &::before {
       font-family: $toxin-font-material-icon;
-      content: 'favorite_border';
+      content: "favorite_border";
       margin-right: 5px;
     }
   }
@@ -31,7 +31,7 @@
     &::before,
     &::after {
       font-family: $toxin-font-material-icon;
-      content: ' ';
+      content: " ";
       position: absolute;
       border-radius: 10px;
     }
@@ -42,8 +42,7 @@
       bottom: 0;
       right: 0;
       z-index: -2;
-      background: #bc9cff;
-      background: $toxin-gradient-purple-blue;                  
+      background: $toxin-gradient-purple-blue;
     }
 
     &::after {
@@ -59,7 +58,7 @@
       color: $toxin-color-purple;
 
       &::before {
-        content: 'favorite';
+        content: "favorite";
       }
     }
   }
