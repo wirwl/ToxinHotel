@@ -13,6 +13,7 @@
     width: 100%;
     border: 0 none;
   }
+
   &__caption {
     margin-bottom: 21px;
     font-size: 24px;
@@ -21,6 +22,7 @@
     font-weight: bold;
     color: $toxin-color-black-100;
   }
+
   &__list {
     list-style-type: none;
     margin-bottom: 20px;
@@ -34,10 +36,10 @@
     margin-bottom: 29px;
   }
 
-  &__wrapper-for-sign-in-button {    
+  &__wrapper-for-sign-in-button {
     display: flex;
     justify-content: space-between;
-    align-items: center;    
+    align-items: center;
   }
 
   &__wrapper-sign-up-button {
@@ -46,7 +48,7 @@
 
   &__sign-in-text {
     color: #000;
-  }  
+  }
 
   @media (max-width: 360px) {
     padding: 18px 10px 11px;

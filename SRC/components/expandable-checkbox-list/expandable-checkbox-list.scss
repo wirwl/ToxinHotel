@@ -10,10 +10,12 @@
     text-transform: uppercase;
     font-family: inherit;
   }
+
   &__list {
     list-style: none;
     display: none;
   }
+
   &__item:not(:last-child) {
     margin-bottom: 12px;
   }

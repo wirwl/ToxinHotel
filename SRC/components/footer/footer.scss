@@ -42,6 +42,7 @@
     max-width: 1170px;
     width: 100%;
   }
+
   &__copyright {
     font-size: 14px;
     line-height: 17px;
@@ -74,6 +75,7 @@
       padding-bottom: 5px;
       padding-top: 100px;
     }
+
     &__footer-bottom {
       justify-content: center;
       padding-bottom: 110px;
@@ -82,7 +84,6 @@
     &__logo-with-text {
       text-align: center;
       width: auto;
-      margin-right: 0;
       max-width: 560px;
       margin: 0 auto 17px auto;
     }
@@ -93,6 +94,7 @@
       padding: 10px 5px;
       min-height: auto;
     }
+
     &__footer-bottom {
       padding: 0 5px 5px;
       min-height: auto;

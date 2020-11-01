@@ -10,11 +10,10 @@
     background-image: $toxin-gradient-purple-blue;
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;    
+    -webkit-text-fill-color: transparent;
   }
 
   &_disabled {
     pointer-events: none;
   }
-  
 }

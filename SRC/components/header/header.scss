@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   min-height: 70px;
-  padding: 0 5px;  
+  padding: 0 5px;
   box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
   background: #fff;
 
@@ -12,7 +12,7 @@
     justify-content: space-between;
     width: 100%;
     max-width: 1160px;
-    background: #fff;    
+    background: #fff;
   }
 
   &__main-header {
@@ -50,7 +50,7 @@
   }
 
   &__button-bordered {
-    margin-right: 20px;    
+    margin-right: 20px;
   }
 
   &__auth-name {
@@ -131,13 +131,13 @@
       padding: 0 15px;
     }
 
-    &__button-bordered {      
-      margin: 0 0 5px;      
+    &__button-bordered {
+      margin: 0 0 5px;
     }
-    
+
     &__button-bordered,
     &__button-filled {
-      width: 100%;      
+      width: 100%;
     }
 
     &__menu-and-auth-area_shown {

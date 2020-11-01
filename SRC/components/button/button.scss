@@ -10,9 +10,9 @@
   color: #bc9cff;
   cursor: pointer;
   text-transform: uppercase;
-  text-decoration: none;  
+  text-decoration: none;
 
-  &_type_filled {    
+  &_type_filled {
     background: $toxin-gradient-purple-blue;
     border-radius: 22px;
     color: #fff;
@@ -87,7 +87,7 @@
     &.button:hover,
     &.button:focus {
       color: $toxin-color-purple-half-opacity;
-    }    
+    }
   }
 
   &_type_arrowed {
@@ -96,7 +96,7 @@
     width: 100%;
     background: $toxin-gradient-purple-blue;
     border-radius: 22px;
-    color: #ffffff;
+    color: #fff;
 
     &::after {
       font-family: $toxin-font-material-icon;

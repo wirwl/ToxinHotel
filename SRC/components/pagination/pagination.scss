@@ -8,17 +8,16 @@
     display: flex;
     margin-bottom: 10px;
     width: 100%;
-    display: flex;
     justify-content: center;
   }
 
   &__list {
     width: 100%;
     list-style: none;
-    display: flex;    
+    display: flex;
   }
 
-  &__item {    
+  &__item {
     color: $toxin-color-black-50;
     display: flex;
     justify-content: center;
@@ -27,7 +26,7 @@
     font-size: 12px;
     padding: 8px 0;
     min-width: 40px;
-    min-height: 40px;    
+    min-height: 40px;
   }
 
   &__item:first-child,
@@ -35,13 +34,13 @@
     background: $toxin-gradient-green-turquoise-blue;
     color: #fff;
   }
-  
+
   & .pagination__item_active {
     background: $toxin-gradient-purple-blue;
     font-weight: bold;
     color: #fff;
   }
-  
+
   &__link {
     cursor: pointer;
   }

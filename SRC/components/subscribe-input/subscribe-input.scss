@@ -1,6 +1,6 @@
 .subscribe-input {
   font-family: $toxin-font-montserrat;
-  width: 100%;  
+  width: 100%;
 
   &__caption {
     display: inline-block;
@@ -17,7 +17,7 @@
     padding: 12px 42px 12px 15px;
     font-size: 14px;
     width: 100%;
-    font-family: inherit;    
+    font-family: inherit;
   }
 
   &__input::placeholder {
@@ -25,6 +25,7 @@
     line-height: 18px;
     color: $toxin-color-black-25;
   }
+
   &__input:hover,
   &__input:focus {
     border: 1px solid $toxin-color-black-50;
@@ -61,6 +62,6 @@
     justify-content: center;
     align-items: center;
     pointer-events: none;
-    font-feature-settings: 'liga';    
+    font-feature-settings: 'liga';
   }
 }

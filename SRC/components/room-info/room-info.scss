@@ -29,13 +29,13 @@
   &__comments {
     color: $toxin-color-black-50;
     text-decoration: none;
-    
+
     &:hover,
     &:focus {
       color: $toxin-color-black-75;
     }
   }
-  
+
   &__comments-count {
     font-weight: bold;
     margin-right: 5px;

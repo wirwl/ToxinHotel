@@ -5,6 +5,7 @@
   &__input {
     @include visually-hidden;
   }
+
   &__text {
     position: relative;
     padding: 0 0 0 50px;
@@ -12,6 +13,7 @@
     font-size: 14px;
     color: $toxin-color-black-75;
   }
+
   &__text::before {
     box-sizing: border-box;
     content: '';
@@ -24,6 +26,7 @@
     border-radius: 10px;
     transition: 0.2s;
   }
+
   &__text::after {
     content: '';
     position: absolute;
@@ -44,6 +47,7 @@
     + .toggle__text::after {
       background: $toxin-color-black-25;
     }
+
     + .toggle__text::before {
       border: 1px solid $toxin-color-black-25;
     }

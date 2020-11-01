@@ -43,7 +43,7 @@
     margin-bottom: 29px;
   }
 
-  &__wrapper-for-sign-in-button {    
+  &__wrapper-for-sign-in-button {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,7 +58,7 @@
   }
 
   @media (max-width: 360px) {
-    padding: 20px 10px 15px; 
+    padding: 20px 10px 15px;
 
     &__wrapper-for-sign-up-button {
       margin-bottom: 19px;

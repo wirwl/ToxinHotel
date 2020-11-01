@@ -8,6 +8,7 @@ html {
 
 body {
   @include define-body-uikit;
+
   padding-top: 150px;
   background: #f4f4f6;
 }
@@ -20,15 +21,11 @@ body {
   &__column-left,
   &__column-middle {
     width: 380px;
+    margin-right: 40px;
   }
 
   &__column-right {
     width: 320px;
-  }
-
-  &__column-left,
-  &__column-middle {
-    margin-right: 40px;
   }
 
   &__column-left-list,

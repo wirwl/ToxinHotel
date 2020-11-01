@@ -10,7 +10,6 @@ body {
   @include define-body;
 }
 
-
 .landing {
   &__main-content {
     width: 100%;
@@ -22,9 +21,8 @@ body {
   }
 
   &__form {
-    margin-left: 9.375%;
     max-width: 1160px;
-    margin: 0 auto;
+    margin: 0 auto 0 9.375%;
   }
 
   &__text {

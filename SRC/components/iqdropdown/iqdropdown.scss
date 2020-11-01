@@ -87,8 +87,6 @@
 
   .iqdropdown-item-controls button.button-decrement,
   .iqdropdown-item-controls button.button-increment {
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
     border-radius: 50%;
     height: 30px;
     width: 30px;
@@ -96,11 +94,11 @@
   }
 
   .iqdropdown-item-controls .counter {
-    border: none;    
+    border: none;
     padding: 0 5px;
     font-size: 12px;
     font-weight: bold;
-    font-family: inherit;    
+    font-family: inherit;
     text-align: center;
     min-width: 30px;
   }

@@ -40,7 +40,6 @@
     transition: opacity 0.2s;
     color: #fff;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.3);
     text-shadow: 0 0 15px rgb(119, 119, 119);
     background: $toxin-gradient-black-prev;
   }
@@ -67,7 +66,7 @@
     align-items: center;
     height: 100%;
   }
-  
+
   &__next::after {
     font-family: $toxin-font-material-icon;
     content: attr(content);
@@ -83,7 +82,7 @@
     transition: opacity 1s ease-in-out;
   }
 
-  &__input:checked + .image-slider__container  .image-slider__label {
+  &__input:checked + .image-slider__container .image-slider__label {
     display: block;
   }
 
@@ -93,7 +92,7 @@
     display: block;
     position: absolute;
     z-index: 20;
-    font-size: 12px;    
+    font-size: 12px;
   }
 
   &__nav-dots .image-slider__nav-dot {

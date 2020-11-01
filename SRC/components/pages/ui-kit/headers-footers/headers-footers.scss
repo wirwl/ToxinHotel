@@ -8,6 +8,7 @@ html {
 
 body {
   @include define-body-uikit;
+
   background: #e5e5e5;
 }
 
@@ -19,7 +20,7 @@ body {
   }
 
   &__header-auth-true {
-    margin-bottom: 40px;    
+    margin-bottom: 40px;
   }
 
   &__footer-normal {
@@ -33,6 +34,7 @@ body {
   .header__header-menu {
     margin-right: 28px;
   }
+
   .header-menu__item:not(:last-of-type) {
     margin-right: 30px;
   }
@@ -43,7 +45,7 @@ body {
 
   .button-bordered_header {
     padding: 9px 20px 10px 18px;
-}
+  }
 
   @media screen and (max-width: 3840px) {
     &__footer-responsive {
@@ -60,6 +62,7 @@ body {
         padding-top: 100px;
         min-height: 233px;
       }
+
       .footer__footer-bottom {
         justify-content: center;
         padding-top: 0;
@@ -69,7 +72,6 @@ body {
       .footer__footer-top .footer__logo-with-text {
         text-align: center;
         width: auto;
-        margin-right: 0;
         max-width: 560px;
         display: flex;
         justify-content: center;

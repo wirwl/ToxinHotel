@@ -7,7 +7,7 @@
     justify-content: space-between;
     margin-bottom: 19px;
   }
-  
+
   &__caption-text {
     color: $toxin-color-black-100;
     text-transform: uppercase;
@@ -29,6 +29,7 @@
 // Modify ion.rangeSlider.css
 .irs--round {
   max-height: 14px;
+
   .irs-handle {
     width: 16px;
     height: 16px;
@@ -39,6 +40,7 @@
     box-shadow: none;
     cursor: pointer;
   }
+
   .irs-line {
     background-color: #fff;
     border-radius: 3px;
@@ -46,6 +48,7 @@
     height: 6px;
     top: 5px;
   }
+
   .irs-bar {
     background: $toxin-gradient-green-turquoise-blue;
     top: 6px;

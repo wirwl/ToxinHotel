@@ -7,7 +7,7 @@
   &__list {
     list-style: none;
     background: white;
-    display: flex;    
+    display: flex;
     justify-content: center;
     width: 100%;
   }
@@ -27,7 +27,7 @@
 
   &__list_sub-list,
   &__list_sub-sub-list {
-    position: absolute;    
+    position: absolute;
     display: none;
     border-radius: 3px;
     box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.07);
@@ -62,7 +62,7 @@
     line-height: 20px;
     bottom: 6px;
     right: 2px;
-    color: rgba(31, 32, 65, 0.5);    
+    color: rgba(31, 32, 65, 0.5);
   }
 
   &__link_bold {
@@ -84,11 +84,11 @@
 
     &__link {
       font-size: 16px;
-    }    
+    }
 
     .header-menu__list_sub-list,
     .header-menu__list_sub-sub-list {
       position: static;
     }
-  }  
+  }
 }

@@ -2,6 +2,6 @@
   "extends": "stylelint-config-standard",
   "defaultSeverity": "warning",
   "rules": {
-    
+    "at-rule-no-unknown": null
   }
 }

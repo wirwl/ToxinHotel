@@ -3,12 +3,12 @@
   font-family: $toxin-font-montserrat;
   font-size: 12px;
   width: 320px;
-  background: #ffffff;
+  background: #fff;
   border: 1px solid rgba(31, 32, 65, 0.25);
   box-sizing: border-box;
   box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
   border-radius: 4px;
-  padding: 15px 15px 19px;  
+  padding: 15px 15px 19px;
   color: $toxin-color-black-50;
 
   &--nav {
@@ -16,12 +16,14 @@
     border-bottom: none;
     margin-bottom: 26px;
   }
+
   &--nav-action {
     width: 24px;
     font-family: $toxin-font-material-icon;
     font-size: 24px;
     color: $toxin-color-purple;
   }
+
   &--nav-title {
     font-family: $toxin-font-open-sans;
     font-weight: bold;
@@ -56,6 +58,7 @@
     z-index: auto;
     color: transparent;
   }
+
   &--cell-day.-range-from-.-selected-:not(.-focus-)::before {
     content: '';
     position: absolute;
@@ -66,6 +69,7 @@
     background: $toxin-color-purple;
     background: $toxin-gradient-purple-blue-half-opacity;
   }
+
   &--cell-day.-range-from-.-selected-:not(.-focus-)::after {
     content: attr(data-date);
     position: absolute;
@@ -86,6 +90,7 @@
     z-index: auto;
     color: transparent;
   }
+
   &--cell-day.-range-to-.-selected-:not(.-focus-)::before {
     content: '';
     position: absolute;
@@ -96,6 +101,7 @@
     background: $toxin-color-purple;
     background: $toxin-gradient-purple-blue-half-opacity;
   }
+
   &--cell-day.-range-to-.-selected-:not(.-focus-)::after {
     content: attr(data-date);
     position: absolute;
@@ -122,6 +128,7 @@
     background: $toxin-gradient-purple-blue-half-opacity;
     color: $toxin-color-black-50;
   }
+
   &--cell-day.-selected-.-focus- {
     background: $toxin-color-blue;
   }
@@ -216,6 +223,7 @@
     color: $toxin-color-black-50;
     cursor: pointer;
   }
+
   &__button-apply {
     display: inline-block;
     color: $toxin-color-purple;
