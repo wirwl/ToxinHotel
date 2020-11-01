@@ -1,15 +1,21 @@
 import 'item-quantity-dropdown/lib/item-quantity-dropdown.min';
 
+const NUMERALS = {
+  singular: 0,
+  plural2items: 1,
+  plural5items: 4,
+};
 export default class ComfortInput {
   constructor(data) {
     this._initMembers(data);
-    this._initPluginIqDropdown();
     this._bindThis();
+    this._initPluginIqDropdown();
     this._addEventListeners();
   }
 
   _bindThis() {
     this._handleDocumentMouseUp = this._handleDocumentMouseUp.bind(this);
+    this._setSelectionText = this._setSelectionText.bind(this);
   }
 
   _initMembers({ rootElementClass, items, placeholder }) {
@@ -22,33 +28,35 @@ export default class ComfortInput {
   _initPluginIqDropdown() {
     if (this._$iqdropdowns.length) {
       this._$iqdropdowns.iqDropdown({
-        setSelectionText: (itemCount, totalItems) => {
-          let result = this._placeholder;
-          if (totalItems > 0) {
-            result = '';
-            this._items.forEach((value) => {
-              const { id, singular, plurals } = value;
-              const [number2, number5] = plurals;
-
-              Object.keys(itemCount).forEach((key) => {
-                if (id === key) {
-                  let word = singular;
-                  const count = itemCount[key];
-
-                  if (count > 0) {
-                    if (count > 4) word = number5;
-                    else if (count > 1) word = number2;
-                    result += `${itemCount[key]} ${word}, `;
-                  }
-                }
-              });
-            });
-            result = result.slice(0, -2);
-          }
-          return result;
-        },
+        setSelectionText: this._setSelectionText,
       });
     }
+  }
+
+  _setSelectionText(itemCount, totalItems) {
+    let text = this._placeholder;
+    if (totalItems > 0) {
+      text = '';
+      this._items.forEach((value) => {
+        const { id, singular, plurals } = value;
+        const [numeral2items, numeral5items] = plurals;
+
+        Object.keys(itemCount).forEach((key) => {
+          if (id === key) {
+            let word = singular;
+            const number = itemCount[key];
+
+            if (number > NUMERALS.singular) {
+              if (number > NUMERALS.plural5items) word = numeral5items;
+              else if (number > NUMERALS.plural2items) word = numeral2items;
+              text += `${number} ${word}, `;
+            }
+          }
+        });
+      });
+      text = text.slice(0, -2);
+    }
+    return text;
   }
 
   _addEventListeners() {
@@ -58,7 +66,7 @@ export default class ComfortInput {
 
   _handleDocumentMouseUp(event) {
     if (!this._$iqdropdowns.is(event.target)
-        && this._$iqdropdowns.has(event.target).length === 0) {
+      && this._$iqdropdowns.has(event.target).length === 0) {
       this._$iqdropdowns.removeClass('menu-open');
     }
   }
