@@ -180,6 +180,21 @@ module.exports = smp.wrap((_, argv) => {
           ],
         },
         {
+          test: /\.(png|jpe?g|gif|svg)$/,
+          include: /images/,
+          exclude: /components/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                context: 'SRC/images',
+                outputPath: 'images',
+                name: '[path][name].[ext]',
+              },
+            },
+          ],
+        },
+        {
           test: /\.(woff(2)?|ttf|eot|svg)$/,
           include: /(node_modules)/,
           use: [

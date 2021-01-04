@@ -2,7 +2,10 @@ import '../../components/pages/index/index';
 
 import '../../favicons/favicons';
 
-const images = require.context('../../components', true, /\.(png|jpe?g|gif|svg)$/);
+let images = require.context('../../components', true, /\.(png|jpe?g|gif|svg)$/);
+images.keys().forEach(images);
+
+images = require.context('../../images', true, /\.(png|jpe?g|gif|svg)$/);
 images.keys().forEach(images);
 
 const fonts = require.context('../../fonts', true, /\.css$/);
