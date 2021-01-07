@@ -6,7 +6,6 @@ include ../../range-slider/range-slider
 include ../../checkboxes-list/checkboxes-list
 include ../../comfort-input/comfort-input
 include ../../expandable-checkbox-list/expandable-checkbox-list
-include ../../pagination/pagination
 include ../../room-info/room-info
 include ../../rooms-by-filter/rooms-by-filter
 
@@ -37,5 +36,5 @@ mixin search-room(data={})
               +comfort-input(comfortInput)
             li.search-room__filters-item
               +expandable-checkbox-list(expandableCheckboxList)
-        +rooms-by-filter(roomsByFilter)
+        +rooms-by-filter(roomsByFilter)          
     +footer(footerData)

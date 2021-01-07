@@ -18,6 +18,7 @@
     + [ion-rangeslider](https://www.npmjs.com/package/ion-rangeslider)        
     + [inputmask](https://www.npmjs.com/package/inputmask)
     + [item-quantity-dropdown](https://www.npmjs.com/package/item-quantity-dropdown)    
+    + [px-jquery-pagination](https://www.npmjs.com/package/px-jquery-pagination)
  8. Browser support: Chrome and Firefox - two last version (specified in package.json)
     > **npx browserslist** - run this command  in project directory to see what browsers was selected
 

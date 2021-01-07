@@ -15,7 +15,7 @@ include ../../../rate-button/rate-button
 include ../../../guests-input/guests-input
 include ../../../feedback/feedback
 include ../../../range-slider/range-slider
-include ../../../pagination/pagination
+include ../../../px-pagination/px-pagination
 include ../../../bullet/bullet
 include ../../../bullets-list/bullets-list
 include ../../../datepicker-input/datepicker-input
@@ -122,7 +122,7 @@ mixin form-elements(data={})
                   +button(buttonArrow)
             li.form-elements__column-right-item.form-elements__pagination-wrapper
               h3.form-elements__pagination-wrapper-caption #{paginationCaption}
-              +pagination(pagination)
+              +px-pagination(pagination)
             li.form-elements__column-right-item.form-elements__column-right-wrapper-for-guests-input2
               +guests-input(guestsInputOpen)
             li.form-elements__column-right-item.form-elements__column-right-wrapper-for-bullet-list

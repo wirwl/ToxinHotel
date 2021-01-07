@@ -1,5 +1,5 @@
-include ../pagination/pagination
 include ../room-info/room-info
+include ../px-pagination/px-pagination
 
 mixin rooms-by-filter({title="Title", roomInfos=[], pagination}={})
   section.rooms
@@ -8,5 +8,5 @@ mixin rooms-by-filter({title="Title", roomInfos=[], pagination}={})
       for roomInfo in roomInfos
         li.rooms__item
           +room-info(roomInfo)
-    .rooms__wrapper-pagination
-      +pagination(pagination)
+    .rooms__wrapper-pagination      
+      +px-pagination(pagination)

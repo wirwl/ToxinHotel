@@ -10,7 +10,7 @@ import GuestsInput from '../../guests-input/guests-input';
 import RangeSlider from '../../range-slider/range-slider';
 import ComfortInput from '../../comfort-input/comfort-input';
 import ExpandableCheckboxList from '../../expandable-checkbox-list/expandable-checkbox-list';
-import Pagination from '../../pagination/pagination';
+import PxPagination from '../../px-pagination/px-pagination';
 
 new HeaderMenu();
 
@@ -35,9 +35,12 @@ new ComfortInput({
 
 new ExpandableCheckboxList('.js-expandable-checkbox-list__caption');
 
-new Pagination('.js-pagination__buttons');
-
 const $datepickerInputRanges = $('.js-datepicker-input-range');
 $datepickerInputRanges.each(
   (_, datepickerInputRange) => new DatepickerInputRange(datepickerInputRange),
+);
+
+const $paginations = $('.px-pagination');
+$paginations.each(
+  (_, pagination) => new PxPagination(pagination),
 );
