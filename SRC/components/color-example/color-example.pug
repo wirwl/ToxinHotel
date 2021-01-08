@@ -1,4 +1,21 @@
 mixin color-example({color, description="Description", hex}={})
+  case color
+    when "dark-shade100%"
+      - color = "color-example__square_dark-shade_100percent"
+    when "dark-shade75%"
+      - color = "color-example__square_dark-shade_75percent"
+    when "dark-shade50%"
+      - color = "color-example__square_dark-shade_50percent"
+    when "dark-shade25%"
+      - color = "color-example__square_dark-shade_25percent"
+    when "dark-shade5%"
+      - color = "color-example__square_dark-shade_5percent"
+    when "purple"
+      - color = "color-example__square_Purple"
+    when "green"
+      - color = "color-example__square_Green"
+    default 
+      - color = "color-example__square_dark-shade_100percent"
   .color-example
     .color-example__square(class = color)
     .color-example__textDesc 

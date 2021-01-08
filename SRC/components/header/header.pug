@@ -16,12 +16,12 @@ mixin header(data={})
         +logo({pathImg: logo_path, pathUrl: "landing.html"})
       .header__menu-and-auth-area
         .header__header-menu
-          +header-menu(menu)    
+          +header-menu(menu)
         .header__auth-area(class = isAuth && "header__auth-area_is-auth")
           if !isAuth
-            .header__button-bordered(class = isAuth && "header__button-bordered_hidden")
-              +button({styleType: "unfilled", isSmallSize: true, isDynamicWidth: true, text: buttonSignIn.text, link: buttonSignIn.link})      
-            .header__button-filled(class = isAuth && "header__button-filled_hidden")
+            .header__sign-in(class = isAuth && "header__sign-in_hidden")
+              +button({styleType: "unfilled", isSmallSize: true, isDynamicWidth: true, text: buttonSignIn.text, link: buttonSignIn.link})
+            .header__sign-up(class = isAuth && "header__sign-up_hidden")
               +button({styleType: "filled", isSmallSize: true, text: buttonSignUp.text, link: buttonSignUp.link})
         a.header__auth-name(href = "/mock-address/change-me" class = isAuth && "header__auth-name_shown") #{name}
     .header__icon.js-header__icon menu

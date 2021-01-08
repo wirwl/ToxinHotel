@@ -18,19 +18,19 @@
     top: 7px;
   }
 
-  &_orange-color::before {
+  &_color_orange::before {
     background: $toxin-gradient-cream-brulee-wax-flower;
   }
 
-  &_green-color::before {
+  &_color_green::before {
     background: $toxin-gradient-green-turquoise-blue;
   }
 
-  &_purple-color::before {
+  &_color_purple::before {
     background: $toxin-gradient-purple-blue;
   }
 
-  &_black-color::before {
+  &_color_black::before {
     background: $toxin-gradient-gray-east-bay;
   }
 }

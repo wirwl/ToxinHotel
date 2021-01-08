@@ -49,7 +49,7 @@
     flex-basis: auto;
   }
 
-  &__button-bordered {
+  &__sign-in {
     margin-right: 20px;
   }
 
@@ -74,11 +74,11 @@
     display: flex;
   }
 
-  &__button-filled_hidden {
+  &__sign-up_hidden {
     display: none;
   }
 
-  &__button-bordered_hidden {
+  &__sign-in_hidden {
     display: none;
   }
 
@@ -131,12 +131,12 @@
       padding: 0 15px;
     }
 
-    &__button-bordered {
+    &__sign-in {
       margin: 0 0 5px;
     }
 
-    &__button-bordered,
-    &__button-filled {
+    &__sign-in,
+    &__sign-up {
       width: 100%;
     }
 

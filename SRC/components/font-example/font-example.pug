@@ -1,4 +1,15 @@
-mixin font-example({type, title="Title", description="Description"}={})
+mixin font-example({type, title="Title", description="Description"}={})  
+  case type
+    when "title"
+      - type = "font-example_header_title"
+    when "subtitle"
+      - type = "font-example_header_subtitle"
+    when "label"
+      - type = "font-example_header_label"
+    when "text"
+      - type = "font-example_regular-text"
+    default
+      - type = "font-example_regular-text"
   .font-example(class = type)
     .font-example__title #{title}
     .font-example__description #{description}

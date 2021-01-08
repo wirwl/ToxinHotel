@@ -14,7 +14,7 @@
     font-family: inherit;
   }
 
-  &_header_one {
+  &_header_title {
     font-family: $toxin-font-quicksand;
     font-size: 24px;
     line-height: 30px;
@@ -26,7 +26,7 @@
     }
   }
 
-  &_header_two {
+  &_header_subtitle {
     font-family: $toxin-font-quicksand;
     font-size: 19px;
     line-height: 24px;
@@ -38,7 +38,7 @@
     }
   }
 
-  &_header_three {
+  &_header_label {
     font-family: $toxin-font-montserrat;
     font-size: 12px;
     line-height: 15px;
@@ -54,7 +54,7 @@
     }
   }
 
-  &_body {
+  &_regular-text {
     font-family: $toxin-font-montserrat;
     font-size: 14px;
 

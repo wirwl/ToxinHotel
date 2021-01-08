@@ -1,2 +1,13 @@
 mixin legend({color, text="text"}={})
+  case color
+    when "orange"
+      - color = "legend_color_orange"
+    when "green"
+      - color = "legend_color_green"
+    when "purple"
+      - color = "legend_color_purple"
+    when "black"
+      - color = "legend_color_black"
+    default
+      - color = "legend_color_orange"    
   p.legend(class = color) #{text}

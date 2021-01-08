@@ -24,7 +24,7 @@ mixin order-info-form(data={})
           +datepicker-input-range(datepickers)
         li.order-info-form__item
           +guests-input(guestsInput)
-        li.order-info-form__item.order-info-form__item-table
+        li.order-info-form__item
           table.order-info-form__table
             for item in items
               - const {text, tooltip, cost} = item
