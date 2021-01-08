@@ -25,28 +25,15 @@
     color: $toxin-color-black-75;
   }
 
-  &__list_sub-list,
-  &__list_sub-sub-list {
+  &__list_sub-item {
     position: absolute;
     display: none;
     border-radius: 3px;
     box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.07);
-  }
-
-  &__list_sub-sub-list {
-    position: absolute;
-    top: 0;
-    left: 150px;
-  }
+  }  
 
   &__item:not(:last-of-type) {
     margin-right: 21px;
-  }
-
-  &__item_sub-item,
-  &__item_sub-sub-item {
-    position: relative;
-    padding: 0 10px;
   }
 
   &__link_arrow {
@@ -86,8 +73,7 @@
       font-size: 16px;
     }
 
-    .header-menu__list_sub-list,
-    .header-menu__list_sub-sub-list {
+    .header-menu__list_sub-item {
       position: static;
     }
   }
