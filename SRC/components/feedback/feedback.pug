@@ -4,7 +4,7 @@ include ../like-button/like-button
 mixin feedback({image, like, caption="Caption", time, text="Text"}={})
   .feedback
     .feedback__left-column
-      .feedback__wrapper-for-round-image
+      .feedback__round-image
         +round-image(image)      
       +like-button(like)   
     .feedback__right-column

@@ -8,5 +8,5 @@ mixin rooms-by-filter({title="Title", roomInfos=[], pagination}={})
       for roomInfo in roomInfos
         li.rooms__item
           +room-info(roomInfo)
-    .rooms__wrapper-pagination      
+    .rooms__px-pagination
       +px-pagination(pagination)

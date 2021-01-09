@@ -22,8 +22,8 @@ export default class GuestsInput {
     this._babies = babies;
     this._placeholder = placeholder;
     this._$iqdropdowns = this._$rootElement.find('.iqdropdown');
-    this._$buttonClear = this._$rootElement.find('.guests-input__button-simple-clear').find('.button');
-    this._$buttonApply = this._$rootElement.find('.guests-input__button-simple-apply').find('.button');
+    this._$buttonClear = this._$rootElement.find('.guests-input__button-clear').find('.button');
+    this._$buttonApply = this._$rootElement.find('.guests-input__button-apply').find('.button');
   }
 
   _addEventListeners() {
@@ -40,7 +40,7 @@ export default class GuestsInput {
           let result = this._placeholder;
           const babiesCount = itemCount[this._babies.id];
           const guestsCount = totalItems - babiesCount;
-          const $buttonClear = $($iqdropdown).find('.guests-input__button-simple-clear').find('.button');
+          const $buttonClear = $($iqdropdown).find('.guests-input__button-clear').find('.button');
 
           if (totalItems > 0) {
             $buttonClear.removeClass('button_hidden');

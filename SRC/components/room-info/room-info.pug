@@ -7,7 +7,7 @@ mixin room-info({isDisabled, id, images, isShowNavBtns, number, isLux, luxText, 
     .room-info__wrapper-for-image-slider
       +image-slider({id: id, image_index: 1, images: images, isShowNavBtns: isShowNavBtns})
     .room-info__data
-      h3.room-info__wrapper-for-room-info-caption
+      h3.room-info__room-info-caption
         +room-info-caption({number: number, isLux: isLux, luxText, costValue: cost, costText: costText})
       .room-info__feedback
         +rate-button({id: id, count: starsCount, isDisabled})

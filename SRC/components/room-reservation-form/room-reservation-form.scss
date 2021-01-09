@@ -9,7 +9,7 @@
   border-radius: 4px;
 
   &__wrapper-for-inputs,
-  &__wrapper-for-dates {
+  &__datepicker-input-range {
     border: 0 none;
   }
 
@@ -30,7 +30,7 @@
     color: $toxin-color-black-100;
   }
 
-  &__wrapper-for-dates {
+  &__datepicker-input-range {
     margin-bottom: 20px;
   }
 

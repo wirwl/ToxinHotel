@@ -16,7 +16,7 @@ mixin sign-up-form({caption="Caption", isThereAccount, textInputName, textInputS
         li.sign-up-form__item
           +radios-list(radiosListSex)
       ul.sign-up-form__list.sign-up-form__wrapper
-        li
+        li.sign-up-form__masked-input
           +masked-input(maskedInputBirthday)                            
       ul.sign-up-form__list
         li.sign-up-form__item
@@ -25,9 +25,9 @@ mixin sign-up-form({caption="Caption", isThereAccount, textInputName, textInputS
           +text-input(textInputPassword)        
         li.sign-up-form__item
           +toggle(toggleSpecialOffer)        
-      .sign-up-form__wrapper-for-sign-up-button
+      .sign-up-form__button-pay
         +button({styleType:"arrowed", type: "submit", text: buttonSubmit.text})        
-      .sign-up-form__wrapper-for-sign-in-button
+      .sign-up-form__wrapper
         p.sign-up-form__sign-in-text #{isThereAccount}
-        .sign-up-form_wrapper-sign-in-button
+        .sign-up-form__button
           +button({styleType: "unfilled", dynamicWidth: true, text: buttonSignin.text, link: buttonSignin.link})

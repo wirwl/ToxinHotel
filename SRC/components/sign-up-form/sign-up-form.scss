@@ -39,11 +39,11 @@
     margin-bottom: 10px;
   }
 
-  &__wrapper-for-sign-up-button {
+  &__button-pay {
     margin-bottom: 29px;
   }
 
-  &__wrapper-for-sign-in-button {
+  &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,14 +53,14 @@
     color: #000;
   }
 
-  &_wrapper-sign-in-button {
+  &__button {
     min-width: 99px;
   }
 
   @media (max-width: 360px) {
     padding: 20px 10px 15px;
 
-    &__wrapper-for-sign-up-button {
+    &__button-pay {
       margin-bottom: 19px;
     }
   }

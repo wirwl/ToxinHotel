@@ -15,9 +15,9 @@ mixin sign-in-form(data={})
           +text-input(textInputEmail)
         li.sign-in-form__item
           +text-input(textInputPassword)        
-      .sign-in-form__button-arrow
+      .sign-in-form__button-pay
         +button({styleType: "arrowed", type: "submit", text: buttonSignIn.text})        
       .sign-in-form__wrapper-for-sign-in-button
         p.sign-in-form__sign-in-text #{textThereIsNotAccount}
-        .sign-in-form__wrapper-sign-up-button
+        .sign-in-form__button
           +button({styleType: "unfilled", isDynamicWidth: true, text: buttonSignUp.text, link: buttonSignUp.link})

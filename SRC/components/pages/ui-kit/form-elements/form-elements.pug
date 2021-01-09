@@ -41,92 +41,92 @@ mixin form-elements(data={})
           +text-input(textInput)
         li.form-elements__column-left-item
           +text-input(textInputFocused)
-        li.form-elements__column-left-item.form-elements__column-left-wrapper-for-guests-input0
+        li.form-elements__column-left-item.form-elements__guests-input-closed
           +guests-input(guestsInputDropdown)
-        li.form-elements__column-left-item.form-elements__column-left-wrapper-for-masked-input
+        li.form-elements__column-left-item.form-elements__masked-input
           +masked-input(maskedInput)
-        li.form-elements__column-left-item.form-elements__column-left-wrapper-for-datepicker-inputs
+        li.form-elements__column-left-item.form-elements__datepicker-input-range
           +datepicker-input-range(dirTwoInputs)
-        li.form-elements__column-left-item.form-elements__column-left-wrapper-for-fdd-input                    
+        li.form-elements__column-left-item.form-elements__datepicker-input-range-single
           +datepicker-input-range(dirOneInputs)
-        li.form-elements__column-left-item.form-elements__column-left-wrapper-for-subscribe-input
+        li.form-elements__column-left-item.form-elements__subscribe-input
           +subscribe-input(subscribeInput)
         li.form-elements__column-left-item
-          .form-elements__column-left-comfort-input
+          .form-elements__comfort-input
             +comfort-input(comfortInput)
-        li.form-elements__column-left-item.form-elements__column-left-wrapper-for-comfort-input
-          .form-elements__column-left-comfort-input
+        li.form-elements__column-left-item.form-elements__comfort-input-expanded
+          .form-elements__comfort-input
             +comfort-input(comfortInputExpanded)
         li.form-elements__column-left-item.form-elements__expandable-checkbox-list-hide
           +expandable-checkbox-list(expandableCheckboxList)
         li.form-elements__column-left-item.form-elements__expandable-checkbox-list-show                                                            
           +expandable-checkbox-list(expandableCheckboxListExpanded)
-        li.form-elements__column-left-item.form-elements__column-left-wrapper-for-comfort-status-list
+        li.form-elements__column-left-item.form-elements__comfort-status-list
           +comfort-status-list(comfortStatusList)
     .form-elements__column-wrapper            
       .form-elements__columns-middle-right
         .form-elements__column-middle
           ul.form-elements__column-middle-list
-            li.form-elements__column-middle-item.form-elements__column-middle-wrapper-for-checkboxes-list
+            li.form-elements__column-middle-item.form-elements__checkboxes-list
               +checkboxes-list(checkboxesList)               
-            li.form-elements__column-middle-item.form-elements__column-middle-wrapper-for-radios-list
+            li.form-elements__column-middle-item.form-elements__radios-list
               +radios-list(radiosList)
-            li.form-elements__column-middle-item.form-elements__column-middle-wrapper-for-toggles-list 
+            li.form-elements__column-middle-item.form-elements__toggles-list 
               +toggles-list(togglesList)         
-            li.form-elements__column-middle-item.form-elements__column-middle-wrapper-for-likes-button-list
-              .form-elements__likes-buttons
-                h3.form-elements__likes-button-list-caption #{likeButtonCaption}
-                ul.form-elements__likes-button-list
-                  li.form-elements__likes-button-list-item
+            li.form-elements__column-middle-item.form-elements__like-buttons
+              .form-elements__like-buttons-wrapper
+                h3.form-elements__like-buttons-caption #{likeButtonCaption}
+                ul.form-elements__like-buttons-list
+                  li.form-elements__like-button
                     +like-button(likeButton)
-                  li.form-elements__likes-button-list-item
+                  li.form-elements__like-button
                     +like-button(likeButtonChecked)
-            li.form-elements__column-middle-item.form-elements__column-middle-wrapper-for-rate-buttons-list
-              .form-elements__rate-buttons
-                h3.form-elements__rate-buttons-list-caption #{rateButtonCaption}
+            li.form-elements__column-middle-item.form-elements__rate-buttons
+              .form-elements__rate-buttons-wrapper
+                h3.form-elements__rate-buttons-caption #{rateButtonCaption}
                 ul.form-elements__rate-buttons-list
-                  li.form-elements__rate-buttons-list-item
+                  li.form-elements__rate-button
                     +rate-button(rateButton4)
-                  li.form-elements__rate-buttons-list-item
+                  li.form-elements__rate-button
                     +rate-button(rateButton5)
-            li.form-elements__column-middle-item.form-elements__column-middle-wrapper-for-guests-input1
+            li.form-elements__column-middle-item.form-elements__guests-input
               +guests-input(guestsInput)
-            li.form-elements__column-middle-item.form-elements__column-middle-wrapper-for-rich-checkboxes-list
+            li.form-elements__column-middle-item.form-elements__rich-checkboxes-list
               +checkboxes-list(checkboxesListRich)                                                 
         .form-elements__column-right
           ul.form-elements__column-right-list
-            li.form-elements__column-right-item.form-elements__column-right-wrapper-for-range-slider
+            li.form-elements__column-right-item.form-elements__range-slider
               +range-slider(rangeSlider)
-            li.form-elements__column-right-item.form-elements__column-right-wrapper-for-buttons-list
+            li.form-elements__column-right-item.form-elements__buttons
               h3.form-elements__buttons-list-caption #{buttonsCaption}
               ul.form-elements__buttons-list    
                 li.form-elements__buttons-list-item
                   ul.form-elements__two-buttons-list
-                    li.form-elements__two-buttons-list-item.form-elements__two-buttons-list-item_width
+                    li.form-elements__two-buttons-item.form-elements__button
                       +button(buttonFilled)
-                    li.form-elements__two-buttons-list-item.form-elements__two-buttons-list-item_width
+                    li.form-elements__two-buttons-item.form-elements__button
                       +button(buttonFilledDisabled)
                 li.form-elements__buttons-list-item
                   ul.form-elements__two-buttons-list
-                    li.form-elements__two-buttons-list-item.form-elements__two-buttons-list-item_width
+                    li.form-elements__two-buttons-item.form-elements__button
                       +button(buttonBordered)
-                    li.form-elements__two-buttons-list-item.form-elements__two-buttons-list-item_width
+                    li.form-elements__two-buttons-item.form-elements__button
                       +button(buttonBorderedDisabled)
                 li.form-elements__buttons-list-item.form-elements__simple-buttons
                   ul.form-elements__two-buttons-list.form-elements__two-buttons-list3
-                    li.form-elements__two-buttons-list-item
+                    li.form-elements__two-buttons-item
                       +button(buttonSimple)
-                    li.form-elements__two-buttons-list-item
+                    li.form-elements__two-buttons-item
                       +button(buttonSimpleGray)
                 li.form-elements__buttons-list-item
                   +button(buttonArrow)
-            li.form-elements__column-right-item.form-elements__pagination-wrapper
+            li.form-elements__column-right-item.form-elements__px-pagination
               h3.form-elements__pagination-wrapper-caption #{paginationCaption}
               +px-pagination(pagination)
-            li.form-elements__column-right-item.form-elements__column-right-wrapper-for-guests-input2
+            li.form-elements__column-right-item.form-elements__guests-input-open
               +guests-input(guestsInputOpen)
-            li.form-elements__column-right-item.form-elements__column-right-wrapper-for-bullet-list
-              h3.form-elements__column-right-bullet-list-caption #{bulletsListCaption}
+            li.form-elements__column-right-item.form-elements__bullets-list
+              h3.form-elements__bullets-list-caption #{bulletsListCaption}
               +bullets-list(bulletsList)
-      .form-elements__row
+      .form-elements__feedback
         +feedback(feedback)

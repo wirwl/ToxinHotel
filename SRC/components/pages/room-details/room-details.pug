@@ -21,8 +21,8 @@ mixin room-details(data={})
       .room-details__info
         section.room-details__column-left
           .room-details__comfort-status-list-and-donut-chart
-            .room-details__wrapper-comfort-status-list
-              h2.room-details__wrapper-comfort-status-list-caption #{comfortStatusCaption}
+            .room-details__comfort-status-list
+              h2.room-details__comfort-status-list-caption #{comfortStatusCaption}
               +comfort-status-list(comfortStatusList)
             .room-details__donut-chart
               +donut-chart(donutChart)

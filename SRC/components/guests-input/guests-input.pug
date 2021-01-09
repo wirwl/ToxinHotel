@@ -7,7 +7,7 @@ mixin guests-input({isOpen, caption, items, buttonClear, buttonApply}={})
       label.guests-input__caption #{caption}
     +iqdropdown({isOpen: isOpen, items: items})
       .guests-input__buttons
-        .guests-input__button-simple-clear
+        .guests-input__button-clear
           +button({text: buttonClear.text, isGrayed: true})
-        .guests-input__button-simple-apply
+        .guests-input__button-apply
           +button({text: buttonApply.text})

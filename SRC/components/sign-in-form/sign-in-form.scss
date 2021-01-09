@@ -32,7 +32,7 @@
     margin-bottom: 10px;
   }
 
-  &__button-arrow {
+  &__button-pay {
     margin-bottom: 29px;
   }
 
@@ -42,7 +42,7 @@
     align-items: center;
   }
 
-  &__wrapper-sign-up-button {
+  &__button {
     min-width: 99px;
   }
 
@@ -53,7 +53,7 @@
   @media (max-width: 360px) {
     padding: 18px 10px 11px;
 
-    &__button-arrow {
+    &__button-pay {
       margin-bottom: 19px;
     }
   }

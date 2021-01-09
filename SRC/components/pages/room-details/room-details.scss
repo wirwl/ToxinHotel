@@ -65,18 +65,18 @@ body {
     line-height: 24px;
   }
 
-  &__wrapper-comfort-status-list {
+  &__comfort-status-list {
     margin-right: 15.07042253521127%;
   }
 
-  &__wrapper-comfort-status-list-caption,
+  &__comfort-status-list-caption,
   &__bullets-list-caption,
   &__cancellation-caption {
     font-size: 19px;
     font-family: $toxin-font-open-sans;
   }
 
-  &__wrapper-comfort-status-list-caption {
+  &__comfort-status-list-caption {
     margin-bottom: 19px;
     text-transform: none;
   }
@@ -125,7 +125,7 @@ body {
   }
 
   @media (max-width: 1085px) {
-    &__wrapper-comfort-status-list {
+    &__comfort-status-list {
       margin-right: 30px;
     }
 

@@ -20,7 +20,7 @@ body {
     background-size: cover;
   }
 
-  &__form {
+  &__room-reservation-form {
     max-width: 1160px;
     margin: 0 auto 0 9.375%;
   }
@@ -38,7 +38,7 @@ body {
   @media (max-width: 1195px) {
     min-height: 740px;
 
-    &__form {
+    &__room-reservation-form {
       max-width: 380px;
       margin-left: auto;
       margin-right: auto;

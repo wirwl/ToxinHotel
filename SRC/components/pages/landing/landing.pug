@@ -6,7 +6,7 @@ mixin landing({headerData, roomReservationForm, advertisingText, footerData}={})
   .landing
     +header(headerData)
     main.landing__main-content
-      section.landing__form
+      section.landing__room-reservation-form
         +room-reservation-form(roomReservationForm)
       p.landing__text #{advertisingText}
     +footer(footerData)
