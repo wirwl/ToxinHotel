@@ -18,9 +18,9 @@ export default class DatepickerInputRange {
 
   _initPluginDatepicker() {
     if (this._isTwoDatepickerInputs) {
-      this._datepicker.update('onSelect', ((fd) => {
-        this._$inputs[0].value = fd.split('-')[0] || '';
-        this._$inputs[1].value = fd.split('-')[1] || '';
+      this._datepicker.update('onSelect', ((formattedDate) => {
+        this._$inputs[0].value = formattedDate.split('-')[0] || '';
+        this._$inputs[1].value = formattedDate.split('-')[1] || '';
       }));
     } else {
       this._datepicker.update('dateFormat', 'dd M');

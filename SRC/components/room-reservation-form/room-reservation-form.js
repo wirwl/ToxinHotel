@@ -14,9 +14,9 @@ export default class RoomReservationForm {
   _initPluginDatePicker() {
     if (this._$arrival.length) {
       this._$arrival.datepicker({
-        onSelect: (fd) => {
-          this._$arrival.val(fd.split('-')[0]);
-          this._$checkout.val(fd.split('-')[1]);
+        onSelect: (formattedDate) => {
+          this._$arrival.val(formattedDate.split('-')[0]);
+          this._$checkout.val(formattedDate.split('-')[1]);
         },
       });
     }

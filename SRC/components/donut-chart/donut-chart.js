@@ -13,22 +13,22 @@ export default class DonutChart {
     }
   }
 
-  _drawLine(ctx, startX, startY, endX, endY, color) {
-    ctx.beginPath();
-    ctx.lineWidth = 2;
-    ctx.moveTo(startX, startY);
-    ctx.lineTo(endX, endY);
-    ctx.strokeStyle = color;
-    ctx.stroke();
+  _drawLine(context, startX, startY, endX, endY, color) {
+    context.beginPath();
+    context.lineWidth = 2;
+    context.moveTo(startX, startY);
+    context.lineTo(endX, endY);
+    context.strokeStyle = color;
+    context.stroke();
   }
 
-  _drawPieSlice(ctx, centerX, centerY, radius, startAngle, endAngle, color) {
-    ctx.fillStyle = color;
-    ctx.beginPath();
-    ctx.moveTo(centerX, centerY);
-    ctx.arc(centerX, centerY, radius, startAngle, endAngle, true);
-    ctx.closePath();
-    ctx.fill();
+  _drawPieSlice(context, centerX, centerY, radius, startAngle, endAngle, color) {
+    context.fillStyle = color;
+    context.beginPath();
+    context.moveTo(centerX, centerY);
+    context.arc(centerX, centerY, radius, startAngle, endAngle, true);
+    context.closePath();
+    context.fill();
   }
 
   _drawPieSliceEx(canvas, startAngel, endAngel, color) {
