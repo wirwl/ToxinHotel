@@ -1,9 +1,5 @@
 import './search-room.scss';
 
-import 'ion-rangeslider/css/ion.rangeSlider.css';
-import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
-import 'air-datepicker/dist/css/datepicker.css';
-
 import HeaderMenu from '../../header-menu/header-menu';
 import DatepickerInputRange from '../../datepicker-input-range/datepicker-input-range';
 import GuestsInput from '../../guests-input/guests-input';

@@ -1,9 +1,5 @@
 import './form-elements.scss';
 
-import 'ion-rangeslider/css/ion.rangeSlider.css';
-import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
-import 'air-datepicker/dist/css/datepicker.css';
-
 import GuestsInput from '../../../guests-input/guests-input';
 import MaskedInput from '../../../masked-input/masked-input';
 import ComfortInput from '../../../comfort-input/comfort-input';
