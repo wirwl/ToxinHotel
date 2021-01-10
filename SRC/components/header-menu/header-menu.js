@@ -16,20 +16,20 @@ export default class HeaderMenu {
   }
 
   _closeAllOpenMenuItems($li) {
-    const ulChild = $li.find('> ul');
-    ulChild.css('display', 'none');
-    ulChild.children().each((index, element) => { this._closeAllOpenMenuItems($(element)); });
+    const menu = $li.find('> ul');
+    menu.css('display', 'none');
+    menu.children().each((index, element) => { this._closeAllOpenMenuItems($(element)); });
   }
 
   _handleMenuLinkClick(e) {
-    const li = $(e.currentTarget).parent();
-    const ul = li.find('> ul');
-    const ulParent = li.parent();
-    ulParent.children().each((index, element) => {
+    const menuItem = $(e.currentTarget).parent();
+    const childMenu = menuItem.find('> ul');
+    const parentListItemForChildMenu = menuItem.parent();
+    parentListItemForChildMenu.children().each((index, element) => {
       const item = $(element);
-      if (item.is(li)) {
-        if (ul.css('display') === 'none') ul.css('display', 'block');
-        else ul.css('display', 'none');
+      if (item.is(menuItem)) {
+        if (childMenu.css('display') === 'none') childMenu.css('display', 'block');
+        else childMenu.css('display', 'none');
       } else { this._closeAllOpenMenuItems(item); }
     });
   }
