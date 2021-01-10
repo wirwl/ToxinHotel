@@ -11,13 +11,13 @@ mixin color-example({color, description="Description", hex}={})
     when "dark-shade5%"
       - color = "color-example__square_dark-shade_5percent"
     when "purple"
-      - color = "color-example__square_Purple"
+      - color = "color-example__square_purple"
     when "green"
-      - color = "color-example__square_Green"
+      - color = "color-example__square_green"
     default 
       - color = "color-example__square_dark-shade_100percent"
   .color-example
     .color-example__square(class = color)
-    .color-example__textDesc 
+    .color-example__text-description
       p.color-example__title #{description}
       p.color-example__text #{hex}

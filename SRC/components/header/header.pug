@@ -5,7 +5,7 @@ include ../button/button
 mixin header(data={})
   -
     const {
-      isAuth, logo_path, login = "Login", menu, 
+      isAuth, logoPath, login = "Login", menu, 
       reg = "Register", name = "Cosmin Negoita", 
       isHeader, buttonSignIn, buttonSignUp
     } = data
@@ -13,7 +13,7 @@ mixin header(data={})
     .header__wrapper
       h1.header__main-title Бронирование номера в отеле
       .header__logo
-        +logo({pathImg: logo_path, pathUrl: "landing.html"})
+        +logo({pathImg: logoPath, pathUrl: "landing.html"})
       .header__menu-and-auth-area
         .header__header-menu
           +header-menu(menu)

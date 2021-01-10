@@ -24,8 +24,8 @@ export default class DatepickerInputRange {
       }));
     } else {
       this._datepicker.update('dateFormat', 'dd M');
-      this._datepicker.update('onSelect', (fd, _, picker) => {
-        picker.$el.val(fd.toLowerCase());
+      this._datepicker.update('onSelect', (formattedDate, _, picker) => {
+        picker.$el.val(formattedDate.toLowerCase());
       });
     }
   }

@@ -17,11 +17,11 @@ $toxin-gradient-black-prev: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0
 $toxin-gradient-black-next: linear-gradient(270deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
 $toxin-gradient-cream-brulee-wax-flower: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
 $toxin-gradient-gray-east-bay: linear-gradient(180deg, #919191 0%, #3d4975 100%);
-$toxin-font-material-icon: material-icons, Arial, sans-serif;
-$toxin-font-montserrat: montserrat, Arial, sans-serif;
-$toxin-font-open-sans: open-sans, Arial, sans-serif;
-$toxin-font-quicksand: quicksand, Arial, sans-serif;
-$toxin-font-awesome: awesome-5-brands-regular-400, Arial, sans-serif;
+$toxin-font-material-icon: material-icons, arial, sans-serif;
+$toxin-font-montserrat: montserrat, arial, sans-serif;
+$toxin-font-open-sans: open-sans, arial, sans-serif;
+$toxin-font-quicksand: quicksand, arial, sans-serif;
+$toxin-font-awesome: awesome-5-brands-regular-400, arial, sans-serif;
 
 @mixin reset {
   box-sizing: border-box;

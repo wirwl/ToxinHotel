@@ -11,7 +11,7 @@ export default class LikeButton {
   _handleRootElementClassClick(e) {
     const $button = $(e.currentTarget);
     const $count = $button.parent().find('.js-like-button__count');
-    const currentValue = +$count.text();
+    const currentValue = parseInt($count.text(), 10);
     $count.text($button.is(':checked') ? currentValue + 1 : currentValue - 1);
   }
 }

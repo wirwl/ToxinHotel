@@ -1,7 +1,7 @@
 include ../logo/logo
 
-mixin logo-with-text({logo_path, desc="Description"}={})
+mixin logo-with-text({logoPath, desc="Description"}={})
   .logo-with-text
     .logo-with-text__logo
-      +logo({pathImg: logo_path, pathUrl: "landing.html"})
+      +logo({pathImg: logoPath, pathUrl: "landing.html"})
     p.logo-with-text__text #{desc}

@@ -1,7 +1,7 @@
 - 
   const mock = "/mock-address/change-me"
 
-  const menu_in_header = [
+  const menuInHeader = [
     {text: "О нас", link: mock},
     {
       text: "Услуги", link: "#", 
@@ -25,7 +25,7 @@
     },                                    
   ]
 
-  const menu_in_footer = [
+  const menuInFooter = [
     {
       title: "Навигация",
       items: [
@@ -54,22 +54,22 @@
     }
   ]
 
-  const header_data = {
-    logo_path: "../images/components/logo/logo.svg", 
+  const headerData = {
+    logoPath: "../images/components/logo/logo.svg", 
     login: "Войти", 
     reg: "Зарегистрироваться", 
     isAuth: false, 
-    menu: menu_in_header,
+    menu: menuInHeader,
     isHeader: true,
     buttonSignIn: {text: "Войти", link: "sign-in.html"},    
     buttonSignUp: {text: "Зарегистрироваться", link: "sign-up.html"}
   }
-  const footer_data = {
+  const footerData = {
     logoWithText: {
-      logo_path: "../images/components/logo/logo.svg", 
+      logoPath: "../images/components/logo/logo.svg", 
       desc: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»"
     },    
-    menu: menu_in_footer,     
+    menu: menuInFooter,     
     sub: {caption: "Подписка", desc: "Получайте специальные предложения и новости сервиса", subscribeInput: {placeholder: "Email"}},
     copyright: "Copyright © 2018 Toxin отель. Все права защищены.",
     socialButtons: ["twitter", "facebook-square", "instagram"]

@@ -4,7 +4,7 @@ mixin footer-menu(items=[{title: 'Error: items is not defined'}])
       ul.footer-menu__list
         li.footer-menu__title #{item.title}
         if item.items
-          for sub_item in item.items
-            - const {link, text} = sub_item
+          for subItem in item.items
+            - const {link, text} = subItem
             li.footer-menu__item
               a.footer-menu__link(href = link) #{text}
