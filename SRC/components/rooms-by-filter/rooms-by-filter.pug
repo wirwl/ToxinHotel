@@ -2,11 +2,11 @@ include ../room-info/room-info
 include ../px-pagination/px-pagination
 
 mixin rooms-by-filter({title="Title", roomInfos=[], pagination}={})
-  section.rooms
-    h2.rooms__title #{title}
-    ul.rooms__list
+  section.rooms-by-filter
+    h2.rooms-by-filter__title #{title}
+    ul.rooms-by-filter__list
       for roomInfo in roomInfos
-        li.rooms__item
+        li.rooms-by-filter__item
           +room-info(roomInfo)
-    .rooms__px-pagination
+    .rooms-by-filter__px-pagination
       +px-pagination(pagination)
