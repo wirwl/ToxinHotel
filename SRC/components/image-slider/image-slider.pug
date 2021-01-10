@@ -6,7 +6,7 @@ mixin image-slider({images=[], id, image_index, isShowNavBtns}={})
       input.image-slider__input(id = idImg + (index + 1) type = "radio" name = id + "-radio-btn" checked = ((image_index == index+1) && "checked"))
       .image-slider__container
         .image-slider__slide
-          img.image-slider__image(src = image alt = "alt-" + idImg + (index + 1))
+          img.image-slider__image(src = image alt = "image-slider")
         .image-slider__nav
           label.image-slider__label.image-slider__prev(class = isShowNavBtns && "image-slider__label_shown" content = "keyboard_arrow_left" for = idImg + (index == 0 ? length : index)).material-icons
           label.image-slider__label.image-slider__next(class = isShowNavBtns && "image-slider__label_shown" content = "keyboard_arrow_right" for = idImg + (index == length-1 ? 1 : index + 2)).material-icons
