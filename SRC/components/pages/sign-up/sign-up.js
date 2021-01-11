@@ -1,7 +1,6 @@
 import './sign-up.scss';
 
-import HeaderMenu from '../../header-menu/header-menu';
-import MaskedInput from '../../masked-input/masked-input';
+import * as c from 'components/components';
 
-new HeaderMenu();
-new MaskedInput('.js-masked-input__input');
+new c.HeaderMenu();
+new c.MaskedInput('.js-masked-input__input');

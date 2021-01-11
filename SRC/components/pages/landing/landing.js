@@ -1,13 +1,10 @@
 import './landing.scss';
 
-import HeaderMenu from '../../header-menu/header-menu';
-import GuestsInput from '../../guests-input/guests-input';
-import DatepickerInputRange from '../../datepicker-input-range/datepicker-input-range';
-import RoomReservationForm from '../../room-reservation-form/room-reservation-form';
+import * as c from 'components/components';
 
-new HeaderMenu();
+new c.HeaderMenu();
 
-new GuestsInput({
+new c.GuestsInput({
   placeholder: 'Сколько гостей',
   rootElementClass: '.js-guests-input',
   guests: { id: ['adults', 'children'], singular: 'гость', plurals: ['гостя', 'гостей'] },
@@ -16,7 +13,7 @@ new GuestsInput({
 
 const $datepickerInputRanges = $('.js-datepicker-input-range');
 $datepickerInputRanges.each(
-  (_, datepickerInputRange) => new DatepickerInputRange(datepickerInputRange),
+  (_, datepickerInputRange) => new c.DatepickerInputRange(datepickerInputRange),
 );
 
-new RoomReservationForm('.room-reservation-form__arrival', '.room-reservation-form__checkout');
+new c.RoomReservationForm('.room-reservation-form__arrival', '.room-reservation-form__checkout');

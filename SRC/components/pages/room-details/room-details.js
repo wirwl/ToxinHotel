@@ -1,18 +1,12 @@
 import './room-details.scss';
 
-import HeaderMenu from '../../header-menu/header-menu';
-import Flexslider from '../../flexslider/flexslider';
-import DonutChart from '../../donut-chart/donut-chart';
-import GuestsInput from '../../guests-input/guests-input';
-import DatepickerInputRange from '../../datepicker-input-range/datepicker-input-range';
-import OrderInfoForm from '../../order-info-form/order-info-form';
-import LikeButton from '../../like-button/like-button';
+import * as c from 'components/components';
 
-new HeaderMenu();
+new c.HeaderMenu();
 
-new Flexslider({ rootElementClass: '.flexslider', options: { animation: 'fade', touch: true } });
+new c.Flexslider({ rootElementClass: '.flexslider', options: { animation: 'fade', touch: true } });
 
-new DonutChart({
+new c.DonutChart({
   id: 'donut-chart',
   width: 120,
   height: 120,
@@ -23,9 +17,9 @@ new DonutChart({
   ],
 });
 
-new LikeButton('.js-like-button__input');
+new c.LikeButton('.js-like-button__input');
 
-new GuestsInput({
+new c.GuestsInput({
   placeholder: 'Сколько гостей',
   rootElementClass: '.js-guests-input',
   guests: { id: ['adults', 'children'], singular: 'гость', plurals: ['гостя', 'гостей'] },
@@ -34,7 +28,7 @@ new GuestsInput({
 
 const $datepickerInputRanges = $('.js-datepicker-input-range');
 $datepickerInputRanges.each(
-  (_, datepickerInputRange) => new DatepickerInputRange(datepickerInputRange),
+  (_, datepickerInputRange) => new c.DatepickerInputRange(datepickerInputRange),
 );
 
-new OrderInfoForm('.order-info-form__arrival', '.order-info-form__checkout');
+new c.OrderInfoForm('.order-info-form__arrival', '.order-info-form__checkout');

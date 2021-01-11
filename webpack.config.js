@@ -17,6 +17,11 @@ module.exports = smp.wrap((_, argv) => {
   const dtValue = isDev ? 'source-map' : 'none';
 
   return {
+    resolve: {
+      alias: {
+        components: path.resolve(__dirname, 'SRC/components'),
+      },
+    },
     devServer: {
       stats: 'errors-warnings',
     },

@@ -1,25 +1,19 @@
 import './search-room.scss';
 
-import HeaderMenu from '../../header-menu/header-menu';
-import DatepickerInputRange from '../../datepicker-input-range/datepicker-input-range';
-import GuestsInput from '../../guests-input/guests-input';
-import RangeSlider from '../../range-slider/range-slider';
-import ComfortInput from '../../comfort-input/comfort-input';
-import ExpandableCheckboxList from '../../expandable-checkbox-list/expandable-checkbox-list';
-import PxPagination from '../../px-pagination/px-pagination';
+import * as c from 'components/components';
 
-new HeaderMenu();
+new c.HeaderMenu();
 
-new GuestsInput({
+new c.GuestsInput({
   placeholder: 'Сколько гостей',
   rootElementClass: '.js-guests-input',
   guests: { id: ['adults', 'children'], singular: 'гость', plurals: ['гостя', 'гостей'] },
   babies: { id: 'babies', singular: 'младенец', plurals: ['младенца', 'младенев'] },
 });
 
-new RangeSlider('.js-range-slider__input', '.js-range-slider__values');
+new c.RangeSlider('.js-range-slider__input', '.js-range-slider__values');
 
-new ComfortInput({
+new c.ComfortInput({
   placeholder: 'Выберите удобства',
   rootElementClass: '.js-comfort-input',
   items: [
@@ -29,14 +23,14 @@ new ComfortInput({
   ],
 });
 
-new ExpandableCheckboxList('.js-expandable-checkbox-list__caption');
+new c.ExpandableCheckboxList('.js-expandable-checkbox-list__caption');
 
 const $datepickerInputRanges = $('.js-datepicker-input-range');
 $datepickerInputRanges.each(
-  (_, datepickerInputRange) => new DatepickerInputRange(datepickerInputRange),
+  (_, datepickerInputRange) => new c.DatepickerInputRange(datepickerInputRange),
 );
 
 const $paginations = $('.px-pagination');
 $paginations.each(
-  (_, pagination) => new PxPagination(pagination),
+  (_, pagination) => new c.PxPagination(pagination),
 );

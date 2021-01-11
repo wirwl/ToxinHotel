@@ -7,12 +7,18 @@ module.exports = {
   extends: [
     'airbnb-base',
   ],
+  'import/resolver': {
+    node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        moduleDirectory: ['node_modules', 'SRC'],
+    },
+  },
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
   },
   parserOptions: {
-    ecmaVersion: 2018,
+    ecmaVersion: 2020,
     sourceType: 'module',
   },
   rules: {

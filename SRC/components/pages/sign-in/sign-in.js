@@ -1,5 +1,5 @@
 import './sign-in.scss';
 
-import HeaderMenu from '../../header-menu/header-menu';
+import * as c from 'components/components';
 
-new HeaderMenu();
+new c.HeaderMenu();
