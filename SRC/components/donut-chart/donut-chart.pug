@@ -1,7 +1,7 @@
 include ../legend-list/legend-list
 
 mixin donut-chart({caption="Caption", id, voices=0, legendList}={})
-  figure.donut-chart
+  figure.donut-chart.js-donut-chart
     h2.donut-chart__caption #{caption}
     .donut-chart__wrapper
       canvas(id = id data-voices = voices).donut-chart__canvas

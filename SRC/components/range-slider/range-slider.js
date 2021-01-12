@@ -1,14 +1,14 @@
 import 'ion-rangeslider';
 
 export default class RangeSlider {
-  constructor(rootElementClass, valuesClass) {
-    this._initMembers(rootElementClass, valuesClass);
+  constructor(rootElementClass) {
+    this._initMembers(rootElementClass);
     this._initPluginIonRangeSlider();
   }
 
   _initPluginIonRangeSlider() {
-    if (this._$rootElementClass.length) {
-      this._$rootElementClass.ionRangeSlider({
+    if (this._$input.length) {
+      this._$input.ionRangeSlider({
         skin: 'round',
         type: 'double',
         hide_min_max: true,
@@ -27,6 +27,7 @@ export default class RangeSlider {
 
   _initMembers(rootElementClass, valuesClass) {
     this._$rootElementClass = $(rootElementClass);
-    this._$values = $(valuesClass);
+    this._$values = this._$rootElementClass.find('.js-range-slider__values');
+    this._$input = this._$rootElementClass.find('.js-range-slider__input');
   }
 }

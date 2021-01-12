@@ -13,7 +13,7 @@ export default class DatepickerInputRange {
   _initMembers() {
     this._$inputs = this._$htmlRootElement.find('.datepicker-input__input');
     this._isTwoDatepickerInputs = this._$inputs.length > 1;
-    this._datepicker = new ToxinDatepicker({ rootElementClass: this._$inputs[0], buttonClearText: 'Очистить', buttonApplyText: 'Применить' });
+    this._datepicker = new ToxinDatepicker(this._$inputs[0], { buttonClearText: 'Очистить', buttonApplyText: 'Применить' });
   }
 
   _initPluginDatepicker() {

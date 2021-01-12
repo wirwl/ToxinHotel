@@ -1,15 +1,19 @@
 export default class DonutChart {
-  constructor(data) {
+  constructor(htmlRootElement, data) {
+    this._$htmlRootElement = $(htmlRootElement);
     this._initMembers(data);
     this._drawDonutChart(data.items);
   }
 
-  _initMembers({ id, width, height }) {
-    this._canvas = document.getElementById(id);
-    if (this._canvas) {
-      this._context = this._canvas.getContext('2d');
-      this._canvas.width = width;
-      this._canvas.height = height;
+  _initMembers({ width, height }) {
+    this._$canvas = this._$htmlRootElement.find('.donut-chart__canvas');
+    if (this._$canvas.length) {
+      this._canvas = this._$canvas[0];
+      if (this._canvas) {
+        this._context = this._canvas.getContext('2d');
+        this._canvas.width = width;
+        this._canvas.height = height;
+      }
     }
   }
 
@@ -72,7 +76,7 @@ export default class DonutChart {
       Object.keys(data).forEach((key) => {
         if (data[key].count > 0) {
           this._drawPieSlice(
-            this._canvas.getContext('2d'),
+            this._context,
             this._canvas.width / 2,
             this._canvas.height / 2,
             Math.min(this._canvas.width / 2, this._canvas.height / 2),
@@ -81,7 +85,7 @@ export default class DonutChart {
           );
           const size = Math.min(this._canvas.width / 2, this._canvas.height / 2);
           this._drawPieSlice(
-            this._canvas.getContext('2d'),
+            this._context,
             this._canvas.width / 2,
             this._canvas.height / 2,
             size - 10 * 0.4,

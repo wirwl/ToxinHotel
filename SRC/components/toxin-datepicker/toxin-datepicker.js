@@ -1,7 +1,8 @@
 import 'air-datepicker/dist/js/datepicker';
 
 export default class ToxinDatepicker {
-  constructor(data) {
+  constructor(rootElementClass, data) {
+    this._$rootElementClass = $(rootElementClass);    
     this._initMembers(data);
     this._initPluginDatepicker();
     this._addButtons();
@@ -10,8 +11,7 @@ export default class ToxinDatepicker {
     return this._datepicker;
   }
 
-  _initMembers({ rootElementClass, buttonClearText = 'Clear', buttonApplyText = 'Apply' }) {
-    this._$rootElementClass = $(rootElementClass);
+  _initMembers({buttonClearText = 'Clear', buttonApplyText = 'Apply' }) {    
     this._htmlButtonsTemplate = `<div class="datepicker__buttons">
       <span class="datepicker__button-clear js-datepicker__button-clear">${buttonClearText}</span>
       <span class="datepicker__button-apply js-datepicker__button-apply">${buttonApplyText}</span>

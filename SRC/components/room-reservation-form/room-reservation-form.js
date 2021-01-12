@@ -1,14 +1,15 @@
 export default class RoomReservationForm {
-  constructor(arrivalClass, checkoutClass) {
-    this._initMembers(arrivalClass, checkoutClass);
+  constructor(htmlRootElement) {
+    this._$htmlRootElement = $(htmlRootElement);
+    this._initMembers();
     this._initPluginDatePicker();
     this._bindThis();
-    this._addEventListeners();
+    this._addEventListeners();    
   }
 
   _initMembers(arrivalClass, checkoutClass) {
-    this._$arrival = $(arrivalClass).find('.datepicker-input__input');
-    this._$checkout = $(checkoutClass).find('.datepicker-input__input');
+    this._$arrival = this._$htmlRootElement.find('.room-reservation-form__arrival').find('.datepicker-input__input');
+    this._$checkout = this._$htmlRootElement.find('.room-reservation-form__checkout').find('.datepicker-input__input');
   }
 
   _initPluginDatePicker() {

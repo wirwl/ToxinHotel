@@ -1,15 +1,9 @@
 import 'inputmask/dist/jquery.inputmask';
 
 export default class MaskedInput {
-  constructor(rootElementClass) {
-    this._init(rootElementClass);
-  }
-
-  _init(rootElementClass) {
+  constructor(rootElementClass, data) {
     this._$rootElementClass = $(rootElementClass);
-    this._$rootElementClass.inputmask({
-      showMaskOnHover: false,
-      showMaskOnFocus: false,
-    });
+    this._$input = this._$rootElementClass.find('.js-masked-input__input');    
+    this._$input.inputmask(data);
   }
 }

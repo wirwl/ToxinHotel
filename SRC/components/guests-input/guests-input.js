@@ -1,7 +1,8 @@
 import 'item-quantity-dropdown/lib/item-quantity-dropdown.min';
 
 export default class GuestsInput {
-  constructor(data) {
+  constructor(rootElementClass, data) {
+    this._$rootElement = $(rootElementClass);
     this._initMembers(data);
     this._initPluginItemQuantityDropdown(this._$iqdropdowns);
     this._bindThis();
@@ -15,9 +16,8 @@ export default class GuestsInput {
   }
 
   _initMembers({
-    rootElementClass, guests, babies, placeholder,
-  }) {
-    this._$rootElement = $(rootElementClass);
+    guests, babies, placeholder,
+  }) {    
     this._guests = guests;
     this._babies = babies;
     this._placeholder = placeholder;

@@ -1,18 +1,22 @@
 export default class OrderInfoForm {
-  constructor(arrivalClass, checkoutClass) {
-    this._initMembers(arrivalClass, checkoutClass);
-    this._initPluginDatepicker();
+  constructor(htmlRootElementClass) {
+    this._$htmlRootElementClass = $(htmlRootElementClass);
+    this._initMembers();
     this._bindThis();
+    this._initPluginDatepicker();
     this._addEventListeners();
   }
 
   _bindThis() {
     this._handleDatepickerInputInputClick = this._handleDatepickerInputInputClick.bind(this);
+    this._setMaxWidth = this._setMaxWidth.bind(this);
   }
 
-  _initMembers(arrivalClass, checkoutClass) {
-    this._$arrival = $(arrivalClass).find('.datepicker-input__input');
-    this._$checkout = $(checkoutClass).find('.datepicker-input__input');
+  _initMembers() {
+    const $inputs = this._$htmlRootElementClass.find('.datepicker-input__input');
+    [this._arrival, this._checkout] = $inputs;
+    this._$arrival = $(this._arrival);
+    this._$checkout = $(this._checkout);    
   }
 
   _initPluginDatepicker() {
@@ -25,6 +29,7 @@ export default class OrderInfoForm {
       });
     }
     const datepicker = this._$arrival.data('datepicker');
+    
     if (datepicker) {
       datepicker.update('onShow', this._setMaxWidth);
     }
@@ -38,7 +43,7 @@ export default class OrderInfoForm {
 
   _setMaxWidth(inst, animationCompleted) {
     if (!animationCompleted) {
-      const newMaxWidth = $('.order-info-form__dates-list').width();
+      const newMaxWidth = this._$htmlRootElementClass.find('.datepicker-input-range__list').width();      
       inst.$datepicker.css('max-width', newMaxWidth);
     }
   }

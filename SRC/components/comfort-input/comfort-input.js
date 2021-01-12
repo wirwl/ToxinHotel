@@ -6,7 +6,8 @@ const NUMERALS = {
   plural5items: 4,
 };
 export default class ComfortInput {
-  constructor(data) {
+  constructor(rootElementClass, data) {
+    this._$rootElement = $(rootElementClass);
     this._initMembers(data);
     this._bindThis();
     this._initPluginIqDropdown();
@@ -18,9 +19,8 @@ export default class ComfortInput {
     this._setSelectionText = this._setSelectionText.bind(this);
   }
 
-  _initMembers({ rootElementClass, items, placeholder }) {
-    this._placeholder = placeholder;
-    this._$rootElement = $(rootElementClass);
+  _initMembers({items, placeholder }) {
+    this._placeholder = placeholder;    
     this._$iqdropdowns = this._$rootElement.find('.iqdropdown');
     this._items = items;
   }

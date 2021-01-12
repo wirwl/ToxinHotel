@@ -1,34 +1,43 @@
-/* eslint-disable import/prefer-default-export */
-import HeaderMenu from './header-menu/header-menu';
-import GuestsInput from './guests-input/guests-input';
-import DatepickerInputRange from './datepicker-input-range/datepicker-input-range';
-import RoomReservationForm from './room-reservation-form/room-reservation-form';
-import Flexslider from './flexslider/flexslider';
-import DonutChart from './donut-chart/donut-chart';
-import OrderInfoForm from './order-info-form/order-info-form';
-import LikeButton from './like-button/like-button';
-import RangeSlider from './range-slider/range-slider';
-import ComfortInput from './comfort-input/comfort-input';
-import ExpandableCheckboxList from './expandable-checkbox-list/expandable-checkbox-list';
-import PxPagination from './px-pagination/px-pagination';
-import MaskedInput from './masked-input/masked-input';
-import ToxinDatepicker from './toxin-datepicker/toxin-datepicker';
-import RateButton from './rate-button/rate-button';
+import initHeaderMenuOnPage from './header-menu/init';
+import initGuestsInputOnPage from './guests-input/init';
+import initDatepickerInputRangeOnPage from './datepicker-input-range/init';
+import initRoomReservationFormOnPage from './room-reservation-form/init';
+import initFlexsliderOnPage from './flexslider/init';
+import initDonutChartOnPage from './donut-chart/init';
+import initOrderInfoFormOnPage from './order-info-form/init';
+import initLikeButtonOnPage from './like-button/init';
+import initRangeSliderOnPage from './range-slider/init';
+import initComfortInputOnPage from './comfort-input/init';
+import initExpandableCheckboxListOnPage from './expandable-checkbox-list/init';
+import initPxPaginationOnPage from './px-pagination/init';
+import initMaskedInputOnPage from './masked-input/init';
+import initToxinDatepickerOnPage from './toxin-datepicker/init';
+import initRateButtonOnPage from './rate-button/init';
 
-export {
-  HeaderMenu,
-  GuestsInput,
-  DatepickerInputRange,
-  RoomReservationForm,
-  Flexslider,
-  DonutChart,
-  OrderInfoForm,
-  LikeButton,
-  RangeSlider,
-  ComfortInput,
-  ExpandableCheckboxList,
-  PxPagination,
-  MaskedInput,
-  ToxinDatepicker,
-  RateButton
+function initComponentOnPage(componentClass, htmlRootElement, data) {
+  const $htmlRootElements = $(htmlRootElement);
+  $htmlRootElements.each(
+    (_, htmlRootElement) => new componentClass(htmlRootElement, data)
+  );
+}
+
+export default initComponentOnPage;
+
+export {  
+  initHeaderMenuOnPage,  
+  initGuestsInputOnPage,
+  initDatepickerInputRangeOnPage,
+  initRoomReservationFormOnPage,  
+  initFlexsliderOnPage,  
+  initDonutChartOnPage,
+  initOrderInfoFormOnPage,  
+  initLikeButtonOnPage,
+  initRangeSliderOnPage,
+  initComfortInputOnPage,
+  initExpandableCheckboxListOnPage,
+  initPxPaginationOnPage,
+  initMaskedInputOnPage,
+  initToxinDatepickerOnPage,
+  initRateButtonOnPage
 };
+

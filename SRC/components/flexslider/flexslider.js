@@ -1,11 +1,12 @@
-import 'flexslider';
+import 'flexslider/jquery.flexslider';
 
 export default class Flexslider {
-  constructor(data) {
+  constructor(htmlRootElement, data) {
+    this._$htmlRootElement = $(htmlRootElement);
     this._init(data);
   }
 
-  _init({ rootElementClass, options }) {
-    $(rootElementClass).flexslider(options);
+  _init( options ) {
+    this._$htmlRootElement.flexslider(options);
   }
 }

@@ -15,7 +15,7 @@ mixin order-info-form(data={})
       guestsInput, 
       buttonSubmit
     } = data
-  form.order-info-form(method = "post" action = "#")
+  form.order-info-form.js-order-info-form(method = "post" action = "#")
     fieldset.order-info-form__wrapper-main
       h2.order-info-form__room-info-caption
         +room-info-caption(roomInfoCaption)

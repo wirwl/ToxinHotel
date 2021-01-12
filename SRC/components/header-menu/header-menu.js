@@ -1,5 +1,6 @@
 export default class HeaderMenu {
-  constructor() {
+  constructor(htmlRootElement) {
+    this.$htmlRootElement = $(htmlRootElement);    
     this._bindThis();
     this._addEventListeners();
   }
@@ -10,9 +11,9 @@ export default class HeaderMenu {
   }
 
   _addEventListeners() {
-    $('.js-menu__link').on('click.menu', this._handleMenuLinkClick);
-    $('.js-header__icon').on('click.menu', this._handleHeaderMenuIconClick);
-    $('.js-menu__list').on('mouseleave.menu', this._handleMenuListMouseLeave);
+    this.$htmlRootElement.find('.js-menu__link').on('click.menu', this._handleMenuLinkClick);
+    this.$htmlRootElement.closest('.js-header').find('.js-header__icon').on('click.menuicon', this._handleHeaderMenuIconClick);    
+    this.$htmlRootElement.find('.js-menu__list').on('mouseleave.menu', this._handleMenuListMouseLeave);
   }
 
   _closeAllOpenMenuItems($li) {
@@ -35,7 +36,7 @@ export default class HeaderMenu {
   }
 
   _handleHeaderMenuIconClick(e) {
-    const $icon = $(e.currentTarget);
+    const $icon = $(e.currentTarget);    
     const $list = $icon.parent().find('.header__menu-and-auth-area');
     $list.toggleClass('header__menu-and-auth-area_shown');
   }
