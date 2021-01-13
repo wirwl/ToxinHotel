@@ -1,11 +1,11 @@
 export default class RateButton {
   constructor(rateButton) {
-    this._initMembers(rateButton);
+    this._$rateButton = $(rateButton);
+    this._initMembers();
     this._addEventListeners();
   }
 
-  _initMembers(rateButton) {
-    this._$rateButton = $(rateButton);
+  _initMembers(rateButton) {    
     this.$stars = this._$rateButton.find('.rate-button__star');
     this._starsCount = this._$rateButton.data('count');
   }

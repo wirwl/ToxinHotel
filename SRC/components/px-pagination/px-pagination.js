@@ -2,22 +2,17 @@ import 'px-jquery-pagination/px-pagination';
 import './px-pagination.scss';
 
 export default class PxPagination {
-  constructor(htmlRootElement) {
+  constructor(htmlRootElement, data) {
     this.$htmlRootElement = $(htmlRootElement);
     this.$pagination = $(htmlRootElement).find('.px-pagination__plugin');
-    this._initPluginPxPagination();
+    this._initPluginPxPagination(data);
     this._nextPrevBtnShowUpdate(1);
   }
 
-  _initPluginPxPagination() {
+  _initPluginPxPagination(data) {
     const pagination = this;
     this.$pagination.pxpaginate({
-      totalPageCount: 15,
-      maxBtnCount: 3,
-      align: 'center',
-      firstLastBtnShow: false,
-      prevPageName: 'arrow_back',
-      nextPageName: 'arrow_forward',
+      ...data,
       callback(pagenumber) {
         pagination._nextPrevBtnShowUpdate(pagenumber);
       },

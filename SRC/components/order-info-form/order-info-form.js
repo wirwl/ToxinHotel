@@ -13,10 +13,11 @@ export default class OrderInfoForm {
   }
 
   _initMembers() {
+    this._$list = this._$htmlRootElementClass.find('.datepicker-input-range__list')
     const $inputs = this._$htmlRootElementClass.find('.datepicker-input__input');
     [this._arrival, this._checkout] = $inputs;
     this._$arrival = $(this._arrival);
-    this._$checkout = $(this._checkout);    
+    this._$checkout = $(this._checkout);
   }
 
   _initPluginDatepicker() {
@@ -28,10 +29,10 @@ export default class OrderInfoForm {
         },
       });
     }
-    const datepicker = this._$arrival.data('datepicker');
-    
-    if (datepicker) {
-      datepicker.update('onShow', this._setMaxWidth);
+    this.datepicker = this._$arrival.data('datepicker');
+
+    if (this.datepicker) {
+      this.datepicker.update('onShow', this._setMaxWidth);
     }
   }
 
@@ -43,12 +44,12 @@ export default class OrderInfoForm {
 
   _setMaxWidth(inst, animationCompleted) {
     if (!animationCompleted) {
-      const newMaxWidth = this._$htmlRootElementClass.find('.datepicker-input-range__list').width();      
+      const newMaxWidth = this._$list.width();
       inst.$datepicker.css('max-width', newMaxWidth);
     }
   }
 
   _handleDatepickerInputInputClick() {
-    this._$arrival.data('datepicker').show();
+    this.datepicker.show();
   }
 }

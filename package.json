@@ -64,6 +64,8 @@
   },
   "dependencies": {
     "air-datepicker": "^2.2.3",
+    "bem-cn": "^3.0.1",
+    "bem-cn-fast": "^1.0.2",
     "flexslider": "^2.7.2",
     "inputmask": "^5.0.5",
     "ion-rangeslider": "^2.3.1",

@@ -1,20 +1,15 @@
 import 'ion-rangeslider';
 
 export default class RangeSlider {
-  constructor(rootElementClass) {
+  constructor(rootElementClass, data) {
     this._initMembers(rootElementClass);
-    this._initPluginIonRangeSlider();
+    this._initPluginIonRangeSlider(data);
   }
 
-  _initPluginIonRangeSlider() {
+  _initPluginIonRangeSlider(data) {
     if (this._$input.length) {
       this._$input.ionRangeSlider({
-        skin: 'round',
-        type: 'double',
-        hide_min_max: true,
-        hide_from_to: true,
-        prettify_enabled: true,
-        prettify_separator: ' ',
+        ...data,
         onStart: (data) => {
           this._$values.text(`${data.from_pretty}₽ - ${data.to_pretty}₽`);
         },

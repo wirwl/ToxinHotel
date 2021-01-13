@@ -15,35 +15,44 @@ export default class GuestsInput {
     this._handleDocumentMouseUp = this._handleDocumentMouseUp.bind(this);
   }
 
-  _initMembers({
-    guests, babies, placeholder,
-  }) {    
+  _initMembers({ guests, babies, placeholder }) {
+    this.CLASSES = {
+      pluginIqdropdown: '.iqdropdown',
+      buttonClear: '.guests-input__button-clear',
+      buttonApply: '.guests-input__button-apply',
+      button: '.button',
+      buttonHidden: 'button_hidden',
+      menuOpen: 'menu-open',
+      content: '.iqdropdown-content',
+      controls: '.iqdropdown-item-controls',
+      option: '.iqdropdown-menu-option'
+    };
     this._guests = guests;
     this._babies = babies;
     this._placeholder = placeholder;
-    this._$iqdropdowns = this._$rootElement.find('.iqdropdown');
-    this._$buttonClear = this._$rootElement.find('.guests-input__button-clear').find('.button');
-    this._$buttonApply = this._$rootElement.find('.guests-input__button-apply').find('.button');
+    this._$iqdropdowns = this._$rootElement.find(this.CLASSES.pluginIqdropdown);
+    this._$buttonClear = this._$rootElement.find(this.CLASSES.buttonClear).find(this.CLASSES.button);
+    this._$buttonApply = this._$rootElement.find(this.CLASSES.buttonApply).find(this.CLASSES.button);
   }
 
   _addEventListeners() {
     this._$buttonClear.on('click.buttonClear', this._handleButtonClearClick);
     this._$buttonApply.on('click.buttonApply', this._handleButtonApplyClick);
     this._$iqdropdowns.find('.iqdropdown-menu').on('click.iqdropdown', this._handleIqdropdownMenuClick);
-    $(document).on('mouseup.iqdropdown', this._handleDocumentMouseUp);
+    $(document).on('mouseup.document', this._handleDocumentMouseUp);
   }
 
   _initPluginItemQuantityDropdown($iqdropdowns) {
-    $iqdropdowns.each((index, $iqdropdown) => {
+    $iqdropdowns.each((_, $iqdropdown) => {
       $($iqdropdown).iqDropdown({
         setSelectionText: (itemCount, totalItems) => {
           let result = this._placeholder;
           const babiesCount = itemCount[this._babies.id];
           const guestsCount = totalItems - babiesCount;
-          const $buttonClear = $($iqdropdown).find('.guests-input__button-clear').find('.button');
+          const $buttonClear = $($iqdropdown).find(this.CLASSES.buttonClear).find('.button');
 
           if (totalItems > 0) {
-            $buttonClear.removeClass('button_hidden');
+            $buttonClear.removeClass(this.CLASSES.buttonHidden);
             let wordGuests = this._guests.singular;
             if (guestsCount > 0) {
               const [number2, number5] = this._guests.plurals;
@@ -60,7 +69,7 @@ export default class GuestsInput {
               result = `${guestsCount} ${wordGuests}${babiesCount > 0 ? `, ${babiesCount} ${wordBabies}` : ''}`;
             }
           } else {
-            $buttonClear.addClass('button_hidden');
+            $buttonClear.addClass(this.CLASSES.buttonHidden);
           }
 
           return result;
@@ -72,7 +81,7 @@ export default class GuestsInput {
   _handleDocumentMouseUp(event) {
     if (!this._$iqdropdowns.is(event.target)
       && this._$iqdropdowns.has(event.target).length === 0) {
-      this._$iqdropdowns.removeClass('menu-open');
+      this._$iqdropdowns.removeClass(this.CLASSES.menuOpen);
     }
   }
 
@@ -82,18 +91,18 @@ export default class GuestsInput {
 
   _handleButtonClearClick(event) {
     const $button = $(event.currentTarget);
-    const $iqdropdown = $button.closest('.iqdropdown');
-    $iqdropdown.find('.iqdropdown-content').removeClass('iqdropdown-content');
-    $iqdropdown.find('.iqdropdown-item-controls').remove();
+    const $iqdropdown = $button.closest(this.CLASSES.pluginIqdropdown);
+    $iqdropdown.find(this.CLASSES.content).removeClass('iqdropdown-content');
+    $iqdropdown.find(this.CLASSES.controls).remove();
     $iqdropdown.off();
-    $iqdropdown.find('.iqdropdown-menu-option').removeData('defaultcount');
-    $iqdropdown.find('.iqdropdown-menu-option').removeAttr('data-defaultcount');
+    $iqdropdown.find(this.CLASSES.option).removeData('defaultcount');
+    $iqdropdown.find(this.CLASSES.option).removeAttr('data-defaultcount');
     this._initPluginItemQuantityDropdown($iqdropdown);
   }
 
   _handleButtonApplyClick(event) {
     const $button = $(event.currentTarget);
-    const $iqdropdown = $button.closest('.iqdropdown');
-    $iqdropdown.removeClass('menu-open');
+    const $iqdropdown = $button.closest(this.CLASSES.pluginIqdropdown);
+    $iqdropdown.removeClass(this.CLASSES.menuOpen);
   }
 }

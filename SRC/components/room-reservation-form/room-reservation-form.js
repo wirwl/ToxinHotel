@@ -7,7 +7,7 @@ export default class RoomReservationForm {
     this._addEventListeners();    
   }
 
-  _initMembers(arrivalClass, checkoutClass) {
+  _initMembers() {
     this._$arrival = this._$htmlRootElement.find('.room-reservation-form__arrival').find('.datepicker-input__input');
     this._$checkout = this._$htmlRootElement.find('.room-reservation-form__checkout').find('.datepicker-input__input');
   }
@@ -21,9 +21,9 @@ export default class RoomReservationForm {
         },
       });
     }
-    const datepicker = this._$arrival.data('datepicker');
-    if (datepicker) {
-      datepicker.update('onShow', this._setMaxWidth);
+    this.datepicker = this._$arrival.data('datepicker');
+    if (this.datepicker) {
+      this.datepicker.update('onShow', this._setMaxWidth);
     }
   }
 
@@ -45,6 +45,6 @@ export default class RoomReservationForm {
   }
 
   _handleDatePickerInputInputClick() {
-    this._$arrival.data('datepicker').show();
+    this.datepicker.show();
   }
 }

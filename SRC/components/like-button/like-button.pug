@@ -1,5 +1,5 @@
 mixin like-button({isChecked, count=0}={})
   label.like-button.js-like-button
-    input(type = "checkbox" checked = (isChecked && "checked")).like-button__input.js-like-button__input
+    input.like-button__input(type = "checkbox" checked = (isChecked && "checked"))
     .like-button__border
-      .like-button__count.js-like-button__count #{count}
+      .like-button__count #{count}

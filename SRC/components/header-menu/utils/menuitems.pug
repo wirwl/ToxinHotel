@@ -1,7 +1,7 @@
 include ./createhtmltags
 
 mixin menuItems(items=[{text: "Error: items is not defined"}], calls=1)    
-  ul.header-menu__list.js-menu__list(class= (calls==1) ? "" : "header-menu__list_sub-item")
+  ul.header-menu__list(class= (calls==1) ? "" : "header-menu__list_sub-item")
     for mi in items
       +createHTMLtags(mi, calls)
         if mi.sm

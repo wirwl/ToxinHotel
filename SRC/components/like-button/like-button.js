@@ -1,18 +1,26 @@
 export default class LikeButton {
   constructor(rootElementClass) {
     this._$rootElementClass = $(rootElementClass);
-    this._$input = this._$rootElementClass.find('.js-like-button__input');    
+    this._handleRootElementClassClick = this._handleRootElementClassClick.bind(this);
+    this._initMembers();
     this._addEventListeners();
+  }
+
+  _initMembers() {
+    this.CLASSES = {
+      input: '.like-button__input',
+      count: '.like-button__count'
+    }
+    this._$input = this._$rootElementClass.find(this.CLASSES.input);
+    this._$count = this._$rootElementClass.find(this.CLASSES.count);
   }
 
   _addEventListeners() {
     this._$input.on('click.like-button', this._handleRootElementClassClick);
   }
 
-  _handleRootElementClassClick(e) {
-    const $button = $(e.currentTarget);
-    const $count = $button.parent().find('.js-like-button__count');
-    const currentValue = parseInt($count.text(), 10);
-    $count.text($button.is(':checked') ? currentValue + 1 : currentValue - 1);
+  _handleRootElementClassClick() {    
+    const currentValue = parseInt(this._$count.text(), 10);
+    this._$count.text(this._$input.is(':checked') ? currentValue + 1 : currentValue - 1);
   }
 }

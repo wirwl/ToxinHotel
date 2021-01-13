@@ -1,4 +1,4 @@
 mixin createHTMLtags({sm, isBold, link="mock", text="text"}, calls)  
   li.header-menu__item(class=sm && "header-menu__list_arrow" || "")
-    a.header-menu__link.js-menu__link(class=(isBold ? "header-menu__link_bold" : "" + (sm && " header-menu__link_arrow" || "")) href=link) #{text}
+    a.header-menu__link(class=(isBold ? "header-menu__link_bold" : "" + (sm && " header-menu__link_arrow" || "")) href=link) #{text}
     block

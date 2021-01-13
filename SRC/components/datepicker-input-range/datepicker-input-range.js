@@ -1,19 +1,19 @@
 import ToxinDatepicker from '../toxin-datepicker/toxin-datepicker';
 
 export default class DatepickerInputRange {
-  constructor(htmlRootElement) {
+  constructor(htmlRootElement, data) {
     this._$htmlRootElement = $(htmlRootElement);
-    this._initMembers();
+    this._initMembers(data);
     this._initPluginDatepicker();
     this._bindThis();
     this._addEventListeners();
     return this._datepicker;
   }
 
-  _initMembers() {
+  _initMembers(data) {
     this._$inputs = this._$htmlRootElement.find('.datepicker-input__input');
     this._isTwoDatepickerInputs = this._$inputs.length > 1;
-    this._datepicker = new ToxinDatepicker(this._$inputs[0], { buttonClearText: 'Очистить', buttonApplyText: 'Применить' });
+    this._datepicker = new ToxinDatepicker(this._$inputs[0], data);
   }
 
   _initPluginDatepicker() {

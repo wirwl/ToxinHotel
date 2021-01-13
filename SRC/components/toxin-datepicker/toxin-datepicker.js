@@ -2,33 +2,25 @@ import 'air-datepicker/dist/js/datepicker';
 
 export default class ToxinDatepicker {
   constructor(rootElementClass, data) {
-    this._$rootElementClass = $(rootElementClass);    
+    this._$rootElementClass = $(rootElementClass);
     this._initMembers(data);
-    this._initPluginDatepicker();
+    this._initPluginDatepicker(data);
     this._addButtons();
     this._bindThis();
     this._addEventListeners();
     return this._datepicker;
   }
 
-  _initMembers({buttonClearText = 'Clear', buttonApplyText = 'Apply' }) {    
+  _initMembers({ buttonClearText = 'Clear', buttonApplyText = 'Apply' }) {
     this._htmlButtonsTemplate = `<div class="datepicker__buttons">
       <span class="datepicker__button-clear js-datepicker__button-clear">${buttonClearText}</span>
       <span class="datepicker__button-apply js-datepicker__button-apply">${buttonApplyText}</span>
      </div`;
   }
 
-  _initPluginDatepicker() {
+  _initPluginDatepicker({ datepickerData }) {
     if (this._$rootElementClass.length) {
-      this._$rootElementClass.datepicker({
-        moveToOtherMonthsOnSelect: false,
-        minDate: new Date(),
-        range: true,
-        multipleDatesSeparator: ' - ',
-        prevHtml: 'arrow_back',
-        nextHtml: 'arrow_forward',
-        navTitles: { days: 'MM yyyy' },
-      });
+      this._$rootElementClass.datepicker(datepickerData);
     }
     this._datepicker = this._$rootElementClass.data('datepicker');
   }
