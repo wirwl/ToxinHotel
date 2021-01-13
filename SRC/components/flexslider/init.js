@@ -1,6 +1,7 @@
 import initComponentOnPage from '../components';
 import Flexslider from './flexslider';
 
-export default function initFlexsliderOnPage() {
-    initComponentOnPage(Flexslider, '.js-flexslider', { animation: 'fade', touch: true });
+export default function initFlexsliderOnPage(data) {
+  const defaultData = { animation: 'fade', touch: true };
+  initComponentOnPage(Flexslider, '.js-flexslider', data || defaultData);
 }

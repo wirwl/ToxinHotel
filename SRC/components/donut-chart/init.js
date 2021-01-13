@@ -1,8 +1,8 @@
 import initComponentOnPage from '../components';
 import DonutChart from './donut-chart';
 
-export default function initDonutChartOnPage() {
-  initComponentOnPage(DonutChart, '.js-donut-chart', {
+export default function initDonutChartOnPage(data) {
+  const defaultData = {
     width: 120,
     height: 120,
     items: [
@@ -11,5 +11,6 @@ export default function initDonutChartOnPage() {
       { text: 'Удовлетворительно', count: 144, color: '#BC9CFF' },
       { text: 'Разочарован', count: 0, color: '#919191' },
     ],
-  });
+  };
+  initComponentOnPage(DonutChart, '.js-donut-chart', data || defaultData);
 }

@@ -21,8 +21,7 @@ export default class ExpandableCheckboxList {
     $(document).on('mouseup.document', this._handleDocumentMouseUp);
   }
 
-  _handleDocumentMouseUp(event) {
-    console.log(event.target);
+  _handleDocumentMouseUp(event) {    
     if (!this._$caption.is(event.target) &&
         !this._$expandableCheckboxList.is(event.target) && 
          this._$expandableCheckboxList.has(event.target).length === 0
