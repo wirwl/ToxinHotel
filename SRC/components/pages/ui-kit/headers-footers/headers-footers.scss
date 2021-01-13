@@ -35,7 +35,7 @@ body {
     margin-right: 28px;
   }
 
-  .header-menu__item:not(:last-of-type) {
+  .header-menu>.header-menu__item:not(:last-of-type) {
     margin-right: 30px;
   }
 
@@ -49,6 +49,7 @@ body {
 
   @media screen and (max-width: 3840px) {
     &__footer-responsive {
+
       .footer__footer-menu,
       .footer__subscribe-area,
       .footer__copyright {

@@ -35,9 +35,12 @@
     margin-bottom: 20px;
   }
 
-  &__item:not(:last-child) {
-    margin-bottom: 10px;
-  }
+  &__item {
+    width: 100%;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }  
 
   &__button-pay {
     margin-bottom: 29px;

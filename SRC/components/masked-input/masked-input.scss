@@ -1,6 +1,5 @@
 .masked-input {
-  font-family: $toxin-font-montserrat;
-  width: 100%;
+  font-family: $toxin-font-montserrat;      
 
   &__caption {
     display: block;
@@ -17,7 +16,7 @@
     padding: 13px 15px 13px;
     width: 100%;
     outline: none;
-    font-family: inherit;
+    font-family: inherit;    
   }
 
   &__input::placeholder {

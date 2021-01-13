@@ -6,5 +6,5 @@ export default function initMaskedInputOnPage(data) {
     showMaskOnHover: true,
     showMaskOnFocus: false,
   };
-  initComponentOnPage(MaskedInput, '.js-masked-input', data || defaultData);
+  //initComponentOnPage(MaskedInput, '.js-masked-input', data || defaultData);
 }
