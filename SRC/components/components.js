@@ -1,10 +1,8 @@
 import initHeaderMenuOnPage from './header-menu/init';
 import initGuestsInputOnPage from './guests-input/init';
 import initDatepickerInputRangeOnPage from './datepicker-input-range/init';
-import initRoomReservationFormOnPage from './room-reservation-form/init';
 import initFlexsliderOnPage from './flexslider/init';
 import initDonutChartOnPage from './donut-chart/init';
-import initOrderInfoFormOnPage from './order-info-form/init';
 import initLikeButtonOnPage from './like-button/init';
 import initRangeSliderOnPage from './range-slider/init';
 import initComfortInputOnPage from './comfort-input/init';
@@ -26,11 +24,9 @@ export default initComponentOnPage;
 export {  
   initHeaderMenuOnPage,  
   initGuestsInputOnPage,
-  initDatepickerInputRangeOnPage,
-  initRoomReservationFormOnPage,  
+  initDatepickerInputRangeOnPage,  
   initFlexsliderOnPage,  
-  initDonutChartOnPage,
-  initOrderInfoFormOnPage,  
+  initDonutChartOnPage,  
   initLikeButtonOnPage,
   initRangeSliderOnPage,
   initComfortInputOnPage,

@@ -6,4 +6,3 @@ c.initHeaderMenuOnPage();
 c.initFlexsliderOnPage();
 c.initDonutChartOnPage();
 c.initLikeButtonOnPage();
-c.initOrderInfoFormOnPage();
