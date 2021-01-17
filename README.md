@@ -25,7 +25,7 @@
     > **npx browserslist --coverage** - check coverage for selected browsers
  9. Pages mark up is ["responsive"](http://www.liquidapsive.com), minimun width is 320 pixels, maximum width is 1440 pixels, page centered
 ## Watch result on github.io
-   > Follow this link: https://wirwl.github.io/PetProjects/FSD/ToxinHotel
+   > Follow this link: https://toxin-hotel.vercel.app
 
 ## Some usefull commands
   >**git clone https://github.com/wirwl/toxinhotel.git** - copy project from remote repository to local computer
